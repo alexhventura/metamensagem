@@ -61,10 +61,7 @@ async function run() {
         const chunk = metaforas.slice(i, i + CHUNK_SIZE);
         chunk.forEach(m => {
             const filePath = path.join(OUTPUT_DIR, `${m.id}.json`);
-            // Só escreve se não existir para poupar tempo em tentativas repetidas (opcional)
-            if (!fs.existsSync(filePath)) {
-                fs.writeFileSync(filePath, JSON.stringify(m));
-            }
+            fs.writeFileSync(filePath, JSON.stringify(m));
         });
         console.log(`📦 Processados ${Math.min(i + CHUNK_SIZE, metaforas.length)} / ${metaforas.length}`);
     }

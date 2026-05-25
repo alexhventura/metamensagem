@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/((?!metaforas/|frases-index\\.json|metaforas-index\\.json|metaforas\\.json|frases\\.json|assets/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

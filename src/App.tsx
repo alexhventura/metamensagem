@@ -73,6 +73,10 @@ const normalizarParaSlug = (texto: string) => {
     .replace(/(^-|-$)+/g, '');
 };
 
+/** Mesma regra de prepare-data.cjs — IDs de fragmentos são sempre normalizados. */
+const sanitizarIdMetafora = (id: string) =>
+  id.toLowerCase().replace(/[^a-z0-9_\-]/g, '').substring(0, 50);
+
 // --- APP PRINCIPAL ---
 export default function App() {
   const { t, i18n } = useTranslation();
@@ -313,9 +317,11 @@ function ItemCard({
   };
 
   const handleShare = () => {
-    const url = item.tipo === 'metafora' 
-      ? `${window.location.origin}/metafora/${item.id}/${normalizarParaSlug(item.titulo || '')}`
-      : window.location.href;
+    const text =
+      item.tipo === 'metafora'
+        ? `${item.titulo}\n\n${item.texto}`
+        : item.texto;
+    const url = `${window.location.origin}/?text=${encodeURIComponent(text)}`;
     navigator.clipboard.writeText(url);
     toast(t('common.link_copied'));
   };
@@ -874,16 +880,33 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
   useEffect(() => {
     const carregarConteudoIntegral = async () => {
       if (!id) return;
+      const idNormalizado = sanitizarIdMetafora(id);
       setLoading(true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
       try {
-        const res = await fetch(`/metaforas/${id}.json`);
-        if (res.ok) {
+        const res = await fetch(`/metaforas/${idNormalizado}.json`);
+        const contentType = res.headers.get('content-type') || '';
+        if (res.ok && contentType.includes('application/json')) {
           const data = await res.json();
-          setItem(data);
-        } else {
-          setItem(null);
+          if (data?.texto) {
+            setItem(data);
+            return;
+          }
         }
+
+        const fullRes = await fetch('/metaforas.json');
+        if (fullRes.ok) {
+          const todas: ItemConteudo[] = await fullRes.json();
+          const encontrada = todas.find(
+            (m) => sanitizarIdMetafora(m.id) === idNormalizado
+          );
+          if (encontrada) {
+            setItem({ ...encontrada, tipo: 'metafora' });
+            return;
+          }
+        }
+
+        setItem(null);
       } catch (e) {
         console.error("Erro ao carregar metáfora dinâmica", e);
         setItem(null);

@@ -34,6 +34,7 @@ import {
 } from 'lucide-react';
 
 import CustomModalGeradorPost from './components/ModalGeradorPost';
+import GoogleAdSense from './components/GoogleAdSense';
 
 import SocialHub from './components/SocialHub';
 import {
@@ -160,6 +161,8 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      {/* Layout raiz (equiv. app/layout.tsx): script global AdSense Auto Ads */}
+      <GoogleAdSense />
       <div className={`min-h-screen transition-colors duration-500 flex flex-col font-sans ${
         tema === 'light' ? 'bg-[#F8F9FA] text-zinc-900' : 'bg-black text-white'
       }`}>
@@ -291,14 +294,38 @@ export default function App() {
 // COMPONENTES AUXILIARES
 // ===================================================
 
-function AdBanner({ tema }: { tema: string }) {
+/**
+ * Zonas de conteúdo para AdSense Auto Ads (in-feed / in-page).
+ * Detectadas em: HomeView, FrasesView, MetaforasView (a cada 6 cards), MetaforaDetalheView (rodapé).
+ * Sem <ins> manual — o Google Auto Ads usa a estrutura da página; min-height reduz CLS.
+ */
+function AdBanner({
+  tema,
+  placement,
+}: {
+  tema: string;
+  placement:
+    | 'home-in-feed'
+    | 'frases-in-feed'
+    | 'metaforas-in-feed'
+    | 'metafora-detail-footer';
+}) {
   return (
-    <div className={`w-full py-10 px-6 rounded-[2.5rem] border-2 border-dashed flex flex-col items-center justify-center text-center transition-all ${
-      tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-400' : 'bg-zinc-950 border-zinc-900 text-zinc-700'
-    }`}>
-      <span className="text-[10px] font-mono tracking-[0.5em] uppercase mb-2">Espaço para Monetização</span>
-      <p className="text-[9px] opacity-40 uppercase tracking-widest">Publicidade Responsiva MM</p>
-    </div>
+    <aside
+      data-mm-ad-zone="adsense-auto-ads"
+      data-mm-ad-placement={placement}
+      aria-label="Área de publicidade"
+      className={`w-full min-h-[90px] py-10 px-6 rounded-[2.5rem] border-2 border-dashed flex flex-col items-center justify-center text-center transition-all ${
+        tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-400' : 'bg-zinc-950 border-zinc-900 text-zinc-700'
+      }`}
+    >
+      <span className="text-[10px] font-mono tracking-[0.5em] uppercase mb-2 pointer-events-none select-none">
+        Espaço para Monetização
+      </span>
+      <p className="text-[9px] opacity-40 uppercase tracking-widest pointer-events-none select-none">
+        Publicidade Responsiva MM
+      </p>
+    </aside>
   );
 }
 
@@ -651,7 +678,7 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
                   animate={{ opacity: 1 }}
                   className="col-span-full h-full"
                 >
-                  <AdBanner tema={tema} />
+                  <AdBanner tema={tema} placement="home-in-feed" />
                 </motion.div>
               );
             }
@@ -775,7 +802,7 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
           if (itemObj.tipoItem === 'anuncio') {
             return (
               <div key={itemObj.id} className="col-span-full">
-                <AdBanner tema={tema} />
+                <AdBanner tema={tema} placement="frases-in-feed" />
               </div>
             );
           }
@@ -878,7 +905,7 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
           if (itemObj.tipoItem === 'anuncio') {
             return (
               <div key={itemObj.id} className="col-span-full">
-                <AdBanner tema={tema} />
+                <AdBanner tema={tema} placement="metaforas-in-feed" />
               </div>
             );
           }
@@ -1078,7 +1105,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       </div>
       
       <div className="mt-12">
-        <AdBanner tema={tema} />
+        <AdBanner tema={tema} placement="metafora-detail-footer" />
       </div>
     </motion.div>
   );

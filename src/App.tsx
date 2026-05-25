@@ -190,13 +190,17 @@ export default function App() {
           tema === 'light' ? 'bg-white/80 border-zinc-200 text-black' : 'bg-black/80 border-zinc-900 text-white'
         }`}>
           <div className="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
-              <Link to="/" className="flex items-center gap-2.5 group">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#A855F7] to-[#7C3AED] rounded-2xl flex items-center justify-center gap-0.5 transform group-hover:rotate-12 transition-transform duration-300">
-                <span className="w-1 h-1 bg-white rounded-full animate-pulse"></span>
-                <span className="w-1 h-1 bg-white rounded-full animate-pulse delay-75"></span>
-                <span className="w-1 h-1 bg-white rounded-full animate-pulse delay-150"></span>
-              </div>
-              <span className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[#A855F7] to-[#6366f1] tracking-tighter">
+              <Link to="/" className="flex items-center gap-2.5 group min-w-0">
+              <img
+                src="/brand/logo.png"
+                srcSet="/brand/logo.png 1x, /brand/logo@2x.png 2x"
+                alt="Metamensagem"
+                width={40}
+                height={40}
+                className="h-9 w-9 md:h-10 md:w-10 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105"
+                decoding="async"
+              />
+              <span className="text-xl md:text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[#A855F7] to-[#6366f1] tracking-tighter truncate">
                 Metamensagem
               </span>
             </Link>

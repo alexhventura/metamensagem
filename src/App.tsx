@@ -192,8 +192,7 @@ export default function App() {
           <div className="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
               <Link to="/" className="flex items-center gap-2.5 group min-w-0">
               <img
-                src="/brand/logo.png"
-                srcSet="/brand/logo.png 1x, /brand/logo@2x.png 2x"
+                src="/brand/logo.svg"
                 alt="Metamensagem"
                 width={40}
                 height={40}

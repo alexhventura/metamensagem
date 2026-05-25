@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "processar-dados": "node processar_dados.js",
-    "generate-brand": "node scripts/generate-brand-assets.mjs",
+    "generate-brand": "node scripts/sync-favicon-kit.mjs",
     "build": "node prepare-data.cjs && vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",

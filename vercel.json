@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/((?!metaforas/|brand/|favicon|apple-touch-icon|site\\.webmanifest|frases-index\\.json|metaforas-index\\.json|metaforas\\.json|frases\\.json|assets/).*)",
+      "source": "/((?!metaforas/|brand/|favicon|apple-touch-icon|web-app-manifest|site\\.webmanifest|frases-index\\.json|metaforas-index\\.json|metaforas\\.json|frases\\.json|assets/).*)",
       "destination": "/index.html"
     }
   ]

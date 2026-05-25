@@ -36,6 +36,12 @@ import {
 import CustomModalGeradorPost from './components/ModalGeradorPost';
 
 import SocialHub from './components/SocialHub';
+import {
+  carregarMetaforaDetalhe,
+  encontrarMetaforaNoBanco,
+  filtrarMetaforasDoBanco,
+  sanitizarIdMetafora,
+} from './lib/metaforasLoader';
 
 // --- TIPOS ---
 interface ItemConteudo {
@@ -72,10 +78,6 @@ const normalizarParaSlug = (texto: string) => {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)+/g, '');
 };
-
-/** Mesma regra de prepare-data.cjs — IDs de fragmentos são sempre normalizados. */
-const sanitizarIdMetafora = (id: string) =>
-  id.toLowerCase().replace(/[^a-z0-9_\-]/g, '').substring(0, 50);
 
 // --- APP PRINCIPAL ---
 export default function App() {
@@ -774,7 +776,7 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
 function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco: ItemConteudo[] }) {
   const { t } = useTranslation();
   const [busca, setBusca] = useState('');
-  const baseMetaforas = useMemo(() => banco.filter(i => i.tipo === 'metafora'), [banco]);
+  const baseMetaforas = useMemo(() => filtrarMetaforasDoBanco(banco), [banco]);
 
   const metaforas = useMemo(() => {
     if (!busca.trim()) return baseMetaforas;
@@ -868,8 +870,11 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
 
   const navigation = useMemo(() => {
     if (!id || banco.length === 0) return { prev: null, next: null };
-    const metaforas = banco.filter(i => i.tipo === 'metafora');
-    const idx = metaforas.findIndex(m => m.id === id);
+    const metaforas = filtrarMetaforasDoBanco(banco);
+    const idNorm = sanitizarIdMetafora(id);
+    const idx = metaforas.findIndex(
+      (m) => sanitizarIdMetafora(m.id) === idNorm
+    );
     if (idx === -1) return { prev: null, next: null };
     return {
       prev: idx > 0 ? metaforas[idx - 1] : null,
@@ -878,44 +883,30 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
   }, [id, banco]);
 
   useEffect(() => {
-    const carregarConteudoIntegral = async () => {
-      if (!id) return;
-      const idNormalizado = sanitizarIdMetafora(id);
-      setLoading(true);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      try {
-        const res = await fetch(`/metaforas/${idNormalizado}.json`);
-        const contentType = res.headers.get('content-type') || '';
-        if (res.ok && contentType.includes('application/json')) {
-          const data = await res.json();
-          if (data?.texto) {
-            setItem(data);
-            return;
-          }
-        }
+    if (!id) return;
+    let cancelado = false;
+    setLoading(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
-        const fullRes = await fetch('/metaforas.json');
-        if (fullRes.ok) {
-          const todas: ItemConteudo[] = await fullRes.json();
-          const encontrada = todas.find(
-            (m) => sanitizarIdMetafora(m.id) === idNormalizado
-          );
-          if (encontrada) {
-            setItem({ ...encontrada, tipo: 'metafora' });
-            return;
-          }
-        }
-
-        setItem(null);
-      } catch (e) {
-        console.error("Erro ao carregar metáfora dinâmica", e);
-        setItem(null);
-      } finally {
-        setLoading(false);
+    carregarMetaforaDetalhe(id).then((detalhe) => {
+      if (cancelado) return;
+      if (detalhe) {
+        setItem(detalhe as ItemConteudo);
+      } else {
+        const doBanco = encontrarMetaforaNoBanco(banco, id);
+        setItem(
+          doBanco
+            ? ({ ...doBanco, tipo: 'metafora' } as ItemConteudo)
+            : null
+        );
       }
+      setLoading(false);
+    });
+
+    return () => {
+      cancelado = true;
     };
-    carregarConteudoIntegral();
-  }, [id]);
+  }, [id, banco]);
 
   if (loading) {
     return (

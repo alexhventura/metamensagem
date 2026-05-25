@@ -42,6 +42,14 @@ import {
   filtrarMetaforasDoBanco,
   sanitizarIdMetafora,
 } from './lib/metaforasLoader';
+import {
+  DEFAULT_DESCRIPTION,
+  OG_IMAGE,
+  SITE_NAME,
+  SITE_ORIGIN,
+  WEB_SITE_JSON_LD,
+  urlMetafora,
+} from './lib/seo';
 
 // --- TIPOS ---
 interface ItemConteudo {
@@ -179,10 +187,9 @@ export default function App() {
         </AnimatePresence>
 
         {/* SEO GLOBAL DINÂMICO BASE */}
-        <MudarMetaSEO 
-          title={t('app.title')} 
-          description={t('app.tagline')} 
-          canonical={window.location.origin + window.location.pathname}
+        <MudarMetaSEO
+          title={t('app.title')}
+          description={DEFAULT_DESCRIPTION}
         />
 
         {/* HEADER FIXO */}
@@ -453,14 +460,31 @@ function Tooltip({ children, text, tema }: { children: React.ReactNode; text: st
 }
 
 // COMPONENTE AUXILIAR SEO DINÂMICO
-function MudarMetaSEO({ title, description, jsonLD, canonical }: { title: string; description: string; jsonLD?: object; canonical?: string }) {
+function MudarMetaSEO({
+  title,
+  description,
+  jsonLD,
+  canonical,
+  ogType = 'website',
+}: {
+  title: string;
+  description: string;
+  jsonLD?: object;
+  canonical?: string;
+  ogType?: string;
+}) {
   const { i18n } = useTranslation();
-  
+
   useEffect(() => {
-    const siteTitle = `${title} | Metamensagem`;
+    const siteTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+    const desc = description?.trim() || DEFAULT_DESCRIPTION;
+    const canon =
+      canonical ||
+      `${SITE_ORIGIN}${window.location.pathname}${window.location.search || ''}`;
+    const pageUrl = canon;
+
     document.title = siteTitle;
 
-    // Meta Standard
     const updateMeta = (name: string, content: string, attr = 'name') => {
       let meta = document.querySelector(`meta[${attr}="${name}"]`);
       if (!meta) {
@@ -471,36 +495,42 @@ function MudarMetaSEO({ title, description, jsonLD, canonical }: { title: string
       meta.setAttribute('content', content);
     };
 
-    updateMeta('description', description);
+    updateMeta('description', desc);
     updateMeta('robots', 'index, follow');
-    
-    // Open Graph
-    updateMeta('og:title', siteTitle, 'property');
-    updateMeta('og:description', description, 'property');
-    updateMeta('og:type', 'website', 'property');
-    updateMeta('og:url', window.location.href, 'property');
-    updateMeta('og:image', 'https://metamensagem.com/og-image.png', 'property');
-    updateMeta('og:locale', i18n.language === 'pt' ? 'pt_BR' : i18n.language === 'es' ? 'es_ES' : i18n.language === 'fr' ? 'fr_FR' : 'en_US', 'property');
 
-    // Twitter
+    updateMeta('og:title', siteTitle, 'property');
+    updateMeta('og:description', desc, 'property');
+    updateMeta('og:type', ogType, 'property');
+    updateMeta('og:url', pageUrl, 'property');
+    updateMeta('og:image', OG_IMAGE, 'property');
+    updateMeta('og:site_name', SITE_NAME, 'property');
+    updateMeta(
+      'og:locale',
+      i18n.language === 'pt'
+        ? 'pt_BR'
+        : i18n.language === 'es'
+          ? 'es_ES'
+          : i18n.language === 'fr'
+            ? 'fr_FR'
+            : 'en_US',
+      'property'
+    );
+
     updateMeta('twitter:card', 'summary_large_image');
     updateMeta('twitter:title', siteTitle);
-    updateMeta('twitter:description', description);
+    updateMeta('twitter:description', desc);
+    updateMeta('twitter:image', OG_IMAGE);
 
-    // Canonical & Hreflang
-    if (canonical) {
-      let link = document.querySelector('link[rel="canonical"]');
-      if (!link) {
-        link = document.createElement('link');
-        link.setAttribute('rel', 'canonical');
-        document.head.appendChild(link);
-      }
-      link.setAttribute('href', canonical);
+    let link = document.querySelector('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      document.head.appendChild(link);
     }
+    link.setAttribute('href', canon);
 
-    // Hreflang links
     const langs = ['pt', 'en', 'es', 'fr'];
-    langs.forEach(l => {
+    langs.forEach((l) => {
       let hreflang = document.querySelector(`link[hreflang="${l}"]`);
       if (!hreflang) {
         hreflang = document.createElement('link');
@@ -508,21 +538,19 @@ function MudarMetaSEO({ title, description, jsonLD, canonical }: { title: string
         hreflang.setAttribute('hreflang', l);
         document.head.appendChild(hreflang);
       }
-      // Simplificado: redirecionamento via i18n detector lida com o conteúdo, o URL permanece o mesmo
-      hreflang.setAttribute('href', window.location.href);
+      hreflang.setAttribute('href', pageUrl);
     });
 
-    if (jsonLD) {
-      const idScript = 'jsonld-dinamico';
-      let script = document.getElementById(idScript);
-      if (script) script.remove();
-      script = document.createElement('script');
-      script.id = idScript;
-      script.setAttribute('type', 'application/ld+json');
-      script.innerHTML = JSON.stringify(jsonLD);
-      document.head.appendChild(script);
-    }
-  }, [title, description, jsonLD, canonical, i18n.language]);
+    const idScript = 'jsonld-dinamico';
+    let script = document.getElementById(idScript);
+    if (script) script.remove();
+    const payload = jsonLD ?? WEB_SITE_JSON_LD;
+    script = document.createElement('script');
+    script.id = idScript;
+    script.setAttribute('type', 'application/ld+json');
+    script.textContent = JSON.stringify(payload);
+    document.head.appendChild(script);
+  }, [title, description, jsonLD, canonical, ogType, i18n.language]);
 
   return null;
 }
@@ -564,9 +592,10 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
       animate={{ opacity: 1 }}
       className="max-w-5xl w-full mx-auto px-4 py-8 flex-1 flex flex-col"
     >
-      <MudarMetaSEO 
-        title={t('app.tagline')} 
-        description="Plataforma de alta performance para leitura de frases impactantes e metáforas terapêuticas offline-first." 
+      <MudarMetaSEO
+        title={t('app.tagline')}
+        description={DEFAULT_DESCRIPTION}
+        canonical={`${SITE_ORIGIN}/`}
       />
 
       <section className="text-center py-12">
@@ -712,7 +741,11 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
       animate={{ opacity: 1 }}
       className="max-w-5xl w-full mx-auto px-4 py-8 flex-1"
     >
-      <MudarMetaSEO title="Banco Total de Frases" description="Explore milhares de insights e citações curtas catalogadas para status, redes sociais e reflexão." />
+      <MudarMetaSEO
+        title="Banco Total de Frases"
+        description="Explore milhares de insights e citações curtas catalogadas para status, redes sociais e reflexão."
+        canonical={`${SITE_ORIGIN}/frases`}
+      />
       
       <div className="text-center mb-12">
         <h2 className="text-3xl font-black mb-6 uppercase tracking-widest text-[#A855F7] flex items-center justify-center gap-3">
@@ -811,7 +844,11 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
       animate={{ opacity: 1 }}
       className="max-w-5xl w-full mx-auto px-4 py-8 flex-1"
     >
-      <MudarMetaSEO title="Índice de Metáforas Terapêuticas" description="Contos e narrativas profundas focadas em psicologia aplicada, insights inconscientes e reprogramação de atitudes." />
+      <MudarMetaSEO
+        title="Índice de Metáforas Terapêuticas"
+        description="Contos e narrativas profundas focadas em psicologia aplicada, insights inconscientes e reprogramação de atitudes."
+        canonical={`${SITE_ORIGIN}/metaforas`}
+      />
       
       <div className="text-center mb-12">
         <h2 className="text-3xl font-black mb-6 uppercase tracking-widest text-[#A855F7] flex items-center justify-center gap-3">
@@ -925,13 +962,24 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
   const palavras = item.texto ? item.texto.split(/\s+/).length : 0;
   const tempoLeitura = Math.ceil(palavras / 200);
 
+  const canonicalUrl = urlMetafora(item.id, item.titulo);
   const jsonLD = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": item.titulo,
-    "abstract": item.resumo,
-    "articleBody": item.texto,
-    "author": { "@type": "Person", "name": item.autor }
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: item.titulo,
+    description: item.resumo,
+    abstract: item.resumo,
+    articleBody: item.texto?.substring(0, 5000),
+    author: { '@type': 'Person', name: item.autor || 'Anônimo' },
+    url: canonicalUrl,
+    mainEntityOfPage: canonicalUrl,
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_ORIGIN,
+      logo: OG_IMAGE,
+    },
+    inLanguage: 'pt-BR',
   };
 
   return (
@@ -940,7 +988,13 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       animate={{ opacity: 1, y: 0 }}
       className="max-w-4xl w-full mx-auto px-4 py-12 flex-1"
     >
-      <MudarMetaSEO title={item.titulo || ''} description={item.resumo || ''} jsonLD={jsonLD} />
+      <MudarMetaSEO
+        title={item.titulo || 'Metáfora terapêutica'}
+        description={item.resumo || DEFAULT_DESCRIPTION}
+        canonical={canonicalUrl}
+        ogType="article"
+        jsonLD={jsonLD}
+      />
       
       <div className={`mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b pb-10 ${tema === 'light' ? 'border-zinc-200' : 'border-zinc-800'}`}>
         <div className="flex-1">

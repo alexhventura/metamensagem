@@ -1,0 +1,225 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+
+const resources = {
+  pt: {
+    translation: {
+      "app": {
+        "title": "Metamensagem",
+        "tagline": "Mente, Mensagem e Mudança."
+      },
+      "nav": {
+        "home": "Início",
+        "quotes": "Frases",
+        "metaforas": "Metáforas",
+        "about": "Sobre",
+        "contact": "Contato",
+        "privacy": "Privacidade",
+        "terms": "Termos",
+        "cookies": "Cookies"
+      },
+      "home": {
+        "search_placeholder": "Qual sentimento ou tema busca hoje?",
+        "explore_more": "Explorar mais Sabedoria (+10)",
+        "sharing_wisdom": "Sincronizando Sabedoria Edge..."
+      },
+      "banner": {
+        "title": "Receba novas frases e metáforas todos os dias",
+        "subtitle": "Siga @metamensagem e acompanhe conteúdos exclusivos.",
+        "button": "Seguir no Instagram"
+      },
+      "common": {
+        "author": "POR",
+        "copy": "Copiar",
+        "share": "Compartilhar",
+        "edit_image": "Editar Imagem",
+        "read": "Ler",
+        "read_metaphor": "Ler Metáfora",
+        "download": "Download",
+        "copied": "Copiado!",
+        "link_copied": "Link copiado!"
+      },
+      "editor": {
+        "title": "Gerar Post Premium",
+        "controls": "Controles de Arte",
+        "background": "Cor de Fundo",
+        "font_size": "Tamanho da Fonte",
+        "text_color": "Cor do Texto",
+        "weight": "Peso da Fonte",
+        "alignment": "Alinhamento",
+        "reset": "Resetar",
+        "format": "Formato",
+        "square": "Quadrado (1:1)",
+        "portrait": "Retrato (4:5)",
+        "story": "Story (9:16)",
+        "preparing": "Preparando sua imagem...",
+        "share_instagram": "Compartilhar no Instagram",
+        "share_whatsapp": "Enviar para WhatsApp",
+        "wait_ad": "Aguarde {{seconds}} segundos para liberar o download...",
+        "download_ready": "Seu download está pronto!",
+        "share_social": "Compartilhar nas Redes"
+      }
+    }
+  },
+  en: {
+    translation: {
+      "app": {
+        "title": "Metamensagem",
+        "tagline": "Mind, Message and Change."
+      },
+      "nav": {
+        "home": "Home",
+        "quotes": "Quotes",
+        "metaforas": "Metaphors",
+        "about": "About",
+        "contact": "Contact",
+        "privacy": "Privacy",
+        "terms": "Terms"
+      },
+      "home": {
+        "search_placeholder": "What feeling or theme are you looking for today?",
+        "explore_more": "Explore more Wisdom (+10)",
+        "sharing_wisdom": "Synchronizing Edge Wisdom..."
+      },
+      "banner": {
+        "title": "Receive new quotes and metaphors every day",
+        "subtitle": "Follow @metamensagem and follow exclusive content.",
+        "button": "Follow on Instagram"
+      },
+      "common": {
+        "author": "BY",
+        "copy": "Copy",
+        "share": "Share",
+        "edit_image": "Edit Image",
+        "read": "Read",
+        "read_metaphor": "Read Metaphor",
+        "download": "Download",
+        "copied": "Copied!",
+        "link_copied": "Link copied!"
+      },
+      "editor": {
+        "title": "Generate Premium Post",
+        "controls": "Art Controls",
+        "background": "Background",
+        "font_size": "Font Size",
+        "text_color": "Text Color",
+        "contrast": "Contrast",
+        "blur": "Blur",
+        "upload_image": "Change Background Image",
+        "reset": "Reset"
+      }
+    }
+  },
+  es: {
+    translation: {
+      "app": {
+        "title": "Metamensagem",
+        "tagline": "Mente, Mensaje y Cambio."
+      },
+      "nav": {
+        "home": "Inicio",
+        "quotes": "Frases",
+        "metaforas": "Metáforas",
+        "about": "Sobre",
+        "contact": "Contacto",
+        "privacy": "Privacidad",
+        "terms": "Términos"
+      },
+      "home": {
+        "search_placeholder": "¿Qué sentimiento o tema buscas hoy?",
+        "explore_more": "Explorar más Sabiduría (+10)",
+        "sharing_wisdom": "Sincronizando Sabiduría Edge..."
+      },
+      "banner": {
+        "title": "Recibe nuevas frases y metáforas todos los días",
+        "subtitle": "Sigue a @metamensagem y acompaña contenidos exclusivos.",
+        "button": "Seguir en Instagram"
+      },
+      "common": {
+        "author": "POR",
+        "copy": "Copiar",
+        "share": "Compartir",
+        "edit_image": "Editar Imagen",
+        "read": "Leer",
+        "read_metaphor": "Leer Metáfora",
+        "download": "Descargar",
+        "copied": "¡Copiado!",
+        "link_copied": "¡Enlace copiado!"
+      },
+      "editor": {
+        "title": "Generar Post Premium",
+        "controls": "Controles de Arte",
+        "background": "Fondo",
+        "font_size": "Tamaño de Fuente",
+        "text_color": "Color de Texto",
+        "contrast": "Contraste",
+        "blur": "Desenfoque",
+        "upload_image": "Cambiar Imagen de Fondo",
+        "reset": "Reiniciar"
+      }
+    }
+  },
+  fr: {
+    translation: {
+      "app": {
+        "title": "Metamensagem",
+        "tagline": "Esprit, Message et Changement."
+      },
+      "nav": {
+        "home": "Accueil",
+        "quotes": "Citations",
+        "metaforas": "Métaphores",
+        "about": "À propos",
+        "contact": "Contact",
+        "privacy": "Confidentialité",
+        "terms": "Conditions"
+      },
+      "home": {
+        "search_placeholder": "Quel sentiment ou thème cherchez-vous aujourd'hui ?",
+        "explore_more": "Explorer plus de Sagesse (+10)",
+        "sharing_wisdom": "Synchronisation de la Sagesse Edge..."
+      },
+      "banner": {
+        "title": "Recevez de nouvelles citations et métaphores chaque jour",
+        "subtitle": "Suivez @metamensagem et suivez des contenus exclusifs.",
+        "button": "Suivre sur Instagram"
+      },
+      "common": {
+        "author": "PAR",
+        "copy": "Copier",
+        "share": "Partager",
+        "edit_image": "Modifier l'image",
+        "read": "Lire",
+        "read_metaphor": "Lire la Métaphore",
+        "download": "Télécharger",
+        "copied": "Copié !",
+        "link_copied": "Lien copié !"
+      },
+      "editor": {
+        "title": "Générer un Post Premium",
+        "controls": "Contrôles d'Art",
+        "background": "Arrière-plan",
+        "font_size": "Taille de la police",
+        "text_color": "Couleur du texte",
+        "contrast": "Contraste",
+        "blur": "Flou",
+        "upload_image": "Changer l'image de fond",
+        "reset": "Réinitialiser"
+      }
+    }
+  }
+};
+
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources,
+    fallbackLng: 'pt',
+    interpolation: {
+      escapeValue: false
+    }
+  });
+
+export default i18n;

@@ -1,0 +1,6 @@
+{
+  "name": "Metamensagem",
+  "description": "Plataforma de alta performance para sabedoria e metáforas terapêuticas. Arquitetura Offline-FirstFragmentada com carregamento instantâneo via Cache Storage, sem banco de dados.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

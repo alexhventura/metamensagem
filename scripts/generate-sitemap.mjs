@@ -45,7 +45,10 @@ const staticPages = [
   { path: '/cookies', priority: '0.3', changefreq: 'yearly' },
 ];
 
+const TAG_URL_PREFIX = 'mensagens-de';
+
 const indexPath = path.join(PUBLIC, 'metaforas-index.json');
+const frasesIndexPath = path.join(PUBLIC, 'frases-index.json');
 if (!fs.existsSync(indexPath)) {
   console.warn('⚠ metaforas-index.json ausente; sitemap só com páginas estáticas.');
 }
@@ -54,8 +57,30 @@ const metaforas = fs.existsSync(indexPath)
   ? JSON.parse(fs.readFileSync(indexPath, 'utf8'))
   : [];
 
+const frases = fs.existsSync(frasesIndexPath)
+  ? JSON.parse(fs.readFileSync(frasesIndexPath, 'utf8'))
+  : [];
+
+/** Slugs únicos de tags (mescla variantes como Reflexão / Reflexao). */
+function collectTagSlugs(items) {
+  const slugs = new Set();
+  for (const item of items) {
+    for (const tag of item.tags || []) {
+      const slug = slugFromTitulo(tag);
+      if (slug) slugs.add(slug);
+    }
+  }
+  return [...slugs].sort();
+}
+
+const tagSlugs = collectTagSlugs([...metaforas, ...frases]);
+const tagPages = tagSlugs.map((slug) =>
+  urlEntry(`${SITE}/${TAG_URL_PREFIX}-${slug}`, '0.85', 'weekly')
+);
+
 const entries = [
   ...staticPages.map((p) => urlEntry(`${SITE}${p.path}`, p.priority, p.changefreq)),
+  ...tagPages,
   ...metaforas.map((m) => {
     const slug = m.titulo ? slugFromTitulo(m.titulo) : '';
     const loc = slug
@@ -73,4 +98,6 @@ ${entries.join('\n')}
 
 const out = path.join(PUBLIC, 'sitemap.xml');
 fs.writeFileSync(out, xml, 'utf8');
-console.log(`✅ sitemap.xml — ${staticPages.length} páginas + ${metaforas.length} metáforas (${entries.length} URLs)`);
+console.log(
+  `✅ sitemap.xml — ${staticPages.length} estáticas + ${tagSlugs.length} tags + ${metaforas.length} metáforas (${entries.length} URLs)`
+);

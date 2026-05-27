@@ -51,6 +51,8 @@ import {
   WEB_SITE_JSON_LD,
   urlMetafora,
 } from './lib/seo';
+import { buildTagRegistry, pathFromTag, TAG_URL_PREFIX } from './lib/tagsSeo';
+import TagCategoriaView from './pages/TagCategoria';
 
 // --- TIPOS ---
 interface ItemConteudo {
@@ -155,9 +157,11 @@ export default function App() {
     carregarIndices();
   }, []);
 
+  const tagRegistry = useMemo(() => buildTagRegistry(bancoTotal), [bancoTotal]);
+
   const tagsUnicas = useMemo(() => {
-    return Array.from(new Set(bancoTotal.flatMap(i => i.tags || []))).sort();
-  }, [bancoTotal]);
+    return tagRegistry.map((r) => r.tag);
+  }, [tagRegistry]);
 
   return (
     <BrowserRouter>
@@ -263,6 +267,21 @@ export default function App() {
           ) : (
             <Routes>
               <Route path="/" element={<HomeView tema={tema} toast={mostrarToast} banco={bancoTotal} tags={tagsUnicas} bancoRandom={bancoRandom} />} />
+              <Route
+                path={`/${TAG_URL_PREFIX}-:slug`}
+                element={
+                  <TagCategoriaView
+                    tema={tema}
+                    toast={mostrarToast}
+                    banco={bancoTotal}
+                    registry={tagRegistry}
+                    ItemCard={ItemCard}
+                    AdBanner={AdBanner}
+                    MudarMetaSEO={MudarMetaSEO}
+                    ModalGeradorPost={CustomModalGeradorPost}
+                  />
+                }
+              />
               <Route path="/frases" element={<FrasesView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
               <Route path="/metaforas" element={<MetaforasView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
               <Route path="/metafora/:id/*" element={<MetaforaDetalheView tema={tema} banco={bancoTotal} toast={mostrarToast} />} />
@@ -308,7 +327,8 @@ function AdBanner({
     | 'home-in-feed'
     | 'frases-in-feed'
     | 'metaforas-in-feed'
-    | 'metafora-detail-footer';
+    | 'metafora-detail-footer'
+    | 'tag-in-feed';
 }) {
   return (
     <aside
@@ -408,9 +428,13 @@ function ItemCard({
           
           <div className="flex flex-wrap gap-1.5 mt-auto">
             {item.tags?.slice(0, 3).map(tag => (
-              <span key={tag} className="text-[9px] font-black px-2.5 py-1 rounded-full bg-purple-500/5 text-purple-400 border border-purple-500/10">
+              <Link
+                key={tag}
+                to={pathFromTag(tag)}
+                className="text-[9px] font-black px-2.5 py-1 rounded-full bg-purple-500/5 text-purple-400 border border-purple-500/10 hover:bg-purple-500/15 transition-colors"
+              >
                 #{tag.toUpperCase()}
-              </span>
+              </Link>
             ))}
           </div>
 
@@ -648,20 +672,18 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
           />
         </div>
 
-        {/* TAG CLOUD DINÂMICO */}
+        {/* TAG CLOUD — links indexáveis (filtro local permanece na barra de busca) */}
         <div className="flex flex-wrap justify-center gap-2 mt-8 max-w-2xl mx-auto">
           {tags.slice(0, 12).map(tag => (
-            <button 
-              key={tag} 
-              onClick={() => setBusca(tag)}
+            <Link
+              key={tag}
+              to={pathFromTag(tag)}
               className={`px-3.5 py-1.5 rounded-full text-[11px] font-bold border transition-colors ${
-                busca === tag 
-                  ? 'bg-[#A855F7] border-[#A855F7] text-white' 
-                  : tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-600 hover:border-zinc-300' : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:border-zinc-700'
+                tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-600 hover:border-[#A855F7] hover:text-[#A855F7]' : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:border-[#A855F7] hover:text-[#A855F7]'
               }`}
             >
               #{tag}
-            </button>
+            </Link>
           ))}
         </div>
       </section>

@@ -1,3 +1,18 @@
+/**
+ * Gera índices leves para o site (frases-index.json, metaforas-index.json, chunks).
+ *
+ * CONTADORES E LISTAGENS NA UI
+ * As páginas /frases e /metaforas leem esses índices. O total exibido abaixo do título
+ * (ex.: "416 frases disponíveis") atualiza automaticamente após regenerar os índices.
+ *
+ * FLUXO AO ADICIONAR CONTEÚDO
+ * 1. Inclua a frase em public/frases.json OU a metáfora em public/metaforas.json
+ * 2. Rode: npm run build   (ou: node prepare-data.cjs)
+ * 3. Faça deploy — na próxima visita o site e os contadores refletem o novo total
+ *
+ * Frases enriquecidas (cache externo) são fundidas aqui a partir de frases-enriched-cache.json
+ * (gerado por scripts/enrich-external-content.mjs no build).
+ */
 
 const fs = require('fs');
 const path = require('path');

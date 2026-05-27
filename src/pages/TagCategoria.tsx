@@ -5,8 +5,6 @@ import { Search } from 'lucide-react';
 import Fuse from 'fuse.js';
 import {
   extractSlugFromTagUrlSegment,
-  filterBancoByTagSlug,
-  getRelatedTags,
   isTagCategoryPath,
   pathFromTag,
   resolveTagEntry,
@@ -18,6 +16,11 @@ import {
   urlFromTag,
   type TagRegistryEntry,
 } from '../lib/tagsSeo';
+import {
+  filterAndRankBancoForTagPage,
+  getSemanticRelatedTags,
+  relatedTagLabels,
+} from '../lib/tagSemantics';
 
 interface ItemConteudo {
   id: string;
@@ -69,7 +72,7 @@ export default function TagCategoriaView({
 }: TagCategoriaProps) {
   const { tagSlug: tagSlugParam } = useParams<{ tagSlug: string }>();
   const [busca, setBusca] = useState('');
-  const [itensVisiveis, setItensVisiveis] = useState(12);
+  const [itensVisiveis, setItensVisiveis] = useState(24);
   const [itemPost, setItemPost] = useState<ItemConteudo | null>(null);
 
   const resolvedSlug = useMemo(
@@ -77,15 +80,35 @@ export default function TagCategoriaView({
     [tagSlugParam]
   );
 
-  const itensDaTag = useMemo(() => {
+  const rankedItems = useMemo(() => {
     if (!resolvedSlug || banco.length === 0) return [];
-    return filterBancoByTagSlug(banco, resolvedSlug);
-  }, [banco, resolvedSlug]);
+    return filterAndRankBancoForTagPage(banco, resolvedSlug, registry);
+  }, [banco, resolvedSlug, registry]);
+
+  const itensDaTag = useMemo(
+    () => rankedItems.map((r) => r.item),
+    [rankedItems]
+  );
+
+  const matchStats = useMemo(() => {
+    const stats = { primary: 0, related: 0, keyword: 0 };
+    for (const r of rankedItems) {
+      if (r.matchKind === 'primary') stats.primary += 1;
+      else if (r.matchKind === 'related') stats.related += 1;
+      else stats.keyword += 1;
+    }
+    return stats;
+  }, [rankedItems]);
 
   const entry = useMemo(() => {
     if (!resolvedSlug) return undefined;
     return resolveTagEntry(registry, resolvedSlug, itensDaTag.length);
   }, [registry, resolvedSlug, itensDaTag.length]);
+
+  const labelsRelacionados = useMemo(
+    () => (resolvedSlug ? relatedTagLabels(registry, resolvedSlug, 6) : []),
+    [registry, resolvedSlug]
+  );
 
   const itensFiltrados = useMemo(() => {
     if (!busca.trim()) return itensDaTag;
@@ -100,13 +123,16 @@ export default function TagCategoriaView({
   const displayTag = entry?.tag ?? resolvedSlug ?? '';
 
   const relacionadas = useMemo(
-    () => (entry ? getRelatedTags(registry, entry) : registry.filter((r) => r.slug !== resolvedSlug).slice(0, 8)),
-    [registry, entry, resolvedSlug]
+    () =>
+      resolvedSlug
+        ? getSemanticRelatedTags(registry, resolvedSlug, 10)
+        : registry.filter((r) => r.slug !== resolvedSlug).slice(0, 8),
+    [registry, resolvedSlug]
   );
 
   const intro = useMemo(
-    () => tagIntroParagraphs(displayTag, itensDaTag.length),
-    [displayTag, itensDaTag.length]
+    () => tagIntroParagraphs(displayTag, itensDaTag.length, matchStats, labelsRelacionados),
+    [displayTag, itensDaTag.length, matchStats, labelsRelacionados]
   );
 
   const itensGrid = useMemo(() => {
@@ -139,7 +165,7 @@ export default function TagCategoriaView({
     >
       <MudarMetaSEO
         title={tagSeoTitle(displayTag)}
-        description={tagMetaDescription(displayTag, itensDaTag.length)}
+        description={tagMetaDescription(displayTag, itensDaTag.length, labelsRelacionados)}
         canonical={canonical}
         jsonLD={tagPageJsonLd(entry ?? { tag: displayTag, slug: resolvedSlug, aliases: [], count: itensDaTag.length }, itensDaTag.length)}
         ogType="website"
@@ -161,7 +187,7 @@ export default function TagCategoriaView({
             value={busca}
             onChange={(e) => {
               setBusca(e.target.value);
-              setItensVisiveis(12);
+              setItensVisiveis(24);
             }}
             className={`w-full py-4 pl-14 pr-6 rounded-[2rem] border-2 font-medium outline-none transition-all shadow-lg ${
               tema === 'light'
@@ -264,7 +290,7 @@ export default function TagCategoriaView({
       {itensFiltrados.length > itensVisiveis && (
         <button
           type="button"
-          onClick={() => setItensVisiveis((p) => p + 12)}
+          onClick={() => setItensVisiveis((p) => p + 16)}
           className="w-full mt-10 py-5 bg-transparent border-2 border-dashed border-zinc-800 rounded-[2rem] text-xs font-black uppercase tracking-widest text-zinc-500 hover:text-white hover:border-[#A855F7] hover:bg-[#A855F7]/5 transition-all"
         >
           Carregar mais mensagens
@@ -272,8 +298,9 @@ export default function TagCategoriaView({
       )}
 
       <p className="text-center mt-8 text-[10px] font-mono uppercase tracking-widest opacity-40">
-        {itensFiltrados.length} {itensFiltrados.length === 1 ? 'mensagem' : 'mensagens'} ·{' '}
-        {displayTag}
+        {itensFiltrados.length} {itensFiltrados.length === 1 ? 'mensagem' : 'mensagens'} · {displayTag}
+        {matchStats.primary > 0 && ` · ${matchStats.primary} diretas`}
+        {matchStats.related > 0 && ` · ${matchStats.related} relacionadas`}
       </p>
 
       {itemPost && ModalGeradorPost && (

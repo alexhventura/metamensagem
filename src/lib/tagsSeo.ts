@@ -162,26 +162,80 @@ export function tagSeoTitle(tag: string): string {
   return tagPageTitle(tag);
 }
 
-export function tagMetaDescription(tag: string, itemCount: number): string {
+export function tagMetaDescription(
+  tag: string,
+  itemCount: number,
+  relatedLabels: string[] = []
+): string {
   const tema = tag.toLowerCase();
   const qtd =
     itemCount > 0
-      ? ` Explore ${itemCount} frases e metáforas sobre ${tema}.`
+      ? ` Mais de ${itemCount} frases e metáforas sobre ${tema}`
+      : ` Frases e metáforas sobre ${tema}`;
+  const extras =
+    relatedLabels.length > 0
+      ? `, incluindo reflexões sobre ${relatedLabels.slice(0, 4).join(', ').toLowerCase()}`
       : '';
-  return `Veja mensagens de ${tema}, frases inspiradoras e reflexões para compartilhar, se motivar e encontrar novas perspectivas.${qtd} ${SITE_NAME}.`;
+  return `Veja mensagens de ${tema}${qtd}${extras}. Inspire-se, compartilhe e encontre novas perspectivas no ${SITE_NAME}.`;
 }
 
-/** 2–5 parágrafos introdutórios gerados de forma natural (sem keyword stuffing). */
-export function tagIntroParagraphs(tag: string, itemCount: number): string[] {
+const THEME_INTRO: Record<string, string> = {
+  estrategia:
+    'Mensagens sobre estratégia ajudam a refletir sobre decisões conscientes, planejamento de vida e visão de futuro — escolhas que constroem resultados com paciência e clareza.',
+  amor:
+    'Frases de amor traduzem afeto, cuidado e conexão humana em palavras que acolhem o coração e convidam ao compartilhamento sincero.',
+  motivacao:
+    'A motivação nasce de pequenos lembretes diários: frases que reacendem o ânimo, fortalecem a persistência e lembram por que vale continuar.',
+  reflexao:
+    'Textos de reflexão convidam a pausar, observar a própria história e encontrar sentido nas experiências que moldam quem somos.',
+  metafora:
+    'Metáforas terapêuticas traduzem emoções complexas em narrativas acessíveis — histórias que curam, ensinam e transformam perspectivas.',
+  sabedoria:
+    'A sabedoria aparece quando experiência e humildade se encontram; estas mensagens reúnem insights para viver com mais consciência.',
+  sucesso:
+    'Sobre sucesso, o essencial não é apenas vencer, mas cultivar disciplina, propósito e gratidão em cada passo da jornada.',
+  foco:
+    'Mensagens de foco lembram que energia e atenção são recursos preciosos — direcioná-los bem é um ato de amor-próprio e estratégia.',
+  coragem:
+    'A coragem não elimina o medo: ela nos ensina a agir apesar dele, com dignidade e esperança renovada.',
+  superacao:
+    'Superação é transformar dor em aprendizado; estas frases honram quem segue em frente mesmo quando o caminho parece íngreme.',
+};
+
+/** Parágrafos introdutórios contextualizados (SEO natural, sem stuffing). */
+export function tagIntroParagraphs(
+  tag: string,
+  itemCount: number,
+  stats?: { primary: number; related: number; keyword: number },
+  relatedLabels: string[] = []
+): string[] {
   const tema = tag.toLowerCase();
-  const p1 = `Bem-vindo à coleção de mensagens de ${tema} no ${SITE_NAME}. Aqui você encontra frases curtas e metáforas terapêuticas pensadas para provocar reflexão, inspirar atitudes positivas e facilitar o compartilhamento no dia a dia.`;
-  const p2 = `Cada conteúdo desta página foi organizado em torno do tema «${tag}», reunindo perspectivas variadas sobre o assunto. Use as mensagens como lembrete pessoal, legenda para redes sociais ou ponto de partida para uma conversa mais profunda consigo mesmo ou com outras pessoas.`;
-  const p3 =
-    itemCount > 0
-      ? `No momento, você tem acesso a ${itemCount} textos catalogados nesta categoria — um acervo em constante crescimento, alimentado pelo nosso banco de frases e metáforas.`
-      : `Esta categoria faz parte do nosso acervo em expansão de frases e metáforas; novos conteúdos são adicionados regularmente.`;
-  const p4 = `Refletir sobre ${tema} não precisa ser complicado: basta uma frase certa no momento certo para mudar o tom do seu dia. Salve as que mais ressoam, copie para compartilhar ou explore temas relacionados logo abaixo.`;
-  const p5 = `O ${SITE_NAME} acredita que palavras bem escolhidas podem ser ferramentas de mudança. Navegue com calma, descubra novas vozes e autorias, e volte sempre que precisar de uma dose de clareza emocional.`;
+  const slug = slugFromTag(tag);
+  const thematic =
+    THEME_INTRO[slug] ||
+    `Esta coleção reúne mensagens sobre ${tema} para inspirar atitudes positivas, fortalecer emoções e apoiar momentos de mudança pessoal.`;
+
+  const p1 = `Bem-vindo às mensagens de ${tema} no ${SITE_NAME}. ${thematic}`;
+
+  const relatedText =
+    relatedLabels.length > 0
+      ? ` Para ampliar sua leitura, incluímos também conteúdos de temas próximos, como ${relatedLabels.slice(0, 5).join(', ')}.`
+      : '';
+
+  const p2 = `Organizamos frases curtas e metáforas terapêuticas que dialogam com «${tag}» e com ideias semanticamente relacionadas — porque sentimentos e valores raramente aparecem isolados na vida real.${relatedText}`;
+
+  const detalhe =
+    stats && itemCount > 0
+      ? ` Você encontra ${itemCount} mensagens nesta página${stats.primary > 0 ? ` (${stats.primary} com a tag principal` : ''}${stats.related > 0 ? `${stats.primary > 0 ? ', ' : ' ('}${stats.related} de temas relacionados` : ''}${stats.keyword > 0 ? `${stats.primary > 0 || stats.related > 0 ? ', ' : ' ('}${stats.keyword} por proximidade de significado` : ''}${stats.primary > 0 || stats.related > 0 || stats.keyword > 0 ? ')' : ''}.`
+      : itemCount > 0
+        ? ` São ${itemCount} textos disponíveis para ler, copiar e compartilhar.`
+        : '';
+
+  const p3 = `Nosso acervo cresce continuamente com novas frases e histórias.${detalhe} Use a busca acima para refinar o que deseja encontrar.`;
+
+  const p4 = `Mensagens sobre ${tema} servem para status, conversas difíceis, terapia informal ou simples lembretes no dia a dia. Escolha as que ressoam, salve-as e volte quando precisar de clareza emocional.`;
+
+  const p5 = `Explore os temas relacionados abaixo para fortalecer sua jornada de autoconhecimento. O ${SITE_NAME} existe para que palavras bem escolhidas se tornem ferramentas reais de mudança.`;
 
   return [p1, p2, p3, p4, p5];
 }

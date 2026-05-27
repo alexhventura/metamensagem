@@ -52,6 +52,7 @@ import {
   urlMetafora,
 } from './lib/seo';
 import { buildTagRegistry, pathFromTag } from './lib/tagsSeo';
+import { searchBancoSemantico } from './lib/semanticSearch';
 import TagCategoriaView from './pages/TagCategoria';
 
 // --- TIPOS ---
@@ -616,14 +617,8 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
   const [itemPost, setItemPost] = useState<ItemConteudo | null>(null);
 
   const resultadosFiltrados = useMemo(() => {
-    const bancoBase = busca.trim() ? banco : bancoRandom;
-    if (!busca.trim()) return bancoBase;
-    const fuse = new Fuse(banco, {
-      keys: ['texto', 'titulo', 'autor', 'tags', 'resumo'],
-      threshold: 0.35,
-      ignoreLocation: true
-    });
-    return fuse.search(busca).map(res => res.item);
+    if (!busca.trim()) return bancoRandom;
+    return searchBancoSemantico(banco, busca);
   }, [busca, banco, bancoRandom]);
 
   const itensHome = useMemo(() => {
@@ -762,11 +757,7 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
 
   const frases = useMemo(() => {
     if (!busca.trim()) return baseFrases;
-    const fuse = new Fuse(baseFrases, {
-      keys: ['texto', 'autor', 'tags'],
-      threshold: 0.35
-    });
-    return fuse.search(busca).map(r => r.item);
+    return searchBancoSemantico(baseFrases, busca, ['texto', 'autor', 'tags']);
   }, [busca, baseFrases]);
 
   const tags = useMemo(() => {
@@ -865,11 +856,7 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
 
   const metaforas = useMemo(() => {
     if (!busca.trim()) return baseMetaforas;
-    const fuse = new Fuse(baseMetaforas, {
-      keys: ['titulo', 'texto', 'autor', 'tags'],
-      threshold: 0.35
-    });
-    return fuse.search(busca).map(r => r.item);
+    return searchBancoSemantico(baseMetaforas, busca, ['titulo', 'texto', 'autor', 'tags', 'resumo']);
   }, [busca, baseMetaforas]);
 
   const tags = useMemo(() => {

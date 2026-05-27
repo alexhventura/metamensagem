@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search } from 'lucide-react';
-import Fuse from 'fuse.js';
+import { searchBancoSemantico } from '../lib/semanticSearch';
 import {
   extractSlugFromTagUrlSegment,
   isTagCategoryPath,
@@ -112,12 +112,7 @@ export default function TagCategoriaView({
 
   const itensFiltrados = useMemo(() => {
     if (!busca.trim()) return itensDaTag;
-    const fuse = new Fuse(itensDaTag, {
-      keys: ['texto', 'titulo', 'autor', 'tags', 'resumo'],
-      threshold: 0.35,
-      ignoreLocation: true,
-    });
-    return fuse.search(busca).map((r) => r.item);
+    return searchBancoSemantico(itensDaTag, busca);
   }, [busca, itensDaTag]);
 
   const displayTag = entry?.tag ?? resolvedSlug ?? '';

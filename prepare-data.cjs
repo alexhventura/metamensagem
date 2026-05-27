@@ -7,6 +7,7 @@ const INPUT_FRASES = path.join(__dirname, 'public', 'frases.json');
 const OUTPUT_DIR = path.join(__dirname, 'public', 'metaforas');
 const INDEX_METAFORAS_FILE = path.join(__dirname, 'public', 'metaforas-index.json');
 const INDEX_FRASES_FILE = path.join(__dirname, 'public', 'frases-index.json');
+const ENRICHED_CACHE_FILE = path.join(__dirname, 'public', 'frases-enriched-cache.json');
 const TAGS_FILE = path.join(__dirname, 'public', 'metaforas-tags.json');
 const AUTORES_FILE = path.join(__dirname, 'public', 'metaforas-autores.json');
 
@@ -51,7 +52,37 @@ async function run() {
     
     if (fs.existsSync(INPUT_FRASES)) {
         const frases = JSON.parse(fs.readFileSync(INPUT_FRASES, 'utf8'));
-        fs.writeFileSync(INDEX_FRASES_FILE, JSON.stringify(frases.map(f => ({ id: sanitizeId(f.id), tipo: 'frase', texto: f.texto, autor: f.autor, tags: f.tags || [] }))));
+        let enriched = [];
+        if (fs.existsSync(ENRICHED_CACHE_FILE)) {
+            try {
+                const cache = JSON.parse(fs.readFileSync(ENRICHED_CACHE_FILE, 'utf8'));
+                enriched = Array.isArray(cache.items) ? cache.items : [];
+                console.log(`📚 Acervo enriquecido: +${enriched.length} frases (cache).`);
+            } catch (e) {
+                console.warn('⚠ Cache enriquecido inválido:', e.message);
+            }
+        }
+        const textoKeys = new Set();
+        const merged = [];
+        for (const f of [...frases, ...enriched]) {
+            const key = (f.texto || '').toLowerCase().slice(0, 100);
+            if (!key || textoKeys.has(key)) continue;
+            textoKeys.add(key);
+            merged.push(f);
+        }
+        fs.writeFileSync(
+            INDEX_FRASES_FILE,
+            JSON.stringify(
+                merged.map((f) => ({
+                    id: sanitizeId(f.id),
+                    tipo: 'frase',
+                    texto: f.texto,
+                    autor: f.autor,
+                    tags: f.tags || [],
+                }))
+            )
+        );
+        console.log(`✅ frases-index.json — ${merged.length} frases (${frases.length} locais + enriquecidas, deduplicadas).`);
     }
     console.log('✅ Metadata e índices gerados.');
 

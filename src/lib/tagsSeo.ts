@@ -88,9 +88,23 @@ export function findTagBySlug(
  * Extrai o slug da tag a partir do segmento de URL (ex.: "mensagens-de-motivacao" → "motivacao").
  * Suporta prefixo oficial e variantes como "mensagens-motivacionais".
  */
+/** URLs amigáveis alternativas → slug canônico da tag. */
+export const TAG_PATH_ALIASES: Record<string, string> = {
+  'frases-motivacionais': 'motivacao',
+  'frases-motivacao': 'motivacao',
+  'metaforas-da-vida': 'metafora',
+  'reflexoes-profundas': 'reflexao',
+  'reflexoes-da-vida': 'reflexao',
+  'frases-para-status': 'inspiracional',
+  'mensagens-de-superacao': 'superacao',
+  'mensagens-motivacionais': 'motivacao',
+};
+
 export function extractSlugFromTagUrlSegment(segment: string | undefined): string | null {
   if (!segment) return null;
   const lower = segment.trim().toLowerCase();
+
+  if (TAG_PATH_ALIASES[lower]) return TAG_PATH_ALIASES[lower];
 
   const officialPrefix = `${TAG_URL_PREFIX}-`;
   if (lower.startsWith(officialPrefix)) {
@@ -101,13 +115,32 @@ export function extractSlugFromTagUrlSegment(segment: string | undefined): strin
     return slugFromTag(segment.slice('mensagens-'.length));
   }
 
+  if (lower.startsWith('frases-')) {
+    return slugFromTag(segment.slice('frases-'.length));
+  }
+
+  if (lower.startsWith('metaforas-')) {
+    return slugFromTag(segment.slice('metaforas-'.length));
+  }
+
+  if (lower.startsWith('reflexoes-')) {
+    return slugFromTag(segment.slice('reflexoes-'.length));
+  }
+
   return slugFromTag(segment) || null;
 }
 
 export function isTagCategoryPath(segment: string | undefined): boolean {
   if (!segment) return false;
   const lower = segment.toLowerCase();
-  return lower.startsWith(`${TAG_URL_PREFIX}-`) || lower.startsWith('mensagens-');
+  if (TAG_PATH_ALIASES[lower]) return true;
+  return (
+    lower.startsWith(`${TAG_URL_PREFIX}-`) ||
+    lower.startsWith('mensagens-') ||
+    lower.startsWith('frases-') ||
+    lower.startsWith('metaforas-') ||
+    lower.startsWith('reflexoes-')
+  );
 }
 
 export function itemMatchesTag(item: ItemComTags, entry: TagRegistryEntry): boolean {

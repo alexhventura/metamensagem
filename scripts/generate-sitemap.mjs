@@ -78,9 +78,24 @@ const tagPages = tagSlugs.map((slug) =>
   urlEntry(`${SITE}/${TAG_URL_PREFIX}-${slug}`, '0.85', 'weekly')
 );
 
+const TAG_PATH_ALIASES = {
+  'frases-motivacionais': 'motivacao',
+  'frases-motivacao': 'motivacao',
+  'metaforas-da-vida': 'metafora',
+  'reflexoes-profundas': 'reflexao',
+  'reflexoes-da-vida': 'reflexao',
+  'frases-para-status': 'inspiracional',
+  'mensagens-de-superacao': 'superacao',
+  'mensagens-motivacionais': 'motivacao',
+};
+const aliasPages = Object.keys(TAG_PATH_ALIASES).map((path) =>
+  urlEntry(`${SITE}/${path}`, '0.84', 'weekly')
+);
+
 const entries = [
   ...staticPages.map((p) => urlEntry(`${SITE}${p.path}`, p.priority, p.changefreq)),
   ...tagPages,
+  ...aliasPages,
   ...metaforas.map((m) => {
     const slug = m.titulo ? slugFromTitulo(m.titulo) : '';
     const loc = slug
@@ -99,5 +114,5 @@ ${entries.join('\n')}
 const out = path.join(PUBLIC, 'sitemap.xml');
 fs.writeFileSync(out, xml, 'utf8');
 console.log(
-  `✅ sitemap.xml — ${staticPages.length} estáticas + ${tagSlugs.length} tags + ${metaforas.length} metáforas (${entries.length} URLs)`
+  `✅ sitemap.xml — ${staticPages.length} estáticas + ${tagSlugs.length} tags + ${aliasPages.length} aliases + ${metaforas.length} metáforas (${entries.length} URLs)`
 );

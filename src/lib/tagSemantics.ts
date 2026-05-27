@@ -44,7 +44,7 @@ export const RELATED_TAGS_MAP: Record<string, string[]> = {
 };
 
 /** Palavras-chave no texto quando a tag exata é rara no acervo. */
-const THEME_KEYWORDS: Record<string, string[]> = {
+export const THEME_KEYWORDS: Record<string, string[]> = {
   estrategia: [
     'estratégia', 'estrategia', 'planejamento', 'plano', 'planos', 'visão', 'visao',
     'decisão', 'decisao', 'objetivo', 'objetivos', 'liderança', 'lideranca',

@@ -26,9 +26,35 @@ const ENRICHED_CACHE_FILE = path.join(__dirname, 'public', 'frases-enriched-cach
 const TAGS_FILE = path.join(__dirname, 'public', 'metaforas-tags.json');
 const AUTORES_FILE = path.join(__dirname, 'public', 'metaforas-autores.json');
 
+function safeText(value) {
+    if (value == null) return '';
+    if (typeof value === 'string') return value.trim();
+    if (typeof value === 'number' || typeof value === 'boolean') return String(value).trim();
+    return '';
+}
+
+function safeTags(value) {
+    if (!Array.isArray(value)) return [];
+    return value.map(safeText).filter(Boolean);
+}
+
 function sanitizeId(id) {
-    if (!id) return 'unknown';
-    return id.toString().toLowerCase().replace(/[^a-z0-9_\-]/g, '').substring(0, 50);
+    const raw = safeText(id) || 'unknown';
+    return raw.toLowerCase().replace(/[^a-z0-9_\-]/g, '').substring(0, 50);
+}
+
+function normalizeFraseIndex(f) {
+    if (!f || typeof f !== 'object') return null;
+    const texto = safeText(f.texto ?? f.text ?? f.quote ?? f.content);
+    if (!texto) return null;
+    const tags = safeTags(f.tags);
+    return {
+        id: sanitizeId(f.id || `f_${texto.slice(0, 24)}`),
+        tipo: 'frase',
+        texto,
+        autor: safeText(f.autor ?? f.author) || 'Anônimo',
+        tags: tags.length ? tags : ['Inspiracional', 'Reflexao'],
+    };
 }
 
 async function run() {
@@ -56,7 +82,9 @@ async function run() {
             tags: m.tags || [],
             resumo: m.resumo || (m.texto ? m.texto.substring(0, 150).trim() + '...' : '')
         });
-        if (m.tags) m.tags.forEach(t => tagMap[t] = (tagMap[t] || 0) + 1);
+        safeTags(m.tags).forEach((t) => {
+            tagMap[t] = (tagMap[t] || 0) + 1;
+        });
         const autor = m.autor || 'Anônimo';
         authorMap[autor] = (authorMap[autor] || 0) + 1;
     }
@@ -80,23 +108,14 @@ async function run() {
         const textoKeys = new Set();
         const merged = [];
         for (const f of [...frases, ...enriched]) {
-            const key = (f.texto || '').toLowerCase().slice(0, 100);
+            const normalized = normalizeFraseIndex(f);
+            if (!normalized) continue;
+            const key = normalized.texto.toLowerCase().slice(0, 100);
             if (!key || textoKeys.has(key)) continue;
             textoKeys.add(key);
-            merged.push(f);
+            merged.push(normalized);
         }
-        fs.writeFileSync(
-            INDEX_FRASES_FILE,
-            JSON.stringify(
-                merged.map((f) => ({
-                    id: sanitizeId(f.id),
-                    tipo: 'frase',
-                    texto: f.texto,
-                    autor: f.autor,
-                    tags: f.tags || [],
-                }))
-            )
-        );
+        fs.writeFileSync(INDEX_FRASES_FILE, JSON.stringify(merged));
         console.log(`✅ frases-index.json — ${merged.length} frases (${frases.length} locais + enriquecidas, deduplicadas).`);
     }
     console.log('✅ Metadata e índices gerados.');

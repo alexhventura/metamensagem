@@ -52,9 +52,22 @@ function hashId(prefix, text) {
   return `${prefix}_${h}`;
 }
 
+function safeText(value) {
+  if (value == null) return '';
+  if (typeof value === 'string') return value.trim();
+  if (typeof value === 'number' || typeof value === 'boolean') return String(value).trim();
+  return '';
+}
+
+function safeTags(value) {
+  if (!Array.isArray(value)) return [];
+  return value.map(safeText).filter(Boolean);
+}
+
 function cleanText(s) {
-  if (!s) return '';
-  return s
+  const raw = safeText(s);
+  if (!raw) return '';
+  return raw
     .replace(/<[^>]+>/g, '')
     .replace(/\[\[([^\]|]+)\|?([^\]]*)\]\]/g, '$2 || $1')
     .replace(/'''?/g, '')
@@ -69,7 +82,7 @@ function cleanAuthor(s) {
 
 function mapQuotableTags(tags = []) {
   const out = new Set(['Inspiracional']);
-  for (const t of tags) {
+  for (const t of safeTags(tags)) {
     for (const mapped of QUOTABLE_TAG_MAP[t] || []) out.add(mapped);
   }
   return [...out].slice(0, 5);
@@ -256,8 +269,9 @@ function dedupeItems(items) {
   const seen = new Set();
   const out = [];
   for (const item of items) {
-    const key = item.texto.toLowerCase().slice(0, 120);
-    if (seen.has(key)) continue;
+    if (!item?.texto) continue;
+    const key = safeText(item.texto).toLowerCase().slice(0, 120);
+    if (!key || seen.has(key)) continue;
     seen.add(key);
     const { _source, ...rest } = item;
     out.push(rest);

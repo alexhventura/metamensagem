@@ -1,4 +1,5 @@
 import Fuse from 'fuse.js';
+import { safeLower, safeText, safeTags } from './safeContent';
 import { slugFromTag } from './tagsSeo';
 import { THEME_KEYWORDS } from './tagSemantics';
 
@@ -26,8 +27,8 @@ const SEARCH_SYNONYMS: Record<string, string[]> = {
 };
 
 /** Expande termos de busca com sinônimos e keywords de tags. */
-export function expandSearchTerms(query: string): string[] {
-  const q = query.trim().toLowerCase();
+export function expandSearchTerms(query: unknown): string[] {
+  const q = safeLower(query);
   if (!q) return [];
 
   const terms = new Set<string>([q]);
@@ -51,11 +52,17 @@ export interface SearchableItem {
   resumo?: string;
 }
 
-export function matchesSemanticSearch(item: SearchableItem, query: string): boolean {
+export function matchesSemanticSearch(item: SearchableItem, query: unknown): boolean {
   const terms = expandSearchTerms(query);
   if (!terms.length) return true;
 
-  const blob = [item.texto, item.titulo, item.autor, item.resumo, ...(item.tags || [])]
+  const blob = [
+    safeText(item.texto),
+    safeText(item.titulo),
+    safeText(item.autor),
+    safeText(item.resumo),
+    ...safeTags(item.tags),
+  ]
     .filter(Boolean)
     .join(' ')
     .toLowerCase()
@@ -74,10 +81,10 @@ export function matchesSemanticSearch(item: SearchableItem, query: string): bool
 /** Busca Fuse + sinônimos/intenção emocional (reutiliza o banco atual). */
 export function searchBancoSemantico<T extends SearchableItem & { id: string }>(
   banco: T[],
-  query: string,
+  query: unknown,
   keys: string[] = ['texto', 'titulo', 'autor', 'tags', 'resumo']
 ): T[] {
-  const q = query.trim();
+  const q = safeText(query);
   if (!q) return banco;
 
   const fuse = new Fuse(banco, { keys, threshold: 0.38, ignoreLocation: true });

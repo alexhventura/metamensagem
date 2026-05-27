@@ -1,3 +1,5 @@
+import { safeText } from './safeContent';
+
 /**
  * Camada de dados de metáforas — preparada para migração entre:
  * - monólito: /metaforas.json
@@ -21,8 +23,8 @@ export const METAFORAS_URLS = {
   fragment: (id: string) => `/metaforas/${sanitizarIdMetafora(id)}.json`,
 } as const;
 
-export function sanitizarIdMetafora(id: string): string {
-  return id.toLowerCase().replace(/[^a-z0-9_\-]/g, '').substring(0, 50);
+export function sanitizarIdMetafora(id: unknown): string {
+  return safeText(id).toLowerCase().replace(/[^a-z0-9_\-]/g, '').substring(0, 50);
 }
 
 export function filtrarMetaforasDoBanco<T extends { tipo?: string }>(

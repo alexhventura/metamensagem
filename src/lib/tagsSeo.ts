@@ -4,13 +4,14 @@ import {
   SITE_ORIGIN,
   slugFromTitulo,
 } from './seo';
+import { safeLower, safeText, safeTags } from './safeContent';
 
 /** Prefixo de URL amigável: /mensagens-de-motivacao */
 export const TAG_URL_PREFIX = 'mensagens-de';
 
 /** Normaliza texto/tag/slug para comparação (minúsculas, sem acentos, hífens). */
-export function normalizeTagKey(str: string): string {
-  return str
+export function normalizeTagKey(str: unknown): string {
+  return safeText(str)
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
@@ -20,7 +21,7 @@ export function normalizeTagKey(str: string): string {
     .replace(/(^-|-$)+/g, '');
 }
 
-export function slugFromTag(tag: string): string {
+export function slugFromTag(tag: unknown): string {
   return normalizeTagKey(tag);
 }
 
@@ -50,7 +51,8 @@ export function buildTagRegistry(items: ItemComTags[]): TagRegistryEntry[] {
   const bySlug = new Map<string, { variants: Map<string, number>; count: number }>();
 
   for (const item of items) {
-    for (const raw of item.tags || []) {
+    if (!item) continue;
+    for (const raw of safeTags(item.tags)) {
       const slug = slugFromTag(raw);
       if (!slug) continue;
       if (!bySlug.has(slug)) {
@@ -64,7 +66,8 @@ export function buildTagRegistry(items: ItemComTags[]): TagRegistryEntry[] {
 
   return [...bySlug.entries()]
     .map(([slug, data]) => {
-      const canonical = [...data.variants.entries()].sort((a, b) => b[1] - a[1])[0][0];
+      const top = [...data.variants.entries()].sort((a, b) => b[1] - a[1])[0];
+      const canonical = safeText(top?.[0]) || slug;
       return {
         tag: canonical,
         slug,
@@ -102,7 +105,7 @@ export const TAG_PATH_ALIASES: Record<string, string> = {
 
 export function extractSlugFromTagUrlSegment(segment: string | undefined): string | null {
   if (!segment) return null;
-  const lower = segment.trim().toLowerCase();
+  const lower = safeLower(segment);
 
   if (TAG_PATH_ALIASES[lower]) return TAG_PATH_ALIASES[lower];
 
@@ -132,7 +135,7 @@ export function extractSlugFromTagUrlSegment(segment: string | undefined): strin
 
 export function isTagCategoryPath(segment: string | undefined): boolean {
   if (!segment) return false;
-  const lower = segment.toLowerCase();
+  const lower = safeLower(segment);
   if (TAG_PATH_ALIASES[lower]) return true;
   return (
     lower.startsWith(`${TAG_URL_PREFIX}-`) ||
@@ -200,14 +203,17 @@ export function tagMetaDescription(
   itemCount: number,
   relatedLabels: string[] = []
 ): string {
-  const tema = tag.toLowerCase();
+  const tema = safeLower(tag);
   const qtd =
     itemCount > 0
       ? ` Mais de ${itemCount} frases e metáforas sobre ${tema}`
       : ` Frases e metáforas sobre ${tema}`;
   const extras =
     relatedLabels.length > 0
-      ? `, incluindo reflexões sobre ${relatedLabels.slice(0, 4).join(', ').toLowerCase()}`
+      ? `, incluindo reflexões sobre ${relatedLabels
+          .slice(0, 4)
+          .map((l) => safeLower(l))
+          .join(', ')}`
       : '';
   return `Veja mensagens de ${tema}${qtd}${extras}. Inspire-se, compartilhe e encontre novas perspectivas no ${SITE_NAME}.`;
 }
@@ -242,7 +248,7 @@ export function tagIntroParagraphs(
   stats?: { primary: number; related: number; keyword: number },
   relatedLabels: string[] = []
 ): string[] {
-  const tema = tag.toLowerCase();
+  const tema = safeLower(tag);
   const slug = slugFromTag(tag);
   const thematic =
     THEME_INTRO[slug] ||

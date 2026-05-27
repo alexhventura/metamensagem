@@ -55,6 +55,7 @@ import {
 } from './lib/seo';
 import { buildTagRegistry, pathFromTag } from './lib/tagsSeo';
 import { searchBancoSemantico } from './lib/semanticSearch';
+import { sanitizeContentBanco } from './lib/safeContent';
 import TagCategoriaView from './pages/TagCategoria';
 
 // --- TIPOS ---
@@ -132,7 +133,7 @@ export default function App() {
 
         if (cachedResponses.every(res => res)) {
           const cachedData = await Promise.all(cachedResponses.map(res => res!.json()));
-          dataToSet = [...cachedData[0], ...cachedData[1]];
+          dataToSet = sanitizeContentBanco([...cachedData[0], ...cachedData[1]]);
           setBancoTotal(dataToSet);
           setBancoRandom(shuffleArray(dataToSet));
           setLoading(false);
@@ -145,7 +146,7 @@ export default function App() {
         
         await Promise.all(clonedResponses.map((res, i) => cache.put(urls[i], res)));
         
-        const finalData = [...networkData[0], ...networkData[1]];
+        const finalData = sanitizeContentBanco([...networkData[0], ...networkData[1]]);
         setBancoTotal(finalData);
         if (dataToSet.length === 0) {
           setBancoRandom(shuffleArray(finalData));

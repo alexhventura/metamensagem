@@ -1,3 +1,5 @@
+import { safeText } from './safeContent';
+
 /** Configuração central de SEO (Google, Open Graph, URLs canônicas). */
 
 export const SITE_ORIGIN = 'https://metamensagem.com';
@@ -7,8 +9,8 @@ export const DEFAULT_DESCRIPTION =
 export const OG_IMAGE = `${SITE_ORIGIN}/web-app-manifest-512x512.png`;
 export const GOOGLE_SITE_VERIFICATION = '5274c569177c382e';
 
-export function slugFromTitulo(texto: string): string {
-  return texto
+export function slugFromTitulo(texto: unknown): string {
+  return safeText(texto)
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')

@@ -1,3 +1,4 @@
+import { safeLower, safeText, safeTags } from './safeContent';
 import { slugFromTag, type ItemComTags, type TagRegistryEntry } from './tagsSeo';
 
 /** Slugs de tags irmãs no mesmo cluster temático (normalizados). */
@@ -128,7 +129,7 @@ export function getExpandedTagSlugs(
 }
 
 function textBlob(item: ItemComTags & { texto?: string; titulo?: string; resumo?: string }): string {
-  return [item.texto, item.titulo, item.resumo, ...(item.tags || [])]
+  return [safeText(item.texto), safeText(item.titulo), safeText(item.resumo), ...safeTags(item.tags)]
     .filter(Boolean)
     .join(' ')
     .toLowerCase()
@@ -140,7 +141,7 @@ function matchesKeywords(item: ItemComTags, primarySlug: string): boolean {
   const keywords = THEME_KEYWORDS[primarySlug];
   if (!keywords?.length) return false;
   const blob = textBlob(item);
-  return keywords.some((kw) => blob.includes(kw.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()));
+  return keywords.some((kw) => blob.includes(safeLower(kw).normalize('NFD').replace(/[\u0300-\u036f]/g, '')));
 }
 
 /**
@@ -162,7 +163,7 @@ export function filterAndRankBancoForTagPage<
     const id = item.id ?? JSON.stringify(item);
     if (seen.has(id)) continue;
 
-    const itemSlugs = (item.tags || []).map(slugFromTag).filter(Boolean);
+    const itemSlugs = safeTags(item.tags).map(slugFromTag).filter(Boolean);
     const hasPrimary = itemSlugs.includes(slug);
     const relatedHits = itemSlugs.filter((s) => relatedSet.has(s)).length;
     const keywordHit = !hasPrimary && relatedHits === 0 && matchesKeywords(item, slug);

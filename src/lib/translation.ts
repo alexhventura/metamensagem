@@ -1,3 +1,5 @@
+import { safeText } from './safeContent';
+
 /** Tradução por card com cache local (UX only — não altera SEO/indexação). */
 
 export type CardLang = 'pt' | 'en' | 'es';
@@ -49,8 +51,9 @@ function cacheId(text: string, from: CardLang, to: CardLang): string {
 }
 
 /** Detecção leve do idioma de origem (evita tradução desnecessária). */
-export function detectCardLanguage(text: string): CardLang {
-  const t = text.toLowerCase().normalize('NFD');
+export function detectCardLanguage(text: unknown): CardLang {
+  const t = safeText(text).toLowerCase().normalize('NFD');
+  if (!t) return 'pt';
   const ptMarks = (t.match(/[\u0300-\u036f]/g) || []).length;
   const ptWords = /\b(não|que|uma|para|com|você|vida|amor|ser|mais)\b/.test(t) ? 2 : 0;
   const esWords = /\b(el|la|los|las|que|por|para|con|vida|amor|más)\b/.test(t) ? 2 : 0;

@@ -36,7 +36,10 @@ import {
 import CustomModalGeradorPost from './components/ModalGeradorPost';
 import { CardTranslateMenu } from './components/CardTranslateMenu';
 import GoogleAdSense from './components/GoogleAdSense';
-import type { CardContentDisplay } from './lib/translation';
+import {
+  type CardContentDisplay,
+  sanitizeTextForTranslation,
+} from './lib/translation';
 
 import SocialHub from './components/SocialHub';
 import {
@@ -1057,6 +1060,10 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
   const [fontSize, setFontSize] = useState(20);
   const [item, setItem] = useState<ItemConteudo | null>(null);
   const [loading, setLoading] = useState(true);
+  const [display, setDisplay] = useState<CardContentDisplay>({
+    texto: '',
+    isTranslated: false,
+  });
 
   const navigation = useMemo(() => {
     if (!id || banco.length === 0) return { prev: null, next: null };
@@ -1097,6 +1104,24 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       cancelado = true;
     };
   }, [id, banco]);
+
+  useEffect(() => {
+    if (!item) return;
+    setDisplay({
+      texto: item.texto || '',
+      titulo: item.titulo,
+      resumo: item.resumo,
+      isTranslated: false,
+    });
+  }, [item?.id, item?.texto, item?.titulo, item?.resumo]);
+
+  const translateSource = useMemo(
+    () =>
+      item
+        ? { texto: item.texto || '', titulo: item.titulo, resumo: item.resumo }
+        : { texto: '' },
+    [item]
+  );
 
   if (loading) {
     return (
@@ -1151,7 +1176,18 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
           <Link to="/metaforas" className="text-[10px] uppercase font-black text-[#A855F7] tracking-[0.2em] mb-4 flex items-center gap-2 hover:gap-3 transition-all">
             <ChevronRight size={12} className="rotate-180" /> Metáfora Terapêutica
           </Link>
-          <h1 className={`text-4xl md:text-6xl font-black mb-4 tracking-tighter leading-tight ${tema === 'light' ? 'text-black' : 'text-white'}`}>{item.titulo}</h1>
+          <AnimatePresence mode="wait">
+            <motion.h1
+              key={(display.titulo ?? item.titulo) + String(display.isTranslated)}
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className={`text-4xl md:text-6xl font-black mb-4 tracking-tighter leading-tight ${tema === 'light' ? 'text-black' : 'text-white'}`}
+            >
+              {display.titulo ?? item.titulo}
+            </motion.h1>
+          </AnimatePresence>
           <div className="flex items-center gap-4 text-xs font-bold text-zinc-500">
             <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><BookOpen size={14} /> ~{tempoLeitura} MIN DE REFLEXÃO</span>
             <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><Quote size={14} /> SABEDORIA SECULAR</span>
@@ -1163,12 +1199,22 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
         </div>
       </div>
 
-      <article 
+      <article
         className={`whitespace-pre-wrap leading-[1.8] tracking-tight font-medium transition-all max-w-none prose ${tema === 'light' ? 'text-[#000000] prose-zinc' : 'text-zinc-300 prose-invert'}`}
         style={{ fontSize: `${fontSize}px` }}
       >
-        {item.texto}
-       </article>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={display.texto + String(display.isTranslated)}
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            {sanitizeTextForTranslation(display.texto) || item.texto}
+          </motion.div>
+        </AnimatePresence>
+      </article>
 
        <div className={`mt-16 py-10 border-t flex flex-col items-center ${tema === 'light' ? 'border-zinc-200' : 'border-zinc-900'}`}>
         <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#A855F7] to-transparent mb-8"></div>
@@ -1179,11 +1225,27 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
         <div className="flex gap-4 mt-6">
           <Tooltip text={t('common.copy')} tema={tema}>
             <button 
-              onClick={() => { navigator.clipboard.writeText(`${item.titulo}\n\n${item.texto}\n— ${item.autor}`); toast(t('common.copied')); }}
+              onClick={() => {
+                const titulo = display.titulo ?? item.titulo;
+                const texto = display.texto || item.texto;
+                navigator.clipboard.writeText(`${titulo}\n\n${texto}\n— ${item.autor}`);
+                toast(t('common.copied'));
+              }}
               className={`p-4 rounded-2xl ${tema === 'light' ? 'bg-zinc-100 text-zinc-600' : 'bg-zinc-900 text-zinc-400'}`}
             >
               <Copy size={20} />
             </button>
+          </Tooltip>
+          <Tooltip text={t('common.translate')} tema={tema}>
+            <CardTranslateMenu
+              tema={tema}
+              contentId={item.id}
+              source={translateSource}
+              onDisplayChange={setDisplay}
+              tooltipLabel={t('common.translate')}
+              menuPlacement="bottom"
+              buttonClassName="p-4"
+            />
           </Tooltip>
           <Tooltip text={t('common.share')} tema={tema}>
             <button 

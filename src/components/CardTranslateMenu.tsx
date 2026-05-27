@@ -6,7 +6,7 @@ import {
   type CardContentDisplay,
   type CardContentSource,
   type CardLang,
-  detectCardLanguage,
+  detectCardLanguageWithConfidence,
   textAppearsToBeLanguage,
   TranslationFailedError,
   translateCardContent,
@@ -18,6 +18,9 @@ type CardTranslateMenuProps = {
   source: CardContentSource;
   onDisplayChange: (display: CardContentDisplay) => void;
   tooltipLabel?: string;
+  /** Abre o menu para baixo (página de detalhe da metáfora). */
+  menuPlacement?: 'top' | 'bottom';
+  buttonClassName?: string;
 };
 
 export function CardTranslateMenu({
@@ -26,6 +29,8 @@ export function CardTranslateMenu({
   source,
   onDisplayChange,
   tooltipLabel = 'Traduzir',
+  menuPlacement = 'top',
+  buttonClassName,
 }: CardTranslateMenuProps) {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -33,7 +38,10 @@ export function CardTranslateMenu({
   const [failedTarget, setFailedTarget] = useState<CardLang | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
 
-  const detected = useMemo(() => detectCardLanguage(source.texto), [source.texto]);
+  const detection = useMemo(
+    () => detectCardLanguageWithConfidence(source.texto),
+    [source.texto]
+  );
 
   const resetOriginal = useCallback(() => {
     setActiveLang('original');
@@ -82,7 +90,8 @@ export function CardTranslateMenu({
 
       if (
         !retry &&
-        target === detected &&
+        target === detection.lang &&
+        detection.confidence >= 0.55 &&
         textAppearsToBeLanguage(source.texto, target)
       ) {
         resetOriginal();
@@ -92,7 +101,7 @@ export function CardTranslateMenu({
 
       await runTranslation(target, retry);
     },
-    [source, detected, resetOriginal, runTranslation]
+    [source, detection, resetOriginal, runTranslation]
   );
 
   useEffect(() => {
@@ -155,7 +164,7 @@ export function CardTranslateMenu({
         aria-expanded={open}
         disabled={loading}
         onClick={() => setOpen((o) => !o)}
-        className={`p-3.5 rounded-2xl transition-all ${btnClass} ${
+        className={`${buttonClassName || 'p-3.5'} rounded-2xl transition-all ${btnClass} ${
           activeLang !== 'original' && !failedTarget
             ? 'ring-2 ring-[#A855F7]/40 text-[#A855F7]'
             : ''
@@ -171,7 +180,9 @@ export function CardTranslateMenu({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 6, scale: 0.96 }}
             transition={{ duration: 0.15 }}
-            className={`absolute bottom-full right-0 mb-2 z-[120] min-w-[168px] rounded-2xl border shadow-2xl overflow-hidden ${
+            className={`absolute right-0 z-[120] min-w-[168px] rounded-2xl border shadow-2xl overflow-hidden ${
+              menuPlacement === 'top' ? 'bottom-full mb-2' : 'top-full mt-2'
+            } ${
               tema === 'light'
                 ? 'bg-white border-zinc-200'
                 : 'bg-zinc-950 border-zinc-800'

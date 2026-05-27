@@ -10,16 +10,18 @@ export const CARD_LANG_OPTIONS: { code: CardLang; label: string; flag: string }[
   { code: 'es', label: 'Español', flag: '🇪🇸' },
 ];
 
-const CACHE_KEY_V2 = 'mm-trans-cache-v2';
-const CACHE_MAX = 500;
+const CACHE_KEY = 'mm-trans-cache-v3';
+const CACHE_MAX = 600;
 const API = 'https://api.mymemory.translated.net/get';
-/** MyMemory costuma devolver o original em frases longas / Title Case — chunks menores. */
 const MAX_CHUNK = 90;
+
+const ALL_LANGS: CardLang[] = ['pt', 'en', 'es'];
 
 type TransCacheEntry = {
   text: string;
   from: CardLang;
   to: CardLang;
+  sourceHash: string;
   at: number;
 };
 
@@ -29,10 +31,10 @@ const EN_STOP =
   /\b(the|and|is|are|was|were|you|your|life|love|with|for|that|this|have|from|not|but|what|all|when|we|will|can|our|out|day|get|has|how|its|may|new|now|old|see|two|way|who|let|say|she|too|use|her|been|come|does|each|even|into|just|like|long|make|many|most|much|must|only|over|such|take|than|them|then|they|very|well|also|back|being|call|first|give|good|great|hand|high|home|keep|know|last|left|live|look|made|mind|more|name|need|never|next|once|part|people|place|right|same|some|still|think|those|though|through|time|turn|under|until|want|while|world|year|after|again|before|between|both|could|during|every|found|going|might|other|shall|since|something|these|thing|three|upon|where|which|without|would|die|sorry|undertaker)\b/i;
 
 const PT_STOP =
-  /\b(não|nao|que|uma|para|com|você|voce|vida|amor|ser|mais|como|mas|por|seu|sua|isso|essa|este|esta|aos|das|nos|nas|pelo|pela|ainda|muito|todo|toda|todos|todas|onde|quando|porque|porquê|será|sera|está|esta|estao|estão|são|sao|tem|ter|foi|ser|nos|vos|lhe|lhes)\b/i;
+  /\b(não|nao|que|uma|para|com|você|voce|vida|amor|ser|mais|como|mas|por|seu|sua|isso|essa|este|esta|aos|das|nos|nas|pelo|pela|ainda|muito|todo|toda|todos|todas|onde|quando|porque|porquê|será|sera|está|esta|estao|estão|são|sao|tem|ter|foi|nos|vos|lhe|lhes|compartilhar|sabedoria|conhecimento)\b/i;
 
 const ES_STOP =
-  /\b(el|la|los|las|que|por|para|con|vida|amor|más|mas|una|uno|del|al|son|está|esta|están|como|pero|todo|toda|todos|todas|muy|sin|sobre|entre|cuando|donde|porque|ser|hay|han|fue|era|sus|ese|esa|esto|estos)\b/i;
+  /\b(el|la|los|las|que|por|para|con|vida|amor|más|mas|una|uno|del|al|son|está|esta|están|como|pero|todo|toda|todos|todas|muy|sin|sobre|entre|cuando|donde|porque|ser|hay|han|fue|era|sus|ese|esa|esto|estos|también|tambien|está|estan|mundo|sabiduría|sabiduria|conocimiento|compartir|respuesta|amor)\b/i;
 
 export class TranslationFailedError extends Error {
   constructor(
@@ -42,6 +44,11 @@ export class TranslationFailedError extends Error {
     super(message);
     this.name = 'TranslationFailedError';
   }
+}
+
+export interface LanguageDetection {
+  lang: CardLang;
+  confidence: number;
 }
 
 function toApiLang(code: CardLang): string {
@@ -60,14 +67,15 @@ function hashText(text: string): string {
   return Math.abs(h).toString(36);
 }
 
-function cacheKey(contentId: string | undefined, from: CardLang, to: CardLang, text: string): string {
-  const id = safeText(contentId) || `txt_${hashText(text)}`;
-  return `${id}::${from}::${to}`;
+/** cache[contentId::targetLang] — evita mistura entre idiomas de destino. */
+function cacheKey(contentId: string | undefined, to: CardLang, sourceText: string): string {
+  const id = safeText(contentId) || `txt_${hashText(sourceText)}`;
+  return `${id}::${to}`;
 }
 
 function readCache(): TransCacheStore {
   try {
-    const raw = localStorage.getItem(CACHE_KEY_V2);
+    const raw = localStorage.getItem(CACHE_KEY);
     return raw ? (JSON.parse(raw) as TransCacheStore) : {};
   } catch {
     return {};
@@ -81,7 +89,7 @@ function writeCache(store: TransCacheStore) {
       ? Object.fromEntries(keys.slice(-CACHE_MAX).map((k) => [k, store[k]]))
       : store;
   try {
-    localStorage.setItem(CACHE_KEY_V2, JSON.stringify(trimmed));
+    localStorage.setItem(CACHE_KEY, JSON.stringify(trimmed));
   } catch {
     /* quota */
   }
@@ -95,7 +103,6 @@ function removeCacheEntry(key: string) {
   }
 }
 
-/** Normaliza texto antes de enviar à API (aspas, unicode, espaços). */
 export function sanitizeTextForTranslation(text: unknown): string {
   return safeText(text)
     .normalize('NFC')
@@ -122,7 +129,7 @@ function isSameish(a: string, b: string): boolean {
   if (na === nb) return true;
   const longer = na.length >= nb.length ? na : nb;
   const shorter = na.length >= nb.length ? nb : na;
-  if (longer.includes(shorter) && shorter.length / longer.length > 0.9) return true;
+  if (longer.includes(shorter) && shorter.length / longer.length > 0.88) return true;
   return false;
 }
 
@@ -138,53 +145,93 @@ function looksEnglishTitleCase(text: string): boolean {
   const words = text.split(/\s+/).filter((w) => /[a-zA-Z]{2,}/.test(w));
   if (words.length < 4) return false;
   const capped = words.filter((w) => /^[A-Z][a-z']+$/.test(w)).length;
-  return capped / words.length >= 0.55 && !hasPortugueseDiacritics(text);
+  return capped / words.length >= 0.5 && !hasPortugueseDiacritics(text);
 }
 
-function scoreLanguage(t: string): Record<CardLang, number> {
-  const lower = t.toLowerCase();
-  const ptMarks = (t.match(/[\u0300-\u036f]/g) || []).length;
-  const pt = ptMarks * 2 + (PT_STOP.test(lower) ? 3 : 0) + (hasPortugueseDiacritics(t) ? 4 : 0);
-  const es = (t.includes('ñ') ? 3 : 0) + (ES_STOP.test(lower) ? 3 : 0);
-  let en = EN_STOP.test(lower) ? 3 : 0;
-  if (looksEnglishTitleCase(t)) en += 4;
-  if (!hasPortugueseDiacritics(t) && !hasSpanishMarkers(t) && /^[\x20-\x7E\u00C0-\u024F'".,!?;:()\-–—]+$/.test(t)) {
+function scoreLanguage(raw: string): Record<CardLang, number> {
+  const t = raw.toLowerCase();
+  const ptMarks = (raw.match(/[\u0300-\u036f]/g) || []).length;
+  const pt = ptMarks * 2 + (PT_STOP.test(t) ? 4 : 0) + (hasPortugueseDiacritics(raw) ? 5 : 0);
+  const es = (raw.includes('ñ') ? 4 : 0) + (ES_STOP.test(t) ? 4 : 0);
+  let en = EN_STOP.test(t) ? 4 : 0;
+  if (looksEnglishTitleCase(raw)) en += 5;
+  if (!hasPortugueseDiacritics(raw) && !hasSpanishMarkers(raw) && /^[\x20-\x7E'".,!?;:()\-–—]+$/.test(raw)) {
     en += 1;
   }
   return { pt, en, es };
 }
 
-/** Detecção de idioma do conteúdo (export alias pedido na spec). */
-export function detectLanguage(text: unknown): CardLang {
-  return detectCardLanguage(text);
+function pickLangFromScores(scores: Record<CardLang, number>): LanguageDetection {
+  const { pt, en, es } = scores;
+  const total = pt + en + es;
+  const max = Math.max(pt, en, es);
+  if (max === 0) {
+    return { lang: 'en', confidence: 0.2 };
+  }
+  let lang: CardLang = 'en';
+  if (pt === max) lang = 'pt';
+  else if (es === max) lang = 'es';
+  else lang = 'en';
+  const confidence = total > 0 ? max / total : 0;
+  return { lang, confidence };
 }
 
-/** Detecção do idioma de origem do card. */
-export function detectCardLanguage(text: unknown): CardLang {
-  const t = sanitizeTextForTranslation(text).toLowerCase().normalize('NFD');
-  if (!t) return 'pt';
+export function detectLanguage(text: unknown): CardLang {
+  return detectCardLanguageWithConfidence(text).lang;
+}
 
-  const scores = scoreLanguage(t);
-  const { pt, en, es } = scores;
-  const max = Math.max(pt, en, es);
+export function detectCardLanguageWithConfidence(text: unknown): LanguageDetection {
+  const raw = sanitizeTextForTranslation(text);
+  if (!raw) return { lang: 'pt', confidence: 0 };
 
-  if (max === 0) {
-    if (looksEnglishTitleCase(sanitizeTextForTranslation(text))) return 'en';
-    if (!hasPortugueseDiacritics(t) && t.length > 12) return 'en';
-    return 'pt';
+  const scores = scoreLanguage(raw);
+  const picked = pickLangFromScores(scores);
+
+  if (picked.confidence < 0.35) {
+    if (looksEnglishTitleCase(raw)) return { lang: 'en', confidence: 0.5 };
+    if (hasPortugueseDiacritics(raw)) return { lang: 'pt', confidence: 0.5 };
+    if (hasSpanishMarkers(raw)) return { lang: 'es', confidence: 0.5 };
   }
 
-  if (pt === max && pt >= 2) return 'pt';
-  if (es === max && es >= en) return 'es';
-  if (en === max) return 'en';
-  if (es > pt) return 'es';
-  return 'en';
+  return picked;
+}
+
+export function detectCardLanguage(text: unknown): CardLang {
+  return detectCardLanguageWithConfidence(text).lang;
+}
+
+function looksPortuguese(text: string): boolean {
+  const t = sanitizeTextForTranslation(text);
+  return hasPortugueseDiacritics(t) || PT_STOP.test(t.toLowerCase());
+}
+
+function looksEnglish(text: string): boolean {
+  const t = sanitizeTextForTranslation(text);
+  return EN_STOP.test(t.toLowerCase()) || looksEnglishTitleCase(t);
+}
+
+function looksSpanish(text: string): boolean {
+  const t = sanitizeTextForTranslation(text);
+  return hasSpanishMarkers(t) || ES_STOP.test(t.toLowerCase());
 }
 
 export function textAppearsToBeLanguage(text: unknown, lang: CardLang): boolean {
   const t = sanitizeTextForTranslation(text);
   if (!t) return true;
-  return detectCardLanguage(t) === lang;
+  const { lang: detected, confidence } = detectCardLanguageWithConfidence(t);
+  if (confidence < 0.5) return false;
+  if (detected !== lang) return false;
+  if (lang === 'pt') return looksPortuguese(t);
+  if (lang === 'es') return looksSpanish(t);
+  if (lang === 'en') return looksEnglish(t);
+  return true;
+}
+
+function matchesTargetLanguage(translated: string, to: CardLang): boolean {
+  if (to === 'pt') return looksPortuguese(translated) || detectCardLanguage(translated) === 'pt';
+  if (to === 'es') return looksSpanish(translated) || detectCardLanguage(translated) === 'es';
+  if (to === 'en') return looksEnglish(translated) || detectCardLanguage(translated) === 'en';
+  return true;
 }
 
 function isValidTranslation(
@@ -197,19 +244,27 @@ function isValidTranslation(
   const trans = sanitizeTextForTranslation(translated);
   if (!trans) return false;
   if (isSameish(orig, trans)) return false;
+  if (from === to) return false;
 
-  const detected = detectCardLanguage(trans);
-  if (from !== to && detected === from) return false;
-  if (to === 'pt' && detected === 'en' && from === 'en') return false;
-  if (to === 'en' && detected === 'pt' && from === 'pt') return false;
-  if (to === 'es' && detected === 'en' && from === 'en' && !hasSpanishMarkers(trans)) return false;
+  const detTrans = detectCardLanguage(trans);
+  if (detTrans === from && from !== to) return false;
+
+  if (!matchesTargetLanguage(trans, to)) return false;
+
+  if (to === 'es' && from === 'en' && looksEnglish(trans) && !looksSpanish(trans)) return false;
+  if (to === 'en' && from === 'es' && looksSpanish(trans) && !looksEnglish(trans)) return false;
+  if (to === 'pt' && (from === 'en' || from === 'es') && !looksPortuguese(trans) && detTrans !== 'pt') {
+    return false;
+  }
 
   return true;
 }
 
 function prepareTextForApi(text: string, from: CardLang, forceLower = false): string {
   let t = sanitizeTextForTranslation(text);
-  if (forceLower || (from === 'en' && looksEnglishTitleCase(t))) {
+  const titleCase =
+    looksEnglishTitleCase(t) || (from === 'en' && /^[A-Z]/.test(t) && !hasPortugueseDiacritics(t));
+  if (forceLower || titleCase) {
     t = t.toLowerCase();
   }
   return t;
@@ -227,11 +282,7 @@ function joinTranslatedChunks(parts: string[]): string {
   return joined.charAt(0).toUpperCase() + joined.slice(1);
 }
 
-async function fetchMyMemory(
-  text: string,
-  from: CardLang,
-  to: CardLang
-): Promise<string> {
+async function fetchMyMemory(text: string, from: CardLang, to: CardLang): Promise<string> {
   const pair = langPair(from, to);
   const url = `${API}?q=${encodeURIComponent(text)}&langpair=${pair}`;
   const res = await fetch(url);
@@ -243,10 +294,7 @@ async function fetchMyMemory(
     throw new Error(data?.responseDetails || `API status ${status}`);
   }
 
-  const translated =
-    sanitizeTextForTranslation(data?.responseData?.translatedText) ||
-    sanitizeTextForTranslation(data?.matches?.[0]?.translation);
-
+  const translated = sanitizeTextForTranslation(data?.responseData?.translatedText);
   if (!translated) throw new Error('Tradução vazia');
   return translated;
 }
@@ -300,26 +348,48 @@ async function translateOnce(
   const out: string[] = [];
   for (const chunk of chunks) {
     out.push(await fetchMyMemory(chunk, from, to));
-    await new Promise((r) => setTimeout(r, 120));
+    await new Promise((r) => setTimeout(r, 110));
   }
   return joinTranslatedChunks(out);
 }
 
-const SOURCE_GUESSES: CardLang[] = ['en', 'es', 'pt'];
+async function translateViaPivot(
+  text: string,
+  from: CardLang,
+  to: CardLang
+): Promise<string> {
+  const pivots = ALL_LANGS.filter((l) => l !== from && l !== to);
+  let lastError: Error | null = null;
+
+  for (const pivot of pivots) {
+    try {
+      const mid = await translateOnce(text, from, pivot, true);
+      if (!isValidTranslation(text, mid, from, pivot)) continue;
+      await new Promise((r) => setTimeout(r, 120));
+      const final = await translateOnce(mid, pivot, to, false);
+      if (isValidTranslation(text, final, from, to)) return final;
+      lastError = new Error('Pivot não validou destino');
+    } catch (e) {
+      lastError = e instanceof Error ? e : new Error(String(e));
+    }
+  }
+
+  throw lastError || new Error('Tradução via pivô indisponível');
+}
 
 async function translateWithRetries(
   text: string,
   target: CardLang,
   preferredFrom: CardLang
 ): Promise<{ text: string; from: CardLang }> {
-  const attempts: CardLang[] = [
+  const sources = [
     preferredFrom,
-    ...SOURCE_GUESSES.filter((l) => l !== preferredFrom),
+    ...ALL_LANGS.filter((l) => l !== preferredFrom),
   ];
 
   let lastError: Error | null = null;
 
-  for (const from of attempts) {
+  for (const from of sources) {
     if (from === target) continue;
     for (const forceLower of [false, true]) {
       try {
@@ -327,12 +397,19 @@ async function translateWithRetries(
         if (isValidTranslation(text, translated, from, target)) {
           return { text: translated, from };
         }
-        lastError = new Error('Tradução não alterou o idioma');
+        lastError = new Error('Tradução direta não validou');
       } catch (e) {
         lastError = e instanceof Error ? e : new Error(String(e));
       }
-      await new Promise((r) => setTimeout(r, 150));
+      await new Promise((r) => setTimeout(r, 120));
     }
+  }
+
+  try {
+    const pivoted = await translateViaPivot(text, preferredFrom, target);
+    return { text: pivoted, from: preferredFrom };
+  } catch (e) {
+    lastError = e instanceof Error ? e : new Error(String(e));
   }
 
   throw lastError || new Error('Tradução indisponível');
@@ -354,30 +431,47 @@ export async function translateCardText(
   const trimmed = sanitizeTextForTranslation(text);
   if (!trimmed) return safeText(text);
 
-  const from = options?.sourceLang ?? detectCardLanguage(trimmed);
-  if (!options?.force && from === target && textAppearsToBeLanguage(trimmed, target)) {
+  const detection = sourceLang
+    ? { lang: sourceLang, confidence: 1 }
+    : detectCardLanguageWithConfidence(trimmed);
+  const from = detection.lang;
+
+  if (
+    !options?.force &&
+    from === target &&
+    detection.confidence >= 0.55 &&
+    textAppearsToBeLanguage(trimmed, target)
+  ) {
     return trimmed;
   }
 
-  const key = cacheKey(options?.contentId, from, target, trimmed);
+  const key = cacheKey(options?.contentId, target, trimmed);
+  const sourceHash = hashText(trimmed);
 
   if (!options?.skipCache) {
     const cache = readCache();
     const hit = cache[key];
-    if (hit?.text && isValidTranslation(trimmed, hit.text, hit.from, hit.to)) {
+    if (
+      hit?.text &&
+      hit.sourceHash === sourceHash &&
+      hit.to === target &&
+      isValidTranslation(trimmed, hit.text, hit.from, hit.to)
+    ) {
       return hit.text;
     }
     if (hit) removeCacheEntry(key);
   }
 
-  const { text: translated, from: usedFrom } = await translateWithRetries(
-    trimmed,
-    target,
-    from
-  );
+  const { text: translated, from: usedFrom } = await translateWithRetries(trimmed, target, from);
 
   const store = readCache();
-  store[key] = { text: translated, from: usedFrom, to: target, at: Date.now() };
+  store[key] = {
+    text: translated,
+    from: usedFrom,
+    to: target,
+    sourceHash,
+    at: Date.now(),
+  };
   writeCache(store);
 
   return translated;
@@ -401,6 +495,34 @@ export interface TranslateContentOptions {
   skipCache?: boolean;
 }
 
+async function translateField(
+  value: string | undefined,
+  target: CardLang,
+  options: TranslateContentOptions | undefined,
+  fieldSuffix: string
+): Promise<string | undefined> {
+  if (!value) return undefined;
+  const clean = sanitizeTextForTranslation(value);
+  if (!clean) return value;
+
+  const det = detectCardLanguageWithConfidence(clean);
+  if (!options?.force && det.lang === target && det.confidence >= 0.55 && textAppearsToBeLanguage(clean, target)) {
+    return value;
+  }
+
+  const translated = await translateCardText(clean, target, det.lang, {
+    contentId: options?.contentId ? `${options.contentId}:${fieldSuffix}` : undefined,
+    force: options?.force,
+    skipCache: options?.skipCache,
+  });
+
+  if (isSameish(clean, translated) || !matchesTargetLanguage(translated, target)) {
+    throw new TranslationFailedError(`Falha ao traduzir ${fieldSuffix}`, target);
+  }
+
+  return translated;
+}
+
 export async function translateCardContent(
   source: CardContentSource,
   target: CardLang,
@@ -411,56 +533,22 @@ export async function translateCardContent(
     return { ...source, isTranslated: false };
   }
 
-  const detected = detectCardLanguage(textoRaw);
+  const textoDet = detectCardLanguageWithConfidence(textoRaw);
   if (
     !options?.force &&
-    detected === target &&
+    textoDet.lang === target &&
+    textoDet.confidence >= 0.55 &&
     textAppearsToBeLanguage(textoRaw, target)
   ) {
     return { ...source, isTranslated: false };
   }
 
-  const baseOpts: TranslateOptions = {
-    contentId: options?.contentId,
-    force: options?.force,
-    skipCache: options?.skipCache,
-  };
+  const texto = await translateField(textoRaw, target, options, 'texto');
+  const titulo = await translateField(source.titulo, target, options, 'titulo');
+  const resumo = await translateField(source.resumo, target, options, 'resumo');
 
-  const texto = await translateCardText(textoRaw, target, detected, {
-    ...baseOpts,
-    contentId: options?.contentId ? `${options.contentId}:texto` : undefined,
-  });
-
-  if (isSameish(textoRaw, texto) || !textAppearsToBeLanguage(texto, target)) {
+  if (!texto || isSameish(textoRaw, texto) || !matchesTargetLanguage(texto, target)) {
     throw new TranslationFailedError('Não foi possível traduzir o texto principal', target);
-  }
-
-  let titulo: string | undefined;
-  if (source.titulo) {
-    const tTitulo = sanitizeTextForTranslation(source.titulo);
-    const fromT = detectCardLanguage(tTitulo);
-    if (fromT !== target || options?.force) {
-      titulo = await translateCardText(tTitulo, target, fromT, {
-        ...baseOpts,
-        contentId: options?.contentId ? `${options.contentId}:titulo` : undefined,
-      });
-    } else {
-      titulo = source.titulo;
-    }
-  }
-
-  let resumo: string | undefined;
-  if (source.resumo) {
-    const tResumo = sanitizeTextForTranslation(source.resumo);
-    const fromR = detectCardLanguage(tResumo);
-    if (fromR !== target || options?.force) {
-      resumo = await translateCardText(tResumo, target, fromR, {
-        ...baseOpts,
-        contentId: options?.contentId ? `${options.contentId}:resumo` : undefined,
-      });
-    } else {
-      resumo = source.resumo;
-    }
   }
 
   return {
@@ -473,17 +561,24 @@ export async function translateCardContent(
   };
 }
 
-/** Remove entradas de cache inválidas (texto igual ao original). */
 export function pruneInvalidTranslationCache(): void {
-  try {
-    localStorage.removeItem('mm-trans-cache-v1');
-  } catch {
-    /* ignore */
+  for (const legacy of ['mm-trans-cache-v1', 'mm-trans-cache-v2']) {
+    try {
+      localStorage.removeItem(legacy);
+    } catch {
+      /* ignore */
+    }
   }
+
   const store = readCache();
   let changed = false;
   for (const [key, entry] of Object.entries(store)) {
-    if (!entry?.text) {
+    if (!entry?.text || !entry.to) {
+      delete store[key];
+      changed = true;
+      continue;
+    }
+    if (entry.text.length < 2) {
       delete store[key];
       changed = true;
     }

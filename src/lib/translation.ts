@@ -14,6 +14,10 @@ const CACHE_KEY = 'mm-trans-cache-v3';
 const CACHE_MAX = 600;
 const API = 'https://api.mymemory.translated.net/get';
 const MAX_CHUNK = 90;
+const FETCH_TIMEOUT_MS = 14_000;
+
+const ES_HINT =
+  /\b(el|la|los|las|un|una|de|del|al|que|en|es|son|por|para|con|como|cuando|donde|muy|más|mas|este|esta|sus|hay|fue|ser|tan|también|tambien|vivimos|vivamos|lleguemos|arrepienta|incluso|enterrador|morir|vida|amor|mundo|sabiduría|sabiduria)\b/gi;
 
 const ALL_LANGS: CardLang[] = ['pt', 'en', 'es'];
 
@@ -215,6 +219,23 @@ function looksSpanish(text: string): boolean {
   return hasSpanishMarkers(t) || ES_STOP.test(t.toLowerCase());
 }
 
+function countSpanishHints(text: string): number {
+  const t = sanitizeTextForTranslation(text).toLowerCase();
+  return (t.match(ES_HINT) || []).length;
+}
+
+/** PT e ES compartilham palavras — validação mais tolerante para destino ES. */
+function isLikelySpanish(translated: string, original: string): boolean {
+  const trans = sanitizeTextForTranslation(translated);
+  const orig = sanitizeTextForTranslation(original);
+  if (!trans || isSameish(trans, orig)) return false;
+  if (looksSpanish(trans)) return true;
+  if (countSpanishHints(trans) >= 2) return true;
+  if (hasSpanishMarkers(trans) && countSpanishHints(trans) >= 1) return true;
+  if (/[áéíóúñ¿¡]/i.test(trans) && countSpanishHints(trans) >= 1) return true;
+  return false;
+}
+
 export function textAppearsToBeLanguage(text: unknown, lang: CardLang): boolean {
   const t = sanitizeTextForTranslation(text);
   if (!t) return true;
@@ -227,9 +248,20 @@ export function textAppearsToBeLanguage(text: unknown, lang: CardLang): boolean 
   return true;
 }
 
-function matchesTargetLanguage(translated: string, to: CardLang): boolean {
+function matchesTargetLanguage(
+  translated: string,
+  to: CardLang,
+  original?: string
+): boolean {
+  if (to === 'es') {
+    if (original && isLikelySpanish(translated, original)) return true;
+    if (looksSpanish(translated)) return true;
+    if (original && !isSameish(translated, original) && countSpanishHints(translated) >= 2) {
+      return true;
+    }
+    return detectCardLanguage(translated) === 'es';
+  }
   if (to === 'pt') return looksPortuguese(translated) || detectCardLanguage(translated) === 'pt';
-  if (to === 'es') return looksSpanish(translated) || detectCardLanguage(translated) === 'es';
   if (to === 'en') return looksEnglish(translated) || detectCardLanguage(translated) === 'en';
   return true;
 }
@@ -246,12 +278,19 @@ function isValidTranslation(
   if (isSameish(orig, trans)) return false;
   if (from === to) return false;
 
+  if (to === 'es' && isLikelySpanish(trans, orig)) return true;
+
   const detTrans = detectCardLanguage(trans);
-  if (detTrans === from && from !== to) return false;
+  if (detTrans === from && from !== to && to !== 'es') return false;
+  if (detTrans === from && from !== to && to === 'es' && countSpanishHints(trans) < 2) {
+    return false;
+  }
 
-  if (!matchesTargetLanguage(trans, to)) return false;
+  if (!matchesTargetLanguage(trans, to, orig)) return false;
 
-  if (to === 'es' && from === 'en' && looksEnglish(trans) && !looksSpanish(trans)) return false;
+  if (to === 'es' && from === 'en' && looksEnglish(trans) && !looksSpanish(trans) && countSpanishHints(trans) < 2) {
+    return false;
+  }
   if (to === 'en' && from === 'es' && looksSpanish(trans) && !looksEnglish(trans)) return false;
   if (to === 'pt' && (from === 'en' || from === 'es') && !looksPortuguese(trans) && detTrans !== 'pt') {
     return false;
@@ -282,10 +321,29 @@ function joinTranslatedChunks(parts: string[]): string {
   return joined.charAt(0).toUpperCase() + joined.slice(1);
 }
 
-async function fetchMyMemory(text: string, from: CardLang, to: CardLang): Promise<string> {
+async function fetchMyMemory(
+  text: string,
+  from: CardLang,
+  to: CardLang,
+  originalFull?: string
+): Promise<string> {
   const pair = langPair(from, to);
   const url = `${API}?q=${encodeURIComponent(text)}&langpair=${pair}`;
-  const res = await fetch(url);
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+
+  let res: Response;
+  try {
+    res = await fetch(url, { signal: controller.signal });
+  } catch (e) {
+    if (e instanceof Error && e.name === 'AbortError') {
+      throw new Error('Tempo esgotado na tradução');
+    }
+    throw e;
+  } finally {
+    clearTimeout(timer);
+  }
+
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
   const data = await res.json();
@@ -294,9 +352,24 @@ async function fetchMyMemory(text: string, from: CardLang, to: CardLang): Promis
     throw new Error(data?.responseDetails || `API status ${status}`);
   }
 
-  const translated = sanitizeTextForTranslation(data?.responseData?.translatedText);
-  if (!translated) throw new Error('Tradução vazia');
-  return translated;
+  const origRef = originalFull || text;
+  const candidates: string[] = [];
+  const primary = sanitizeTextForTranslation(data?.responseData?.translatedText);
+  if (primary) candidates.push(primary);
+
+  for (const m of data?.matches || []) {
+    const c = sanitizeTextForTranslation(m?.translation);
+    if (c && !candidates.includes(c)) candidates.push(c);
+  }
+
+  for (const cand of candidates) {
+    if (isSameish(text, cand) || isSameish(origRef, cand)) continue;
+    if (isValidTranslation(origRef, cand, from, to)) return cand;
+    if (to === 'es' && isLikelySpanish(cand, origRef)) return cand;
+  }
+
+  if (primary && !isSameish(text, primary)) return primary;
+  throw new Error('Tradução vazia ou igual ao original');
 }
 
 function splitForTranslation(text: string): string[] {
@@ -343,14 +416,25 @@ async function translateOnce(
 ): Promise<string> {
   const prepared = prepareTextForApi(text, from, forceLower);
   const chunks = splitForTranslation(prepared);
-  if (chunks.length === 1) return fetchMyMemory(chunks[0], from, to);
+  if (chunks.length === 1) return fetchMyMemory(chunks[0], from, to, text);
 
   const out: string[] = [];
   for (const chunk of chunks) {
-    out.push(await fetchMyMemory(chunk, from, to));
+    out.push(await fetchMyMemory(chunk, from, to, text));
     await new Promise((r) => setTimeout(r, 110));
   }
-  return joinTranslatedChunks(out);
+  const joined = joinTranslatedChunks(out);
+  if (!isValidTranslation(text, joined, from, to) && to === 'es' && !isLikelySpanish(joined, text)) {
+    throw new Error('Tradução em blocos não validou');
+  }
+  return joined;
+}
+
+function sourceAttemptOrder(preferred: CardLang, target: CardLang): CardLang[] {
+  if (target === 'es') {
+    return [...new Set<CardLang>(['en', 'pt', preferred, ...ALL_LANGS])].filter((l) => l !== 'es');
+  }
+  return [...new Set<CardLang>([preferred, ...ALL_LANGS])].filter((l) => l !== target);
 }
 
 async function translateViaPivot(
@@ -382,10 +466,7 @@ async function translateWithRetries(
   target: CardLang,
   preferredFrom: CardLang
 ): Promise<{ text: string; from: CardLang }> {
-  const sources = [
-    preferredFrom,
-    ...ALL_LANGS.filter((l) => l !== preferredFrom),
-  ];
+  const sources = sourceAttemptOrder(preferredFrom, target);
 
   let lastError: Error | null = null;
 
@@ -464,6 +545,13 @@ export async function translateCardText(
 
   const { text: translated, from: usedFrom } = await translateWithRetries(trimmed, target, from);
 
+  if (
+    !isValidTranslation(trimmed, translated, usedFrom, target) &&
+    !(target === 'es' && isLikelySpanish(translated, trimmed))
+  ) {
+    throw new TranslationFailedError('Tradução inválida', target);
+  }
+
   const store = readCache();
   store[key] = {
     text: translated,
@@ -516,7 +604,11 @@ async function translateField(
     skipCache: options?.skipCache,
   });
 
-  if (isSameish(clean, translated) || !matchesTargetLanguage(translated, target)) {
+  if (
+    isSameish(clean, translated) ||
+    (!isValidTranslation(clean, translated, det.lang, target) &&
+      !(target === 'es' && isLikelySpanish(translated, clean)))
+  ) {
     throw new TranslationFailedError(`Falha ao traduzir ${fieldSuffix}`, target);
   }
 
@@ -547,7 +639,12 @@ export async function translateCardContent(
   const titulo = await translateField(source.titulo, target, options, 'titulo');
   const resumo = await translateField(source.resumo, target, options, 'resumo');
 
-  if (!texto || isSameish(textoRaw, texto) || !matchesTargetLanguage(texto, target)) {
+  if (
+    !texto ||
+    isSameish(textoRaw, texto) ||
+    (!isValidTranslation(textoRaw, texto, textoDet.lang, target) &&
+      !(target === 'es' && isLikelySpanish(texto, textoRaw)))
+  ) {
     throw new TranslationFailedError('Não foi possível traduzir o texto principal', target);
   }
 
@@ -573,12 +670,12 @@ export function pruneInvalidTranslationCache(): void {
   const store = readCache();
   let changed = false;
   for (const [key, entry] of Object.entries(store)) {
-    if (!entry?.text || !entry.to) {
+    if (!entry?.text || !entry.to || entry.text.length < 2) {
       delete store[key];
       changed = true;
       continue;
     }
-    if (entry.text.length < 2) {
+    if (entry.to === 'es' && countSpanishHints(entry.text) < 2 && !looksSpanish(entry.text)) {
       delete store[key];
       changed = true;
     }

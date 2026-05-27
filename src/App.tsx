@@ -385,6 +385,7 @@ function ItemCard({
     resumo: item.resumo,
     isTranslated: false,
   }));
+  const [translating, setTranslating] = useState(false);
 
   useEffect(() => {
     setDisplay({
@@ -447,7 +448,9 @@ function ItemCard({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className={`text-2xl font-bold mb-6 leading-tight tracking-tight flex-1 ${tema === 'light' ? 'text-black' : 'text-white'}`}
+                className={`text-2xl font-bold mb-6 leading-tight tracking-tight flex-1 transition-opacity duration-200 ${
+                  translating ? 'opacity-55' : 'opacity-100'
+                } ${tema === 'light' ? 'text-black' : 'text-white'}`}
               >
                 "{display.texto}"
               </motion.p>
@@ -465,7 +468,9 @@ function ItemCard({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
-                  className={`text-sm line-clamp-3 leading-relaxed mb-4 flex-1 ${tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'}`}
+                  className={`text-sm line-clamp-3 leading-relaxed mb-4 flex-1 transition-opacity duration-200 ${
+                    translating ? 'opacity-55' : 'opacity-100'
+                  } ${tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'}`}
                 >
                   {display.resumo || display.texto}
                 </motion.p>
@@ -502,7 +507,7 @@ function ItemCard({
           </div>
         </div>
 
-        <div className="mt-8 flex justify-end items-center gap-2 relative z-10">
+        <div className="mt-8 flex justify-end items-end gap-2 relative z-10 min-h-[3.375rem]">
           <Tooltip text={t('common.copy')} tema={tema}>
             <button 
               onClick={handleCopy} 
@@ -531,6 +536,7 @@ function ItemCard({
               contentId={item.id}
               source={translateSource}
               onDisplayChange={setDisplay}
+              onLoadingChange={setTranslating}
               tooltipLabel={t('common.translate')}
             />
           </Tooltip>
@@ -558,7 +564,7 @@ function Tooltip({ children, text, tema }: { children: React.ReactNode; text: st
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <div className="relative flex flex-col items-center group" onMouseEnter={() => setIsVisible(true)} onMouseLeave={() => setIsVisible(false)}>
+    <div className="relative flex flex-col items-center justify-end shrink-0 group" onMouseEnter={() => setIsVisible(true)} onMouseLeave={() => setIsVisible(false)}>
       {children}
       <AnimatePresence>
         {isVisible && (
@@ -1064,6 +1070,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
     texto: '',
     isTranslated: false,
   });
+  const [translating, setTranslating] = useState(false);
 
   const navigation = useMemo(() => {
     if (!id || banco.length === 0) return { prev: null, next: null };
@@ -1210,6 +1217,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
+            className={translating ? 'opacity-55' : 'opacity-100'}
           >
             {sanitizeTextForTranslation(display.texto) || item.texto}
           </motion.div>
@@ -1222,7 +1230,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
           <div className="w-1.5 h-1.5 rounded-full bg-purple-600"></div>
           <span className="text-2xl font-black text-[#A855F7] text-center italic tracking-widest">{item.autor.toUpperCase()}</span>
         </div>
-        <div className="flex gap-4 mt-6">
+        <div className="flex gap-4 mt-6 items-end min-h-[3.5rem]">
           <Tooltip text={t('common.copy')} tema={tema}>
             <button 
               onClick={() => {
@@ -1242,9 +1250,10 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
               contentId={item.id}
               source={translateSource}
               onDisplayChange={setDisplay}
+              onLoadingChange={setTranslating}
               tooltipLabel={t('common.translate')}
               menuPlacement="bottom"
-              buttonClassName="p-4"
+              buttonClassName="h-14 w-14 p-0 flex items-center justify-center"
             />
           </Tooltip>
           <Tooltip text={t('common.share')} tema={tema}>

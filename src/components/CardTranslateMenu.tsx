@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { AlertCircle, Languages, Loader2, RotateCcw } from 'lucide-react';
+import { Languages, Loader2 } from 'lucide-react';
 import {
   CARD_LANG_OPTIONS,
   type CardContentDisplay,
@@ -12,13 +12,16 @@ import {
   translateCardContent,
 } from '../lib/translation';
 
+/** Altura/largura fixa do botão (alinha com p-3.5 + ícone 18px). */
+const BTN_BOX = 'h-[3.375rem] w-[3.375rem]';
+
 type CardTranslateMenuProps = {
   tema: string;
   contentId?: string;
   source: CardContentSource;
   onDisplayChange: (display: CardContentDisplay) => void;
+  onLoadingChange?: (loading: boolean) => void;
   tooltipLabel?: string;
-  /** Abre o menu para baixo (página de detalhe da metáfora). */
   menuPlacement?: 'top' | 'bottom';
   buttonClassName?: string;
 };
@@ -28,6 +31,7 @@ export function CardTranslateMenu({
   contentId,
   source,
   onDisplayChange,
+  onLoadingChange,
   tooltipLabel = 'Traduzir',
   menuPlacement = 'top',
   buttonClassName,
@@ -52,6 +56,7 @@ export function CardTranslateMenu({
   const runTranslation = useCallback(
     async (target: CardLang, retry = false) => {
       setLoading(true);
+      onLoadingChange?.(true);
       setFailedTarget(null);
       setActiveLang(target);
       try {
@@ -74,10 +79,11 @@ export function CardTranslateMenu({
         });
       } finally {
         setLoading(false);
+        onLoadingChange?.(false);
         setOpen(false);
       }
     },
-    [source, contentId, onDisplayChange]
+    [source, contentId, onDisplayChange, onLoadingChange]
   );
 
   const selectLang = useCallback(
@@ -128,35 +134,53 @@ export function CardTranslateMenu({
       ? 'bg-zinc-100 text-zinc-500 hover:bg-zinc-200'
       : 'bg-zinc-900/50 text-zinc-400 hover:bg-zinc-900 border border-white/5';
 
+  const sizeClass = buttonClassName ? '' : BTN_BOX;
+
   return (
-    <div ref={rootRef} className="relative flex flex-col items-end gap-1">
-      {failedTarget && (
-        <motion.div
-          initial={{ opacity: 0, y: 4 }}
-          animate={{ opacity: 1, y: 0 }}
-          className={`flex items-center gap-1.5 px-2 py-1 rounded-lg text-[9px] font-bold uppercase tracking-wide max-w-[200px] ${
-            tema === 'light'
-              ? 'bg-amber-50 text-amber-800 border border-amber-200'
-              : 'bg-amber-500/10 text-amber-300 border border-amber-500/20'
-          }`}
-          role="status"
-        >
-          <AlertCircle size={11} className="shrink-0" aria-hidden />
-          <span className="truncate">Tradução indisponível</span>
-          <button
-            type="button"
-            onClick={() => selectLang(failedTarget, true)}
-            disabled={loading}
-            className={`shrink-0 inline-flex items-center gap-0.5 underline-offset-2 hover:underline ${
-              tema === 'light' ? 'text-amber-900' : 'text-amber-200'
-            }`}
-            title="Tentar novamente"
-          >
-            <RotateCcw size={10} aria-hidden />
-            <span>Repetir</span>
-          </button>
-        </motion.div>
-      )}
+    <div
+      ref={rootRef}
+      className={`relative shrink-0 ${sizeClass} ${buttonClassName ? '' : ''}`}
+    >
+      {/* Slot fixo: overlay de erro não altera altura do card */}
+      <div
+        className={`absolute right-0 z-[130] w-[9.75rem] min-h-[2.5rem] pointer-events-none ${
+          menuPlacement === 'top' ? 'bottom-full mb-1' : 'top-full mt-1'
+        }`}
+        aria-live="polite"
+      >
+        <AnimatePresence>
+          {failedTarget && !loading && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.15 }}
+              className={`pointer-events-auto w-full rounded-xl border px-2 py-1.5 text-center shadow-lg backdrop-blur-sm ${
+                tema === 'light'
+                  ? 'bg-white/95 border-zinc-200/90'
+                  : 'bg-zinc-950/95 border-zinc-700/80'
+              }`}
+              role="status"
+            >
+              <p
+                className={`text-[8px] leading-snug font-medium ${
+                  tema === 'light' ? 'text-zinc-600' : 'text-zinc-400'
+                }`}
+              >
+                Não foi possível traduzir agora
+              </p>
+              <button
+                type="button"
+                onClick={() => selectLang(failedTarget, true)}
+                disabled={loading}
+                className="mt-0.5 text-[8px] font-bold text-[#A855F7] hover:text-[#9333EA] transition-colors"
+              >
+                Tentar novamente
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
 
       <button
         type="button"
@@ -164,22 +188,28 @@ export function CardTranslateMenu({
         aria-expanded={open}
         disabled={loading}
         onClick={() => setOpen((o) => !o)}
-        className={`${buttonClassName || 'p-3.5'} rounded-2xl transition-all ${btnClass} ${
+        className={`flex items-center justify-center rounded-2xl transition-colors ${btnClass} ${
+          buttonClassName || `${BTN_BOX} p-0`
+        } ${
           activeLang !== 'original' && !failedTarget
             ? 'ring-2 ring-[#A855F7]/40 text-[#A855F7]'
             : ''
-        } ${failedTarget ? 'ring-2 ring-amber-500/30 text-amber-400' : ''}`}
+        } ${failedTarget ? 'ring-1 ring-amber-500/25' : ''}`}
       >
-        {loading ? <Loader2 size={18} className="animate-spin" /> : <Languages size={18} />}
+        {loading ? (
+          <Loader2 size={18} className="animate-spin shrink-0" />
+        ) : (
+          <Languages size={18} className="shrink-0" />
+        )}
       </button>
 
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: 8, scale: 0.96 }}
+            initial={{ opacity: 0, y: menuPlacement === 'top' ? 6 : -6, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 6, scale: 0.96 }}
-            transition={{ duration: 0.15 }}
+            exit={{ opacity: 0, y: menuPlacement === 'top' ? 4 : -4, scale: 0.98 }}
+            transition={{ duration: 0.12 }}
             className={`absolute right-0 z-[120] min-w-[168px] rounded-2xl border shadow-2xl overflow-hidden ${
               menuPlacement === 'top' ? 'bottom-full mb-2' : 'top-full mt-2'
             } ${

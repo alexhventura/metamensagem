@@ -56,6 +56,7 @@ import {
 import { buildTagRegistry, pathFromTag } from './lib/tagsSeo';
 import { searchBancoSemantico } from './lib/semanticSearch';
 import { sanitizeContentBanco } from './lib/safeContent';
+import { pruneInvalidTranslationCache } from './lib/translation';
 import TagCategoriaView from './pages/TagCategoria';
 
 // --- TIPOS ---
@@ -118,6 +119,10 @@ export default function App() {
   };
 
   const toggleTema = () => setTema(prev => prev === 'light' ? 'dark' : 'light');
+
+  useEffect(() => {
+    pruneInvalidTranslationCache();
+  }, []);
 
   // Carregamento de Indexes (Arquitetura Performance + Offline-First)
   useEffect(() => {
@@ -520,6 +525,7 @@ function ItemCard({
           <Tooltip text={t('common.translate')} tema={tema}>
             <CardTranslateMenu
               tema={tema}
+              contentId={item.id}
               source={translateSource}
               onDisplayChange={setDisplay}
               tooltipLabel={t('common.translate')}

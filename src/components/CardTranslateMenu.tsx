@@ -1,17 +1,20 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Languages, Loader2 } from 'lucide-react';
+import { AlertCircle, Languages, Loader2, RotateCcw } from 'lucide-react';
 import {
   CARD_LANG_OPTIONS,
   type CardContentDisplay,
   type CardContentSource,
   type CardLang,
   detectCardLanguage,
+  textAppearsToBeLanguage,
+  TranslationFailedError,
   translateCardContent,
 } from '../lib/translation';
 
 type CardTranslateMenuProps = {
   tema: string;
+  contentId?: string;
   source: CardContentSource;
   onDisplayChange: (display: CardContentDisplay) => void;
   tooltipLabel?: string;
@@ -19,6 +22,7 @@ type CardTranslateMenuProps = {
 
 export function CardTranslateMenu({
   tema,
+  contentId,
   source,
   onDisplayChange,
   tooltipLabel = 'Traduzir',
@@ -26,42 +30,69 @@ export function CardTranslateMenu({
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [activeLang, setActiveLang] = useState<CardLang | 'original'>('original');
+  const [failedTarget, setFailedTarget] = useState<CardLang | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
 
   const detected = useMemo(() => detectCardLanguage(source.texto), [source.texto]);
 
   const resetOriginal = useCallback(() => {
     setActiveLang('original');
-    onDisplayChange({ ...source, isTranslated: false });
+    setFailedTarget(null);
+    onDisplayChange({ ...source, isTranslated: false, translationFailed: false });
   }, [source, onDisplayChange]);
 
+  const runTranslation = useCallback(
+    async (target: CardLang, retry = false) => {
+      setLoading(true);
+      setFailedTarget(null);
+      setActiveLang(target);
+      try {
+        const translated = await translateCardContent(source, target, {
+          contentId,
+          force: retry,
+          skipCache: retry,
+        });
+        onDisplayChange(translated);
+        setFailedTarget(null);
+      } catch (err) {
+        const lang =
+          err instanceof TranslationFailedError ? err.target : target;
+        setFailedTarget(lang);
+        onDisplayChange({
+          ...source,
+          isTranslated: false,
+          translationFailed: true,
+          targetLang: lang,
+        });
+      } finally {
+        setLoading(false);
+        setOpen(false);
+      }
+    },
+    [source, contentId, onDisplayChange]
+  );
+
   const selectLang = useCallback(
-    async (target: CardLang | 'original') => {
+    async (target: CardLang | 'original', retry = false) => {
       if (target === 'original') {
         resetOriginal();
         setOpen(false);
         return;
       }
 
-      if (target === detected) {
+      if (
+        !retry &&
+        target === detected &&
+        textAppearsToBeLanguage(source.texto, target)
+      ) {
         resetOriginal();
         setOpen(false);
         return;
       }
 
-      setLoading(true);
-      setActiveLang(target);
-      try {
-        const translated = await translateCardContent(source, target);
-        onDisplayChange(translated);
-      } catch {
-        resetOriginal();
-      } finally {
-        setLoading(false);
-        setOpen(false);
-      }
+      await runTranslation(target, retry);
     },
-    [source, detected, onDisplayChange, resetOriginal]
+    [source, detected, resetOriginal, runTranslation]
   );
 
   useEffect(() => {
@@ -89,7 +120,35 @@ export function CardTranslateMenu({
       : 'bg-zinc-900/50 text-zinc-400 hover:bg-zinc-900 border border-white/5';
 
   return (
-    <div ref={rootRef} className="relative">
+    <div ref={rootRef} className="relative flex flex-col items-end gap-1">
+      {failedTarget && (
+        <motion.div
+          initial={{ opacity: 0, y: 4 }}
+          animate={{ opacity: 1, y: 0 }}
+          className={`flex items-center gap-1.5 px-2 py-1 rounded-lg text-[9px] font-bold uppercase tracking-wide max-w-[200px] ${
+            tema === 'light'
+              ? 'bg-amber-50 text-amber-800 border border-amber-200'
+              : 'bg-amber-500/10 text-amber-300 border border-amber-500/20'
+          }`}
+          role="status"
+        >
+          <AlertCircle size={11} className="shrink-0" aria-hidden />
+          <span className="truncate">Tradução indisponível</span>
+          <button
+            type="button"
+            onClick={() => selectLang(failedTarget, true)}
+            disabled={loading}
+            className={`shrink-0 inline-flex items-center gap-0.5 underline-offset-2 hover:underline ${
+              tema === 'light' ? 'text-amber-900' : 'text-amber-200'
+            }`}
+            title="Tentar novamente"
+          >
+            <RotateCcw size={10} aria-hidden />
+            <span>Repetir</span>
+          </button>
+        </motion.div>
+      )}
+
       <button
         type="button"
         aria-label={tooltipLabel}
@@ -97,8 +156,10 @@ export function CardTranslateMenu({
         disabled={loading}
         onClick={() => setOpen((o) => !o)}
         className={`p-3.5 rounded-2xl transition-all ${btnClass} ${
-          activeLang !== 'original' ? 'ring-2 ring-[#A855F7]/40 text-[#A855F7]' : ''
-        }`}
+          activeLang !== 'original' && !failedTarget
+            ? 'ring-2 ring-[#A855F7]/40 text-[#A855F7]'
+            : ''
+        } ${failedTarget ? 'ring-2 ring-amber-500/30 text-amber-400' : ''}`}
       >
         {loading ? <Loader2 size={18} className="animate-spin" /> : <Languages size={18} />}
       </button>

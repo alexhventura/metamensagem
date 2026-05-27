@@ -36,10 +36,8 @@ import {
 import CustomModalGeradorPost from './components/ModalGeradorPost';
 import { CardTranslateMenu } from './components/CardTranslateMenu';
 import GoogleAdSense from './components/GoogleAdSense';
-import {
-  type CardContentDisplay,
-  sanitizeTextForTranslation,
-} from './lib/translation';
+import { type CardContentDisplay } from './lib/translation';
+import { sanitizeTextForTranslation } from './lib/textSanitize';
 
 import SocialHub from './components/SocialHub';
 import {

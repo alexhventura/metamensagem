@@ -1,3 +1,5 @@
+import { sanitizeTextForTranslation } from './textSanitize';
+
 /**
  * Utilitários defensivos para conteúdo (APIs externas, índices, busca semântica).
  * Evita runtime errors com null/undefined em normalização.
@@ -21,7 +23,7 @@ export function safeTags(value: unknown): string[] {
   if (!Array.isArray(value)) return [];
   const out: string[] = [];
   for (const entry of value) {
-    const t = safeText(entry);
+    const t = sanitizeTextForTranslation(entry);
     if (t) out.push(t);
   }
   return out;
@@ -48,9 +50,9 @@ export function normalizeContentItem(raw: unknown): SafeContentItem | null {
     tipoRaw === 'metafora' ? 'metafora' : tipoRaw === 'frase' ? 'frase' : null;
   if (!tipo) return null;
 
-  const texto = safeText(r.texto ?? r.text ?? r.quote ?? r.content);
-  const titulo = safeText(r.titulo ?? r.title);
-  const resumo = safeText(r.resumo ?? r.summary ?? r.description);
+  const texto = sanitizeTextForTranslation(r.texto ?? r.text ?? r.quote ?? r.content);
+  const titulo = sanitizeTextForTranslation(r.titulo ?? r.title);
+  const resumo = sanitizeTextForTranslation(r.resumo ?? r.summary ?? r.description);
   const autor = safeText(r.autor ?? r.author) || 'Anônimo';
   const tags = safeTags(r.tags);
   const id = safeText(r.id) || `mm_${tipo}_${texto.slice(0, 24).length}`;

@@ -1,4 +1,11 @@
 import { safeText } from './safeContent';
+import {
+  sanitizeTextForTranslation,
+  stripOuterQuotes,
+  textForTranslationApi,
+} from './textSanitize';
+
+export { sanitizeTextForTranslation, stripOuterQuotes } from './textSanitize';
 
 /** Tradução por card com cache local (UX only — não altera SEO/indexação). */
 
@@ -10,7 +17,7 @@ export const CARD_LANG_OPTIONS: { code: CardLang; label: string; flag: string }[
   { code: 'es', label: 'Español', flag: '🇪🇸' },
 ];
 
-const CACHE_KEY = 'mm-trans-cache-v3';
+const CACHE_KEY = 'mm-trans-cache-v4';
 const CACHE_MAX = 600;
 const API = 'https://api.mymemory.translated.net/get';
 const MAX_CHUNK = 90;
@@ -105,16 +112,6 @@ function removeCacheEntry(key: string) {
     delete store[key];
     writeCache(store);
   }
-}
-
-export function sanitizeTextForTranslation(text: unknown): string {
-  return safeText(text)
-    .normalize('NFC')
-    .replace(/[\u2018\u2019\u201A\u201B]/g, "'")
-    .replace(/[\u201C\u201D\u201E\u201F]/g, '"')
-    .replace(/\u00A0/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
 }
 
 function normalizeForCompare(s: string): string {
@@ -300,13 +297,13 @@ function isValidTranslation(
 }
 
 function prepareTextForApi(text: string, from: CardLang, forceLower = false): string {
-  let t = sanitizeTextForTranslation(text);
+  let t = textForTranslationApi(text);
   const titleCase =
     looksEnglishTitleCase(t) || (from === 'en' && /^[A-Z]/.test(t) && !hasPortugueseDiacritics(t));
   if (forceLower || titleCase) {
     t = t.toLowerCase();
   }
-  return t;
+  return stripOuterQuotes(t);
 }
 
 function joinTranslatedChunks(parts: string[]): string {
@@ -328,7 +325,9 @@ async function fetchMyMemory(
   originalFull?: string
 ): Promise<string> {
   const pair = langPair(from, to);
-  const url = `${API}?q=${encodeURIComponent(text)}&langpair=${pair}`;
+  const payload = textForTranslationApi(text);
+  if (!payload) throw new Error('Texto vazio após sanitização');
+  const url = `${API}?q=${encodeURIComponent(payload)}&langpair=${pair}`;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
 
@@ -373,9 +372,11 @@ async function fetchMyMemory(
 }
 
 function splitForTranslation(text: string): string[] {
-  if (text.length <= MAX_CHUNK) return [text];
+  const clean = textForTranslationApi(text);
+  if (!clean) return [];
+  if (clean.length <= MAX_CHUNK) return [clean];
 
-  const bySentence = text.match(/[^.!?]+[.!?]+|[^.!?]+$/g);
+  const bySentence = clean.match(/[^.!?]+[.!?]+|[^.!?]+$/g);
   const segments: string[] = [];
 
   const pushSegment = (seg: string) => {
@@ -402,10 +403,17 @@ function splitForTranslation(text: string): string[] {
   if (bySentence && bySentence.length > 1) {
     for (const p of bySentence) pushSegment(p);
   } else {
-    pushSegment(text);
+    pushSegment(clean);
   }
 
-  return segments.length ? segments : [text];
+  if (!segments.length && clean.length > MAX_CHUNK) {
+    const clauses = clean.split(/,\s+/);
+    if (clauses.length > 1) {
+      for (const c of clauses) pushSegment(c);
+    }
+  }
+
+  return segments.length ? segments : [clean];
 }
 
 async function translateOnce(
@@ -659,7 +667,7 @@ export async function translateCardContent(
 }
 
 export function pruneInvalidTranslationCache(): void {
-  for (const legacy of ['mm-trans-cache-v1', 'mm-trans-cache-v2']) {
+  for (const legacy of ['mm-trans-cache-v1', 'mm-trans-cache-v2', 'mm-trans-cache-v3']) {
     try {
       localStorage.removeItem(legacy);
     } catch {

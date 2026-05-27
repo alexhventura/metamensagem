@@ -26,11 +26,25 @@ const ENRICHED_CACHE_FILE = path.join(__dirname, 'public', 'frases-enriched-cach
 const TAGS_FILE = path.join(__dirname, 'public', 'metaforas-tags.json');
 const AUTORES_FILE = path.join(__dirname, 'public', 'metaforas-autores.json');
 
+const INVISIBLE_CHARS =
+    /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F\u00AD\u034F\u061C\u115F\u1160\u17B4\u17B5\u180B-\u180E\u2000-\u200F\u2028-\u202F\u205F-\u206F\u3164\uFEFF\uFFA0\uFFF9-\uFFFB]/g;
+
 function safeText(value) {
     if (value == null) return '';
     if (typeof value === 'string') return value.trim();
     if (typeof value === 'number' || typeof value === 'boolean') return String(value).trim();
     return '';
+}
+
+function sanitizeContentText(value) {
+    let t = safeText(value);
+    if (!t) return '';
+    t = t.normalize('NFC').replace(INVISIBLE_CHARS, '');
+    t = t.replace(/[\u2018\u2019\u201A\u201B\u2032\u2035`´]/g, "'");
+    t = t.replace(/[\u201C\u201D\u201E\u201F\u2033\u2036\u00AB\u00BB]/g, '"');
+    t = t.replace(/\u00A0/g, ' ');
+    t = t.replace(/^[\s"'«»]+|[\s"'«»]+$/g, '').replace(/\s+/g, ' ').trim();
+    return t;
 }
 
 function safeTags(value) {
@@ -45,7 +59,7 @@ function sanitizeId(id) {
 
 function normalizeFraseIndex(f) {
     if (!f || typeof f !== 'object') return null;
-    const texto = safeText(f.texto ?? f.text ?? f.quote ?? f.content);
+    const texto = sanitizeContentText(f.texto ?? f.text ?? f.quote ?? f.content);
     if (!texto) return null;
     const tags = safeTags(f.tags);
     return {
@@ -74,13 +88,19 @@ async function run() {
     for (const m of metaforas) {
         const safeId = sanitizeId(m.id);
         m.id = safeId;
+        const mTitulo = sanitizeContentText(m.titulo) || 'Sem Título';
+        const mTexto = sanitizeContentText(m.texto);
+        const mResumo = sanitizeContentText(m.resumo) || (mTexto ? mTexto.substring(0, 150).trim() + '...' : '');
+        m.titulo = mTitulo;
+        m.texto = mTexto;
+        m.resumo = mResumo;
         indexMetaforas.push({
             id: safeId,
             tipo: 'metafora',
-            titulo: m.titulo || 'Sem Título',
+            titulo: mTitulo,
             autor: m.autor || 'Anônimo',
             tags: m.tags || [],
-            resumo: m.resumo || (m.texto ? m.texto.substring(0, 150).trim() + '...' : '')
+            resumo: mResumo,
         });
         safeTags(m.tags).forEach((t) => {
             tagMap[t] = (tagMap[t] || 0) + 1;

@@ -13,7 +13,8 @@ export const CARD_LANG_OPTIONS: { code: CardLang; label: string; flag: string }[
 const CACHE_KEY_V2 = 'mm-trans-cache-v2';
 const CACHE_MAX = 500;
 const API = 'https://api.mymemory.translated.net/get';
-const MAX_CHUNK = 420;
+/** MyMemory costuma devolver o original em frases longas / Title Case — chunks menores. */
+const MAX_CHUNK = 90;
 
 type TransCacheEntry = {
   text: string;
@@ -206,6 +207,26 @@ function isValidTranslation(
   return true;
 }
 
+function prepareTextForApi(text: string, from: CardLang, forceLower = false): string {
+  let t = sanitizeTextForTranslation(text);
+  if (forceLower || (from === 'en' && looksEnglishTitleCase(t))) {
+    t = t.toLowerCase();
+  }
+  return t;
+}
+
+function joinTranslatedChunks(parts: string[]): string {
+  const joined = parts
+    .map((p) => sanitizeTextForTranslation(p))
+    .filter(Boolean)
+    .join(' ')
+    .replace(/\s+([,.;!?])/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (!joined) return joined;
+  return joined.charAt(0).toUpperCase() + joined.slice(1);
+}
+
 async function fetchMyMemory(
   text: string,
   from: CardLang,
@@ -232,35 +253,48 @@ async function fetchMyMemory(
 
 function splitForTranslation(text: string): string[] {
   if (text.length <= MAX_CHUNK) return [text];
-  const parts = text.match(/[^.!?]+[.!?]+|[^.!?]+$/g);
-  if (!parts || parts.length < 2) {
-    const mid = Math.floor(text.length / 2);
-    const space = text.lastIndexOf(' ', mid);
-    const cut = space > 40 ? space : mid;
-    return [text.slice(0, cut).trim(), text.slice(cut).trim()].filter(Boolean);
-  }
-  const chunks: string[] = [];
-  let buf = '';
-  for (const p of parts) {
-    const piece = p.trim();
-    if (!piece) continue;
-    if ((buf + ' ' + piece).trim().length > MAX_CHUNK && buf) {
-      chunks.push(buf.trim());
-      buf = piece;
-    } else {
-      buf = buf ? `${buf} ${piece}` : piece;
+
+  const bySentence = text.match(/[^.!?]+[.!?]+|[^.!?]+$/g);
+  const segments: string[] = [];
+
+  const pushSegment = (seg: string) => {
+    const s = seg.trim();
+    if (!s) return;
+    if (s.length <= MAX_CHUNK) {
+      segments.push(s);
+      return;
     }
+    const words = s.split(/\s+/);
+    let buf = '';
+    for (const w of words) {
+      const next = buf ? `${buf} ${w}` : w;
+      if (next.length > MAX_CHUNK && buf) {
+        segments.push(buf);
+        buf = w;
+      } else {
+        buf = next;
+      }
+    }
+    if (buf) segments.push(buf);
+  };
+
+  if (bySentence && bySentence.length > 1) {
+    for (const p of bySentence) pushSegment(p);
+  } else {
+    pushSegment(text);
   }
-  if (buf) chunks.push(buf.trim());
-  return chunks.length ? chunks : [text];
+
+  return segments.length ? segments : [text];
 }
 
 async function translateOnce(
   text: string,
   from: CardLang,
-  to: CardLang
+  to: CardLang,
+  forceLower = false
 ): Promise<string> {
-  const chunks = splitForTranslation(text);
+  const prepared = prepareTextForApi(text, from, forceLower);
+  const chunks = splitForTranslation(prepared);
   if (chunks.length === 1) return fetchMyMemory(chunks[0], from, to);
 
   const out: string[] = [];
@@ -268,7 +302,7 @@ async function translateOnce(
     out.push(await fetchMyMemory(chunk, from, to));
     await new Promise((r) => setTimeout(r, 120));
   }
-  return out.join(' ');
+  return joinTranslatedChunks(out);
 }
 
 const SOURCE_GUESSES: CardLang[] = ['en', 'es', 'pt'];
@@ -287,16 +321,18 @@ async function translateWithRetries(
 
   for (const from of attempts) {
     if (from === target) continue;
-    try {
-      const translated = await translateOnce(text, from, target);
-      if (isValidTranslation(text, translated, from, target)) {
-        return { text: translated, from };
+    for (const forceLower of [false, true]) {
+      try {
+        const translated = await translateOnce(text, from, target, forceLower);
+        if (isValidTranslation(text, translated, from, target)) {
+          return { text: translated, from };
+        }
+        lastError = new Error('Tradução não alterou o idioma');
+      } catch (e) {
+        lastError = e instanceof Error ? e : new Error(String(e));
       }
-      lastError = new Error('Tradução não alterou o idioma');
-    } catch (e) {
-      lastError = e instanceof Error ? e : new Error(String(e));
+      await new Promise((r) => setTimeout(r, 150));
     }
-    await new Promise((r) => setTimeout(r, 150));
   }
 
   throw lastError || new Error('Tradução indisponível');

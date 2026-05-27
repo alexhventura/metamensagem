@@ -8,8 +8,20 @@ import {
 /** Prefixo de URL amigável: /mensagens-de-motivacao */
 export const TAG_URL_PREFIX = 'mensagens-de';
 
+/** Normaliza texto/tag/slug para comparação (minúsculas, sem acentos, hífens). */
+export function normalizeTagKey(str: string): string {
+  return str
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/(^-|-$)+/g, '');
+}
+
 export function slugFromTag(tag: string): string {
-  return slugFromTitulo(tag);
+  return normalizeTagKey(tag);
 }
 
 export function pathFromTag(tag: string): string {
@@ -67,12 +79,79 @@ export function findTagBySlug(
   registry: TagRegistryEntry[],
   slug: string
 ): TagRegistryEntry | undefined {
-  const normalized = slugFromTitulo(slug);
+  const normalized = slugFromTag(slug);
+  if (!normalized) return undefined;
   return registry.find((r) => r.slug === normalized);
 }
 
+/**
+ * Extrai o slug da tag a partir do segmento de URL (ex.: "mensagens-de-motivacao" → "motivacao").
+ * Suporta prefixo oficial e variantes como "mensagens-motivacionais".
+ */
+export function extractSlugFromTagUrlSegment(segment: string | undefined): string | null {
+  if (!segment) return null;
+  const lower = segment.trim().toLowerCase();
+
+  const officialPrefix = `${TAG_URL_PREFIX}-`;
+  if (lower.startsWith(officialPrefix)) {
+    return slugFromTag(segment.slice(officialPrefix.length));
+  }
+
+  if (lower.startsWith('mensagens-')) {
+    return slugFromTag(segment.slice('mensagens-'.length));
+  }
+
+  return slugFromTag(segment) || null;
+}
+
+export function isTagCategoryPath(segment: string | undefined): boolean {
+  if (!segment) return false;
+  const lower = segment.toLowerCase();
+  return lower.startsWith(`${TAG_URL_PREFIX}-`) || lower.startsWith('mensagens-');
+}
+
 export function itemMatchesTag(item: ItemComTags, entry: TagRegistryEntry): boolean {
-  return (item.tags || []).some((t) => slugFromTag(t) === entry.slug);
+  return itemMatchesTagSlug(item, entry.slug);
+}
+
+/** Mesmo critério da home (Fuse em tags), comparando por slug normalizado. */
+export function itemMatchesTagSlug(item: ItemComTags, tagSlug: string): boolean {
+  const normalized = slugFromTag(tagSlug);
+  if (!normalized) return false;
+  return (item.tags || []).some((t) => slugFromTag(t) === normalized);
+}
+
+/** Filtra o banco global (frases + metáforas) pela tag, igual à busca por tag na home. */
+export function filterBancoByTagSlug<T extends ItemComTags>(
+  banco: T[],
+  tagSlug: string
+): T[] {
+  return banco.filter((item) => itemMatchesTagSlug(item, tagSlug));
+}
+
+/** Entrada do registry ou sintética a partir do slug (evita página vazia se registry atrasar). */
+export function resolveTagEntry(
+  registry: TagRegistryEntry[],
+  tagSlug: string,
+  itemCount: number
+): TagRegistryEntry | undefined {
+  const normalized = slugFromTag(tagSlug);
+  if (!normalized) return undefined;
+
+  const found = registry.find((r) => r.slug === normalized);
+  if (found) return { ...found, count: itemCount || found.count };
+
+  const label = normalized
+    .split('-')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+
+  return {
+    tag: label,
+    slug: normalized,
+    aliases: [],
+    count: itemCount,
+  };
 }
 
 export function tagPageTitle(tag: string): string {

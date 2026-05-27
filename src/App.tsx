@@ -51,7 +51,7 @@ import {
   WEB_SITE_JSON_LD,
   urlMetafora,
 } from './lib/seo';
-import { buildTagRegistry, pathFromTag, TAG_URL_PREFIX } from './lib/tagsSeo';
+import { buildTagRegistry, pathFromTag } from './lib/tagsSeo';
 import TagCategoriaView from './pages/TagCategoria';
 
 // --- TIPOS ---
@@ -267,8 +267,16 @@ export default function App() {
           ) : (
             <Routes>
               <Route path="/" element={<HomeView tema={tema} toast={mostrarToast} banco={bancoTotal} tags={tagsUnicas} bancoRandom={bancoRandom} />} />
+              <Route path="/frases" element={<FrasesView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
+              <Route path="/metaforas" element={<MetaforasView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
+              <Route path="/metafora/:id/*" element={<MetaforaDetalheView tema={tema} banco={bancoTotal} toast={mostrarToast} />} />
+              <Route path="/sobre" element={<Contact tema={tema} />} />
+              <Route path="/contato" element={<Contact tema={tema} />} />
+              <Route path="/privacidade" element={<Privacy tema={tema} />} />
+              <Route path="/termos" element={<Terms tema={tema} />} />
+              <Route path="/cookies" element={<Cookies tema={tema} />} />
               <Route
-                path={`/${TAG_URL_PREFIX}-:slug`}
+                path="/:tagSlug"
                 element={
                   <TagCategoriaView
                     tema={tema}
@@ -282,14 +290,6 @@ export default function App() {
                   />
                 }
               />
-              <Route path="/frases" element={<FrasesView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
-              <Route path="/metaforas" element={<MetaforasView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
-              <Route path="/metafora/:id/*" element={<MetaforaDetalheView tema={tema} banco={bancoTotal} toast={mostrarToast} />} />
-              <Route path="/sobre" element={<Contact tema={tema} />} />
-              <Route path="/contato" element={<Contact tema={tema} />} />
-              <Route path="/privacidade" element={<Privacy tema={tema} />} />
-              <Route path="/termos" element={<Terms tema={tema} />} />
-              <Route path="/cookies" element={<Cookies tema={tema} />} />
             </Routes>
           )}
         </div>

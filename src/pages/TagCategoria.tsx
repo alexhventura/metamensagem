@@ -4,10 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Search } from 'lucide-react';
 import Fuse from 'fuse.js';
 import {
-  findTagBySlug,
+  extractSlugFromTagUrlSegment,
+  filterBancoByTagSlug,
   getRelatedTags,
-  itemMatchesTag,
+  isTagCategoryPath,
   pathFromTag,
+  resolveTagEntry,
   tagIntroParagraphs,
   tagMetaDescription,
   tagPageJsonLd,
@@ -65,20 +67,25 @@ export default function TagCategoriaView({
   MudarMetaSEO,
   ModalGeradorPost,
 }: TagCategoriaProps) {
-  const { slug } = useParams<{ slug: string }>();
+  const { tagSlug: tagSlugParam } = useParams<{ tagSlug: string }>();
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(12);
   const [itemPost, setItemPost] = useState<ItemConteudo | null>(null);
 
-  const entry = useMemo(
-    () => (slug ? findTagBySlug(registry, slug) : undefined),
-    [registry, slug]
+  const resolvedSlug = useMemo(
+    () => extractSlugFromTagUrlSegment(tagSlugParam),
+    [tagSlugParam]
   );
 
   const itensDaTag = useMemo(() => {
-    if (!entry) return [];
-    return banco.filter((item) => itemMatchesTag(item, entry));
-  }, [banco, entry]);
+    if (!resolvedSlug || banco.length === 0) return [];
+    return filterBancoByTagSlug(banco, resolvedSlug);
+  }, [banco, resolvedSlug]);
+
+  const entry = useMemo(() => {
+    if (!resolvedSlug) return undefined;
+    return resolveTagEntry(registry, resolvedSlug, itensDaTag.length);
+  }, [registry, resolvedSlug, itensDaTag.length]);
 
   const itensFiltrados = useMemo(() => {
     if (!busca.trim()) return itensDaTag;
@@ -90,14 +97,16 @@ export default function TagCategoriaView({
     return fuse.search(busca).map((r) => r.item);
   }, [busca, itensDaTag]);
 
+  const displayTag = entry?.tag ?? resolvedSlug ?? '';
+
   const relacionadas = useMemo(
-    () => (entry ? getRelatedTags(registry, entry) : []),
-    [registry, entry]
+    () => (entry ? getRelatedTags(registry, entry) : registry.filter((r) => r.slug !== resolvedSlug).slice(0, 8)),
+    [registry, entry, resolvedSlug]
   );
 
   const intro = useMemo(
-    () => (entry ? tagIntroParagraphs(entry.tag, itensDaTag.length) : []),
-    [entry, itensDaTag.length]
+    () => tagIntroParagraphs(displayTag, itensDaTag.length),
+    [displayTag, itensDaTag.length]
   );
 
   const itensGrid = useMemo(() => {
@@ -112,11 +121,15 @@ export default function TagCategoriaView({
     return flattened;
   }, [itensFiltrados, itensVisiveis]);
 
-  if (!slug || !entry) {
+  if (!tagSlugParam || !isTagCategoryPath(tagSlugParam)) {
     return <Navigate to="/" replace />;
   }
 
-  const canonical = urlFromTag(entry.tag);
+  if (!resolvedSlug) {
+    return <Navigate to="/" replace />;
+  }
+
+  const canonical = urlFromTag(entry?.tag ?? displayTag);
 
   return (
     <motion.article
@@ -125,16 +138,16 @@ export default function TagCategoriaView({
       className="max-w-5xl w-full mx-auto px-4 py-8 flex-1 flex flex-col"
     >
       <MudarMetaSEO
-        title={tagSeoTitle(entry.tag)}
-        description={tagMetaDescription(entry.tag, itensDaTag.length)}
+        title={tagSeoTitle(displayTag)}
+        description={tagMetaDescription(displayTag, itensDaTag.length)}
         canonical={canonical}
-        jsonLD={tagPageJsonLd(entry, itensDaTag.length)}
+        jsonLD={tagPageJsonLd(entry ?? { tag: displayTag, slug: resolvedSlug, aliases: [], count: itensDaTag.length }, itensDaTag.length)}
         ogType="website"
       />
 
       <header className="text-center mb-10">
         <h1 className="text-3xl md:text-5xl font-black mb-6 tracking-tighter leading-tight">
-          {tagPageTitle(entry.tag)}
+          {tagPageTitle(displayTag)}
         </h1>
 
         <div className="relative max-w-2xl mx-auto">
@@ -144,7 +157,7 @@ export default function TagCategoriaView({
           />
           <input
             type="search"
-            placeholder={`Buscar em ${entry.tag}...`}
+            placeholder={`Buscar em ${displayTag}...`}
             value={busca}
             onChange={(e) => {
               setBusca(e.target.value);
@@ -155,7 +168,7 @@ export default function TagCategoriaView({
                 ? 'bg-white border-zinc-100 text-black focus:border-[#A855F7] shadow-zinc-200'
                 : 'bg-zinc-900 border-zinc-800 text-white focus:border-[#A855F7] shadow-black/50'
             }`}
-            aria-label={`Buscar mensagens de ${entry.tag}`}
+            aria-label={`Buscar mensagens de ${displayTag}`}
           />
         </div>
       </header>
@@ -204,16 +217,20 @@ export default function TagCategoriaView({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
         <AnimatePresence mode="popLayout">
           {itensGrid.length === 0 ? (
-            <p
-              className={`col-span-full text-center py-16 text-sm ${
+            <div
+              className={`col-span-full text-center py-16 px-4 text-sm space-y-4 ${
                 tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'
               }`}
             >
-              Nenhum conteúdo encontrado para este filtro.{' '}
-              <Link to="/" className="text-[#A855F7] font-bold hover:underline">
+              <p>
+                {busca.trim()
+                  ? 'Nenhum resultado para esta busca nesta categoria.'
+                  : `Ainda não há mensagens publicadas para «${displayTag}», mas você pode explorar temas relacionados acima.`}
+              </p>
+              <Link to="/" className="text-[#A855F7] font-bold hover:underline inline-block">
                 Voltar ao início
               </Link>
-            </p>
+            </div>
           ) : (
             itensGrid.map((itemObj) => {
               if (itemObj.tipoItem === 'anuncio') {
@@ -256,7 +273,7 @@ export default function TagCategoriaView({
 
       <p className="text-center mt-8 text-[10px] font-mono uppercase tracking-widest opacity-40">
         {itensFiltrados.length} {itensFiltrados.length === 1 ? 'mensagem' : 'mensagens'} ·{' '}
-        {entry.tag}
+        {displayTag}
       </p>
 
       {itemPost && ModalGeradorPost && (

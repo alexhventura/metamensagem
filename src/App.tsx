@@ -737,6 +737,40 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
   );
 }
 
+/** Contador discreto abaixo do título (coleção / filtro ativo). */
+function ColecaoContador({
+  tema,
+  total,
+  visiveis,
+  buscaAtiva,
+  singular,
+  plural,
+}: {
+  tema: string;
+  total: number;
+  visiveis?: number;
+  buscaAtiva?: boolean;
+  singular: string;
+  plural: string;
+}) {
+  const rotulo = total === 1 ? singular : plural;
+  const texto =
+    buscaAtiva && visiveis !== undefined && visiveis !== total
+      ? `${visiveis.toLocaleString('pt-BR')} de ${total.toLocaleString('pt-BR')} ${rotulo} disponíveis`
+      : `${total.toLocaleString('pt-BR')} ${rotulo} disponíveis`;
+
+  return (
+    <p
+      className={`text-sm md:text-[15px] font-medium tracking-wide mb-6 -mt-2 ${
+        tema === 'light' ? 'text-zinc-500/80' : 'text-zinc-400/75'
+      }`}
+      aria-live="polite"
+    >
+      {texto}
+    </p>
+  );
+}
+
 // ===================================================
 // VISÃO: LISTA DE FRASES
 // ===================================================
@@ -788,9 +822,17 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
       />
       
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-black mb-6 uppercase tracking-widest text-[#A855F7] flex items-center justify-center gap-3">
+        <h2 className="text-3xl font-black mb-2 uppercase tracking-widest text-[#A855F7] flex items-center justify-center gap-3">
           <Quote /> Coleção de Frases
         </h2>
+        <ColecaoContador
+          tema={tema}
+          total={baseFrases.length}
+          visiveis={frases.length}
+          buscaAtiva={!!busca.trim()}
+          singular="frase"
+          plural="frases"
+        />
         <div className="relative max-w-xl mx-auto">
           <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />
           <input 
@@ -887,9 +929,17 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
       />
       
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-black mb-6 uppercase tracking-widest text-[#A855F7] flex items-center justify-center gap-3">
+        <h2 className="text-3xl font-black mb-2 uppercase tracking-widest text-[#A855F7] flex items-center justify-center gap-3">
           <BookOpen /> Arquivo de Metáforas
         </h2>
+        <ColecaoContador
+          tema={tema}
+          total={baseMetaforas.length}
+          visiveis={metaforas.length}
+          buscaAtiva={!!busca.trim()}
+          singular="metáfora"
+          plural="metáforas"
+        />
         <div className="relative max-w-xl mx-auto">
           <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />
           <input 

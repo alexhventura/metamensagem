@@ -34,7 +34,9 @@ import {
 } from 'lucide-react';
 
 import CustomModalGeradorPost from './components/ModalGeradorPost';
+import { CardTranslateMenu } from './components/CardTranslateMenu';
 import GoogleAdSense from './components/GoogleAdSense';
+import type { CardContentDisplay } from './lib/translation';
 
 import SocialHub from './components/SocialHub';
 import {
@@ -367,20 +369,44 @@ function ItemCard({
   key?: any;
 }) {
   const { t } = useTranslation();
+
+  const [display, setDisplay] = useState<CardContentDisplay>(() => ({
+    texto: item.texto,
+    titulo: item.titulo,
+    resumo: item.resumo,
+    isTranslated: false,
+  }));
+
+  useEffect(() => {
+    setDisplay({
+      texto: item.texto,
+      titulo: item.titulo,
+      resumo: item.resumo,
+      isTranslated: false,
+    });
+  }, [item.id, item.texto, item.titulo, item.resumo]);
+
+  const translateSource = useMemo(
+    () => ({ texto: item.texto, titulo: item.titulo, resumo: item.resumo }),
+    [item.texto, item.titulo, item.resumo]
+  );
   
   const handleCopy = () => {
+    const titulo = display.titulo ?? item.titulo;
+    const texto = display.texto;
     const textToCopy = item.tipo === 'metafora' 
-      ? `${item.titulo}\n\n${item.texto}\n— ${item.autor}`
-      : `${item.texto} — ${item.autor}`;
+      ? `${titulo}\n\n${texto}\n— ${item.autor}`
+      : `${texto} — ${item.autor}`;
     navigator.clipboard.writeText(textToCopy);
     toast(t('common.copied'));
   };
 
   const handleShare = () => {
+    const titulo = display.titulo ?? item.titulo;
     const text =
       item.tipo === 'metafora'
-        ? `${item.titulo}\n\n${item.texto}`
-        : item.texto;
+        ? `${titulo}\n\n${display.texto}`
+        : display.texto;
     const url = `${window.location.origin}/?text=${encodeURIComponent(text)}`;
     navigator.clipboard.writeText(url);
     toast(t('common.link_copied'));
@@ -405,14 +431,36 @@ function ItemCard({
           </div>
 
           {item.tipo === 'frase' ? (
-            <p className={`text-2xl font-bold mb-6 leading-tight tracking-tight flex-1 ${tema === 'light' ? 'text-black' : 'text-white'}`}>"{item.texto}"</p>
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={display.texto + String(display.isTranslated)}
+                initial={{ opacity: 0, y: 4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className={`text-2xl font-bold mb-6 leading-tight tracking-tight flex-1 ${tema === 'light' ? 'text-black' : 'text-white'}`}
+              >
+                "{display.texto}"
+              </motion.p>
+            </AnimatePresence>
           ) : (
             <div className="flex flex-col flex-1">
               {item.imagem && <img src={item.imagem} alt={item.titulo} loading="lazy" className="w-full h-40 object-cover rounded-3xl mb-5 grayscale group-hover:grayscale-0 transition-all duration-700" />}
               <Link to={`/metafora/${item.id}/${normalizarParaSlug(item.titulo || '')}`} className={`text-xl font-black hover:text-[#A855F7] transition-colors block mb-3 leading-tight tracking-tighter ${tema === 'light' ? 'text-black' : 'text-white'}`}>
-                {item.titulo}
+                {display.titulo ?? item.titulo}
               </Link>
-              <p className={`text-sm line-clamp-3 leading-relaxed mb-4 flex-1 ${tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'}`}>{item.resumo || item.texto}</p>
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={(display.resumo || display.texto) + String(display.isTranslated)}
+                  initial={{ opacity: 0, y: 4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className={`text-sm line-clamp-3 leading-relaxed mb-4 flex-1 ${tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'}`}
+                >
+                  {display.resumo || display.texto}
+                </motion.p>
+              </AnimatePresence>
               
               <div className="mb-4">
                 <Link 
@@ -466,6 +514,15 @@ function ItemCard({
             >
               <Share2 size={18} />
             </button>
+          </Tooltip>
+
+          <Tooltip text={t('common.translate')} tema={tema}>
+            <CardTranslateMenu
+              tema={tema}
+              source={translateSource}
+              onDisplayChange={setDisplay}
+              tooltipLabel={t('common.translate')}
+            />
           </Tooltip>
 
           {item.tipo === 'frase' && onEditImage && (

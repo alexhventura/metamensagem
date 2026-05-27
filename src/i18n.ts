@@ -38,7 +38,8 @@ const resources = {
         "read_metaphor": "Ler Metáfora",
         "download": "Download",
         "copied": "Copiado!",
-        "link_copied": "Link copiado!"
+        "link_copied": "Link copiado!",
+        "translate": "Traduzir"
       },
       "editor": {
         "title": "Gerar Post Premium",
@@ -96,7 +97,8 @@ const resources = {
         "read_metaphor": "Read Metaphor",
         "download": "Download",
         "copied": "Copied!",
-        "link_copied": "Link copied!"
+        "link_copied": "Link copied!",
+        "translate": "Translate"
       },
       "editor": {
         "title": "Generate Premium Post",
@@ -145,7 +147,8 @@ const resources = {
         "read_metaphor": "Leer Metáfora",
         "download": "Descargar",
         "copied": "¡Copiado!",
-        "link_copied": "¡Enlace copiado!"
+        "link_copied": "¡Enlace copiado!",
+        "translate": "Traducir"
       },
       "editor": {
         "title": "Generar Post Premium",
@@ -194,7 +197,8 @@ const resources = {
         "read_metaphor": "Lire la Métaphore",
         "download": "Télécharger",
         "copied": "Copié !",
-        "link_copied": "Lien copié !"
+        "link_copied": "Lien copié !",
+        "translate": "Traduire"
       },
       "editor": {
         "title": "Générer un Post Premium",

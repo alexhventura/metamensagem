@@ -95,10 +95,15 @@ function normalizeItem({ texto, autor, tags, source }) {
   };
 }
 
+const FETCH_HEADERS = {
+  'User-Agent': 'Mozilla/5.0 (compatible; MetaMensagem/1.0; +https://metamensagem.com)',
+  Accept: 'application/json',
+};
+
 async function fetchJson(url, options = {}) {
   const res = await fetch(url, {
     ...options,
-    headers: { 'User-Agent': 'MetaMensagem-ContentBot/1.0 (build)', ...(options.headers || {}) },
+    headers: { ...FETCH_HEADERS, ...(options.headers || {}) },
   });
   if (!res.ok) throw new Error(`${url} → ${res.status}`);
   return res.json();
@@ -133,30 +138,44 @@ async function fetchQuotable(limit = 750) {
   return items;
 }
 
-/** Fallback quando Quotable estiver indisponível. */
-async function fetchDummyJsonQuotes() {
+/** Principal fonte estável (Quotable está fora do ar na maioria dos ambientes). */
+async function fetchDummyJsonQuotesPaginated(maxItems = 900) {
+  const items = [];
+  const limit = 100;
+  let skip = 0;
+  let total = maxItems;
+
   try {
-    const data = await fetchJson('https://dummyjson.com/quotes?limit=100');
-    return (data.quotes || [])
-      .map((q) =>
-        normalizeItem({
+    while (items.length < maxItems && skip < total) {
+      const data = await fetchJson(
+        `https://dummyjson.com/quotes?limit=${limit}&skip=${skip}`
+      );
+      total = Math.min(data.total || maxItems, maxItems);
+      for (const q of data.quotes || []) {
+        const item = normalizeItem({
           texto: q.quote,
           autor: q.author,
           tags: ['Inspiracional', 'Reflexao'],
           source: 'dj',
-        })
-      )
-      .filter(Boolean);
+        });
+        if (item) items.push(item);
+      }
+      skip += limit;
+      if (!data.quotes?.length) break;
+      await sleep(300);
+    }
   } catch (e) {
     console.warn('⚠ DummyJSON:', e.message);
-    return [];
   }
+  return items;
 }
 
 async function fetchZenQuotes() {
   try {
-    await sleep(1200);
-    const data = await fetchJson('https://zenquotes.io/api/quotes');
+    await sleep(1500);
+    const data = await fetchJson('https://zenquotes.io/api/quotes', {
+      headers: { ...FETCH_HEADERS, Referer: 'https://metamensagem.com/' },
+    });
     if (!Array.isArray(data)) return [];
     return data
       .map((q) =>
@@ -258,21 +277,24 @@ async function run() {
 
   console.log('🌐 Enriquecendo acervo (APIs externas → cache local)...');
 
-  let quotable = await fetchQuotable(600);
-  if (quotable.length < 50) {
-    const fallback = await fetchDummyJsonQuotes();
-    quotable = [...quotable, ...fallback];
-  }
-
+  const quotable = await fetchQuotable(150);
+  const dummyjson = await fetchDummyJsonQuotesPaginated(900);
   const zen = await fetchZenQuotes();
   const wiki = await fetchWikiquotePt();
 
-  const merged = dedupeItems([...quotable, ...zen, ...wiki]);
+  const merged = dedupeItems([...dummyjson, ...zen, ...wiki, ...quotable]);
   const payload = {
-    version: 1,
+    version: 2,
     updatedAt: new Date().toISOString(),
+    apiStatus: {
+      quotable: quotable.length > 0 ? 'ok' : 'indisponivel',
+      dummyjson: dummyjson.length > 0 ? 'ok' : 'falhou',
+      zenquotes: zen.length > 0 ? 'ok' : 'falhou',
+      wikiquote: wiki.length > 0 ? 'ok' : 'limitado',
+    },
     sources: {
       quotable: quotable.length,
+      dummyjson: dummyjson.length,
       zenquotes: zen.length,
       wikiquote: wiki.length,
     },
@@ -281,7 +303,7 @@ async function run() {
 
   fs.writeFileSync(CACHE_FILE, JSON.stringify(payload), 'utf8');
   console.log(
-    `✅ frases-enriched-cache.json — ${merged.length} frases (qt:${quotable.length} zq:${zen.length} wq:${wiki.length})`
+    `✅ frases-enriched-cache.json — ${merged.length} frases (dj:${dummyjson.length} zq:${zen.length} wq:${wiki.length} qt:${quotable.length})`
   );
 }
 

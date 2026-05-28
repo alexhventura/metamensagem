@@ -1,0 +1,144 @@
+[
+  {
+    "id": "f_bl_001",
+    "slug": "seja-agua-meu-amigo",
+    "frase_original": "Be water, my friend.",
+    "autor_original": "Bruce Lee",
+    "categoria": "sabedoria",
+    "contextos": [
+      "adaptacao",
+      "resiliencia"
+    ],
+    "explicacao": "Adaptação é a chave para superar obstáculos.",
+    "palavras_chave": [
+      "adaptacao",
+      "fluidez",
+      "vida"
+    ],
+    "autor_tipo": "artista-marcial",
+    "nacionalidade": "chines-americano",
+    "nascimento_falecimento": "1940-1973",
+    "ano_ou_data": "1971",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_bl_002",
+    "slug": "conhecimento-nao-e-suficiente",
+    "frase_original": "Knowing is not enough, we must apply.",
+    "autor_original": "Bruce Lee",
+    "categoria": "acao",
+    "contextos": [
+      "disciplina",
+      "execucao"
+    ],
+    "explicacao": "Conhecimento sem ação não gera resultado.",
+    "palavras_chave": [
+      "acao",
+      "disciplina"
+    ],
+    "autor_tipo": "artista-marcial",
+    "nacionalidade": "chines-americano",
+    "nascimento_falecimento": "1940-1973",
+    "ano_ou_data": "1971",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_bl_003",
+    "slug": "limites-sao-mentais",
+    "frase_original": "If you always put limits on yourself, you will never grow.",
+    "autor_original": "Bruce Lee",
+    "categoria": "motivacao",
+    "contextos": [
+      "superacao"
+    ],
+    "explicacao": "Limites mentais impedem o crescimento pessoal.",
+    "palavras_chave": [
+      "limites",
+      "crescimento"
+    ],
+    "autor_tipo": "artista-marcial",
+    "nacionalidade": "chines-americano",
+    "nascimento_falecimento": "1940-1973",
+    "ano_ou_data": "1972",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_bl_004",
+    "slug": "simplicidade-e-eficiencia",
+    "frase_original": "Simplicity is the key to brilliance.",
+    "autor_original": "Bruce Lee",
+    "categoria": "sabedoria",
+    "contextos": [
+      "foco"
+    ],
+    "explicacao": "Simplicidade gera eficiência.",
+    "palavras_chave": [
+      "simplicidade",
+      "foco"
+    ],
+    "autor_tipo": "artista-marcial",
+    "nacionalidade": "chines-americano",
+    "nascimento_falecimento": "1940-1973",
+    "ano_ou_data": "1971",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_bl_005",
+    "slug": "adapte-ou-desapareca",
+    "frase_original": "Adapt what is useful, reject what is useless.",
+    "autor_original": "Bruce Lee",
+    "categoria": "estrategia",
+    "contextos": [
+      "adaptacao"
+    ],
+    "explicacao": "Filtrar o que é útil é essencial para evolução.",
+    "palavras_chave": [
+      "adaptacao",
+      "estrategia"
+    ],
+    "autor_tipo": "artista-marcial",
+    "nacionalidade": "chines-americano",
+    "nascimento_falecimento": "1940-1973",
+    "ano_ou_data": "1972",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_bl_006",
+    "slug": "fluidez-da-mente",
+    "frase_original": "Empty your mind, be formless.",
+    "autor_original": "Bruce Lee",
+    "categoria": "mindset",
+    "contextos": [
+      "foco",
+      "meditacao"
+    ],
+    "explicacao": "Mente livre permite melhor adaptação.",
+    "palavras_chave": [
+      "mente",
+      "foco"
+    ],
+    "autor_tipo": "artista-marcial",
+    "nacionalidade": "chines-americano",
+    "nascimento_falecimento": "1940-1973",
+    "ano_ou_data": "1971",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  }
+]

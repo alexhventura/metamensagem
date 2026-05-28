@@ -1,0 +1,93 @@
+[
+  {
+    "id": "f_so_001",
+    "slug": "so-sei-que-nada-sei",
+    "frase_original": "I know that I know nothing.",
+    "autor_original": "Sócrates",
+    "categoria": "filosofia",
+    "contextos": [
+      "humildade"
+    ],
+    "explicacao": "Reconhecer ignorância é forma de sabedoria.",
+    "palavras_chave": [
+      "sabedoria",
+      "humildade"
+    ],
+    "autor_tipo": "filosofo",
+    "nacionalidade": "grego",
+    "nascimento_falecimento": "470-399 AC",
+    "ano_ou_data": "400 AC",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_so_002",
+    "slug": "conhece-te-a-ti-mesmo",
+    "frase_original": "Know thyself.",
+    "autor_original": "Sócrates",
+    "categoria": "filosofia",
+    "contextos": [
+      "autoconhecimento"
+    ],
+    "explicacao": "Autoconhecimento é base da sabedoria.",
+    "palavras_chave": [
+      "autoconhecimento"
+    ],
+    "autor_tipo": "filosofo",
+    "nacionalidade": "grego",
+    "nascimento_falecimento": "470-399 AC",
+    "ano_ou_data": "400 AC",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_so_003",
+    "slug": "vida-sem-exame-nao-vale-a-pena",
+    "frase_original": "The unexamined life is not worth living.",
+    "autor_original": "Sócrates",
+    "categoria": "vida",
+    "contextos": [
+      "reflexao"
+    ],
+    "explicacao": "Refletir sobre a vida é essencial.",
+    "palavras_chave": [
+      "reflexao",
+      "vida"
+    ],
+    "autor_tipo": "filosofo",
+    "nacionalidade": "grego",
+    "nascimento_falecimento": "470-399 AC",
+    "ano_ou_data": "399 AC",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_so_004",
+    "slug": "sabedoria-esta-em-questionar",
+    "frase_original": "Wonder is the beginning of wisdom.",
+    "autor_original": "Sócrates",
+    "categoria": "sabedoria",
+    "contextos": [
+      "curiosidade"
+    ],
+    "explicacao": "A curiosidade inicia o conhecimento.",
+    "palavras_chave": [
+      "sabedoria",
+      "curiosidade"
+    ],
+    "autor_tipo": "filosofo",
+    "nacionalidade": "grego",
+    "nascimento_falecimento": "470-399 AC",
+    "ano_ou_data": "400 AC",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  }
+]

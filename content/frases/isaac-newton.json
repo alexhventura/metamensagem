@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_in_001",
+    "slug": "ombros-de-gigantes",
+    "frase_original": "If I have seen further it is by standing on the shoulders of giants.",
+    "autor_original": "Isaac Newton",
+    "categoria": "ciencia",
+    "contextos": [
+      "conhecimento"
+    ],
+    "explicacao": "Conhecimento é construção coletiva.",
+    "palavras_chave": [
+      "ciencia",
+      "aprendizado"
+    ],
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "ano_ou_data": "1675",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_in_002",
+    "slug": "lei-da-acao-e-reacao",
+    "frase_original": "For every action, there is an equal and opposite reaction.",
+    "autor_original": "Isaac Newton",
+    "categoria": "fisica",
+    "contextos": [
+      "lei-natural"
+    ],
+    "explicacao": "Toda ação gera uma reação equivalente.",
+    "palavras_chave": [
+      "fisica",
+      "acao"
+    ],
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "ano_ou_data": "1687",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_in_003",
+    "slug": "paciencia-e-chave",
+    "frase_original": "Patience is the key to success in science.",
+    "autor_original": "Isaac Newton",
+    "categoria": "disciplina",
+    "contextos": [
+      "persistencia"
+    ],
+    "explicacao": "Ciência exige paciência.",
+    "palavras_chave": [
+      "paciencia",
+      "disciplina"
+    ],
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "ano_ou_data": "1680",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_in_004",
+    "slug": "verdade-vem-da-observacao",
+    "frase_original": "Truth is ever to be found in simplicity.",
+    "autor_original": "Isaac Newton",
+    "categoria": "verdade",
+    "contextos": [
+      "observacao"
+    ],
+    "explicacao": "Simplicidade revela a verdade.",
+    "palavras_chave": [
+      "verdade",
+      "simplicidade"
+    ],
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "ano_ou_data": "1685",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  }
+]

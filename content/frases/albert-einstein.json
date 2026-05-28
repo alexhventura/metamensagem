@@ -1,0 +1,140 @@
+[
+  {
+    "id": "f_ei_001",
+    "slug": "imaginacao-supera-conhecimento",
+    "frase_original": "Imagination is more important than knowledge.",
+    "autor_original": "Albert Einstein",
+    "categoria": "ciencia",
+    "contextos": [
+      "criatividade"
+    ],
+    "explicacao": "Imaginação é base da inovação.",
+    "palavras_chave": [
+      "criatividade",
+      "inovacao"
+    ],
+    "autor_tipo": "fisico",
+    "nacionalidade": "alemao-suico",
+    "nascimento_falecimento": "1879-1955",
+    "ano_ou_data": "1929",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_ei_002",
+    "slug": "vida-e-como-andar-de-bicicleta",
+    "frase_original": "Life is like riding a bicycle. To keep your balance, you must keep moving.",
+    "autor_original": "Albert Einstein",
+    "categoria": "vida",
+    "contextos": [
+      "equilibrio"
+    ],
+    "explicacao": "Movimento constante mantém equilíbrio na vida.",
+    "palavras_chave": [
+      "equilibrio",
+      "vida"
+    ],
+    "autor_tipo": "fisico",
+    "nacionalidade": "alemao-suico",
+    "nascimento_falecimento": "1879-1955",
+    "ano_ou_data": "1930",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_ei_003",
+    "slug": "insanidade-repetir-mesmo-erro",
+    "frase_original": "Insanity is doing the same thing over and over and expecting different results.",
+    "autor_original": "Albert Einstein",
+    "categoria": "logica",
+    "contextos": [
+      "mudanca"
+    ],
+    "explicacao": "Mudança é necessária para resultados diferentes.",
+    "palavras_chave": [
+      "mudanca",
+      "logica"
+    ],
+    "autor_tipo": "fisico",
+    "nacionalidade": "alemao-suico",
+    "nascimento_falecimento": "1879-1955",
+    "ano_ou_data": "1931",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_ei_004",
+    "slug": "curiosidade-e-importante",
+    "frase_original": "The important thing is not to stop questioning.",
+    "autor_original": "Albert Einstein",
+    "categoria": "educacao",
+    "contextos": [
+      "curiosidade"
+    ],
+    "explicacao": "Questionar é base do aprendizado.",
+    "palavras_chave": [
+      "curiosidade",
+      "aprendizado"
+    ],
+    "autor_tipo": "fisico",
+    "nacionalidade": "alemao-suico",
+    "nascimento_falecimento": "1879-1955",
+    "ano_ou_data": "1935",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_ei_005",
+    "slug": "valor-da-mente-criativa",
+    "frase_original": "Logic will get you from A to B. Imagination will take you everywhere.",
+    "autor_original": "Albert Einstein",
+    "categoria": "criatividade",
+    "contextos": [
+      "inovacao"
+    ],
+    "explicacao": "Criatividade expande possibilidades.",
+    "palavras_chave": [
+      "criatividade",
+      "logica"
+    ],
+    "autor_tipo": "fisico",
+    "nacionalidade": "alemao-suico",
+    "nascimento_falecimento": "1879-1955",
+    "ano_ou_data": "1932",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_ei_006",
+    "slug": "conhecimento-vem-da-experiencia",
+    "frase_original": "The only source of knowledge is experience.",
+    "autor_original": "Albert Einstein",
+    "categoria": "conhecimento",
+    "contextos": [
+      "aprendizado"
+    ],
+    "explicacao": "Experiência é base do conhecimento real.",
+    "palavras_chave": [
+      "experiencia",
+      "conhecimento"
+    ],
+    "autor_tipo": "fisico",
+    "nacionalidade": "alemao-suico",
+    "nascimento_falecimento": "1879-1955",
+    "ano_ou_data": "1933",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  }
+]

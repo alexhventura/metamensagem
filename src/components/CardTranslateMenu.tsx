@@ -11,9 +11,26 @@ import {
   TranslationFailedError,
   translateCardContent,
 } from '../lib/translation';
+import { CARD_ACTION_BTN, type CardAccent } from '../lib/cardTheme';
 
-/** Altura/largura fixa do botão (alinha com p-3.5 + ícone 18px). */
-const BTN_BOX = 'h-[3.375rem] w-[3.375rem]';
+function translateBtnClass(tema: string, accent: CardAccent): string {
+  if (accent === 'pink') {
+    return tema === 'light'
+      ? 'bg-pink-50 text-pink-600 hover:bg-pink-100 border border-pink-200/80'
+      : 'bg-pink-500/10 text-pink-400 border border-pink-500/20 hover:bg-pink-500/20';
+  }
+  return tema === 'light'
+    ? 'bg-purple-100 text-purple-600 hover:bg-purple-200'
+    : 'bg-purple-500/10 text-purple-400 border border-purple-500/20 hover:bg-purple-500/20';
+}
+
+function translateActiveRing(accent: CardAccent): string {
+  return accent === 'pink' ? 'ring-2 ring-pink-500/40 text-pink-500' : 'ring-2 ring-[#A855F7]/40 text-[#A855F7]';
+}
+
+function translateRetryClass(accent: CardAccent): string {
+  return accent === 'pink' ? 'text-pink-500 hover:text-pink-600' : 'text-[#A855F7] hover:text-[#9333EA]';
+}
 
 type CardTranslateMenuProps = {
   tema: string;
@@ -24,6 +41,8 @@ type CardTranslateMenuProps = {
   tooltipLabel?: string;
   menuPlacement?: 'top' | 'bottom';
   buttonClassName?: string;
+  /** Herda cor do card pai: rosa (metáfora) ou roxa (frase). */
+  accent?: CardAccent;
 };
 
 export function CardTranslateMenu({
@@ -35,6 +54,7 @@ export function CardTranslateMenu({
   tooltipLabel = 'Traduzir',
   menuPlacement = 'top',
   buttonClassName,
+  accent = 'purple',
 }: CardTranslateMenuProps) {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -129,18 +149,10 @@ export function CardTranslateMenu({
     };
   }, [open]);
 
-  const btnClass =
-    tema === 'light'
-      ? 'bg-zinc-100 text-zinc-500 hover:bg-zinc-200'
-      : 'bg-zinc-900/50 text-zinc-400 hover:bg-zinc-900 border border-white/5';
-
-  const sizeClass = buttonClassName ? '' : BTN_BOX;
+  const btnClass = translateBtnClass(tema, accent);
 
   return (
-    <div
-      ref={rootRef}
-      className={`relative shrink-0 ${sizeClass} ${buttonClassName ? '' : ''}`}
-    >
+    <div ref={rootRef} className="relative shrink-0">
       {/* Slot fixo: overlay de erro não altera altura do card */}
       <div
         className={`absolute right-0 z-[130] w-[9.75rem] min-h-[2.5rem] pointer-events-none ${
@@ -173,7 +185,7 @@ export function CardTranslateMenu({
                 type="button"
                 onClick={() => selectLang(failedTarget, true)}
                 disabled={loading}
-                className="mt-0.5 text-[8px] font-bold text-[#A855F7] hover:text-[#9333EA] transition-colors"
+                className={`mt-0.5 text-[8px] font-bold transition-colors ${translateRetryClass(accent)}`}
               >
                 Tentar novamente
               </button>
@@ -188,12 +200,10 @@ export function CardTranslateMenu({
         aria-expanded={open}
         disabled={loading}
         onClick={() => setOpen((o) => !o)}
-        className={`flex items-center justify-center rounded-2xl transition-colors ${btnClass} ${
-          buttonClassName || `${BTN_BOX} p-0`
+        className={`${CARD_ACTION_BTN} transition-colors ${btnClass} ${
+          buttonClassName || ''
         } ${
-          activeLang !== 'original' && !failedTarget
-            ? 'ring-2 ring-[#A855F7]/40 text-[#A855F7]'
-            : ''
+          activeLang !== 'original' && !failedTarget ? translateActiveRing(accent) : ''
         } ${failedTarget ? 'ring-1 ring-amber-500/25' : ''}`}
       >
         {loading ? (
@@ -235,7 +245,9 @@ export function CardTranslateMenu({
                 onClick={() => selectLang(opt.code)}
                 className={`w-full text-left px-3 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${
                   activeLang === opt.code
-                    ? 'bg-[#A855F7]/15 text-[#A855F7]'
+                    ? accent === 'pink'
+                      ? 'bg-pink-500/15 text-pink-500'
+                      : 'bg-[#A855F7]/15 text-[#A855F7]'
                     : tema === 'light'
                       ? 'hover:bg-zinc-50 text-zinc-700'
                       : 'hover:bg-zinc-900 text-zinc-300'

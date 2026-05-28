@@ -65,6 +65,8 @@ import { flattenFeedWithAds } from './lib/feedWithAds';
 import { normalizarParaSlug } from './lib/slug';
 import type { ItemConteudo } from './types/content';
 import ContentCard from './components/ContentCard';
+import CardTooltip from './components/CardTooltip';
+import { CARD_ACTION_BTN, cardNeutralActionClass } from './lib/cardTheme';
 
 async function montarBanco(metaforasRaw: unknown[], frasesRaw: unknown[]): Promise<ItemConteudo[]> {
   const metaforas = sanitizeContentBanco(metaforasRaw);
@@ -985,43 +987,48 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
        <div className={`mt-16 py-10 border-t flex flex-col items-center ${tema === 'light' ? 'border-zinc-200' : 'border-zinc-900'}`}>
         <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#A855F7] to-transparent mb-8"></div>
         <div className="flex items-center gap-2 mb-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-purple-600"></div>
-          <span className="text-2xl font-black text-[#A855F7] text-center italic tracking-widest">{item.autor.toUpperCase()}</span>
+          <div className="w-1.5 h-1.5 rounded-full bg-[#EC4899]"></div>
+          <span className="text-2xl font-black text-[#EC4899] text-center italic tracking-widest">{item.autor.toUpperCase()}</span>
         </div>
-        <div className="flex gap-4 mt-6 items-end min-h-[3.5rem]">
-          <Tooltip text={t('common.copy')} tema={tema}>
-            <button 
+        <div className="flex gap-2 mt-6 items-end justify-center min-h-[3.375rem]">
+          <CardTooltip text={t('common.copy')} tema={tema}>
+            <button
+              type="button"
               onClick={() => {
                 const titulo = display.titulo ?? item.titulo;
                 const texto = display.texto || item.texto;
                 navigator.clipboard.writeText(`${titulo}\n\n${texto}\n— ${item.autor}`);
                 toast(t('common.copied'));
               }}
-              className={`p-4 rounded-2xl ${tema === 'light' ? 'bg-zinc-100 text-zinc-600' : 'bg-zinc-900 text-zinc-400'}`}
+              className={`${CARD_ACTION_BTN} ${cardNeutralActionClass(tema)}`}
             >
-              <Copy size={20} />
+              <Copy size={18} />
             </button>
-          </Tooltip>
-          <Tooltip text={t('common.translate')} tema={tema}>
+          </CardTooltip>
+          <CardTooltip text={t('common.translate')} tema={tema}>
             <CardTranslateMenu
               tema={tema}
+              accent="pink"
               contentId={item.id}
               source={translateSource}
               onDisplayChange={setDisplay}
               onLoadingChange={setTranslating}
               tooltipLabel={t('common.translate')}
               menuPlacement="bottom"
-              buttonClassName="h-14 w-14 p-0 flex items-center justify-center"
             />
-          </Tooltip>
-          <Tooltip text={t('common.share')} tema={tema}>
-            <button 
-              onClick={() => { navigator.clipboard.writeText(window.location.href); toast(t('common.link_copied')); }}
-              className={`p-4 rounded-2xl ${tema === 'light' ? 'bg-zinc-100 text-zinc-600' : 'bg-zinc-900 text-zinc-400'}`}
+          </CardTooltip>
+          <CardTooltip text={t('common.share')} tema={tema}>
+            <button
+              type="button"
+              onClick={() => {
+                void navigator.clipboard.writeText(window.location.href);
+                toast(t('common.link_copied'));
+              }}
+              className={`${CARD_ACTION_BTN} ${cardNeutralActionClass(tema)}`}
             >
-              <Share2 size={20} />
+              <Share2 size={18} />
             </button>
-          </Tooltip>
+          </CardTooltip>
         </div>
       </div>
 

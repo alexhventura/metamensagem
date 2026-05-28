@@ -4,51 +4,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { BookOpen, Copy, Image as ImageIcon, Share2 } from 'lucide-react';
 import { CardTranslateMenu } from './CardTranslateMenu';
+import CardTooltip from './CardTooltip';
 import { type CardContentDisplay } from '../lib/translation';
 import { pathFromTag } from '../lib/tagsSeo';
 import { normalizarParaSlug } from '../lib/slug';
+import {
+  CARD_ACTION_BTN,
+  cardAccentDotClass,
+  cardAccentForTipo,
+  cardBorderGradient,
+  cardImageBtnClass,
+  cardNeutralActionClass,
+  cardReadMoreBtnClass,
+  cardTagClass,
+} from '../lib/cardTheme';
 import type { ItemConteudo } from '../types/content';
-
-function Tooltip({
-  children,
-  text,
-  tema,
-}: {
-  children: React.ReactNode;
-  text: string;
-  tema: string;
-}) {
-  const [isVisible, setIsVisible] = useState(false);
-
-  return (
-    <div
-      className="relative flex flex-col items-center justify-end shrink-0 group"
-      onMouseEnter={() => setIsVisible(true)}
-      onMouseLeave={() => setIsVisible(false)}
-    >
-      {children}
-      <AnimatePresence>
-        {isVisible && (
-          <motion.div
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            className={`absolute bottom-full mb-2 px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest whitespace-nowrap z-50 ${
-              tema === 'light' ? 'bg-black text-white' : 'bg-white text-black'
-            }`}
-          >
-            {text}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-}
-
-const readMoreBtnClass = (tema: string) =>
-  tema === 'light'
-    ? 'bg-purple-100 text-purple-600 hover:bg-purple-200'
-    : 'bg-purple-500/10 text-purple-400 border border-purple-500/20 hover:bg-purple-500/20';
 
 export default function ContentCard({
   item,
@@ -63,6 +33,7 @@ export default function ContentCard({
 }) {
   const { t } = useTranslation();
   const isFrase = item.tipo === 'frase';
+  const accent = cardAccentForTipo(item.tipo);
 
   const [display, setDisplay] = useState<CardContentDisplay>(() => ({
     texto: item.texto,
@@ -125,17 +96,14 @@ export default function ContentCard({
     toast(t('common.link_copied'));
   };
 
-  const actionBtnClass =
-    tema === 'light'
-      ? 'bg-zinc-100 text-zinc-500 hover:bg-zinc-200'
-      : 'bg-zinc-900/50 text-zinc-400 hover:bg-zinc-900 border border-white/5';
+  const neutralAction = cardNeutralActionClass(tema);
 
   return (
     <motion.div
       layout
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="p-[1px] rounded-[2.5rem] bg-gradient-to-br from-[#8B5CF6] to-[#111111] h-full"
+      className={`p-[1px] rounded-[2.5rem] ${cardBorderGradient(accent)} h-full`}
     >
       <div
         className={`p-8 rounded-[2.5rem] flex flex-col justify-between transition-all group relative overflow-hidden h-full ${
@@ -146,7 +114,7 @@ export default function ContentCard({
       >
         <div className="relative z-10 flex-1 flex flex-col">
           <div className="flex items-center gap-2 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-purple-600" />
+            <span className={`w-1.5 h-1.5 rounded-full ${cardAccentDotClass(accent)}`} />
             <span className="text-[10px] uppercase font-black tracking-widest text-zinc-500">
               {item.tipo}
             </span>
@@ -165,7 +133,7 @@ export default function ContentCard({
             {!isFrase && (
               <Link
                 to={detailPath}
-                className={`text-xl font-black hover:text-[#A855F7] transition-colors block mb-3 leading-tight tracking-tighter ${
+                className={`text-xl font-black transition-colors block mb-3 leading-tight tracking-tighter hover:text-[#EC4899] ${
                   tema === 'light' ? 'text-black' : 'text-white'
                 }`}
               >
@@ -180,9 +148,11 @@ export default function ContentCard({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className={`text-sm line-clamp-3 leading-relaxed mb-4 flex-1 transition-opacity duration-200 ${
-                  translating ? 'opacity-55' : 'opacity-100'
-                } ${tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'}`}
+                className={`leading-relaxed mb-4 flex-1 transition-opacity duration-200 ${
+                  isFrase ? 'text-[15px] line-clamp-4' : 'text-sm line-clamp-3'
+                } ${translating ? 'opacity-55' : 'opacity-100'} ${
+                  tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'
+                }`}
               >
                 {isFrase ? `"${bodyText}"` : bodyText}
               </motion.p>
@@ -191,7 +161,7 @@ export default function ContentCard({
             <div className="mb-4">
               <Link
                 to={detailPath}
-                className={`inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl transition-all ${readMoreBtnClass(tema)}`}
+                className={`inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl transition-all ${cardReadMoreBtnClass(tema, accent)}`}
               >
                 <BookOpen size={14} />
                 {buttonLabel}
@@ -204,7 +174,7 @@ export default function ContentCard({
               <Link
                 key={tag}
                 to={pathFromTag(tag)}
-                className="text-[9px] font-black px-2.5 py-1 rounded-full bg-purple-500/5 text-purple-400 border border-purple-500/10 hover:bg-purple-500/15 transition-colors"
+                className={`text-[9px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass(accent)}`}
               >
                 #{tag.toUpperCase()}
               </Link>
@@ -212,7 +182,7 @@ export default function ContentCard({
           </div>
 
           <div className="flex items-center gap-3 mt-6 pt-6 border-t border-zinc-500/10">
-            <div className="w-1.5 h-1.5 rounded-full bg-purple-600" />
+            <div className={`w-1.5 h-1.5 rounded-full ${cardAccentDotClass(accent)}`} />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 to-zinc-600 text-[10px] font-black tracking-widest uppercase truncate">
               {t('common.author')} {item.autor.toUpperCase()}
             </span>
@@ -220,51 +190,58 @@ export default function ContentCard({
         </div>
 
         <div className="mt-8 flex justify-end items-end gap-2 relative z-10 min-h-[3.375rem]">
-          <Tooltip text={t('common.copy')} tema={tema}>
+          <CardTooltip text={t('common.copy')} tema={tema}>
             <button
               type="button"
               onClick={handleCopy}
-              className={`p-3.5 rounded-2xl transition-all ${actionBtnClass}`}
+              className={`${CARD_ACTION_BTN} ${neutralAction}`}
             >
               <Copy size={18} />
             </button>
-          </Tooltip>
+          </CardTooltip>
 
-          <Tooltip text={t('common.share')} tema={tema}>
+          <CardTooltip text={t('common.share')} tema={tema}>
             <button
               type="button"
               onClick={() => void handleShare()}
-              className={`p-3.5 rounded-2xl transition-all ${actionBtnClass}`}
+              className={`${CARD_ACTION_BTN} ${neutralAction}`}
             >
               <Share2 size={18} />
             </button>
-          </Tooltip>
+          </CardTooltip>
 
-          <Tooltip text={t('common.translate')} tema={tema}>
+          <CardTooltip text={t('common.translate')} tema={tema}>
             <CardTranslateMenu
               tema={tema}
+              accent={accent}
               contentId={item.id}
               source={translateSource}
               onDisplayChange={setDisplay}
               onLoadingChange={setTranslating}
               tooltipLabel={t('common.translate')}
             />
-          </Tooltip>
+          </CardTooltip>
 
           {isFrase && onEditImage && (
-            <Tooltip text={t('common.edit_image')} tema={tema}>
+            <CardTooltip text={t('common.edit_image')} tema={tema}>
               <button
                 type="button"
                 onClick={() => onEditImage(item)}
-                className="p-3.5 bg-[#A855F7] hover:bg-[#9333EA] text-white rounded-2xl transition-all hover:scale-110 shadow-lg shadow-purple-500/20"
+                className={cardImageBtnClass(accent)}
               >
                 <ImageIcon size={18} />
               </button>
-            </Tooltip>
+            </CardTooltip>
           )}
         </div>
 
-        <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#A855F7]/5 rounded-full blur-3xl group-hover:bg-[#A855F7]/20 transition-colors pointer-events-none" />
+        <div
+          className={`absolute -bottom-10 -right-10 w-40 h-40 rounded-full blur-3xl transition-colors pointer-events-none ${
+            accent === 'pink'
+              ? 'bg-pink-500/5 group-hover:bg-pink-500/20'
+              : 'bg-[#A855F7]/5 group-hover:bg-[#A855F7]/20'
+          }`}
+        />
       </div>
     </motion.div>
   );

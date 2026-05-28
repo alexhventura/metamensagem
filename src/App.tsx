@@ -59,6 +59,9 @@ import { searchBancoSemantico } from './lib/semanticSearch';
 import { sanitizeContentBanco } from './lib/safeContent';
 import { pruneInvalidTranslationCache } from './lib/translation';
 import TagCategoriaView from './views/TagCategoria';
+import FraseDetalheView from './views/FraseDetalhe';
+import { primeFrasesCms, fraseToListItem } from './lib/frasesModel';
+import { GRID_CONTENT, renderContentCard } from './lib/contentGrid';
 
 // --- TIPOS ---
 interface ItemConteudo {
@@ -67,9 +70,26 @@ interface ItemConteudo {
   texto: string;
   autor: string;
   tags: string[];
+  slug?: string;
   titulo?: string;
   resumo?: string;
   imagem?: string;
+}
+
+async function montarBanco(metaforasRaw: unknown[], frasesRaw: unknown[]): Promise<ItemConteudo[]> {
+  const metaforas = sanitizeContentBanco(metaforasRaw);
+  try {
+    const cmsRes = await fetch('/frases-cms.json');
+    if (cmsRes.ok) {
+      const cms = await cmsRes.json();
+      primeFrasesCms(cms);
+      const frases = cms.map(fraseToListItem) as ItemConteudo[];
+      return [...metaforas, ...frases];
+    }
+  } catch {
+    /* fallback índice */
+  }
+  return sanitizeContentBanco([...metaforas, ...frasesRaw]);
 }
 
 interface ModalProps {
@@ -139,7 +159,7 @@ export default function App() {
 
         if (cachedResponses.every(res => res)) {
           const cachedData = await Promise.all(cachedResponses.map(res => res!.json()));
-          dataToSet = sanitizeContentBanco([...cachedData[0], ...cachedData[1]]);
+          dataToSet = await montarBanco(cachedData[0], cachedData[1]);
           setBancoTotal(dataToSet);
           setBancoRandom(shuffleArray(dataToSet));
           setLoading(false);
@@ -152,7 +172,7 @@ export default function App() {
         
         await Promise.all(clonedResponses.map((res, i) => cache.put(urls[i], res)));
         
-        const finalData = sanitizeContentBanco([...networkData[0], ...networkData[1]]);
+        const finalData = await montarBanco(networkData[0], networkData[1]);
         setBancoTotal(finalData);
         if (dataToSet.length === 0) {
           setBancoRandom(shuffleArray(finalData));
@@ -278,6 +298,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomeView tema={tema} toast={mostrarToast} banco={bancoTotal} tags={tagsUnicas} bancoRandom={bancoRandom} />} />
               <Route path="/frases" element={<FrasesView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
+              <Route path="/frases/:slug" element={<FraseDetalheView tema={tema} />} />
               <Route path="/metaforas" element={<MetaforasView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
               <Route path="/metafora/:id/*" element={<MetaforaDetalheView tema={tema} banco={bancoTotal} toast={mostrarToast} />} />
               <Route path="/sobre" element={<Contact tema={tema} />} />
@@ -707,7 +728,7 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="max-w-5xl w-full mx-auto px-4 py-8 flex-1 flex flex-col"
+      className="max-w-7xl w-full mx-auto px-4 py-8 flex-1 flex flex-col"
     >
       <MudarMetaSEO
         title={t('app.tagline')}
@@ -754,7 +775,7 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
         </div>
       </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+      <div className={GRID_CONTENT}>
         <AnimatePresence mode="popLayout">
           {itensHome.map((itemObj) => {
             if (itemObj.tipoItem === 'anuncio') {
@@ -773,13 +794,15 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
 
             const item = itemObj.content;
             return (
-              <ItemCard 
-                key={item.id} 
-                item={item} 
-                tema={tema} 
-                toast={toast} 
-                onEditImage={setItemPost} 
-              />
+              <div key={item.id}>
+                {renderContentCard({
+                  item,
+                  tema,
+                  toast,
+                  onEditImage: setItemPost,
+                  ItemCard,
+                })}
+              </div>
             );
           })}
         </AnimatePresence>
@@ -884,7 +907,7 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="max-w-5xl w-full mx-auto px-4 py-8 flex-1"
+      className="max-w-7xl w-full mx-auto px-4 py-8 flex-1"
     >
       <MudarMetaSEO
         title="Banco Total de Frases"
@@ -923,7 +946,7 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+      <div className={GRID_CONTENT}>
         {itensFrases.map((itemObj) => {
           if (itemObj.tipoItem === 'anuncio') {
             return (
@@ -934,13 +957,15 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
           }
 
           return (
-            <ItemCard 
-              key={itemObj.content.id} 
-              item={itemObj.content} 
-              tema={tema} 
-              toast={toast} 
-              onEditImage={setItemPost} 
-            />
+            <div key={itemObj.content.id}>
+              {renderContentCard({
+                item: itemObj.content,
+                tema,
+                toast,
+                onEditImage: setItemPost,
+                ItemCard,
+              })}
+            </div>
           );
         })}
       </div>
@@ -991,7 +1016,7 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="max-w-5xl w-full mx-auto px-4 py-8 flex-1"
+      className="max-w-7xl w-full mx-auto px-4 py-8 flex-1"
     >
       <MudarMetaSEO
         title="Índice de Metáforas Terapêuticas"

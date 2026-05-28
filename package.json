@@ -11,6 +11,7 @@
     "enrich-content:force": "node scripts/enrich-external-content.mjs --force",
     "build": "node scripts/enrich-external-content.mjs && node prepare-data.cjs && node scripts/generate-sitemap.mjs && vite build",
     "content:sync": "node scripts/migrate-frases-to-content.mjs && node scripts/build-content-metadata.mjs",
+    "content:build": "npm run content:sync && node prepare-data.cjs",
     "next:dev": "next dev -p 3001",
     "next:build": "next build",
     "next:start": "next start -p 3001",

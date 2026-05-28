@@ -23,6 +23,8 @@ const OUTPUT_DIR = path.join(__dirname, 'public', 'metaforas');
 const INDEX_METAFORAS_FILE = path.join(__dirname, 'public', 'metaforas-index.json');
 const INDEX_FRASES_FILE = path.join(__dirname, 'public', 'frases-index.json');
 const ENRICHED_CACHE_FILE = path.join(__dirname, 'public', 'frases-enriched-cache.json');
+const CONTENT_FRASES_FILE = path.join(__dirname, 'content', 'frases', 'frases.json');
+const CMS_FRASES_FILE = path.join(__dirname, 'public', 'frases-cms.json');
 const TAGS_FILE = path.join(__dirname, 'public', 'metaforas-tags.json');
 const AUTORES_FILE = path.join(__dirname, 'public', 'metaforas-autores.json');
 
@@ -57,18 +59,67 @@ function sanitizeId(id) {
     return raw.toLowerCase().replace(/[^a-z0-9_\-]/g, '').substring(0, 50);
 }
 
+function extractAnoOuData(f) {
+    for (const k of ['ano_ou_data', 'a frase foi dita em', 'a_frase_foi_dita_em']) {
+        const v = f[k];
+        if (v != null && String(v).trim()) return String(v).trim();
+    }
+    return null;
+}
+
+function slugifyText(text) {
+    return sanitizeContentText(text)
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)+/g, '')
+        .slice(0, 80);
+}
+
 function normalizeFraseIndex(f) {
     if (!f || typeof f !== 'object') return null;
-    const texto = sanitizeContentText(f.texto ?? f.text ?? f.quote ?? f.content);
+    const texto = sanitizeContentText(f.frase_original ?? f.texto ?? f.text ?? f.quote ?? f.content);
     if (!texto) return null;
-    const tags = safeTags(f.tags);
+    const tags = safeTags(f.palavras_chave ?? f.tags);
+    const slug = sanitizeContentText(f.slug) || slugifyText(texto.slice(0, 80)) || sanitizeId(f.id);
     return {
-        id: sanitizeId(f.id || `f_${texto.slice(0, 24)}`),
+        id: sanitizeId(f.id || `f_${slug}`),
+        slug,
         tipo: 'frase',
         texto,
-        autor: safeText(f.autor ?? f.author) || 'Anônimo',
+        autor: safeText(f.autor_original ?? f.autor ?? f.author) || 'Anônimo',
         tags: tags.length ? tags : ['Inspiracional', 'Reflexao'],
     };
+}
+
+function buildCmsFromContent() {
+    if (!fs.existsSync(CONTENT_FRASES_FILE)) return null;
+    const raw = JSON.parse(fs.readFileSync(CONTENT_FRASES_FILE, 'utf8'));
+    const today = new Date().toISOString().slice(0, 10);
+    return raw.map((f) => {
+        const frase_original = sanitizeContentText(f.frase_original ?? f.texto);
+        const autor_original = safeText(f.autor_original ?? f.autor)?.split('\n')[0]?.trim() || 'Anônimo';
+        const slug = sanitizeContentText(f.slug) || slugifyText(frase_original);
+        return {
+            id: sanitizeId(f.id || `f_${slug}`),
+            slug,
+            frase_original,
+            autor_original,
+            autor_slug: slugifyText(autor_original),
+            categoria: slugifyText(f.categoria || 'inspiracional'),
+            contextos: (f.contextos || []).map((c) => slugifyText(String(c))).filter(Boolean),
+            ano_ou_data: extractAnoOuData(f),
+            explicacao: sanitizeContentText(f.explicacao) || '',
+            fontes: f.fontes ? String(f.fontes).trim() : null,
+            observacao: f.observacao ? String(f.observacao).trim() : null,
+            palavras_chave: safeTags(f.palavras_chave ?? f.tags),
+            autor_tipo: f.autor_tipo ? String(f.autor_tipo).trim() : null,
+            nacionalidade: f.nacionalidade ? String(f.nacionalidade).trim() : null,
+            nascimento_falecimento: f.nascimento_falecimento ? String(f.nascimento_falecimento).trim() : null,
+            informacoes: f.informacoes || { ultima_atualizacao: today, confiabilidade: null },
+        };
+    }).filter((f) => f.frase_original);
 }
 
 async function run() {
@@ -113,7 +164,20 @@ async function run() {
     fs.writeFileSync(TAGS_FILE, JSON.stringify(Object.fromEntries(Object.entries(tagMap).sort((a,b) => b[1] - a[1]))));
     fs.writeFileSync(AUTORES_FILE, JSON.stringify(Object.entries(authorMap).map(([autor, quantidade]) => ({ autor, quantidade })).sort((a, b) => b.quantidade - a.quantidade)));
     
-    if (fs.existsSync(INPUT_FRASES)) {
+    const cmsFromContent = buildCmsFromContent();
+    if (cmsFromContent?.length) {
+        fs.writeFileSync(CMS_FRASES_FILE, JSON.stringify(cmsFromContent));
+        const indexFromCms = cmsFromContent.map((f) => ({
+            id: f.id,
+            slug: f.slug,
+            tipo: 'frase',
+            texto: f.frase_original,
+            autor: f.autor_original,
+            tags: f.palavras_chave?.length ? f.palavras_chave : [f.categoria, ...f.contextos],
+        }));
+        fs.writeFileSync(INDEX_FRASES_FILE, JSON.stringify(indexFromCms));
+        console.log(`✅ frases-cms.json + frases-index.json — ${cmsFromContent.length} frases (content/).`);
+    } else if (fs.existsSync(INPUT_FRASES)) {
         const frases = JSON.parse(fs.readFileSync(INPUT_FRASES, 'utf8'));
         let enriched = [];
         if (fs.existsSync(ENRICHED_CACHE_FILE)) {

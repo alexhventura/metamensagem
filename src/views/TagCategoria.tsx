@@ -21,6 +21,7 @@ import {
   getSemanticRelatedTags,
   relatedTagLabels,
 } from '../lib/tagSemantics';
+import { GRID_CONTENT, renderContentCard } from '../lib/contentGrid';
 
 interface ItemConteudo {
   id: string;
@@ -31,6 +32,7 @@ interface ItemConteudo {
   titulo?: string;
   resumo?: string;
   imagem?: string;
+  slug?: string;
 }
 
 type TagCategoriaProps = {
@@ -235,7 +237,7 @@ export default function TagCategoriaView({
         </nav>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+      <div className={GRID_CONTENT}>
         <AnimatePresence mode="popLayout">
           {itensGrid.length === 0 ? (
             <div
@@ -269,13 +271,15 @@ export default function TagCategoriaView({
               }
               const item = itemObj.content!;
               return (
-                <ItemCard
-                  key={item.id}
-                  item={item}
-                  tema={tema}
-                  toast={toast}
-                  onEditImage={ModalGeradorPost ? setItemPost : undefined}
-                />
+                <div key={item.id}>
+                  {renderContentCard({
+                    item,
+                    tema,
+                    toast,
+                    onEditImage: ModalGeradorPost ? setItemPost : undefined,
+                    ItemCard,
+                  })}
+                </div>
               );
             })
           )}

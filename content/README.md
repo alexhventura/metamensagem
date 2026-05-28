@@ -22,10 +22,22 @@ content/
   "autor_original": "Charles Chaplin",
   "categoria": "motivacao",
   "contextos": ["superacao", "dias-dificeis"],
+  "ano_ou_data": "1950",
   "explicacao": "Mostra que resultados vêm da persistência contínua.",
-  "palavras_chave": ["persistencia", "foco", "sucesso"]
+  "fontes": "Coletâneas motivacionais",
+  "observacao": null,
+  "palavras_chave": ["persistencia", "foco", "sucesso"],
+  "autor_tipo": "ator-diretor",
+  "nacionalidade": "britanico",
+  "nascimento_falecimento": "1889-1977",
+  "informacoes": {
+    "ultima_atualizacao": "2026-05-28",
+    "confiabilidade": "alta"
+  }
 }
 ```
+
+Campo legado `"a frase foi dita em"` é migrado automaticamente para `ano_ou_data`.
 
 ## Sincronizar do acervo legado
 

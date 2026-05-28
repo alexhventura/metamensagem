@@ -1,6 +1,5 @@
 /**
- * Migra public/frases.json → content/frases/frases.json (formato CMS).
- * Uso: node scripts/migrate-frases-to-content.mjs
+ * Migra public/frases.json → content/frases/frases.json (formato CMS completo).
  */
 import fs from 'fs';
 import path from 'path';
@@ -25,20 +24,35 @@ function tagToSlug(tag) {
   return slugify(tag);
 }
 
+function extractAnoOuData(item) {
+  for (const k of ['ano_ou_data', 'a frase foi dita em', 'a_frase_foi_dita_em']) {
+    const v = item[k];
+    if (v != null && String(v).trim()) return String(v).trim();
+  }
+  return null;
+}
+
+function optStr(v) {
+  if (v == null) return null;
+  const s = String(v).trim();
+  return s || null;
+}
+
 const legacy = JSON.parse(fs.readFileSync(INPUT, 'utf8'));
 const seenSlugs = new Set();
 const frases = [];
+const today = new Date().toISOString().slice(0, 10);
 
 for (const item of legacy) {
-  const frase_original = (item.texto || '').trim();
+  const frase_original = (item.texto || item.frase_original || '').trim();
   if (!frase_original) continue;
 
-  const autor_original = (item.autor || 'Anônimo').split('\n')[0].trim();
-  const tags = (item.tags || []).map((t) => String(t).trim()).filter(Boolean);
-  const categoria = tagToSlug(tags[0] || 'inspiracional');
-  const contextos = [...new Set(tags.slice(1).map(tagToSlug).filter(Boolean))].slice(0, 6);
+  const autor_original = (item.autor_original || item.autor || 'Anônimo').split('\n')[0].trim();
+  const tags = (item.tags || item.palavras_chave || []).map((t) => String(t).trim()).filter(Boolean);
+  const categoria = tagToSlug(item.categoria || tags[0] || 'inspiracional');
+  const contextos = [...new Set((item.contextos || tags.slice(1)).map(tagToSlug).filter(Boolean))].slice(0, 6);
 
-  let baseSlug = slugify(frase_original.slice(0, 60)) || item.id;
+  let baseSlug = slugify(item.slug || frase_original.slice(0, 60)) || item.id;
   let slug = baseSlug;
   let n = 2;
   while (seenSlugs.has(slug)) {
@@ -53,8 +67,18 @@ for (const item of legacy) {
     autor_original,
     categoria,
     contextos: contextos.length ? contextos : ['reflexao'],
-    explicacao: '',
+    ano_ou_data: extractAnoOuData(item),
+    explicacao: optStr(item.explicacao) || '',
+    fontes: optStr(item.fontes),
+    observacao: optStr(item.observacao),
     palavras_chave: tags.map(tagToSlug).slice(0, 8),
+    autor_tipo: optStr(item.autor_tipo),
+    nacionalidade: optStr(item.nacionalidade),
+    nascimento_falecimento: optStr(item.nascimento_falecimento),
+    informacoes: item.informacoes || {
+      ultima_atualizacao: today,
+      confiabilidade: null,
+    },
   });
 }
 

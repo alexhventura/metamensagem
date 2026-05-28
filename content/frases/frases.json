@@ -11,14 +11,24 @@
       "reflexao",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "persistencia",
       "reflexao",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ymvdwilnx",
@@ -34,7 +44,10 @@
       "sucesso",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "determinacao",
       "foco",
@@ -43,7 +56,14 @@
       "persistencia",
       "sucesso",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_pgwl3n3wa",
@@ -55,12 +75,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_wvlkmtk9q",
@@ -74,14 +104,24 @@
       "persistencia",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao",
       "persistencia",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_21ff72w3q",
@@ -92,11 +132,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_maohlfxe4",
@@ -109,13 +159,23 @@
       "motivacao",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
       "motivacao",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_g3nbv4xna",
@@ -128,13 +188,23 @@
       "motivacao",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
       "motivacao",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_t8ay7knge",
@@ -145,11 +215,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_9e2tktgsr",
@@ -160,11 +240,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ym73apwxs",
@@ -176,12 +266,22 @@
       "motivacao",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_z8mm1u6g2",
@@ -192,11 +292,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_n6007o0yq",
@@ -208,12 +318,22 @@
       "motivacao",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_b8c6ui217",
@@ -225,12 +345,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_kp9egokt4",
@@ -241,11 +371,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_6szevu8pp",
@@ -257,12 +397,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "determinacao",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7iqb1vked",
@@ -275,13 +425,23 @@
       "motivacao",
       "sonhos"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "foco",
       "inspiracional",
       "motivacao",
       "sonhos"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7b07op903",
@@ -294,13 +454,23 @@
       "persistencia",
       "sonhos"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "persistencia",
       "sonhos"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_et0utn02y",
@@ -311,11 +481,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_69a5ldayr",
@@ -329,14 +509,24 @@
       "motivacao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "fe",
       "inspiracional",
       "motivacao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_w6rwxvcak",
@@ -348,12 +538,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ikp6ilok3",
@@ -364,11 +564,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_1m6y59qoc",
@@ -379,11 +589,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_aft2hdgs5",
@@ -395,12 +615,22 @@
       "motivacao",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_6pcc2azyx",
@@ -411,11 +641,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_xd497raze",
@@ -426,11 +666,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_5r5pe4diq",
@@ -442,12 +692,22 @@
       "motivacao",
       "persistencia"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "persistencia"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_b9txby5fw",
@@ -459,12 +719,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "bom-dia",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_wilqtvv76",
@@ -478,14 +748,24 @@
       "sabedoria",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
       "motivacao",
       "sabedoria",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_cl1y10ki7",
@@ -496,11 +776,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_pk1j27tgi",
@@ -512,12 +802,22 @@
       "motivacao",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_smicct29x",
@@ -528,11 +828,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_u92j21ztb",
@@ -546,14 +856,24 @@
       "persistencia",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
       "motivacao",
       "persistencia",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_lj2p1x2gx",
@@ -567,14 +887,24 @@
       "reflexao",
       "sonhos"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao",
       "reflexao",
       "sonhos"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_rzgp58nin",
@@ -587,13 +917,23 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "determinacao",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_1yhrwp6b9",
@@ -604,11 +944,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_v3wumk11t",
@@ -619,11 +969,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_cdrxid4py",
@@ -635,12 +995,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_cq7vkdtem",
@@ -651,11 +1021,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_di7mzjazc",
@@ -666,11 +1046,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_sgerzxh2n",
@@ -683,13 +1073,23 @@
       "motivacao",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_lgsjuq1h4",
@@ -703,14 +1103,24 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "bom-dia",
       "determinacao",
       "foco",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_37a7kecxa",
@@ -723,13 +1133,23 @@
       "motivacao",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
       "motivacao",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_8rgn9acrn",
@@ -740,11 +1160,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_fynb1q9j7",
@@ -756,12 +1186,22 @@
       "motivacao",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_1q7m6t8p6",
@@ -774,13 +1214,23 @@
       "motivacao",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "determinacao",
       "inspiracional",
       "motivacao",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7el0j3cl9",
@@ -792,12 +1242,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "determinacao",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7vqt5pc4k",
@@ -811,14 +1271,24 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "determinacao",
       "fe",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_krbe3j2lb",
@@ -832,14 +1302,24 @@
       "motivacao",
       "persistencia"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "determinacao",
       "foco",
       "inspiracional",
       "motivacao",
       "persistencia"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_txbg1n9jg",
@@ -851,12 +1331,22 @@
       "motivacao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_awjnsyeij",
@@ -867,11 +1357,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7q5yjfi7v",
@@ -882,11 +1382,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_8a9e876s2",
@@ -897,11 +1407,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_fl8unzepv",
@@ -914,13 +1434,23 @@
       "motivacao",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "motivacao",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_hohzf6tqe",
@@ -934,14 +1464,24 @@
       "sabedoria",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "motivacao",
       "sabedoria",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_e2odx1ti9",
@@ -953,12 +1493,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_fn1visdgh",
@@ -971,13 +1521,23 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "felicidade",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_haplq032s",
@@ -992,7 +1552,10 @@
       "sucesso",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "foco",
       "inspiracional",
@@ -1000,7 +1563,14 @@
       "sabedoria",
       "sucesso",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_59db8ugm9",
@@ -1013,13 +1583,23 @@
       "motivacao",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "foco",
       "inspiracional",
       "motivacao",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_dxys6p88k",
@@ -1033,14 +1613,24 @@
       "sabedoria",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao",
       "sabedoria",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_x6wukjekf",
@@ -1054,14 +1644,24 @@
       "motivacao",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "fe",
       "inspiracional",
       "motivacao",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_76mes6oi3",
@@ -1073,12 +1673,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_wga0jtlhn",
@@ -1091,13 +1701,23 @@
       "motivacao",
       "persistencia"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "determinacao",
       "inspiracional",
       "motivacao",
       "persistencia"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ffrtxlcnx",
@@ -1111,14 +1731,24 @@
       "motivacao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "aprendizado",
       "foco",
       "inspiracional",
       "motivacao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_r4lhz8zo8",
@@ -1132,14 +1762,24 @@
       "persistencia",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "determinacao",
       "inspiracional",
       "motivacao",
       "persistencia",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_uxxc75311",
@@ -1151,12 +1791,22 @@
       "motivacao",
       "persistencia"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "persistencia"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_vf8g06dom",
@@ -1167,11 +1817,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_0dz1fctth",
@@ -1183,12 +1843,22 @@
       "motivacao",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_qseiknajv",
@@ -1200,12 +1870,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_o3f45fm69",
@@ -1218,13 +1898,23 @@
       "motivacao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "motivacao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7elyxrnto",
@@ -1235,11 +1925,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_2654qi0df",
@@ -1252,13 +1952,23 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "felicidade",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ecbw0an5o",
@@ -1270,12 +1980,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_4urippy4t",
@@ -1287,12 +2007,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_4v4rh47at",
@@ -1303,11 +2033,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_8ao0te5gr",
@@ -1318,11 +2058,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_85ndv27ku",
@@ -1336,14 +2086,24 @@
       "motivacao",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "determinacao",
       "foco",
       "inspiracional",
       "motivacao",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_qra100sj1",
@@ -1356,13 +2116,23 @@
       "motivacao",
       "persistencia"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "motivacao",
       "persistencia"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_sd4vvtma8",
@@ -1374,12 +2144,22 @@
       "motivacao",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_lj815h9sc",
@@ -1395,7 +2175,10 @@
       "sonhos",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "determinacao",
@@ -1404,7 +2187,14 @@
       "persistencia",
       "sonhos",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_sed1qhy3y",
@@ -1418,14 +2208,24 @@
       "persistencia",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "determinacao",
       "inspiracional",
       "motivacao",
       "persistencia",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_xsj2yms24",
@@ -1438,13 +2238,23 @@
       "motivacao",
       "persistencia"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "determinacao",
       "inspiracional",
       "motivacao",
       "persistencia"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_fvqedjf8c",
@@ -1457,13 +2267,23 @@
       "motivacao",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "foco",
       "inspiracional",
       "motivacao",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_sy6en3ljh",
@@ -1474,11 +2294,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_8yq4n0qmb",
@@ -1489,11 +2319,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_tdnxg1d5i",
@@ -1506,13 +2346,23 @@
       "motivacao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "motivacao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_rhvfre44t",
@@ -1524,12 +2374,22 @@
       "motivacao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_mxsz8nl7d",
@@ -1540,11 +2400,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_uvzzsda23",
@@ -1556,12 +2426,22 @@
       "motivacao",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_bd4k9htnd",
@@ -1572,11 +2452,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_0glirn6ya",
@@ -1589,13 +2479,23 @@
       "motivacao",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_oay5c47li",
@@ -1608,13 +2508,23 @@
       "motivacao",
       "sonhos"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "foco",
       "inspiracional",
       "motivacao",
       "sonhos"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_6kkw47rfi",
@@ -1626,12 +2536,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7j7k6g55t",
@@ -1644,13 +2564,23 @@
       "motivacao",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_e1he68y5d",
@@ -1663,13 +2593,23 @@
       "persistencia",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "persistencia",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_82edkl12e",
@@ -1681,12 +2621,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "bom-dia",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_37bgmgcv3",
@@ -1697,11 +2647,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_gyhu1o8hy",
@@ -1714,13 +2674,23 @@
       "motivacao",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "determinacao",
       "inspiracional",
       "motivacao",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_3ygy55cjn",
@@ -1732,12 +2702,22 @@
       "motivacao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_oh0bcqn2t",
@@ -1750,13 +2730,23 @@
       "motivacao",
       "persistencia"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "motivacao",
       "persistencia"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_y4md5spdd",
@@ -1768,12 +2758,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_yoc9v9cwc",
@@ -1785,12 +2785,22 @@
       "motivacao",
       "sonhos"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "sonhos"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_fx2xzbv9i",
@@ -1803,13 +2813,23 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "fe",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_oew44ubmm",
@@ -1823,14 +2843,24 @@
       "motivacao",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "fe",
       "inspiracional",
       "motivacao",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_mi4ragmee",
@@ -1843,13 +2873,23 @@
       "motivacao",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_qinrzqhwx",
@@ -1861,12 +2901,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_etmw4fb3l",
@@ -1878,12 +2928,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_8hp9u391i",
@@ -1895,12 +2955,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ctwpso0gp",
@@ -1911,11 +2981,21 @@
     "contextos": [
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_73ao8nx1l",
@@ -1927,12 +3007,22 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "determinacao",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_duibajt0d",
@@ -1946,14 +3036,24 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "aprendizado",
       "coragem",
       "determinacao",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_1d8z24mnn",
@@ -1968,7 +3068,10 @@
       "inspiracional",
       "motivacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "determinacao",
@@ -1976,7 +3079,14 @@
       "felicidade",
       "inspiracional",
       "motivacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_xhcee2epl",
@@ -1989,13 +3099,23 @@
       "motivacao",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_i7zwyxh3j",
@@ -2007,12 +3127,22 @@
       "reflexao",
       "sonhos"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao",
       "sonhos"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_2rq0gpsty",
@@ -2023,11 +3153,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_hr9lma4t2",
@@ -2038,11 +3178,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_sro7zy1o5",
@@ -2053,11 +3203,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_r3nffbx0e",
@@ -2068,11 +3228,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_mqv6amze8",
@@ -2084,12 +3254,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_8uhi0j9wa",
@@ -2100,11 +3280,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7tg1btwcb",
@@ -2115,11 +3305,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_643ickqyc",
@@ -2131,12 +3331,22 @@
       "reflexao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_qtohhlgdw",
@@ -2149,13 +3359,23 @@
       "reflexao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "inspiracional",
       "reflexao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_4r4ww9aqx",
@@ -2167,12 +3387,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_cl8l9lvs5",
@@ -2183,11 +3413,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_kxc6czg96",
@@ -2199,12 +3439,22 @@
       "reflexao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7scbdnsgh",
@@ -2215,11 +3465,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_af3fgx4ie",
@@ -2230,11 +3490,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_1ewopg71t",
@@ -2246,12 +3516,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_oce4nhra0",
@@ -2262,11 +3542,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_uzob5hfwj",
@@ -2277,11 +3567,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_98rp217p8",
@@ -2292,11 +3592,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_if9mjh04e",
@@ -2307,11 +3617,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_qpqupl4u7",
@@ -2323,12 +3643,22 @@
       "reflexao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_5wl0k2rrt",
@@ -2339,11 +3669,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_h5f6aduc5",
@@ -2355,12 +3695,22 @@
       "reflexao",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_bedi9a7ws",
@@ -2371,11 +3721,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_kz7y2qdp6",
@@ -2386,11 +3746,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_mb5vvlcry",
@@ -2402,12 +3772,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_pezb7ayib",
@@ -2419,12 +3799,22 @@
       "reflexao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_zb5og846f",
@@ -2435,11 +3825,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_979gtt5ce",
@@ -2452,13 +3852,23 @@
       "reflexao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "inspiracional",
       "reflexao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ua4qymubo",
@@ -2470,12 +3880,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_u9vl5m2tf",
@@ -2487,12 +3907,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_th6jq1hgy",
@@ -2503,11 +3933,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_bqa6qa2g7",
@@ -2520,13 +3960,23 @@
       "reflexao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "inspiracional",
       "reflexao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ishb1bqbq",
@@ -2538,12 +3988,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_31ipua1aa",
@@ -2554,11 +4014,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_t4ucsqjsd",
@@ -2569,11 +4039,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_1pkgria8h",
@@ -2584,11 +4064,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_l79wd8jj0",
@@ -2599,11 +4089,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_lgn3sljc7",
@@ -2614,11 +4114,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_hmkpo00ep",
@@ -2629,11 +4139,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_vlbhnm3h3",
@@ -2644,11 +4164,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_tzb3b8lgy",
@@ -2659,11 +4189,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_9dpe4k0re",
@@ -2674,11 +4214,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_14op72wxu",
@@ -2689,11 +4239,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_8jcvkd4em",
@@ -2704,11 +4264,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_3bak02a8t",
@@ -2722,14 +4292,24 @@
       "reflexao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "inspiracional",
       "reflexao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_gu3nttoe7",
@@ -2740,11 +4320,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_bax68vckz",
@@ -2755,11 +4345,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_nttxttjji",
@@ -2771,12 +4371,22 @@
       "reflexao",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_hwwr6rrsi",
@@ -2787,11 +4397,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_5v426tbjy",
@@ -2802,11 +4422,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_sqsux42is",
@@ -2817,11 +4447,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_bq0elwkgh",
@@ -2833,12 +4473,22 @@
       "reflexao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_5a80edr6b",
@@ -2849,11 +4499,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_i5slgolxw",
@@ -2864,11 +4524,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_x0yves2tv",
@@ -2879,11 +4549,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_yida4oa01",
@@ -2894,11 +4574,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_9pc5pha6d",
@@ -2911,13 +4601,23 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "felicidade",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_zvy4xti49",
@@ -2928,11 +4628,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_pr0s2b67w",
@@ -2943,11 +4653,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_exi9il56g",
@@ -2959,12 +4679,22 @@
       "reflexao",
       "sonhos"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao",
       "sonhos"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_68zsvan4s",
@@ -2975,11 +4705,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_gefpwbm40",
@@ -2991,12 +4731,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_9y86gcv0d",
@@ -3007,11 +4757,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_x4qv1hg7o",
@@ -3022,11 +4782,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_8p5p9jypi",
@@ -3038,12 +4808,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_w0wegvpql",
@@ -3054,11 +4834,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_jprncootx",
@@ -3069,11 +4859,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_su4adi7qy",
@@ -3086,13 +4886,23 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "bom-dia",
       "felicidade",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_5d99yy4kv",
@@ -3103,11 +4913,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_cex4ez0uk",
@@ -3118,11 +4938,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_uyq6cs8yv",
@@ -3134,12 +4964,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_lp4p0v9w4",
@@ -3150,11 +4990,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_j4cv54xh4",
@@ -3165,11 +5015,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_96v23qv30",
@@ -3181,12 +5041,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_31dn8wqcv",
@@ -3198,12 +5068,22 @@
       "reflexao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_q5biqme35",
@@ -3214,11 +5094,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_x6s3p0udw",
@@ -3229,11 +5119,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_cao9o602r",
@@ -3244,11 +5144,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_8v8hjf667",
@@ -3259,11 +5169,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_bxzle5rfe",
@@ -3274,11 +5194,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_mfzazdjqa",
@@ -3289,11 +5219,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_945ido5wl",
@@ -3305,12 +5245,22 @@
       "reflexao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_yrepg8hxx",
@@ -3321,11 +5271,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_9oc5kc7xl",
@@ -3338,13 +5298,23 @@
       "reflexao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "reflexao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_s9ywhoayo",
@@ -3356,12 +5326,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_cxmysxd4g",
@@ -3372,11 +5352,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_prmjkezhx",
@@ -3387,11 +5377,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ts84r2y96",
@@ -3402,11 +5402,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_rky6civbk",
@@ -3419,13 +5429,23 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "felicidade",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_wvqg3hxc7",
@@ -3436,11 +5456,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_hm71a8qvi",
@@ -3452,12 +5482,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_5y5s6z5wd",
@@ -3468,11 +5508,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_2p38rtaeu",
@@ -3484,12 +5534,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_mnk8ulcz2",
@@ -3500,11 +5560,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_itgpb8ckr",
@@ -3515,11 +5585,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_a11mmlqsv",
@@ -3530,11 +5610,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_a455s6npi",
@@ -3546,12 +5636,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_fop64gb8m",
@@ -3562,11 +5662,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_vwr0pwjm5",
@@ -3577,11 +5687,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_u839d48x7",
@@ -3593,12 +5713,22 @@
       "reflexao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_yb9xzkwpv",
@@ -3609,11 +5739,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_e8iz14q4s",
@@ -3625,12 +5765,22 @@
       "inspiracional",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_tzzqpjolr",
@@ -3641,11 +5791,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_3odqfsrwb",
@@ -3656,11 +5816,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_pukr572hh",
@@ -3671,11 +5841,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_al02i21qg",
@@ -3687,12 +5867,22 @@
       "reflexao",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_syx1pa7zf",
@@ -3703,11 +5893,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_gwb2s12zm",
@@ -3718,11 +5918,21 @@
     "contextos": [
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_yrqcxyxq6",
@@ -3734,12 +5944,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_6rnmb3sms",
@@ -3752,13 +5972,23 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "felicidade",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_yq3qcmk9m",
@@ -3769,11 +5999,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7o3sdmma0",
@@ -3784,11 +6024,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_pacd5y9uf",
@@ -3800,12 +6050,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_blx2uou01",
@@ -3819,14 +6079,24 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "coragem",
       "determinacao",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_nh38y54wc",
@@ -3839,13 +6109,23 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "fe",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_taign0ymc",
@@ -3856,11 +6136,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_x91moc55k",
@@ -3871,11 +6161,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_5543068vm",
@@ -3886,11 +6186,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_q8dx4jkp3",
@@ -3903,13 +6213,23 @@
       "otimismo",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "otimismo",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_n51iiz0sw",
@@ -3920,11 +6240,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_qc8plnci3",
@@ -3936,12 +6266,22 @@
       "otimismo",
       "sonhos"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "sonhos"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_hoq3zuvav",
@@ -3953,12 +6293,22 @@
       "otimismo",
       "sonhos"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "sonhos"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_jy2ja6j7v",
@@ -3972,14 +6322,24 @@
       "otimismo",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "fe",
       "inspiracional",
       "otimismo",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_wthp1fcj4",
@@ -3990,11 +6350,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_fnhdgudvv",
@@ -4007,13 +6377,23 @@
       "otimismo",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "otimismo",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_cn6jq6cal",
@@ -4025,12 +6405,22 @@
       "otimismo",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_n0i1k5xze",
@@ -4041,11 +6431,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_rwao97exe",
@@ -4056,11 +6456,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_038ht4vf4",
@@ -4071,11 +6481,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_6js78dm9v",
@@ -4086,11 +6506,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_mkp21vv16",
@@ -4103,13 +6533,23 @@
       "otimismo",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
       "otimismo",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_oh1j2iko9",
@@ -4121,12 +6561,22 @@
       "otimismo",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_3c61h08js",
@@ -4137,11 +6587,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_n4fvfbw89",
@@ -4152,11 +6612,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_il3iol1qa",
@@ -4168,12 +6638,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_m0t3tggfh",
@@ -4184,11 +6664,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_byq69ljud",
@@ -4199,11 +6689,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_9hv27v3dt",
@@ -4214,11 +6714,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_snd8co82w",
@@ -4229,11 +6739,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_blq1ywj9b",
@@ -4245,12 +6765,22 @@
       "otimismo",
       "sonhos"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "sonhos"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_k1szp9kwo",
@@ -4261,11 +6791,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ez703jrr7",
@@ -4277,12 +6817,22 @@
       "otimismo",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_r8p2c9vrl",
@@ -4293,11 +6843,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_qeljg63nb",
@@ -4309,12 +6869,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_avna9yxlh",
@@ -4326,12 +6896,22 @@
       "otimismo",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_bruxw9t16",
@@ -4343,12 +6923,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_mjb4287v7",
@@ -4359,11 +6949,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ie0tsb00x",
@@ -4374,11 +6974,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_rck4qf5tj",
@@ -4390,12 +7000,22 @@
       "otimismo",
       "superacao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "superacao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_0t6zq7wku",
@@ -4408,13 +7028,23 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "fe",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_w3cityz10",
@@ -4427,13 +7057,23 @@
       "otimismo",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
       "otimismo",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_k8u6ulo6y",
@@ -4444,11 +7084,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_oybu3091q",
@@ -4459,11 +7109,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_alqui0yne",
@@ -4474,11 +7134,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_psvk84svz",
@@ -4490,12 +7160,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_xmgckiswm",
@@ -4506,11 +7186,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_mstm7r3q9",
@@ -4521,11 +7211,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_t35xz2avd",
@@ -4536,11 +7236,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_2ytmuau96",
@@ -4551,11 +7261,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_u90g1ta6j",
@@ -4566,11 +7286,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_kpnf02k3n",
@@ -4581,11 +7311,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_qng0ucxi4",
@@ -4596,11 +7336,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_rriiswgwf",
@@ -4611,11 +7361,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_i63faytv7",
@@ -4626,11 +7386,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_51kwi363i",
@@ -4641,11 +7411,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_gvlci90o0",
@@ -4657,12 +7437,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_lzj4rcry1",
@@ -4673,11 +7463,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_j8ydea1mx",
@@ -4689,12 +7489,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_0ugpqtrsd",
@@ -4707,13 +7517,23 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "felicidade",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_2dxyqzeyd",
@@ -4725,12 +7545,22 @@
       "otimismo",
       "sonhos"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "sonhos"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_77muqtlsg",
@@ -4741,11 +7571,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_9z7v5q17t",
@@ -4757,12 +7597,22 @@
       "otimismo",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_f44ke11y4",
@@ -4774,12 +7624,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_u8mwhi10w",
@@ -4791,12 +7651,22 @@
       "otimismo",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_k7l165m1o",
@@ -4807,11 +7677,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_498rnm21w",
@@ -4823,12 +7703,22 @@
       "otimismo",
       "sucesso"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "sucesso"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_vfmv7d530",
@@ -4839,11 +7729,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_y1akhizke",
@@ -4856,13 +7756,23 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "felicidade",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_oqb7htsoc",
@@ -4874,12 +7784,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_t0rlhadr7",
@@ -4890,11 +7810,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ky46aymmg",
@@ -4906,12 +7836,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_57g83nvo0",
@@ -4924,13 +7864,23 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "coragem",
       "foco",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_53n0jpwbg",
@@ -4941,11 +7891,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_rmsa9e8tf",
@@ -4957,12 +7917,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_9n882ycyx",
@@ -4973,11 +7943,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_otuqlxw8a",
@@ -4988,11 +7968,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_5wvhc68x4",
@@ -5004,12 +7994,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7tozampkc",
@@ -5021,12 +8021,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_z2an41gt8",
@@ -5039,13 +8049,23 @@
       "otimismo",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "inspiracional",
       "otimismo",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_k4c91g7hk",
@@ -5057,12 +8077,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "foco",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_wp0dskdnp",
@@ -5073,11 +8103,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_4r4r04p43",
@@ -5088,11 +8128,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_17cy4ppl6",
@@ -5103,11 +8153,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_4cfwiohvx",
@@ -5118,11 +8178,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_841pqc7fn",
@@ -5134,12 +8204,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "bom-dia",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7uoat1u6s",
@@ -5150,11 +8230,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_q0nd9ps7d",
@@ -5165,11 +8255,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_a0lx2in34",
@@ -5180,11 +8280,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_1tv0gm8rz",
@@ -5195,11 +8305,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_xd0hhhvc4",
@@ -5210,11 +8330,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ixvcl8qat",
@@ -5226,12 +8356,22 @@
       "otimismo",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_kvf86cd4p",
@@ -5242,11 +8382,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ypwee4ttu",
@@ -5258,12 +8408,22 @@
       "otimismo",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_44glpjxv1",
@@ -5276,13 +8436,23 @@
       "otimismo",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "otimismo",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_3ykedxsfh",
@@ -5294,12 +8464,22 @@
       "otimismo",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_doo2mfc68",
@@ -5313,14 +8493,24 @@
       "otimismo",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "fe",
       "felicidade",
       "inspiracional",
       "otimismo",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_dkkfdjo4f",
@@ -5331,11 +8521,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_6xel0lu5s",
@@ -5348,13 +8548,23 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "felicidade",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_2w8zaofxx",
@@ -5367,13 +8577,23 @@
       "otimismo",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "inspiracional",
       "otimismo",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_p67x5yct0",
@@ -5385,12 +8605,22 @@
       "otimismo",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo",
       "reflexao"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_ulsy1brft",
@@ -5403,13 +8633,23 @@
       "otimismo",
       "sonhos"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "inspiracional",
       "otimismo",
       "sonhos"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_y7lr6vu1j",
@@ -5420,11 +8660,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_9oxzqwzxp",
@@ -5436,12 +8686,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "foco",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7lho9qyl5",
@@ -5452,11 +8712,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_lrefi10e1",
@@ -5467,11 +8737,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7s7mpre73",
@@ -5483,12 +8763,22 @@
       "inspiracional",
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_96cwh8y8f",
@@ -5499,11 +8789,21 @@
     "contextos": [
       "otimismo"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "inspiracional",
       "otimismo"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_iv67cpo7y",
@@ -5516,13 +8816,23 @@
       "otimismo",
       "sabedoria"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "otimismo",
       "sabedoria"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_eulq6jnvr",
@@ -5534,12 +8844,22 @@
       "bom-dia",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_poonwovr3",
@@ -5552,13 +8872,23 @@
       "fe",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "fe",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_w6xq3igf1",
@@ -5571,13 +8901,23 @@
       "felicidade",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "felicidade",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_gz1o0mftc",
@@ -5589,12 +8929,22 @@
       "bom-dia",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_fdi7nw274",
@@ -5607,13 +8957,23 @@
       "fe",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "fe",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_dytzwcb8h",
@@ -5626,13 +8986,23 @@
       "felicidade",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "felicidade",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_7tqzvxdu5",
@@ -5644,12 +9014,22 @@
       "bom-dia",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_zix35we62",
@@ -5662,13 +9042,23 @@
       "fe",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "fe",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_m2swus46n",
@@ -5681,13 +9071,23 @@
       "felicidade",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "felicidade",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_rvcrrfrc6",
@@ -5699,12 +9099,22 @@
       "bom-dia",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_9zz8tc2h0",
@@ -5717,13 +9127,23 @@
       "fe",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "fe",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_8m5oihqbn",
@@ -5736,13 +9156,23 @@
       "felicidade",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "felicidade",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_b89yl1jdy",
@@ -5754,12 +9184,22 @@
       "bom-dia",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_4zde2203m",
@@ -5772,13 +9212,23 @@
       "fe",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "fe",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   },
   {
     "id": "f_fdgxfac7r",
@@ -5791,12 +9241,22 @@
       "felicidade",
       "inspiracional"
     ],
+    "ano_ou_data": null,
     "explicacao": "",
+    "fontes": null,
+    "observacao": null,
     "palavras_chave": [
       "amor",
       "bom-dia",
       "felicidade",
       "inspiracional"
-    ]
+    ],
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
   }
 ]

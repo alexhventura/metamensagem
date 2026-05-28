@@ -1,5 +1,10 @@
 import { slugify, slugifyAutor } from './slugify';
 
+export interface FraseInformacoes {
+  ultima_atualizacao: string | null;
+  confiabilidade: string | null;
+}
+
 export interface FraseRaw {
   id?: string;
   slug?: string;
@@ -12,6 +17,16 @@ export interface FraseRaw {
   tags?: string[];
   explicacao?: string;
   palavras_chave?: string[];
+  ano_ou_data?: string | null;
+  /** Legado — migrado para ano_ou_data */
+  'a frase foi dita em'?: string | null;
+  a_frase_foi_dita_em?: string | null;
+  fontes?: string | null;
+  observacao?: string | null;
+  autor_tipo?: string | null;
+  nacionalidade?: string | null;
+  nascimento_falecimento?: string | null;
+  informacoes?: Partial<FraseInformacoes> | null;
 }
 
 export interface Frase {
@@ -24,6 +39,13 @@ export interface Frase {
   contextos: string[];
   explicacao: string;
   palavras_chave: string[];
+  ano_ou_data: string | null;
+  fontes: string | null;
+  observacao: string | null;
+  autor_tipo: string | null;
+  nacionalidade: string | null;
+  nascimento_falecimento: string | null;
+  informacoes: FraseInformacoes;
 }
 
 function normSlug(value: string): string {
@@ -32,6 +54,33 @@ function normSlug(value: string): string {
 
 function uniqueStrings(arr: string[]): string[] {
   return [...new Set(arr.map((s) => s.trim()).filter(Boolean))];
+}
+
+function normOptionalString(value: unknown): string | null {
+  if (value == null) return null;
+  const s = String(value).trim();
+  return s || null;
+}
+
+/** Extrai ano ou data; migra campo legado. */
+export function extractAnoOuData(raw: FraseRaw): string | null {
+  const candidates = [
+    raw.ano_ou_data,
+    raw['a frase foi dita em'],
+    raw.a_frase_foi_dita_em,
+  ];
+  for (const c of candidates) {
+    const v = normOptionalString(c);
+    if (v) return v;
+  }
+  return null;
+}
+
+function normalizeInformacoes(raw?: Partial<FraseInformacoes> | null): FraseInformacoes {
+  return {
+    ultima_atualizacao: normOptionalString(raw?.ultima_atualizacao),
+    confiabilidade: normOptionalString(raw?.confiabilidade),
+  };
 }
 
 export function normalizeFrase(raw: FraseRaw, usedSlugs: Set<string>): Frase | null {
@@ -75,6 +124,13 @@ export function normalizeFrase(raw: FraseRaw, usedSlugs: Set<string>): Frase | n
     contextos: ctxFinal,
     explicacao: (raw.explicacao || '').trim(),
     palavras_chave: tags.length ? tags : [categoria, ...ctxFinal].slice(0, 8),
+    ano_ou_data: extractAnoOuData(raw),
+    fontes: normOptionalString(raw.fontes),
+    observacao: normOptionalString(raw.observacao),
+    autor_tipo: normOptionalString(raw.autor_tipo),
+    nacionalidade: normOptionalString(raw.nacionalidade),
+    nascimento_falecimento: normOptionalString(raw.nascimento_falecimento),
+    informacoes: normalizeInformacoes(raw.informacoes),
   };
 }
 

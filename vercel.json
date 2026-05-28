@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/((?!metaforas/|brand/|favicon|apple-touch-icon|web-app-manifest|site\\.webmanifest|google[0-9a-f]+\\.html|ads\\.txt|robots\\.txt|sitemap\\.xml|frases-index\\.json|metaforas-index\\.json|metaforas\\.json|frases\\.json|assets/).*)",
+      "source": "/((?!metaforas/|brand/|favicon|apple-touch-icon|web-app-manifest|site\\.webmanifest|theme-init\\.js|google[0-9a-f]+\\.html|ads\\.txt|robots\\.txt|sitemap\\.xml|frases-index\\.json|metaforas-index\\.json|metaforas\\.json|frases\\.json|assets/).*)",
       "destination": "/index.html"
     }
   ]

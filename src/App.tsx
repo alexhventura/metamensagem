@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { BrowserRouter, Routes, Route, Link, useParams, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, useParams, useLocation, useNavigate } from 'react-router-dom';
 import Fuse from 'fuse.js';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -67,6 +67,7 @@ import type { ItemConteudo } from './types/content';
 import ContentCard from './components/ContentCard';
 import CardTooltip from './components/CardTooltip';
 import { CARD_ACTION_BTN, cardNeutralActionClass } from './lib/cardTheme';
+import { useTheme } from './context/ThemeContext';
 
 async function montarBanco(metaforasRaw: unknown[], frasesRaw: unknown[]): Promise<ItemConteudo[]> {
   const metaforas = sanitizeContentBanco(metaforasRaw);
@@ -101,7 +102,7 @@ const FRASES_MOTIVACIONAIS_LOADING = [
 // --- APP PRINCIPAL ---
 export default function App() {
   const { t, i18n } = useTranslation();
-  const [tema, setTema] = useState<'light' | 'dark'>('dark');
+  const { tema, toggleTema } = useTheme();
   const [toast, setToast] = useState<{ mensagem: string; tipo: 'sucesso' | 'info' | 'erro' } | null>(null);
   const [bancoTotal, setBancoTotal] = useState<ItemConteudo[]>([]);
   const [bancoRandom, setBancoRandom] = useState<ItemConteudo[]>([]);
@@ -120,8 +121,6 @@ export default function App() {
     setToast({ mensagem, tipo });
     setTimeout(() => setToast(null), 3000);
   };
-
-  const toggleTema = () => setTema(prev => prev === 'light' ? 'dark' : 'light');
 
   useEffect(() => {
     pruneInvalidTranslationCache();
@@ -445,13 +444,14 @@ function MudarMetaSEO({
 /** Logo + Metamensagem: na home = F5; noutras rotas = recarrega indo para /. */
 function HeaderBrandButton() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleClick = () => {
     const path = location.pathname.replace(/\/$/, '') || '/';
     if (path === '/') {
       window.location.reload();
     } else {
-      window.location.href = '/';
+      navigate('/');
     }
   };
 

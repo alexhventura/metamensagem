@@ -9,7 +9,6 @@ import Contact from './views/Contact';
 import Cookies from './views/Cookies';
 import { 
   Copy, 
-  Image as ImageIcon, 
   Moon, 
   Sun, 
   Search, 
@@ -33,9 +32,8 @@ import {
   ChevronLeft
 } from 'lucide-react';
 
-import CustomModalGeradorPost from './components/ModalGeradorPost';
-import { CardTranslateMenu } from './components/CardTranslateMenu';
 import GoogleAdSense from './components/GoogleAdSense';
+import { CardTranslateMenu } from './components/CardTranslateMenu';
 import { type CardContentDisplay } from './lib/translation';
 import { sanitizeTextForTranslation } from './lib/textSanitize';
 
@@ -61,20 +59,11 @@ import { pruneInvalidTranslationCache } from './lib/translation';
 import TagCategoriaView from './views/TagCategoria';
 import FraseDetalheView from './views/FraseDetalhe';
 import { primeFrasesCms, fraseToListItem } from './lib/frasesModel';
-import { GRID_CONTENT, renderContentCard } from './lib/contentGrid';
-
-// --- TIPOS ---
-interface ItemConteudo {
-  id: string;
-  tipo: 'frase' | 'metafora';
-  texto: string;
-  autor: string;
-  tags: string[];
-  slug?: string;
-  titulo?: string;
-  resumo?: string;
-  imagem?: string;
-}
+import { GRID_CONTENT } from './lib/contentGrid';
+import { flattenFeedWithAds } from './lib/feedWithAds';
+import { normalizarParaSlug } from './lib/slug';
+import type { ItemConteudo } from './types/content';
+import ContentCard from './components/ContentCard';
 
 async function montarBanco(metaforasRaw: unknown[], frasesRaw: unknown[]): Promise<ItemConteudo[]> {
   const metaforas = sanitizeContentBanco(metaforasRaw);
@@ -105,16 +94,6 @@ const FRASES_MOTIVACIONAIS_LOADING = [
   "A metamensagem certa pode ser a chave para mudar uma atitude hoje.",
   "Eternizando palavras de impacto em um design premium..."
 ];
-
-// --- AUXILIAR DE NORMALIZAÇÃO ---
-const normalizarParaSlug = (texto: string) => {
-  return texto
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)+/g, '');
-};
 
 // --- APP PRINCIPAL ---
 export default function App() {
@@ -314,10 +293,8 @@ export default function App() {
                     toast={mostrarToast}
                     banco={bancoTotal}
                     registry={tagRegistry}
-                    ItemCard={ItemCard}
                     AdBanner={AdBanner}
                     MudarMetaSEO={MudarMetaSEO}
-                    ModalGeradorPost={CustomModalGeradorPost}
                   />
                 }
               />
@@ -377,229 +354,6 @@ function AdBanner({
         Publicidade Responsiva MM
       </p>
     </aside>
-  );
-}
-
-// ===================================================
-// ITEM CARD
-// ===================================================
-
-function ItemCard({ 
-  item, 
-  tema, 
-  onEditImage, 
-  toast 
-}: { 
-  item: ItemConteudo; 
-  tema: string; 
-  onEditImage?: (item: ItemConteudo) => void;
-  toast: (msg: string) => void;
-  key?: any;
-}) {
-  const { t } = useTranslation();
-
-  const [display, setDisplay] = useState<CardContentDisplay>(() => ({
-    texto: item.texto,
-    titulo: item.titulo,
-    resumo: item.resumo,
-    isTranslated: false,
-  }));
-  const [translating, setTranslating] = useState(false);
-
-  useEffect(() => {
-    setDisplay({
-      texto: item.texto,
-      titulo: item.titulo,
-      resumo: item.resumo,
-      isTranslated: false,
-    });
-  }, [item.id, item.texto, item.titulo, item.resumo]);
-
-  const translateSource = useMemo(
-    () => ({ texto: item.texto, titulo: item.titulo, resumo: item.resumo }),
-    [item.texto, item.titulo, item.resumo]
-  );
-  
-  const handleCopy = () => {
-    const titulo = display.titulo ?? item.titulo;
-    const texto = display.texto;
-    const textToCopy = item.tipo === 'metafora' 
-      ? `${titulo}\n\n${texto}\n— ${item.autor}`
-      : `${texto} — ${item.autor}`;
-    navigator.clipboard.writeText(textToCopy);
-    toast(t('common.copied'));
-  };
-
-  const handleShare = () => {
-    const titulo = display.titulo ?? item.titulo;
-    const text =
-      item.tipo === 'metafora'
-        ? `${titulo}\n\n${display.texto}`
-        : display.texto;
-    const url = `${window.location.origin}/?text=${encodeURIComponent(text)}`;
-    navigator.clipboard.writeText(url);
-    toast(t('common.link_copied'));
-  };
-
-  return (
-    <motion.div 
-      layout
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      className={`p-[1px] rounded-[2.5rem] bg-gradient-to-br h-full ${
-        item.tipo === 'frase' ? 'from-[#8B5CF6] to-[#3B82F6]' : 'from-[#8B5CF6] to-[#111111]'
-      }`}
-    >
-      <div className={`p-8 rounded-[2.5rem] flex flex-col justify-between transition-all group relative overflow-hidden h-full ${
-        tema === 'light' ? 'bg-white shadow-[0_10px_30px_rgb(0,0,0,0.03)] hover:shadow-2xl' : 'bg-[#0a0a0a] hover:bg-[#0d0d0d]'
-      }`}>
-        <div className="relative z-10 flex-1 flex flex-col">
-          <div className="flex items-center gap-2 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
-            <span className="text-[10px] uppercase font-black tracking-widest text-zinc-500">{item.tipo}</span>
-          </div>
-
-          {item.tipo === 'frase' ? (
-            <AnimatePresence mode="wait">
-              <motion.p
-                key={display.texto + String(display.isTranslated)}
-                initial={{ opacity: 0, y: 4 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className={`text-2xl font-bold mb-6 leading-tight tracking-tight flex-1 transition-opacity duration-200 ${
-                  translating ? 'opacity-55' : 'opacity-100'
-                } ${tema === 'light' ? 'text-black' : 'text-white'}`}
-              >
-                "{display.texto}"
-              </motion.p>
-            </AnimatePresence>
-          ) : (
-            <div className="flex flex-col flex-1">
-              {item.imagem && <img src={item.imagem} alt={item.titulo} loading="lazy" className="w-full h-40 object-cover rounded-3xl mb-5 grayscale group-hover:grayscale-0 transition-all duration-700" />}
-              <Link to={`/metafora/${item.id}/${normalizarParaSlug(item.titulo || '')}`} className={`text-xl font-black hover:text-[#A855F7] transition-colors block mb-3 leading-tight tracking-tighter ${tema === 'light' ? 'text-black' : 'text-white'}`}>
-                {display.titulo ?? item.titulo}
-              </Link>
-              <AnimatePresence mode="wait">
-                <motion.p
-                  key={(display.resumo || display.texto) + String(display.isTranslated)}
-                  initial={{ opacity: 0, y: 4 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className={`text-sm line-clamp-3 leading-relaxed mb-4 flex-1 transition-opacity duration-200 ${
-                    translating ? 'opacity-55' : 'opacity-100'
-                  } ${tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'}`}
-                >
-                  {display.resumo || display.texto}
-                </motion.p>
-              </AnimatePresence>
-              
-              <div className="mb-4">
-                <Link 
-                  to={`/metafora/${item.id}/${normalizarParaSlug(item.titulo || '')}`}
-                  className={`inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl transition-all ${
-                    tema === 'light' ? 'bg-purple-100 text-purple-600 hover:bg-purple-200' : 'bg-purple-500/10 text-purple-400 border border-purple-500/20 hover:bg-purple-500/20'
-                  }`}
-                >
-                  <BookOpen size={14} /> {t('common.read_metaphor')}
-                </Link>
-              </div>
-            </div>
-          )}
-          
-          <div className="flex flex-wrap gap-1.5 mt-auto">
-            {item.tags?.slice(0, 3).map(tag => (
-              <Link
-                key={tag}
-                to={pathFromTag(tag)}
-                className="text-[9px] font-black px-2.5 py-1 rounded-full bg-purple-500/5 text-purple-400 border border-purple-500/10 hover:bg-purple-500/15 transition-colors"
-              >
-                #{tag.toUpperCase()}
-              </Link>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-3 mt-6 pt-6 border-t border-zinc-500/10">
-            <div className="w-1.5 h-1.5 rounded-full bg-purple-600"></div>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 to-zinc-600 text-[10px] font-black tracking-widest uppercase truncate">POR {item.autor.toUpperCase()}</span>
-          </div>
-        </div>
-
-        <div className="mt-8 flex justify-end items-end gap-2 relative z-10 min-h-[3.375rem]">
-          <Tooltip text={t('common.copy')} tema={tema}>
-            <button 
-              onClick={handleCopy} 
-              className={`p-3.5 rounded-2xl transition-all ${
-                tema === 'light' ? 'bg-zinc-100 text-zinc-500 hover:bg-zinc-200' : 'bg-zinc-900/50 text-zinc-400 hover:bg-zinc-900 border border-white/5'
-              }`}
-            >
-              <Copy size={18} />
-            </button>
-          </Tooltip>
-          
-          <Tooltip text={t('common.share')} tema={tema}>
-            <button 
-               onClick={handleShare}
-              className={`p-3.5 rounded-2xl transition-all ${
-                tema === 'light' ? 'bg-zinc-100 text-zinc-500 hover:bg-zinc-200' : 'bg-zinc-900/50 text-zinc-400 hover:bg-zinc-900 border border-white/5'
-              }`}
-            >
-              <Share2 size={18} />
-            </button>
-          </Tooltip>
-
-          <Tooltip text={t('common.translate')} tema={tema}>
-            <CardTranslateMenu
-              tema={tema}
-              contentId={item.id}
-              source={translateSource}
-              onDisplayChange={setDisplay}
-              onLoadingChange={setTranslating}
-              tooltipLabel={t('common.translate')}
-            />
-          </Tooltip>
-
-          {item.tipo === 'frase' && onEditImage && (
-            <Tooltip text={t('common.edit_image')} tema={tema}>
-              <button 
-                onClick={() => onEditImage(item)} 
-                className="p-3.5 bg-[#A855F7] hover:bg-[#9333EA] text-white rounded-2xl transition-all hover:scale-110 shadow-lg shadow-purple-500/20"
-              >
-                <ImageIcon size={18} />
-              </button>
-            </Tooltip>
-          )}
-        </div>
-
-        {/* DECORAÇÃO BACKGROUND */}
-        <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#A855F7]/5 rounded-full blur-3xl group-hover:bg-[#A855F7]/20 transition-colors pointer-events-none"></div>
-      </div>
-    </motion.div>
-  );
-}
-
-function Tooltip({ children, text, tema }: { children: React.ReactNode; text: string; tema: string }) {
-  const [isVisible, setIsVisible] = useState(false);
-
-  return (
-    <div className="relative flex flex-col items-center justify-end shrink-0 group" onMouseEnter={() => setIsVisible(true)} onMouseLeave={() => setIsVisible(false)}>
-      {children}
-      <AnimatePresence>
-        {isVisible && (
-          <motion.div
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 5 }}
-            className={`absolute bottom-full mb-2 px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest whitespace-nowrap z-[100] shadow-xl pointer-events-none ${
-              tema === 'light' ? 'bg-zinc-800 text-white' : 'bg-white text-black'
-            }`}
-          >
-            {text}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
   );
 }
 
@@ -706,23 +460,19 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
   const { t } = useTranslation();
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(10);
-  const [itemPost, setItemPost] = useState<ItemConteudo | null>(null);
-
   const resultadosFiltrados = useMemo(() => {
     if (!busca.trim()) return bancoRandom;
     return searchBancoSemantico(banco, busca);
   }, [busca, banco, bancoRandom]);
 
-  const itensHome = useMemo(() => {
-    const flattened: any[] = [];
-    resultadosFiltrados.slice(0, itensVisiveis).forEach((item, index) => {
-      flattened.push({ tipoItem: 'conteudo', content: item });
-      if (index > 0 && (index + 1) % 6 === 0) {
-        flattened.push({ tipoItem: 'anuncio', id: `ad-${index}` });
-      }
-    });
-    return flattened;
-  }, [resultadosFiltrados, itensVisiveis]);
+  const itensHome = useMemo(
+    () =>
+      flattenFeedWithAds(resultadosFiltrados.slice(0, itensVisiveis), (content) => ({
+        tipoItem: 'conteudo',
+        content,
+      })),
+    [resultadosFiltrados, itensVisiveis]
+  );
 
   return (
     <motion.div 
@@ -794,15 +544,12 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
 
             const item = itemObj.content;
             return (
-              <div key={item.id}>
-                {renderContentCard({
-                  item,
-                  tema,
-                  toast,
-                  onEditImage: setItemPost,
-                  ItemCard,
-                })}
-              </div>
+              <ContentCard
+                key={item.id}
+                item={item}
+                tema={tema}
+                toast={toast}
+              />
             );
           })}
         </AnimatePresence>
@@ -818,15 +565,6 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
       )}
 
       <SocialHub tema={tema} />
-
-      {itemPost && (
-        <CustomModalGeradorPost 
-          item={itemPost} 
-          onClose={() => setItemPost(null)} 
-          toast={toast} 
-          temaGlobal={tema} 
-        />
-      )}
     </motion.div>
   );
 }
@@ -871,8 +609,6 @@ function ColecaoContador({
 function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: ItemConteudo[] }) {
   const { t } = useTranslation();
   const [busca, setBusca] = useState('');
-  const [itemPost, setItemPost] = useState<ItemConteudo | null>(null);
-
   const baseFrases = useMemo(() => {
     const list = banco.filter(i => i.tipo === 'frase');
     const newArr = [...list];
@@ -892,16 +628,10 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
     return Array.from(new Set(baseFrases.flatMap(f => f.tags || []))).sort().slice(0, 10);
   }, [baseFrases]);
 
-  const itensFrases = useMemo(() => {
-    const flattened: any[] = [];
-    frases.forEach((f, index) => {
-      flattened.push({ tipoItem: 'conteudo', content: f });
-      if (index > 0 && (index + 1) % 6 === 0) {
-        flattened.push({ tipoItem: 'anuncio', id: `ad-${index}` });
-      }
-    });
-    return flattened;
-  }, [frases]);
+  const itensFrases = useMemo(
+    () => flattenFeedWithAds(frases, (content) => ({ tipoItem: 'conteudo', content })),
+    [frases]
+  );
 
   return (
     <motion.div 
@@ -957,29 +687,17 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
           }
 
           return (
-            <div key={itemObj.content.id}>
-              {renderContentCard({
-                item: itemObj.content,
-                tema,
-                toast,
-                onEditImage: setItemPost,
-                ItemCard,
-              })}
-            </div>
+            <ContentCard
+              key={itemObj.content.id}
+              item={itemObj.content}
+              tema={tema}
+              toast={toast}
+            />
           );
         })}
       </div>
       
       <SocialHub tema={tema} />
-
-      {itemPost && (
-        <CustomModalGeradorPost 
-          item={itemPost} 
-          onClose={() => setItemPost(null)} 
-          toast={toast} 
-          temaGlobal={tema} 
-        />
-      )}
     </motion.div>
   );
 }
@@ -1001,16 +719,10 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
     return Array.from(new Set(baseMetaforas.flatMap(m => m.tags || []))).sort().slice(0, 10);
   }, [baseMetaforas]);
 
-  const itensMetaforas = useMemo(() => {
-    const flattened: any[] = [];
-    metaforas.forEach((m, index) => {
-      flattened.push({ tipoItem: 'conteudo', content: m });
-      if (index > 0 && (index + 1) % 6 === 0) {
-        flattened.push({ tipoItem: 'anuncio', id: `ad-${index}` });
-      }
-    });
-    return flattened;
-  }, [metaforas]);
+  const itensMetaforas = useMemo(
+    () => flattenFeedWithAds(metaforas, (content) => ({ tipoItem: 'conteudo', content })),
+    [metaforas]
+  );
 
   return (
     <motion.div 
@@ -1055,7 +767,7 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className={GRID_CONTENT}>
         {itensMetaforas.map((itemObj) => {
           if (itemObj.tipoItem === 'anuncio') {
             return (
@@ -1066,11 +778,11 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
           }
 
           return (
-            <ItemCard 
-              key={itemObj.content.id} 
-              item={itemObj.content} 
-              tema={tema} 
-              toast={toast} 
+            <ContentCard
+              key={itemObj.content.id}
+              item={itemObj.content}
+              tema={tema}
+              toast={toast}
             />
           );
         })}

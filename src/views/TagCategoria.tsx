@@ -21,31 +21,16 @@ import {
   getSemanticRelatedTags,
   relatedTagLabels,
 } from '../lib/tagSemantics';
-import { GRID_CONTENT, renderContentCard } from '../lib/contentGrid';
-
-interface ItemConteudo {
-  id: string;
-  tipo: 'frase' | 'metafora';
-  texto: string;
-  autor: string;
-  tags: string[];
-  titulo?: string;
-  resumo?: string;
-  imagem?: string;
-  slug?: string;
-}
+import { GRID_CONTENT } from '../lib/contentGrid';
+import { flattenFeedWithAds } from '../lib/feedWithAds';
+import type { ItemConteudo } from '../types/content';
+import ContentCard from '../components/ContentCard';
 
 type TagCategoriaProps = {
   tema: string;
   toast: (msg: string) => void;
   banco: ItemConteudo[];
   registry: TagRegistryEntry[];
-  ItemCard: React.ComponentType<{
-    item: ItemConteudo;
-    tema: string;
-    toast: (msg: string) => void;
-    onEditImage?: (item: ItemConteudo) => void;
-  }>;
   AdBanner: React.ComponentType<{ tema: string; placement: string }>;
   MudarMetaSEO: React.ComponentType<{
     title: string;
@@ -54,12 +39,6 @@ type TagCategoriaProps = {
     canonical?: string;
     ogType?: string;
   }>;
-  ModalGeradorPost?: React.ComponentType<{
-    item: ItemConteudo;
-    onClose: () => void;
-    toast: (msg: string) => void;
-    temaGlobal: string;
-  }>;
 };
 
 export default function TagCategoriaView({
@@ -67,15 +46,12 @@ export default function TagCategoriaView({
   toast,
   banco,
   registry,
-  ItemCard,
   AdBanner,
   MudarMetaSEO,
-  ModalGeradorPost,
 }: TagCategoriaProps) {
   const { tagSlug: tagSlugParam } = useParams<{ tagSlug: string }>();
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(24);
-  const [itemPost, setItemPost] = useState<ItemConteudo | null>(null);
 
   const resolvedSlug = useMemo(
     () => extractSlugFromTagUrlSegment(tagSlugParam),
@@ -132,17 +108,14 @@ export default function TagCategoriaView({
     [displayTag, itensDaTag.length, matchStats, labelsRelacionados]
   );
 
-  const itensGrid = useMemo(() => {
-    const flattened: { tipoItem: 'conteudo' | 'anuncio'; content?: ItemConteudo; id?: string }[] =
-      [];
-    itensFiltrados.slice(0, itensVisiveis).forEach((item, index) => {
-      flattened.push({ tipoItem: 'conteudo', content: item });
-      if (index > 0 && (index + 1) % 6 === 0) {
-        flattened.push({ tipoItem: 'anuncio', id: `ad-tag-${index}` });
-      }
-    });
-    return flattened;
-  }, [itensFiltrados, itensVisiveis]);
+  const itensGrid = useMemo(
+    () =>
+      flattenFeedWithAds(itensFiltrados.slice(0, itensVisiveis), (content) => ({
+        tipoItem: 'conteudo',
+        content,
+      })),
+    [itensFiltrados, itensVisiveis]
+  );
 
   if (!tagSlugParam || !isTagCategoryPath(tagSlugParam)) {
     return <Navigate to="/" replace />;
@@ -158,7 +131,7 @@ export default function TagCategoriaView({
     <motion.article
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="max-w-5xl w-full mx-auto px-4 py-8 flex-1 flex flex-col"
+      className="max-w-7xl w-full mx-auto px-4 py-8 flex-1 flex flex-col"
     >
       <MudarMetaSEO
         title={tagSeoTitle(displayTag)}
@@ -271,15 +244,12 @@ export default function TagCategoriaView({
               }
               const item = itemObj.content!;
               return (
-                <div key={item.id}>
-                  {renderContentCard({
-                    item,
-                    tema,
-                    toast,
-                    onEditImage: ModalGeradorPost ? setItemPost : undefined,
-                    ItemCard,
-                  })}
-                </div>
+                <ContentCard
+                  key={item.id}
+                  item={item}
+                  tema={tema}
+                  toast={toast}
+                />
               );
             })
           )}
@@ -302,14 +272,6 @@ export default function TagCategoriaView({
         {matchStats.related > 0 && ` · ${matchStats.related} relacionadas`}
       </p>
 
-      {itemPost && ModalGeradorPost && (
-        <ModalGeradorPost
-          item={itemPost}
-          onClose={() => setItemPost(null)}
-          toast={toast}
-          temaGlobal={tema}
-        />
-      )}
     </motion.article>
   );
 }

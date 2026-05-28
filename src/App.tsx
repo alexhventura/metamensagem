@@ -156,9 +156,7 @@ export default function App() {
         
         const finalData = await montarBanco(networkData[0], networkData[1]);
         setBancoTotal(finalData);
-        if (dataToSet.length === 0) {
-          setBancoRandom(shuffleArray(finalData));
-        }
+        setBancoRandom(shuffleArray(finalData));
         console.log("🔄 Indices atualizados via Network");
       } catch (e) {
         console.error("Falha na sincronização Edge", e);
@@ -216,19 +214,7 @@ export default function App() {
           tema === 'light' ? 'bg-white/80 border-zinc-200 text-black' : 'bg-black/80 border-zinc-900 text-white'
         }`}>
           <div className="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
-              <Link to="/" className="flex items-center gap-2.5 group min-w-0">
-              <img
-                src="/brand/logo.svg"
-                alt="Metamensagem"
-                width={40}
-                height={40}
-                className="h-9 w-9 md:h-10 md:w-10 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105"
-                decoding="async"
-              />
-              <span className="text-xl md:text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[#A855F7] to-[#6366f1] tracking-tighter truncate">
-                Metamensagem
-              </span>
-            </Link>
+              <HeaderBrandButton />
 
             <nav className="hidden md:flex items-center gap-8 text-sm font-bold text-zinc-400">
             </nav>
@@ -454,6 +440,41 @@ function MudarMetaSEO({
   }, [title, description, jsonLD, canonical, ogType, i18n.language]);
 
   return null;
+}
+
+/** Logo + Metamensagem: na home = F5; noutras rotas = recarrega indo para /. */
+function HeaderBrandButton() {
+  const location = useLocation();
+
+  const handleClick = () => {
+    const path = location.pathname.replace(/\/$/, '') || '/';
+    if (path === '/') {
+      window.location.reload();
+    } else {
+      window.location.href = '/';
+    }
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={handleClick}
+      className="flex items-center gap-2.5 group min-w-0 cursor-pointer bg-transparent border-0 p-0 text-left"
+      aria-label="Metamensagem — atualizar página"
+    >
+      <img
+        src="/brand/logo.svg"
+        alt=""
+        width={40}
+        height={40}
+        className="h-9 w-9 md:h-10 md:w-10 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105 pointer-events-none"
+        decoding="async"
+      />
+      <span className="text-xl md:text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[#A855F7] to-[#6366f1] tracking-tighter truncate pointer-events-none">
+        Metamensagem
+      </span>
+    </button>
+  );
 }
 
 // ===================================================

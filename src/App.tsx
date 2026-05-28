@@ -280,7 +280,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomeView tema={tema} toast={mostrarToast} banco={bancoTotal} tags={tagsUnicas} bancoRandom={bancoRandom} />} />
               <Route path="/frases" element={<FrasesView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
-              <Route path="/frases/:slug" element={<FraseDetalheView tema={tema} />} />
+              <Route path="/frases/:slug" element={<FraseDetalheView tema={tema} toast={mostrarToast} />} />
               <Route path="/metaforas" element={<MetaforasView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
               <Route path="/metafora/:id/*" element={<MetaforaDetalheView tema={tema} banco={bancoTotal} toast={mostrarToast} />} />
               <Route path="/sobre" element={<Contact tema={tema} />} />

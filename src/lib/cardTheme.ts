@@ -42,6 +42,13 @@ export function cardNeutralActionClass(tema: string): string {
     : 'bg-zinc-900/50 text-zinc-400 hover:bg-zinc-900 border border-white/5';
 }
 
+/** Texto da frase em listagens — destaque tipo headline. */
+export const FRASE_HEADLINE_CLASS =
+  'text-xl md:text-2xl font-black leading-tight tracking-tighter line-clamp-4';
+
+/** Fundo lavanda (modo leitura) — só página de detalhe da frase, tema claro. */
+export const FRASE_DETAIL_INFO_BG_LIGHT = 'bg-[#F3E8FF]';
+
 export function cardImageBtnClass(accent: CardAccent): string {
   return accent === 'pink'
     ? 'p-3.5 bg-[#EC4899] hover:bg-pink-600 text-white rounded-2xl transition-all hover:scale-110 shadow-lg shadow-pink-500/20 shrink-0 flex items-center justify-center'

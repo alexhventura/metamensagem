@@ -17,6 +17,7 @@ import {
   cardNeutralActionClass,
   cardReadMoreBtnClass,
   cardTagClass,
+  FRASE_HEADLINE_CLASS,
 } from '../lib/cardTheme';
 import type { ItemConteudo } from '../types/content';
 
@@ -148,11 +149,11 @@ export default function ContentCard({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className={`leading-relaxed mb-4 flex-1 transition-opacity duration-200 ${
-                  isFrase ? 'text-[15px] line-clamp-4' : 'text-sm line-clamp-3'
-                } ${translating ? 'opacity-55' : 'opacity-100'} ${
-                  tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'
-                }`}
+                className={`mb-4 flex-1 transition-opacity duration-200 ${
+                  isFrase
+                    ? `${FRASE_HEADLINE_CLASS} ${tema === 'light' ? 'text-black' : 'text-white'}`
+                    : `text-sm line-clamp-3 leading-relaxed ${tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'}`
+                } ${translating ? 'opacity-55' : 'opacity-100'}`}
               >
                 {isFrase ? `"${bodyText}"` : bodyText}
               </motion.p>

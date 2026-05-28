@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "inspiracional",
+    "nome": "Inspiracional",
+    "descricao": "Frases de inspiracional.",
+    "count": 205
+  },
+  {
+    "slug": "amor",
+    "nome": "Amor",
+    "descricao": "Frases de amor.",
+    "count": 33
+  },
+  {
+    "slug": "coragem",
+    "nome": "Coragem",
+    "descricao": "Frases de coragem.",
+    "count": 30
+  },
+  {
+    "slug": "fe",
+    "nome": "Fe",
+    "descricao": "Frases de fe.",
+    "count": 22
+  },
+  {
+    "slug": "felicidade",
+    "nome": "Felicidade",
+    "descricao": "Frases de felicidade.",
+    "count": 21
+  },
+  {
+    "slug": "determinacao",
+    "nome": "Determinacao",
+    "descricao": "Frases de determinacao.",
+    "count": 12
+  },
+  {
+    "slug": "aprendizado",
+    "nome": "Aprendizado",
+    "descricao": "Frases de aprendizado.",
+    "count": 11
+  },
+  {
+    "slug": "foco",
+    "nome": "Foco",
+    "descricao": "Frases de foco.",
+    "count": 7
+  },
+  {
+    "slug": "bom-dia",
+    "nome": "Bom Dia",
+    "descricao": "Frases de bom dia.",
+    "count": 5
+  }
+]

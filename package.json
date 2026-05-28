@@ -10,6 +10,10 @@
     "enrich-content": "node scripts/enrich-external-content.mjs",
     "enrich-content:force": "node scripts/enrich-external-content.mjs --force",
     "build": "node scripts/enrich-external-content.mjs && node prepare-data.cjs && node scripts/generate-sitemap.mjs && vite build",
+    "content:sync": "node scripts/migrate-frases-to-content.mjs && node scripts/build-content-metadata.mjs",
+    "next:dev": "next dev -p 3001",
+    "next:build": "next build",
+    "next:start": "next start -p 3001",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit"
@@ -27,6 +31,7 @@
     "lucide-react": "^0.546.0",
     "modern-screenshot": "^4.7.0",
     "motion": "^12.23.24",
+    "next": "^15.5.18",
     "react": "^19.0.1",
     "react-dom": "^19.0.1",
     "react-i18next": "^17.0.8",
@@ -36,6 +41,7 @@
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^22.14.0",
+    "@types/react": "19.2.15",
     "autoprefixer": "^10.4.21",
     "esbuild": "^0.25.0",
     "sharp": "^0.34.5",

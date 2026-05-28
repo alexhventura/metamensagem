@@ -3,10 +3,10 @@ import { BrowserRouter, Routes, Route, Link, useParams, useLocation } from 'reac
 import Fuse from 'fuse.js';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import Terms from './pages/Terms';
-import Privacy from './pages/Privacy';
-import Contact from './pages/Contact';
-import Cookies from './pages/Cookies';
+import Terms from './views/Terms';
+import Privacy from './views/Privacy';
+import Contact from './views/Contact';
+import Cookies from './views/Cookies';
 import { 
   Copy, 
   Image as ImageIcon, 
@@ -58,7 +58,7 @@ import { buildTagRegistry, pathFromTag } from './lib/tagsSeo';
 import { searchBancoSemantico } from './lib/semanticSearch';
 import { sanitizeContentBanco } from './lib/safeContent';
 import { pruneInvalidTranslationCache } from './lib/translation';
-import TagCategoriaView from './pages/TagCategoria';
+import TagCategoriaView from './views/TagCategoria';
 
 // --- TIPOS ---
 interface ItemConteudo {

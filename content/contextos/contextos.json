@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "inspiracional",
+    "nome": "Inspiracional",
+    "descricao": "Mensagens sobre inspiracional.",
+    "count": 141
+  },
+  {
+    "slug": "reflexao",
+    "nome": "Reflexao",
+    "descricao": "Mensagens sobre reflexao.",
+    "count": 117
+  },
+  {
+    "slug": "motivacao",
+    "nome": "Motivacao",
+    "descricao": "Mensagens sobre motivacao.",
+    "count": 112
+  },
+  {
+    "slug": "otimismo",
+    "nome": "Otimismo",
+    "descricao": "Mensagens sobre otimismo.",
+    "count": 110
+  },
+  {
+    "slug": "sabedoria",
+    "nome": "Sabedoria",
+    "descricao": "Mensagens sobre sabedoria.",
+    "count": 36
+  },
+  {
+    "slug": "superacao",
+    "nome": "Superacao",
+    "descricao": "Mensagens sobre superacao.",
+    "count": 24
+  },
+  {
+    "slug": "sucesso",
+    "nome": "Sucesso",
+    "descricao": "Mensagens sobre sucesso.",
+    "count": 21
+  },
+  {
+    "slug": "persistencia",
+    "nome": "Persistencia",
+    "descricao": "Mensagens sobre persistencia.",
+    "count": 16
+  },
+  {
+    "slug": "felicidade",
+    "nome": "Felicidade",
+    "descricao": "Mensagens sobre felicidade.",
+    "count": 16
+  },
+  {
+    "slug": "bom-dia",
+    "nome": "Bom Dia",
+    "descricao": "Mensagens sobre bom dia.",
+    "count": 16
+  },
+  {
+    "slug": "fe",
+    "nome": "Fe",
+    "descricao": "Mensagens sobre fe.",
+    "count": 14
+  },
+  {
+    "slug": "sonhos",
+    "nome": "Sonhos",
+    "descricao": "Mensagens sobre sonhos.",
+    "count": 13
+  },
+  {
+    "slug": "determinacao",
+    "nome": "Determinacao",
+    "descricao": "Mensagens sobre determinacao.",
+    "count": 7
+  },
+  {
+    "slug": "foco",
+    "nome": "Foco",
+    "descricao": "Mensagens sobre foco.",
+    "count": 6
+  },
+  {
+    "slug": "coragem",
+    "nome": "Coragem",
+    "descricao": "Mensagens sobre coragem.",
+    "count": 2
+  }
+]

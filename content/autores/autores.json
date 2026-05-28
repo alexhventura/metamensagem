@@ -10,6 +10,16 @@
     "count": 8
   },
   {
+    "slug": "albert-einstein",
+    "nome": "Albert Einstein",
+    "count": 8
+  },
+  {
+    "slug": "bruce-lee",
+    "nome": "Bruce Lee",
+    "count": 7
+  },
+  {
     "slug": "fernando-pessoa",
     "nome": "Fernando Pessoa",
     "count": 6
@@ -20,18 +30,28 @@
     "count": 5
   },
   {
-    "slug": "martinha-batista",
-    "nome": "Martinha Batista",
-    "count": 5
-  },
-  {
     "slug": "fabio-alves-borges-rodrigues",
     "nome": "Fabio Alves Borges Rodrigues",
     "count": 5
   },
   {
+    "slug": "isaac-newton",
+    "nome": "Isaac Newton",
+    "count": 5
+  },
+  {
+    "slug": "martinha-batista",
+    "nome": "Martinha Batista",
+    "count": 5
+  },
+  {
     "slug": "edna-frigato",
     "nome": "Edna Frigato",
+    "count": 5
+  },
+  {
+    "slug": "socrates",
+    "nome": "Sócrates",
     "count": 5
   },
   {
@@ -50,18 +70,8 @@
     "count": 4
   },
   {
-    "slug": "machado-de-assis",
-    "nome": "Machado de Assis",
-    "count": 3
-  },
-  {
-    "slug": "nemo-nox",
-    "nome": "Nemo Nox",
-    "count": 3
-  },
-  {
-    "slug": "liahna-mell",
-    "nome": "Liahna Mell",
+    "slug": "martha-medeiros",
+    "nome": "Martha Medeiros",
     "count": 3
   },
   {
@@ -70,8 +80,13 @@
     "count": 3
   },
   {
-    "slug": "roberto-shinyashiki",
-    "nome": "Roberto Shinyashiki",
+    "slug": "liahna-mell",
+    "nome": "Liahna Mell",
+    "count": 3
+  },
+  {
+    "slug": "machado-de-assis",
+    "nome": "Machado de Assis",
     "count": 3
   },
   {
@@ -80,8 +95,23 @@
     "count": 3
   },
   {
+    "slug": "nemo-nox",
+    "nome": "Nemo Nox",
+    "count": 3
+  },
+  {
+    "slug": "roberto-shinyashiki",
+    "nome": "Roberto Shinyashiki",
+    "count": 3
+  },
+  {
     "slug": "richard-bach",
     "nome": "Richard Bach",
+    "count": 3
+  },
+  {
+    "slug": "tamires",
+    "nome": "tamires",
     "count": 3
   },
   {
@@ -95,93 +125,13 @@
     "count": 3
   },
   {
-    "slug": "martha-medeiros",
-    "nome": "Martha Medeiros",
-    "count": 3
-  },
-  {
-    "slug": "tamires",
-    "nome": "tamires",
-    "count": 3
-  },
-  {
-    "slug": "tumblr",
-    "nome": "Tumblr",
-    "count": 2
-  },
-  {
-    "slug": "henry-ford",
-    "nome": "Henry Ford",
-    "count": 2
-  },
-  {
-    "slug": "marcos-francoia",
-    "nome": "Marcos Françóia",
-    "count": 2
-  },
-  {
-    "slug": "1-minuto-na-palma-da-mao",
-    "nome": "1 Minuto na Palma da Mão",
-    "count": 2
-  },
-  {
-    "slug": "vida-erin-zurich",
-    "nome": "Vida Erin Zurich",
-    "count": 2
-  },
-  {
-    "slug": "albert-einstein",
-    "nome": "Albert Einstein",
-    "count": 2
-  },
-  {
-    "slug": "a-caminho-de-casa",
-    "nome": "A caminho de casa",
-    "count": 2
-  },
-  {
-    "slug": "diogo-soaresmkt",
-    "nome": "diogo_soaresmkt",
-    "count": 2
-  },
-  {
-    "slug": "liddy-viana",
-    "nome": "Liddy Viana",
-    "count": 2
-  },
-  {
-    "slug": "vida",
-    "nome": "Vida",
-    "count": 2
-  },
-  {
-    "slug": "o-menino-que-descobriu-o-vento",
-    "nome": "O Menino que Descobriu o Vento",
-    "count": 2
-  },
-  {
-    "slug": "paulo-coelho",
-    "nome": "Paulo Coelho",
-    "count": 2
-  },
-  {
     "slug": "william-james",
     "nome": "William James",
     "count": 2
   },
   {
-    "slug": "helen-keller",
-    "nome": "Helen Keller",
-    "count": 2
-  },
-  {
-    "slug": "miguel-unamuno",
-    "nome": "Miguel Unamuno",
-    "count": 2
-  },
-  {
-    "slug": "vergilio-ferreira",
-    "nome": "Vergílio Ferreira",
+    "slug": "tumblr",
+    "nome": "Tumblr",
     "count": 2
   },
   {
@@ -190,98 +140,8 @@
     "count": 2
   },
   {
-    "slug": "daniel-godri",
-    "nome": "Daniel Godri",
-    "count": 2
-  },
-  {
-    "slug": "confucio",
-    "nome": "Confúcio",
-    "count": 2
-  },
-  {
-    "slug": "seneca",
-    "nome": "Sêneca",
-    "count": 2
-  },
-  {
-    "slug": "sigmund-freud",
-    "nome": "Sigmund Freud",
-    "count": 2
-  },
-  {
-    "slug": "marques-de-marica",
-    "nome": "Marquês de Maricá",
-    "count": 2
-  },
-  {
-    "slug": "dalai-lama",
-    "nome": "Dalai Lama",
-    "count": 2
-  },
-  {
-    "slug": "tati-bernardi",
-    "nome": "Tati Bernardi",
-    "count": 2
-  },
-  {
-    "slug": "magia-otimismo",
-    "nome": "magia otimismo",
-    "count": 2
-  },
-  {
-    "slug": "ana-carolina",
-    "nome": "Ana Carolina",
-    "count": 2
-  },
-  {
-    "slug": "caio-fernando-abreu",
-    "nome": "Caio Fernando Abreu",
-    "count": 2
-  },
-  {
-    "slug": "groucho-marx",
-    "nome": "Groucho Marx",
-    "count": 2
-  },
-  {
-    "slug": "augusto-branco",
-    "nome": "Augusto Branco",
-    "count": 2
-  },
-  {
-    "slug": "alice-no-pais-das-maravilhas",
-    "nome": "Alice no País das Maravilhas",
-    "count": 2
-  },
-  {
-    "slug": "bertram-carr",
-    "nome": "Bertram Carr",
-    "count": 2
-  },
-  {
-    "slug": "sarah-westphal",
-    "nome": "Sarah Westphal",
-    "count": 2
-  },
-  {
-    "slug": "harry-truman",
-    "nome": "Harry Truman",
-    "count": 2
-  },
-  {
-    "slug": "juscelino-kubitschek",
-    "nome": "Juscelino Kubitschek",
-    "count": 2
-  },
-  {
-    "slug": "james-branch-cabell",
-    "nome": "James Branch Cabell",
-    "count": 2
-  },
-  {
-    "slug": "winston-churchill",
-    "nome": "Winston Churchill",
+    "slug": "paulo-coelho",
+    "nome": "Paulo Coelho",
     "count": 2
   },
   {
@@ -290,288 +150,168 @@
     "count": 2
   },
   {
+    "slug": "juscelino-kubitschek",
+    "nome": "Juscelino Kubitschek",
+    "count": 2
+  },
+  {
+    "slug": "dalai-lama",
+    "nome": "Dalai Lama",
+    "count": 2
+  },
+  {
     "slug": "lais-carvalho-diario-meu-oficial",
     "nome": "Laís Carvalho - Diário Meu Oficial",
     "count": 2
   },
   {
-    "slug": "charles-chaplin",
-    "nome": "Charles Chaplin",
-    "count": 1
+    "slug": "winston-churchill",
+    "nome": "Winston Churchill",
+    "count": 2
   },
   {
-    "slug": "jose-de-alencar",
-    "nome": "José de Alencar",
-    "count": 1
+    "slug": "sarah-westphal",
+    "nome": "Sarah Westphal",
+    "count": 2
   },
   {
-    "slug": "bruce-lee",
-    "nome": "Bruce Lee",
-    "count": 1
+    "slug": "marcos-francoia",
+    "nome": "Marcos Françóia",
+    "count": 2
   },
   {
-    "slug": "salustio",
-    "nome": "Salústio",
-    "count": 1
+    "slug": "tati-bernardi",
+    "nome": "Tati Bernardi",
+    "count": 2
   },
   {
-    "slug": "maya-angelou",
-    "nome": "Maya Angelou",
-    "count": 1
+    "slug": "alice-no-pais-das-maravilhas",
+    "nome": "Alice no País das Maravilhas",
+    "count": 2
   },
   {
-    "slug": "eleanor-roosevelt",
-    "nome": "Eleanor Roosevelt",
-    "count": 1
+    "slug": "vergilio-ferreira",
+    "nome": "Vergílio Ferreira",
+    "count": 2
   },
   {
-    "slug": "anthony-robbins",
-    "nome": "Anthony Robbins",
-    "count": 1
+    "slug": "miguel-unamuno",
+    "nome": "Miguel Unamuno",
+    "count": 2
   },
   {
-    "slug": "martin-luther-king",
-    "nome": "Martin Luther King",
-    "count": 1
+    "slug": "vida-erin-zurich",
+    "nome": "Vida Erin Zurich",
+    "count": 2
   },
   {
-    "slug": "leon-tolstoi",
-    "nome": "Leon Tolstói",
-    "count": 1
+    "slug": "vida",
+    "nome": "Vida",
+    "count": 2
   },
   {
-    "slug": "victor-hugo",
-    "nome": "Victor Hugo",
-    "count": 1
+    "slug": "daniel-godri",
+    "nome": "Daniel Godri",
+    "count": 2
   },
   {
-    "slug": "pamela-patricia-correa-da-silva",
-    "nome": "Pâmela Patrícia Correa da Silva",
-    "count": 1
+    "slug": "groucho-marx",
+    "nome": "Groucho Marx",
+    "count": 2
   },
   {
-    "slug": "ra-s-al-ghul",
-    "nome": "Ra's Al Ghul",
-    "count": 1
+    "slug": "confucio",
+    "nome": "Confúcio",
+    "count": 2
   },
   {
-    "slug": "braulio-bessa",
-    "nome": "Bráulio Bessa",
-    "count": 1
+    "slug": "marques-de-marica",
+    "nome": "Marquês de Maricá",
+    "count": 2
   },
   {
-    "slug": "borlone",
-    "nome": "Borlone",
-    "count": 1
+    "slug": "james-branch-cabell",
+    "nome": "James Branch Cabell",
+    "count": 2
   },
   {
-    "slug": "shay-patrick-cormac",
-    "nome": "Shay Patrick Cormac",
-    "count": 1
+    "slug": "seneca",
+    "nome": "Sêneca",
+    "count": 2
   },
   {
-    "slug": "plinio-de-sa",
-    "nome": "Plínio de Sá",
-    "count": 1
+    "slug": "1-minuto-na-palma-da-mao",
+    "nome": "1 Minuto na Palma da Mão",
+    "count": 2
   },
   {
-    "slug": "marie-curie",
-    "nome": "Marie Curie",
-    "count": 1
+    "slug": "o-menino-que-descobriu-o-vento",
+    "nome": "O Menino que Descobriu o Vento",
+    "count": 2
   },
   {
-    "slug": "carlos-eduardo-back",
-    "nome": "Carlos Eduardo Back",
-    "count": 1
+    "slug": "augusto-branco",
+    "nome": "Augusto Branco",
+    "count": 2
   },
   {
-    "slug": "stubby-currence",
-    "nome": "Stubby Currence",
-    "count": 1
+    "slug": "magia-otimismo",
+    "nome": "magia otimismo",
+    "count": 2
   },
   {
-    "slug": "antoine-de-saint-exupery",
-    "nome": "Antoine de Saint-Exupéry",
-    "count": 1
+    "slug": "a-caminho-de-casa",
+    "nome": "A caminho de casa",
+    "count": 2
   },
   {
-    "slug": "ronaldo-jesus-dos-santos",
-    "nome": "Ronaldo Jesus dos Santos",
-    "count": 1
+    "slug": "henry-ford",
+    "nome": "Henry Ford",
+    "count": 2
   },
   {
-    "slug": "brisah",
-    "nome": "BrisaH",
-    "count": 1
+    "slug": "sigmund-freud",
+    "nome": "Sigmund Freud",
+    "count": 2
   },
   {
-    "slug": "estela-joaquina-valadares-canabrava",
-    "nome": "Estela Joaquina Valadares Canabrava",
-    "count": 1
+    "slug": "diogo-soaresmkt",
+    "nome": "diogo_soaresmkt",
+    "count": 2
   },
   {
-    "slug": "biblia-sagrada",
-    "nome": "Bíblia Sagrada",
-    "count": 1
+    "slug": "caio-fernando-abreu",
+    "nome": "Caio Fernando Abreu",
+    "count": 2
   },
   {
-    "slug": "carlos-alberto-brumm",
-    "nome": "Carlos Alberto Brumm",
-    "count": 1
+    "slug": "bertram-carr",
+    "nome": "Bertram Carr",
+    "count": 2
   },
   {
-    "slug": "abraham-lincoln",
-    "nome": "Abraham Lincoln",
-    "count": 1
+    "slug": "helen-keller",
+    "nome": "Helen Keller",
+    "count": 2
   },
   {
-    "slug": "tathy-rio",
-    "nome": "Tathy Rio",
-    "count": 1
+    "slug": "ana-carolina",
+    "nome": "Ana Carolina",
+    "count": 2
   },
   {
-    "slug": "almeida-l-e-m",
-    "nome": "ALMEIDA, L.E.M",
-    "count": 1
+    "slug": "liddy-viana",
+    "nome": "Liddy Viana",
+    "count": 2
   },
   {
-    "slug": "alexandre-alcantara",
-    "nome": "Alexandre Alcântara",
-    "count": 1
-  },
-  {
-    "slug": "prof-marcos-fernando-da-silva",
-    "nome": "Prof. Marcos Fernando da Silva",
-    "count": 1
-  },
-  {
-    "slug": "yamamoto-tsunetomo",
-    "nome": "Yamamoto Tsunetomo",
-    "count": 1
-  },
-  {
-    "slug": "motivacao-luta-guerra-transformacao-forca-fe-determinacao-foco-leao",
-    "nome": "Motivação, luta, guerra,transformação,força, fé, determinação,foco, leão",
-    "count": 1
-  },
-  {
-    "slug": "emeldito-covane",
-    "nome": "Emeldito Covane",
-    "count": 1
-  },
-  {
-    "slug": "felipe-neto",
-    "nome": "Felipe Neto",
-    "count": 1
-  },
-  {
-    "slug": "marco-aurelio-souza-lima",
-    "nome": "Marco Aurelio Souza Lima",
-    "count": 1
-  },
-  {
-    "slug": "motivador",
-    "nome": "motivador",
-    "count": 1
-  },
-  {
-    "slug": "aline-wega-palestrante-motivacional",
-    "nome": "Aline Wega - Palestrante Motivacional",
-    "count": 1
-  },
-  {
-    "slug": "isaque-ramon-correia-claudio",
-    "nome": "Isaque Ramon Correia Claudio",
-    "count": 1
-  },
-  {
-    "slug": "bruno-carvalho",
-    "nome": "Bruno Carvalho",
-    "count": 1
-  },
-  {
-    "slug": "milk-douglas",
-    "nome": "Milk Douglas",
-    "count": 1
+    "slug": "harry-truman",
+    "nome": "Harry Truman",
+    "count": 2
   },
   {
     "slug": "caio-alliance",
     "nome": "Caio Alliance",
-    "count": 1
-  },
-  {
-    "slug": "tombos-da-vida",
-    "nome": "Tombos da vida",
-    "count": 1
-  },
-  {
-    "slug": "guilherme-paixao",
-    "nome": "Guilherme Paixão",
-    "count": 1
-  },
-  {
-    "slug": "b0tn3t",
-    "nome": "B0TN3T",
-    "count": 1
-  },
-  {
-    "slug": "diego-ferrari",
-    "nome": "Diego Ferrari",
-    "count": 1
-  },
-  {
-    "slug": "nelio-wanderley",
-    "nome": "Nelio Wanderley",
-    "count": 1
-  },
-  {
-    "slug": "daniel-victor-lima",
-    "nome": "Daniel Victor Lima",
-    "count": 1
-  },
-  {
-    "slug": "cassia-guimaraes",
-    "nome": "Cassia Guimarães",
-    "count": 1
-  },
-  {
-    "slug": "everaldo-barros-barbosa",
-    "nome": "Everaldo Barros Barbosa",
-    "count": 1
-  },
-  {
-    "slug": "mercio-franklin",
-    "nome": "Mércio Franklin",
-    "count": 1
-  },
-  {
-    "slug": "izzo-rocha",
-    "nome": "Izzo Rocha",
-    "count": 1
-  },
-  {
-    "slug": "paulo-vieira",
-    "nome": "Paulo Vieira",
-    "count": 1
-  },
-  {
-    "slug": "daniel-andrade",
-    "nome": "Daniel Andrade",
-    "count": 1
-  },
-  {
-    "slug": "eduardo-colamego",
-    "nome": "Eduardo Colamego",
-    "count": 1
-  },
-  {
-    "slug": "kassio-murta",
-    "nome": "Kassio Murta",
-    "count": 1
-  },
-  {
-    "slug": "cigano-romani",
-    "nome": "Cigano Romani",
     "count": 1
   },
   {
@@ -580,68 +320,18 @@
     "count": 1
   },
   {
-    "slug": "romulo-bourbon",
-    "nome": "Rômulo Bourbon",
+    "slug": "indira-gandhi",
+    "nome": "Indira Gandhi",
     "count": 1
   },
   {
-    "slug": "arranha-ceu-coragem-sem-limite",
-    "nome": "Arranha-Céu: Coragem Sem Limite",
+    "slug": "joseph-conrad",
+    "nome": "Joseph Conrad",
     "count": 1
   },
   {
-    "slug": "roberto-fortuna",
-    "nome": "Roberto Fortuna",
-    "count": 1
-  },
-  {
-    "slug": "juvenildo-pessoa",
-    "nome": "Juvenildo Pessoa",
-    "count": 1
-  },
-  {
-    "slug": "may-iakulo-targino",
-    "nome": "May Iakulo Targino",
-    "count": 1
-  },
-  {
-    "slug": "paulo-maccedo",
-    "nome": "Paulo Maccedo",
-    "count": 1
-  },
-  {
-    "slug": "bianco-r-schimites",
-    "nome": "Bianco R. Schimites",
-    "count": 1
-  },
-  {
-    "slug": "wagner-araujo-leite",
-    "nome": "Wagner Araujo Leite",
-    "count": 1
-  },
-  {
-    "slug": "vianna-stibal",
-    "nome": "Vianna Stibal",
-    "count": 1
-  },
-  {
-    "slug": "monica-bastos",
-    "nome": "Mônica Bastos",
-    "count": 1
-  },
-  {
-    "slug": "andres-gianni",
-    "nome": "Andrés Gianni",
-    "count": 1
-  },
-  {
-    "slug": "katia-torres",
-    "nome": "Kátia Torres",
-    "count": 1
-  },
-  {
-    "slug": "dilson-kutscher",
-    "nome": "Dilson Kutscher",
+    "slug": "hiago-rodrigues-reis-de-queiros",
+    "nome": "Hiago Rodrigues Reis de Queirós",
     "count": 1
   },
   {
@@ -650,68 +340,28 @@
     "count": 1
   },
   {
-    "slug": "platao",
-    "nome": "Platão",
+    "slug": "plinio-de-sa",
+    "nome": "Plínio de Sá",
     "count": 1
   },
   {
-    "slug": "cynthia-kersey",
-    "nome": "Cynthia Kersey",
+    "slug": "prof-marcos-fernando-da-silva",
+    "nome": "Prof. Marcos Fernando da Silva",
     "count": 1
   },
   {
-    "slug": "arnold-bennett",
-    "nome": "Arnold Bennett",
+    "slug": "rosa-berg",
+    "nome": "Rosa Berg",
     "count": 1
   },
   {
-    "slug": "john-ruskin",
-    "nome": "John Ruskin",
+    "slug": "guilherme-paixao",
+    "nome": "Guilherme Paixão",
     "count": 1
   },
   {
-    "slug": "albert-camus",
-    "nome": "Albert Camus",
-    "count": 1
-  },
-  {
-    "slug": "boris-pasternak",
-    "nome": "Boris Pasternak",
-    "count": 1
-  },
-  {
-    "slug": "socrates",
-    "nome": "Sócrates",
-    "count": 1
-  },
-  {
-    "slug": "madame-de-stael",
-    "nome": "Madame de Staël",
-    "count": 1
-  },
-  {
-    "slug": "alfred-de-vigny",
-    "nome": "Alfred de Vigny",
-    "count": 1
-  },
-  {
-    "slug": "luc-de-clapiers-vauvenargues",
-    "nome": "Luc de Clapiers Vauvenargues",
-    "count": 1
-  },
-  {
-    "slug": "aristoteles",
-    "nome": "Aristóteles",
-    "count": 1
-  },
-  {
-    "slug": "edouard-rod",
-    "nome": "Édouard Rod",
-    "count": 1
-  },
-  {
-    "slug": "elbert-hubbard",
-    "nome": "Elbert Hubbard",
+    "slug": "diego-eboli",
+    "nome": "Diego Éboli",
     "count": 1
   },
   {
@@ -720,8 +370,423 @@
     "count": 1
   },
   {
-    "slug": "theodore-roosevelt",
-    "nome": "Theodore Roosevelt",
+    "slug": "almeida-l-e-m",
+    "nome": "ALMEIDA, L.E.M",
+    "count": 1
+  },
+  {
+    "slug": "michel-de-montaigne",
+    "nome": "Michel de Montaigne",
+    "count": 1
+  },
+  {
+    "slug": "priscilla-rodighiero",
+    "nome": "Priscilla Rodighiero",
+    "count": 1
+  },
+  {
+    "slug": "o-lado-bom-da-vida",
+    "nome": "O lado bom da vida",
+    "count": 1
+  },
+  {
+    "slug": "b0tn3t",
+    "nome": "B0TN3T",
+    "count": 1
+  },
+  {
+    "slug": "marie-curie",
+    "nome": "Marie Curie",
+    "count": 1
+  },
+  {
+    "slug": "codigo-samurai",
+    "nome": "Código Samurai",
+    "count": 1
+  },
+  {
+    "slug": "lizie-oliveira",
+    "nome": "Lizie Oliveira",
+    "count": 1
+  },
+  {
+    "slug": "braulio-bessa",
+    "nome": "Bráulio Bessa",
+    "count": 1
+  },
+  {
+    "slug": "arranha-ceu-coragem-sem-limite",
+    "nome": "Arranha-Céu: Coragem Sem Limite",
+    "count": 1
+  },
+  {
+    "slug": "victor-hugo",
+    "nome": "Victor Hugo",
+    "count": 1
+  },
+  {
+    "slug": "um-amor-para-recordar",
+    "nome": "Um Amor para Recordar",
+    "count": 1
+  },
+  {
+    "slug": "katia-torres",
+    "nome": "Kátia Torres",
+    "count": 1
+  },
+  {
+    "slug": "marco-aurelio-souza-lima",
+    "nome": "Marco Aurelio Souza Lima",
+    "count": 1
+  },
+  {
+    "slug": "gherheai",
+    "nome": "Gherheai",
+    "count": 1
+  },
+  {
+    "slug": "pamela-patricia-correa-da-silva",
+    "nome": "Pâmela Patrícia Correa da Silva",
+    "count": 1
+  },
+  {
+    "slug": "yamamoto-tsunetomo",
+    "nome": "Yamamoto Tsunetomo",
+    "count": 1
+  },
+  {
+    "slug": "roberto-fortuna",
+    "nome": "Roberto Fortuna",
+    "count": 1
+  },
+  {
+    "slug": "fernanda-montenegro",
+    "nome": "Fernanda Montenegro",
+    "count": 1
+  },
+  {
+    "slug": "valdeci-alves-nogueira",
+    "nome": "Valdeci Alves Nogueira",
+    "count": 1
+  },
+  {
+    "slug": "martin-seligman",
+    "nome": "Martin Seligman",
+    "count": 1
+  },
+  {
+    "slug": "motivacao-luta-guerra-transformacao-forca-fe-determinacao-foco-leao",
+    "nome": "Motivação, luta, guerra,transformação,força, fé, determinação,foco, leão",
+    "count": 1
+  },
+  {
+    "slug": "juvenildo-pessoa",
+    "nome": "Juvenildo Pessoa",
+    "count": 1
+  },
+  {
+    "slug": "melanialudwig",
+    "nome": "melanialudwig",
+    "count": 1
+  },
+  {
+    "slug": "nelio-wanderley",
+    "nome": "Nelio Wanderley",
+    "count": 1
+  },
+  {
+    "slug": "diego-ferrari",
+    "nome": "Diego Ferrari",
+    "count": 1
+  },
+  {
+    "slug": "monica-bastos",
+    "nome": "Mônica Bastos",
+    "count": 1
+  },
+  {
+    "slug": "arnaldo-jabor",
+    "nome": "Arnaldo Jabor",
+    "count": 1
+  },
+  {
+    "slug": "alexandre-alcantara",
+    "nome": "Alexandre Alcântara",
+    "count": 1
+  },
+  {
+    "slug": "arnold-bennett",
+    "nome": "Arnold Bennett",
+    "count": 1
+  },
+  {
+    "slug": "ludwig-wittgenstein",
+    "nome": "Ludwig Wittgenstein",
+    "count": 1
+  },
+  {
+    "slug": "daniel-andrade",
+    "nome": "Daniel Andrade",
+    "count": 1
+  },
+  {
+    "slug": "luiz-inacio-lula-da-silva",
+    "nome": "Luiz Inácio Lula da Silva",
+    "count": 1
+  },
+  {
+    "slug": "walter-winchell",
+    "nome": "Walter Winchell",
+    "count": 1
+  },
+  {
+    "slug": "pequena-sereia",
+    "nome": "Pequena Sereia",
+    "count": 1
+  },
+  {
+    "slug": "uilder-cesar",
+    "nome": "Uilder César",
+    "count": 1
+  },
+  {
+    "slug": "nelson-mandela",
+    "nome": "Nelson Mandela",
+    "count": 1
+  },
+  {
+    "slug": "antonio-gramsci",
+    "nome": "Antônio Gramsci",
+    "count": 1
+  },
+  {
+    "slug": "pqogspn",
+    "nome": "PQOGSPN!",
+    "count": 1
+  },
+  {
+    "slug": "robert-collier",
+    "nome": "Robert Collier",
+    "count": 1
+  },
+  {
+    "slug": "liberdade-otimismo-luz",
+    "nome": "liberdade, otimismo, luz",
+    "count": 1
+  },
+  {
+    "slug": "martin-luther-king",
+    "nome": "Martin Luther King",
+    "count": 1
+  },
+  {
+    "slug": "carlos-eduardo-back",
+    "nome": "Carlos Eduardo Back",
+    "count": 1
+  },
+  {
+    "slug": "madame-de-stael",
+    "nome": "Madame de Staël",
+    "count": 1
+  },
+  {
+    "slug": "carlos-torres-pastorino",
+    "nome": "Carlos Torres Pastorino",
+    "count": 1
+  },
+  {
+    "slug": "edouard-rod",
+    "nome": "Édouard Rod",
+    "count": 1
+  },
+  {
+    "slug": "ernesto-sabato",
+    "nome": "Ernesto Sabato",
+    "count": 1
+  },
+  {
+    "slug": "biblia-sagrada",
+    "nome": "Bíblia Sagrada",
+    "count": 1
+  },
+  {
+    "slug": "jean-piaget",
+    "nome": "Jean Piaget",
+    "count": 1
+  },
+  {
+    "slug": "albert-camus",
+    "nome": "Albert Camus",
+    "count": 1
+  },
+  {
+    "slug": "albert-schweitzer",
+    "nome": "Albert Schweitzer",
+    "count": 1
+  },
+  {
+    "slug": "andres-gianni",
+    "nome": "Andrés Gianni",
+    "count": 1
+  },
+  {
+    "slug": "sofocles",
+    "nome": "Sófocles",
+    "count": 1
+  },
+  {
+    "slug": "carlos-alberto-brumm",
+    "nome": "Carlos Alberto Brumm",
+    "count": 1
+  },
+  {
+    "slug": "ailin-aleixo",
+    "nome": "Ailin Aleixo",
+    "count": 1
+  },
+  {
+    "slug": "dilson-kutscher",
+    "nome": "Dilson Kutscher",
+    "count": 1
+  },
+  {
+    "slug": "felipe-neto",
+    "nome": "Felipe Neto",
+    "count": 1
+  },
+  {
+    "slug": "edmund-burke",
+    "nome": "Edmund Burke",
+    "count": 1
+  },
+  {
+    "slug": "ra-s-al-ghul",
+    "nome": "Ra's Al Ghul",
+    "count": 1
+  },
+  {
+    "slug": "vianna-stibal",
+    "nome": "Vianna Stibal",
+    "count": 1
+  },
+  {
+    "slug": "davi-khouri",
+    "nome": "Davi Khouri",
+    "count": 1
+  },
+  {
+    "slug": "aline-wega-palestrante-motivacional",
+    "nome": "Aline Wega - Palestrante Motivacional",
+    "count": 1
+  },
+  {
+    "slug": "millor-fernandes",
+    "nome": "Millôr Fernandes",
+    "count": 1
+  },
+  {
+    "slug": "charles-chaplin",
+    "nome": "Charles Chaplin",
+    "count": 1
+  },
+  {
+    "slug": "izzo-rocha",
+    "nome": "Izzo Rocha",
+    "count": 1
+  },
+  {
+    "slug": "paulo-maccedo",
+    "nome": "Paulo Maccedo",
+    "count": 1
+  },
+  {
+    "slug": "maya-angelou",
+    "nome": "Maya Angelou",
+    "count": 1
+  },
+  {
+    "slug": "chorao",
+    "nome": "Chorão",
+    "count": 1
+  },
+  {
+    "slug": "blaise-pascal",
+    "nome": "Blaise Pascal",
+    "count": 1
+  },
+  {
+    "slug": "emeldito-covane",
+    "nome": "Emeldito Covane",
+    "count": 1
+  },
+  {
+    "slug": "platao",
+    "nome": "Platão",
+    "count": 1
+  },
+  {
+    "slug": "os-13-porques",
+    "nome": "Os 13 Porquês",
+    "count": 1
+  },
+  {
+    "slug": "shay-patrick-cormac",
+    "nome": "Shay Patrick Cormac",
+    "count": 1
+  },
+  {
+    "slug": "lucille-ball",
+    "nome": "Lucille Ball",
+    "count": 1
+  },
+  {
+    "slug": "elbert-hubbard",
+    "nome": "Elbert Hubbard",
+    "count": 1
+  },
+  {
+    "slug": "sol-pinheiro",
+    "nome": "Sol Pinheiro",
+    "count": 1
+  },
+  {
+    "slug": "steve-jobs",
+    "nome": "Steve Jobs",
+    "count": 1
+  },
+  {
+    "slug": "carlos-andradas",
+    "nome": "Carlos Andradas",
+    "count": 1
+  },
+  {
+    "slug": "psicanalista-jorge-monteiro",
+    "nome": "Psicanalista Jorge Monteiro",
+    "count": 1
+  },
+  {
+    "slug": "luis-fernando-verissimo",
+    "nome": "Luis Fernando Verissimo",
+    "count": 1
+  },
+  {
+    "slug": "leon-tolstoi",
+    "nome": "Leon Tolstói",
+    "count": 1
+  },
+  {
+    "slug": "rita-lee",
+    "nome": "Rita Lee",
+    "count": 1
+  },
+  {
+    "slug": "zelia-gattai",
+    "nome": "Zélia Gattai",
+    "count": 1
+  },
+  {
+    "slug": "boris-pasternak",
+    "nome": "Boris Pasternak",
     "count": 1
   },
   {
@@ -735,63 +800,13 @@
     "count": 1
   },
   {
-    "slug": "honore-de-balzac",
-    "nome": "Honoré de Balzac",
+    "slug": "tathy-rio",
+    "nome": "Tathy Rio",
     "count": 1
   },
   {
-    "slug": "emanuel-wertheimer",
-    "nome": "Emanuel Wertheimer",
-    "count": 1
-  },
-  {
-    "slug": "joseph-conrad",
-    "nome": "Joseph Conrad",
-    "count": 1
-  },
-  {
-    "slug": "codigo-samurai",
-    "nome": "Código Samurai",
-    "count": 1
-  },
-  {
-    "slug": "cicero",
-    "nome": "Cícero",
-    "count": 1
-  },
-  {
-    "slug": "carlos-torres-pastorino",
-    "nome": "Carlos Torres Pastorino",
-    "count": 1
-  },
-  {
-    "slug": "manoel-de-barros",
-    "nome": "Manoel de Barros",
-    "count": 1
-  },
-  {
-    "slug": "paulo-freire",
-    "nome": "Paulo Freire",
-    "count": 1
-  },
-  {
-    "slug": "nelson-mandela",
-    "nome": "Nelson Mandela",
-    "count": 1
-  },
-  {
-    "slug": "arnaldo-jabor",
-    "nome": "Arnaldo Jabor",
-    "count": 1
-  },
-  {
-    "slug": "isaac-newton",
-    "nome": "Isaac Newton",
-    "count": 1
-  },
-  {
-    "slug": "jean-piaget",
-    "nome": "Jean Piaget",
+    "slug": "ronaldo-jesus-dos-santos",
+    "nome": "Ronaldo Jesus dos Santos",
     "count": 1
   },
   {
@@ -800,133 +815,23 @@
     "count": 1
   },
   {
-    "slug": "eca-de-queiros",
-    "nome": "Eça de Queirós",
+    "slug": "serie-bones",
+    "nome": "Série Bones",
     "count": 1
   },
   {
-    "slug": "mark-twain",
-    "nome": "Mark Twain",
+    "slug": "salustio",
+    "nome": "Salústio",
     "count": 1
   },
   {
-    "slug": "ludwig-wittgenstein",
-    "nome": "Ludwig Wittgenstein",
+    "slug": "alfred-de-vigny",
+    "nome": "Alfred de Vigny",
     "count": 1
   },
   {
-    "slug": "milan-kundera",
-    "nome": "Milan Kundera",
-    "count": 1
-  },
-  {
-    "slug": "pequena-sereia",
-    "nome": "Pequena Sereia",
-    "count": 1
-  },
-  {
-    "slug": "sofocles",
-    "nome": "Sófocles",
-    "count": 1
-  },
-  {
-    "slug": "h-l-mencken",
-    "nome": "H. L. Mencken",
-    "count": 1
-  },
-  {
-    "slug": "millor-fernandes",
-    "nome": "Millôr Fernandes",
-    "count": 1
-  },
-  {
-    "slug": "oscar-wilde",
-    "nome": "Oscar Wilde",
-    "count": 1
-  },
-  {
-    "slug": "benjamin-franklin",
-    "nome": "Benjamin Franklin",
-    "count": 1
-  },
-  {
-    "slug": "edmund-burke",
-    "nome": "Edmund Burke",
-    "count": 1
-  },
-  {
-    "slug": "jan-neruda",
-    "nome": "Jan Neruda",
-    "count": 1
-  },
-  {
-    "slug": "michel-de-montaigne",
-    "nome": "Michel de Montaigne",
-    "count": 1
-  },
-  {
-    "slug": "denis-diderot",
-    "nome": "Denis Diderot",
-    "count": 1
-  },
-  {
-    "slug": "robert-collier",
-    "nome": "Robert Collier",
-    "count": 1
-  },
-  {
-    "slug": "erich-remarque",
-    "nome": "Erich Remarque",
-    "count": 1
-  },
-  {
-    "slug": "blaise-pascal",
-    "nome": "Blaise Pascal",
-    "count": 1
-  },
-  {
-    "slug": "carlos-andradas",
-    "nome": "Carlos Andradas",
-    "count": 1
-  },
-  {
-    "slug": "fernando-sabino",
-    "nome": "Fernando Sabino",
-    "count": 1
-  },
-  {
-    "slug": "albert-schweitzer",
-    "nome": "Albert Schweitzer",
-    "count": 1
-  },
-  {
-    "slug": "g-k-chesterton",
-    "nome": "G. K. Chesterton",
-    "count": 1
-  },
-  {
-    "slug": "armando-nogueira",
-    "nome": "Armando Nogueira",
-    "count": 1
-  },
-  {
-    "slug": "lucille-ball",
-    "nome": "Lucille Ball",
-    "count": 1
-  },
-  {
-    "slug": "jean-rostand",
-    "nome": "Jean Rostand",
-    "count": 1
-  },
-  {
-    "slug": "alfred-montapert",
-    "nome": "Alfred Montapert",
-    "count": 1
-  },
-  {
-    "slug": "ernesto-sabato",
-    "nome": "Ernesto Sabato",
+    "slug": "bianco-r-schimites",
+    "nome": "Bianco R. Schimites",
     "count": 1
   },
   {
@@ -935,23 +840,8 @@
     "count": 1
   },
   {
-    "slug": "luis-fernando-verissimo",
-    "nome": "Luis Fernando Verissimo",
-    "count": 1
-  },
-  {
-    "slug": "leandro-karnal",
-    "nome": "Leandro Karnal",
-    "count": 1
-  },
-  {
-    "slug": "liberdade-otimismo-luz",
-    "nome": "liberdade, otimismo, luz",
-    "count": 1
-  },
-  {
-    "slug": "cazuza",
-    "nome": "Cazuza",
+    "slug": "h-l-mencken",
+    "nome": "H. L. Mencken",
     "count": 1
   },
   {
@@ -960,88 +850,23 @@
     "count": 1
   },
   {
-    "slug": "aylor-lopes-jr",
-    "nome": "Aylor Lopes Jr.",
+    "slug": "kassio-murta",
+    "nome": "Kassio Murta",
     "count": 1
   },
   {
-    "slug": "rita-lee",
-    "nome": "Rita Lee",
+    "slug": "g-k-chesterton",
+    "nome": "G. K. Chesterton",
     "count": 1
   },
   {
-    "slug": "israel-ziller",
-    "nome": "Israel Ziller",
+    "slug": "anthony-robbins",
+    "nome": "Anthony Robbins",
     "count": 1
   },
   {
-    "slug": "robert-oppenheimer",
-    "nome": "Robert Oppenheimer",
-    "count": 1
-  },
-  {
-    "slug": "os-13-porques",
-    "nome": "Os 13 Porquês",
-    "count": 1
-  },
-  {
-    "slug": "chorao",
-    "nome": "Chorão",
-    "count": 1
-  },
-  {
-    "slug": "indira-gandhi",
-    "nome": "Indira Gandhi",
-    "count": 1
-  },
-  {
-    "slug": "diego-eboli",
-    "nome": "Diego Éboli",
-    "count": 1
-  },
-  {
-    "slug": "gherheai",
-    "nome": "Gherheai",
-    "count": 1
-  },
-  {
-    "slug": "antonio-gramsci",
-    "nome": "Antônio Gramsci",
-    "count": 1
-  },
-  {
-    "slug": "davi-khouri",
-    "nome": "Davi Khouri",
-    "count": 1
-  },
-  {
-    "slug": "luis-alberto-pontes",
-    "nome": "Luis Alberto Pontes",
-    "count": 1
-  },
-  {
-    "slug": "jader-medeiros",
-    "nome": "Jader Medeiros",
-    "count": 1
-  },
-  {
-    "slug": "ninah-lyanz",
-    "nome": "Ninah Lyanz",
-    "count": 1
-  },
-  {
-    "slug": "wagner-maschio",
-    "nome": "Wagner Maschio",
-    "count": 1
-  },
-  {
-    "slug": "preza",
-    "nome": "Preza",
-    "count": 1
-  },
-  {
-    "slug": "walter-winchell",
-    "nome": "Walter Winchell",
+    "slug": "romulo-bourbon",
+    "nome": "Rômulo Bourbon",
     "count": 1
   },
   {
@@ -1050,93 +875,8 @@
     "count": 1
   },
   {
-    "slug": "lizie-oliveira",
-    "nome": "Lizie Oliveira",
-    "count": 1
-  },
-  {
-    "slug": "valdeci-alves-nogueira",
-    "nome": "Valdeci Alves Nogueira",
-    "count": 1
-  },
-  {
-    "slug": "sergio-cancioneiro",
-    "nome": "Sérgio Cancioneiro",
-    "count": 1
-  },
-  {
-    "slug": "psicanalista-jorge-monteiro",
-    "nome": "Psicanalista Jorge Monteiro",
-    "count": 1
-  },
-  {
-    "slug": "hiago-rodrigues-reis-de-queiros",
-    "nome": "Hiago Rodrigues Reis de Queirós",
-    "count": 1
-  },
-  {
-    "slug": "o-lado-bom-da-vida",
-    "nome": "O lado bom da vida",
-    "count": 1
-  },
-  {
-    "slug": "melanialudwig",
-    "nome": "melanialudwig",
-    "count": 1
-  },
-  {
-    "slug": "martin-seligman",
-    "nome": "Martin Seligman",
-    "count": 1
-  },
-  {
-    "slug": "ricardo-majela",
-    "nome": "Ricardo Majela",
-    "count": 1
-  },
-  {
-    "slug": "pqogspn",
-    "nome": "PQOGSPN!",
-    "count": 1
-  },
-  {
-    "slug": "rosa-berg",
-    "nome": "Rosa Berg",
-    "count": 1
-  },
-  {
-    "slug": "talita-galhardo",
-    "nome": "Talita Galhardo",
-    "count": 1
-  },
-  {
-    "slug": "steve-jobs",
-    "nome": "Steve Jobs",
-    "count": 1
-  },
-  {
-    "slug": "zelia-gattai",
-    "nome": "Zélia Gattai",
-    "count": 1
-  },
-  {
-    "slug": "mariana-nunes",
-    "nome": "Mariana Nunes",
-    "count": 1
-  },
-  {
-    "slug": "priscilla-rodighiero",
-    "nome": "Priscilla Rodighiero",
-    "count": 1
-  },
-  {
-    "slug": "ailin-aleixo",
-    "nome": "Ailin Aleixo",
-    "count": 1
-  },
-  {
-    "slug": "um-amor-para-recordar",
-    "nome": "Um Amor para Recordar",
+    "slug": "leandro-karnal",
+    "nome": "Leandro Karnal",
     "count": 1
   },
   {
@@ -1145,8 +885,253 @@
     "count": 1
   },
   {
+    "slug": "luc-de-clapiers-vauvenargues",
+    "nome": "Luc de Clapiers Vauvenargues",
+    "count": 1
+  },
+  {
+    "slug": "paulo-freire",
+    "nome": "Paulo Freire",
+    "count": 1
+  },
+  {
+    "slug": "cazuza",
+    "nome": "Cazuza",
+    "count": 1
+  },
+  {
+    "slug": "denis-diderot",
+    "nome": "Denis Diderot",
+    "count": 1
+  },
+  {
+    "slug": "ricardo-majela",
+    "nome": "Ricardo Majela",
+    "count": 1
+  },
+  {
+    "slug": "eca-de-queiros",
+    "nome": "Eça de Queirós",
+    "count": 1
+  },
+  {
+    "slug": "alfred-montapert",
+    "nome": "Alfred Montapert",
+    "count": 1
+  },
+  {
+    "slug": "wagner-araujo-leite",
+    "nome": "Wagner Araujo Leite",
+    "count": 1
+  },
+  {
+    "slug": "israel-ziller",
+    "nome": "Israel Ziller",
+    "count": 1
+  },
+  {
+    "slug": "daniel-victor-lima",
+    "nome": "Daniel Victor Lima",
+    "count": 1
+  },
+  {
+    "slug": "tombos-da-vida",
+    "nome": "Tombos da vida",
+    "count": 1
+  },
+  {
+    "slug": "john-ruskin",
+    "nome": "John Ruskin",
+    "count": 1
+  },
+  {
+    "slug": "isaque-ramon-correia-claudio",
+    "nome": "Isaque Ramon Correia Claudio",
+    "count": 1
+  },
+  {
+    "slug": "eduardo-colamego",
+    "nome": "Eduardo Colamego",
+    "count": 1
+  },
+  {
+    "slug": "preza",
+    "nome": "Preza",
+    "count": 1
+  },
+  {
+    "slug": "robert-oppenheimer",
+    "nome": "Robert Oppenheimer",
+    "count": 1
+  },
+  {
+    "slug": "armando-nogueira",
+    "nome": "Armando Nogueira",
+    "count": 1
+  },
+  {
+    "slug": "brisah",
+    "nome": "BrisaH",
+    "count": 1
+  },
+  {
+    "slug": "cassia-guimaraes",
+    "nome": "Cassia Guimarães",
+    "count": 1
+  },
+  {
+    "slug": "everaldo-barros-barbosa",
+    "nome": "Everaldo Barros Barbosa",
+    "count": 1
+  },
+  {
+    "slug": "abraham-lincoln",
+    "nome": "Abraham Lincoln",
+    "count": 1
+  },
+  {
+    "slug": "antoine-de-saint-exupery",
+    "nome": "Antoine de Saint-Exupéry",
+    "count": 1
+  },
+  {
+    "slug": "jean-rostand",
+    "nome": "Jean Rostand",
+    "count": 1
+  },
+  {
+    "slug": "cicero",
+    "nome": "Cícero",
+    "count": 1
+  },
+  {
+    "slug": "cynthia-kersey",
+    "nome": "Cynthia Kersey",
+    "count": 1
+  },
+  {
+    "slug": "paulo-vieira",
+    "nome": "Paulo Vieira",
+    "count": 1
+  },
+  {
+    "slug": "erich-remarque",
+    "nome": "Erich Remarque",
+    "count": 1
+  },
+  {
+    "slug": "wagner-maschio",
+    "nome": "Wagner Maschio",
+    "count": 1
+  },
+  {
+    "slug": "theodore-roosevelt",
+    "nome": "Theodore Roosevelt",
+    "count": 1
+  },
+  {
+    "slug": "aristoteles",
+    "nome": "Aristóteles",
+    "count": 1
+  },
+  {
+    "slug": "emanuel-wertheimer",
+    "nome": "Emanuel Wertheimer",
+    "count": 1
+  },
+  {
+    "slug": "jan-neruda",
+    "nome": "Jan Neruda",
+    "count": 1
+  },
+  {
+    "slug": "luis-alberto-pontes",
+    "nome": "Luis Alberto Pontes",
+    "count": 1
+  },
+  {
+    "slug": "aylor-lopes-jr",
+    "nome": "Aylor Lopes Jr.",
+    "count": 1
+  },
+  {
     "slug": "marilene-a-branquinho",
     "nome": "Marilene A. Branquinho",
+    "count": 1
+  },
+  {
+    "slug": "cigano-romani",
+    "nome": "Cigano Romani",
+    "count": 1
+  },
+  {
+    "slug": "bruno-carvalho",
+    "nome": "Bruno Carvalho",
+    "count": 1
+  },
+  {
+    "slug": "estela-joaquina-valadares-canabrava",
+    "nome": "Estela Joaquina Valadares Canabrava",
+    "count": 1
+  },
+  {
+    "slug": "milk-douglas",
+    "nome": "Milk Douglas",
+    "count": 1
+  },
+  {
+    "slug": "jader-medeiros",
+    "nome": "Jader Medeiros",
+    "count": 1
+  },
+  {
+    "slug": "honore-de-balzac",
+    "nome": "Honoré de Balzac",
+    "count": 1
+  },
+  {
+    "slug": "oscar-wilde",
+    "nome": "Oscar Wilde",
+    "count": 1
+  },
+  {
+    "slug": "borlone",
+    "nome": "Borlone",
+    "count": 1
+  },
+  {
+    "slug": "motivador",
+    "nome": "motivador",
+    "count": 1
+  },
+  {
+    "slug": "stubby-currence",
+    "nome": "Stubby Currence",
+    "count": 1
+  },
+  {
+    "slug": "fernando-sabino",
+    "nome": "Fernando Sabino",
+    "count": 1
+  },
+  {
+    "slug": "mark-twain",
+    "nome": "Mark Twain",
+    "count": 1
+  },
+  {
+    "slug": "talita-galhardo",
+    "nome": "Talita Galhardo",
+    "count": 1
+  },
+  {
+    "slug": "mercio-franklin",
+    "nome": "Mércio Franklin",
+    "count": 1
+  },
+  {
+    "slug": "ninah-lyanz",
+    "nome": "Ninah Lyanz",
     "count": 1
   },
   {
@@ -1155,28 +1140,43 @@
     "count": 1
   },
   {
-    "slug": "uilder-cesar",
-    "nome": "Uilder César",
+    "slug": "benjamin-franklin",
+    "nome": "Benjamin Franklin",
     "count": 1
   },
   {
-    "slug": "fernanda-montenegro",
-    "nome": "Fernanda Montenegro",
+    "slug": "jose-de-alencar",
+    "nome": "José de Alencar",
     "count": 1
   },
   {
-    "slug": "serie-bones",
-    "nome": "Série Bones",
+    "slug": "may-iakulo-targino",
+    "nome": "May Iakulo Targino",
     "count": 1
   },
   {
-    "slug": "luiz-inacio-lula-da-silva",
-    "nome": "Luiz Inácio Lula da Silva",
+    "slug": "mariana-nunes",
+    "nome": "Mariana Nunes",
     "count": 1
   },
   {
-    "slug": "sol-pinheiro",
-    "nome": "Sol Pinheiro",
+    "slug": "milan-kundera",
+    "nome": "Milan Kundera",
+    "count": 1
+  },
+  {
+    "slug": "sergio-cancioneiro",
+    "nome": "Sérgio Cancioneiro",
+    "count": 1
+  },
+  {
+    "slug": "eleanor-roosevelt",
+    "nome": "Eleanor Roosevelt",
+    "count": 1
+  },
+  {
+    "slug": "manoel-de-barros",
+    "nome": "Manoel de Barros",
     "count": 1
   }
 ]

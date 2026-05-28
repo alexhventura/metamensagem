@@ -1,5 +1,28 @@
 [
   {
+    "id": "f_68zsvan4s",
+    "slug": "ha-duas-formas-para-viver-a-sua-vida-uma-e-acreditar-que-na",
+    "frase_original": "Há duas formas para viver a sua vida. Uma é acreditar que não existe milagre. A outra é acreditar que todas as coisas são um milagre.",
+    "autor_original": "Albert Einstein",
+    "categoria": "inspiracional",
+    "contextos": [
+      "reflexao"
+    ],
+    "explicacao": "",
+    "palavras_chave": [
+      "inspiracional",
+      "reflexao"
+    ],
+    "autor_tipo": "fisico",
+    "nacionalidade": "alemao-suico",
+    "nascimento_falecimento": "1879-1955",
+    "ano_ou_data": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
     "id": "f_ei_001",
     "slug": "imaginacao-supera-conhecimento",
     "frase_original": "Imagination is more important than knowledge.",
@@ -132,6 +155,31 @@
     "nacionalidade": "alemao-suico",
     "nascimento_falecimento": "1879-1955",
     "ano_ou_data": "1933",
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
+    "id": "f_pk1j27tgi",
+    "slug": "se-a-e-o-sucesso-entao-a-e-igual-a-x-mais-y-mais-z-o-traba",
+    "frase_original": "Se A é o sucesso, então A é igual a X mais Y mais Z. O trabalho é X; Y é o lazer; e Z é manter a boca fechada.",
+    "autor_original": "Albert Einstein",
+    "categoria": "inspiracional",
+    "contextos": [
+      "motivacao",
+      "sucesso"
+    ],
+    "explicacao": "",
+    "palavras_chave": [
+      "inspiracional",
+      "motivacao",
+      "sucesso"
+    ],
+    "autor_tipo": "fisico",
+    "nacionalidade": "alemao-suico",
+    "nascimento_falecimento": "1879-1955",
+    "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
       "confiabilidade": null

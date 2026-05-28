@@ -52,5 +52,95 @@
     "nome": "Bom Dia",
     "descricao": "Frases de bom dia.",
     "count": 5
+  },
+  {
+    "slug": "sabedoria",
+    "nome": "Sabedoria",
+    "descricao": "Frases de sabedoria.",
+    "count": 3
+  },
+  {
+    "slug": "ciencia",
+    "nome": "Ciencia",
+    "descricao": "Frases de ciencia.",
+    "count": 2
+  },
+  {
+    "slug": "vida",
+    "nome": "Vida",
+    "descricao": "Frases de vida.",
+    "count": 2
+  },
+  {
+    "slug": "filosofia",
+    "nome": "Filosofia",
+    "descricao": "Frases de filosofia.",
+    "count": 2
+  },
+  {
+    "slug": "acao",
+    "nome": "Acao",
+    "descricao": "Frases de acao.",
+    "count": 1
+  },
+  {
+    "slug": "motivacao",
+    "nome": "Motivacao",
+    "descricao": "Frases de motivacao.",
+    "count": 1
+  },
+  {
+    "slug": "estrategia",
+    "nome": "Estrategia",
+    "descricao": "Frases de estrategia.",
+    "count": 1
+  },
+  {
+    "slug": "mindset",
+    "nome": "Mindset",
+    "descricao": "Frases de mindset.",
+    "count": 1
+  },
+  {
+    "slug": "logica",
+    "nome": "Logica",
+    "descricao": "Frases de logica.",
+    "count": 1
+  },
+  {
+    "slug": "educacao",
+    "nome": "Educacao",
+    "descricao": "Frases de educacao.",
+    "count": 1
+  },
+  {
+    "slug": "criatividade",
+    "nome": "Criatividade",
+    "descricao": "Frases de criatividade.",
+    "count": 1
+  },
+  {
+    "slug": "conhecimento",
+    "nome": "Conhecimento",
+    "descricao": "Frases de conhecimento.",
+    "count": 1
+  },
+  {
+    "slug": "fisica",
+    "nome": "Fisica",
+    "descricao": "Frases de fisica.",
+    "count": 1
+  },
+  {
+    "slug": "disciplina",
+    "nome": "Disciplina",
+    "descricao": "Frases de disciplina.",
+    "count": 1
+  },
+  {
+    "slug": "verdade",
+    "nome": "Verdade",
+    "descricao": "Frases de verdade.",
+    "count": 1
   }
 ]

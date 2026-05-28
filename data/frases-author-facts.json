@@ -1,0 +1,88 @@
+{
+  "_comment": "Metadados de autor verificáveis (domínio público). Usados só quando o campo da frase está vazio.",
+  "william james": {
+    "autor_tipo": "filosofo",
+    "nacionalidade": "americano",
+    "nascimento_falecimento": "1842-1910"
+  },
+  "fernando pessoa": {
+    "autor_tipo": "poeta",
+    "nacionalidade": "portugues",
+    "nascimento_falecimento": "1888-1935"
+  },
+  "jose de alencar": {
+    "autor_tipo": "escritor",
+    "nacionalidade": "brasileiro",
+    "nascimento_falecimento": "1829-1877"
+  },
+  "charles chaplin": {
+    "autor_tipo": "cineasta",
+    "nacionalidade": "britanico",
+    "nascimento_falecimento": "1889-1977"
+  },
+  "indira gandhi": {
+    "autor_tipo": "politica",
+    "nacionalidade": "indiana",
+    "nascimento_falecimento": "1917-1984"
+  },
+  "joseph conrad": {
+    "autor_tipo": "escritor",
+    "nacionalidade": "polones-britanico",
+    "nascimento_falecimento": "1857-1924"
+  },
+  "max planck": {
+    "autor_tipo": "fisico",
+    "nacionalidade": "alemao",
+    "nascimento_falecimento": "1858-1947"
+  },
+  "mahatma gandhi": {
+    "autor_tipo": "lider politico",
+    "nacionalidade": "indiano",
+    "nascimento_falecimento": "1869-1948"
+  },
+  "nelson mandela": {
+    "autor_tipo": "lider politico",
+    "nacionalidade": "sul-africano",
+    "nascimento_falecimento": "1918-2013"
+  },
+  "winston churchill": {
+    "autor_tipo": "politico",
+    "nacionalidade": "britanico",
+    "nascimento_falecimento": "1874-1965"
+  },
+  "mark twain": {
+    "autor_tipo": "escritor",
+    "nacionalidade": "americano",
+    "nascimento_falecimento": "1835-1910"
+  },
+  "oscar wilde": {
+    "autor_tipo": "escritor",
+    "nacionalidade": "irlandes",
+    "nascimento_falecimento": "1854-1900"
+  },
+  "platao": {
+    "autor_tipo": "filosofo",
+    "nacionalidade": "grego",
+    "nascimento_falecimento": "428-348 a.C."
+  },
+  "aristoteles": {
+    "autor_tipo": "filosofo",
+    "nacionalidade": "grego",
+    "nascimento_falecimento": "384-322 a.C."
+  },
+  "confucio": {
+    "autor_tipo": "filosofo",
+    "nacionalidade": "chines",
+    "nascimento_falecimento": "551-479 a.C."
+  },
+  "raul seixas": {
+    "autor_tipo": "musico",
+    "nacionalidade": "brasileiro",
+    "nascimento_falecimento": "1945-1989"
+  },
+  "sylvester stallone": {
+    "autor_tipo": "ator",
+    "nacionalidade": "americano",
+    "nascimento_falecimento": "1946-"
+  }
+}

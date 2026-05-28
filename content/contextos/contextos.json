@@ -9,7 +9,7 @@
     "slug": "reflexao",
     "nome": "Reflexao",
     "descricao": "Mensagens sobre reflexao.",
-    "count": 117
+    "count": 118
   },
   {
     "slug": "motivacao",
@@ -33,7 +33,7 @@
     "slug": "superacao",
     "nome": "Superacao",
     "descricao": "Mensagens sobre superacao.",
-    "count": 24
+    "count": 25
   },
   {
     "slug": "sucesso",
@@ -45,7 +45,7 @@
     "slug": "persistencia",
     "nome": "Persistencia",
     "descricao": "Mensagens sobre persistencia.",
-    "count": 16
+    "count": 17
   },
   {
     "slug": "felicidade",
@@ -72,21 +72,117 @@
     "count": 13
   },
   {
+    "slug": "foco",
+    "nome": "Foco",
+    "descricao": "Mensagens sobre foco.",
+    "count": 8
+  },
+  {
     "slug": "determinacao",
     "nome": "Determinacao",
     "descricao": "Mensagens sobre determinacao.",
     "count": 7
   },
   {
-    "slug": "foco",
-    "nome": "Foco",
-    "descricao": "Mensagens sobre foco.",
-    "count": 6
+    "slug": "adaptacao",
+    "nome": "Adaptacao",
+    "descricao": "Mensagens sobre adaptacao.",
+    "count": 2
   },
   {
     "slug": "coragem",
     "nome": "Coragem",
     "descricao": "Mensagens sobre coragem.",
     "count": 2
+  },
+  {
+    "slug": "curiosidade",
+    "nome": "Curiosidade",
+    "descricao": "Mensagens sobre curiosidade.",
+    "count": 2
+  },
+  {
+    "slug": "resiliencia",
+    "nome": "Resiliencia",
+    "descricao": "Mensagens sobre resiliencia.",
+    "count": 1
+  },
+  {
+    "slug": "disciplina",
+    "nome": "Disciplina",
+    "descricao": "Mensagens sobre disciplina.",
+    "count": 1
+  },
+  {
+    "slug": "execucao",
+    "nome": "Execucao",
+    "descricao": "Mensagens sobre execucao.",
+    "count": 1
+  },
+  {
+    "slug": "meditacao",
+    "nome": "Meditacao",
+    "descricao": "Mensagens sobre meditacao.",
+    "count": 1
+  },
+  {
+    "slug": "criatividade",
+    "nome": "Criatividade",
+    "descricao": "Mensagens sobre criatividade.",
+    "count": 1
+  },
+  {
+    "slug": "equilibrio",
+    "nome": "Equilibrio",
+    "descricao": "Mensagens sobre equilibrio.",
+    "count": 1
+  },
+  {
+    "slug": "mudanca",
+    "nome": "Mudanca",
+    "descricao": "Mensagens sobre mudanca.",
+    "count": 1
+  },
+  {
+    "slug": "inovacao",
+    "nome": "Inovacao",
+    "descricao": "Mensagens sobre inovacao.",
+    "count": 1
+  },
+  {
+    "slug": "aprendizado",
+    "nome": "Aprendizado",
+    "descricao": "Mensagens sobre aprendizado.",
+    "count": 1
+  },
+  {
+    "slug": "conhecimento",
+    "nome": "Conhecimento",
+    "descricao": "Mensagens sobre conhecimento.",
+    "count": 1
+  },
+  {
+    "slug": "lei-natural",
+    "nome": "Lei Natural",
+    "descricao": "Mensagens sobre lei natural.",
+    "count": 1
+  },
+  {
+    "slug": "observacao",
+    "nome": "Observacao",
+    "descricao": "Mensagens sobre observacao.",
+    "count": 1
+  },
+  {
+    "slug": "humildade",
+    "nome": "Humildade",
+    "descricao": "Mensagens sobre humildade.",
+    "count": 1
+  },
+  {
+    "slug": "autoconhecimento",
+    "nome": "Autoconhecimento",
+    "descricao": "Mensagens sobre autoconhecimento.",
+    "count": 1
   }
 ]

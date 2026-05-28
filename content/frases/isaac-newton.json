@@ -1,5 +1,28 @@
 [
   {
+    "id": "f_5d99yy4kv",
+    "slug": "tenho-a-impressao-de-ter-sido-uma-crianca-brincando-a-beira",
+    "frase_original": "Tenho a impressão de ter sido uma criança brincando à beira-mar, divertindo-me em descobrir uma pedrinha mais lisa ou uma concha mais bonita que as outras, enquanto o imenso oceano da verdade continua misterioso diante de meus olhos.",
+    "autor_original": "Isaac Newton",
+    "categoria": "inspiracional",
+    "contextos": [
+      "reflexao"
+    ],
+    "explicacao": "",
+    "palavras_chave": [
+      "inspiracional",
+      "reflexao"
+    ],
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "ano_ou_data": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
     "id": "f_in_001",
     "slug": "ombros-de-gigantes",
     "frase_original": "If I have seen further it is by standing on the shoulders of giants.",

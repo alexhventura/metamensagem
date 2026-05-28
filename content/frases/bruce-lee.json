@@ -1,5 +1,28 @@
 [
   {
+    "id": "f_21ff72w3q",
+    "slug": "nao-reze-por-uma-vida-facil-reze-por-forcas-para-suportar-u",
+    "frase_original": "Não reze por uma vida fácil, reze por forças para suportar uma difícil.",
+    "autor_original": "Bruce Lee",
+    "categoria": "inspiracional",
+    "contextos": [
+      "motivacao"
+    ],
+    "explicacao": "",
+    "palavras_chave": [
+      "inspiracional",
+      "motivacao"
+    ],
+    "autor_tipo": "artista-marcial",
+    "nacionalidade": "chines-americano",
+    "nascimento_falecimento": "1940-1973",
+    "ano_ou_data": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
     "id": "f_bl_001",
     "slug": "seja-agua-meu-amigo",
     "frase_original": "Be water, my friend.",

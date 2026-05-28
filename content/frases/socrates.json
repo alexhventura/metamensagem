@@ -1,5 +1,30 @@
 [
   {
+    "id": "f_qpqupl4u7",
+    "slug": "a-sabedoria-comeca-na-reflexao",
+    "frase_original": "A sabedoria começa na reflexão.",
+    "autor_original": "Sócrates",
+    "categoria": "inspiracional",
+    "contextos": [
+      "reflexao",
+      "sabedoria"
+    ],
+    "explicacao": "",
+    "palavras_chave": [
+      "inspiracional",
+      "reflexao",
+      "sabedoria"
+    ],
+    "autor_tipo": "filosofo",
+    "nacionalidade": "grego",
+    "nascimento_falecimento": "470-399 AC",
+    "ano_ou_data": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-05-28",
+      "confiabilidade": null
+    }
+  },
+  {
     "id": "f_so_001",
     "slug": "so-sei-que-nada-sei",
     "frase_original": "I know that I know nothing.",

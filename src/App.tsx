@@ -32,6 +32,7 @@ import {
   ChevronLeft
 } from 'lucide-react';
 
+import CustomModalGeradorPost from './components/ModalGeradorPost';
 import GoogleAdSense from './components/GoogleAdSense';
 import { CardTranslateMenu } from './components/CardTranslateMenu';
 import { type CardContentDisplay } from './lib/translation';
@@ -460,6 +461,7 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
   const { t } = useTranslation();
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(10);
+  const [itemPost, setItemPost] = useState<ItemConteudo | null>(null);
   const resultadosFiltrados = useMemo(() => {
     if (!busca.trim()) return bancoRandom;
     return searchBancoSemantico(banco, busca);
@@ -549,6 +551,7 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
                 item={item}
                 tema={tema}
                 toast={toast}
+                onEditImage={item.tipo === 'frase' ? setItemPost : undefined}
               />
             );
           })}
@@ -565,6 +568,15 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
       )}
 
       <SocialHub tema={tema} />
+
+      {itemPost && (
+        <CustomModalGeradorPost
+          item={itemPost}
+          onClose={() => setItemPost(null)}
+          toast={toast}
+          temaGlobal={tema}
+        />
+      )}
     </motion.div>
   );
 }
@@ -609,6 +621,7 @@ function ColecaoContador({
 function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: ItemConteudo[] }) {
   const { t } = useTranslation();
   const [busca, setBusca] = useState('');
+  const [itemPost, setItemPost] = useState<ItemConteudo | null>(null);
   const baseFrases = useMemo(() => {
     const list = banco.filter(i => i.tipo === 'frase');
     const newArr = [...list];
@@ -692,12 +705,22 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
               item={itemObj.content}
               tema={tema}
               toast={toast}
+              onEditImage={setItemPost}
             />
           );
         })}
       </div>
       
       <SocialHub tema={tema} />
+
+      {itemPost && (
+        <CustomModalGeradorPost
+          item={itemPost}
+          onClose={() => setItemPost(null)}
+          toast={toast}
+          temaGlobal={tema}
+        />
+      )}
     </motion.div>
   );
 }

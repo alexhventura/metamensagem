@@ -104,13 +104,31 @@ export default function ContentCard({
     toast(t('common.copied'));
   };
 
-  const handleShare = () => {
+  const handleShare = async () => {
     const titulo = display.titulo ?? item.titulo;
     const text = isFrase ? display.texto : `${titulo}\n\n${display.texto}`;
-    const url = `${window.location.origin}/?text=${encodeURIComponent(text)}`;
-    navigator.clipboard.writeText(url);
+    const shareUrl = `${window.location.origin}${detailPath}`;
+    const sharePayload = isFrase
+      ? { title: item.autor, text: `${text} — ${item.autor}`, url: shareUrl }
+      : { title: titulo, text, url: shareUrl };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(sharePayload);
+        return;
+      }
+    } catch (err) {
+      if ((err as Error).name === 'AbortError') return;
+    }
+
+    await navigator.clipboard.writeText(shareUrl);
     toast(t('common.link_copied'));
   };
+
+  const actionBtnClass =
+    tema === 'light'
+      ? 'bg-zinc-100 text-zinc-500 hover:bg-zinc-200'
+      : 'bg-zinc-900/50 text-zinc-400 hover:bg-zinc-900 border border-white/5';
 
   return (
     <motion.div
@@ -127,14 +145,12 @@ export default function ContentCard({
         }`}
       >
         <div className="relative z-10 flex-1 flex flex-col">
-          {!isFrase && (
-            <div className="flex items-center gap-2 mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-purple-600" />
-              <span className="text-[10px] uppercase font-black tracking-widest text-zinc-500">
-                {item.tipo}
-              </span>
-            </div>
-          )}
+          <div className="flex items-center gap-2 mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-purple-600" />
+            <span className="text-[10px] uppercase font-black tracking-widest text-zinc-500">
+              {item.tipo}
+            </span>
+          </div>
 
           <div className="flex flex-col flex-1">
             {!isFrase && item.imagem && (
@@ -183,19 +199,17 @@ export default function ContentCard({
             </div>
           </div>
 
-          {!isFrase && (
-            <div className="flex flex-wrap gap-1.5 mt-auto">
-              {item.tags?.slice(0, 3).map((tag) => (
-                <Link
-                  key={tag}
-                  to={pathFromTag(tag)}
-                  className="text-[9px] font-black px-2.5 py-1 rounded-full bg-purple-500/5 text-purple-400 border border-purple-500/10 hover:bg-purple-500/15 transition-colors"
-                >
-                  #{tag.toUpperCase()}
-                </Link>
-              ))}
-            </div>
-          )}
+          <div className="flex flex-wrap gap-1.5 mt-auto">
+            {item.tags?.slice(0, 3).map((tag) => (
+              <Link
+                key={tag}
+                to={pathFromTag(tag)}
+                className="text-[9px] font-black px-2.5 py-1 rounded-full bg-purple-500/5 text-purple-400 border border-purple-500/10 hover:bg-purple-500/15 transition-colors"
+              >
+                #{tag.toUpperCase()}
+              </Link>
+            ))}
+          </div>
 
           <div className="flex items-center gap-3 mt-6 pt-6 border-t border-zinc-500/10">
             <div className="w-1.5 h-1.5 rounded-full bg-purple-600" />
@@ -205,57 +219,50 @@ export default function ContentCard({
           </div>
         </div>
 
-        {!isFrase && (
-          <div className="mt-8 flex justify-end items-end gap-2 relative z-10 min-h-[3.375rem]">
-            <Tooltip text={t('common.copy')} tema={tema}>
+        <div className="mt-8 flex justify-end items-end gap-2 relative z-10 min-h-[3.375rem]">
+          <Tooltip text={t('common.copy')} tema={tema}>
+            <button
+              type="button"
+              onClick={handleCopy}
+              className={`p-3.5 rounded-2xl transition-all ${actionBtnClass}`}
+            >
+              <Copy size={18} />
+            </button>
+          </Tooltip>
+
+          <Tooltip text={t('common.share')} tema={tema}>
+            <button
+              type="button"
+              onClick={() => void handleShare()}
+              className={`p-3.5 rounded-2xl transition-all ${actionBtnClass}`}
+            >
+              <Share2 size={18} />
+            </button>
+          </Tooltip>
+
+          <Tooltip text={t('common.translate')} tema={tema}>
+            <CardTranslateMenu
+              tema={tema}
+              contentId={item.id}
+              source={translateSource}
+              onDisplayChange={setDisplay}
+              onLoadingChange={setTranslating}
+              tooltipLabel={t('common.translate')}
+            />
+          </Tooltip>
+
+          {isFrase && onEditImage && (
+            <Tooltip text={t('common.edit_image')} tema={tema}>
               <button
-                onClick={handleCopy}
-                className={`p-3.5 rounded-2xl transition-all ${
-                  tema === 'light'
-                    ? 'bg-zinc-100 text-zinc-500 hover:bg-zinc-200'
-                    : 'bg-zinc-900/50 text-zinc-400 hover:bg-zinc-900 border border-white/5'
-                }`}
+                type="button"
+                onClick={() => onEditImage(item)}
+                className="p-3.5 bg-[#A855F7] hover:bg-[#9333EA] text-white rounded-2xl transition-all hover:scale-110 shadow-lg shadow-purple-500/20"
               >
-                <Copy size={18} />
+                <ImageIcon size={18} />
               </button>
             </Tooltip>
-
-            <Tooltip text={t('common.share')} tema={tema}>
-              <button
-                onClick={handleShare}
-                className={`p-3.5 rounded-2xl transition-all ${
-                  tema === 'light'
-                    ? 'bg-zinc-100 text-zinc-500 hover:bg-zinc-200'
-                    : 'bg-zinc-900/50 text-zinc-400 hover:bg-zinc-900 border border-white/5'
-                }`}
-              >
-                <Share2 size={18} />
-              </button>
-            </Tooltip>
-
-            <Tooltip text={t('common.translate')} tema={tema}>
-              <CardTranslateMenu
-                tema={tema}
-                contentId={item.id}
-                source={translateSource}
-                onDisplayChange={setDisplay}
-                onLoadingChange={setTranslating}
-                tooltipLabel={t('common.translate')}
-              />
-            </Tooltip>
-
-            {onEditImage && (
-              <Tooltip text={t('common.edit_image')} tema={tema}>
-                <button
-                  onClick={() => onEditImage(item)}
-                  className="p-3.5 bg-[#A855F7] hover:bg-[#9333EA] text-white rounded-2xl transition-all hover:scale-110 shadow-lg shadow-purple-500/20"
-                >
-                  <ImageIcon size={18} />
-                </button>
-              </Tooltip>
-            )}
-          </div>
-        )}
+          )}
+        </div>
 
         <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#A855F7]/5 rounded-full blur-3xl group-hover:bg-[#A855F7]/20 transition-colors pointer-events-none" />
       </div>

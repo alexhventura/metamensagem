@@ -25,6 +25,7 @@ import { GRID_CONTENT } from '../lib/contentGrid';
 import { flattenFeedWithAds } from '../lib/feedWithAds';
 import type { ItemConteudo } from '../types/content';
 import ContentCard from '../components/ContentCard';
+import CustomModalGeradorPost from '../components/ModalGeradorPost';
 
 type TagCategoriaProps = {
   tema: string;
@@ -52,6 +53,7 @@ export default function TagCategoriaView({
   const { tagSlug: tagSlugParam } = useParams<{ tagSlug: string }>();
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(24);
+  const [itemPost, setItemPost] = useState<ItemConteudo | null>(null);
 
   const resolvedSlug = useMemo(
     () => extractSlugFromTagUrlSegment(tagSlugParam),
@@ -249,6 +251,7 @@ export default function TagCategoriaView({
                   item={item}
                   tema={tema}
                   toast={toast}
+                  onEditImage={item.tipo === 'frase' ? setItemPost : undefined}
                 />
               );
             })
@@ -272,6 +275,14 @@ export default function TagCategoriaView({
         {matchStats.related > 0 && ` · ${matchStats.related} relacionadas`}
       </p>
 
+      {itemPost && (
+        <CustomModalGeradorPost
+          item={itemPost}
+          onClose={() => setItemPost(null)}
+          toast={toast}
+          temaGlobal={tema}
+        />
+      )}
     </motion.article>
   );
 }

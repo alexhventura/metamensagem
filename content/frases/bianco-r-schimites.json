@@ -10,7 +10,7 @@
       "motivacao",
       "sucesso"
     ],
-    "explicacao": "",
+    "explicacao": "De Bianco R. Schimites, mensagem motivacional sobre risco e sucesso. Diz que evitar erro por medo também elimina a chance de conquistar, porque aprendizado e vitória exigem exposição.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

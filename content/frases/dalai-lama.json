@@ -11,7 +11,7 @@
       "reflexao",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Atribuída ao Dalai Lama, embora circule em versões adaptadas e a autoria exata seja discutida. Distingue ontem e amanhã como tempos inúteis para ação, convidando a amar, crer e viver hoje.",
     "palavras_chave": [
       "amor",
       "bom-dia",
@@ -25,7 +25,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -37,7 +38,7 @@
     "contextos": [
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Outra frase atribuída ao Dalai Lama, mais direta. Trata o otimismo como escolha deliberada, capaz de melhorar o bem-estar independentemente das circunstâncias externas.",
     "palavras_chave": [
       "inspiracional",
       "otimismo"
@@ -48,7 +49,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

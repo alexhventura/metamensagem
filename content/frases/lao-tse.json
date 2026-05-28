@@ -8,7 +8,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Trecho do Tao Te Ching atribuído a Lao-Tsé: o sábio conhece o mundo pela introspecção, sem precisar viajar ou agir no sentido comum. A frase celebra a sabedoria interior e a ação desinteressada (wu wei). Foi dita no contexto da filosofia taoísta sobre contemplação e domínio de si.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

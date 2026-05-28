@@ -8,7 +8,7 @@
     "contextos": [
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Fala atribuída a Ezekiel, personagem de The Walking Dead, sobre três posturas diante da vida. Num mundo pós-apocalíptico, a frase equilibra pessimismo, otimismo ingênuo e pragmatismo adaptativo.",
     "palavras_chave": [
       "inspiracional",
       "otimismo"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

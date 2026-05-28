@@ -8,7 +8,7 @@
     "contextos": [
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Em obras como Guerra e Paz, Tolstói defende uma ética integral: bondade não se faz pela metade nem por conveniência. A frase cobra coerência moral total. Surge do pensamento moralista do autor sobre virtude e responsabilidade pessoal.",
     "palavras_chave": [
       "inspiracional",
       "motivacao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -11,7 +11,7 @@
       "otimismo",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Texto de Ailin Aleixo, com tom devocional e otimista típico de mensagens de redes sociais. Mistura fé, leveza no cotidiano e urgência existencial: viver plenamente porque a vida não se ensaia.",
     "palavras_chave": [
       "fe",
       "felicidade",
@@ -25,7 +25,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

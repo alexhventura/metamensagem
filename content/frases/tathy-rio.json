@@ -11,7 +11,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Tathy Rio escreve sobre disciplina versus motivação. Nem sempre haverá ânimo, mas hábitos firmes sustentam nos dias difíceis. Mensagem de rotina e foco para quem busca reerguer-se constantemente.",
     "palavras_chave": [
       "bom-dia",
       "determinacao",
@@ -25,7 +25,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

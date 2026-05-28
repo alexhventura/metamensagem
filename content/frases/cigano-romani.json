@@ -9,7 +9,7 @@
       "motivacao",
       "sucesso"
     ],
-    "explicacao": "",
+    "explicacao": "Mensagem atribuída a Cigano Romani, no registro motivacional popular. Usa a escada como metáfora: acreditar seria o primeiro degrau imprescindível rumo ao sucesso.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

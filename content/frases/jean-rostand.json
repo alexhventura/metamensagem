@@ -8,7 +8,7 @@
     "contextos": [
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Jean Rostand faz humor intelectual sobre o futuro do pessimismo com ironia otimista. O biólogo e ensaísta franceses brinca com a contradição de esperar algo positivo de uma visão negativa do mundo.",
     "palavras_chave": [
       "inspiracional",
       "otimismo"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

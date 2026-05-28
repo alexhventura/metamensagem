@@ -9,7 +9,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Atribuída a Martin Luther King Jr., embora a formulação exata seja debatida; transmite fé no primeiro passo sem ver o caminho inteiro. Usada em movimentos civis e palestras sobre coragem. Contexto: luta por direitos e confiança em processos longos.",
     "palavras_chave": [
       "fe",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

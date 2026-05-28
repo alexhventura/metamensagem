@@ -10,7 +10,7 @@
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "De Um Amor para Recordar, filme baseado em Nicholas Sparks. Personagem admira alegria e otimismo do amado mesmo durante doença. Momento em que amor e admiração se intensificam diante da fragilidade.",
     "palavras_chave": [
       "amor",
       "felicidade",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

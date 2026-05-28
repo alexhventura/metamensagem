@@ -8,7 +8,7 @@
     "contextos": [
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "G. K. Chesterton aponta a contradição entre o que otimistas e pessimistas toleram. O otimista aceita tudo exceto o pessimista; o pessimista condena tudo exceto a si — ironia sobre os dois extremos.",
     "palavras_chave": [
       "inspiracional",
       "otimismo"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

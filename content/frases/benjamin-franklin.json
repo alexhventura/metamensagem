@@ -8,7 +8,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Atribuída a Benjamin Franklin, pensador dos EUA do século XVIII. Alerta contra a crença de que dinheiro resolve tudo, sugerindo que quem pensa assim pode estar disposto a tudo por lucro.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

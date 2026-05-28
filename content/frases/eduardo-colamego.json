@@ -9,7 +9,7 @@
       "motivacao",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Eduardo Colamego compara o conhecimento a uma sede que cresce quanto mais se aprende. Metáfora clássica sobre curiosidade intelectual e o prazer eterno de descobrir, típica de pensadores sobre educação e sabedoria.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -9,7 +9,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Victor Hugo observa que falta determinação, não força bruta, às pessoas. Vontade firme supera talento ocioso. Frase clássica de motivação sobre persistência e foco.",
     "palavras_chave": [
       "determinacao",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

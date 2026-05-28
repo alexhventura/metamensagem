@@ -11,7 +11,7 @@
       "sabedoria",
       "sucesso"
     ],
-    "explicacao": "",
+    "explicacao": "Atribuída a Stubby Currence, usa trocadilho com ordem alfabética: success vem depois de work. Sucesso exige trabalho prévio, não atalhos. Clichê popular em contextos de motivação profissional.",
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
@@ -25,7 +25,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -9,7 +9,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Frase do filme de animação \"Arranha-Céu: Coragem Sem Limite\", ligada a motivação e coragem. Resume a moral da história: limites caem quando há propósito e incentivo suficientes para agir.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

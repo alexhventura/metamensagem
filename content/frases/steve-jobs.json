@@ -9,7 +9,7 @@
       "otimismo",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Steve Jobs, em entrevista, confessa otimismo sobre indivíduos — nobres, honráveis, alguns sábios — e ceticismo sobre grupos. Reflete experiência em liderar equipes e empresas. Nuance rara entre fé nas pessoas e desconfiança coletiva.",
     "palavras_chave": [
       "inspiracional",
       "otimismo",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

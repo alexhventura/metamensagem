@@ -9,7 +9,7 @@
       "inspiracional",
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Elbert Hubbard observa que nem pobreza nem riqueza garantem a felicidade. Crítica sutil à busca material do bem-estar, num tom filosófico-prático característico do autor americano de aforismos e ensaios motivacionais.",
     "palavras_chave": [
       "felicidade",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

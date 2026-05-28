@@ -8,7 +8,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Voltaire, iluminista, separa desejo de acreditar de prova de existência. Querer que algo seja verdade não a torna verdadeira. Crítica ao wishful thinking e ao dogmatismo.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -32,7 +33,7 @@
       "otimismo",
       "superacao"
     ],
-    "explicacao": "",
+    "explicacao": "Voltaire descreve esperança como alimento da alma misturado ao veneno do medo. Ambos coexistem: ansiar o futuro e temer perder. Reflexão psicológica sobre natureza humana.",
     "palavras_chave": [
       "inspiracional",
       "otimismo",
@@ -44,7 +45,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -56,7 +58,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Voltaire ironiza otimismo ingênuo: mania de dizer que tudo vai bem quando tudo vai mal. Crítica ao Pangloss de Candide e à negação da realidade. Tom cético em contexto filosófico.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -67,7 +69,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -79,7 +82,7 @@
     "contextos": [
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Mesma ironia voltaireana sobre otimismo forçado, aqui classificada como otimismo. Serve para questionar positividade que ignora sofrimento real. Lembrete de equilíbrio entre esperança e lucidez.",
     "palavras_chave": [
       "inspiracional",
       "otimismo"
@@ -90,7 +93,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -8,7 +8,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Jan Neruda observa que quem nada sabe precisa crer em tudo por falta de critério. Aforismo sobre ignorância e credulidade, possivelmente confundido com o poeta Pablo Neruda em algumas citações.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

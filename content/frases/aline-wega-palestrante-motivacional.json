@@ -11,7 +11,7 @@
       "motivacao",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Texto de Aline Wega, palestrante motivacional, com tom autobiográfico. Expõe uma busca por autoconhecimento e evolução espiritual como condição para dar sentido à vida e aos erros do percurso.",
     "palavras_chave": [
       "aprendizado",
       "foco",
@@ -25,7 +25,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

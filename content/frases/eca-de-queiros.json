@@ -8,7 +8,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Eça de Queirós ironiza dois tipos de curiosidade: a mesquinha e a grandiosa. A metáfora opõe quem espia fechaduras a quem ousa descobrir continentes, numa crítica satírica à mediocridade versus ambião criativa.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

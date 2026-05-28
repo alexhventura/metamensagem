@@ -10,7 +10,7 @@
       "motivacao",
       "sucesso"
     ],
-    "explicacao": "",
+    "explicacao": "Circula em nome de Abraham Lincoln como reflexão sobre responsabilidade e lealdade. Mesmo com dúvidas sobre a autoria exata, a frase explica o sucesso pelo peso moral de não decepcionar quem acreditou primeiro.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

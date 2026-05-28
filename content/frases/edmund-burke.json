@@ -9,7 +9,7 @@
       "inspiracional",
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Edmund Burke alerta contra confundir barulho político com verdadeira preocupação pública. Escrito no contexto do conservadorismo inglês do século XVIII, critica quem se lamenta em voz alta apenas para parecer virtuoso.",
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

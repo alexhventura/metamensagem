@@ -4,7 +4,7 @@
  * - Normaliza campos (ano_ou_data, slugs, etc.)
  * - Propaga metadados entre frases do mesmo autor (dados já existentes)
  * - Enriquece com data/frases-author-facts.json apenas em campos vazios
- * - Não inventa frase_original, explicacao nem datas sem base
+ * - Não inventa frase_original nem datas sem base; explicacao vem do script generate-frases-explicacao
  * - Regrava arquivos por autor + frases.json
  *
  * Uso: node scripts/migrate-all-frases.mjs [--dry-run]

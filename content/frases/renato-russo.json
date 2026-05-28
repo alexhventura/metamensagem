@@ -9,7 +9,7 @@
       "reflexao",
       "sonhos"
     ],
-    "explicacao": "",
+    "explicacao": "Trecho da canção Tempo Perdido, de Renato Russo e Legião Urbana. Responde a quem desacredita sonhos e projetos. É hino de resistência para jovens e artistas que ouvem críticas sobre futuro e identidade.",
     "palavras_chave": [
       "inspiracional",
       "reflexao",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -34,7 +35,7 @@
       "otimismo",
       "sonhos"
     ],
-    "explicacao": "",
+    "explicacao": "Mesma passagem de Tempo Perdido, aqui enfatizando otimismo diante de ceticismo alheio. Renato Russo defende manter fé nos próprios planos mesmo sob desânimo externo. Muito usada como frase motivacional sobre sonhos.",
     "palavras_chave": [
       "inspiracional",
       "otimismo",
@@ -46,7 +47,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -58,7 +60,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Outro trecho de Tempo Perdido, mais introspectivo. Renato Russo questiona por que quem mente parece mais forte e reconhece sua própria hipocrisia. Reflexão sobre moral, fraqueza e autoconhecimento na letra.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -69,7 +71,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -81,7 +84,7 @@
     "contextos": [
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Verso de Tempo Perdido que consola quando planos parecem falhar. Renato Russo sugere que fracassos abrem caminho para bons acontecimentos inesperados. Tom de otimismo realista sobre imprevistos da vida.",
     "palavras_chave": [
       "inspiracional",
       "otimismo"
@@ -92,7 +95,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

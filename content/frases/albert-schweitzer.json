@@ -9,7 +9,7 @@
       "otimismo",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "De Albert Schweitzer, médico, filósofo e teólogo. Separa lucidez pessimista diante dos fatos da vontade otimista de agir, mostrando esperança como decisão ética, não como negação da realidade.",
     "palavras_chave": [
       "inspiracional",
       "otimismo",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

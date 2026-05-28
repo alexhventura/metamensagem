@@ -9,7 +9,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Trecho do Salmo 121, da tradição bíblica cristã. É uma oração de viagem ou angústia: o fiel ergue os olhos aos montes e confia que a proteção vem de Deus, guardião vigilante.",
     "palavras_chave": [
       "fe",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

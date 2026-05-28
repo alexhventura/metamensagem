@@ -8,7 +8,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Isaac Newton humildemente compara seu trabalho a brincar na praia enquanto o oceano da verdade permanece inexplorado. Reflexão do físico sobre os limites do conhecimento humano diante do universo.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -31,7 +32,7 @@
     "contextos": [
       "conhecimento"
     ],
-    "explicacao": "Conhecimento é construção coletiva.",
+    "explicacao": "Newton escreveu a carta a Hooke reconhecendo devedores intelectuais. A metáfora dos “ombros de gigantes” expressa humildade científica: descobertas amplificam o trabalho de gerações anteriores.",
     "palavras_chave": [
       "ciencia",
       "aprendizado"
@@ -42,7 +43,8 @@
     "ano_ou_data": "1675",
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -54,7 +56,7 @@
     "contextos": [
       "lei-natural"
     ],
-    "explicacao": "Toda ação gera uma reação equivalente.",
+    "explicacao": "Enunciado da terceira lei do movimento em Principia (1687). Newton formaliza que forças agem em pares iguais e opostos — base da mecânica clássica e metáfora frequente sobre consequências das ações.",
     "palavras_chave": [
       "fisica",
       "acao"
@@ -65,7 +67,8 @@
     "ano_ou_data": "1687",
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -77,7 +80,7 @@
     "contextos": [
       "persistencia"
     ],
-    "explicacao": "Ciência exige paciência.",
+    "explicacao": "Atribuída a Newton no espírito de sua prática experimental. A investigação natural exigia anos de cálculo e observação; a paciência aparece como virtude indispensável ao cientista.",
     "palavras_chave": [
       "paciencia",
       "disciplina"
@@ -88,7 +91,8 @@
     "ano_ou_data": "1680",
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -100,7 +104,7 @@
     "contextos": [
       "observacao"
     ],
-    "explicacao": "Simplicidade revela a verdade.",
+    "explicacao": "Newton buscava leis simples para fenômenos complexos. A citação reflete confiança de que princípios econômicos e elegantes apontam melhor para a verdade do que explicações prolixas.",
     "palavras_chave": [
       "verdade",
       "simplicidade"
@@ -111,7 +115,8 @@
     "ano_ou_data": "1685",
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

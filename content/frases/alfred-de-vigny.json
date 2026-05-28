@@ -9,7 +9,7 @@
       "inspiracional",
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "De Alfred de Vigny, poeta e romancista francês do século XIX. Eleva o amor a tema filosófico infinito, usando metáforas cósmicas para dizer que amar provoca reflexão sem fim.",
     "palavras_chave": [
       "amor",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

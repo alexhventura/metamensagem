@@ -10,7 +10,7 @@
       "motivacao",
       "superacao"
     ],
-    "explicacao": "",
+    "explicacao": "Rafael Daibs Silvaston resume uma ideia sobre mudança pessoal: a coragem nasce do desafio que antecede a transformação. Quem quer mudar precisa encarar o desconforto inicial. Frase curta de superação e motivação.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -10,7 +10,7 @@
       "reflexao",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Atribuída a Confúcio, filósofo chinês antigo, sobre aquisição de sabedoria. Contrasta três caminhos — reflexão, imitação e experiência —, elogiando o pensamento, mas reconhecendo o custo da vivência.",
     "palavras_chave": [
       "amor",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -35,7 +36,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Também ligada a Confúcio, em tom mais psicológico. Observa efeitos opostos do pessimismo e do otimismo: cautela excessiva de uns e imprudência de outros, como tendências humanas.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -46,7 +47,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

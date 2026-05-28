@@ -16,6 +16,8 @@
     "frases:migrate:dry": "node scripts/migrate-all-frases.mjs --dry-run",
     "frases:import": "node scripts/split-frases-by-autor.mjs && node prepare-data.cjs",
     "frases:rebuild": "node scripts/migrate-all-frases.mjs && node scripts/build-content-metadata.mjs && node prepare-data.cjs",
+    "frases:explicacao": "node scripts/generate-frases-explicacao.mjs",
+    "frases:explicacao:apply": "node scripts/generate-frases-explicacao.mjs --apply-cache",
     "content:build": "npm run content:sync && node prepare-data.cjs",
     "next:dev": "next dev -p 3001",
     "next:build": "next build",

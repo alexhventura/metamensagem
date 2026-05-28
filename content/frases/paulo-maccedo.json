@@ -10,7 +10,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Paulo Maccedo resume, em tom motivacional, quatro virtudes que costuma associar a realizações pessoais: fé, coragem, força e educação moral. A metáfora dos paladinos sugere integridade junto com ousadia. É um conselho para quem busca persistir diante de desafios grandes.",
     "palavras_chave": [
       "coragem",
       "fe",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

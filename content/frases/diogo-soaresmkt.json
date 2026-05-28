@@ -11,7 +11,7 @@
       "motivacao",
       "persistencia"
     ],
-    "explicacao": "",
+    "explicacao": "Postagem motivacional de diogo_soaresmkt sobre persistência e foco nos objetivos. A mensagem reforça progresso gradual — um passo de cada vez —, estilo comum em perfis de marketing e desenvolvimento pessoal.",
     "palavras_chave": [
       "determinacao",
       "foco",
@@ -25,7 +25,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -42,7 +43,7 @@
       "sonhos",
       "sucesso"
     ],
-    "explicacao": "",
+    "explicacao": "Outra frase de diogo_soaresmkt sobre não abandonar sonhos. Liga determinação à realização pessoal, num tom encorajador típico de conteúdo digital para quem enfrenta desafios no caminho ao sucesso.",
     "palavras_chave": [
       "coragem",
       "determinacao",
@@ -58,7 +59,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

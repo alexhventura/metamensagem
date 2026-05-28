@@ -10,7 +10,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Atribuída a BrisaH, com linguagem de desenvolvimento pessoal. Relaciona coragem e determinação como motor do crescimento, sugerindo que avançar exige firmeza interior.",
     "palavras_chave": [
       "coragem",
       "determinacao",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

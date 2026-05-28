@@ -10,7 +10,7 @@
       "motivacao",
       "sucesso"
     ],
-    "explicacao": "",
+    "explicacao": "Salústio, historiador romano, observa que o sucesso pode ocultar erros cometidos no caminho. Vitória nem sempre prova que tudo foi feito certo. Alerta crítico sobre não confundir resultado com acerto.",
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -9,7 +9,7 @@
       "reflexao",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "De Boris Pasternak, escritor russo autor de \"Doutor Jivago\". Fala da necessidade de encontrar segurança interior e critério próprio diante de uma existência breve e compartilhada com outros.",
     "palavras_chave": [
       "inspiracional",
       "reflexao",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

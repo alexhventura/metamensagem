@@ -9,7 +9,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Juvenildo Pessoa alerta que desistir hoje gera arrependimento amanhã. Frase motivacional sobre consequências futuras da falta de perseverança, no estilo de lembretes matinais ou de bom-dia.",
     "palavras_chave": [
       "bom-dia",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

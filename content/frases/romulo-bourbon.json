@@ -10,7 +10,7 @@
       "motivacao",
       "sonhos"
     ],
-    "explicacao": "",
+    "explicacao": "Rômulo Bourbon escreve poema de autoestímulo intitulado Incentivo. Declara ser seu próprio motor para perseguir sonhos e agir sem depender de empurrão externo. Tom de autonomia e perseverança.",
     "palavras_chave": [
       "foco",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

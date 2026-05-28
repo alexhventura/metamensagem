@@ -10,7 +10,7 @@
       "motivacao",
       "sucesso"
     ],
-    "explicacao": "",
+    "explicacao": "Prof. Marcos Fernando da Silva lista cinco qualidades com sufixo -ação: organização, priorização, determinação, motivação e inspiração. O trocadilho final liga todas à ação concreta. É fórmula de produtividade para quem busca sucesso.",
     "palavras_chave": [
       "determinacao",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

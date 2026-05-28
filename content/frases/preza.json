@@ -9,7 +9,7 @@
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Preza define uma postura intermediária entre otimismo ingênuo e pessimismo amargo. Chama-se de realista precavido: esperança com prudência. A frase serve a quem quer encarar a vida com equilíbrio emocional.",
     "palavras_chave": [
       "amor",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

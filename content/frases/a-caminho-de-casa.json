@@ -8,7 +8,7 @@
     "contextos": [
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Atribuída a \"A caminho de casa\", soa como relato autobiográfico sobre superação. Contrasta a expectativa de portas abertas com a experiência real de obstáculos, defendendo esforço e iniciativa para avançar na vida.",
     "palavras_chave": [
       "inspiracional",
       "motivacao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -32,7 +33,7 @@
       "motivacao",
       "superacao"
     ],
-    "explicacao": "",
+    "explicacao": "Também ligada a \"A caminho de casa\", reforça o tom de superação pessoal. Cada desafio e medo enfrentado aparecem não como atrasos, mas como passos que revelam onde a pessoa realmente pertence.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
@@ -44,7 +45,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

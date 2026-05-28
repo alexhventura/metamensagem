@@ -9,7 +9,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Mensagem curta atribuída a Borlone, no estilo motivacional brasileiro. Encadeia sonho, luta e conquista como chamado existencial, afirmando que vencer faz parte da vocação humana.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

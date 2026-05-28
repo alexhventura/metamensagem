@@ -11,7 +11,7 @@
       "reflexao",
       "sucesso"
     ],
-    "explicacao": "",
+    "explicacao": "Atribuída a Charles Chaplin, cineasta britânico do cinema mudo. Resume uma visão prática de êxito: não como sorte instantânea, mas como resultado de continuar apesar dos tropeços.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
@@ -25,7 +25,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

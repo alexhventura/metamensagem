@@ -9,7 +9,7 @@
       "reflexao",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Groucho Marx conta com humor autodepreciativo sua perseguição amorosa frustrada. A piada revela que ele e a garota compartilhavam o mesmo gosto — por garotas —, num clássico de comédia absurda.",
     "palavras_chave": [
       "inspiracional",
       "reflexao",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -33,7 +34,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Diálogo cômico atribuído a Groucho Marx sobre buscar tesouro onde não há casa. O absurdo de construir a casa para justificar a aventura exemplifica seu humor surrealista e lógica invertida.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -44,7 +45,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

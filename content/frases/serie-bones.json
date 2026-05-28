@@ -8,7 +8,7 @@
     "contextos": [
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Fala da série Bones, provavelmente de Temperance Brennan sobre Booth. Ela admite, com ironia, invejar a capacidade dele de ver o lado bom mesmo diante de fatos duros. Contraste entre racionalidade e otimismo emocional.",
     "palavras_chave": [
       "inspiracional",
       "otimismo"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

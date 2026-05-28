@@ -10,7 +10,7 @@
       "reflexao",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "John Ruskin sugere que o amor revela lacunas que ignorávamos na existência. Reflexão vitoriana sobre como o afet o transforma a percepção do que falta — e do que passa a ter sentido — na vida.",
     "palavras_chave": [
       "amor",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

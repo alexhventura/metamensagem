@@ -8,7 +8,7 @@
     "contextos": [
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Mensagem motivacional de Alexandre Alcântara sobre autoconfiança. Propõe que persistir diante da descrença alheia pode, com o tempo, inspirar quem também duvida de si.",
     "palavras_chave": [
       "inspiracional",
       "motivacao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -11,7 +11,7 @@
       "otimismo",
       "superacao"
     ],
-    "explicacao": "",
+    "explicacao": "Adaptação de Carlos Andradas a um poema de Colliman Young, com ênfase cristã. Ordena medo, coragem e fé como degraus: a fé ficaria à frente, capaz de abraçar a coragem e vencer o medo.",
     "palavras_chave": [
       "coragem",
       "fe",
@@ -25,7 +25,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

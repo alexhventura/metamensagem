@@ -9,7 +9,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Yamamoto Tsunetomo compilou Hagakure, código dos samurais. Afirma que com determinação nada é impossível — céu e terra se movem aos desejos. Exagero retórico sobre vontade e dever guerreiro.",
     "palavras_chave": [
       "determinacao",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

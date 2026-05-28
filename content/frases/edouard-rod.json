@@ -10,7 +10,7 @@
       "reflexao",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Édouard Rod sugere que só o amor revela o que há de mais profundo em cada pessoa. Reflexão sobre intimidade e autoconhecimento mútuo, comum na literatura romântica e existencialista do final do século XIX.",
     "palavras_chave": [
       "amor",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

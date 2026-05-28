@@ -8,7 +8,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "De Caio Fernando Abreu, escritor brasileiro, com tom íntimo e fraterno. Propõe inventar modos de permanecer forte diante das adversidades, numa conversa sobre sobrevivência emocional.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -33,7 +34,7 @@
       "inspiracional",
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Também de Caio Fernando Abreu, com ritmo quase diário. Sugere extrair alegria modesta de cada dia e encontrar, à noite, uma razão concreta para continuar vivendo no dia seguinte.",
     "palavras_chave": [
       "bom-dia",
       "felicidade",
@@ -46,7 +47,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

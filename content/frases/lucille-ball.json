@@ -9,7 +9,7 @@
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Lucille Ball, atriz e comediante, aconselha manter-se ocupada e cultivar otimismo para restaurar autoconfiança. Reflete sua trajetória em Hollywood marcada por rejeições e sucesso tardio. A frase inspira perseverança prática no mundo do entretenimento.",
     "palavras_chave": [
       "fe",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

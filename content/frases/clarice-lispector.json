@@ -8,7 +8,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "De Clarice Lispector, escritora brasileira, com tom existencial severo. Fala do dever solitário de ir até o fim, encarar a própria verdade e recusar carregar sozinha as dores alheias.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -33,7 +34,7 @@
       "inspiracional",
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Também de Clarice Lispector, numa descoberta amarga e madura. A personagem ou voz lírica percebe que a vida continua mesmo sem felicidade plena, como limite do ideal romântico.",
     "palavras_chave": [
       "amor",
       "felicidade",
@@ -46,7 +47,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -58,7 +60,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Outra reflexão de Clarice Lispector sobre tempo e linguagem. Diante da vida curta, ironiza a busca interminável por uma palavra salvadora escondida em dicionários enormes.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -69,7 +71,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

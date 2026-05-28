@@ -10,7 +10,7 @@
       "otimismo",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Atribuída a Bertram Carr, em contraste entre otimismo e pessimismo. Brinca com a inversão de perspectiva: cada temperamento transforma oportunidade em calamidade — ou o contrário.",
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -35,7 +36,7 @@
     "contextos": [
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Outra formulação semelhante atribuída a Bertram Carr, mais conhecida em versões ligadas a Winston Churchill. Mantém o contraste clássico entre ver obstáculo ou chance em cada situação.",
     "palavras_chave": [
       "inspiracional",
       "otimismo"
@@ -46,7 +47,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

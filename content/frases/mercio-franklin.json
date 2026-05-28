@@ -10,7 +10,7 @@
       "motivacao",
       "persistencia"
     ],
-    "explicacao": "",
+    "explicacao": "Mércio Franklin escreve frase motivacional ligando vitória à persistência, determinação, justiça e honestidade. Estilo de liderança moralizada. Destinada a quem busca sucesso com ética e esforço contínuo.",
     "palavras_chave": [
       "determinacao",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -12,7 +12,7 @@
       "sucesso",
       "superacao"
     ],
-    "explicacao": "",
+    "explicacao": "Emeldito Covane define sucesso como recusa em desistir diante de obstáculos. Mensagem motivacional típica sobre resiliência, comum em conteúdo de superação pessoal e empreendedorismo.",
     "palavras_chave": [
       "foco",
       "inspiracional",
@@ -27,7 +27,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

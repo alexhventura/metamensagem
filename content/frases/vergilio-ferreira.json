@@ -9,7 +9,7 @@
       "reflexao",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Vergílio Ferreira, escritor português, questiona simplificações: o oposto do pessimismo nem sempre é otimismo. Pode ser estupidez ou, nobremente, fortalecer os fracos. Reflexão filosófica sobre maturidade emocional.",
     "palavras_chave": [
       "inspiracional",
       "reflexao",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -33,7 +34,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Vergílio Ferreira vê filosofia não como descoberta passiva da verdade, mas como criação — como arte. Verdade seria construída pelo pensamento. Posição existencialista sobre papel da reflexão.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -44,7 +45,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

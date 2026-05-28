@@ -10,7 +10,7 @@
       "motivacao",
       "persistencia"
     ],
-    "explicacao": "",
+    "explicacao": "Texto genérico de perfil “motivador”: determinação e persistência constroem pontes sobre a dúvida. Imagem de emojis reforça tom digital. Citação de compartilhamento rápido em redes sociais.",
     "palavras_chave": [
       "determinacao",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -8,7 +8,7 @@
     "contextos": [
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Plínio de Sá resume, em tom de autoajuda, três posturas diante de obstáculos: hesitar, desistir ou persistir. A frase valoriza a continuidade até a conquista. Serve como estímulo para quem está entre desistir e seguir em frente.",
     "palavras_chave": [
       "inspiracional",
       "motivacao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

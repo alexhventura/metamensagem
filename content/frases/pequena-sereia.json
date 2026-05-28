@@ -10,7 +10,7 @@
       "reflexao",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Trecho atribuído à Pequena Sereia, em tom romântico e leve. A personagem admite não saber por que se irrita com alguém que, ao sorrir, conquista ainda mais seu afeto. Expressa o paradoxo comum do amor: raiva e encantamento misturados.",
     "palavras_chave": [
       "felicidade",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

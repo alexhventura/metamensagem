@@ -10,7 +10,7 @@
       "otimismo",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Sol Pinheiro escreve mensagem matinal sobre otimismo como sabedoria prática. Acordar com gratidão, sorrir e abraçar o dia. Tom de autoajuda espiritual para começar bem a jornada diária.",
     "palavras_chave": [
       "felicidade",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

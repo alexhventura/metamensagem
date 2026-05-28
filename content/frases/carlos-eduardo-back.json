@@ -9,7 +9,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "De Carlos Eduardo Back, tom matinal e brasileiro. Depois de um dia frustrado, propõe recomeço prático: acordar cedo, preparar mate e tentar outra vez, sem dramatizar a falha.",
     "palavras_chave": [
       "bom-dia",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

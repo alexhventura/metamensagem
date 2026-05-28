@@ -9,7 +9,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Tombos da vida é perfil motivacional. A frase diz para agir sem esperar coragem perfeita — ela surge no caminho. Incentivo a começar mesmo com medo, típico de posts sobre superação.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -11,7 +11,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Dilson Kutscher exorta o leitor a interromper ciclos de erro e assumir um novo rumo com coragem. Tom típico de coach ou palestrante motivacional, voltado a quem precisa de empurrão para mudar de direção na vida.",
     "palavras_chave": [
       "aprendizado",
       "coragem",
@@ -25,7 +25,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

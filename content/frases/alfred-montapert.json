@@ -9,7 +9,7 @@
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Atribuída a Alfred Montapert, autor de desenvolvimento pessoal. Defende que humor e esperança produzem mais felicidade que riqueza, porque nascem de escolher ver o melhor nas circunstâncias.",
     "palavras_chave": [
       "felicidade",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

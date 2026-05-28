@@ -9,7 +9,7 @@
       "motivacao",
       "sucesso"
     ],
-    "explicacao": "",
+    "explicacao": "Mensagem de Caio Alliance sobre sucesso. Enfatiza que resultados duradouros vêm de viver o processo — etapas, rotina e aprendizado — e não apenas de mirar o resultado final.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

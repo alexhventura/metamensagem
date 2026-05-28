@@ -11,7 +11,7 @@
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "De Augusto Branco, autor de mensagens motivacionais muito compartilhadas. Propõe viver com paixão, dignidade na derrota e ousadia na vitória, porque a vida exige intensidade.",
     "palavras_chave": [
       "amor",
       "coragem",
@@ -25,7 +25,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -37,7 +38,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Outra reflexão atribuída a Augusto Branco, com tom poético. Conta a descoberta de potência interior: quem não acreditava em magia percebe, afinal, ser capaz de transformar a própria realidade.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -48,7 +49,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

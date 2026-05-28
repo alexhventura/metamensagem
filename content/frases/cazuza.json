@@ -9,7 +9,7 @@
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Trecho atribuído a Cazuza, cantor e compositor brasileiro, provavelmente de entrevista. Ele associa sobrevivência ao otimismo e fala da culpa interior que, por um tempo, impediu de se sentir feliz de verdade.",
     "palavras_chave": [
       "felicidade",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -9,7 +9,7 @@
       "motivacao",
       "sucesso"
     ],
-    "explicacao": "",
+    "explicacao": "Frase de conteúdo motivacional associada a \"1 Minuto na Palma da Mão\", provavelmente pensada para leitura rápida. Desloca a ideia de sucesso do padrão externo para o critério pessoal: o que conta é como cada um define realização e sentido.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -36,7 +37,7 @@
       "persistencia",
       "sucesso"
     ],
-    "explicacao": "",
+    "explicacao": "Mesma linha inspiracional de \"1 Minuto na Palma da Mão\", ligada a aprendizado e persistência. Encadeia sucesso, ação e desejo, sugerindo que resultados vêm de vontade sustentada e de corrigir erros, não de espera passiva.",
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
@@ -50,7 +51,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

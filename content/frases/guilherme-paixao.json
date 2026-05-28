@@ -10,7 +10,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Guilherme Paixão prega gratidão pelo que se viveu como caminho para leveza e felicidade. Tom de conteúdo motivacional sobre reconhecer o passado como base para uma vida mais nobre e serena.",
     "palavras_chave": [
       "amor",
       "felicidade",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -9,7 +9,7 @@
       "reflexao",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Atribuída a Sócrates, resume o método socrático: sabedoria começa ao questionar crenças e examinar a própria vida. Sem reflexão crítica, não há aprendizado verdadeiro. Base da filosofia ocidental.",
     "palavras_chave": [
       "inspiracional",
       "reflexao",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -33,7 +34,7 @@
     "contextos": [
       "humildade"
     ],
-    "explicacao": "Reconhecer ignorância é forma de sabedoria.",
+    "explicacao": "Atribuída a Sócrates via Platão, resume o paradoxo socrático: reconhecer ignorância abre espaço para aprender. Dita em contexto de questionamento constante na Ágora ateniense.",
     "palavras_chave": [
       "sabedoria",
       "humildade"
@@ -44,7 +45,8 @@
     "ano_ou_data": "400 AC",
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -56,7 +58,7 @@
     "contextos": [
       "autoconhecimento"
     ],
-    "explicacao": "Autoconhecimento é base da sabedoria.",
+    "explicacao": "Conhece-te a ti mesmo circula com Sócrates e a tradição délfica. Para o filósofo, examinar desejos, medos e valores é condição para viver com justiça e lucidez moral.",
     "palavras_chave": [
       "autoconhecimento"
     ],
@@ -66,7 +68,8 @@
     "ano_ou_data": "400 AC",
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -78,7 +81,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "Refletir sobre a vida é essencial.",
+    "explicacao": "Famosa defesa de Sócrates no julgamento, registrada por Platão. Ele prefere morrer a abandonar o exame crítico da vida — ética, política e crenças — como tarefa central do ser humano.",
     "palavras_chave": [
       "reflexao",
       "vida"
@@ -89,7 +92,8 @@
     "ano_ou_data": "399 AC",
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -101,7 +105,7 @@
     "contextos": [
       "curiosidade"
     ],
-    "explicacao": "A curiosidade inicia o conhecimento.",
+    "explicacao": "A admiratio (espanto) como início do filosofar aparece na tradição socrática. A frase celebra a curiosidade genuína que leva a perguntar em vez de aceitar respostas prontas.",
     "palavras_chave": [
       "sabedoria",
       "curiosidade"
@@ -112,7 +116,8 @@
     "ano_ou_data": "400 AC",
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -8,7 +8,7 @@
     "contextos": [
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Atribuída a Bruce Lee, artista marcial e filósofo da ação. Inverte o desejo de vida fácil: em vez de pedir conforto, pede força para enfrentar dificuldades reais.",
     "palavras_chave": [
       "inspiracional",
       "motivacao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -32,7 +33,7 @@
       "adaptacao",
       "resiliencia"
     ],
-    "explicacao": "Adaptação é a chave para superar obstáculos.",
+    "explicacao": "De Bruce Lee, artista marcial e filósofo da ação, famosa nas entrevistas sobre Jeet Kune Do. “Seja água” pede adaptabilidade: moldar-se ao obstáculo em vez de resistir rigidamente, princípio de luta e de vida.",
     "palavras_chave": [
       "adaptacao",
       "fluidez",
@@ -44,7 +45,8 @@
     "ano_ou_data": "1971",
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -57,7 +59,7 @@
       "disciplina",
       "execucao"
     ],
-    "explicacao": "Conhecimento sem ação não gera resultado.",
+    "explicacao": "Lee insiste que saber não basta sem prática disciplinada. No contexto das artes marciais e do autodesenvolvimento, a citação cobra coerência entre estudo e execução diária.",
     "palavras_chave": [
       "acao",
       "disciplina"
@@ -68,7 +70,8 @@
     "ano_ou_data": "1971",
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -80,7 +83,7 @@
     "contextos": [
       "superacao"
     ],
-    "explicacao": "Limites mentais impedem o crescimento pessoal.",
+    "explicacao": "Bruce Lee alerta contra narrativas internas de incapacidade. A frase motiva quem trava o próprio crescimento com crenças limitantes, comum em treinos e palestras sobre superação.",
     "palavras_chave": [
       "limites",
       "crescimento"
@@ -91,7 +94,8 @@
     "ano_ou_data": "1972",
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -103,7 +107,7 @@
     "contextos": [
       "foco"
     ],
-    "explicacao": "Simplicidade gera eficiência.",
+    "explicacao": "Princípio estético e tático de Lee: técnicas e pensamentos desnecessários enfraquecem a ação. A simplicidade torna o movimento — físico ou mental — mais rápido e eficaz.",
     "palavras_chave": [
       "simplicidade",
       "foco"
@@ -114,7 +118,8 @@
     "ano_ou_data": "1971",
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -126,7 +131,7 @@
     "contextos": [
       "adaptacao"
     ],
-    "explicacao": "Filtrar o que é útil é essencial para evolução.",
+    "explicacao": "Resumo da filosofia eclética de Jeet Kune Do: absorver o útil de várias escolas e descartar o supérfluo. Lee propõe evolução contínua sem apego dogmático a um único método.",
     "palavras_chave": [
       "adaptacao",
       "estrategia"
@@ -137,7 +142,8 @@
     "ano_ou_data": "1972",
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -150,7 +156,7 @@
       "foco",
       "meditacao"
     ],
-    "explicacao": "Mente livre permite melhor adaptação.",
+    "explicacao": "Lee descreve estado mental de abertura antes do combate. Esvaziar a mente é preparar-se para reagir sem rigidez, tema ligado a meditação, foco e performance sob pressão.",
     "palavras_chave": [
       "mente",
       "foco"
@@ -161,7 +167,8 @@
     "ano_ou_data": "1971",
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

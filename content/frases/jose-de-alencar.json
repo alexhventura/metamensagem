@@ -13,7 +13,7 @@
       "sucesso",
       "superacao"
     ],
-    "explicacao": "",
+    "explicacao": "José de Alencar define sucesso como fruto de querer, persistir e superar obstáculos. O romancista brasileiro valoriza a jornada: mesmo sem atingir o alvo, quem luta realiza feitos admiráveis.",
     "palavras_chave": [
       "determinacao",
       "foco",
@@ -29,7 +29,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

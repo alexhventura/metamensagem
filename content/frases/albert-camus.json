@@ -8,7 +8,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Em linha com o pensamento absurdo de Albert Camus, provavelmente inspirada em reflexões sobre sentido e existência. Inverte a pergunta clássica: em vez de exigir significado para viver, sugere liberdade ao aceitar a ausência dele.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

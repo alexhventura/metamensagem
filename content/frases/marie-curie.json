@@ -9,7 +9,7 @@
       "motivacao",
       "persistencia"
     ],
-    "explicacao": "",
+    "explicacao": "Marie Curie, cientista pioneira, fala da dificuldade da vida e da necessidade de persistência e autoconfiança. Contexto: trajetória marcada por preconceito de gênero e trabalho árduo na pesquisa. Inspira mulheres e pesquisadores a não desistir.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -10,7 +10,7 @@
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Indira Gandhi elogia a energia dos jovens e seu otimismo contagiante. Como ex-primeira-ministra indiana, fala da esperança que a juventude transmite — lamparina de alegria diante dos desafios nacionais.",
     "palavras_chave": [
       "fe",
       "felicidade",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

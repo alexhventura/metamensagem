@@ -11,7 +11,7 @@
       "motivacao",
       "superacao"
     ],
-    "explicacao": "",
+    "explicacao": "Nelio Wanderley resume que desafios viram superação com disciplina e determinação. Frase curta de palestra ou rede social. Tom militarizado de foco e superação de obstáculos.",
     "palavras_chave": [
       "determinacao",
       "foco",
@@ -25,7 +25,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -10,7 +10,7 @@
       "motivacao",
       "superacao"
     ],
-    "explicacao": "",
+    "explicacao": "Roberto Fortuna incentiva começar mesmo sem todas as habilidades. Coragem inicial importa mais que preparo perfeito; a inércia seria pior que os obstáculos. Conselho para quem adia projetos por medo de não estar pronto.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

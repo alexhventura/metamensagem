@@ -9,7 +9,7 @@
       "inspiracional",
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Sêneca, filósofo estoico, alerta que felicidade não nasce de desejar o mal alheio. Buscar infelicidade nos outros corrompe a própria paz. Reflexão ética sobre inveja e schadenfreude.",
     "palavras_chave": [
       "felicidade",
       "inspiracional",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -33,7 +34,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Sêneca critica quem decide por impulso ou moda, sem reflexão madura. Poucos ponderam antes de agir; a maioria deixa-se levar. Convite ao pensamento deliberado diante das escolhas da vida.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -44,7 +45,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

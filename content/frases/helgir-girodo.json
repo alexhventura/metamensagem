@@ -12,7 +12,7 @@
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Helgir Girodo lista ingredientes — motivação, fé, coragem — para multiplicar a produtividade. Mensagem motivacional brasileira no estilo receita-prática para transformar a rotina diária.",
     "palavras_chave": [
       "coragem",
       "determinacao",
@@ -27,7 +27,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

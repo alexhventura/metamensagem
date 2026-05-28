@@ -8,7 +8,7 @@
     "contextos": [
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Autor genérico Vida propõe que, às vezes, fechar os olhos dissolve a escuridão percebida. Metáfora sobre mudar perspectiva interna diante de momentos difíceis. Tom poético de superação.",
     "palavras_chave": [
       "inspiracional",
       "motivacao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -33,7 +34,7 @@
       "motivacao",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Outra citação atribuída a Vida sobre simplicidade e felicidade. Pouco basta: lápis, borracha e caderno. Valoriza prazeres modestos e criatividade sobre consumo ou excesso.",
     "palavras_chave": [
       "felicidade",
       "inspiracional",
@@ -46,7 +47,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

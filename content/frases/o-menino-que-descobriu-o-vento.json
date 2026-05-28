@@ -8,7 +8,7 @@
     "contextos": [
       "motivacao"
     ],
-    "explicacao": "",
+    "explicacao": "Do filme/livro “O Menino que Descobriu o Vento”, sobre William Kamkwamba, que construiu moinho no Malawi. A lição é tentar apesar da pobreza e do ceticismo alheio. Contexto: superação africana e educação.",
     "palavras_chave": [
       "inspiracional",
       "motivacao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -33,7 +34,7 @@
       "motivacao",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "Outra mensagem da mesma história: dedicação total ao que se ama faz acontecer. Reforça paixão e esforço sincero. Eco da narrativa de inovação juvenil contra a fome e a descrença.",
     "palavras_chave": [
       "fe",
       "inspiracional",
@@ -46,7 +47,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -10,7 +10,7 @@
       "motivacao",
       "superacao"
     ],
-    "explicacao": "",
+    "explicacao": "Maya Angelou resume resiliência: derrotas acontecem, mas não devem definir quem você é. Contexto de vida marcada por racismo, trauma e triunfo literário. Frase de empoderamento muito usada em movimentos civis e educação.",
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

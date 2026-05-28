@@ -8,7 +8,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Associada a \"Alice no País das Maravilhas\", embora a frase seja mais conhecida por adaptações recentes do que pelo livro original de Lewis Carroll. Resume uma lição de otimismo: só o impossível exige primeiro crer que é possível.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -31,7 +32,7 @@
     "contextos": [
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Repetição da mesma citação ligada a Alice no País das Maravilhas, aqui enfatizando otimismo. Mantém a ideia de que confiança antecede conquistas que parecem inalcançáveis, mesmo com autoria incerta.",
     "palavras_chave": [
       "inspiracional",
       "otimismo"
@@ -42,7 +43,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

@@ -8,7 +8,7 @@
     "contextos": [
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Rita Lee resume, com humor, sua postura diante da vida: otimista por dentro, mas sempre preparada para o pior. Autodefinição típica da cantora, entre ironia e pragmatismo. Mostra otimismo que não ignora riscos.",
     "palavras_chave": [
       "inspiracional",
       "otimismo"
@@ -19,7 +19,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

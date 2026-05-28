@@ -11,7 +11,7 @@
       "sabedoria",
       "superacao"
     ],
-    "explicacao": "",
+    "explicacao": "Felipe Neto resume sua filosofia de vida em coragem para encarar o medo. Mensagem típica do youtuber sobre superação pessoal, voltada a jovens que hesitam diante de desafios por insegurança ou receio.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
@@ -25,7 +25,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

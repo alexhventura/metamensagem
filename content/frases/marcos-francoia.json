@@ -10,7 +10,7 @@
       "motivacao",
       "superacao"
     ],
-    "explicacao": "",
+    "explicacao": "Marcos Françóia, autor de desenvolvimento pessoal, ataca a procrastinação como auto-sabotagem. Convoca ação imediata diante dos desafios. Contexto: literatura brasileira de produtividade e metas profissionais.",
     "palavras_chave": [
       "foco",
       "inspiracional",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -37,7 +38,7 @@
       "motivacao",
       "sonhos"
     ],
-    "explicacao": "",
+    "explicacao": "Outra frase de Marcos Françóia: adiar é ceder seus sonhos a outros mais decididos. Metáfora competitiva típica de palestras motivacionais. Reforça urgência e responsabilidade pessoal na conquista de objetivos.",
     "palavras_chave": [
       "foco",
       "inspiracional",
@@ -50,7 +51,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

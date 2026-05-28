@@ -11,7 +11,7 @@
       "motivacao",
       "sabedoria"
     ],
-    "explicacao": "",
+    "explicacao": "De Bráulio Bessa, poeta e educador brasileiro, em tom de oração diária. Pede saúde para trabalhar, sabedoria para lutar e consciência de que resultados dependem também do esforço pessoal.",
     "palavras_chave": [
       "coragem",
       "fe",
@@ -25,7 +25,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

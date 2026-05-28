@@ -9,7 +9,7 @@
       "motivacao",
       "sonhos"
     ],
-    "explicacao": "",
+    "explicacao": "May Iakulo Targino alerta contra sofrer por sonhos que não se persegue. Mensagem motivacional direta. Convoca ação em vez de lamento passivo diante de objetivos adiados.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
@@ -21,7 +21,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

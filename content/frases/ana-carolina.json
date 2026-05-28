@@ -10,7 +10,7 @@
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "",
+    "explicacao": "Atribuída à cantora Ana Carolina, com estrutura de conselho moral em três verbos. Une fala, pensamento e ação a esperança, fé e amor, como guia para viver de forma coerente.",
     "palavras_chave": [
       "amor",
       "fe",
@@ -23,7 +23,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   },
   {
@@ -35,7 +36,7 @@
     "contextos": [
       "reflexao"
     ],
-    "explicacao": "",
+    "explicacao": "Também ligada a Ana Carolina, com tom lírico e nostálgico, provavelmente de letra de canção. Expressa o desejo de reviver a descoberta do amor, como quem lamenta perder a frescura de um sentimento.",
     "palavras_chave": [
       "inspiracional",
       "reflexao"
@@ -46,7 +47,8 @@
     "ano_ou_data": null,
     "informacoes": {
       "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null
+      "confiabilidade": null,
+      "explicacao_gerada_por_ia": true
     }
   }
 ]

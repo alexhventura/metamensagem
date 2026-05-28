@@ -17,7 +17,7 @@ import {
   cardNeutralActionClass,
   cardReadMoreBtnClass,
   cardTagClass,
-  FRASE_HEADLINE_CLASS,
+  cardTitleLinkClass,
 } from '../lib/cardTheme';
 import type { ItemConteudo } from '../types/content';
 
@@ -131,33 +131,50 @@ export default function ContentCard({
               />
             )}
 
-            {!isFrase && (
-              <Link
-                to={detailPath}
-                className={`text-xl font-black transition-colors block mb-3 leading-tight tracking-tighter hover:text-[#EC4899] ${
-                  tema === 'light' ? 'text-black' : 'text-white'
-                }`}
-              >
-                {display.titulo ?? item.titulo}
-              </Link>
+            {isFrase ? (
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={bodyText + String(display.isTranslated)}
+                  initial={{ opacity: 0, y: 4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className={`mb-4 flex-1 transition-opacity duration-200 ${
+                    translating ? 'opacity-55' : 'opacity-100'
+                  }`}
+                >
+                  <Link
+                    to={detailPath}
+                    className={cardTitleLinkClass(tema, accent, 'frase')}
+                  >
+                    &ldquo;{bodyText}&rdquo;
+                  </Link>
+                </motion.div>
+              </AnimatePresence>
+            ) : (
+              <>
+                <Link
+                  to={detailPath}
+                  className={cardTitleLinkClass(tema, accent, 'metafora')}
+                >
+                  {display.titulo ?? item.titulo}
+                </Link>
+                <AnimatePresence mode="wait">
+                  <motion.p
+                    key={bodyText + String(display.isTranslated)}
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className={`text-sm line-clamp-3 leading-relaxed mb-4 flex-1 transition-opacity duration-200 ${
+                      translating ? 'opacity-55' : 'opacity-100'
+                    } ${tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'}`}
+                  >
+                    {bodyText}
+                  </motion.p>
+                </AnimatePresence>
+              </>
             )}
-
-            <AnimatePresence mode="wait">
-              <motion.p
-                key={bodyText + String(display.isTranslated)}
-                initial={{ opacity: 0, y: 4 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className={`mb-4 flex-1 transition-opacity duration-200 ${
-                  isFrase
-                    ? `${FRASE_HEADLINE_CLASS} ${tema === 'light' ? 'text-black' : 'text-white'}`
-                    : `text-sm line-clamp-3 leading-relaxed ${tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'}`
-                } ${translating ? 'opacity-55' : 'opacity-100'}`}
-              >
-                {isFrase ? `"${bodyText}"` : bodyText}
-              </motion.p>
-            </AnimatePresence>
 
             <div className="mb-4">
               <Link

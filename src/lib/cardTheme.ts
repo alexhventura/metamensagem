@@ -46,6 +46,33 @@ export function cardNeutralActionClass(tema: string): string {
 export const FRASE_HEADLINE_CLASS =
   'text-xl md:text-2xl font-black leading-tight tracking-tighter line-clamp-4';
 
+/** Hover do título clicável (metáfora = rosa, frase = roxo). */
+export function cardTitleHoverClass(accent: CardAccent): string {
+  return accent === 'pink' ? 'hover:text-[#EC4899]' : 'hover:text-[#A855F7]';
+}
+
+export function cardTitleColorClass(tema: string): string {
+  return tema === 'light' ? 'text-black' : 'text-white';
+}
+
+/** Link do título — mesma base para metáforas e frases. */
+export function cardTitleLinkClass(
+  tema: string,
+  accent: CardAccent,
+  variant: 'metafora' | 'frase'
+): string {
+  const size =
+    variant === 'frase'
+      ? FRASE_HEADLINE_CLASS
+      : 'text-xl leading-tight tracking-tighter line-clamp-none';
+  return [
+    size,
+    'font-black transition-colors block mb-3 cursor-pointer',
+    cardTitleHoverClass(accent),
+    cardTitleColorClass(tema),
+  ].join(' ');
+}
+
 /** Fundo lavanda (modo leitura) — só página de detalhe da frase, tema claro. */
 export const FRASE_DETAIL_INFO_BG_LIGHT = 'bg-[#F3E8FF]';
 

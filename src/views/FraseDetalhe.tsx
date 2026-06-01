@@ -168,16 +168,6 @@ export default function FraseDetalheView({
   );
 
   useEffect(() => {
-    if (
-      contentLocale &&
-      i18n.language !== contentLocale &&
-      (SEO_LOCALES as readonly string[]).includes(contentLocale)
-    ) {
-      void i18n.changeLanguage(contentLocale);
-    }
-  }, [contentLocale, i18n]);
-
-  useEffect(() => {
     if (!frase) return;
     setDisplay({ texto: frase.frase_original, isTranslated: false });
   }, [frase?.id, frase?.frase_original]);

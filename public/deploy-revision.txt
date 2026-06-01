@@ -1,2 +1,2 @@
-deploy-revision=2026-06-01T17:20:00Z
-features=slogan,home-frases-only,image-generator,i18n-seo,react-chunk-fix,no-process-cwd
+deploy-revision=2026-06-01T18:00:00Z
+features=utf8-ui-locale,manifest-total-frases

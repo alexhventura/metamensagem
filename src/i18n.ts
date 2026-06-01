@@ -2,6 +2,17 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { de, hi, it, ja } from './i18n/extraLocales';
+import { resolveUiLocale, uiLocaleFromPathname } from './lib/uiLocale';
+
+const pathLocaleDetector = {
+  name: 'path',
+  lookup() {
+    if (typeof window === 'undefined') return undefined;
+    return uiLocaleFromPathname(window.location.pathname) ?? undefined;
+  },
+};
+
+LanguageDetector.addDetector(pathLocaleDetector);
 
 const resources = {
   pt: {
@@ -27,6 +38,20 @@ const resources = {
         "search_placeholder": "Qual sentimento ou tema busca hoje?",
         "explore_more": "Explorar mais Sabedoria (+10)",
         "sharing_wisdom": "Sincronizando Sabedoria Edge..."
+      },
+      "frases": {
+        "collection_title": "Coleção de Frases",
+        "page_title": "Banco Total de Frases",
+        "page_description": "Explore milhares de insights e citações curtas catalogadas para status, redes sociais e reflexão.",
+        "search_placeholder": "Buscar frase ou autor...",
+        "count_available": "{{count}} {{label}} disponíveis",
+        "count_filtered": "{{visible}} de {{count}} {{label}} disponíveis"
+      },
+      "metaforas": {
+        "collection_title": "Arquivo de Metáforas",
+        "page_title": "Índice de Metáforas Terapêuticas",
+        "page_description": "Contos e narrativas profundas focadas em psicologia aplicada, insights inconscientes e reprogramação de atitudes.",
+        "search_placeholder": "Encontrar metáfora..."
       },
       "banner": {
         "title": "Receba novas frases e metáforas todos os dias",
@@ -99,6 +124,20 @@ const resources = {
         "search_placeholder": "What feeling or theme are you looking for today?",
         "explore_more": "Explore more Wisdom (+10)",
         "sharing_wisdom": "Synchronizing Edge Wisdom..."
+      },
+      "frases": {
+        "collection_title": "Quote Collection",
+        "page_title": "Full Quote Library",
+        "page_description": "Explore thousands of short insights and quotes for social media and reflection.",
+        "search_placeholder": "Search quote or author...",
+        "count_available": "{{count}} {{label}} available",
+        "count_filtered": "{{visible}} of {{count}} {{label}} available"
+      },
+      "metaforas": {
+        "collection_title": "Metaphor Archive",
+        "page_title": "Therapeutic Metaphors Index",
+        "page_description": "Deep stories focused on applied psychology and attitude change.",
+        "search_placeholder": "Find a metaphor..."
       },
       "banner": {
         "title": "Receive new quotes and metaphors every day",
@@ -272,12 +311,16 @@ const resources = {
   hi,
 };
 
+const initialUiLocale =
+  typeof window !== 'undefined' ? resolveUiLocale(window.location.pathname) : 'en';
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'pt',
+    lng: initialUiLocale,
+    fallbackLng: 'en',
     supportedLngs: ['pt', 'en', 'es', 'fr', 'de', 'it', 'ja', 'hi'],
     nonExplicitSupportedLngs: true,
     load: 'languageOnly',
@@ -285,7 +328,8 @@ i18n
       escapeValue: false,
     },
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      order: ['path', 'localStorage', 'navigator'],
+      lookupLocalStorage: 'lang',
       caches: ['localStorage'],
     },
   });

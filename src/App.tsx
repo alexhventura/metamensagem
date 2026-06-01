@@ -72,17 +72,19 @@ import ContentCard from './components/ContentCard';
 import CardTooltip from './components/CardTooltip';
 import { CARD_ACTION_BTN, cardNeutralActionClass } from './lib/cardTheme';
 import { useTheme } from './context/ThemeContext';
+import { useUiLocaleSync } from './hooks/useUiLocaleSync';
+import { fetchTotalFrasesCount } from './lib/catalogStats';
 
 interface ModalProps {
   item: ItemConteudo;
   onClose: () => void;
 }
 
-// --- CONFIGURAÃ‡ÃƒO DE FRASES LOADING ---
+// --- CONFIGURA�!ÒO DE FRASES LOADING ---
 const FRASES_MOTIVACIONAIS_LOADING = [
-  "A sabedoria nÃ£o estÃ¡ em reter o conhecimento, mas em compartilhÃ¡-lo.",
-  "Preparando uma dose de inspiraÃ§Ã£o para transformar o dia de alguÃ©m...",
-  "Grandes ideias merecem formatos incrÃ­veis. Quase pronto!",
+  "A sabedoria não está em reter o conhecimento, mas em compartilhá-lo.",
+  "Preparando uma dose de inspiração para transformar o dia de alguém...",
+  "Grandes ideias merecem formatos incríveis. Quase pronto!",
   "A metamensagem certa pode ser a chave para mudar uma atitude hoje.",
   "Eternizando palavras de impacto em um design premium..."
 ];
@@ -90,6 +92,7 @@ const FRASES_MOTIVACIONAIS_LOADING = [
 // --- APP PRINCIPAL ---
 export default function App() {
   const { t, i18n } = useTranslation();
+  useUiLocaleSync();
   const { tema, toggleTema } = useTheme();
   const [toast, setToast] = useState<{ mensagem: string; tipo: 'sucesso' | 'info' | 'erro' } | null>(null);
   const [bancoTotal, setBancoTotal] = useState<ItemConteudo[]>([]);
@@ -115,7 +118,7 @@ export default function App() {
     pruneInvalidTranslationCache();
   }, []);
 
-  // Home: bootstrap leve; catÃ¡logo completo em idle (O(1) inicial)
+  // Home: bootstrap leve; catálogo completo em idle (O(1) inicial)
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -179,7 +182,7 @@ export default function App() {
           )}
         </AnimatePresence>
 
-        {/* SEO GLOBAL DINÃ‚MICO BASE */}
+        {/* SEO GLOBAL DIN�MICO BASE */}
         <MudarMetaSEO
           title={t('app.title')}
           description={DEFAULT_DESCRIPTION}
@@ -213,7 +216,7 @@ export default function App() {
           <SocialHub tema={tema} />
         </div>
 
-        {/* SUBHEADER DE NAVEGAÃ‡ÃƒO REFORÃ‡ADA */}
+        {/* SUBHEADER DE NAVEGA�!ÒO REFOR�!ADA */}
         <div className={`py-4 border-b sticky top-20 z-30 backdrop-blur-md transition-colors ${
           tema === 'light' ? 'bg-purple-50/80 border-purple-100/50' : 'bg-[#050505]/90 border-purple-900/20'
         }`}>
@@ -229,7 +232,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* ROTAS DA APLICAÃ‡ÃƒO */}
+        {/* ROTAS DA APLICA�!ÒO */}
         <div className="flex-1 flex flex-col">
           {loading ? (
             <div className="flex-1 flex items-center justify-center">
@@ -302,11 +305,11 @@ export default function App() {
 // ===================================================
 
 /**
- * Zonas de conteÃºdo para AdSense Auto Ads (in-feed / in-page).
- * Detectadas em: HomeView, FrasesView, MetaforasView (a cada 6 cards), MetaforaDetalheView (rodapÃ©).
- * Sem <ins> manual â€” o Google Auto Ads usa a estrutura da pÃ¡gina; min-height reduz CLS.
+ * Zonas de conteúdo para AdSense Auto Ads (in-feed / in-page).
+ * Detectadas em: HomeView, FrasesView, MetaforasView (a cada 6 cards), MetaforaDetalheView (rodapé).
+ * Sem <ins> manual � o Google Auto Ads usa a estrutura da página; min-height reduz CLS.
  */
-// COMPONENTE AUXILIAR SEO DINÃ‚MICO
+// COMPONENTE AUXILIAR SEO DIN�MICO
 function MudarMetaSEO({
   title,
   description,
@@ -421,7 +424,7 @@ function HeaderBrandButton() {
       type="button"
       onClick={handleClick}
       className="flex items-center gap-2.5 group min-w-0 cursor-pointer bg-transparent border-0 p-0 text-left"
-      aria-label="Metamensagem â€” atualizar pÃ¡gina"
+      aria-label="Metamensagem � atualizar página"
     >
       <img
         src="/brand/logo.svg"
@@ -439,7 +442,7 @@ function HeaderBrandButton() {
 }
 
 // ===================================================
-// VISÃƒO: HOME (CONSUMO DE INDEX)
+// VISÒO: HOME (CONSUMO DE INDEX)
 // ===================================================
 function HomeView({ tema, toast, banco, bancoRandom }: { tema: string; toast: any; banco: ItemConteudo[]; bancoRandom: ItemConteudo[] }) {
   const { t } = useTranslation();
@@ -597,7 +600,7 @@ function HomeView({ tema, toast, banco, bancoRandom }: { tema: string; toast: an
   );
 }
 
-/** Contador discreto abaixo do tÃ­tulo (coleÃ§Ã£o / filtro ativo). */
+/** Contador discreto abaixo do título (coleção / filtro ativo). */
 function ColecaoContador({
   tema,
   total,
@@ -613,11 +616,18 @@ function ColecaoContador({
   singular: string;
   plural: string;
 }) {
+  const { t, i18n } = useTranslation();
   const rotulo = total === 1 ? singular : plural;
+  const locale = i18n.language?.startsWith('pt') ? 'pt-BR' : i18n.language || 'en';
+  const fmt = (n: number) => n.toLocaleString(locale);
   const texto =
     buscaAtiva && visiveis !== undefined && visiveis !== total
-      ? `${visiveis.toLocaleString('pt-BR')} de ${total.toLocaleString('pt-BR')} ${rotulo} disponÃ­veis`
-      : `${total.toLocaleString('pt-BR')} ${rotulo} disponÃ­veis`;
+      ? t('frases.count_filtered', {
+          visible: fmt(visiveis),
+          count: fmt(total),
+          label: rotulo,
+        })
+      : t('frases.count_available', { count: fmt(total), label: rotulo });
 
   return (
     <p
@@ -632,11 +642,22 @@ function ColecaoContador({
 }
 
 // ===================================================
-// VISÃƒO: LISTA DE FRASES
+// VISÒO: LISTA DE FRASES
 // ===================================================
 function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: ItemConteudo[] }) {
   const { t } = useTranslation();
+  const [totalAcervo, setTotalAcervo] = useState(0);
   const [busca, setBusca] = useState('');
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchTotalFrasesCount().then((n) => {
+      if (!cancelled) setTotalAcervo(n);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
   const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
   const baseFrases = useMemo(() => {
     const list = banco.filter(i => i.tipo === 'frase');
@@ -669,18 +690,18 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
       className="max-w-7xl w-full mx-auto px-4 py-8 flex-1"
     >
       <MudarMetaSEO
-        title="Banco Total de Frases"
-        description="Explore milhares de insights e citaÃ§Ãµes curtas catalogadas para status, redes sociais e reflexÃ£o."
+        title={t('frases.page_title')}
+        description={t('frases.page_description')}
         canonical={absoluteUrl('/frases')}
       />
       
       <div className="text-center mb-12">
         <h2 className="text-3xl font-black mb-2 uppercase tracking-widest text-[#A855F7] flex items-center justify-center gap-3">
-          <Quote /> ColeÃ§Ã£o de Frases
+          <Quote /> {t('frases.collection_title')}
         </h2>
         <ColecaoContador
           tema={tema}
-          total={baseFrases.length}
+          total={totalAcervo > 0 ? totalAcervo : baseFrases.length}
           visiveis={frases.length}
           buscaAtiva={!!busca.trim()}
           singular="frase"
@@ -690,7 +711,7 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
           <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />
           <input 
             type="text" 
-            placeholder="Buscar frase ou autor..." 
+            placeholder={t('frases.search_placeholder')}
             value={busca}
             onChange={e => setBusca(e.target.value)}
             className={`w-full py-4 pl-14 pr-6 rounded-2xl border-2 font-medium outline-none transition-all ${
@@ -743,7 +764,7 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
 }
 
 // ===================================================
-// VISÃƒO: LISTA DE METÃFORAS
+// VISÒO: LISTA DE METÁFORAS
 // ===================================================
 function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco: ItemConteudo[] }) {
   const { t } = useTranslation();
@@ -771,28 +792,28 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
       className="max-w-7xl w-full mx-auto px-4 py-8 flex-1"
     >
       <MudarMetaSEO
-        title="Ãndice de MetÃ¡foras TerapÃªuticas"
-        description="Contos e narrativas profundas focadas em psicologia aplicada, insights inconscientes e reprogramaÃ§Ã£o de atitudes."
+        title={t('metaforas.page_title')}
+        description={t('metaforas.page_description')}
         canonical={absoluteUrl('/metaforas')}
       />
       
       <div className="text-center mb-12">
         <h2 className="text-3xl font-black mb-2 uppercase tracking-widest text-[#A855F7] flex items-center justify-center gap-3">
-          <BookOpen /> Arquivo de MetÃ¡foras
+          <BookOpen /> {t('metaforas.collection_title')}
         </h2>
         <ColecaoContador
           tema={tema}
           total={baseMetaforas.length}
           visiveis={metaforas.length}
           buscaAtiva={!!busca.trim()}
-          singular="metÃ¡fora"
-          plural="metÃ¡foras"
+          singular="metáfora"
+          plural="metáforas"
         />
         <div className="relative max-w-xl mx-auto">
           <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />
           <input 
             type="text" 
-            placeholder="Encontrar metÃ¡fora..." 
+            placeholder={t('metaforas.search_placeholder')}
             value={busca}
             onChange={e => setBusca(e.target.value)}
             className={`w-full py-4 pl-14 pr-6 rounded-2xl border-2 font-medium outline-none transition-all ${
@@ -833,7 +854,7 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
   );
 }
 
-// VISÃƒO: DETALHE DA METÃFORA (CARREGAMENTO DINÃ‚MICO ESTRUTURADO)
+// VISÒO: DETALHE DA METÁFORA (CARREGAMENTO DIN�MICO ESTRUTURADO)
 // ===================================================
 function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: ItemConteudo[]; toast: any }) {
   const { t } = useTranslation();
@@ -915,7 +936,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
     );
   }
 
-  if (!item) return <div className="p-20 text-center text-red-500">MetÃ¡fora nÃ£o localizada no fragmento de borda.</div>;
+  if (!item) return <div className="p-20 text-center text-red-500">Metáfora não localizada no fragmento de borda.</div>;
 
   const palavras = item.texto ? item.texto.split(/\s+/).length : 0;
   const tempoLeitura = Math.ceil(palavras / 200);
@@ -928,7 +949,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
     description: item.resumo,
     abstract: item.resumo,
     articleBody: item.texto?.substring(0, 5000),
-    author: { '@type': 'Person', name: item.autor || 'AnÃ´nimo' },
+    author: { '@type': 'Person', name: item.autor || 'Anônimo' },
     url: canonicalUrl,
     mainEntityOfPage: canonicalUrl,
     publisher: {
@@ -947,7 +968,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       className="max-w-4xl w-full mx-auto px-4 py-12 flex-1"
     >
       <MudarMetaSEO
-        title={item.titulo || 'MetÃ¡fora terapÃªutica'}
+        title={item.titulo || 'Metáfora terapêutica'}
         description={item.resumo || DEFAULT_DESCRIPTION}
         canonical={canonicalUrl}
         ogType="article"
@@ -957,7 +978,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       <div className={`mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b pb-10 ${tema === 'light' ? 'border-zinc-200' : 'border-zinc-800'}`}>
         <div className="flex-1">
           <Link to="/metaforas" className="text-[10px] uppercase font-black text-[#A855F7] tracking-[0.2em] mb-4 flex items-center gap-2 hover:gap-3 transition-all">
-            <ChevronRight size={12} className="rotate-180" /> MetÃ¡fora TerapÃªutica
+            <ChevronRight size={12} className="rotate-180" /> Metáfora Terapêutica
           </Link>
           <AnimatePresence mode="wait">
             <motion.h1
@@ -972,7 +993,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
             </motion.h1>
           </AnimatePresence>
           <div className="flex items-center gap-4 text-xs font-bold text-zinc-500">
-            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><BookOpen size={14} /> ~{tempoLeitura} MIN DE REFLEXÃƒO</span>
+            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><BookOpen size={14} /> ~{tempoLeitura} MIN DE REFLEXÒO</span>
             <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><Quote size={14} /> SABEDORIA SECULAR</span>
           </div>
         </div>
@@ -1050,7 +1071,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
 
        <SocialHub tema={tema} />
 
-      {/* NAVEGAÃ‡ÃƒO ENTRE METAFORAS */}
+      {/* NAVEGA�!ÒO ENTRE METAFORAS */}
       <div className="mt-12 flex flex-col sm:flex-row justify-between gap-4">
         {navigation.prev ? (
           <Link 
@@ -1071,7 +1092,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
             className={`flex-1 flex items-center justify-end gap-3 p-5 rounded-3xl border transition-all ${tema === 'light' ? 'bg-white border-zinc-100 hover:bg-zinc-50' : 'bg-zinc-900/50 border-white/5 hover:bg-zinc-900'}`}
           >
             <div className="text-right overflow-hidden">
-              <span className="text-[8px] font-black text-zinc-500 uppercase block mb-1">PrÃ³xima</span>
+              <span className="text-[8px] font-black text-zinc-500 uppercase block mb-1">Próxima</span>
               <span className="text-xs font-bold truncate block leading-tight">{navigation.next.titulo}</span>
             </div>
             <ChevronRight size={16} className="text-purple-500 shrink-0" />

@@ -1,0 +1,7 @@
+# Reduz upload; runtime usa public/ + dist do vite build
+content/
+data/
+scripts/
+*.md
+.git
+node_modules/.cache

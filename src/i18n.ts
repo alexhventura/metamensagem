@@ -1,6 +1,5 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 import { de, hi, it, ja } from './i18n/extraLocales';
 import { resolveUiLocale } from './lib/uiLocale';
 
@@ -304,24 +303,16 @@ const resources = {
 const initialUiLocale =
   typeof window !== 'undefined' ? resolveUiLocale(window.location.pathname) : 'en';
 
-i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    resources,
-    lng: initialUiLocale,
-    fallbackLng: 'en',
-    supportedLngs: ['pt', 'en', 'es', 'fr', 'de', 'it', 'ja', 'hi'],
-    nonExplicitSupportedLngs: true,
-    load: 'languageOnly',
-    interpolation: {
-      escapeValue: false,
-    },
-    detection: {
-      order: ['localStorage', 'navigator'],
-      lookupLocalStorage: 'lang',
-      caches: ['localStorage'],
-    },
-  });
+i18n.use(initReactI18next).init({
+  resources,
+  lng: initialUiLocale,
+  fallbackLng: 'en',
+  supportedLngs: ['pt', 'en', 'es', 'fr', 'de', 'it', 'ja', 'hi'],
+  nonExplicitSupportedLngs: true,
+  load: 'languageOnly',
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
 export default i18n;

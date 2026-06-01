@@ -20,3 +20,9 @@ export function useUiLocaleSync(): void {
     persistUiLocale(next);
   }, [pathname, i18n]);
 }
+
+/** Renderizar dentro de `<BrowserRouter>`. */
+export function UiLocaleSync() {
+  useUiLocaleSync();
+  return null;
+}

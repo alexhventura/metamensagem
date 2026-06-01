@@ -72,7 +72,7 @@ import ContentCard from './components/ContentCard';
 import CardTooltip from './components/CardTooltip';
 import { CARD_ACTION_BTN, cardNeutralActionClass } from './lib/cardTheme';
 import { useTheme } from './context/ThemeContext';
-import { useUiLocaleSync } from './hooks/useUiLocaleSync';
+import { UiLocaleSync } from './hooks/useUiLocaleSync';
 import { fetchTotalFrasesCount } from './lib/catalogStats';
 
 interface ModalProps {
@@ -92,7 +92,6 @@ const FRASES_MOTIVACIONAIS_LOADING = [
 // --- APP PRINCIPAL ---
 export default function App() {
   const { t, i18n } = useTranslation();
-  useUiLocaleSync();
   const { tema, toggleTema } = useTheme();
   const [toast, setToast] = useState<{ mensagem: string; tipo: 'sucesso' | 'info' | 'erro' } | null>(null);
   const [bancoTotal, setBancoTotal] = useState<ItemConteudo[]>([]);
@@ -154,6 +153,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <UiLocaleSync />
       {/* Layout raiz (equiv. app/layout.tsx): script global AdSense Auto Ads */}
       <GoogleAdSense />
       <div className={`min-h-screen transition-colors duration-500 flex flex-col font-sans ${

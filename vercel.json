@@ -1,27 +1,43 @@
-﻿{
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "metamensagem.com.br" }],
-      "destination": "https://metamensagem.com/:path*",
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "metamensagem.com.br"
+        }
+      ],
+      "destination": "https://metamensagem.com/$1",
       "permanent": true
     },
     {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.metamensagem.com.br" }],
-      "destination": "https://metamensagem.com/:path*",
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.metamensagem.com.br"
+        }
+      ],
+      "destination": "https://metamensagem.com/$1",
       "permanent": true
     },
     {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.metamensagem.com" }],
-      "destination": "https://metamensagem.com/:path*",
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.metamensagem.com"
+        }
+      ],
+      "destination": "https://metamensagem.com/$1",
       "permanent": true
     }
   ],
   "rewrites": [
     {
-      "source": "/((?!metaforas/|brand/|favicon|apple-touch-icon|web-app-manifest|site\\.webmanifest|theme-init\\.js|google[0-9a-f]+\\.html|ads\\.txt|robots\\.txt|sitemap[^/]*\\.xml|frases-index\\.json|metaforas-index\\.json|home-bootstrap\\.json|frases-v2/|seo-graph/|metaforas\\.json|frases\\.json|assets/).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
@@ -29,25 +45,64 @@
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
-      "source": "/(home-bootstrap\\.json|frases-v2/manifest\\.json|metaforas-index\\.json)",
+      "source": "/home-bootstrap.json",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/frases-v2/manifest.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/metaforas-index.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
       ]
     },
     {
       "source": "/frases-v2/detail/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/frases-v2/i18n-meta/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
       ]
     },
     {
       "source": "/seo-graph/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
       ]
     }
   ]

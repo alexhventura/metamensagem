@@ -23,6 +23,7 @@ export default defineConfig(() => {
       alias: {
         '@': path.resolve(__dirname, '.'),
       },
+      dedupe: ['react', 'react-dom'],
     },
     build: {
       rollupOptions: {
@@ -35,7 +36,15 @@ export default defineConfig(() => {
             if (id.includes('i18next') || id.includes('react-i18next')) return 'vendor-i18n';
             if (id.includes('modern-screenshot') || id.includes('html2canvas') || id.includes('html-to-image')) return 'vendor-screenshot';
             if (id.includes('/translation/translationEngine')) return 'vendor-translate';
-            if (id.includes('react-dom') || id.includes('react-router')) return 'vendor-react';
+            // react core + react-dom + router no mesmo chunk (evita React undefined em createContext)
+            if (
+              /node_modules\/react\//.test(id) ||
+              /node_modules\/react-dom\//.test(id) ||
+              id.includes('react-router') ||
+              id.includes('scheduler')
+            ) {
+              return 'vendor-react';
+            }
           },
         },
       },

@@ -1,2 +1,2 @@
-deploy-revision=2026-06-01T16:30:00Z
-features=slogan,home-frases-only,image-generator,i18n-seo
+deploy-revision=2026-06-01T17:05:00Z
+features=slogan,home-frases-only,image-generator,i18n-seo,react-chunk-fix

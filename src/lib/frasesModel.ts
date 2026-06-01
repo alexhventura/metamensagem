@@ -1,7 +1,7 @@
 /** Tipos e helpers de frases (CMS + fase 2 semântica). */
 
 import type { FraseSeoPack, FraseSemantica } from '../../lib/enrichment/types';
-import { shardForSlug } from '../../lib/enrichment/enrichFrase';
+import { shardForSlug } from '../../lib/utils/shardForSlug';
 import { loadFrasesCmsFallback } from './homeData';
 
 export interface FraseInformacoes {

@@ -1,7 +1,7 @@
 /** Cliente leve para grafo SEO (sem carregar acervo inteiro). */
 
 import type { QuoteRelations } from '../../lib/seo/phase3/types';
-import { shardForSlug } from '../../lib/enrichment/enrichFrase';
+import { shardForSlug } from '../../lib/utils/shardForSlug';
 
 export async function fetchQuoteRelations(slug: string): Promise<QuoteRelations | null> {
   const sk = shardForSlug(slug);

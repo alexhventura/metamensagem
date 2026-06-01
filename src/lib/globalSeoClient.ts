@@ -2,7 +2,7 @@
  * Carrega meta SEO i18n + hreflang por shard (sob demanda).
  */
 
-import { shardForSlug } from '../../lib/enrichment/enrichFrase';
+import { shardForSlug } from '../../lib/utils/shardForSlug';
 import type { FraseI18nSeoFields } from '../../lib/seo/i18nTemplates';
 import type { SeoLocale } from '../../lib/i18n/locales';
 import { isSeoLocale, SEO_LOCALES, seoLocaleFromLanguageOriginal } from '../../lib/i18n/locales';

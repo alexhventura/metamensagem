@@ -1,5 +1,6 @@
 import type { FraseCanonical } from '../frases/canonical';
 import { slugify } from '../utils/slugify';
+import { shardForSlug } from '../utils/shardForSlug';
 import { fixCsvEncoding } from '../importers/csvParser';
 import { enrichAuthor } from './author';
 import {
@@ -13,11 +14,7 @@ import { generateExplicacaoUnica, isGenericExplicacao } from './explicacao';
 import { buildSeoPack } from './seo';
 import type { FraseEnriquecida, FraseIndexLite } from './types';
 
-export function shardForSlug(slug: string): string {
-  let h = 0;
-  for (let i = 0; i < slug.length; i++) h = (h * 31 + slug.charCodeAt(i)) >>> 0;
-  return (h % 256).toString(16).padStart(2, '0');
-}
+export { shardForSlug } from '../utils/shardForSlug';
 
 export function enrichFraseRecord(raw: FraseCanonical): FraseEnriquecida {
   const today = new Date().toISOString().slice(0, 10);

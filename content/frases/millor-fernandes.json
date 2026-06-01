@@ -2,25 +2,112 @@
   {
     "id": "f_fop64gb8m",
     "slug": "acreditar-que-nao-acreditamos-em-nada-e-crer-na-crenca-do-de",
+    "texto": "Acreditar que não acreditamos em nada é crer na crença do descrer.",
+    "autor": "Millôr Fernandes",
+    "autorSlug": "millor-fernandes",
+    "explicacao": "Millôr Fernandes, com humor lógico, diz que negar toda crença ainda é uma forma de crer. Paradoxo típico do cartunista e dramaturgo. Critica niilismos performáticos e convida à honestidade intelectual.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "acreditar",
+        "acreditamos",
+        "crença",
+        "descrer"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "millor-fernandes"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "acreditar",
+        "acreditamos",
+        "crença"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Acreditar que não acreditamos em nada é crer na cren…\" — Millôr Fernandes | Metamensagem",
+      "descriptionSeo": "Millôr Fernandes, com humor lógico, diz que negar toda crença ainda é uma forma de crer. Paradoxo típico do cartunista e dramaturgo. Critica niilismos perform…",
+      "keywordsSeo": [
+        "frases de Millôr Fernandes",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "acreditar-que-nao-acreditamos-em-nada-e-crer-na-crenca-do-de",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "millor-fernandes"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Acreditar que não acreditamos em nada é crer na crença do descrer.",
     "autor_original": "Millôr Fernandes",
-    "categoria": "inspiracional",
+    "autor_slug": "millor-fernandes",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "reflexao"
     ],
-    "explicacao": "Millôr Fernandes, com humor lógico, diz que negar toda crença ainda é uma forma de crer. Paradoxo típico do cartunista e dramaturgo. Critica niilismos performáticos e convida à honestidade intelectual.",
     "palavras_chave": [
       "inspiracional",
-      "reflexao"
+      "reflexao",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

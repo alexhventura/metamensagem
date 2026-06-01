@@ -2,25 +2,641 @@
   {
     "id": "f_9n882ycyx",
     "slug": "otimista-e-aquele-que-se-ve-obrigado-a-subir-numa-arvore-par",
+    "texto": "Otimista é aquele que se vê obrigado a subir numa árvore para fugir de um leão e ainda aprecia a paisagem.",
+    "autor": "Walter Winchell",
+    "autorSlug": "walter-winchell",
+    "explicacao": "Walter Winchell, colunista americano, define otimista com humor: mesmo fugindo de um leão numa árvore, aprecia a paisagem. Exagero cômico sobre ver lado bom em situação terrível.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "aquele",
+        "obrigado",
+        "subir",
+        "árvore"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "walter-winchell"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "aquele",
+        "obrigado"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Otimista é aquele que se vê obrigado a subir numa ár…\" — Walter Winchell | Metamensagem",
+      "descriptionSeo": "Walter Winchell, colunista americano, define otimista com humor: mesmo fugindo de um leão numa árvore, aprecia a paisagem. Exagero cômico sobre ver lado bom e…",
+      "keywordsSeo": [
+        "frases de Walter Winchell",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "otimista-e-aquele-que-se-ve-obrigado-a-subir-numa-arvore-par",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "walter-winchell"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Otimista é aquele que se vê obrigado a subir numa árvore para fugir de um leão e ainda aprecia a paisagem.",
     "autor_original": "Walter Winchell",
-    "categoria": "inspiracional",
+    "autor_slug": "walter-winchell",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Walter Winchell, colunista americano, define otimista com humor: mesmo fugindo de um leão numa árvore, aprecia a paisagem. Exagero cômico sobre ver lado bom em situação terrível.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_15d1fd3eca",
+    "slug": "a-real-friend-is-one-who-walks-in-when-the-rest-of-the-world-walks-out",
+    "texto": "A real friend is one who walks in when the rest of the world walks out.",
+    "autor": "Walter Winchell",
+    "autorSlug": "walter-winchell",
+    "explicacao": "Citação de Walter Winchell sobre temas ligados a amizade. “A real friend is one who walks in when the rest of the world walks out.” articula amizade, reflexao, walks em registro de amizade, com relevância para contextos como termino e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "reflexao"
+      ],
+      "contextos": [
+        "termino",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "reflexao",
+        "walks",
+        "friend",
+        "world"
+      ],
+      "palavrasChave": [
+        "amizade",
+        "reflexao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "reflexao",
+        "termino",
+        "walter-winchell"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "reflexao",
+        "walks",
+        "friend",
+        "world",
+        "amizade"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A real friend is one who walks in when the rest of t…\" — Walter Winchell | Metamensagem",
+      "descriptionSeo": "Citação de Walter Winchell sobre temas ligados a amizade. “A real friend is one who walks in when the rest of the world walks out.” articula amizade, reflexao…",
+      "keywordsSeo": [
+        "frases de Walter Winchell",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases reflexao",
+        "frases termino",
+        "amizade",
+        "reflexao",
+        "termino"
+      ],
+      "canonicalSlug": "a-real-friend-is-one-who-walks-in-when-the-rest-of-the-world-walks-out",
+      "relatedKeywords": [
+        "amizade",
+        "reflexao",
+        "walter-winchell"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A real friend is one who walks in when the rest of the world walks out.",
+    "autor_original": "Walter Winchell",
+    "autor_slug": "walter-winchell",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "amizade",
+      "reflexao",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_2544976768",
+    "slug": "a-friend-is-one-who-walks-in-when-others-walk-out",
+    "texto": "A friend is one who walks in when others walk out.",
+    "autor": "Walter Winchell",
+    "autorSlug": "walter-winchell",
+    "explicacao": "Citação de Walter Winchell sobre temas ligados a amizade. “A friend is one who walks in when others walk out.” articula amizade, reflexao, friend em registro de amizade, com relevância para contextos como termino e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "reflexao"
+      ],
+      "contextos": [
+        "termino",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "reflexao",
+        "friend",
+        "walks",
+        "others"
+      ],
+      "palavrasChave": [
+        "amizade",
+        "reflexao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "reflexao",
+        "termino",
+        "walter-winchell"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "reflexao",
+        "friend",
+        "walks",
+        "others",
+        "amizade"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A friend is one who walks in when others walk out.\" — Walter Winchell | Metamensagem",
+      "descriptionSeo": "Citação de Walter Winchell sobre temas ligados a amizade. “A friend is one who walks in when others walk out.” articula amizade, reflexao, friend em registro…",
+      "keywordsSeo": [
+        "frases de Walter Winchell",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases reflexao",
+        "frases termino",
+        "amizade",
+        "reflexao",
+        "termino"
+      ],
+      "canonicalSlug": "a-friend-is-one-who-walks-in-when-others-walk-out",
+      "relatedKeywords": [
+        "amizade",
+        "reflexao",
+        "walter-winchell"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A friend is one who walks in when others walk out.",
+    "autor_original": "Walter Winchell",
+    "autor_slug": "walter-winchell",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "amizade",
+      "reflexao",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_43f47973cf",
+    "slug": "nothing-recedes-like-success",
+    "texto": "Nothing recedes like success.",
+    "autor": "Walter Winchell",
+    "autorSlug": "walter-winchell",
+    "explicacao": "Citação de Walter Winchell sobre esforço, persistência e resultados. “Nothing recedes like success.” articula reflexao, success, nothing em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "success"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "success",
+        "nothing",
+        "recedes"
+      ],
+      "palavrasChave": [
+        "success",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "success",
+        "walter-winchell"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "success",
+        "nothing",
+        "recedes",
+        "reflexao",
+        "success"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Nothing recedes like success.\" — Walter Winchell | Metamensagem",
+      "descriptionSeo": "Citação de Walter Winchell sobre esforço, persistência e resultados. “Nothing recedes like success.” articula reflexao, success, nothing em registro de reflex…",
+      "keywordsSeo": [
+        "frases de Walter Winchell",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases success",
+        "success",
+        "reflexao"
+      ],
+      "canonicalSlug": "nothing-recedes-like-success",
+      "relatedKeywords": [
+        "reflexao",
+        "success",
+        "walter-winchell"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Nothing recedes like success.",
+    "autor_original": "Walter Winchell",
+    "autor_slug": "walter-winchell",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "success",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_4bf9a36d37",
+    "slug": "never-above-you-never-below-you-always-beside-you",
+    "texto": "Never above you. Never below you. Always beside you.",
+    "autor": "Walter Winchell",
+    "autorSlug": "walter-winchell",
+    "explicacao": "Citação de Walter Winchell sobre limites e escolhas conscientes. “Never above you. Never below you. Always beside you.” articula reflexao, you, never em registro de reflexao, com relevância para contextos como never e always.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "you",
+        "never",
+        "always"
+      ],
+      "contextos": [
+        "never",
+        "always"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "reflexao",
+        "you",
+        "never",
+        "always",
+        "above",
+        "below",
+        "beside"
+      ],
+      "palavrasChave": [
+        "you",
+        "never",
+        "always",
+        "reflexao",
+        "determinacao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "you",
+        "never",
+        "always",
+        "determinacao",
+        "walter-winchell"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "you",
+        "never",
+        "always",
+        "above",
+        "below"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Never above you. Never below you. Always beside you.\" — Walter Winchell | Metamensagem",
+      "descriptionSeo": "Citação de Walter Winchell sobre limites e escolhas conscientes. “Never above you. Never below you. Always beside you.” articula reflexao, you, never em regis…",
+      "keywordsSeo": [
+        "frases de Walter Winchell",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases you",
+        "frases never",
+        "frases always",
+        "you",
+        "never",
+        "always",
+        "reflexao"
+      ],
+      "canonicalSlug": "never-above-you-never-below-you-always-beside-you",
+      "relatedKeywords": [
+        "determinacao",
+        "reflexao",
+        "you",
+        "never",
+        "always",
+        "walter-winchell"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Never above you. Never below you. Always beside you.",
+    "autor_original": "Walter Winchell",
+    "autor_slug": "walter-winchell",
+    "categoria": "reflexao",
+    "contextos": [
+      "never",
+      "always"
+    ],
+    "palavras_chave": [
+      "you",
+      "never",
+      "always",
+      "reflexao",
+      "determinacao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_4c8087fdda",
+    "slug": "today-s-gossip-is-tomorrow-s-headline",
+    "texto": "Today's gossip is tomorrow's headline.",
+    "autor": "Walter Winchell",
+    "autorSlug": "walter-winchell",
+    "explicacao": "Citação de Walter Winchell sobre temas ligados a tempo. “Today's gossip is tomorrow's headline.” articula tempo, today, tomorrow em registro de tempo, com relevância para contextos como tomorrow e gossip.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "today",
+        "tomorrow",
+        "gossip"
+      ],
+      "contextos": [
+        "tomorrow",
+        "gossip"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "today",
+        "tomorrow",
+        "gossip",
+        "headline"
+      ],
+      "palavrasChave": [
+        "today",
+        "tomorrow",
+        "gossip",
+        "tempo"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "today",
+        "tomorrow",
+        "gossip",
+        "walter-winchell"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "today",
+        "tomorrow",
+        "gossip",
+        "headline",
+        "tempo"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Today's gossip is tomorrow's headline.\" — Walter Winchell | Metamensagem",
+      "descriptionSeo": "Citação de Walter Winchell sobre temas ligados a tempo. “Today's gossip is tomorrow's headline.” articula tempo, today, tomorrow em registro de tempo, com rel…",
+      "keywordsSeo": [
+        "frases de Walter Winchell",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases today",
+        "frases tomorrow",
+        "frases gossip",
+        "today",
+        "tomorrow",
+        "gossip",
+        "tempo"
+      ],
+      "canonicalSlug": "today-s-gossip-is-tomorrow-s-headline",
+      "relatedKeywords": [
+        "tempo",
+        "today",
+        "tomorrow",
+        "gossip",
+        "walter-winchell"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Today's gossip is tomorrow's headline.",
+    "autor_original": "Walter Winchell",
+    "autor_slug": "walter-winchell",
+    "categoria": "tempo",
+    "contextos": [
+      "tomorrow",
+      "gossip"
+    ],
+    "palavras_chave": [
+      "today",
+      "tomorrow",
+      "gossip",
+      "tempo"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,0 +1,125 @@
+[
+  {
+    "id": "f_csv_b93c6f492a",
+    "slug": "health-is-wealth",
+    "texto": "Health is wealth",
+    "autor": "Reese Conway",
+    "autorSlug": "reese-conway",
+    "explicacao": "Citação de Reese Conway sobre temas ligados a motivacao. “Health is wealth” articula motivacao, diseases, health em registro de motivacao, com relevância para contextos como inspiracao e health.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "diseases",
+        "health",
+        "inspiracional",
+        "wealth"
+      ],
+      "contextos": [
+        "inspiracao",
+        "health",
+        "inspiracional",
+        "wealth"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "diseases",
+        "health",
+        "inspiracional",
+        "wealth"
+      ],
+      "palavrasChave": [
+        "diseases",
+        "health",
+        "inspiracional",
+        "wealth",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "diseases",
+        "health",
+        "inspiracional",
+        "wealth",
+        "inspiracao",
+        "reese-conway"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "diseases",
+        "health",
+        "inspiracional",
+        "wealth",
+        "motivacao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Health is wealth\" — Reese Conway | Metamensagem",
+      "descriptionSeo": "Citação de Reese Conway sobre temas ligados a motivacao. “Health is wealth” articula motivacao, diseases, health em registro de motivacao, com relevância para…",
+      "keywordsSeo": [
+        "frases de Reese Conway",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases diseases",
+        "frases inspiracao",
+        "frases health",
+        "diseases",
+        "health",
+        "inspiracional",
+        "wealth"
+      ],
+      "canonicalSlug": "health-is-wealth",
+      "relatedKeywords": [
+        "motivacao",
+        "diseases",
+        "health",
+        "inspiracional",
+        "wealth",
+        "reese-conway"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Health is wealth",
+    "autor_original": "Reese Conway",
+    "autor_slug": "reese-conway",
+    "categoria": "motivacao",
+    "contextos": [
+      "inspiracao",
+      "health",
+      "inspiracional",
+      "wealth"
+    ],
+    "palavras_chave": [
+      "diseases",
+      "health",
+      "inspiracional",
+      "wealth",
+      "motivacao",
+      "inspiracao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

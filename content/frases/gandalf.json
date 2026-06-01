@@ -1,0 +1,96 @@
+[
+  {
+    "id": "f_csv_b5498bf5fa",
+    "slug": "the-earth-is-round",
+    "texto": "The earth is round!",
+    "autor": "Gandalf",
+    "autorSlug": "gandalf",
+    "explicacao": "Citação de Gandalf sobre temas ligados a reflexao. “The earth is round!” articula reflexao, knowledge, earth em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "knowledge"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "knowledge",
+        "earth",
+        "round"
+      ],
+      "palavrasChave": [
+        "knowledge",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "knowledge",
+        "gandalf"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "knowledge",
+        "earth",
+        "round",
+        "reflexao",
+        "knowledge"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The earth is round!\" — Gandalf | Metamensagem",
+      "descriptionSeo": "Citação de Gandalf sobre temas ligados a reflexao. “The earth is round!” articula reflexao, knowledge, earth em registro de reflexao, com relevância para cont…",
+      "keywordsSeo": [
+        "frases de Gandalf",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases knowledge",
+        "knowledge",
+        "reflexao"
+      ],
+      "canonicalSlug": "the-earth-is-round",
+      "relatedKeywords": [
+        "reflexao",
+        "knowledge",
+        "gandalf"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The earth is round!",
+    "autor_original": "Gandalf",
+    "autor_slug": "gandalf",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "knowledge",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -84,5 +84,35 @@
     "autor_tipo": "ator",
     "nacionalidade": "americano",
     "nascimento_falecimento": "1946-"
+  },
+  "steve jobs": {
+    "autor_tipo": "empresario",
+    "nacionalidade": "americano",
+    "nascimento_falecimento": "1955-2011"
+  },
+  "albert einstein": {
+    "autor_tipo": "fisico",
+    "nacionalidade": "alemao-suico",
+    "nascimento_falecimento": "1879-1955"
+  },
+  "martin luther king": {
+    "autor_tipo": "lider politico",
+    "nacionalidade": "americano",
+    "nascimento_falecimento": "1929-1968"
+  },
+  "theodore roosevelt": {
+    "autor_tipo": "politico",
+    "nacionalidade": "americano",
+    "nascimento_falecimento": "1858-1919"
+  },
+  "benjamin franklin": {
+    "autor_tipo": "politico",
+    "nacionalidade": "americano",
+    "nascimento_falecimento": "1706-1790"
+  },
+  "william shakespeare": {
+    "autor_tipo": "dramaturgo",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1564-1616"
   }
 }

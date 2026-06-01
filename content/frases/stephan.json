@@ -1,0 +1,119 @@
+[
+  {
+    "id": "f_csv_a392cefa40",
+    "slug": "awesome-ends-with-me-but-ugly-starts-with-u",
+    "texto": "Awesome ends with me but Ugly starts with u...",
+    "autor": "Stephan",
+    "autorSlug": "stephan",
+    "explicacao": "Citação de Stephan sobre temas ligados a humor. “Awesome ends with me but Ugly starts with u...” articula humor, funny, random em registro de humor, com relevância para contextos como termino e random.",
+    "semantica": {
+      "categoriaPrincipal": "humor",
+      "categorias": [
+        "humor",
+        "funny",
+        "random",
+        "silly"
+      ],
+      "contextos": [
+        "termino",
+        "random",
+        "silly"
+      ],
+      "emocoes": [],
+      "temas": [
+        "humor",
+        "funny",
+        "random",
+        "silly",
+        "awesome",
+        "starts"
+      ],
+      "palavrasChave": [
+        "funny",
+        "random",
+        "silly",
+        "humor",
+        "termino"
+      ],
+      "tagsSeo": [
+        "humor",
+        "funny",
+        "random",
+        "silly",
+        "termino",
+        "stephan"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "humor",
+        "funny",
+        "random",
+        "silly",
+        "awesome",
+        "starts"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Awesome ends with me but Ugly starts with u...\" — Stephan | Metamensagem",
+      "descriptionSeo": "Citação de Stephan sobre temas ligados a humor. “Awesome ends with me but Ugly starts with u...” articula humor, funny, random em registro de humor, com relev…",
+      "keywordsSeo": [
+        "frases de Stephan",
+        "frases sobre humor",
+        "frases humor",
+        "frases funny",
+        "frases termino",
+        "frases random",
+        "funny",
+        "random",
+        "silly",
+        "humor"
+      ],
+      "canonicalSlug": "awesome-ends-with-me-but-ugly-starts-with-u",
+      "relatedKeywords": [
+        "humor",
+        "funny",
+        "random",
+        "silly",
+        "stephan"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Awesome ends with me but Ugly starts with u...",
+    "autor_original": "Stephan",
+    "autor_slug": "stephan",
+    "categoria": "humor",
+    "contextos": [
+      "termino",
+      "random",
+      "silly"
+    ],
+    "palavras_chave": [
+      "funny",
+      "random",
+      "silly",
+      "humor",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_433d876116",
+    "slug": "i-m-an-artist-i-m-an-artist-and-i-m-going-to-make-art-art-arty-art-art",
+    "texto": "I'm an artist. I'm an artist and I'm going to make art! Art arty art art.",
+    "autor": "Andy Beirsack",
+    "autorSlug": "andy-beirsack",
+    "explicacao": "Citação de Andy Beirsack sobre temas ligados a reflexao. “I'm an artist. I'm an artist and I'm going to make art! Art arty art art.” articula reflexao, bvb, music em registro de reflexao, com relevância para contextos como music.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "bvb",
+        "music"
+      ],
+      "contextos": [
+        "music"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "bvb",
+        "music",
+        "artist",
+        "going"
+      ],
+      "palavrasChave": [
+        "bvb",
+        "music",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "bvb",
+        "music",
+        "andy-beirsack"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "bvb",
+        "music",
+        "artist",
+        "going",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I'm an artist. I'm an artist and I'm going to make a…\" — Andy Beirsack | Metamensagem",
+      "descriptionSeo": "Citação de Andy Beirsack sobre temas ligados a reflexao. “I'm an artist. I'm an artist and I'm going to make art! Art arty art art.” articula reflexao, bvb, m…",
+      "keywordsSeo": [
+        "frases de Andy Beirsack",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases bvb",
+        "frases music",
+        "bvb",
+        "music",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-m-an-artist-i-m-an-artist-and-i-m-going-to-make-art-art-arty-art-art",
+      "relatedKeywords": [
+        "reflexao",
+        "bvb",
+        "music",
+        "andy-beirsack"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I'm an artist. I'm an artist and I'm going to make art! Art arty art art.",
+    "autor_original": "Andy Beirsack",
+    "autor_slug": "andy-beirsack",
+    "categoria": "reflexao",
+    "contextos": [
+      "music"
+    ],
+    "palavras_chave": [
+      "bvb",
+      "music",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

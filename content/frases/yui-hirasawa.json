@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_4d077289ea",
+    "slug": "fun-things-are-fun",
+    "texto": "Fun things are fun.",
+    "autor": "Yui Hirasawa",
+    "autorSlug": "yui-hirasawa",
+    "explicacao": "Citação de Yui Hirasawa sobre temas ligados a reflexao. “Fun things are fun.” articula reflexao, fun, things em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "fun"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "fun",
+        "things"
+      ],
+      "palavrasChave": [
+        "fun",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "fun",
+        "yui-hirasawa"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "fun",
+        "things",
+        "reflexao",
+        "fun"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Fun things are fun.\" — Yui Hirasawa | Metamensagem",
+      "descriptionSeo": "Citação de Yui Hirasawa sobre temas ligados a reflexao. “Fun things are fun.” articula reflexao, fun, things em registro de reflexao, com relevância para cont…",
+      "keywordsSeo": [
+        "frases de Yui Hirasawa",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases fun",
+        "fun",
+        "reflexao"
+      ],
+      "canonicalSlug": "fun-things-are-fun",
+      "relatedKeywords": [
+        "reflexao",
+        "fun",
+        "yui-hirasawa"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Fun things are fun.",
+    "autor_original": "Yui Hirasawa",
+    "autor_slug": "yui-hirasawa",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "fun",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

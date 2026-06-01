@@ -1,0 +1,99 @@
+[
+  {
+    "id": "f_csv_323bba288f",
+    "slug": "when-you-see-me-i-see-you",
+    "texto": "when you see me i see you",
+    "autor": "Anyomous",
+    "autorSlug": "anyomous",
+    "explicacao": "Citação de Anyomous sobre temas ligados a reflexao. “when you see me i see you” articula reflexao, love-story em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "love-story"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "reflexao",
+        "love-story"
+      ],
+      "palavrasChave": [
+        "love-story",
+        "reflexao",
+        "amor"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "love-story",
+        "amor",
+        "anyomous"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "love-story",
+        "reflexao",
+        "love-story"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"when you see me i see you\" — Anyomous | Metamensagem",
+      "descriptionSeo": "Citação de Anyomous sobre temas ligados a reflexao. “when you see me i see you” articula reflexao, love-story em registro de reflexao, com relevância para con…",
+      "keywordsSeo": [
+        "frases de Anyomous",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases love story",
+        "love-story",
+        "reflexao",
+        "amor"
+      ],
+      "canonicalSlug": "when-you-see-me-i-see-you",
+      "relatedKeywords": [
+        "amor",
+        "reflexao",
+        "love-story",
+        "anyomous"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "when you see me i see you",
+    "autor_original": "Anyomous",
+    "autor_slug": "anyomous",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "love-story",
+      "reflexao",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -2,27 +2,114 @@
   {
     "id": "f_rhvfre44t",
     "slug": "o-conhecimento-e-uma-sede-insaciavel-quanto-mais-bebemos-m",
+    "texto": "O conhecimento é uma sede insaciável, quanto mais bebemos, mais sede sentimos.",
+    "autor": "Eduardo Colamego",
+    "autorSlug": "eduardo-colamego",
+    "explicacao": "Eduardo Colamego compara o conhecimento a uma sede que cresce quanto mais se aprende. Metáfora clássica sobre curiosidade intelectual e o prazer eterno de descobrir, típica de pensadores sobre educação e sabedoria.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "sabedoria"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao",
+        "sabedoria"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "sabedoria",
+        "conhecimento",
+        "insaciável",
+        "quanto",
+        "bebemos",
+        "sentimos"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "sabedoria",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "sabedoria",
+        "inspiracao",
+        "eduardo-colamego"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "sabedoria",
+        "conhecimento",
+        "insaciável",
+        "quanto"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O conhecimento é uma sede insaciável, quanto mais be…\" — Eduardo Colamego | Metamensagem",
+      "descriptionSeo": "Eduardo Colamego compara o conhecimento a uma sede que cresce quanto mais se aprende. Metáfora clássica sobre curiosidade intelectual e o prazer eterno de des…",
+      "keywordsSeo": [
+        "frases de Eduardo Colamego",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "sabedoria",
+        "inspiracao"
+      ],
+      "canonicalSlug": "o-conhecimento-e-uma-sede-insaciavel-quanto-mais-bebemos-m",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "sabedoria",
+        "eduardo-colamego"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O conhecimento é uma sede insaciável, quanto mais bebemos, mais sede sentimos.",
     "autor_original": "Eduardo Colamego",
-    "categoria": "inspiracional",
+    "autor_slug": "eduardo-colamego",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao",
       "sabedoria"
     ],
-    "explicacao": "Eduardo Colamego compara o conhecimento a uma sede que cresce quanto mais se aprende. Metáfora clássica sobre curiosidade intelectual e o prazer eterno de descobrir, típica de pensadores sobre educação e sabedoria.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
-      "sabedoria"
+      "sabedoria",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

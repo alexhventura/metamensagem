@@ -2,27 +2,120 @@
   {
     "id": "f_ypwee4ttu",
     "slug": "e-os-pensamentos-positivos-sou-otimista-nao-idiota",
+    "texto": "- E os pensamentos positivos? - Sou otimista, não idiota.",
+    "autor": "Mariana Nunes",
+    "autorSlug": "mariana-nunes",
+    "explicacao": "Mariana Nunes usa humor para separar otimismo realista de positividade ingênua. Diálogo curto que desarma clichês de “pensamento positivo”. A citação pede lucidez emocional sem cinismo.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "reflexao",
+        "pensamentos",
+        "positivos",
+        "otimista",
+        "idiota"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "reflexao",
+        "inspiracao",
+        "mariana-nunes"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "reflexao",
+        "pensamentos",
+        "positivos"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"- E os pensamentos positivos? - Sou otimista, não id…\" — Mariana Nunes | Metamensagem",
+      "descriptionSeo": "Mariana Nunes usa humor para separar otimismo realista de positividade ingênua. Diálogo curto que desarma clichês de “pensamento positivo”. A citação pede luc…",
+      "keywordsSeo": [
+        "frases de Mariana Nunes",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "reflexao",
+        "motivacao"
+      ],
+      "canonicalSlug": "e-os-pensamentos-positivos-sou-otimista-nao-idiota",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "reflexao",
+        "mariana-nunes"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "- E os pensamentos positivos? - Sou otimista, não idiota.",
     "autor_original": "Mariana Nunes",
-    "categoria": "inspiracional",
+    "autor_slug": "mariana-nunes",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo",
       "reflexao"
     ],
-    "explicacao": "Mariana Nunes usa humor para separar otimismo realista de positividade ingênua. Diálogo curto que desarma clichês de “pensamento positivo”. A citação pede lucidez emocional sem cinismo.",
     "palavras_chave": [
       "inspiracional",
       "otimismo",
-      "reflexao"
+      "reflexao",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

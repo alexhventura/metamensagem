@@ -1,0 +1,120 @@
+[
+  {
+    "id": "f_csv_de4bd195c2",
+    "slug": "every-educated-person-is-a-future-enemy",
+    "texto": "Every educated person is a future enemy.",
+    "autor": "Martin Bormann",
+    "autorSlug": "martin-bormann",
+    "explicacao": "Citação de Martin Bormann sobre temas ligados a educacao. “Every educated person is a future enemy.” articula educacao, future, enemy em registro de educacao, com relevância para contextos como enemy e person.",
+    "semantica": {
+      "categoriaPrincipal": "educacao",
+      "categorias": [
+        "educacao",
+        "future",
+        "enemy",
+        "person"
+      ],
+      "contextos": [
+        "enemy",
+        "person"
+      ],
+      "emocoes": [
+        "esperanca"
+      ],
+      "temas": [
+        "educacao",
+        "future",
+        "enemy",
+        "person",
+        "every",
+        "educated"
+      ],
+      "palavrasChave": [
+        "future",
+        "enemy",
+        "person",
+        "educacao",
+        "esperanca"
+      ],
+      "tagsSeo": [
+        "educacao",
+        "future",
+        "enemy",
+        "person",
+        "esperanca",
+        "martin-bormann"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "educacao",
+        "future",
+        "enemy",
+        "person",
+        "every",
+        "educated"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Every educated person is a future enemy.\" — Martin Bormann | Metamensagem",
+      "descriptionSeo": "Citação de Martin Bormann sobre temas ligados a educacao. “Every educated person is a future enemy.” articula educacao, future, enemy em registro de educacao,…",
+      "keywordsSeo": [
+        "frases de Martin Bormann",
+        "frases sobre educacao",
+        "frases educacao",
+        "frases future",
+        "frases enemy",
+        "frases person",
+        "future",
+        "enemy",
+        "person",
+        "educacao"
+      ],
+      "canonicalSlug": "every-educated-person-is-a-future-enemy",
+      "relatedKeywords": [
+        "esperanca",
+        "educacao",
+        "future",
+        "enemy",
+        "person",
+        "martin-bormann"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Every educated person is a future enemy.",
+    "autor_original": "Martin Bormann",
+    "autor_slug": "martin-bormann",
+    "categoria": "educacao",
+    "contextos": [
+      "enemy",
+      "person"
+    ],
+    "palavras_chave": [
+      "future",
+      "enemy",
+      "person",
+      "educacao",
+      "esperanca"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_2c0ba0e7a3",
+    "slug": "i-play-chicken-with-the-train",
+    "texto": "I play chicken with the train",
+    "autor": "Cowboy Troy",
+    "autorSlug": "cowboy-troy",
+    "explicacao": "Citação de Cowboy Troy sobre temas ligados a reflexao. “I play chicken with the train” articula reflexao, music, chicken em registro de reflexao, com relevância para contextos como dia-chuvoso e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "music"
+      ],
+      "contextos": [
+        "dia-chuvoso",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "music",
+        "chicken",
+        "train"
+      ],
+      "palavrasChave": [
+        "music",
+        "reflexao",
+        "dia-chuvoso"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "music",
+        "dia-chuvoso",
+        "cowboy-troy"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "music",
+        "chicken",
+        "train",
+        "reflexao",
+        "music"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I play chicken with the train\" — Cowboy Troy | Metamensagem",
+      "descriptionSeo": "Citação de Cowboy Troy sobre temas ligados a reflexao. “I play chicken with the train” articula reflexao, music, chicken em registro de reflexao, com relevânc…",
+      "keywordsSeo": [
+        "frases de Cowboy Troy",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases music",
+        "frases dia chuvoso",
+        "music",
+        "reflexao",
+        "dia-chuvoso"
+      ],
+      "canonicalSlug": "i-play-chicken-with-the-train",
+      "relatedKeywords": [
+        "reflexao",
+        "music",
+        "cowboy-troy"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I play chicken with the train",
+    "autor_original": "Cowboy Troy",
+    "autor_slug": "cowboy-troy",
+    "categoria": "reflexao",
+    "contextos": [
+      "dia-chuvoso",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "music",
+      "reflexao",
+      "dia-chuvoso"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

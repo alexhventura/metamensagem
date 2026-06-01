@@ -2,27 +2,125 @@
   {
     "id": "f_5wvhc68x4",
     "slug": "amadurecimento-e-o-fato-de-ser-otimista-o-suficiente-para-na",
+    "texto": "Amadurecimento é o fato de ser otimista o suficiente para não lamentar os sofrimentos e os erros, em vista do crescimento como indivíduo.",
+    "autor": "Lizie Oliveira",
+    "autorSlug": "lizie-oliveira",
+    "explicacao": "Lizie Oliveira define amadurecimento como otimismo que transforma erros em crescimento, sem ficar preso ao lamento. Texto de autoajuda em português. A citação valoriza resiliência emocional e aprendizado com as adversidades.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "termino",
+        "inspiracional",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "otimismo",
+        "amadurecimento",
+        "otimista",
+        "suficiente",
+        "lamentar"
+      ],
+      "palavrasChave": [
+        "aprendizado",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "termino",
+        "lizie-oliveira"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 39,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "otimismo",
+        "amadurecimento",
+        "otimista"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Amadurecimento é o fato de ser otimista o suficiente…\" — Lizie Oliveira | Metamensagem",
+      "descriptionSeo": "Lizie Oliveira define amadurecimento como otimismo que transforma erros em crescimento, sem ficar preso ao lamento. Texto de autoajuda em português. A citação…",
+      "keywordsSeo": [
+        "frases de Lizie Oliveira",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases aprendizado",
+        "frases inspiracao",
+        "frases termino",
+        "aprendizado",
+        "inspiracional",
+        "otimismo",
+        "motivacao"
+      ],
+      "canonicalSlug": "amadurecimento-e-o-fato-de-ser-otimista-o-suficiente-para-na",
+      "relatedKeywords": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "otimismo",
+        "lizie-oliveira"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Amadurecimento é o fato de ser otimista o suficiente para não lamentar os sofrimentos e os erros, em vista do crescimento como indivíduo.",
     "autor_original": "Lizie Oliveira",
-    "categoria": "aprendizado",
+    "autor_slug": "lizie-oliveira",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
+      "termino",
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "Lizie Oliveira define amadurecimento como otimismo que transforma erros em crescimento, sem ficar preso ao lamento. Texto de autoajuda em português. A citação valoriza resiliência emocional e aprendizado com as adversidades.",
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

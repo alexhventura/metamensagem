@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f_csv_f95eec8b70",
+    "slug": "dream-up-a-book-on-monday-publish-it-on-friday",
+    "texto": "Dream up a book on Monday, publish it on Friday.",
+    "autor": "Jill Novak",
+    "autorSlug": "jill-novak",
+    "explicacao": "Citação de Jill Novak sobre temas ligados a motivacao. “Dream up a book on Monday, publish it on Friday.” articula motivacao, books, publishing em registro de motivacao, com relevância para contextos como segunda-feira e publishing.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "books",
+        "publishing"
+      ],
+      "contextos": [
+        "segunda-feira",
+        "publishing"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "books",
+        "publishing",
+        "dream",
+        "monday",
+        "publish",
+        "friday"
+      ],
+      "palavrasChave": [
+        "books",
+        "publishing",
+        "motivacao",
+        "segunda-feira"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "books",
+        "publishing",
+        "segunda-feira",
+        "jill-novak"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "books",
+        "publishing",
+        "dream",
+        "monday",
+        "publish"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Dream up a book on Monday, publish it on Friday.\" — Jill Novak | Metamensagem",
+      "descriptionSeo": "Citação de Jill Novak sobre temas ligados a motivacao. “Dream up a book on Monday, publish it on Friday.” articula motivacao, books, publishing em registro de…",
+      "keywordsSeo": [
+        "frases de Jill Novak",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases books",
+        "frases segunda feira",
+        "frases publishing",
+        "books",
+        "publishing",
+        "motivacao",
+        "segunda-feira"
+      ],
+      "canonicalSlug": "dream-up-a-book-on-monday-publish-it-on-friday",
+      "relatedKeywords": [
+        "motivacao",
+        "books",
+        "publishing",
+        "jill-novak"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Dream up a book on Monday, publish it on Friday.",
+    "autor_original": "Jill Novak",
+    "autor_slug": "jill-novak",
+    "categoria": "motivacao",
+    "contextos": [
+      "segunda-feira",
+      "publishing"
+    ],
+    "palavras_chave": [
+      "books",
+      "publishing",
+      "motivacao",
+      "segunda-feira"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

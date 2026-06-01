@@ -1,0 +1,107 @@
+[
+  {
+    "id": "f_csv_9aeeac46ac",
+    "slug": "there-are-three-books-my-daughter-felt-were-the-most-important-influences-in-her",
+    "texto": "There are three books my daughter felt were the most important influences in her life: the Bible her mother's cookbook and her father's checkbook.",
+    "autor": "Joyce Mattingly",
+    "autorSlug": "joyce-mattingly",
+    "explicacao": "Citação de Joyce Mattingly sobre sentido da existência e experiência vivida. “There are three books my daughter felt were the most important influences in her life: the Bible …” articula familia, mothers, fathers em registro de familia, com relevância para contextos como fathers.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "mothers",
+        "fathers"
+      ],
+      "contextos": [
+        "fathers"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "mothers",
+        "fathers",
+        "there",
+        "three",
+        "books",
+        "daughter",
+        "important"
+      ],
+      "palavrasChave": [
+        "mothers",
+        "fathers",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "mothers",
+        "fathers",
+        "joyce-mattingly"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 38,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "mothers",
+        "fathers",
+        "there",
+        "three",
+        "books"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"There are three books my daughter felt were the most…\" — Joyce Mattingly | Metamensagem",
+      "descriptionSeo": "Citação de Joyce Mattingly sobre sentido da existência e experiência vivida. “There are three books my daughter felt were the most important influences in her…",
+      "keywordsSeo": [
+        "frases de Joyce Mattingly",
+        "frases sobre familia",
+        "frases familia",
+        "frases mothers",
+        "frases fathers",
+        "mothers",
+        "fathers",
+        "familia"
+      ],
+      "canonicalSlug": "there-are-three-books-my-daughter-felt-were-the-most-important-influences-in-her",
+      "relatedKeywords": [
+        "familia",
+        "mothers",
+        "fathers",
+        "joyce-mattingly"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "There are three books my daughter felt were the most important influences in her life: the Bible her mother's cookbook and her father's checkbook.",
+    "autor_original": "Joyce Mattingly",
+    "autor_slug": "joyce-mattingly",
+    "categoria": "familia",
+    "contextos": [
+      "fathers"
+    ],
+    "palavras_chave": [
+      "mothers",
+      "fathers",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

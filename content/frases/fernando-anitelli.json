@@ -2,25 +2,113 @@
   {
     "id": "f_lp4p0v9w4",
     "slug": "descobrir-o-verdadeiro-sentido-das-coisas-e-querer-saber-dem",
+    "texto": "Descobrir o verdadeiro sentido das coisas é querer saber demais!",
+    "autor": "Fernando Anitelli",
+    "autorSlug": "fernando-anitelli",
+    "explicacao": "Fernando Anitelli, do Tihuana, sugere que buscar o sentido profundo das coisas é querer demais. Reflexão sobre limites do entendimento, possivelmente ligada à letra de alguma composição da banda.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "descobrir",
+        "verdadeiro",
+        "sentido",
+        "coisas",
+        "querer"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "fernando-anitelli"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "descobrir",
+        "verdadeiro",
+        "sentido"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Descobrir o verdadeiro sentido das coisas é querer s…\" — Fernando Anitelli | Metamensagem",
+      "descriptionSeo": "Fernando Anitelli, do Tihuana, sugere que buscar o sentido profundo das coisas é querer demais. Reflexão sobre limites do entendimento, possivelmente ligada à…",
+      "keywordsSeo": [
+        "frases de Fernando Anitelli",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "descobrir-o-verdadeiro-sentido-das-coisas-e-querer-saber-dem",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "fernando-anitelli"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Descobrir o verdadeiro sentido das coisas é querer saber demais!",
     "autor_original": "Fernando Anitelli",
-    "categoria": "inspiracional",
+    "autor_slug": "fernando-anitelli",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "reflexao"
     ],
-    "explicacao": "Fernando Anitelli, do Tihuana, sugere que buscar o sentido profundo das coisas é querer demais. Reflexão sobre limites do entendimento, possivelmente ligada à letra de alguma composição da banda.",
     "palavras_chave": [
       "inspiracional",
-      "reflexao"
+      "reflexao",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

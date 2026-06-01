@@ -1,0 +1,98 @@
+[
+  {
+    "id": "f_csv_89a0af25bf",
+    "slug": "the-world-belongs-to-the-people-who-are-curious",
+    "texto": "The world belongs to the people who are curious.",
+    "autor": "Einstein",
+    "autorSlug": "einstein",
+    "explicacao": "Citação de Einstein sobre temas ligados a reflexao. “The world belongs to the people who are curious.” articula reflexao, curiosity, world em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "curiosity"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "curiosity",
+        "world",
+        "belongs",
+        "people",
+        "curious"
+      ],
+      "palavrasChave": [
+        "curiosity",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "curiosity",
+        "einstein"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "curiosity",
+        "world",
+        "belongs",
+        "people",
+        "curious"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The world belongs to the people who are curious.\" — Einstein | Metamensagem",
+      "descriptionSeo": "Citação de Einstein sobre temas ligados a reflexao. “The world belongs to the people who are curious.” articula reflexao, curiosity, world em registro de refl…",
+      "keywordsSeo": [
+        "frases de Einstein",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases curiosity",
+        "curiosity",
+        "reflexao"
+      ],
+      "canonicalSlug": "the-world-belongs-to-the-people-who-are-curious",
+      "relatedKeywords": [
+        "reflexao",
+        "curiosity",
+        "einstein"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The world belongs to the people who are curious.",
+    "autor_original": "Einstein",
+    "autor_slug": "einstein",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "curiosity",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

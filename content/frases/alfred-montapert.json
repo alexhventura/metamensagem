@@ -2,27 +2,127 @@
   {
     "id": "f_qeljg63nb",
     "slug": "o-bom-humor-espalha-mais-felicidade-que-todas-as-riquezas-do",
+    "texto": "O bom humor espalha mais felicidade que todas as riquezas do mundo. Vem do hábito de olhar para as coisas com esperança e de esperar o melhor e não o pior.",
+    "autor": "Alfred Montapert",
+    "autorSlug": "alfred-montapert",
+    "explicacao": "Atribuída a Alfred Montapert, autor de desenvolvimento pessoal. Defende que humor e esperança produzem mais felicidade que riqueza, porque nascem de escolher ver o melhor nas circunstâncias.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "emocoes": [
+        "esperanca",
+        "felicidade"
+      ],
+      "temas": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "humor",
+        "espalha",
+        "todas",
+        "riquezas"
+      ],
+      "palavrasChave": [
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao",
+        "esperanca"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "esperanca",
+        "alfred-montapert"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 41,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "humor",
+        "espalha"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O bom humor espalha mais felicidade que todas as riq…\" — Alfred Montapert | Metamensagem",
+      "descriptionSeo": "Atribuída a Alfred Montapert, autor de desenvolvimento pessoal. Defende que humor e esperança produzem mais felicidade que riqueza, porque nascem de escolher…",
+      "keywordsSeo": [
+        "frases de Alfred Montapert",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases felicidade",
+        "frases inspiracao",
+        "frases inspiracional",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "motivacao"
+      ],
+      "canonicalSlug": "o-bom-humor-espalha-mais-felicidade-que-todas-as-riquezas-do",
+      "relatedKeywords": [
+        "esperanca",
+        "felicidade",
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "alfred-montapert"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O bom humor espalha mais felicidade que todas as riquezas do mundo. Vem do hábito de olhar para as coisas com esperança e de esperar o melhor e não o pior.",
     "autor_original": "Alfred Montapert",
-    "categoria": "felicidade",
+    "autor_slug": "alfred-montapert",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "Atribuída a Alfred Montapert, autor de desenvolvimento pessoal. Defende que humor e esperança produzem mais felicidade que riqueza, porque nascem de escolher ver o melhor nas circunstâncias.",
     "palavras_chave": [
       "felicidade",
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao",
+      "esperanca"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

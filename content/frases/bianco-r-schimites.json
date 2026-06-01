@@ -2,29 +2,123 @@
   {
     "id": "f_mi4ragmee",
     "slug": "se-voce-nao-tem-coragem-de-correr-o-risco-de-errar-voce-nao",
+    "texto": "Se você não tem coragem de correr o risco de errar, você não tem coragem de ter sucesso.",
+    "autor": "Bianco R. Schimites",
+    "autorSlug": "bianco-r-schimites",
+    "explicacao": "De Bianco R. Schimites, mensagem motivacional sobre risco e sucesso. Diz que evitar erro por medo também elimina a chance de conquistar, porque aprendizado e vitória exigem exposição.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "sucesso"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao",
+        "sucesso"
+      ],
+      "emocoes": [
+        "coragem"
+      ],
+      "temas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "correr",
+        "risco",
+        "errar",
+        "sucesso"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "sucesso",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "sucesso",
+        "inspiracao",
+        "bianco-r-schimites"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 36,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "correr",
+        "risco",
+        "errar"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Se você não tem coragem de correr o risco de errar, …\" — Bianco R. Schimites | Metamensagem",
+      "descriptionSeo": "De Bianco R. Schimites, mensagem motivacional sobre risco e sucesso. Diz que evitar erro por medo também elimina a chance de conquistar, porque aprendizado e…",
+      "keywordsSeo": [
+        "frases de Bianco R. Schimites",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases coragem",
+        "frases inspiracao",
+        "frases inspiracional",
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "sucesso"
+      ],
+      "canonicalSlug": "se-voce-nao-tem-coragem-de-correr-o-risco-de-errar-voce-nao",
+      "relatedKeywords": [
+        "coragem",
+        "motivacao",
+        "inspiracional",
+        "sucesso",
+        "bianco-r-schimites"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Se você não tem coragem de correr o risco de errar, você não tem coragem de ter sucesso.",
     "autor_original": "Bianco R. Schimites",
-    "categoria": "coragem",
+    "autor_slug": "bianco-r-schimites",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao",
       "sucesso"
     ],
-    "explicacao": "De Bianco R. Schimites, mensagem motivacional sobre risco e sucesso. Diz que evitar erro por medo também elimina a chance de conquistar, porque aprendizado e vitória exigem exposição.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao",
-      "sucesso"
+      "sucesso",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

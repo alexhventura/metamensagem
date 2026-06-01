@@ -1,0 +1,29 @@
+{
+  "concluidoEm": "2026-06-01T13:09:11.457Z",
+  "frasesProcessadas": 467775,
+  "explicacoesReescritas": 148470,
+  "autoresEnriquecidos": 30,
+  "shards": 256,
+  "feedSample": 4000,
+  "indices": {
+    "autores": 74184,
+    "categorias": 90157,
+    "contextos": 84794,
+    "emocoes": 13,
+    "temas": 127234,
+    "keywords": 109856,
+    "seo": 50000
+  },
+  "impactoSeo": {
+    "resumo": "Metadados title/description/keywords por frase; índices de agrupamento para rotas dinâmicas; shards para performance.",
+    "paginasAgrupamento": [
+      "/autor/[slug]",
+      "/categoria/[slug]",
+      "/contexto/[slug]",
+      "/emocao/[slug]",
+      "/tema/[slug]",
+      "/palavra-chave/[slug]"
+    ]
+  },
+  "custo": "zero (heurísticas locais, sem API de IA)"
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_dd1130a1f1",
+    "slug": "today-delete-it",
+    "texto": "Today delete it",
+    "autor": "tomorrow you will need it.",
+    "autorSlug": "tomorrow-you-will-need-it",
+    "explicacao": "Citação de tomorrow you will need it. sobre temas ligados a tempo. “Today delete it” articula tempo, h-m-flath, cobbled-life em registro de tempo, com relevância para contextos como cobbled-life.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "h-m-flath",
+        "cobbled-life"
+      ],
+      "contextos": [
+        "cobbled-life"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "h-m-flath",
+        "cobbled-life",
+        "today",
+        "delete"
+      ],
+      "palavrasChave": [
+        "h-m-flath",
+        "cobbled-life",
+        "tempo"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "h-m-flath",
+        "cobbled-life",
+        "tomorrow-you-will-need-it"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "h-m-flath",
+        "cobbled-life",
+        "today",
+        "delete",
+        "tempo"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Today delete it\" — tomorrow you will need it. | Metamensagem",
+      "descriptionSeo": "Citação de tomorrow you will need it. sobre temas ligados a tempo. “Today delete it” articula tempo, h-m-flath, cobbled-life em registro de tempo, com relevân…",
+      "keywordsSeo": [
+        "frases de tomorrow you will need it.",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases h m flath",
+        "frases cobbled life",
+        "h-m-flath",
+        "cobbled-life",
+        "tempo"
+      ],
+      "canonicalSlug": "today-delete-it",
+      "relatedKeywords": [
+        "tempo",
+        "h-m-flath",
+        "cobbled-life",
+        "tomorrow-you-will-need-it"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Today delete it",
+    "autor_original": "tomorrow you will need it.",
+    "autor_slug": "tomorrow-you-will-need-it",
+    "categoria": "tempo",
+    "contextos": [
+      "cobbled-life"
+    ],
+    "palavras_chave": [
+      "h-m-flath",
+      "cobbled-life",
+      "tempo"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

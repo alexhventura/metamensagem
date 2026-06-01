@@ -2,25 +2,113 @@
   {
     "id": "f_mjb4287v7",
     "slug": "o-mundo-pertence-aos-otimistas-os-pessimistas-sao-meros-esp",
+    "texto": "O mundo pertence aos otimistas: os pessimistas são meros espectadores.",
+    "autor": "Dwight Eisenhower",
+    "autorSlug": "dwight-eisenhower",
+    "explicacao": "Atribuída a Dwight Eisenhower, a frase contrasta otimistas — que agem — com pessimistas — que apenas observam. Reflete a mentalidade de liderança e ação do general e ex-presidente dos EUA diante de grandes desafios.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "mundo",
+        "pertence",
+        "otimistas",
+        "pessimistas",
+        "meros"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "dwight-eisenhower"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "mundo",
+        "pertence",
+        "otimistas"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O mundo pertence aos otimistas: os pessimistas são m…\" — Dwight Eisenhower | Metamensagem",
+      "descriptionSeo": "Atribuída a Dwight Eisenhower, a frase contrasta otimistas — que agem — com pessimistas — que apenas observam. Reflete a mentalidade de liderança e ação do ge…",
+      "keywordsSeo": [
+        "frases de Dwight Eisenhower",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "o-mundo-pertence-aos-otimistas-os-pessimistas-sao-meros-esp",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "dwight-eisenhower"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O mundo pertence aos otimistas: os pessimistas são meros espectadores.",
     "autor_original": "Dwight Eisenhower",
-    "categoria": "inspiracional",
+    "autor_slug": "dwight-eisenhower",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Atribuída a Dwight Eisenhower, a frase contrasta otimistas — que agem — com pessimistas — que apenas observam. Reflete a mentalidade de liderança e ação do general e ex-presidente dos EUA diante de grandes desafios.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

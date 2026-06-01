@@ -1,0 +1,110 @@
+[
+  {
+    "id": "f_csv_1ab3440b1c",
+    "slug": "in-the-end-it-s-only-words-my-dear",
+    "texto": "In the end it's only words, my dear.",
+    "autor": "Suz Priestas",
+    "autorSlug": "suz-priestas",
+    "explicacao": "Citação de Suz Priestas sobre temas ligados a vida. “In the end it's only words, my dear.” articula vida, life-and-living, philosophy em registro de vida, com relevância para contextos como termino e philosophy.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "life-and-living",
+        "philosophy"
+      ],
+      "contextos": [
+        "termino",
+        "philosophy"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "life-and-living",
+        "philosophy",
+        "words"
+      ],
+      "palavrasChave": [
+        "life-and-living",
+        "philosophy",
+        "vida",
+        "termino"
+      ],
+      "tagsSeo": [
+        "vida",
+        "life-and-living",
+        "philosophy",
+        "termino",
+        "suz-priestas"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "life-and-living",
+        "philosophy",
+        "words",
+        "vida",
+        "life-and-living"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"In the end it's only words, my dear.\" — Suz Priestas | Metamensagem",
+      "descriptionSeo": "Citação de Suz Priestas sobre temas ligados a vida. “In the end it's only words, my dear.” articula vida, life-and-living, philosophy em registro de vida, com…",
+      "keywordsSeo": [
+        "frases de Suz Priestas",
+        "frases sobre vida",
+        "frases vida",
+        "frases life and living",
+        "frases termino",
+        "frases philosophy",
+        "life-and-living",
+        "philosophy",
+        "vida",
+        "termino"
+      ],
+      "canonicalSlug": "in-the-end-it-s-only-words-my-dear",
+      "relatedKeywords": [
+        "vida",
+        "life-and-living",
+        "philosophy",
+        "suz-priestas"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "In the end it's only words, my dear.",
+    "autor_original": "Suz Priestas",
+    "autor_slug": "suz-priestas",
+    "categoria": "vida",
+    "contextos": [
+      "termino",
+      "philosophy"
+    ],
+    "palavras_chave": [
+      "life-and-living",
+      "philosophy",
+      "vida",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

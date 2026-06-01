@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f_csv_e1a200e3f1",
+    "slug": "this-is-a-feminist-bookstore-there-is-no-humor-section",
+    "texto": "This is a feminist bookstore. There is no humor section.",
+    "autor": "John Callahan",
+    "autorSlug": "john-callahan",
+    "explicacao": "Citação de John Callahan sobre temas ligados a humor. “This is a feminist bookstore. There is no humor section.” articula humor, bookstore, feminist em registro de humor, com relevância para contextos como feminist e section.",
+    "semantica": {
+      "categoriaPrincipal": "humor",
+      "categorias": [
+        "humor",
+        "bookstore",
+        "feminist",
+        "section"
+      ],
+      "contextos": [
+        "feminist",
+        "section"
+      ],
+      "emocoes": [],
+      "temas": [
+        "humor",
+        "bookstore",
+        "feminist",
+        "section",
+        "there"
+      ],
+      "palavrasChave": [
+        "bookstore",
+        "feminist",
+        "section",
+        "humor"
+      ],
+      "tagsSeo": [
+        "humor",
+        "bookstore",
+        "feminist",
+        "section",
+        "john-callahan"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "humor",
+        "bookstore",
+        "feminist",
+        "section",
+        "there",
+        "humor"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"This is a feminist bookstore. There is no humor sect…\" — John Callahan | Metamensagem",
+      "descriptionSeo": "Citação de John Callahan sobre temas ligados a humor. “This is a feminist bookstore. There is no humor section.” articula humor, bookstore, feminist em regist…",
+      "keywordsSeo": [
+        "frases de John Callahan",
+        "frases sobre humor",
+        "frases humor",
+        "frases bookstore",
+        "frases feminist",
+        "frases section",
+        "bookstore",
+        "feminist",
+        "section",
+        "humor"
+      ],
+      "canonicalSlug": "this-is-a-feminist-bookstore-there-is-no-humor-section",
+      "relatedKeywords": [
+        "humor",
+        "bookstore",
+        "feminist",
+        "section",
+        "john-callahan"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "This is a feminist bookstore. There is no humor section.",
+    "autor_original": "John Callahan",
+    "autor_slug": "john-callahan",
+    "categoria": "humor",
+    "contextos": [
+      "feminist",
+      "section"
+    ],
+    "palavras_chave": [
+      "bookstore",
+      "feminist",
+      "section",
+      "humor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

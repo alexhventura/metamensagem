@@ -1,6 +1,6 @@
 /**
  * Gera o campo `explicacao` (único campo criado por IA) para frases do CMS.
- * Usa Gemini quando GEMINI_API_KEY está definida; ou aplica cache em data/frases-explicacao-cache.json.
+ * Usa ChatGPT/OpenAI (padrão) ou Gemini quando configurado; ou aplica cache.
  *
  * Uso:
  *   node scripts/generate-frases-explicacao.mjs              # gera via API (só vazios)
@@ -13,7 +13,8 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
-import { GoogleGenAI } from '@google/genai';
+import { loadCuradoriaApiKey, getCuradoriaAiProvider } from '../lib/secrets/loadCuradoriaApiKey.ts';
+import { generateExplicacaoBatch } from '../lib/ai/enrichBatch.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -66,67 +67,6 @@ function loadAllFrases() {
   return byId;
 }
 
-function buildPrompt(batch) {
-  const items = batch.map((f, i) => ({
-    n: i + 1,
-    id: f.id,
-    frase: f.frase_original,
-    autor: f.autor_original,
-    categoria: f.categoria,
-    contextos: f.contextos,
-    autor_tipo: f.autor_tipo,
-    nacionalidade: f.nacionalidade,
-    periodo: f.nascimento_falecimento,
-    ano_ou_data: f.ano_ou_data,
-  }));
-
-  return `Você é um especialista em história das ideias e contexto cultural em português do Brasil.
-
-Para cada frase abaixo, escreva uma "explicacao" curta (2 a 4 frases, máximo 420 caracteres) que:
-- situe o provável contexto em que a fala/citação faz sentido (obra, época, tema público ou íntimo);
-- explique por que alguém diria isso naquele momento ou em que situação o leitor usaria a frase;
-- use os metadados fornecidos quando ajudarem, sem inventar datas, obras ou eventos específicos não indicados;
-- se a atribuição ao autor for incerta ou a frase for popular/anônima, diga isso com naturalidade;
-- tom informativo e acessível, sem tom de marketing;
-- responda APENAS em JSON válido: array de objetos { "id": "...", "explicacao": "..." } na mesma ordem dos itens.
-
-Itens:
-${JSON.stringify(items, null, 2)}`;
-}
-
-function parseModelJson(text) {
-  const trimmed = text.trim();
-  const fence = trimmed.match(/```(?:json)?\s*([\s\S]*?)```/);
-  const raw = fence ? fence[1].trim() : trimmed;
-  const start = raw.indexOf('[');
-  const end = raw.lastIndexOf(']');
-  if (start === -1 || end === -1) throw new Error('Resposta sem array JSON');
-  return JSON.parse(raw.slice(start, end + 1));
-}
-
-async function generateBatch(ai, batch) {
-  const response = await ai.models.generateContent({
-    model: 'gemini-2.0-flash',
-    contents: buildPrompt(batch),
-    config: {
-      temperature: 0.55,
-      maxOutputTokens: 4096,
-      responseMimeType: 'application/json',
-    },
-  });
-
-  const text = response.text?.trim();
-  if (!text) throw new Error('Resposta vazia do modelo');
-  const parsed = parseModelJson(text);
-  if (!Array.isArray(parsed)) throw new Error('JSON não é array');
-
-  const out = {};
-  for (const row of parsed) {
-    if (!row?.id || !row?.explicacao) continue;
-    out[row.id] = String(row.explicacao).trim().slice(0, 500);
-  }
-  return out;
-}
 
 function applyToFiles(byId, cache) {
   const byFile = new Map();
@@ -185,13 +125,15 @@ async function main() {
     return;
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = loadCuradoriaApiKey();
   if (!apiKey) {
-    console.error('❌ GEMINI_API_KEY não definida. Use --apply-cache após gerar data/frases-explicacao-cache.json');
+    console.error(
+      '❌ Chave de curadoria não configurada. SECRETS_PASSPHRASE + npm run secrets:set-openai'
+    );
     process.exit(1);
   }
 
-  const ai = new GoogleGenAI({ apiKey });
+  console.log(`🤖 Provider: ${getCuradoriaAiProvider()}`);
   let generated = 0;
 
   for (let i = 0; i < targets.length; i += BATCH_SIZE) {
@@ -200,7 +142,7 @@ async function main() {
     process.stdout.write(`🤖 Lote ${label}... `);
 
     try {
-      const chunk = await generateBatch(ai, batch);
+      const chunk = await generateExplicacaoBatch(batch, apiKey);
       Object.assign(cache, chunk);
       saveCache(cache);
       generated += Object.keys(chunk).length;

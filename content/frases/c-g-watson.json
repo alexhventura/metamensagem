@@ -1,0 +1,98 @@
+[
+  {
+    "id": "f_csv_d365b6280c",
+    "slug": "every-action-triggers-a-reaction",
+    "texto": "Every action triggers a reaction.",
+    "autor": "C.G. Watson",
+    "autorSlug": "c-g-watson",
+    "explicacao": "Citação de C.G. Watson sobre temas ligados a vida. “Every action triggers a reaction.” articula vida, actions, every em registro de vida, com relevância para contextos como vida.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "actions"
+      ],
+      "contextos": [
+        "vida"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "actions",
+        "every",
+        "action",
+        "triggers",
+        "reaction"
+      ],
+      "palavrasChave": [
+        "actions",
+        "vida"
+      ],
+      "tagsSeo": [
+        "vida",
+        "actions",
+        "c-g-watson"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "actions",
+        "every",
+        "action",
+        "triggers",
+        "reaction"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Every action triggers a reaction.\" — C.G. Watson | Metamensagem",
+      "descriptionSeo": "Citação de C.G. Watson sobre temas ligados a vida. “Every action triggers a reaction.” articula vida, actions, every em registro de vida, com relevância para…",
+      "keywordsSeo": [
+        "frases de C.G. Watson",
+        "frases sobre vida",
+        "frases vida",
+        "frases actions",
+        "actions",
+        "vida"
+      ],
+      "canonicalSlug": "every-action-triggers-a-reaction",
+      "relatedKeywords": [
+        "vida",
+        "actions",
+        "c-g-watson"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Every action triggers a reaction.",
+    "autor_original": "C.G. Watson",
+    "autor_slug": "c-g-watson",
+    "categoria": "vida",
+    "contextos": [
+      "vida"
+    ],
+    "palavras_chave": [
+      "actions",
+      "vida"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

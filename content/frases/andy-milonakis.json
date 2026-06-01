@@ -1,0 +1,118 @@
+[
+  {
+    "id": "f_csv_2f55a792bc",
+    "slug": "i-had-sadness-for-breakfast",
+    "texto": "I had sadness for breakfast.",
+    "autor": "Andy Milonakis",
+    "autorSlug": "andy-milonakis",
+    "explicacao": "Citação de Andy Milonakis sobre temas ligados a reflexao. “I had sadness for breakfast.” articula reflexao, sadness, breakfast em registro de reflexao, com relevância para contextos como breakfast e had.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "sadness",
+        "breakfast",
+        "had"
+      ],
+      "contextos": [
+        "breakfast",
+        "had"
+      ],
+      "emocoes": [
+        "tristeza"
+      ],
+      "temas": [
+        "reflexao",
+        "sadness",
+        "breakfast",
+        "had"
+      ],
+      "palavrasChave": [
+        "sadness",
+        "breakfast",
+        "had",
+        "reflexao",
+        "tristeza"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "sadness",
+        "breakfast",
+        "had",
+        "tristeza",
+        "andy-milonakis"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "sadness",
+        "breakfast",
+        "had",
+        "reflexao",
+        "sadness"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I had sadness for breakfast.\" — Andy Milonakis | Metamensagem",
+      "descriptionSeo": "Citação de Andy Milonakis sobre temas ligados a reflexao. “I had sadness for breakfast.” articula reflexao, sadness, breakfast em registro de reflexao, com re…",
+      "keywordsSeo": [
+        "frases de Andy Milonakis",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases sadness",
+        "frases breakfast",
+        "frases had",
+        "sadness",
+        "breakfast",
+        "had",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-had-sadness-for-breakfast",
+      "relatedKeywords": [
+        "tristeza",
+        "reflexao",
+        "sadness",
+        "breakfast",
+        "had",
+        "andy-milonakis"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I had sadness for breakfast.",
+    "autor_original": "Andy Milonakis",
+    "autor_slug": "andy-milonakis",
+    "categoria": "reflexao",
+    "contextos": [
+      "breakfast",
+      "had"
+    ],
+    "palavras_chave": [
+      "sadness",
+      "breakfast",
+      "had",
+      "reflexao",
+      "tristeza"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

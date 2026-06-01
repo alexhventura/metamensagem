@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_f12f239e86",
+    "slug": "i-read-to-be-alone-i-read-so-as-not-to-be-alone",
+    "texto": "I read to be alone. I read so as not to be alone.",
+    "autor": "Bich Minh Nguyen",
+    "autorSlug": "bich-minh-nguyen",
+    "explicacao": "Citação de Bich Minh Nguyen sobre temas ligados a reflexao. “I read to be alone. I read so as not to be alone.” articula reflexao, books, reading em registro de reflexao, com relevância para contextos como reading.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "books",
+        "reading"
+      ],
+      "contextos": [
+        "reading"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "books",
+        "reading",
+        "alone"
+      ],
+      "palavrasChave": [
+        "books",
+        "reading",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "books",
+        "reading",
+        "bich-minh-nguyen"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "books",
+        "reading",
+        "alone",
+        "reflexao",
+        "books"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I read to be alone. I read so as not to be alone.\" — Bich Minh Nguyen | Metamensagem",
+      "descriptionSeo": "Citação de Bich Minh Nguyen sobre temas ligados a reflexao. “I read to be alone. I read so as not to be alone.” articula reflexao, books, reading em registro…",
+      "keywordsSeo": [
+        "frases de Bich Minh Nguyen",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases books",
+        "frases reading",
+        "books",
+        "reading",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-read-to-be-alone-i-read-so-as-not-to-be-alone",
+      "relatedKeywords": [
+        "reflexao",
+        "books",
+        "reading",
+        "bich-minh-nguyen"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I read to be alone. I read so as not to be alone.",
+    "autor_original": "Bich Minh Nguyen",
+    "autor_slug": "bich-minh-nguyen",
+    "categoria": "reflexao",
+    "contextos": [
+      "reading"
+    ],
+    "palavras_chave": [
+      "books",
+      "reading",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

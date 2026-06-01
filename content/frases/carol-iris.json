@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_e47fb79acd",
+    "slug": "my-mind-is-not-so-advanced",
+    "texto": "My mind is not so advanced",
+    "autor": "Carol-Iris",
+    "autorSlug": "carol-iris",
+    "explicacao": "Citação de Carol-Iris sobre temas ligados a reflexao. “My mind is not so advanced” articula reflexao, advance, mind em registro de reflexao, com relevância para contextos como mind.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "advance",
+        "mind"
+      ],
+      "contextos": [
+        "mind"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "advance",
+        "mind",
+        "advanced"
+      ],
+      "palavrasChave": [
+        "advance",
+        "mind",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "advance",
+        "mind",
+        "carol-iris"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "advance",
+        "mind",
+        "advanced",
+        "reflexao",
+        "advance"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My mind is not so advanced\" — Carol-Iris | Metamensagem",
+      "descriptionSeo": "Citação de Carol-Iris sobre temas ligados a reflexao. “My mind is not so advanced” articula reflexao, advance, mind em registro de reflexao, com relevância pa…",
+      "keywordsSeo": [
+        "frases de Carol-Iris",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases advance",
+        "frases mind",
+        "advance",
+        "mind",
+        "reflexao"
+      ],
+      "canonicalSlug": "my-mind-is-not-so-advanced",
+      "relatedKeywords": [
+        "reflexao",
+        "advance",
+        "mind",
+        "carol-iris"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My mind is not so advanced",
+    "autor_original": "Carol-Iris",
+    "autor_slug": "carol-iris",
+    "categoria": "reflexao",
+    "contextos": [
+      "mind"
+    ],
+    "palavras_chave": [
+      "advance",
+      "mind",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

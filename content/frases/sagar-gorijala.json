@@ -1,0 +1,195 @@
+[
+  {
+    "id": "f_csv_34027b501e",
+    "slug": "life-is-a-story",
+    "texto": "Life is a story.",
+    "autor": "Sagar Gorijala.",
+    "autorSlug": "sagar-gorijala",
+    "explicacao": "Citação de Sagar Gorijala. sobre sentido da existência e experiência vivida. “Life is a story.” articula vida, story em registro de vida, com relevância para contextos como story.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "story"
+      ],
+      "contextos": [
+        "story"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "story"
+      ],
+      "palavrasChave": [
+        "vida",
+        "story"
+      ],
+      "tagsSeo": [
+        "vida",
+        "story",
+        "sagar-gorijala"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "story",
+        "vida",
+        "story"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Life is a story.\" — Sagar Gorijala. | Metamensagem",
+      "descriptionSeo": "Citação de Sagar Gorijala. sobre sentido da existência e experiência vivida. “Life is a story.” articula vida, story em registro de vida, com relevância para…",
+      "keywordsSeo": [
+        "frases de Sagar Gorijala.",
+        "frases sobre vida",
+        "frases vida",
+        "frases story",
+        "vida",
+        "story"
+      ],
+      "canonicalSlug": "life-is-a-story",
+      "relatedKeywords": [
+        "vida",
+        "story",
+        "sagar-gorijala"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Life is a story.",
+    "autor_original": "Sagar Gorijala.",
+    "autor_slug": "sagar-gorijala",
+    "categoria": "vida",
+    "contextos": [
+      "story"
+    ],
+    "palavras_chave": [
+      "vida",
+      "story"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_8ee5cab875",
+    "slug": "physical-existence-is-finite-sagar-gorijala",
+    "texto": "Physical existence is finite.- Sagar Gorijala.",
+    "autor": "Sagar Gorijala",
+    "autorSlug": "sagar-gorijala",
+    "explicacao": "Citação de Sagar Gorijala sobre temas ligados a reflexao. “Physical existence is finite.- Sagar Gorijala.” articula reflexao, existence, finite em registro de reflexao, com relevância para contextos como finite.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "existence",
+        "finite"
+      ],
+      "contextos": [
+        "finite"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "existence",
+        "finite",
+        "physical",
+        "sagar",
+        "gorijala"
+      ],
+      "palavrasChave": [
+        "existence",
+        "finite",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "existence",
+        "finite",
+        "sagar-gorijala"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "existence",
+        "finite",
+        "physical",
+        "sagar",
+        "gorijala"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Physical existence is finite.- Sagar Gorijala.\" — Sagar Gorijala | Metamensagem",
+      "descriptionSeo": "Citação de Sagar Gorijala sobre temas ligados a reflexao. “Physical existence is finite.- Sagar Gorijala.” articula reflexao, existence, finite em registro de…",
+      "keywordsSeo": [
+        "frases de Sagar Gorijala",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases existence",
+        "frases finite",
+        "existence",
+        "finite",
+        "reflexao"
+      ],
+      "canonicalSlug": "physical-existence-is-finite-sagar-gorijala",
+      "relatedKeywords": [
+        "reflexao",
+        "existence",
+        "finite",
+        "sagar-gorijala"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Physical existence is finite.- Sagar Gorijala.",
+    "autor_original": "Sagar Gorijala",
+    "autor_slug": "sagar-gorijala",
+    "categoria": "reflexao",
+    "contextos": [
+      "finite"
+    ],
+    "palavras_chave": [
+      "existence",
+      "finite",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

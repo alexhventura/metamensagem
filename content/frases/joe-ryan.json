@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_b7ac1f63ea",
+    "slug": "a-committee-of-one-gets-things-done",
+    "texto": "A committee of one gets things done.",
+    "autor": "Joe Ryan",
+    "autorSlug": "joe-ryan",
+    "explicacao": "Citação de Joe Ryan sobre temas ligados a reflexao. “A committee of one gets things done.” articula reflexao, clubs, institutions em registro de reflexao, com relevância para contextos como institutions.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "clubs",
+        "institutions"
+      ],
+      "contextos": [
+        "institutions"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "clubs",
+        "institutions",
+        "committee",
+        "things"
+      ],
+      "palavrasChave": [
+        "clubs",
+        "institutions",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "clubs",
+        "institutions",
+        "joe-ryan"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "clubs",
+        "institutions",
+        "committee",
+        "things",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A committee of one gets things done.\" — Joe Ryan | Metamensagem",
+      "descriptionSeo": "Citação de Joe Ryan sobre temas ligados a reflexao. “A committee of one gets things done.” articula reflexao, clubs, institutions em registro de reflexao, com…",
+      "keywordsSeo": [
+        "frases de Joe Ryan",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases clubs",
+        "frases institutions",
+        "clubs",
+        "institutions",
+        "reflexao"
+      ],
+      "canonicalSlug": "a-committee-of-one-gets-things-done",
+      "relatedKeywords": [
+        "reflexao",
+        "clubs",
+        "institutions",
+        "joe-ryan"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A committee of one gets things done.",
+    "autor_original": "Joe Ryan",
+    "autor_slug": "joe-ryan",
+    "categoria": "reflexao",
+    "contextos": [
+      "institutions"
+    ],
+    "palavras_chave": [
+      "clubs",
+      "institutions",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -2,31 +2,132 @@
   {
     "id": "f_fq0qelfsr",
     "slug": "a-persistencia-e-o-caminho-do-exito",
+    "texto": "A persistência é o caminho do êxito.",
+    "autor": "Charles Chaplin",
+    "autorSlug": "charles-chaplin",
+    "explicacao": "Atribuída a Charles Chaplin, cineasta britânico do cinema mudo. Resume uma visão prática de êxito: não como sorte instantânea, mas como resultado de continuar apesar dos tropeços.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "reflexao",
+        "sucesso"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao",
+        "persistencia",
+        "reflexao",
+        "sucesso"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "persistência",
+        "caminho",
+        "êxito"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "persistencia",
+        "reflexao",
+        "sucesso",
+        "inspiracao",
+        "determinacao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "reflexao",
+        "sucesso",
+        "inspiracao",
+        "determinacao",
+        "charles-chaplin"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1889",
+      "periodoHistorico": "1889-1977",
+      "nacionalidadeAutor": "britanico",
+      "nascimentoAutor": "1889",
+      "falecimentoAutor": "1977",
+      "tipoAutor": "cineasta",
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "persistência",
+        "caminho",
+        "êxito"
+      ],
+      "biografiaAutorCurta": "Charles Chaplin, personalidade de origem britanico citada no acervo Metamensagem."
+    },
+    "seo": {
+      "titleSeo": "\"A persistência é o caminho do êxito.\" — Charles Chaplin | Metamensagem",
+      "descriptionSeo": "Atribuída a Charles Chaplin, cineasta britânico do cinema mudo. Resume uma visão prática de êxito: não como sorte instantânea, mas como resultado de continuar…",
+      "keywordsSeo": [
+        "frases de Charles Chaplin",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "persistencia",
+        "reflexao"
+      ],
+      "canonicalSlug": "a-persistencia-e-o-caminho-do-exito",
+      "relatedKeywords": [
+        "determinacao",
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "reflexao",
+        "sucesso",
+        "charles-chaplin"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "A persistência é o caminho do êxito.",
     "autor_original": "Charles Chaplin",
-    "categoria": "inspiracional",
+    "autor_slug": "charles-chaplin",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao",
       "persistencia",
       "reflexao",
       "sucesso"
     ],
-    "explicacao": "Atribuída a Charles Chaplin, cineasta britânico do cinema mudo. Resume uma visão prática de êxito: não como sorte instantânea, mas como resultado de continuar apesar dos tropeços.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "persistencia",
       "reflexao",
-      "sucesso"
+      "sucesso",
+      "inspiracao",
+      "determinacao"
     ],
+    "ano_ou_data": "1889",
     "autor_tipo": "cineasta",
     "nacionalidade": "britanico",
     "nascimento_falecimento": "1889-1977",
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

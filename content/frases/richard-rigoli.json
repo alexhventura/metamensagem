@@ -1,0 +1,105 @@
+[
+  {
+    "id": "f_csv_b93d33504c",
+    "slug": "i-like-to-read-stories-where-heroes-are-actually-heroes",
+    "texto": "I like to read stories where heroes are actually heroes.",
+    "autor": "Richard Rigoli",
+    "autorSlug": "richard-rigoli",
+    "explicacao": "Metáfora atribuída a Richard Rigoli: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “I like to read stories where heroes are actually heroes.” usa imagem concreta para lembrar que reflexao, heroes, heroes-done-right pedem movimento e interpretação pessoal, em tom de heroes-done-right.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "heroes",
+        "heroes-done-right"
+      ],
+      "contextos": [
+        "heroes-done-right"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "heroes",
+        "heroes-done-right",
+        "stories",
+        "where",
+        "actually"
+      ],
+      "palavrasChave": [
+        "heroes",
+        "heroes-done-right",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "heroes",
+        "heroes-done-right",
+        "richard-rigoli"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "heroes",
+        "heroes-done-right",
+        "stories",
+        "where",
+        "actually"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I like to read stories where heroes are actually her…\" — Richard Rigoli | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Richard Rigoli: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “I like to read stories where heroes are…",
+      "keywordsSeo": [
+        "frases de Richard Rigoli",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases heroes",
+        "frases heroes done right",
+        "heroes",
+        "heroes-done-right",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-like-to-read-stories-where-heroes-are-actually-heroes",
+      "relatedKeywords": [
+        "reflexao",
+        "heroes",
+        "heroes-done-right",
+        "richard-rigoli"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I like to read stories where heroes are actually heroes.",
+    "autor_original": "Richard Rigoli",
+    "autor_slug": "richard-rigoli",
+    "categoria": "reflexao",
+    "contextos": [
+      "heroes-done-right"
+    ],
+    "palavras_chave": [
+      "heroes",
+      "heroes-done-right",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

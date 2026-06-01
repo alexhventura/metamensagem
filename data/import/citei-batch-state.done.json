@@ -1,0 +1,10 @@
+{
+  "source": "csv",
+  "filePath": "C:\\Users\\user\\Downloads\\quotes.csv\\quotes.csv",
+  "offset": 499715,
+  "totalPersisted": 425803,
+  "totalRead": 499715,
+  "batchNum": 573,
+  "updatedAt": "2026-05-28T22:15:53.999Z",
+  "completed": true
+}

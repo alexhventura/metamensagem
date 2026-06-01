@@ -2,27 +2,117 @@
   {
     "id": "f_73ao8nx1l",
     "slug": "ha-pontes-que-so-a-determinacao-constroem-e-ha-barreiras-qu",
+    "texto": "Há pontes que só a determinação constroem, e há barreiras que só suas atitudes as podem derruba-las.",
+    "autor": "Kátia Torres",
+    "autorSlug": "katia-torres",
+    "explicacao": "Kátia Torres usa metáforas de pontes e barreiras para falar de determinação e atitude. Frase inspiracional brasileira sobre como a vontade constrói caminhos e derruba obstáculos.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "determinacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "pontes",
+        "determinação",
+        "constroem",
+        "barreiras",
+        "atitudes"
+      ],
+      "palavrasChave": [
+        "determinacao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "inspiracao",
+        "katia-torres"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 36,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "pontes",
+        "determinação",
+        "constroem"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Há pontes que só a determinação constroem, e há barr…\" — Kátia Torres | Metamensagem",
+      "descriptionSeo": "Kátia Torres usa metáforas de pontes e barreiras para falar de determinação e atitude. Frase inspiracional brasileira sobre como a vontade constrói caminhos e…",
+      "keywordsSeo": [
+        "frases de Kátia Torres",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases determinacao",
+        "frases inspiracao",
+        "frases inspiracional",
+        "determinacao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "ha-pontes-que-so-a-determinacao-constroem-e-ha-barreiras-qu",
+      "relatedKeywords": [
+        "determinacao",
+        "motivacao",
+        "inspiracional",
+        "katia-torres"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Há pontes que só a determinação constroem, e há barreiras que só suas atitudes as podem derruba-las.",
     "autor_original": "Kátia Torres",
-    "categoria": "determinacao",
+    "autor_slug": "katia-torres",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "Kátia Torres usa metáforas de pontes e barreiras para falar de determinação e atitude. Frase inspiracional brasileira sobre como a vontade constrói caminhos e derruba obstáculos.",
     "palavras_chave": [
       "determinacao",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

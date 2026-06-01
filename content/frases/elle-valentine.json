@@ -1,0 +1,123 @@
+[
+  {
+    "id": "f_csv_3a4398d5e4",
+    "slug": "what-s-on-the-inside-beneath-that-sugar-is-it-a-bug-is-it-a-booger",
+    "texto": "What's on the inside, beneath that sugar? Is it a bug? Is it a booger?",
+    "autor": "Elle Valentine",
+    "autorSlug": "elle-valentine",
+    "explicacao": "Pergunta retórica de Elle Valentine que provoca temas ligados a familia. Ao questionar “What's on the inside, beneath that sugar? Is it a bug? Is it a booger?”, o texto convida o leitor a revisar crenças sobre familia, childrens-books, food, com foco em food e health.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "childrens-books",
+        "food",
+        "health",
+        "humor"
+      ],
+      "contextos": [
+        "food",
+        "health",
+        "humor"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "childrens-books",
+        "food",
+        "health",
+        "inside",
+        "beneath",
+        "sugar",
+        "booger"
+      ],
+      "palavrasChave": [
+        "childrens-books",
+        "food",
+        "health",
+        "humor",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "childrens-books",
+        "food",
+        "health",
+        "humor",
+        "elle-valentine"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 35,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "childrens-books",
+        "food",
+        "health",
+        "inside",
+        "beneath"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"What's on the inside, beneath that sugar? Is it a bu…\" — Elle Valentine | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Elle Valentine que provoca temas ligados a familia. Ao questionar “What's on the inside, beneath that sugar? Is it a bug? Is it a booger?…",
+      "keywordsSeo": [
+        "frases de Elle Valentine",
+        "frases sobre familia",
+        "frases familia",
+        "frases childrens books",
+        "frases food",
+        "frases health",
+        "childrens-books",
+        "food",
+        "health",
+        "humor"
+      ],
+      "canonicalSlug": "what-s-on-the-inside-beneath-that-sugar-is-it-a-bug-is-it-a-booger",
+      "relatedKeywords": [
+        "familia",
+        "childrens-books",
+        "food",
+        "health",
+        "humor",
+        "elle-valentine"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "What's on the inside, beneath that sugar? Is it a bug? Is it a booger?",
+    "autor_original": "Elle Valentine",
+    "autor_slug": "elle-valentine",
+    "categoria": "familia",
+    "contextos": [
+      "food",
+      "health",
+      "humor"
+    ],
+    "palavras_chave": [
+      "childrens-books",
+      "food",
+      "health",
+      "humor",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

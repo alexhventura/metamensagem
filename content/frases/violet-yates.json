@@ -1,0 +1,121 @@
+[
+  {
+    "id": "f_csv_8cd9115bf8",
+    "slug": "i-am-a-work-in-progress",
+    "texto": "I am a work in progress.",
+    "autor": "Violet Yates",
+    "autorSlug": "violet-yates",
+    "explicacao": "Citação de Violet Yates sobre temas ligados a trabalho. “I am a work in progress.” articula trabalho, addiction, depression em registro de trabalho, com relevância para contextos como trabalho e depression.",
+    "semantica": {
+      "categoriaPrincipal": "trabalho",
+      "categorias": [
+        "trabalho",
+        "addiction",
+        "depression",
+        "poetry",
+        "recovery"
+      ],
+      "contextos": [
+        "trabalho",
+        "depression",
+        "poetry",
+        "recovery"
+      ],
+      "emocoes": [],
+      "temas": [
+        "trabalho",
+        "addiction",
+        "depression",
+        "poetry",
+        "progress"
+      ],
+      "palavrasChave": [
+        "addiction",
+        "depression",
+        "poetry",
+        "recovery",
+        "trabalho"
+      ],
+      "tagsSeo": [
+        "trabalho",
+        "addiction",
+        "depression",
+        "poetry",
+        "recovery",
+        "violet-yates"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "trabalho",
+        "addiction",
+        "depression",
+        "poetry",
+        "progress",
+        "trabalho"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I am a work in progress.\" — Violet Yates | Metamensagem",
+      "descriptionSeo": "Citação de Violet Yates sobre temas ligados a trabalho. “I am a work in progress.” articula trabalho, addiction, depression em registro de trabalho, com relev…",
+      "keywordsSeo": [
+        "frases de Violet Yates",
+        "frases sobre trabalho",
+        "frases trabalho",
+        "frases addiction",
+        "frases depression",
+        "addiction",
+        "depression",
+        "poetry",
+        "recovery"
+      ],
+      "canonicalSlug": "i-am-a-work-in-progress",
+      "relatedKeywords": [
+        "trabalho",
+        "addiction",
+        "depression",
+        "poetry",
+        "recovery",
+        "violet-yates"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I am a work in progress.",
+    "autor_original": "Violet Yates",
+    "autor_slug": "violet-yates",
+    "categoria": "trabalho",
+    "contextos": [
+      "trabalho",
+      "depression",
+      "poetry",
+      "recovery"
+    ],
+    "palavras_chave": [
+      "addiction",
+      "depression",
+      "poetry",
+      "recovery",
+      "trabalho"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

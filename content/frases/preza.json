@@ -2,27 +2,122 @@
   {
     "id": "f_rmsa9e8tf",
     "slug": "nao-sou-otimista-porque-os-otimistas-sao-ingenuos-nem-sou",
+    "texto": "Não sou otimista, porque os otimistas são ingênuos, nem sou pessimista,porque não sou amargo. Sou um realista precavido , isso me faz bem.",
+    "autor": "Preza",
+    "autorSlug": "preza",
+    "explicacao": "Preza define uma postura intermediária entre otimismo ingênuo e pessimismo amargo. Chama-se de realista precavido: esperança com prudência. A frase serve a quem quer encarar a vida com equilíbrio emocional.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "amor",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "motivacao",
+        "amor",
+        "inspiracional",
+        "otimismo",
+        "porque",
+        "otimista",
+        "otimistas",
+        "ingênuos"
+      ],
+      "palavrasChave": [
+        "amor",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "amor",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "preza"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 39,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "amor",
+        "inspiracional",
+        "otimismo",
+        "porque",
+        "otimista"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Não sou otimista, porque os otimistas são ingênuos, …\" — Preza | Metamensagem",
+      "descriptionSeo": "Preza define uma postura intermediária entre otimismo ingênuo e pessimismo amargo. Chama-se de realista precavido: esperança com prudência. A frase serve a qu…",
+      "keywordsSeo": [
+        "frases de Preza",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases amor",
+        "frases inspiracao",
+        "frases inspiracional",
+        "amor",
+        "inspiracional",
+        "otimismo",
+        "motivacao"
+      ],
+      "canonicalSlug": "nao-sou-otimista-porque-os-otimistas-sao-ingenuos-nem-sou",
+      "relatedKeywords": [
+        "amor",
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "preza"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Não sou otimista, porque os otimistas são ingênuos, nem sou pessimista,porque não sou amargo. Sou um realista precavido , isso me faz bem.",
     "autor_original": "Preza",
-    "categoria": "amor",
+    "autor_slug": "preza",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "Preza define uma postura intermediária entre otimismo ingênuo e pessimismo amargo. Chama-se de realista precavido: esperança com prudência. A frase serve a quem quer encarar a vida com equilíbrio emocional.",
     "palavras_chave": [
       "amor",
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

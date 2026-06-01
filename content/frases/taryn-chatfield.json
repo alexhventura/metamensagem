@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_65b80dfa10",
+    "slug": "something-funny",
+    "texto": "something funny",
+    "autor": "Taryn Chatfield",
+    "autorSlug": "taryn-chatfield",
+    "explicacao": "Citação de Taryn Chatfield sobre temas ligados a humor. “something funny” articula humor, cute, girl em registro de humor, com relevância para contextos como girl.",
+    "semantica": {
+      "categoriaPrincipal": "humor",
+      "categorias": [
+        "humor",
+        "cute",
+        "girl"
+      ],
+      "contextos": [
+        "girl"
+      ],
+      "emocoes": [],
+      "temas": [
+        "humor",
+        "cute",
+        "girl",
+        "something",
+        "funny"
+      ],
+      "palavrasChave": [
+        "cute",
+        "girl",
+        "humor"
+      ],
+      "tagsSeo": [
+        "humor",
+        "cute",
+        "girl",
+        "taryn-chatfield"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "humor",
+        "cute",
+        "girl",
+        "something",
+        "funny",
+        "humor"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"something funny\" — Taryn Chatfield | Metamensagem",
+      "descriptionSeo": "Citação de Taryn Chatfield sobre temas ligados a humor. “something funny” articula humor, cute, girl em registro de humor, com relevância para contextos como…",
+      "keywordsSeo": [
+        "frases de Taryn Chatfield",
+        "frases sobre humor",
+        "frases humor",
+        "frases cute",
+        "frases girl",
+        "cute",
+        "girl",
+        "humor"
+      ],
+      "canonicalSlug": "something-funny",
+      "relatedKeywords": [
+        "humor",
+        "cute",
+        "girl",
+        "taryn-chatfield"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "something funny",
+    "autor_original": "Taryn Chatfield",
+    "autor_slug": "taryn-chatfield",
+    "categoria": "humor",
+    "contextos": [
+      "girl"
+    ],
+    "palavras_chave": [
+      "cute",
+      "girl",
+      "humor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

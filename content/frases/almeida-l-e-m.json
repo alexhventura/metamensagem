@@ -2,29 +2,127 @@
   {
     "id": "f_37a7kecxa",
     "slug": "nem-toda-grandeza-de-golias-foi-parea-para-a-autoconfianca-d",
+    "texto": "Nem toda grandeza de Golias foi párea para a autoconfiança de Davi, acredite em si mesmo, vença seus próprios medos e derrote os gigantes que tentarem atrapalhar tua trajetória.",
+    "autor": "ALMEIDA, L.E.M",
+    "autorSlug": "almeida-l-e-m",
+    "explicacao": "De ALMEIDA, L.E.M., usando a parábola bíblica de Davi e Golias como metáfora. Convida a confiar em si diante de adversários maiores, tratando medos internos e oposições externas como gigantes a superar.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "superacao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "termino",
+        "inspiracional",
+        "motivacao",
+        "superacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "grandeza",
+        "golias",
+        "párea",
+        "autoconfiança",
+        "acredite"
+      ],
+      "palavrasChave": [
+        "aprendizado",
+        "inspiracional",
+        "motivacao",
+        "superacao",
+        "inspiracao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "superacao",
+        "inspiracao",
+        "termino",
+        "almeida-l-e-m"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 45,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "grandeza",
+        "golias",
+        "párea"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Nem toda grandeza de Golias foi párea para a autocon…\" — ALMEIDA, L.E.M | Metamensagem",
+      "descriptionSeo": "De ALMEIDA, L.E.M., usando a parábola bíblica de Davi e Golias como metáfora. Convida a confiar em si diante de adversários maiores, tratando medos internos e…",
+      "keywordsSeo": [
+        "frases de ALMEIDA, L.E.M",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases aprendizado",
+        "frases inspiracao",
+        "frases termino",
+        "aprendizado",
+        "inspiracional",
+        "motivacao",
+        "superacao"
+      ],
+      "canonicalSlug": "nem-toda-grandeza-de-golias-foi-parea-para-a-autoconfianca-d",
+      "relatedKeywords": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "superacao",
+        "almeida-l-e-m"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Nem toda grandeza de Golias foi párea para a autoconfiança de Davi, acredite em si mesmo, vença seus próprios medos e derrote os gigantes que tentarem atrapalhar tua trajetória.",
     "autor_original": "ALMEIDA, L.E.M",
-    "categoria": "aprendizado",
+    "autor_slug": "almeida-l-e-m",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
+      "termino",
       "inspiracional",
       "motivacao",
       "superacao"
     ],
-    "explicacao": "De ALMEIDA, L.E.M., usando a parábola bíblica de Davi e Golias como metáfora. Convida a confiar em si diante de adversários maiores, tratando medos internos e oposições externas como gigantes a superar.",
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
       "motivacao",
-      "superacao"
+      "superacao",
+      "inspiracao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "f_csv_c04f5c02a1",
+    "slug": "no-idea-with-who-has-no-idea",
+    "texto": "No idea with who has no idea",
+    "autor": "Nomoto",
+    "autorSlug": "nomoto",
+    "explicacao": "Citação de Nomoto sobre temas ligados a reflexao. “No idea with who has no idea” articula reflexao, madness em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "madness"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "madness"
+      ],
+      "palavrasChave": [
+        "madness",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "madness",
+        "nomoto"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "madness",
+        "reflexao",
+        "madness"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"No idea with who has no idea\" — Nomoto | Metamensagem",
+      "descriptionSeo": "Citação de Nomoto sobre temas ligados a reflexao. “No idea with who has no idea” articula reflexao, madness em registro de reflexao, com relevância para conte…",
+      "keywordsSeo": [
+        "frases de Nomoto",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases madness",
+        "madness",
+        "reflexao"
+      ],
+      "canonicalSlug": "no-idea-with-who-has-no-idea",
+      "relatedKeywords": [
+        "reflexao",
+        "madness",
+        "nomoto"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "No idea with who has no idea",
+    "autor_original": "Nomoto",
+    "autor_slug": "nomoto",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "madness",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

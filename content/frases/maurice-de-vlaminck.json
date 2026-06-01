@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_0994b1e25f",
+    "slug": "good-painting-is-like-good-cooking-it-can-be-tasted-but-not-explained",
+    "texto": "Good painting is like good cooking; it can be tasted, but not explained.",
+    "autor": "Maurice de Vlaminck",
+    "autorSlug": "maurice-de-vlaminck",
+    "explicacao": "Metáfora atribuída a Maurice de Vlaminck: compara elementos do cotidiano para falar de temas ligados a familia. O trecho “Good painting is like good cooking; it can be tasted, but not explained.” usa imagem concreta para lembrar que familia, cooking, painting pedem movimento e interpretação pessoal, em tom de painting e like.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "cooking",
+        "painting",
+        "like"
+      ],
+      "contextos": [
+        "painting",
+        "like"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "cooking",
+        "painting",
+        "like",
+        "tasted",
+        "explained"
+      ],
+      "palavrasChave": [
+        "cooking",
+        "painting",
+        "like",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "cooking",
+        "painting",
+        "like",
+        "maurice-de-vlaminck"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "cooking",
+        "painting",
+        "like",
+        "tasted",
+        "explained"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Good painting is like good cooking; it can be tasted…\" — Maurice de Vlaminck | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Maurice de Vlaminck: compara elementos do cotidiano para falar de temas ligados a familia. O trecho “Good painting is like good cooking;…",
+      "keywordsSeo": [
+        "frases de Maurice de Vlaminck",
+        "frases sobre familia",
+        "frases familia",
+        "frases cooking",
+        "frases painting",
+        "frases like",
+        "cooking",
+        "painting",
+        "like",
+        "familia"
+      ],
+      "canonicalSlug": "good-painting-is-like-good-cooking-it-can-be-tasted-but-not-explained",
+      "relatedKeywords": [
+        "familia",
+        "cooking",
+        "painting",
+        "like",
+        "maurice-de-vlaminck"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Good painting is like good cooking; it can be tasted, but not explained.",
+    "autor_original": "Maurice de Vlaminck",
+    "autor_slug": "maurice-de-vlaminck",
+    "categoria": "familia",
+    "contextos": [
+      "painting",
+      "like"
+    ],
+    "palavras_chave": [
+      "cooking",
+      "painting",
+      "like",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "id": "f_csv_00811a0884",
+    "slug": "finally-liberty-has-come",
+    "texto": "Finally liberty has come!",
+    "autor": "Liesbeth",
+    "autorSlug": "liesbeth",
+    "explicacao": "Citação de Liesbeth sobre temas ligados a amor. “Finally liberty has come!” articula amor, communism, helen em registro de amor, com relevância para contextos como helen e history.",
+    "semantica": {
+      "categoriaPrincipal": "amor",
+      "categorias": [
+        "amor",
+        "communism",
+        "helen",
+        "history",
+        "liberty"
+      ],
+      "contextos": [
+        "helen",
+        "history",
+        "liberty",
+        "love"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "amor",
+        "communism",
+        "helen",
+        "history",
+        "finally",
+        "liberty"
+      ],
+      "palavrasChave": [
+        "communism",
+        "helen",
+        "history",
+        "liberty",
+        "love",
+        "amor"
+      ],
+      "tagsSeo": [
+        "amor",
+        "communism",
+        "helen",
+        "history",
+        "liberty",
+        "love",
+        "liesbeth"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amor",
+        "communism",
+        "helen",
+        "history",
+        "finally",
+        "liberty"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Finally liberty has come!\" — Liesbeth | Metamensagem",
+      "descriptionSeo": "Citação de Liesbeth sobre temas ligados a amor. “Finally liberty has come!” articula amor, communism, helen em registro de amor, com relevância para contextos…",
+      "keywordsSeo": [
+        "frases de Liesbeth",
+        "frases sobre amor",
+        "frases amor",
+        "frases communism",
+        "frases helen",
+        "frases history",
+        "communism",
+        "helen",
+        "history",
+        "liberty"
+      ],
+      "canonicalSlug": "finally-liberty-has-come",
+      "relatedKeywords": [
+        "amor",
+        "communism",
+        "helen",
+        "history",
+        "liberty",
+        "liesbeth"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Finally liberty has come!",
+    "autor_original": "Liesbeth",
+    "autor_slug": "liesbeth",
+    "categoria": "amor",
+    "contextos": [
+      "helen",
+      "history",
+      "liberty",
+      "love"
+    ],
+    "palavras_chave": [
+      "communism",
+      "helen",
+      "history",
+      "liberty",
+      "love",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

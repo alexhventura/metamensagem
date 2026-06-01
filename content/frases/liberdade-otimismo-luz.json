@@ -2,25 +2,119 @@
   {
     "id": "f_alqui0yne",
     "slug": "seja-livre-de-espirito-busque-a-paz-e-todo-e-qualquer-camin",
+    "texto": "Seja livre de espírito, busque a paz e todo e qualquer caminho que você trilhar será iluminado. Apesar das pedras e dos espinhos que estão por aí, a beleza da sua essência resplandecerá pelas estradas da vida.",
+    "autor": "liberdade, otimismo, luz",
+    "autorSlug": "liberdade-otimismo-luz",
+    "explicacao": "Frase anônima catalogada no arquivo temático sobre liberdade e luz. Prega paz interior como guia mesmo diante de obstáculos. Provavelmente circulou em blogs e páginas de citações motivacionais em português.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [
+        "paz"
+      ],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "livre",
+        "espírito",
+        "busque",
+        "qualquer",
+        "caminho"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao",
+        "paz"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "paz",
+        "liberdade-otimismo-luz"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 44,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "livre",
+        "espírito",
+        "busque"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Seja livre de espírito, busque a paz e todo e qualqu…\" — liberdade, otimismo, luz | Metamensagem",
+      "descriptionSeo": "Frase anônima catalogada no arquivo temático sobre liberdade e luz. Prega paz interior como guia mesmo diante de obstáculos. Provavelmente circulou em blogs e…",
+      "keywordsSeo": [
+        "frases de liberdade, otimismo, luz",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "seja-livre-de-espirito-busque-a-paz-e-todo-e-qualquer-camin",
+      "relatedKeywords": [
+        "paz",
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "liberdade-otimismo-luz"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Seja livre de espírito, busque a paz e todo e qualquer caminho que você trilhar será iluminado. Apesar das pedras e dos espinhos que estão por aí, a beleza da sua essência resplandecerá pelas estradas da vida.",
     "autor_original": "liberdade, otimismo, luz",
-    "categoria": "inspiracional",
+    "autor_slug": "liberdade-otimismo-luz",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Frase anônima catalogada no arquivo temático sobre liberdade e luz. Prega paz interior como guia mesmo diante de obstáculos. Provavelmente circulou em blogs e páginas de citações motivacionais em português.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao",
+      "paz"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

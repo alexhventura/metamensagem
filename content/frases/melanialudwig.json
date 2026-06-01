@@ -2,27 +2,121 @@
   {
     "id": "f_841pqc7fn",
     "slug": "bom-dia-meus-queridos-amigos-que-possamos-hoje-assumir-um",
+    "texto": "BOM DIA MEUS QUERIDOS AMIGOS!!! Que possamos hoje assumir uma postura otimista e alegre a tal ponto de contagiar todos que nos são próximos. Sem dúvida estaremos contribuindo para o bem estar nosso e dos demais... mel - ((*_*))",
+    "autor": "melanialudwig",
+    "autorSlug": "melanialudwig",
+    "explicacao": "Postagem de bom dia de melanialudwig para amigos em rede social, pedindo otimismo contagiante. Tom informal e coletivo de bem-estar. Típica mensagem comunitária que busca elevar o humor do grupo.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "bom-dia",
+        "inspiracao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional",
+        "otimismo",
+        "queridos",
+        "amigos",
+        "possamos",
+        "assumir"
+      ],
+      "palavrasChave": [
+        "bom-dia",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "melanialudwig"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 48,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional",
+        "otimismo",
+        "queridos",
+        "amigos"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"BOM DIA MEUS QUERIDOS AMIGOS!!! Que possamos hoje as…\" — melanialudwig | Metamensagem",
+      "descriptionSeo": "Postagem de bom dia de melanialudwig para amigos em rede social, pedindo otimismo contagiante. Tom informal e coletivo de bem-estar. Típica mensagem comunitár…",
+      "keywordsSeo": [
+        "frases de melanialudwig",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases bom dia",
+        "frases inspiracao",
+        "bom-dia",
+        "inspiracional",
+        "otimismo",
+        "motivacao"
+      ],
+      "canonicalSlug": "bom-dia-meus-queridos-amigos-que-possamos-hoje-assumir-um",
+      "relatedKeywords": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional",
+        "otimismo",
+        "melanialudwig"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "BOM DIA MEUS QUERIDOS AMIGOS!!! Que possamos hoje assumir uma postura otimista e alegre a tal ponto de contagiar todos que nos são próximos. Sem dúvida estaremos contribuindo para o bem estar nosso e dos demais... mel - ((*_*))",
     "autor_original": "melanialudwig",
-    "categoria": "bom-dia",
+    "autor_slug": "melanialudwig",
+    "categoria": "motivacao",
     "contextos": [
+      "bom-dia",
+      "inspiracao",
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "Postagem de bom dia de melanialudwig para amigos em rede social, pedindo otimismo contagiante. Tom informal e coletivo de bem-estar. Típica mensagem comunitária que busca elevar o humor do grupo.",
     "palavras_chave": [
       "bom-dia",
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

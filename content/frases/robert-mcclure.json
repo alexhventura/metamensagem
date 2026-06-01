@@ -1,0 +1,97 @@
+[
+  {
+    "id": "f_csv_3d55874a6f",
+    "slug": "a-r-p-or-adventure-equals-risk-plus-purpose",
+    "texto": "A = r + p (or Adventure equals risk plus purpose.)",
+    "autor": "Robert McClure",
+    "autorSlug": "robert-mcclure",
+    "explicacao": "Citação de Robert McClure sobre temas ligados a reflexao. “A = r + p (or Adventure equals risk plus purpose.)” articula reflexao, action, adventure em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "action"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "action",
+        "adventure",
+        "equals",
+        "purpose"
+      ],
+      "palavrasChave": [
+        "action",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "action",
+        "robert-mcclure"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "action",
+        "adventure",
+        "equals",
+        "purpose",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A = r + p (or Adventure equals risk plus purpose.)\" — Robert McClure | Metamensagem",
+      "descriptionSeo": "Citação de Robert McClure sobre temas ligados a reflexao. “A = r + p (or Adventure equals risk plus purpose.)” articula reflexao, action, adventure em registr…",
+      "keywordsSeo": [
+        "frases de Robert McClure",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases action",
+        "action",
+        "reflexao"
+      ],
+      "canonicalSlug": "a-r-p-or-adventure-equals-risk-plus-purpose",
+      "relatedKeywords": [
+        "reflexao",
+        "action",
+        "robert-mcclure"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A = r + p (or Adventure equals risk plus purpose.)",
+    "autor_original": "Robert McClure",
+    "autor_slug": "robert-mcclure",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "action",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

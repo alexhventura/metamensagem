@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_dc8e8a01eb",
+    "slug": "what-you-see-is-news-what-you-know-is-background-what-you-feel-is-opinion",
+    "texto": "What you see is news what you know is background what you feel is opinion.",
+    "autor": "Lester Markel",
+    "autorSlug": "lester-markel",
+    "explicacao": "Citação de Lester Markel sobre temas ligados a reflexao. “What you see is news what you know is background what you feel is opinion.” articula reflexao, newspapers, journalism em registro de reflexao, com relevância para contextos como journalism.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "newspapers",
+        "journalism"
+      ],
+      "contextos": [
+        "journalism"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "newspapers",
+        "journalism",
+        "background",
+        "opinion"
+      ],
+      "palavrasChave": [
+        "newspapers",
+        "journalism",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "newspapers",
+        "journalism",
+        "lester-markel"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "newspapers",
+        "journalism",
+        "background",
+        "opinion",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"What you see is news what you know is background wha…\" — Lester Markel | Metamensagem",
+      "descriptionSeo": "Citação de Lester Markel sobre temas ligados a reflexao. “What you see is news what you know is background what you feel is opinion.” articula reflexao, newsp…",
+      "keywordsSeo": [
+        "frases de Lester Markel",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases newspapers",
+        "frases journalism",
+        "newspapers",
+        "journalism",
+        "reflexao"
+      ],
+      "canonicalSlug": "what-you-see-is-news-what-you-know-is-background-what-you-feel-is-opinion",
+      "relatedKeywords": [
+        "reflexao",
+        "newspapers",
+        "journalism",
+        "lester-markel"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "What you see is news what you know is background what you feel is opinion.",
+    "autor_original": "Lester Markel",
+    "autor_slug": "lester-markel",
+    "categoria": "reflexao",
+    "contextos": [
+      "journalism"
+    ],
+    "palavras_chave": [
+      "newspapers",
+      "journalism",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

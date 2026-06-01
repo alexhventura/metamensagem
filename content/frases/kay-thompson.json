@@ -1,0 +1,105 @@
+[
+  {
+    "id": "f_csv_7f739e8fd7",
+    "slug": "getting-bored-is-not-allowed",
+    "texto": "Getting bored is not allowed.",
+    "autor": "Kay Thompson",
+    "autorSlug": "kay-thompson",
+    "explicacao": "Citação de Kay Thompson sobre temas ligados a reflexao. “Getting bored is not allowed.” articula reflexao, boring, days em registro de reflexao, com relevância para contextos como days.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "boring",
+        "days"
+      ],
+      "contextos": [
+        "days"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "boring",
+        "days",
+        "getting",
+        "bored",
+        "allowed"
+      ],
+      "palavrasChave": [
+        "boring",
+        "days",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "boring",
+        "days",
+        "kay-thompson"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "boring",
+        "days",
+        "getting",
+        "bored",
+        "allowed"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Getting bored is not allowed.\" — Kay Thompson | Metamensagem",
+      "descriptionSeo": "Citação de Kay Thompson sobre temas ligados a reflexao. “Getting bored is not allowed.” articula reflexao, boring, days em registro de reflexao, com relevânci…",
+      "keywordsSeo": [
+        "frases de Kay Thompson",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases boring",
+        "frases days",
+        "boring",
+        "days",
+        "reflexao"
+      ],
+      "canonicalSlug": "getting-bored-is-not-allowed",
+      "relatedKeywords": [
+        "reflexao",
+        "boring",
+        "days",
+        "kay-thompson"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Getting bored is not allowed.",
+    "autor_original": "Kay Thompson",
+    "autor_slug": "kay-thompson",
+    "categoria": "reflexao",
+    "contextos": [
+      "days"
+    ],
+    "palavras_chave": [
+      "boring",
+      "days",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

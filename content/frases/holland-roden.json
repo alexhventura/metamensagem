@@ -1,0 +1,119 @@
+[
+  {
+    "id": "f_csv_280c707a56",
+    "slug": "one-of-my-favorite-movies-is-back-to-the-future",
+    "texto": "One of my favorite movies is 'Back to the Future'.",
+    "autor": "Holland Roden",
+    "autorSlug": "holland-roden",
+    "explicacao": "Citação de Holland Roden sobre temas ligados a reflexao. “One of my favorite movies is 'Back to the Future'.” articula reflexao, future, favorite em registro de reflexao, com relevância para contextos como favorite e back.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "future",
+        "favorite",
+        "back"
+      ],
+      "contextos": [
+        "favorite",
+        "back"
+      ],
+      "emocoes": [
+        "esperanca"
+      ],
+      "temas": [
+        "reflexao",
+        "future",
+        "favorite",
+        "back",
+        "movies"
+      ],
+      "palavrasChave": [
+        "future",
+        "favorite",
+        "back",
+        "reflexao",
+        "esperanca"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "future",
+        "favorite",
+        "back",
+        "esperanca",
+        "holland-roden"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "future",
+        "favorite",
+        "back",
+        "movies",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"One of my favorite movies is 'Back to the Future'.\" — Holland Roden | Metamensagem",
+      "descriptionSeo": "Citação de Holland Roden sobre temas ligados a reflexao. “One of my favorite movies is 'Back to the Future'.” articula reflexao, future, favorite em registro…",
+      "keywordsSeo": [
+        "frases de Holland Roden",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases future",
+        "frases favorite",
+        "frases back",
+        "future",
+        "favorite",
+        "back",
+        "reflexao"
+      ],
+      "canonicalSlug": "one-of-my-favorite-movies-is-back-to-the-future",
+      "relatedKeywords": [
+        "esperanca",
+        "reflexao",
+        "future",
+        "favorite",
+        "back",
+        "holland-roden"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "One of my favorite movies is 'Back to the Future'.",
+    "autor_original": "Holland Roden",
+    "autor_slug": "holland-roden",
+    "categoria": "reflexao",
+    "contextos": [
+      "favorite",
+      "back"
+    ],
+    "palavras_chave": [
+      "future",
+      "favorite",
+      "back",
+      "reflexao",
+      "esperanca"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

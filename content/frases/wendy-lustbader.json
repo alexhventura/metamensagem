@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_e3d9026359",
+    "slug": "who-wants-avocado",
+    "texto": "Who wants avocado?",
+    "autor": "Wendy Lustbader",
+    "autorSlug": "wendy-lustbader",
+    "explicacao": "Pergunta retórica de Wendy Lustbader que provoca temas ligados a familia. Ao questionar “Who wants avocado?”, o texto convida o leitor a revisar crenças sobre familia, family, grandma, com foco em grandma e humor.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "family",
+        "grandma",
+        "humor"
+      ],
+      "contextos": [
+        "grandma",
+        "humor"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "family",
+        "grandma",
+        "humor",
+        "wants",
+        "avocado"
+      ],
+      "palavrasChave": [
+        "family",
+        "grandma",
+        "humor",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "family",
+        "grandma",
+        "humor",
+        "wendy-lustbader"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "family",
+        "grandma",
+        "humor",
+        "wants",
+        "avocado"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Who wants avocado?\" — Wendy Lustbader | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Wendy Lustbader que provoca temas ligados a familia. Ao questionar “Who wants avocado?”, o texto convida o leitor a revisar crenças sobre…",
+      "keywordsSeo": [
+        "frases de Wendy Lustbader",
+        "frases sobre familia",
+        "frases familia",
+        "frases family",
+        "frases grandma",
+        "frases humor",
+        "family",
+        "grandma",
+        "humor",
+        "familia"
+      ],
+      "canonicalSlug": "who-wants-avocado",
+      "relatedKeywords": [
+        "familia",
+        "family",
+        "grandma",
+        "humor",
+        "wendy-lustbader"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Who wants avocado?",
+    "autor_original": "Wendy Lustbader",
+    "autor_slug": "wendy-lustbader",
+    "categoria": "familia",
+    "contextos": [
+      "grandma",
+      "humor"
+    ],
+    "palavras_chave": [
+      "family",
+      "grandma",
+      "humor",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

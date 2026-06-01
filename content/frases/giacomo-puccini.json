@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_c011d19d74",
+    "slug": "art-is-a-kind-of-illness",
+    "texto": "Art is a kind of illness.",
+    "autor": "Giacomo Puccini",
+    "autorSlug": "giacomo-puccini",
+    "explicacao": "Citação de Giacomo Puccini sobre temas ligados a reflexao. “Art is a kind of illness.” articula reflexao, art, artist em registro de reflexao, com relevância para contextos como artist.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "art",
+        "artist"
+      ],
+      "contextos": [
+        "artist"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "art",
+        "artist",
+        "illness"
+      ],
+      "palavrasChave": [
+        "art",
+        "artist",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "art",
+        "artist",
+        "giacomo-puccini"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "art",
+        "artist",
+        "illness",
+        "reflexao",
+        "art"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Art is a kind of illness.\" — Giacomo Puccini | Metamensagem",
+      "descriptionSeo": "Citação de Giacomo Puccini sobre temas ligados a reflexao. “Art is a kind of illness.” articula reflexao, art, artist em registro de reflexao, com relevância…",
+      "keywordsSeo": [
+        "frases de Giacomo Puccini",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases art",
+        "frases artist",
+        "art",
+        "artist",
+        "reflexao"
+      ],
+      "canonicalSlug": "art-is-a-kind-of-illness",
+      "relatedKeywords": [
+        "reflexao",
+        "art",
+        "artist",
+        "giacomo-puccini"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Art is a kind of illness.",
+    "autor_original": "Giacomo Puccini",
+    "autor_slug": "giacomo-puccini",
+    "categoria": "reflexao",
+    "contextos": [
+      "artist"
+    ],
+    "palavras_chave": [
+      "art",
+      "artist",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

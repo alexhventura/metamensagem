@@ -2,25 +2,113 @@
   {
     "id": "f_1tv0gm8rz",
     "slug": "sou-uma-otimista-incorrigivel-mesmo-quando-as-coisas-estao",
+    "texto": "Sou uma otimista incorrigível, mesmo quando as coisas estão mais pra lá do que pra cá, eu sempre acredito que elas vão melhorar - e mesmo que não melhorem - continuo a acreditar!",
+    "autor": "Rosa Berg",
+    "autorSlug": "rosa-berg",
+    "explicacao": "Rosa Berg define-se como otimista incorrigível, mesmo quando tudo parece ruim. Mantém a crença na melhora ou, se não vier, continua acreditando. Testemunho sobre esperança como escolha constante.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "mesmo",
+        "otimista",
+        "incorrigível",
+        "quando",
+        "coisas"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "rosa-berg"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 41,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "mesmo",
+        "otimista",
+        "incorrigível"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Sou uma otimista incorrigível, mesmo quando as coisa…\" — Rosa Berg | Metamensagem",
+      "descriptionSeo": "Rosa Berg define-se como otimista incorrigível, mesmo quando tudo parece ruim. Mantém a crença na melhora ou, se não vier, continua acreditando. Testemunho so…",
+      "keywordsSeo": [
+        "frases de Rosa Berg",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "sou-uma-otimista-incorrigivel-mesmo-quando-as-coisas-estao",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "rosa-berg"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Sou uma otimista incorrigível, mesmo quando as coisas estão mais pra lá do que pra cá, eu sempre acredito que elas vão melhorar - e mesmo que não melhorem - continuo a acreditar!",
     "autor_original": "Rosa Berg",
-    "categoria": "inspiracional",
+    "autor_slug": "rosa-berg",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Rosa Berg define-se como otimista incorrigível, mesmo quando tudo parece ruim. Mantém a crença na melhora ou, se não vier, continua acreditando. Testemunho sobre esperança como escolha constante.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

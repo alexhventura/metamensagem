@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_c4b35aa29c",
+    "slug": "i-still-have-a-young-attitude",
+    "texto": "I still have a young attitude.",
+    "autor": "Pat Morita",
+    "autorSlug": "pat-morita",
+    "explicacao": "Citação de Pat Morita sobre temas ligados a reflexao. “I still have a young attitude.” articula reflexao, young, still em registro de reflexao, com relevância para contextos como still.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "young",
+        "still"
+      ],
+      "contextos": [
+        "still"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "young",
+        "still",
+        "attitude"
+      ],
+      "palavrasChave": [
+        "young",
+        "still",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "young",
+        "still",
+        "pat-morita"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "young",
+        "still",
+        "attitude",
+        "reflexao",
+        "young"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I still have a young attitude.\" — Pat Morita | Metamensagem",
+      "descriptionSeo": "Citação de Pat Morita sobre temas ligados a reflexao. “I still have a young attitude.” articula reflexao, young, still em registro de reflexao, com relevância…",
+      "keywordsSeo": [
+        "frases de Pat Morita",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases young",
+        "frases still",
+        "young",
+        "still",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-still-have-a-young-attitude",
+      "relatedKeywords": [
+        "reflexao",
+        "young",
+        "still",
+        "pat-morita"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I still have a young attitude.",
+    "autor_original": "Pat Morita",
+    "autor_slug": "pat-morita",
+    "categoria": "reflexao",
+    "contextos": [
+      "still"
+    ],
+    "palavras_chave": [
+      "young",
+      "still",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

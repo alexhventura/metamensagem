@@ -1,0 +1,106 @@
+[
+  {
+    "id": "f_csv_0f7586acb8",
+    "slug": "don-t-judge-a-book-by-its-movie",
+    "texto": "Don't judge a book by its movie.",
+    "autor": "Anoynomous",
+    "autorSlug": "anoynomous",
+    "explicacao": "Citação de Anoynomous sobre limites e escolhas conscientes. “Don't judge a book by its movie.” articula vida, books, movies em registro de vida, com relevância para contextos como vida e movies.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "books",
+        "movies"
+      ],
+      "contextos": [
+        "vida",
+        "movies"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "books",
+        "movies",
+        "judge",
+        "movie"
+      ],
+      "palavrasChave": [
+        "books",
+        "vida",
+        "movies"
+      ],
+      "tagsSeo": [
+        "vida",
+        "books",
+        "movies",
+        "anoynomous"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "books",
+        "movies",
+        "judge",
+        "movie",
+        "vida"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Don't judge a book by its movie.\" — Anoynomous | Metamensagem",
+      "descriptionSeo": "Citação de Anoynomous sobre limites e escolhas conscientes. “Don't judge a book by its movie.” articula vida, books, movies em registro de vida, com relevânci…",
+      "keywordsSeo": [
+        "frases de Anoynomous",
+        "frases sobre vida",
+        "frases vida",
+        "frases books",
+        "frases movies",
+        "books",
+        "vida",
+        "movies"
+      ],
+      "canonicalSlug": "don-t-judge-a-book-by-its-movie",
+      "relatedKeywords": [
+        "vida",
+        "books",
+        "movies",
+        "anoynomous"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Don't judge a book by its movie.",
+    "autor_original": "Anoynomous",
+    "autor_slug": "anoynomous",
+    "categoria": "vida",
+    "contextos": [
+      "vida",
+      "movies"
+    ],
+    "palavras_chave": [
+      "books",
+      "vida",
+      "movies"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

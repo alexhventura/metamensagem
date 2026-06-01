@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://metamensagem.com/sitemap.xml
+Sitemap: https://metamensagem.com/sitemap-index.xml

@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_2982dc7616",
+    "slug": "were-all-mad-here",
+    "texto": "Were all mad here",
+    "autor": "Alice and Wonderland",
+    "autorSlug": "alice-and-wonderland",
+    "explicacao": "Citação de Alice and Wonderland sobre temas ligados a vida. “Were all mad here” articula vida, books, madness em registro de vida, com relevância para contextos como vida e madness.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "books",
+        "madness"
+      ],
+      "contextos": [
+        "vida",
+        "madness"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "books",
+        "madness"
+      ],
+      "palavrasChave": [
+        "books",
+        "vida",
+        "madness"
+      ],
+      "tagsSeo": [
+        "vida",
+        "books",
+        "madness",
+        "alice-and-wonderland"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "books",
+        "madness",
+        "vida",
+        "books"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Were all mad here\" — Alice and Wonderland | Metamensagem",
+      "descriptionSeo": "Citação de Alice and Wonderland sobre temas ligados a vida. “Were all mad here” articula vida, books, madness em registro de vida, com relevância para context…",
+      "keywordsSeo": [
+        "frases de Alice and Wonderland",
+        "frases sobre vida",
+        "frases vida",
+        "frases books",
+        "frases madness",
+        "books",
+        "vida",
+        "madness"
+      ],
+      "canonicalSlug": "were-all-mad-here",
+      "relatedKeywords": [
+        "vida",
+        "books",
+        "madness",
+        "alice-and-wonderland"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Were all mad here",
+    "autor_original": "Alice and Wonderland",
+    "autor_slug": "alice-and-wonderland",
+    "categoria": "vida",
+    "contextos": [
+      "vida",
+      "madness"
+    ],
+    "palavras_chave": [
+      "books",
+      "vida",
+      "madness"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

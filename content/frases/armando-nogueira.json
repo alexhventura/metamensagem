@@ -2,25 +2,113 @@
   {
     "id": "f_rwao97exe",
     "slug": "e-sempre-melhor-ser-otimista-do-que-ser-pessimista-ate-que",
+    "texto": "É sempre melhor ser otimista do que ser pessimista. Até que tudo dê errado, o otimista sofreu menos.",
+    "autor": "Armando Nogueira",
+    "autorSlug": "armando-nogueira",
+    "explicacao": "De Armando Nogueira, jornalista e cronista brasileiro, com humor seco. Brinca que o otimista sofre menos até o desastre final, elogiando leveza diante da incerteza.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "sempre",
+        "melhor",
+        "pessimista",
+        "errado"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "armando-nogueira"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "sempre",
+        "melhor"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"É sempre melhor ser otimista do que ser pessimista. …\" — Armando Nogueira | Metamensagem",
+      "descriptionSeo": "De Armando Nogueira, jornalista e cronista brasileiro, com humor seco. Brinca que o otimista sofre menos até o desastre final, elogiando leveza diante da ince…",
+      "keywordsSeo": [
+        "frases de Armando Nogueira",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "e-sempre-melhor-ser-otimista-do-que-ser-pessimista-ate-que",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "armando-nogueira"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "É sempre melhor ser otimista do que ser pessimista. Até que tudo dê errado, o otimista sofreu menos.",
     "autor_original": "Armando Nogueira",
-    "categoria": "inspiracional",
+    "autor_slug": "armando-nogueira",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "De Armando Nogueira, jornalista e cronista brasileiro, com humor seco. Brinca que o otimista sofre menos até o desastre final, elogiando leveza diante da incerteza.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

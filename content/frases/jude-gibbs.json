@@ -1,0 +1,134 @@
+[
+  {
+    "id": "f_csv_1f70d1d20a",
+    "slug": "embrace-the-pain",
+    "texto": "Embrace the pain",
+    "autor": "Jude Gibbs",
+    "autorSlug": "jude-gibbs",
+    "explicacao": "Citação de Jude Gibbs sobre temas ligados a familia. “Embrace the pain” articula familia, abuse, bareness em registro de familia, com relevância para contextos como luto e bareness.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "abuse",
+        "bareness",
+        "bereavement",
+        "child-loss"
+      ],
+      "contextos": [
+        "luto",
+        "bareness",
+        "bereavement",
+        "child-loss",
+        "grief"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "abuse",
+        "bareness",
+        "bereavement",
+        "embrace"
+      ],
+      "palavrasChave": [
+        "abuse",
+        "bareness",
+        "bereavement",
+        "child-loss",
+        "grief",
+        "esperanca",
+        "pregnancy-loss",
+        "familia",
+        "luto"
+      ],
+      "tagsSeo": [
+        "familia",
+        "abuse",
+        "bareness",
+        "bereavement",
+        "child-loss",
+        "luto",
+        "grief",
+        "jude-gibbs"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 35,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "abuse",
+        "bareness",
+        "bereavement",
+        "embrace",
+        "familia"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Embrace the pain\" — Jude Gibbs | Metamensagem",
+      "descriptionSeo": "Citação de Jude Gibbs sobre temas ligados a familia. “Embrace the pain” articula familia, abuse, bareness em registro de familia, com relevância para contexto…",
+      "keywordsSeo": [
+        "frases de Jude Gibbs",
+        "frases sobre familia",
+        "frases familia",
+        "frases abuse",
+        "frases luto",
+        "frases bareness",
+        "abuse",
+        "bareness",
+        "bereavement",
+        "child-loss"
+      ],
+      "canonicalSlug": "embrace-the-pain",
+      "relatedKeywords": [
+        "familia",
+        "abuse",
+        "bareness",
+        "bereavement",
+        "child-loss",
+        "jude-gibbs"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Embrace the pain",
+    "autor_original": "Jude Gibbs",
+    "autor_slug": "jude-gibbs",
+    "categoria": "familia",
+    "contextos": [
+      "luto",
+      "bareness",
+      "bereavement",
+      "child-loss",
+      "grief"
+    ],
+    "palavras_chave": [
+      "abuse",
+      "bareness",
+      "bereavement",
+      "child-loss",
+      "grief",
+      "esperanca",
+      "pregnancy-loss",
+      "familia",
+      "luto"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

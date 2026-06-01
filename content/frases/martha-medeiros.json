@@ -2,77 +2,355 @@
   {
     "id": "f_31dn8wqcv",
     "slug": "estao-perdendo-a-viagem-aqueles-que-nao-sabem-de-onde-vieram",
+    "texto": "Estão perdendo a viagem aqueles que não sabem de onde vieram nem tentam descobrir. Que não sabem para onde ir e nem tentam encontrar um caminho. Aqueles para quem a televisão pode tranqüilamente substituir as emoções. (Perder a Viagem)",
+    "autor": "Martha Medeiros",
+    "autorSlug": "martha-medeiros",
+    "explicacao": "Trecho da crônica “Perder a Viagem” de Martha Medeiros, sobre viver no automático e na passividade mediática. Alerta quem não questiona origem, destino nem emoções próprias. Texto brasileiro muito compartilhado sobre presença e propósito.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria"
+      ],
+      "contextos": [
+        "viagem",
+        "inspiracao",
+        "termino",
+        "reflexao",
+        "sabedoria"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "viagem",
+        "aqueles",
+        "sabem",
+        "tentam"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "motivacao",
+        "viagem",
+        "inspiracao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "viagem",
+        "inspiracao",
+        "termino",
+        "martha-medeiros"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 49,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "viagem",
+        "aqueles"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Estão perdendo a viagem aqueles que não sabem de ond…\" — Martha Medeiros | Metamensagem",
+      "descriptionSeo": "Trecho da crônica “Perder a Viagem” de Martha Medeiros, sobre viver no automático e na passividade mediática. Alerta quem não questiona origem, destino nem em…",
+      "keywordsSeo": [
+        "frases de Martha Medeiros",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases viagem",
+        "frases inspiracao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "motivacao"
+      ],
+      "canonicalSlug": "estao-perdendo-a-viagem-aqueles-que-nao-sabem-de-onde-vieram",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "martha-medeiros"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Estão perdendo a viagem aqueles que não sabem de onde vieram nem tentam descobrir. Que não sabem para onde ir e nem tentam encontrar um caminho. Aqueles para quem a televisão pode tranqüilamente substituir as emoções. (Perder a Viagem)",
     "autor_original": "Martha Medeiros",
-    "categoria": "inspiracional",
+    "autor_slug": "martha-medeiros",
+    "categoria": "motivacao",
     "contextos": [
+      "viagem",
+      "inspiracao",
+      "termino",
       "reflexao",
       "sabedoria"
     ],
-    "explicacao": "Trecho da crônica “Perder a Viagem” de Martha Medeiros, sobre viver no automático e na passividade mediática. Alerta quem não questiona origem, destino nem emoções próprias. Texto brasileiro muito compartilhado sobre presença e propósito.",
     "palavras_chave": [
       "inspiracional",
       "reflexao",
-      "sabedoria"
+      "sabedoria",
+      "motivacao",
+      "viagem",
+      "inspiracao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   },
   {
     "id": "f_pacd5y9uf",
     "slug": "faca-o-que-for-necessario-para-ser-feliz-mas-nao-se-esqueca",
+    "texto": "Faça o que for necessário para ser feliz. Mas não se esqueça que a felicidade é um sentimento simples, você pode encontrá-la e deixá-la ir embora por não perceber sua simplicidade.",
+    "autor": "Martha Medeiros",
+    "autorSlug": "martha-medeiros",
+    "explicacao": "Martha Medeiros lembra que a felicidade pode ser simples e ainda assim escapar por desatenção. Crônica de autoajuda literária. Convida a fazer o necessário para ser feliz sem complicar o que já está ao alcance.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "emocoes": [
+        "felicidade"
+      ],
+      "temas": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "necessário",
+        "feliz",
+        "esqueça",
+        "sentimento"
+      ],
+      "palavrasChave": [
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "martha-medeiros"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 44,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "necessário",
+        "feliz"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Faça o que for necessário para ser feliz. Mas não se…\" — Martha Medeiros | Metamensagem",
+      "descriptionSeo": "Martha Medeiros lembra que a felicidade pode ser simples e ainda assim escapar por desatenção. Crônica de autoajuda literária. Convida a fazer o necessário pa…",
+      "keywordsSeo": [
+        "frases de Martha Medeiros",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases felicidade",
+        "frases inspiracao",
+        "frases inspiracional",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "motivacao"
+      ],
+      "canonicalSlug": "faca-o-que-for-necessario-para-ser-feliz-mas-nao-se-esqueca",
+      "relatedKeywords": [
+        "felicidade",
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "martha-medeiros"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Faça o que for necessário para ser feliz. Mas não se esqueça que a felicidade é um sentimento simples, você pode encontrá-la e deixá-la ir embora por não perceber sua simplicidade.",
     "autor_original": "Martha Medeiros",
-    "categoria": "felicidade",
+    "autor_slug": "martha-medeiros",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "Martha Medeiros lembra que a felicidade pode ser simples e ainda assim escapar por desatenção. Crônica de autoajuda literária. Convida a fazer o necessário para ser feliz sem complicar o que já está ao alcance.",
     "palavras_chave": [
       "felicidade",
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   },
   {
     "id": "f_w0wegvpql",
     "slug": "amadurecer-talvez-seja-descobrir-que-sofrer-algumas-perdas-e",
+    "texto": "Amadurecer talvez seja descobrir que sofrer algumas perdas é inevitável, mas que não precisamos nos agarrar à dor para justificar nossa existência.",
+    "autor": "Martha Medeiros",
+    "autorSlug": "martha-medeiros",
+    "explicacao": "Na mesma linha de Martha Medeiros: amadurecer é aceitar perdas sem alimentar dor como identidade. Reflexão sobre luto e crescimento emocional. A frase liberta de dramatizar sofrimento como única prova de existência.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "inspiracional",
+        "amadurecer",
+        "talvez",
+        "descobrir",
+        "sofrer",
+        "algumas"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "inspiracional",
+        "inspiracao",
+        "martha-medeiros"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 38,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "inspiracional",
+        "amadurecer",
+        "talvez",
+        "descobrir",
+        "sofrer"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Amadurecer talvez seja descobrir que sofrer algumas …\" — Martha Medeiros | Metamensagem",
+      "descriptionSeo": "Na mesma linha de Martha Medeiros: amadurecer é aceitar perdas sem alimentar dor como identidade. Reflexão sobre luto e crescimento emocional. A frase liberta…",
+      "keywordsSeo": [
+        "frases de Martha Medeiros",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "amadurecer-talvez-seja-descobrir-que-sofrer-algumas-perdas-e",
+      "relatedKeywords": [
+        "reflexao",
+        "inspiracional",
+        "martha-medeiros"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Amadurecer talvez seja descobrir que sofrer algumas perdas é inevitável, mas que não precisamos nos agarrar à dor para justificar nossa existência.",
     "autor_original": "Martha Medeiros",
-    "categoria": "inspiracional",
+    "autor_slug": "martha-medeiros",
+    "categoria": "reflexao",
     "contextos": [
+      "inspiracao",
       "reflexao"
     ],
-    "explicacao": "Na mesma linha de Martha Medeiros: amadurecer é aceitar perdas sem alimentar dor como identidade. Reflexão sobre luto e crescimento emocional. A frase liberta de dramatizar sofrimento como única prova de existência.",
     "palavras_chave": [
       "inspiracional",
-      "reflexao"
+      "reflexao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

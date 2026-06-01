@@ -1,0 +1,126 @@
+[
+  {
+    "id": "f_csv_d52c26a7ae",
+    "slug": "my-mother-still-sends-a-cake-to-the-office-for-my-birthday",
+    "texto": "My mother still sends a cake to the office for my birthday.",
+    "autor": "David Ulevitch",
+    "autorSlug": "david-ulevitch",
+    "explicacao": "Citação de David Ulevitch sobre temas ligados a trabalho. “My mother still sends a cake to the office for my birthday.” articula trabalho, mother, cake em registro de trabalho, com relevância para contextos como aniversario e trabalho.",
+    "semantica": {
+      "categoriaPrincipal": "trabalho",
+      "categorias": [
+        "trabalho",
+        "mother",
+        "cake",
+        "office"
+      ],
+      "contextos": [
+        "aniversario",
+        "trabalho",
+        "termino",
+        "cake",
+        "office"
+      ],
+      "emocoes": [],
+      "temas": [
+        "trabalho",
+        "mother",
+        "cake",
+        "office",
+        "still",
+        "sends",
+        "birthday"
+      ],
+      "palavrasChave": [
+        "mother",
+        "cake",
+        "office",
+        "trabalho",
+        "aniversario",
+        "termino"
+      ],
+      "tagsSeo": [
+        "trabalho",
+        "mother",
+        "cake",
+        "office",
+        "aniversario",
+        "termino",
+        "david-ulevitch"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "trabalho",
+        "mother",
+        "cake",
+        "office",
+        "still",
+        "sends"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My mother still sends a cake to the office for my bi…\" — David Ulevitch | Metamensagem",
+      "descriptionSeo": "Citação de David Ulevitch sobre temas ligados a trabalho. “My mother still sends a cake to the office for my birthday.” articula trabalho, mother, cake em reg…",
+      "keywordsSeo": [
+        "frases de David Ulevitch",
+        "frases sobre trabalho",
+        "frases trabalho",
+        "frases mother",
+        "frases aniversario",
+        "mother",
+        "cake",
+        "office",
+        "trabalho"
+      ],
+      "canonicalSlug": "my-mother-still-sends-a-cake-to-the-office-for-my-birthday",
+      "relatedKeywords": [
+        "trabalho",
+        "mother",
+        "cake",
+        "office",
+        "david-ulevitch"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My mother still sends a cake to the office for my birthday.",
+    "autor_original": "David Ulevitch",
+    "autor_slug": "david-ulevitch",
+    "categoria": "trabalho",
+    "contextos": [
+      "aniversario",
+      "trabalho",
+      "termino",
+      "cake",
+      "office"
+    ],
+    "palavras_chave": [
+      "mother",
+      "cake",
+      "office",
+      "trabalho",
+      "aniversario",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

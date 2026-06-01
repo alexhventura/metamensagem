@@ -2,31 +2,131 @@
   {
     "id": "f_r4lhz8zo8",
     "slug": "persistencia-e-determinacao-sao-as-chaves-para-alavancar-su",
+    "texto": "⁠Persistência e determinação são as chaves para alavancar sua vida financeira e alcançar o sucesso.",
+    "autor": "Isaque Ramon Correia Claudio",
+    "autorSlug": "isaque-ramon-correia-claudio",
+    "explicacao": "Isaque Ramon Correia Claudio liga persistência e determinação ao sucesso financeiro. Conteúdo motivacional brasileiro voltado a empreendedorismo e disciplina na construção de patrimônio e metas.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "persistencia",
+        "sucesso"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao",
+        "persistencia",
+        "sucesso"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "persistência",
+        "determinação",
+        "chaves",
+        "alavancar",
+        "financeira"
+      ],
+      "palavrasChave": [
+        "determinacao",
+        "inspiracional",
+        "motivacao",
+        "persistencia",
+        "sucesso",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "persistencia",
+        "sucesso",
+        "inspiracao",
+        "isaque-ramon-correia-claudio"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 39,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "persistência",
+        "determinação",
+        "chaves"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠Persistência e determinação são as chaves para alav…\" — Isaque Ramon Correia Claudio | Metamensagem",
+      "descriptionSeo": "Isaque Ramon Correia Claudio liga persistência e determinação ao sucesso financeiro. Conteúdo motivacional brasileiro voltado a empreendedorismo e disciplina…",
+      "keywordsSeo": [
+        "frases de Isaque Ramon Correia Claudio",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases determinacao",
+        "frases inspiracao",
+        "frases inspiracional",
+        "determinacao",
+        "inspiracional",
+        "motivacao",
+        "persistencia"
+      ],
+      "canonicalSlug": "persistencia-e-determinacao-sao-as-chaves-para-alavancar-su",
+      "relatedKeywords": [
+        "determinacao",
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "sucesso",
+        "isaque-ramon-correia-claudio"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠Persistência e determinação são as chaves para alavancar sua vida financeira e alcançar o sucesso.",
     "autor_original": "Isaque Ramon Correia Claudio",
-    "categoria": "determinacao",
+    "autor_slug": "isaque-ramon-correia-claudio",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao",
       "persistencia",
       "sucesso"
     ],
-    "explicacao": "Isaque Ramon Correia Claudio liga persistência e determinação ao sucesso financeiro. Conteúdo motivacional brasileiro voltado a empreendedorismo e disciplina na construção de patrimônio e metas.",
     "palavras_chave": [
       "determinacao",
       "inspiracional",
       "motivacao",
       "persistencia",
-      "sucesso"
+      "sucesso",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

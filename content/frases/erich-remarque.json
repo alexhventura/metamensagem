@@ -2,25 +2,118 @@
   {
     "id": "f_syx1pa7zf",
     "slug": "no-desespero-e-no-perigo-as-pessoas-aprendem-a-acreditar-no",
+    "texto": "No desespero e no perigo, as pessoas aprendem a acreditar no milagre. De outra forma não sobreviveriam.",
+    "autor": "Erich Remarque",
+    "autorSlug": "erich-remarque",
+    "explicacao": "Erich Remarque escreve sobre a necessidade de crer em milagres diante do desespero. Reflete sua experiência como autor de romances sobre a Primeira Guerra, onde a esperança se torna condição de sobrevivência.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "termino",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "desespero",
+        "perigo",
+        "pessoas",
+        "aprendem",
+        "acreditar"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "termino",
+        "erich-remarque"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "desespero",
+        "perigo",
+        "pessoas"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"No desespero e no perigo, as pessoas aprendem a acre…\" — Erich Remarque | Metamensagem",
+      "descriptionSeo": "Erich Remarque escreve sobre a necessidade de crer em milagres diante do desespero. Reflete sua experiência como autor de romances sobre a Primeira Guerra, on…",
+      "keywordsSeo": [
+        "frases de Erich Remarque",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases termino",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "no-desespero-e-no-perigo-as-pessoas-aprendem-a-acreditar-no",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "erich-remarque"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "No desespero e no perigo, as pessoas aprendem a acreditar no milagre. De outra forma não sobreviveriam.",
     "autor_original": "Erich Remarque",
-    "categoria": "inspiracional",
+    "autor_slug": "erich-remarque",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
+      "termino",
       "reflexao"
     ],
-    "explicacao": "Erich Remarque escreve sobre a necessidade de crer em milagres diante do desespero. Reflete sua experiência como autor de romances sobre a Primeira Guerra, onde a esperança se torna condição de sobrevivência.",
     "palavras_chave": [
       "inspiracional",
-      "reflexao"
+      "reflexao",
+      "motivacao",
+      "inspiracao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

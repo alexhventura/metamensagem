@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_7d00fd9c3f",
+    "slug": "i-don-t-want-to-be-a-memory-i-want-to-be-a-thought",
+    "texto": "I don't want to be a memory, I want to be a thought",
+    "autor": "Josue Rivera",
+    "autorSlug": "josue-rivera",
+    "explicacao": "Citação de Josue Rivera sobre limites e escolhas conscientes. “I don't want to be a memory, I want to be a thought” articula vida, memory, thought em registro de vida, com relevância para contextos como memory.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "memory"
+      ],
+      "contextos": [
+        "memory"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "memory",
+        "thought"
+      ],
+      "palavrasChave": [
+        "vida",
+        "memory"
+      ],
+      "tagsSeo": [
+        "vida",
+        "memory",
+        "josue-rivera"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "memory",
+        "thought",
+        "vida",
+        "memory"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I don't want to be a memory, I want to be a thought\" — Josue Rivera | Metamensagem",
+      "descriptionSeo": "Citação de Josue Rivera sobre limites e escolhas conscientes. “I don't want to be a memory, I want to be a thought” articula vida, memory, thought em registro…",
+      "keywordsSeo": [
+        "frases de Josue Rivera",
+        "frases sobre vida",
+        "frases vida",
+        "frases memory",
+        "vida",
+        "memory"
+      ],
+      "canonicalSlug": "i-don-t-want-to-be-a-memory-i-want-to-be-a-thought",
+      "relatedKeywords": [
+        "vida",
+        "memory",
+        "josue-rivera"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I don't want to be a memory, I want to be a thought",
+    "autor_original": "Josue Rivera",
+    "autor_slug": "josue-rivera",
+    "categoria": "vida",
+    "contextos": [
+      "memory"
+    ],
+    "palavras_chave": [
+      "vida",
+      "memory"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

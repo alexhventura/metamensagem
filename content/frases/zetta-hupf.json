@@ -1,0 +1,116 @@
+[
+  {
+    "id": "f_csv_bfd4bd72ba",
+    "slug": "reading-a-book-is-like-looking-through-a-window",
+    "texto": "~Reading a book is like looking through a window!",
+    "autor": "Zetta Hupf",
+    "autorSlug": "zetta-hupf",
+    "explicacao": "Metáfora atribuída a Zetta Hupf: compara elementos do cotidiano para falar de esforço, persistência e resultados. O trecho “~Reading a book is like looking through a window!” usa imagem concreta para lembrar que familia, author, children-s-books pedem movimento e interpretação pessoal, em tom de children-s-books e illustrator.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "author",
+        "children-s-books",
+        "illustrator"
+      ],
+      "contextos": [
+        "children-s-books",
+        "illustrator"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "author",
+        "children-s-books",
+        "illustrator",
+        "reading",
+        "looking",
+        "through",
+        "window"
+      ],
+      "palavrasChave": [
+        "author",
+        "children-s-books",
+        "illustrator",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "author",
+        "children-s-books",
+        "illustrator",
+        "zetta-hupf"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "author",
+        "children-s-books",
+        "illustrator",
+        "reading",
+        "looking"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"~Reading a book is like looking through a window!\" — Zetta Hupf | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Zetta Hupf: compara elementos do cotidiano para falar de esforço, persistência e resultados. O trecho “~Reading a book is like looking th…",
+      "keywordsSeo": [
+        "frases de Zetta Hupf",
+        "frases sobre familia",
+        "frases familia",
+        "frases author",
+        "frases children s books",
+        "frases illustrator",
+        "author",
+        "children-s-books",
+        "illustrator",
+        "familia"
+      ],
+      "canonicalSlug": "reading-a-book-is-like-looking-through-a-window",
+      "relatedKeywords": [
+        "familia",
+        "author",
+        "children-s-books",
+        "illustrator",
+        "zetta-hupf"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "~Reading a book is like looking through a window!",
+    "autor_original": "Zetta Hupf",
+    "autor_slug": "zetta-hupf",
+    "categoria": "familia",
+    "contextos": [
+      "children-s-books",
+      "illustrator"
+    ],
+    "palavras_chave": [
+      "author",
+      "children-s-books",
+      "illustrator",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

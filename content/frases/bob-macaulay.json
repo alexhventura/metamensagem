@@ -1,0 +1,112 @@
+[
+  {
+    "id": "f_csv_3eeeaca326",
+    "slug": "the-dust-and-silence-of-the-upper-shelf",
+    "texto": "The dust and silence of the upper shelf.",
+    "autor": "Bob Macaulay",
+    "autorSlug": "bob-macaulay",
+    "explicacao": "Citação de Bob Macaulay sobre temas ligados a reflexao. “The dust and silence of the upper shelf.” articula reflexao, books, reading em registro de reflexao, com relevância para contextos como reflexao-noturna e reading.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "books",
+        "reading"
+      ],
+      "contextos": [
+        "reflexao-noturna",
+        "reading"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "books",
+        "reading",
+        "silence",
+        "upper",
+        "shelf"
+      ],
+      "palavrasChave": [
+        "books",
+        "reading",
+        "reflexao",
+        "reflexao-noturna"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "books",
+        "reading",
+        "reflexao-noturna",
+        "bob-macaulay"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "books",
+        "reading",
+        "silence",
+        "upper",
+        "shelf"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The dust and silence of the upper shelf.\" — Bob Macaulay | Metamensagem",
+      "descriptionSeo": "Citação de Bob Macaulay sobre temas ligados a reflexao. “The dust and silence of the upper shelf.” articula reflexao, books, reading em registro de reflexao,…",
+      "keywordsSeo": [
+        "frases de Bob Macaulay",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases books",
+        "frases reflexao noturna",
+        "frases reading",
+        "books",
+        "reading",
+        "reflexao",
+        "reflexao-noturna"
+      ],
+      "canonicalSlug": "the-dust-and-silence-of-the-upper-shelf",
+      "relatedKeywords": [
+        "reflexao",
+        "books",
+        "reading",
+        "bob-macaulay"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The dust and silence of the upper shelf.",
+    "autor_original": "Bob Macaulay",
+    "autor_slug": "bob-macaulay",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao-noturna",
+      "reading"
+    ],
+    "palavras_chave": [
+      "books",
+      "reading",
+      "reflexao",
+      "reflexao-noturna"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

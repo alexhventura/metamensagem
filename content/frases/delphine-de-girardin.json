@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f_csv_f7ebc42ae8",
+    "slug": "business-is-other-people-s-money",
+    "texto": "Business is other people's money.",
+    "autor": "Delphine de Girardin",
+    "autorSlug": "delphine-de-girardin",
+    "explicacao": "Citação de Delphine de Girardin sobre temas ligados a negocios. “Business is other people's money.” articula negocios, business, people em registro de negocios, com relevância para contextos como people e other.",
+    "semantica": {
+      "categoriaPrincipal": "negocios",
+      "categorias": [
+        "negocios",
+        "business",
+        "people",
+        "other"
+      ],
+      "contextos": [
+        "people",
+        "other"
+      ],
+      "emocoes": [],
+      "temas": [
+        "negocios",
+        "business",
+        "people",
+        "other",
+        "money"
+      ],
+      "palavrasChave": [
+        "business",
+        "people",
+        "other",
+        "negocios"
+      ],
+      "tagsSeo": [
+        "negocios",
+        "business",
+        "people",
+        "other",
+        "delphine-de-girardin"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "negocios",
+        "business",
+        "people",
+        "other",
+        "money",
+        "negocios"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Business is other people's money.\" — Delphine de Girardin | Metamensagem",
+      "descriptionSeo": "Citação de Delphine de Girardin sobre temas ligados a negocios. “Business is other people's money.” articula negocios, business, people em registro de negocio…",
+      "keywordsSeo": [
+        "frases de Delphine de Girardin",
+        "frases sobre negocios",
+        "frases negocios",
+        "frases business",
+        "frases people",
+        "frases other",
+        "business",
+        "people",
+        "other",
+        "negocios"
+      ],
+      "canonicalSlug": "business-is-other-people-s-money",
+      "relatedKeywords": [
+        "negocios",
+        "business",
+        "people",
+        "other",
+        "delphine-de-girardin"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Business is other people's money.",
+    "autor_original": "Delphine de Girardin",
+    "autor_slug": "delphine-de-girardin",
+    "categoria": "negocios",
+    "contextos": [
+      "people",
+      "other"
+    ],
+    "palavras_chave": [
+      "business",
+      "people",
+      "other",
+      "negocios"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

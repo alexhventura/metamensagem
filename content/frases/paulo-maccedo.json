@@ -2,29 +2,124 @@
   {
     "id": "f_fx2xzbv9i",
     "slug": "a-fe-de-um-martir-a-coragem-de-um-aventureiro-a-forca-de-u",
+    "texto": "A fé de um mártir, a coragem de um aventureiro, a força de um guerreiro e a educação de um paladino. Com esses quatro conceitos um homem vai longe em suas realizações",
+    "autor": "Paulo Maccedo",
+    "autorSlug": "paulo-maccedo",
+    "explicacao": "Paulo Maccedo resume, em tom motivacional, quatro virtudes que costuma associar a realizações pessoais: fé, coragem, força e educação moral. A metáfora dos paladinos sugere integridade junto com ousadia. É um conselho para quem busca persistir diante de desafios grandes.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "coragem",
+        "fe",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "fe",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [
+        "coragem"
+      ],
+      "temas": [
+        "motivacao",
+        "coragem",
+        "fe",
+        "inspiracional",
+        "mártir",
+        "aventureiro",
+        "força",
+        "guerreiro"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "fe",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "coragem",
+        "fe",
+        "inspiracional",
+        "inspiracao",
+        "paulo-maccedo"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 44,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "coragem",
+        "fe",
+        "inspiracional",
+        "mártir",
+        "aventureiro"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A fé de um mártir, a coragem de um aventureiro, a fo…\" — Paulo Maccedo | Metamensagem",
+      "descriptionSeo": "Paulo Maccedo resume, em tom motivacional, quatro virtudes que costuma associar a realizações pessoais: fé, coragem, força e educação moral. A metáfora dos pa…",
+      "keywordsSeo": [
+        "frases de Paulo Maccedo",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases coragem",
+        "frases inspiracao",
+        "frases fe",
+        "coragem",
+        "fe",
+        "inspiracional",
+        "motivacao"
+      ],
+      "canonicalSlug": "a-fe-de-um-martir-a-coragem-de-um-aventureiro-a-forca-de-u",
+      "relatedKeywords": [
+        "coragem",
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "paulo-maccedo"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "A fé de um mártir, a coragem de um aventureiro, a força de um guerreiro e a educação de um paladino. Com esses quatro conceitos um homem vai longe em suas realizações",
     "autor_original": "Paulo Maccedo",
-    "categoria": "coragem",
+    "autor_slug": "paulo-maccedo",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "fe",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "Paulo Maccedo resume, em tom motivacional, quatro virtudes que costuma associar a realizações pessoais: fé, coragem, força e educação moral. A metáfora dos paladinos sugere integridade junto com ousadia. É um conselho para quem busca persistir diante de desafios grandes.",
     "palavras_chave": [
       "coragem",
       "fe",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

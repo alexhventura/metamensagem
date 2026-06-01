@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_0757b12f8a",
+    "slug": "there-is-no-land-like-the-land-of-your-childhood",
+    "texto": "There is no land like the land of your childhood.",
+    "autor": "Michael Powell",
+    "autorSlug": "michael-powell",
+    "explicacao": "Metáfora atribuída a Michael Powell: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “There is no land like the land of your childhood.” usa imagem concreta para lembrar que reflexao, childhood, there pedem movimento e interpretação pessoal, em tom de reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "childhood"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "childhood",
+        "there"
+      ],
+      "palavrasChave": [
+        "childhood",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "childhood",
+        "michael-powell"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "childhood",
+        "there",
+        "reflexao",
+        "childhood"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"There is no land like the land of your childhood.\" — Michael Powell | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Michael Powell: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “There is no land like the land of your c…",
+      "keywordsSeo": [
+        "frases de Michael Powell",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases childhood",
+        "childhood",
+        "reflexao"
+      ],
+      "canonicalSlug": "there-is-no-land-like-the-land-of-your-childhood",
+      "relatedKeywords": [
+        "reflexao",
+        "childhood",
+        "michael-powell"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "There is no land like the land of your childhood.",
+    "autor_original": "Michael Powell",
+    "autor_slug": "michael-powell",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "childhood",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

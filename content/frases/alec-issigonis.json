@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f_csv_8f8d063f99",
+    "slug": "a-camel-is-a-horse-designed-by-committee",
+    "texto": "A camel is a horse designed by committee.",
+    "autor": "Alec Issigonis",
+    "autorSlug": "alec-issigonis",
+    "explicacao": "Citação de Alec Issigonis sobre temas ligados a reflexao. “A camel is a horse designed by committee.” articula reflexao, horse, committee em registro de reflexao, com relevância para contextos como committee e camel.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "horse",
+        "committee",
+        "camel"
+      ],
+      "contextos": [
+        "committee",
+        "camel"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "horse",
+        "committee",
+        "camel",
+        "designed"
+      ],
+      "palavrasChave": [
+        "horse",
+        "committee",
+        "camel",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "horse",
+        "committee",
+        "camel",
+        "alec-issigonis"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "horse",
+        "committee",
+        "camel",
+        "designed",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A camel is a horse designed by committee.\" — Alec Issigonis | Metamensagem",
+      "descriptionSeo": "Citação de Alec Issigonis sobre temas ligados a reflexao. “A camel is a horse designed by committee.” articula reflexao, horse, committee em registro de refle…",
+      "keywordsSeo": [
+        "frases de Alec Issigonis",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases horse",
+        "frases committee",
+        "frases camel",
+        "horse",
+        "committee",
+        "camel",
+        "reflexao"
+      ],
+      "canonicalSlug": "a-camel-is-a-horse-designed-by-committee",
+      "relatedKeywords": [
+        "reflexao",
+        "horse",
+        "committee",
+        "camel",
+        "alec-issigonis"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A camel is a horse designed by committee.",
+    "autor_original": "Alec Issigonis",
+    "autor_slug": "alec-issigonis",
+    "categoria": "reflexao",
+    "contextos": [
+      "committee",
+      "camel"
+    ],
+    "palavras_chave": [
+      "horse",
+      "committee",
+      "camel",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

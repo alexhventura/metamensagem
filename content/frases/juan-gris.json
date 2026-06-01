@@ -1,0 +1,116 @@
+[
+  {
+    "id": "f_csv_1f4b449e30",
+    "slug": "i-always-pet-a-dog-with-my-left-hand-because-if-he-bit-me-i-d-still-have-my-righ",
+    "texto": "I always pet a dog with my left hand because if he bit me I'd still have my right hand to paint with.",
+    "autor": "Juan Gris",
+    "autorSlug": "juan-gris",
+    "explicacao": "Citação de Juan Gris sobre temas ligados a familia. “I always pet a dog with my left hand because if he bit me I'd still have my right hand to paint w…” articula familia, dog, me em registro de familia, com relevância para contextos como me e paint.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "dog",
+        "me",
+        "paint"
+      ],
+      "contextos": [
+        "me",
+        "paint"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "dog",
+        "me",
+        "paint",
+        "always",
+        "because",
+        "still",
+        "right"
+      ],
+      "palavrasChave": [
+        "dog",
+        "me",
+        "paint",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "dog",
+        "me",
+        "paint",
+        "juan-gris"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 36,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "dog",
+        "me",
+        "paint",
+        "always",
+        "because"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I always pet a dog with my left hand because if he b…\" — Juan Gris | Metamensagem",
+      "descriptionSeo": "Citação de Juan Gris sobre temas ligados a familia. “I always pet a dog with my left hand because if he bit me I'd still have my right hand to paint w…” artic…",
+      "keywordsSeo": [
+        "frases de Juan Gris",
+        "frases sobre familia",
+        "frases familia",
+        "frases dog",
+        "frases me",
+        "frases paint",
+        "dog",
+        "me",
+        "paint",
+        "familia"
+      ],
+      "canonicalSlug": "i-always-pet-a-dog-with-my-left-hand-because-if-he-bit-me-i-d-still-have-my-righ",
+      "relatedKeywords": [
+        "familia",
+        "dog",
+        "me",
+        "paint",
+        "juan-gris"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I always pet a dog with my left hand because if he bit me I'd still have my right hand to paint with.",
+    "autor_original": "Juan Gris",
+    "autor_slug": "juan-gris",
+    "categoria": "familia",
+    "contextos": [
+      "me",
+      "paint"
+    ],
+    "palavras_chave": [
+      "dog",
+      "me",
+      "paint",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

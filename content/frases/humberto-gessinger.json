@@ -2,27 +2,115 @@
   {
     "id": "f_p67x5yct0",
     "slug": "nao-ha-alternativa-e-a-unica-opcao-unir-o-otimismo-da-vont",
+    "texto": "Não há alternativa, é a única opção: unir o otimismo da vontade e o pessimismo da razão contra toda expectativa, contra qualquer previsão, há um ponto de partida, há um ponto de união: sentir com inteligência, pensar com emoção",
+    "autor": "Humberto Gessinger",
+    "autorSlug": "humberto-gessinger",
+    "explicacao": "Trecho de letra de Humberto Gessinger (Engenheiros do Hawaii) sobre unir otimismo da vontade e pessimismo da razão. Ecoa Gramsci numa reflexão sobre sentir com inteligência e pensar com emoção.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "inspiracional",
+        "otimismo",
+        "contra",
+        "ponto",
+        "alternativa",
+        "única",
+        "opção"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "reflexao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "humberto-gessinger"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 48,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "inspiracional",
+        "otimismo",
+        "contra",
+        "ponto",
+        "alternativa"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Não há alternativa, é a única opção: unir o otimismo…\" — Humberto Gessinger | Metamensagem",
+      "descriptionSeo": "Trecho de letra de Humberto Gessinger (Engenheiros do Hawaii) sobre unir otimismo da vontade e pessimismo da razão. Ecoa Gramsci numa reflexão sobre sentir co…",
+      "keywordsSeo": [
+        "frases de Humberto Gessinger",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "reflexao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "nao-ha-alternativa-e-a-unica-opcao-unir-o-otimismo-da-vont",
+      "relatedKeywords": [
+        "reflexao",
+        "inspiracional",
+        "otimismo",
+        "humberto-gessinger"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Não há alternativa, é a única opção: unir o otimismo da vontade e o pessimismo da razão contra toda expectativa, contra qualquer previsão, há um ponto de partida, há um ponto de união: sentir com inteligência, pensar com emoção",
     "autor_original": "Humberto Gessinger",
-    "categoria": "inspiracional",
+    "autor_slug": "humberto-gessinger",
+    "categoria": "reflexao",
     "contextos": [
+      "inspiracao",
       "otimismo",
       "reflexao"
     ],
-    "explicacao": "Trecho de letra de Humberto Gessinger (Engenheiros do Hawaii) sobre unir otimismo da vontade e pessimismo da razão. Ecoa Gramsci numa reflexão sobre sentir com inteligência e pensar com emoção.",
     "palavras_chave": [
       "inspiracional",
       "otimismo",
-      "reflexao"
+      "reflexao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

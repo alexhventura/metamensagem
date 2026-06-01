@@ -1,26 +1,226 @@
 [
   {
-    "id": "f_sro7zy1o5",
-    "slug": "acredite-em-si-e-chegara-um-dia-em-que-os-outros-nao-terao-o",
-    "frase_original": "Acredite em si e chegará um dia em que os outros não terão outra escolha senão acreditar com você.",
+    "id": "f_csv_e60a533fab",
+    "slug": "believe-in-yourself-and-there-will-come-a-day-when-others-will-have-no-choice-bu",
+    "texto": "Believe in yourself and there will come a day when others will have no choice but to believe with you.",
+    "autor": "Cynthia Kersey",
+    "autorSlug": "cynthia-kersey",
+    "explicacao": "Citação de Cynthia Kersey sobre temas ligados a autoestima. “Believe in yourself and there will come a day when others will have no choice but to believe with…” articula autoestima, confidence, inspiracional em registro de autoestima, com relevância para contextos como inspiracao e inspiracional.",
+    "semantica": {
+      "categoriaPrincipal": "autoestima",
+      "categorias": [
+        "autoestima",
+        "confidence",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional"
+      ],
+      "emocoes": [],
+      "temas": [
+        "autoestima",
+        "confidence",
+        "inspiracional",
+        "believe",
+        "yourself",
+        "there",
+        "others",
+        "choice"
+      ],
+      "palavrasChave": [
+        "confidence",
+        "inspiracional",
+        "autoestima",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "autoestima",
+        "confidence",
+        "inspiracional",
+        "inspiracao",
+        "cynthia-kersey"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "autoestima",
+        "confidence",
+        "inspiracional",
+        "believe",
+        "yourself",
+        "there"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Believe in yourself and there will come a day when o…\" — Cynthia Kersey | Metamensagem",
+      "descriptionSeo": "Citação de Cynthia Kersey sobre temas ligados a autoestima. “Believe in yourself and there will come a day when others will have no choice but to believe with…",
+      "keywordsSeo": [
+        "frases de Cynthia Kersey",
+        "frases sobre autoestima",
+        "frases autoestima",
+        "frases confidence",
+        "frases inspiracao",
+        "frases inspiracional",
+        "confidence",
+        "inspiracional",
+        "autoestima",
+        "inspiracao"
+      ],
+      "canonicalSlug": "believe-in-yourself-and-there-will-come-a-day-when-others-will-have-no-choice-bu",
+      "relatedKeywords": [
+        "autoestima",
+        "confidence",
+        "inspiracional",
+        "cynthia-kersey"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Believe in yourself and there will come a day when others will have no choice but to believe with you.",
     "autor_original": "Cynthia Kersey",
-    "categoria": "inspiracional",
+    "autor_slug": "cynthia-kersey",
+    "categoria": "autoestima",
     "contextos": [
-      "reflexao"
+      "inspiracao",
+      "inspiracional"
     ],
-    "explicacao": "De Cynthia Kersey, autora motivacional norte-americana. Propõe que autoconfiança persistente acaba convencendo também quem ao redor inicialmente duvidava.",
     "palavras_chave": [
+      "confidence",
       "inspiracional",
-      "reflexao"
+      "autoestima",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_sro7zy1o5",
+    "slug": "acredite-em-si-e-chegara-um-dia-em-que-os-outros-nao-terao-o",
+    "texto": "Acredite em si e chegará um dia em que os outros não terão outra escolha senão acreditar com você.",
+    "autor": "Cynthia Kersey",
+    "autorSlug": "cynthia-kersey",
+    "explicacao": "De Cynthia Kersey, autora motivacional norte-americana. Propõe que autoconfiança persistente acaba convencendo também quem ao redor inicialmente duvidava.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "acredite",
+        "chegará",
+        "outros",
+        "terão",
+        "outra"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "cynthia-kersey"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "acredite",
+        "chegará",
+        "outros"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Acredite em si e chegará um dia em que os outros não…\" — Cynthia Kersey | Metamensagem",
+      "descriptionSeo": "De Cynthia Kersey, autora motivacional norte-americana. Propõe que autoconfiança persistente acaba convencendo também quem ao redor inicialmente duvidava.…",
+      "keywordsSeo": [
+        "frases de Cynthia Kersey",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "acredite-em-si-e-chegara-um-dia-em-que-os-outros-nao-terao-o",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "cynthia-kersey"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Acredite em si e chegará um dia em que os outros não terão outra escolha senão acreditar com você.",
+    "autor_original": "Cynthia Kersey",
+    "autor_slug": "cynthia-kersey",
+    "categoria": "motivacao",
+    "contextos": [
+      "inspiracao",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "inspiracional",
+      "reflexao",
+      "motivacao",
+      "inspiracao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

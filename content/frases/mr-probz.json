@@ -1,0 +1,111 @@
+[
+  {
+    "id": "f_csv_5491476bf1",
+    "slug": "you-wanna-eat-i-can-hand-you-a-spoon",
+    "texto": "You wanna eat? I can hand you a spoon.",
+    "autor": "Mr. Probz",
+    "autorSlug": "mr-probz",
+    "explicacao": "Pergunta retórica de Mr. Probz que provoca temas ligados a reflexao. Ao questionar “You wanna eat? I can hand you a spoon.”, o texto convida o leitor a revisar crenças sobre reflexao, philosophy, sadness, com foco em sadness.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "philosophy",
+        "sadness"
+      ],
+      "contextos": [
+        "sadness"
+      ],
+      "emocoes": [
+        "tristeza"
+      ],
+      "temas": [
+        "reflexao",
+        "philosophy",
+        "sadness",
+        "wanna",
+        "spoon"
+      ],
+      "palavrasChave": [
+        "philosophy",
+        "sadness",
+        "reflexao",
+        "tristeza"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "philosophy",
+        "sadness",
+        "tristeza",
+        "mr-probz"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "philosophy",
+        "sadness",
+        "wanna",
+        "spoon",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"You wanna eat? I can hand you a spoon.\" — Mr. Probz | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Mr. Probz que provoca temas ligados a reflexao. Ao questionar “You wanna eat? I can hand you a spoon.”, o texto convida o leitor a revisa…",
+      "keywordsSeo": [
+        "frases de Mr. Probz",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases philosophy",
+        "frases sadness",
+        "philosophy",
+        "sadness",
+        "reflexao",
+        "tristeza"
+      ],
+      "canonicalSlug": "you-wanna-eat-i-can-hand-you-a-spoon",
+      "relatedKeywords": [
+        "tristeza",
+        "reflexao",
+        "philosophy",
+        "sadness",
+        "mr-probz"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "You wanna eat? I can hand you a spoon.",
+    "autor_original": "Mr. Probz",
+    "autor_slug": "mr-probz",
+    "categoria": "reflexao",
+    "contextos": [
+      "sadness"
+    ],
+    "palavras_chave": [
+      "philosophy",
+      "sadness",
+      "reflexao",
+      "tristeza"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

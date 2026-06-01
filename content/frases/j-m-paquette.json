@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_ca3e3053f1",
+    "slug": "worst-rescue-ever",
+    "texto": "Worst rescue ever.",
+    "autor": "J.M. Paquette",
+    "autorSlug": "j-m-paquette",
+    "explicacao": "Citação de J.M. Paquette sobre temas ligados a reflexao. “Worst rescue ever.” articula reflexao, rescue, zombies em registro de reflexao, com relevância para contextos como zombies.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "rescue",
+        "zombies"
+      ],
+      "contextos": [
+        "zombies"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "rescue",
+        "zombies",
+        "worst"
+      ],
+      "palavrasChave": [
+        "rescue",
+        "zombies",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "rescue",
+        "zombies",
+        "j-m-paquette"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "rescue",
+        "zombies",
+        "worst",
+        "reflexao",
+        "rescue"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Worst rescue ever.\" — J.M. Paquette | Metamensagem",
+      "descriptionSeo": "Citação de J.M. Paquette sobre temas ligados a reflexao. “Worst rescue ever.” articula reflexao, rescue, zombies em registro de reflexao, com relevância para…",
+      "keywordsSeo": [
+        "frases de J.M. Paquette",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases rescue",
+        "frases zombies",
+        "rescue",
+        "zombies",
+        "reflexao"
+      ],
+      "canonicalSlug": "worst-rescue-ever",
+      "relatedKeywords": [
+        "reflexao",
+        "rescue",
+        "zombies",
+        "j-m-paquette"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Worst rescue ever.",
+    "autor_original": "J.M. Paquette",
+    "autor_slug": "j-m-paquette",
+    "categoria": "reflexao",
+    "contextos": [
+      "zombies"
+    ],
+    "palavras_chave": [
+      "rescue",
+      "zombies",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_b9c3a6b3ff",
+    "slug": "this-is-a-test-this-is-only-a-test-if-this-was-my-actual-life-i-d-be-famous-r",
+    "texto": "This is a test. This is only a test. If this was my actual life I'd be famous, rich, and thin.",
+    "autor": "Becky Adams",
+    "autorSlug": "becky-adams",
+    "explicacao": "Citação de Becky Adams sobre sentido da existência e experiência vivida. “This is a test. This is only a test. If this was my actual life I'd be famous, rich, and thin.” articula amor, coming-of-age, rock-band em registro de amor, com relevância para contextos como rock-band e romance.",
+    "semantica": {
+      "categoriaPrincipal": "amor",
+      "categorias": [
+        "amor",
+        "coming-of-age",
+        "rock-band",
+        "romance"
+      ],
+      "contextos": [
+        "rock-band",
+        "romance"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amor",
+        "coming-of-age",
+        "rock-band",
+        "romance",
+        "actual",
+        "famous"
+      ],
+      "palavrasChave": [
+        "coming-of-age",
+        "rock-band",
+        "romance",
+        "amor"
+      ],
+      "tagsSeo": [
+        "amor",
+        "coming-of-age",
+        "rock-band",
+        "romance",
+        "becky-adams"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 35,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amor",
+        "coming-of-age",
+        "rock-band",
+        "romance",
+        "actual",
+        "famous"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"This is a test. This is only a test. If this was my …\" — Becky Adams | Metamensagem",
+      "descriptionSeo": "Citação de Becky Adams sobre sentido da existência e experiência vivida. “This is a test. This is only a test. If this was my actual life I'd be famous, rich,…",
+      "keywordsSeo": [
+        "frases de Becky Adams",
+        "frases sobre amor",
+        "frases amor",
+        "frases coming of age",
+        "frases rock band",
+        "frases romance",
+        "coming-of-age",
+        "rock-band",
+        "romance",
+        "amor"
+      ],
+      "canonicalSlug": "this-is-a-test-this-is-only-a-test-if-this-was-my-actual-life-i-d-be-famous-r",
+      "relatedKeywords": [
+        "amor",
+        "coming-of-age",
+        "rock-band",
+        "romance",
+        "becky-adams"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "This is a test. This is only a test. If this was my actual life I'd be famous, rich, and thin.",
+    "autor_original": "Becky Adams",
+    "autor_slug": "becky-adams",
+    "categoria": "amor",
+    "contextos": [
+      "rock-band",
+      "romance"
+    ],
+    "palavras_chave": [
+      "coming-of-age",
+      "rock-band",
+      "romance",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "id": "f_csv_2e0180dd45",
+    "slug": "history-is-like-a-constantly-changing-tree",
+    "texto": "History is like a constantly changing tree.",
+    "autor": "David Irving",
+    "autorSlug": "david-irving",
+    "explicacao": "Metáfora atribuída a David Irving: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “History is like a constantly changing tree.” usa imagem concreta para lembrar que reflexao, history, constantly pedem movimento e interpretação pessoal, em tom de reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "history"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "history",
+        "constantly",
+        "changing"
+      ],
+      "palavrasChave": [
+        "history",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "history",
+        "david-irving"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "history",
+        "constantly",
+        "changing",
+        "reflexao",
+        "history"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"History is like a constantly changing tree.\" — David Irving | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a David Irving: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “History is like a constantly changing tree…",
+      "keywordsSeo": [
+        "frases de David Irving",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases history",
+        "history",
+        "reflexao"
+      ],
+      "canonicalSlug": "history-is-like-a-constantly-changing-tree",
+      "relatedKeywords": [
+        "reflexao",
+        "history",
+        "david-irving"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "History is like a constantly changing tree.",
+    "autor_original": "David Irving",
+    "autor_slug": "david-irving",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "history",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

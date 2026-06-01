@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_0de2d0c82f",
+    "slug": "enjoy-with-a-care",
+    "texto": "Enjoy with a care",
+    "autor": "Jerin John",
+    "autorSlug": "jerin-john",
+    "explicacao": "Citação de Jerin John sobre temas ligados a reflexao. “Enjoy with a care” articula reflexao, experience, enjoy em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "experience"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [
+        "alegria"
+      ],
+      "temas": [
+        "reflexao",
+        "experience",
+        "enjoy"
+      ],
+      "palavrasChave": [
+        "experience",
+        "reflexao",
+        "alegria"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "experience",
+        "alegria",
+        "jerin-john"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "experience",
+        "enjoy",
+        "reflexao",
+        "experience"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Enjoy with a care\" — Jerin John | Metamensagem",
+      "descriptionSeo": "Citação de Jerin John sobre temas ligados a reflexao. “Enjoy with a care” articula reflexao, experience, enjoy em registro de reflexao, com relevância para co…",
+      "keywordsSeo": [
+        "frases de Jerin John",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases experience",
+        "experience",
+        "reflexao",
+        "alegria"
+      ],
+      "canonicalSlug": "enjoy-with-a-care",
+      "relatedKeywords": [
+        "alegria",
+        "reflexao",
+        "experience",
+        "jerin-john"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Enjoy with a care",
+    "autor_original": "Jerin John",
+    "autor_slug": "jerin-john",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "experience",
+      "reflexao",
+      "alegria"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

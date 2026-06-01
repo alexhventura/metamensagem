@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_6fa8da9c38",
+    "slug": "accept-the-past",
+    "texto": "Accept the past",
+    "autor": "embrace the present",
+    "autorSlug": "embrace-the-present",
+    "explicacao": "Citação de embrace the present sobre temas ligados a reflexao. “Accept the past” articula reflexao, consider-the-future, accept em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "consider-the-future"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [
+        "esperanca"
+      ],
+      "temas": [
+        "reflexao",
+        "consider-the-future",
+        "accept"
+      ],
+      "palavrasChave": [
+        "consider-the-future",
+        "reflexao",
+        "esperanca"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "consider-the-future",
+        "esperanca",
+        "embrace-the-present"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "consider-the-future",
+        "accept",
+        "reflexao",
+        "consider-the-future"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Accept the past\" — embrace the present | Metamensagem",
+      "descriptionSeo": "Citação de embrace the present sobre temas ligados a reflexao. “Accept the past” articula reflexao, consider-the-future, accept em registro de reflexao, com r…",
+      "keywordsSeo": [
+        "frases de embrace the present",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases consider the future",
+        "consider-the-future",
+        "reflexao",
+        "esperanca"
+      ],
+      "canonicalSlug": "accept-the-past",
+      "relatedKeywords": [
+        "esperanca",
+        "reflexao",
+        "consider-the-future",
+        "embrace-the-present"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Accept the past",
+    "autor_original": "embrace the present",
+    "autor_slug": "embrace-the-present",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "consider-the-future",
+      "reflexao",
+      "esperanca"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

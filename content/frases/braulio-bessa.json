@@ -2,31 +2,131 @@
   {
     "id": "f_69a5ldayr",
     "slug": "todo-dia-eu-peco-a-deus-saude-pra-trabalhar-que-me-de-sabed",
+    "texto": "Todo dia eu peço a Deus saúde pra trabalhar, que me dê sabedoria e coragem pra lutar e que eu perceba, sim, que só vem até a mim aquilo que eu for buscar.",
+    "autor": "Bráulio Bessa",
+    "autorSlug": "braulio-bessa",
+    "explicacao": "De Bráulio Bessa, poeta e educador brasileiro, em tom de oração diária. Pede saúde para trabalhar, sabedoria para lutar e consciência de que resultados dependem também do esforço pessoal.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "coragem",
+        "fe",
+        "inspiracional",
+        "sabedoria"
+      ],
+      "contextos": [
+        "inspiracao",
+        "fe",
+        "inspiracional",
+        "motivacao",
+        "sabedoria"
+      ],
+      "emocoes": [
+        "coragem"
+      ],
+      "temas": [
+        "motivacao",
+        "coragem",
+        "fe",
+        "inspiracional",
+        "saúde",
+        "trabalhar",
+        "sabedoria",
+        "lutar"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "fe",
+        "inspiracional",
+        "motivacao",
+        "sabedoria",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "coragem",
+        "fe",
+        "inspiracional",
+        "sabedoria",
+        "inspiracao",
+        "braulio-bessa"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 45,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "coragem",
+        "fe",
+        "inspiracional",
+        "saúde",
+        "trabalhar"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Todo dia eu peço a Deus saúde pra trabalhar, que me …\" — Bráulio Bessa | Metamensagem",
+      "descriptionSeo": "De Bráulio Bessa, poeta e educador brasileiro, em tom de oração diária. Pede saúde para trabalhar, sabedoria para lutar e consciência de que resultados depend…",
+      "keywordsSeo": [
+        "frases de Bráulio Bessa",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases coragem",
+        "frases inspiracao",
+        "frases fe",
+        "coragem",
+        "fe",
+        "inspiracional",
+        "motivacao"
+      ],
+      "canonicalSlug": "todo-dia-eu-peco-a-deus-saude-pra-trabalhar-que-me-de-sabed",
+      "relatedKeywords": [
+        "coragem",
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "sabedoria",
+        "braulio-bessa"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Todo dia eu peço a Deus saúde pra trabalhar, que me dê sabedoria e coragem pra lutar e que eu perceba, sim, que só vem até a mim aquilo que eu for buscar.",
     "autor_original": "Bráulio Bessa",
-    "categoria": "coragem",
+    "autor_slug": "braulio-bessa",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "fe",
       "inspiracional",
       "motivacao",
       "sabedoria"
     ],
-    "explicacao": "De Bráulio Bessa, poeta e educador brasileiro, em tom de oração diária. Pede saúde para trabalhar, sabedoria para lutar e consciência de que resultados dependem também do esforço pessoal.",
     "palavras_chave": [
       "coragem",
       "fe",
       "inspiracional",
       "motivacao",
-      "sabedoria"
+      "sabedoria",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

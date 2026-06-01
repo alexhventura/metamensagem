@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_da8ad81450",
+    "slug": "when-a-friend-introduced-me-to-a-bach-chaconne-he-started-by-describing-it-by-s",
+    "texto": "When a friend introduced me to a Bach chaconne, he started by describing it by saying that it has 256 measures (256=2^8) divided into 4 sections of 64 measures (64=2^6), and I liked it even before I heard a single note.",
+    "autor": "James Stein",
+    "autorSlug": "james-stein",
+    "explicacao": "Citação de James Stein sobre temas ligados a amizade. “When a friend introduced me to a Bach chaconne, he started by describing it by saying that it has…” articula amizade, math, music em registro de amizade, com relevância para contextos como termino e music.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "math",
+        "music"
+      ],
+      "contextos": [
+        "termino",
+        "music"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "math",
+        "music",
+        "measures",
+        "friend",
+        "introduced",
+        "chaconne",
+        "started"
+      ],
+      "palavrasChave": [
+        "math",
+        "music",
+        "amizade",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "math",
+        "music",
+        "termino",
+        "james-stein"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 45,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "math",
+        "music",
+        "measures",
+        "friend",
+        "introduced"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"When a friend introduced me to a Bach chaconne, he s…\" — James Stein | Metamensagem",
+      "descriptionSeo": "Citação de James Stein sobre temas ligados a amizade. “When a friend introduced me to a Bach chaconne, he started by describing it by saying that it has…” art…",
+      "keywordsSeo": [
+        "frases de James Stein",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases math",
+        "frases termino",
+        "frases music",
+        "math",
+        "music",
+        "amizade",
+        "termino"
+      ],
+      "canonicalSlug": "when-a-friend-introduced-me-to-a-bach-chaconne-he-started-by-describing-it-by-s",
+      "relatedKeywords": [
+        "amizade",
+        "math",
+        "music",
+        "james-stein"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "When a friend introduced me to a Bach chaconne, he started by describing it by saying that it has 256 measures (256=2^8) divided into 4 sections of 64 measures (64=2^6), and I liked it even before I heard a single note.",
+    "autor_original": "James Stein",
+    "autor_slug": "james-stein",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "music"
+    ],
+    "palavras_chave": [
+      "math",
+      "music",
+      "amizade",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

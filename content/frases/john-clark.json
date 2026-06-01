@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_45c49e7903",
+    "slug": "that-suit-is-best-that-best-suits-me",
+    "texto": "That suit is best that best suits me.",
+    "autor": "John Clark",
+    "autorSlug": "john-clark",
+    "explicacao": "Citação de John Clark sobre temas ligados a reflexao. “That suit is best that best suits me.” articula reflexao, right, suits em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "right"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "right",
+        "suits"
+      ],
+      "palavrasChave": [
+        "right",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "right",
+        "john-clark"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "right",
+        "suits",
+        "reflexao",
+        "right"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"That suit is best that best suits me.\" — John Clark | Metamensagem",
+      "descriptionSeo": "Citação de John Clark sobre temas ligados a reflexao. “That suit is best that best suits me.” articula reflexao, right, suits em registro de reflexao, com rel…",
+      "keywordsSeo": [
+        "frases de John Clark",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases right",
+        "right",
+        "reflexao"
+      ],
+      "canonicalSlug": "that-suit-is-best-that-best-suits-me",
+      "relatedKeywords": [
+        "reflexao",
+        "right",
+        "john-clark"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "That suit is best that best suits me.",
+    "autor_original": "John Clark",
+    "autor_slug": "john-clark",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "right",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

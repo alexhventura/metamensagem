@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { absoluteUrl } from '@/lib/seo/url';
 import {
   getContextoMeta,
   getContextos,
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Frases sobre ${meta.nome}`,
     description: meta.descricao,
     alternates: {
-      canonical: `https://metamensagem.com/contextos/${meta.slug}`,
+      canonical: absoluteUrl(`/contextos/${meta.slug}`),
     },
   };
 }

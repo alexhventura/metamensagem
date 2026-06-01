@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_c98dd5a7ce",
+    "slug": "play-with-words",
+    "texto": "Play With WORDS",
+    "autor": "P.M.Ashraf",
+    "autorSlug": "p-m-ashraf",
+    "explicacao": "Citação de P.M.Ashraf sobre temas ligados a reflexao. “Play With WORDS” articula reflexao, literature, words em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "literature"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "literature",
+        "words"
+      ],
+      "palavrasChave": [
+        "literature",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "literature",
+        "p-m-ashraf"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "literature",
+        "words",
+        "reflexao",
+        "literature"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Play With WORDS\" — P.M.Ashraf | Metamensagem",
+      "descriptionSeo": "Citação de P.M.Ashraf sobre temas ligados a reflexao. “Play With WORDS” articula reflexao, literature, words em registro de reflexao, com relevância para cont…",
+      "keywordsSeo": [
+        "frases de P.M.Ashraf",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases literature",
+        "literature",
+        "reflexao"
+      ],
+      "canonicalSlug": "play-with-words",
+      "relatedKeywords": [
+        "reflexao",
+        "literature",
+        "p-m-ashraf"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Play With WORDS",
+    "autor_original": "P.M.Ashraf",
+    "autor_slug": "p-m-ashraf",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "literature",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

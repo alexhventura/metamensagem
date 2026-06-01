@@ -1,8 +1,14 @@
-/** Tipos e helpers de frases (espelho do CMS /content). */
+/** Tipos e helpers de frases (CMS + fase 2 semântica). */
+
+import type { FraseSeoPack, FraseSemantica } from '../../lib/enrichment/types';
+import { shardForSlug } from '../../lib/enrichment/enrichFrase';
+import { loadFrasesCmsFallback } from './homeData';
 
 export interface FraseInformacoes {
   ultima_atualizacao: string | null;
   confiabilidade: string | null;
+  enriquecimento_fase2?: boolean;
+  curadoria_ia?: boolean;
 }
 
 export interface FraseCms {
@@ -22,19 +28,92 @@ export interface FraseCms {
   nacionalidade: string | null;
   nascimento_falecimento: string | null;
   informacoes?: FraseInformacoes;
+  semantica?: FraseSemantica;
+  seo?: FraseSeoPack;
 }
 
 let cache: FraseCms[] | null = null;
 let bySlug: Map<string, FraseCms> | null = null;
+const shardCache = new Map<string, FraseCms[]>();
+
+export async function loadFraseDetailBySlug(slug: string): Promise<FraseCms | null> {
+  const key = slug.toLowerCase();
+  const cached = bySlug?.get(key);
+  if (cached?.semantica) return cached;
+
+  const shard = shardForSlug(key);
+  if (!shardCache.has(shard)) {
+    try {
+      const res = await fetch(`/frases-v2/detail/shard-${shard}.json`);
+      if (res.ok) {
+        const data = (await res.json()) as FraseCms[];
+        shardCache.set(shard, data);
+        for (const f of data) {
+          if (!bySlug) bySlug = new Map();
+          bySlug.set(f.slug.toLowerCase(), f);
+        }
+      }
+    } catch {
+      return null;
+    }
+  }
+
+  return shardCache.get(shard)?.find((f) => f.slug.toLowerCase() === key) ?? null;
+}
 
 export async function loadFrasesCms(): Promise<FraseCms[]> {
   if (cache) return cache;
-  const res = await fetch('/frases-cms.json');
-  if (!res.ok) return [];
-  const data = (await res.json()) as FraseCms[];
-  cache = data;
-  bySlug = new Map(data.map((f) => [f.slug, f]));
-  return data;
+
+  try {
+    const manifestRes = await fetch('/frases-v2/manifest.json');
+    if (manifestRes.ok) {
+      const feedRes = await fetch('/frases-v2/feed-sample.json');
+      if (feedRes.ok) {
+        const feed = (await feedRes.json()) as { slug: string; texto: string; autor: string; tags: string[]; id: string }[];
+        cache = feed.map((f) => ({
+          id: f.id,
+          slug: f.slug,
+          frase_original: f.texto,
+          autor_original: f.autor,
+          categoria: f.tags[0] || 'reflexao',
+          contextos: f.tags.slice(1),
+          explicacao: '',
+          palavras_chave: f.tags,
+          ano_ou_data: null,
+          fontes: null,
+          observacao: null,
+          autor_tipo: null,
+          nacionalidade: null,
+          nascimento_falecimento: null,
+        }));
+        bySlug = new Map(cache.map((f) => [f.slug, f]));
+        return cache;
+      }
+    }
+  } catch {
+    /* fallback */
+  }
+
+  const items = await loadFrasesCmsFallback();
+  if (!items.length) return [];
+  cache = items.map((f) => ({
+    id: f.id,
+    slug: f.slug || f.id,
+    frase_original: f.texto,
+    autor_original: f.autor,
+    categoria: f.tags?.[0] || 'reflexao',
+    contextos: f.tags?.slice(1) || [],
+    explicacao: '',
+    palavras_chave: f.tags || [],
+    ano_ou_data: null,
+    fontes: null,
+    observacao: null,
+    autor_tipo: null,
+    nacionalidade: null,
+    nascimento_falecimento: null,
+  }));
+  bySlug = new Map(cache.map((f) => [f.slug, f]));
+  return cache;
 }
 
 export function getFraseCmsBySlugSync(slug: string): FraseCms | undefined {

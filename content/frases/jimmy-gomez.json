@@ -1,0 +1,118 @@
+[
+  {
+    "id": "f_csv_76215c6e3d",
+    "slug": "i-want-to-work-on-environmental-issues",
+    "texto": "I want to work on environmental issues.",
+    "autor": "Jimmy Gomez",
+    "autorSlug": "jimmy-gomez",
+    "explicacao": "Citação de Jimmy Gomez sobre temas ligados a saude mental. “I want to work on environmental issues.” articula saude-mental, work, want em registro de saude mental, com relevância para contextos como trabalho e want.",
+    "semantica": {
+      "categoriaPrincipal": "saude-mental",
+      "categorias": [
+        "saude-mental",
+        "work",
+        "want",
+        "issues"
+      ],
+      "contextos": [
+        "trabalho",
+        "want",
+        "issues"
+      ],
+      "emocoes": [],
+      "temas": [
+        "saude-mental",
+        "work",
+        "want",
+        "issues",
+        "environmental"
+      ],
+      "palavrasChave": [
+        "work",
+        "want",
+        "issues",
+        "saude-mental",
+        "trabalho"
+      ],
+      "tagsSeo": [
+        "saude-mental",
+        "work",
+        "want",
+        "issues",
+        "trabalho",
+        "jimmy-gomez"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "saude-mental",
+        "work",
+        "want",
+        "issues",
+        "environmental",
+        "saude-mental"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I want to work on environmental issues.\" — Jimmy Gomez | Metamensagem",
+      "descriptionSeo": "Citação de Jimmy Gomez sobre temas ligados a saude mental. “I want to work on environmental issues.” articula saude-mental, work, want em registro de saude me…",
+      "keywordsSeo": [
+        "frases de Jimmy Gomez",
+        "frases sobre saude mental",
+        "frases saude mental",
+        "frases work",
+        "frases trabalho",
+        "frases want",
+        "work",
+        "want",
+        "issues",
+        "saude-mental"
+      ],
+      "canonicalSlug": "i-want-to-work-on-environmental-issues",
+      "relatedKeywords": [
+        "saude-mental",
+        "work",
+        "want",
+        "issues",
+        "jimmy-gomez"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I want to work on environmental issues.",
+    "autor_original": "Jimmy Gomez",
+    "autor_slug": "jimmy-gomez",
+    "categoria": "saude-mental",
+    "contextos": [
+      "trabalho",
+      "want",
+      "issues"
+    ],
+    "palavras_chave": [
+      "work",
+      "want",
+      "issues",
+      "saude-mental",
+      "trabalho"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

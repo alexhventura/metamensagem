@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_06f5698daa",
+    "slug": "today-i-found-an-old-friend",
+    "texto": "Today I found an old friend.",
+    "autor": "Ed Burns",
+    "autorSlug": "ed-burns",
+    "explicacao": "Citação de Ed Burns sobre temas ligados a reflexao. “Today I found an old friend.” articula reflexao, movies, today em registro de reflexao, com relevância para contextos como termino e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "movies"
+      ],
+      "contextos": [
+        "termino",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "movies",
+        "today",
+        "found",
+        "friend"
+      ],
+      "palavrasChave": [
+        "movies",
+        "reflexao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "movies",
+        "termino",
+        "ed-burns"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "movies",
+        "today",
+        "found",
+        "friend",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Today I found an old friend.\" — Ed Burns | Metamensagem",
+      "descriptionSeo": "Citação de Ed Burns sobre temas ligados a reflexao. “Today I found an old friend.” articula reflexao, movies, today em registro de reflexao, com relevância pa…",
+      "keywordsSeo": [
+        "frases de Ed Burns",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases movies",
+        "frases termino",
+        "movies",
+        "reflexao",
+        "termino"
+      ],
+      "canonicalSlug": "today-i-found-an-old-friend",
+      "relatedKeywords": [
+        "reflexao",
+        "movies",
+        "ed-burns"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Today I found an old friend.",
+    "autor_original": "Ed Burns",
+    "autor_slug": "ed-burns",
+    "categoria": "reflexao",
+    "contextos": [
+      "termino",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "movies",
+      "reflexao",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

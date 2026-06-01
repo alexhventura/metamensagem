@@ -1,0 +1,112 @@
+[
+  {
+    "id": "f_csv_196a27de80",
+    "slug": "i-am-going-to-seek-a-great-perhaps",
+    "texto": "I am going to seek a great Perhaps.",
+    "autor": "Frangois Rabelais",
+    "autorSlug": "frangois-rabelais",
+    "explicacao": "Citação de Frangois Rabelais sobre temas ligados a reflexao. “I am going to seek a great Perhaps.” articula reflexao, death, dying em registro de reflexao, com relevância para contextos como luto e dying.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "death",
+        "dying"
+      ],
+      "contextos": [
+        "luto",
+        "dying"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "death",
+        "dying",
+        "going",
+        "great",
+        "perhaps"
+      ],
+      "palavrasChave": [
+        "death",
+        "dying",
+        "reflexao",
+        "luto"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "death",
+        "dying",
+        "luto",
+        "frangois-rabelais"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "death",
+        "dying",
+        "going",
+        "great",
+        "perhaps"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I am going to seek a great Perhaps.\" — Frangois Rabelais | Metamensagem",
+      "descriptionSeo": "Citação de Frangois Rabelais sobre temas ligados a reflexao. “I am going to seek a great Perhaps.” articula reflexao, death, dying em registro de reflexao, co…",
+      "keywordsSeo": [
+        "frases de Frangois Rabelais",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases death",
+        "frases luto",
+        "frases dying",
+        "death",
+        "dying",
+        "reflexao",
+        "luto"
+      ],
+      "canonicalSlug": "i-am-going-to-seek-a-great-perhaps",
+      "relatedKeywords": [
+        "reflexao",
+        "death",
+        "dying",
+        "frangois-rabelais"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I am going to seek a great Perhaps.",
+    "autor_original": "Frangois Rabelais",
+    "autor_slug": "frangois-rabelais",
+    "categoria": "reflexao",
+    "contextos": [
+      "luto",
+      "dying"
+    ],
+    "palavras_chave": [
+      "death",
+      "dying",
+      "reflexao",
+      "luto"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "f_csv_9dbbdc417a",
+    "slug": "i-am-walking-in-the-rain-because-no-body-can-see-my-tear",
+    "texto": "i am walking in the rain because no body can see my tear.",
+    "autor": "Abbas",
+    "autorSlug": "abbas",
+    "explicacao": "Citação de Abbas sobre temas ligados a reflexao. “i am walking in the rain because no body can see my tear.” articula reflexao, rain, walking em registro de reflexao, com relevância para contextos como dia-chuvoso e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "rain"
+      ],
+      "contextos": [
+        "dia-chuvoso",
+        "reflexao"
+      ],
+      "emocoes": [
+        "tristeza"
+      ],
+      "temas": [
+        "reflexao",
+        "rain",
+        "walking",
+        "because"
+      ],
+      "palavrasChave": [
+        "rain",
+        "reflexao",
+        "dia-chuvoso",
+        "tristeza"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "rain",
+        "dia-chuvoso",
+        "tristeza",
+        "abbas"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "rain",
+        "walking",
+        "because",
+        "reflexao",
+        "rain"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"i am walking in the rain because no body can see my …\" — Abbas | Metamensagem",
+      "descriptionSeo": "Citação de Abbas sobre temas ligados a reflexao. “i am walking in the rain because no body can see my tear.” articula reflexao, rain, walking em registro de r…",
+      "keywordsSeo": [
+        "frases de Abbas",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases rain",
+        "frases dia chuvoso",
+        "rain",
+        "reflexao",
+        "dia-chuvoso",
+        "tristeza"
+      ],
+      "canonicalSlug": "i-am-walking-in-the-rain-because-no-body-can-see-my-tear",
+      "relatedKeywords": [
+        "tristeza",
+        "reflexao",
+        "rain",
+        "abbas"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "i am walking in the rain because no body can see my tear.",
+    "autor_original": "Abbas",
+    "autor_slug": "abbas",
+    "categoria": "reflexao",
+    "contextos": [
+      "dia-chuvoso",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "rain",
+      "reflexao",
+      "dia-chuvoso",
+      "tristeza"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

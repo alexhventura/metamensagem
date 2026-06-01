@@ -1,0 +1,131 @@
+[
+  {
+    "id": "f_csv_a74dbb02d1",
+    "slug": "a-little-crazy-is-good",
+    "texto": "A little crazy is good",
+    "autor": "Chris Hilton",
+    "autorSlug": "chris-hilton",
+    "explicacao": "Citação de Chris Hilton sobre temas ligados a amor. “A little crazy is good” articula amor, crazy, cuba em registro de amor, com relevância para contextos como viagem e cuba.",
+    "semantica": {
+      "categoriaPrincipal": "amor",
+      "categorias": [
+        "amor",
+        "crazy",
+        "cuba",
+        "little",
+        "love"
+      ],
+      "contextos": [
+        "viagem",
+        "cuba",
+        "little",
+        "love",
+        "travel"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "amor",
+        "crazy",
+        "cuba",
+        "little"
+      ],
+      "palavrasChave": [
+        "crazy",
+        "cuba",
+        "little",
+        "love",
+        "travel",
+        "amor",
+        "viagem"
+      ],
+      "tagsSeo": [
+        "amor",
+        "crazy",
+        "cuba",
+        "little",
+        "love",
+        "viagem",
+        "travel",
+        "chris-hilton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amor",
+        "crazy",
+        "cuba",
+        "little",
+        "amor",
+        "crazy"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A little crazy is good\" — Chris Hilton | Metamensagem",
+      "descriptionSeo": "Citação de Chris Hilton sobre temas ligados a amor. “A little crazy is good” articula amor, crazy, cuba em registro de amor, com relevância para contextos com…",
+      "keywordsSeo": [
+        "frases de Chris Hilton",
+        "frases sobre amor",
+        "frases amor",
+        "frases crazy",
+        "frases viagem",
+        "frases cuba",
+        "crazy",
+        "cuba",
+        "little",
+        "love"
+      ],
+      "canonicalSlug": "a-little-crazy-is-good",
+      "relatedKeywords": [
+        "amor",
+        "crazy",
+        "cuba",
+        "little",
+        "love",
+        "chris-hilton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A little crazy is good",
+    "autor_original": "Chris Hilton",
+    "autor_slug": "chris-hilton",
+    "categoria": "amor",
+    "contextos": [
+      "viagem",
+      "cuba",
+      "little",
+      "love",
+      "travel"
+    ],
+    "palavras_chave": [
+      "crazy",
+      "cuba",
+      "little",
+      "love",
+      "travel",
+      "amor",
+      "viagem"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

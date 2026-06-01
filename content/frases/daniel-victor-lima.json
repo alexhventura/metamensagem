@@ -2,29 +2,127 @@
   {
     "id": "f_qra100sj1",
     "slug": "mesmo-que-sua-fe-enfraqueca-faca-com-que-sua-persistencia-pr",
+    "texto": "Mesmo que sua fé enfraqueça faça com que sua persistência prevaleça.",
+    "autor": "Daniel Victor Lima",
+    "autorSlug": "daniel-victor-lima",
+    "explicacao": "De Daniel Victor Lima, unindo fé e persistência. Sugere que, mesmo quando a confiança espiritual vacila, continuar firme no esforço pode sustentar o percurso.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "persistencia"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao",
+        "persistencia"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "mesmo",
+        "enfraqueça",
+        "persistência",
+        "prevaleça"
+      ],
+      "palavrasChave": [
+        "fe",
+        "inspiracional",
+        "motivacao",
+        "persistencia",
+        "inspiracao",
+        "determinacao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "persistencia",
+        "inspiracao",
+        "determinacao",
+        "daniel-victor-lima"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "mesmo",
+        "enfraqueça",
+        "persistência"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Mesmo que sua fé enfraqueça faça com que sua persist…\" — Daniel Victor Lima | Metamensagem",
+      "descriptionSeo": "De Daniel Victor Lima, unindo fé e persistência. Sugere que, mesmo quando a confiança espiritual vacila, continuar firme no esforço pode sustentar o percurso.…",
+      "keywordsSeo": [
+        "frases de Daniel Victor Lima",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases fe",
+        "frases inspiracao",
+        "frases inspiracional",
+        "fe",
+        "inspiracional",
+        "motivacao",
+        "persistencia"
+      ],
+      "canonicalSlug": "mesmo-que-sua-fe-enfraqueca-faca-com-que-sua-persistencia-pr",
+      "relatedKeywords": [
+        "determinacao",
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "persistencia",
+        "daniel-victor-lima"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Mesmo que sua fé enfraqueça faça com que sua persistência prevaleça.",
     "autor_original": "Daniel Victor Lima",
-    "categoria": "fe",
+    "autor_slug": "daniel-victor-lima",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao",
       "persistencia"
     ],
-    "explicacao": "De Daniel Victor Lima, unindo fé e persistência. Sugere que, mesmo quando a confiança espiritual vacila, continuar firme no esforço pode sustentar o percurso.",
     "palavras_chave": [
       "fe",
       "inspiracional",
       "motivacao",
-      "persistencia"
+      "persistencia",
+      "inspiracao",
+      "determinacao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

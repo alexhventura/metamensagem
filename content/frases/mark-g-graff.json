@@ -1,0 +1,128 @@
+[
+  {
+    "id": "f_csv_2fdbbdf3d0",
+    "slug": "we-didn-t-install-the-code-red-patch-on-those-dmz-systems-because-they-were-on",
+    "texto": "We didn't install the [Code Red] patch on those DMZ systems because they were only used for development and testing. — Anonymous client, shortly after spending 48 continuous hours removing 2001's Code Red worm from internal corporate servers",
+    "autor": "Mark G. Graff",
+    "autorSlug": "mark-g-graff",
+    "explicacao": "Orientação direta de Mark G. Graff sobre temas ligados a reflexao. A afirmação “We didn't install the [Code Red] patch on those DMZ systems because they were only used for devel…” funciona como lembrete prático ligado a reflexao, cyber-security, cybersecurity, útil em momentos de termino e cybersecurity.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "cyber-security",
+        "cybersecurity",
+        "dmz",
+        "technology"
+      ],
+      "contextos": [
+        "termino",
+        "cybersecurity",
+        "dmz",
+        "technology"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "cyber-security",
+        "cybersecurity",
+        "dmz",
+        "install",
+        "patch",
+        "those",
+        "systems"
+      ],
+      "palavrasChave": [
+        "cyber-security",
+        "cybersecurity",
+        "dmz",
+        "technology",
+        "reflexao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "cyber-security",
+        "cybersecurity",
+        "dmz",
+        "technology",
+        "termino",
+        "mark-g-graff"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 52,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "cyber-security",
+        "cybersecurity",
+        "dmz",
+        "install",
+        "patch"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"We didn't install the [Code Red] patch on those DMZ …\" — Mark G. Graff | Metamensagem",
+      "descriptionSeo": "Orientação direta de Mark G. Graff sobre temas ligados a reflexao. A afirmação “We didn't install the [Code Red] patch on those DMZ systems because they were…",
+      "keywordsSeo": [
+        "frases de Mark G. Graff",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases cyber security",
+        "frases termino",
+        "frases cybersecurity",
+        "cyber-security",
+        "cybersecurity",
+        "dmz",
+        "technology"
+      ],
+      "canonicalSlug": "we-didn-t-install-the-code-red-patch-on-those-dmz-systems-because-they-were-on",
+      "relatedKeywords": [
+        "reflexao",
+        "cyber-security",
+        "cybersecurity",
+        "dmz",
+        "technology",
+        "mark-g-graff"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "We didn't install the [Code Red] patch on those DMZ systems because they were only used for development and testing. — Anonymous client, shortly after spending 48 continuous hours removing 2001's Code Red worm from internal corporate servers",
+    "autor_original": "Mark G. Graff",
+    "autor_slug": "mark-g-graff",
+    "categoria": "reflexao",
+    "contextos": [
+      "termino",
+      "cybersecurity",
+      "dmz",
+      "technology"
+    ],
+    "palavras_chave": [
+      "cyber-security",
+      "cybersecurity",
+      "dmz",
+      "technology",
+      "reflexao",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

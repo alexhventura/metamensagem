@@ -1,12 +1,16 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState, lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { BookOpen, Copy, Image as ImageIcon, Share2 } from 'lucide-react';
-import { CardTranslateMenu } from './CardTranslateMenu';
+import { BookOpen, Copy, Share2, Sparkles } from 'lucide-react';
+const CardTranslateMenu = lazy(() =>
+  import('./CardTranslateMenu').then((m) => ({ default: m.CardTranslateMenu }))
+);
 import CardTooltip from './CardTooltip';
 import { type CardContentDisplay } from '../lib/translation';
 import { pathFromTag } from '../lib/tagsSeo';
+import { frasePath, seoLocaleFromLanguageOriginal } from '../lib/i18nRoutes';
+import { detectLanguageOriginal } from '../../lib/i18n/detectLanguage';
 import { normalizarParaSlug } from '../lib/slug';
 import {
   CARD_ACTION_BTN,
@@ -20,16 +24,18 @@ import {
   cardTitleLinkClass,
 } from '../lib/cardTheme';
 import type { ItemConteudo } from '../types/content';
+import { quoteFromItem } from './image-generator/utils/quoteFromItem';
+import type { ImageGeneratorQuote } from './image-generator/types';
 
 export default function ContentCard({
   item,
   tema,
-  onEditImage,
+  onGenerateImage,
   toast,
 }: {
   item: ItemConteudo;
   tema: string;
-  onEditImage?: (item: ItemConteudo) => void;
+  onGenerateImage?: (quote: ImageGeneratorQuote) => void;
   toast: (msg: string) => void;
 }) {
   const { t } = useTranslation();
@@ -59,7 +65,11 @@ export default function ContentCard({
   );
 
   const detailPath = isFrase
-    ? `/frases/${item.slug || normalizarParaSlug(item.texto)}`
+    ? (() => {
+        const slug = item.slug || normalizarParaSlug(item.texto);
+        const def = seoLocaleFromLanguageOriginal(detectLanguageOriginal(item.texto));
+        return frasePath(slug, def, def);
+      })()
     : `/metafora/${item.id}/${normalizarParaSlug(item.titulo || '')}`;
 
   const buttonLabel = isFrase ? t('common.learn_more') : t('common.read_metaphor');
@@ -229,6 +239,7 @@ export default function ContentCard({
           </CardTooltip>
 
           <CardTooltip text={t('common.translate')} tema={tema}>
+            <Suspense fallback={<span className="inline-block min-h-[36px] min-w-[36px]" aria-hidden />}>
             <CardTranslateMenu
               tema={tema}
               accent={accent}
@@ -238,16 +249,25 @@ export default function ContentCard({
               onLoadingChange={setTranslating}
               tooltipLabel={t('common.translate')}
             />
+            </Suspense>
           </CardTooltip>
 
-          {isFrase && onEditImage && (
-            <CardTooltip text={t('common.edit_image')} tema={tema}>
+          {isFrase && onGenerateImage && (
+            <CardTooltip text={t('common.generate_image', 'Gerar Imagem')} tema={tema}>
               <button
                 type="button"
-                onClick={() => onEditImage(item)}
+                onClick={() =>
+                  onGenerateImage(
+                    quoteFromItem(item, {
+                      texto: display.texto,
+                      autor: display.autor ?? item.autor,
+                    })
+                  )
+                }
+                aria-label={t('common.generate_image', 'Gerar Imagem')}
                 className={cardImageBtnClass(accent)}
               >
-                <ImageIcon size={18} />
+                <Sparkles size={18} />
               </button>
             </CardTooltip>
           )}

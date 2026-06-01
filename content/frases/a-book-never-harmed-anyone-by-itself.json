@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_f047c12618",
+    "slug": "words-are-just-words",
+    "texto": "Words are just words",
+    "autor": "a book never harmed anyone by itself.",
+    "autorSlug": "a-book-never-harmed-anyone-by-itself",
+    "explicacao": "Citação de a book never harmed anyone by itself. sobre temas ligados a reflexao. “Words are just words” articula reflexao, rob-may, dragon-killer em registro de reflexao, com relevância para contextos como dragon-killer.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "rob-may",
+        "dragon-killer"
+      ],
+      "contextos": [
+        "dragon-killer"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "rob-may",
+        "dragon-killer",
+        "words"
+      ],
+      "palavrasChave": [
+        "rob-may",
+        "dragon-killer",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "rob-may",
+        "dragon-killer",
+        "a-book-never-harmed-anyone-by-itself"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "rob-may",
+        "dragon-killer",
+        "words",
+        "reflexao",
+        "rob-may"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Words are just words\" — a book never harmed anyone by itself. | Metamensagem",
+      "descriptionSeo": "Citação de a book never harmed anyone by itself. sobre temas ligados a reflexao. “Words are just words” articula reflexao, rob-may, dragon-killer em registro…",
+      "keywordsSeo": [
+        "frases de a book never harmed anyone by itself.",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases rob may",
+        "frases dragon killer",
+        "rob-may",
+        "dragon-killer",
+        "reflexao"
+      ],
+      "canonicalSlug": "words-are-just-words",
+      "relatedKeywords": [
+        "reflexao",
+        "rob-may",
+        "dragon-killer",
+        "a-book-never-harmed-anyone-by-itself"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Words are just words",
+    "autor_original": "a book never harmed anyone by itself.",
+    "autor_slug": "a-book-never-harmed-anyone-by-itself",
+    "categoria": "reflexao",
+    "contextos": [
+      "dragon-killer"
+    ],
+    "palavras_chave": [
+      "rob-may",
+      "dragon-killer",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

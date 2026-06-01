@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_81c93a71ad",
+    "slug": "i-live-to-leave",
+    "texto": "I live to leave.",
+    "autor": "Judith Fein",
+    "autorSlug": "judith-fein",
+    "explicacao": "Citação de Judith Fein sobre sentido da existência e experiência vivida. “I live to leave.” articula reflexao, travel, leave em registro de reflexao, com relevância para contextos como viagem e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "travel"
+      ],
+      "contextos": [
+        "viagem",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "travel",
+        "leave"
+      ],
+      "palavrasChave": [
+        "travel",
+        "reflexao",
+        "viagem"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "travel",
+        "viagem",
+        "judith-fein"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "travel",
+        "leave",
+        "reflexao",
+        "travel"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I live to leave.\" — Judith Fein | Metamensagem",
+      "descriptionSeo": "Citação de Judith Fein sobre sentido da existência e experiência vivida. “I live to leave.” articula reflexao, travel, leave em registro de reflexao, com rele…",
+      "keywordsSeo": [
+        "frases de Judith Fein",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases travel",
+        "frases viagem",
+        "travel",
+        "reflexao",
+        "viagem"
+      ],
+      "canonicalSlug": "i-live-to-leave",
+      "relatedKeywords": [
+        "reflexao",
+        "travel",
+        "judith-fein"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I live to leave.",
+    "autor_original": "Judith Fein",
+    "autor_slug": "judith-fein",
+    "categoria": "reflexao",
+    "contextos": [
+      "viagem",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "travel",
+      "reflexao",
+      "viagem"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

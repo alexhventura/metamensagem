@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_896d465fbf",
+    "slug": "hi-my-name-is-luke-it-rhymes-with-puke",
+    "texto": "hi my name is luke, it rhymes with puke!",
+    "autor": "Mary Amato",
+    "autorSlug": "mary-amato",
+    "explicacao": "Citação de Mary Amato sobre temas ligados a reflexao. “hi my name is luke, it rhymes with puke!” articula reflexao, comedy, rhymes em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "comedy"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "comedy",
+        "rhymes"
+      ],
+      "palavrasChave": [
+        "comedy",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "comedy",
+        "mary-amato"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "comedy",
+        "rhymes",
+        "reflexao",
+        "comedy"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"hi my name is luke, it rhymes with puke!\" — Mary Amato | Metamensagem",
+      "descriptionSeo": "Citação de Mary Amato sobre temas ligados a reflexao. “hi my name is luke, it rhymes with puke!” articula reflexao, comedy, rhymes em registro de reflexao, co…",
+      "keywordsSeo": [
+        "frases de Mary Amato",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases comedy",
+        "comedy",
+        "reflexao"
+      ],
+      "canonicalSlug": "hi-my-name-is-luke-it-rhymes-with-puke",
+      "relatedKeywords": [
+        "reflexao",
+        "comedy",
+        "mary-amato"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "hi my name is luke, it rhymes with puke!",
+    "autor_original": "Mary Amato",
+    "autor_slug": "mary-amato",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "comedy",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

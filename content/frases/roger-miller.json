@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_464e25c57b",
+    "slug": "some-people-walk-in-the-rain-others-just-get-wet",
+    "texto": "Some people walk in the rain, others just get wet.",
+    "autor": "Roger Miller",
+    "autorSlug": "roger-miller",
+    "explicacao": "Citação de Roger Miller sobre temas ligados a reflexao. “Some people walk in the rain, others just get wet.” articula reflexao, rain, people em registro de reflexao, com relevância para contextos como dia-chuvoso e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "rain"
+      ],
+      "contextos": [
+        "dia-chuvoso",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "rain",
+        "people",
+        "others"
+      ],
+      "palavrasChave": [
+        "rain",
+        "reflexao",
+        "dia-chuvoso"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "rain",
+        "dia-chuvoso",
+        "roger-miller"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "rain",
+        "people",
+        "others",
+        "reflexao",
+        "rain"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Some people walk in the rain, others just get wet.\" — Roger Miller | Metamensagem",
+      "descriptionSeo": "Citação de Roger Miller sobre temas ligados a reflexao. “Some people walk in the rain, others just get wet.” articula reflexao, rain, people em registro de re…",
+      "keywordsSeo": [
+        "frases de Roger Miller",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases rain",
+        "frases dia chuvoso",
+        "rain",
+        "reflexao",
+        "dia-chuvoso"
+      ],
+      "canonicalSlug": "some-people-walk-in-the-rain-others-just-get-wet",
+      "relatedKeywords": [
+        "reflexao",
+        "rain",
+        "roger-miller"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Some people walk in the rain, others just get wet.",
+    "autor_original": "Roger Miller",
+    "autor_slug": "roger-miller",
+    "categoria": "reflexao",
+    "contextos": [
+      "dia-chuvoso",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "rain",
+      "reflexao",
+      "dia-chuvoso"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

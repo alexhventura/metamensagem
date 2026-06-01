@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_8685f18908",
+    "slug": "dreaming-is-free",
+    "texto": "Dreaming is free.",
+    "autor": "Jason Harvey",
+    "autorSlug": "jason-harvey",
+    "explicacao": "Citação de Jason Harvey sobre temas ligados a motivacao. “Dreaming is free.” articula motivacao, dreaming, reflexao em registro de motivacao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "dreaming",
+        "reflexao"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "dreaming",
+        "reflexao"
+      ],
+      "palavrasChave": [
+        "dreaming",
+        "reflexao",
+        "motivacao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "dreaming",
+        "reflexao",
+        "jason-harvey"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "dreaming",
+        "reflexao",
+        "motivacao",
+        "dreaming"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Dreaming is free.\" — Jason Harvey | Metamensagem",
+      "descriptionSeo": "Citação de Jason Harvey sobre temas ligados a motivacao. “Dreaming is free.” articula motivacao, dreaming, reflexao em registro de motivacao, com relevância p…",
+      "keywordsSeo": [
+        "frases de Jason Harvey",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases dreaming",
+        "frases reflexao",
+        "dreaming",
+        "reflexao",
+        "motivacao"
+      ],
+      "canonicalSlug": "dreaming-is-free",
+      "relatedKeywords": [
+        "motivacao",
+        "dreaming",
+        "reflexao",
+        "jason-harvey"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Dreaming is free.",
+    "autor_original": "Jason Harvey",
+    "autor_slug": "jason-harvey",
+    "categoria": "motivacao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "dreaming",
+      "reflexao",
+      "motivacao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

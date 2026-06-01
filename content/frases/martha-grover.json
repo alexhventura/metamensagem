@@ -1,0 +1,116 @@
+[
+  {
+    "id": "f_csv_7374d8785f",
+    "slug": "i-ask-my-father-to-read-an-article-about-male-entitlement-and-emotional-labor-c",
+    "texto": "I ask my father to read an article about male entitlement and emotional labor.\"Can you just tell me what it says?\" he says.",
+    "autor": "Martha Grover",
+    "autorSlug": "martha-grover",
+    "explicacao": "Pergunta retórica de Martha Grover que provoca temas ligados a familia. Ao questionar “I ask my father to read an article about male entitlement and emotional labor.\"Can you just tell …”, o texto convida o leitor a revisar crenças sobre familia, emotional-labor, entitlement, com foco em entitlement e feminism.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "emotional-labor",
+        "entitlement",
+        "feminism"
+      ],
+      "contextos": [
+        "entitlement",
+        "feminism"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "emotional-labor",
+        "entitlement",
+        "feminism",
+        "father",
+        "article",
+        "about",
+        "emotional"
+      ],
+      "palavrasChave": [
+        "emotional-labor",
+        "entitlement",
+        "feminism",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "emotional-labor",
+        "entitlement",
+        "feminism",
+        "martha-grover"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 38,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "emotional-labor",
+        "entitlement",
+        "feminism",
+        "father",
+        "article"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I ask my father to read an article about male entitl…\" — Martha Grover | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Martha Grover que provoca temas ligados a familia. Ao questionar “I ask my father to read an article about male entitlement and emotional…",
+      "keywordsSeo": [
+        "frases de Martha Grover",
+        "frases sobre familia",
+        "frases familia",
+        "frases emotional labor",
+        "frases entitlement",
+        "frases feminism",
+        "emotional-labor",
+        "entitlement",
+        "feminism",
+        "familia"
+      ],
+      "canonicalSlug": "i-ask-my-father-to-read-an-article-about-male-entitlement-and-emotional-labor-c",
+      "relatedKeywords": [
+        "familia",
+        "emotional-labor",
+        "entitlement",
+        "feminism",
+        "martha-grover"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I ask my father to read an article about male entitlement and emotional labor.\"Can you just tell me what it says?\" he says.",
+    "autor_original": "Martha Grover",
+    "autor_slug": "martha-grover",
+    "categoria": "familia",
+    "contextos": [
+      "entitlement",
+      "feminism"
+    ],
+    "palavras_chave": [
+      "emotional-labor",
+      "entitlement",
+      "feminism",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

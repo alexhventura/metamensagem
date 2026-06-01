@@ -1,0 +1,111 @@
+[
+  {
+    "id": "f_csv_d212ffd744",
+    "slug": "you-can-never-have-too-many-books-or-too-many-hugs",
+    "texto": "You can never have too many books or too many hugs.",
+    "autor": "Gina House",
+    "autorSlug": "gina-house",
+    "explicacao": "Orientação direta de Gina House sobre limites e escolhas conscientes. A afirmação “You can never have too many books or too many hugs.” funciona como lembrete prático ligado a reflexao, hugs, reading, útil em momentos de reading.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "hugs",
+        "reading"
+      ],
+      "contextos": [
+        "reading"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "reflexao",
+        "hugs",
+        "reading",
+        "never",
+        "books"
+      ],
+      "palavrasChave": [
+        "hugs",
+        "reading",
+        "reflexao",
+        "determinacao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "hugs",
+        "reading",
+        "determinacao",
+        "gina-house"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "hugs",
+        "reading",
+        "never",
+        "books",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"You can never have too many books or too many hugs.\" — Gina House | Metamensagem",
+      "descriptionSeo": "Orientação direta de Gina House sobre limites e escolhas conscientes. A afirmação “You can never have too many books or too many hugs.” funciona como lembrete…",
+      "keywordsSeo": [
+        "frases de Gina House",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases hugs",
+        "frases reading",
+        "hugs",
+        "reading",
+        "reflexao",
+        "determinacao"
+      ],
+      "canonicalSlug": "you-can-never-have-too-many-books-or-too-many-hugs",
+      "relatedKeywords": [
+        "determinacao",
+        "reflexao",
+        "hugs",
+        "reading",
+        "gina-house"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "You can never have too many books or too many hugs.",
+    "autor_original": "Gina House",
+    "autor_slug": "gina-house",
+    "categoria": "reflexao",
+    "contextos": [
+      "reading"
+    ],
+    "palavras_chave": [
+      "hugs",
+      "reading",
+      "reflexao",
+      "determinacao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

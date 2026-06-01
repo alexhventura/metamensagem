@@ -2,55 +2,248 @@
   {
     "id": "f_blx2uou01",
     "slug": "lute-com-determinacao-abrace-a-vida-com-paixao-perca-com-c",
+    "texto": "Lute com determinação, abrace a vida com paixão, perca com classe e vença com ousadia, porque o mundo pertence a quem se atreve e a vida é muito para ser insignificante.",
+    "autor": "Augusto Branco",
+    "autorSlug": "augusto-branco",
+    "explicacao": "De Augusto Branco, autor de mensagens motivacionais muito compartilhadas. Propõe viver com paixão, dignidade na derrota e ousadia na vitória, porque a vida exige intensidade.",
+    "semantica": {
+      "categoriaPrincipal": "amor",
+      "categorias": [
+        "amor",
+        "coragem",
+        "determinacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "coragem",
+        "determinacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "emocoes": [
+        "coragem",
+        "determinacao",
+        "tristeza"
+      ],
+      "temas": [
+        "amor",
+        "coragem",
+        "determinacao",
+        "determinação",
+        "abrace",
+        "paixão",
+        "perca",
+        "classe"
+      ],
+      "palavrasChave": [
+        "amor",
+        "coragem",
+        "determinacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "tristeza"
+      ],
+      "tagsSeo": [
+        "amor",
+        "coragem",
+        "determinacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "tristeza",
+        "augusto-branco"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 46,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amor",
+        "coragem",
+        "determinacao",
+        "determinação",
+        "abrace",
+        "paixão"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Lute com determinação, abrace a vida com paixão, per…\" — Augusto Branco | Metamensagem",
+      "descriptionSeo": "De Augusto Branco, autor de mensagens motivacionais muito compartilhadas. Propõe viver com paixão, dignidade na derrota e ousadia na vitória, porque a vida ex…",
+      "keywordsSeo": [
+        "frases de Augusto Branco",
+        "frases sobre amor",
+        "frases amor",
+        "frases coragem",
+        "frases inspiracao",
+        "amor",
+        "coragem",
+        "determinacao",
+        "inspiracional"
+      ],
+      "canonicalSlug": "lute-com-determinacao-abrace-a-vida-com-paixao-perca-com-c",
+      "relatedKeywords": [
+        "coragem",
+        "determinacao",
+        "tristeza",
+        "amor",
+        "inspiracional",
+        "otimismo",
+        "augusto-branco"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Lute com determinação, abrace a vida com paixão, perca com classe e vença com ousadia, porque o mundo pertence a quem se atreve e a vida é muito para ser insignificante.",
     "autor_original": "Augusto Branco",
+    "autor_slug": "augusto-branco",
     "categoria": "amor",
     "contextos": [
+      "inspiracao",
       "coragem",
       "determinacao",
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "De Augusto Branco, autor de mensagens motivacionais muito compartilhadas. Propõe viver com paixão, dignidade na derrota e ousadia na vitória, porque a vida exige intensidade.",
     "palavras_chave": [
       "amor",
       "coragem",
       "determinacao",
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "inspiracao",
+      "tristeza"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   },
   {
     "id": "f_ts84r2y96",
     "slug": "conheci-um-homem-que-nao-acreditava-em-magia-ate-descobrir-q",
+    "texto": "Conheci um homem que não acreditava em magia até descobrir que ele próprio era um mago.",
+    "autor": "Augusto Branco",
+    "autorSlug": "augusto-branco",
+    "explicacao": "Outra reflexão atribuída a Augusto Branco, com tom poético. Conta a descoberta de potência interior: quem não acreditava em magia percebe, afinal, ser capaz de transformar a própria realidade.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "conheci",
+        "homem",
+        "acreditava",
+        "magia",
+        "descobrir"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "augusto-branco"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "conheci",
+        "homem",
+        "acreditava"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Conheci um homem que não acreditava em magia até des…\" — Augusto Branco | Metamensagem",
+      "descriptionSeo": "Outra reflexão atribuída a Augusto Branco, com tom poético. Conta a descoberta de potência interior: quem não acreditava em magia percebe, afinal, ser capaz d…",
+      "keywordsSeo": [
+        "frases de Augusto Branco",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "conheci-um-homem-que-nao-acreditava-em-magia-ate-descobrir-q",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "augusto-branco"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Conheci um homem que não acreditava em magia até descobrir que ele próprio era um mago.",
     "autor_original": "Augusto Branco",
-    "categoria": "inspiracional",
+    "autor_slug": "augusto-branco",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "reflexao"
     ],
-    "explicacao": "Outra reflexão atribuída a Augusto Branco, com tom poético. Conta a descoberta de potência interior: quem não acreditava em magia percebe, afinal, ser capaz de transformar a própria realidade.",
     "palavras_chave": [
       "inspiracional",
-      "reflexao"
+      "reflexao",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

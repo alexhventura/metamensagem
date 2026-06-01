@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f_csv_db7a6a1374",
+    "slug": "i-wish-i-had-a-great-relationship-with-my-mother",
+    "texto": "I wish I had a great relationship with my mother.",
+    "autor": "Chely Wright",
+    "autorSlug": "chely-wright",
+    "explicacao": "Citação de Chely Wright sobre temas ligados a familia. “I wish I had a great relationship with my mother.” articula familia, great, mother em registro de familia, com relevância para contextos como mother e wish.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "great",
+        "mother",
+        "wish"
+      ],
+      "contextos": [
+        "mother",
+        "wish"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "great",
+        "mother",
+        "wish",
+        "relationship"
+      ],
+      "palavrasChave": [
+        "great",
+        "mother",
+        "wish",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "great",
+        "mother",
+        "wish",
+        "chely-wright"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "great",
+        "mother",
+        "wish",
+        "relationship",
+        "familia"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I wish I had a great relationship with my mother.\" — Chely Wright | Metamensagem",
+      "descriptionSeo": "Citação de Chely Wright sobre temas ligados a familia. “I wish I had a great relationship with my mother.” articula familia, great, mother em registro de fami…",
+      "keywordsSeo": [
+        "frases de Chely Wright",
+        "frases sobre familia",
+        "frases familia",
+        "frases great",
+        "frases mother",
+        "frases wish",
+        "great",
+        "mother",
+        "wish",
+        "familia"
+      ],
+      "canonicalSlug": "i-wish-i-had-a-great-relationship-with-my-mother",
+      "relatedKeywords": [
+        "familia",
+        "great",
+        "mother",
+        "wish",
+        "chely-wright"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I wish I had a great relationship with my mother.",
+    "autor_original": "Chely Wright",
+    "autor_slug": "chely-wright",
+    "categoria": "familia",
+    "contextos": [
+      "mother",
+      "wish"
+    ],
+    "palavras_chave": [
+      "great",
+      "mother",
+      "wish",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

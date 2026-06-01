@@ -1,0 +1,115 @@
+[
+  {
+    "id": "f_csv_3b803c7642",
+    "slug": "i-lie-about-lying-which-means-i-can-lie",
+    "texto": "I lie about lying, which means I can lie",
+    "autor": "Alex",
+    "autorSlug": "alex",
+    "explicacao": "Citação de Alex sobre temas ligados a reflexao. “I lie about lying, which means I can lie” articula reflexao, lie, lying em registro de reflexao, com relevância para contextos como lying e verdade.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "lie",
+        "lying",
+        "verdade"
+      ],
+      "contextos": [
+        "lying",
+        "verdade"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "lie",
+        "lying",
+        "verdade",
+        "about",
+        "which",
+        "means"
+      ],
+      "palavrasChave": [
+        "lie",
+        "lying",
+        "verdade",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "lie",
+        "lying",
+        "verdade",
+        "alex"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "lie",
+        "lying",
+        "verdade",
+        "about",
+        "which"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I lie about lying, which means I can lie\" — Alex | Metamensagem",
+      "descriptionSeo": "Citação de Alex sobre temas ligados a reflexao. “I lie about lying, which means I can lie” articula reflexao, lie, lying em registro de reflexao, com relevânc…",
+      "keywordsSeo": [
+        "frases de Alex",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases lie",
+        "frases lying",
+        "frases verdade",
+        "lie",
+        "lying",
+        "verdade",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-lie-about-lying-which-means-i-can-lie",
+      "relatedKeywords": [
+        "reflexao",
+        "lie",
+        "lying",
+        "verdade",
+        "alex"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I lie about lying, which means I can lie",
+    "autor_original": "Alex",
+    "autor_slug": "alex",
+    "categoria": "reflexao",
+    "contextos": [
+      "lying",
+      "verdade"
+    ],
+    "palavras_chave": [
+      "lie",
+      "lying",
+      "verdade",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

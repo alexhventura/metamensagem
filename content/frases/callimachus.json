@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_ea47cc8fe3",
+    "slug": "a-good-man-never-dies",
+    "texto": "A good man never dies.",
+    "autor": "Callimachus",
+    "autorSlug": "callimachus",
+    "explicacao": "Citação de Callimachus sobre limites e escolhas conscientes. “A good man never dies.” articula reflexao, immortality, never em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "immortality"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "reflexao",
+        "immortality",
+        "never"
+      ],
+      "palavrasChave": [
+        "immortality",
+        "reflexao",
+        "determinacao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "immortality",
+        "determinacao",
+        "callimachus"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "immortality",
+        "never",
+        "reflexao",
+        "immortality"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A good man never dies.\" — Callimachus | Metamensagem",
+      "descriptionSeo": "Citação de Callimachus sobre limites e escolhas conscientes. “A good man never dies.” articula reflexao, immortality, never em registro de reflexao, com relev…",
+      "keywordsSeo": [
+        "frases de Callimachus",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases immortality",
+        "immortality",
+        "reflexao",
+        "determinacao"
+      ],
+      "canonicalSlug": "a-good-man-never-dies",
+      "relatedKeywords": [
+        "determinacao",
+        "reflexao",
+        "immortality",
+        "callimachus"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A good man never dies.",
+    "autor_original": "Callimachus",
+    "autor_slug": "callimachus",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "immortality",
+      "reflexao",
+      "determinacao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

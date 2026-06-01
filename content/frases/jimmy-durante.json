@@ -1,0 +1,106 @@
+[
+  {
+    "id": "f_csv_880e1807a1",
+    "slug": "my-wife-has-a-slight-impediment-in-her-speech-every-now-and-then-she-stops-to-b",
+    "texto": "My wife has a slight impediment in her speech. Every now and then she stops to breathe.",
+    "autor": "Jimmy Durante",
+    "autorSlug": "jimmy-durante",
+    "explicacao": "Citação de Jimmy Durante sobre temas ligados a humor. “My wife has a slight impediment in her speech. Every now and then she stops to breathe.” articula humor, marriage, slight em registro de humor, com relevância para contextos como casamento e marriage.",
+    "semantica": {
+      "categoriaPrincipal": "humor",
+      "categorias": [
+        "humor",
+        "marriage"
+      ],
+      "contextos": [
+        "casamento",
+        "marriage"
+      ],
+      "emocoes": [],
+      "temas": [
+        "humor",
+        "marriage",
+        "slight",
+        "impediment",
+        "speech",
+        "every",
+        "stops"
+      ],
+      "palavrasChave": [
+        "humor",
+        "marriage",
+        "casamento"
+      ],
+      "tagsSeo": [
+        "humor",
+        "marriage",
+        "casamento",
+        "jimmy-durante"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "humor",
+        "marriage",
+        "slight",
+        "impediment",
+        "speech",
+        "every"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My wife has a slight impediment in her speech. Every…\" — Jimmy Durante | Metamensagem",
+      "descriptionSeo": "Citação de Jimmy Durante sobre temas ligados a humor. “My wife has a slight impediment in her speech. Every now and then she stops to breathe.” articula humor…",
+      "keywordsSeo": [
+        "frases de Jimmy Durante",
+        "frases sobre humor",
+        "frases humor",
+        "frases marriage",
+        "frases casamento",
+        "humor",
+        "marriage",
+        "casamento"
+      ],
+      "canonicalSlug": "my-wife-has-a-slight-impediment-in-her-speech-every-now-and-then-she-stops-to-b",
+      "relatedKeywords": [
+        "humor",
+        "marriage",
+        "jimmy-durante"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My wife has a slight impediment in her speech. Every now and then she stops to breathe.",
+    "autor_original": "Jimmy Durante",
+    "autor_slug": "jimmy-durante",
+    "categoria": "humor",
+    "contextos": [
+      "casamento",
+      "marriage"
+    ],
+    "palavras_chave": [
+      "humor",
+      "marriage",
+      "casamento"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

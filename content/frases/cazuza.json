@@ -2,27 +2,122 @@
   {
     "id": "f_psvk84svz",
     "slug": "eu-sou-otimista-e-foi-o-otimismo-que-me-fez-ficar-vivo-se-e",
+    "texto": "Eu sou otimista e foi o otimismo que me fez ficar vivo. Se eu não tivesse otimismo num certo momento, eu teria dançado. Eu consegui ver que eu mereço ser feliz, porque eu achava que não merecia. Eu era muito culpado, por isso fiquei mal, não conseguia ser feliz. Era muito feliz para o lado de fora, o 'exagerado' da rua, mas comigo mesmo não.",
+    "autor": "Cazuza",
+    "autorSlug": "cazuza",
+    "explicacao": "Trecho atribuído a Cazuza, cantor e compositor brasileiro, provavelmente de entrevista. Ele associa sobrevivência ao otimismo e fala da culpa interior que, por um tempo, impediu de se sentir feliz de verdade.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "emocoes": [
+        "felicidade"
+      ],
+      "temas": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "feliz",
+        "otimista",
+        "ficar",
+        "tivesse"
+      ],
+      "palavrasChave": [
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "cazuza"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 60,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "feliz",
+        "otimista"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Eu sou otimista e foi o otimismo que me fez ficar vi…\" — Cazuza | Metamensagem",
+      "descriptionSeo": "Trecho atribuído a Cazuza, cantor e compositor brasileiro, provavelmente de entrevista. Ele associa sobrevivência ao otimismo e fala da culpa interior que, po…",
+      "keywordsSeo": [
+        "frases de Cazuza",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases felicidade",
+        "frases inspiracao",
+        "frases inspiracional",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "motivacao"
+      ],
+      "canonicalSlug": "eu-sou-otimista-e-foi-o-otimismo-que-me-fez-ficar-vivo-se-e",
+      "relatedKeywords": [
+        "felicidade",
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "cazuza"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Eu sou otimista e foi o otimismo que me fez ficar vivo. Se eu não tivesse otimismo num certo momento, eu teria dançado. Eu consegui ver que eu mereço ser feliz, porque eu achava que não merecia. Eu era muito culpado, por isso fiquei mal, não conseguia ser feliz. Era muito feliz para o lado de fora, o 'exagerado' da rua, mas comigo mesmo não.",
     "autor_original": "Cazuza",
-    "categoria": "felicidade",
+    "autor_slug": "cazuza",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "Trecho atribuído a Cazuza, cantor e compositor brasileiro, provavelmente de entrevista. Ele associa sobrevivência ao otimismo e fala da culpa interior que, por um tempo, impediu de se sentir feliz de verdade.",
     "palavras_chave": [
       "felicidade",
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

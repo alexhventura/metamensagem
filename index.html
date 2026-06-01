@@ -16,7 +16,7 @@
     />
     <meta name="author" content="Metamensagem" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://metamensagem.com/" />
+    <link rel="canonical" href="https://metamensagem.com" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Metamensagem" />
     <meta property="og:title" content="Metamensagem — Mente, Mensagem e Mudança" />
@@ -24,7 +24,7 @@
       property="og:description"
       content="Frases inspiradoras e metáforas terapêuticas para reflexão e compartilhamento."
     />
-    <meta property="og:url" content="https://metamensagem.com/" />
+    <meta property="og:url" content="https://metamensagem.com" />
     <meta property="og:image" content="https://metamensagem.com/web-app-manifest-512x512.png" />
     <meta property="og:locale" content="pt_BR" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -41,26 +41,38 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <!-- Google AdSense Auto Ads — script global (obrigatório no HTML para verificação do Google) -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6234467433781084"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
-    <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin />
+    <!-- AdSense: carregado sob demanda (src/lib/adsenseLazy.ts) — publisher ca-pub-6234467433781084 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      />
+    </noscript>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Metamensagem",
-        "url": "https://metamensagem.com/",
+        "url": "https://metamensagem.com",
         "description": "Frases inspiradoras e metáforas terapêuticas para reflexão e mudança de atitude.",
         "inLanguage": "pt-BR",
         "publisher": {
           "@type": "Organization",
           "name": "Metamensagem",
-          "url": "https://metamensagem.com/",
+          "url": "https://metamensagem.com",
           "logo": "https://metamensagem.com/web-app-manifest-512x512.png"
         }
       }

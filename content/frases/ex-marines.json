@@ -1,0 +1,115 @@
+[
+  {
+    "id": "f_csv_0b3acea44a",
+    "slug": "there-s-no-such-thing-as-an-ex-marine",
+    "texto": "There's no such thing as an ex-marine.",
+    "autor": "EX-MARINES",
+    "autorSlug": "ex-marines",
+    "explicacao": "Citação de EX-MARINES sobre temas ligados a reflexao. “There's no such thing as an ex-marine.” articula reflexao, irony, loyalty em registro de reflexao, com relevância para contextos como loyalty e military.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "irony",
+        "loyalty",
+        "military"
+      ],
+      "contextos": [
+        "loyalty",
+        "military"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "irony",
+        "loyalty",
+        "military",
+        "there",
+        "thing",
+        "marine"
+      ],
+      "palavrasChave": [
+        "irony",
+        "loyalty",
+        "military",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "irony",
+        "loyalty",
+        "military",
+        "ex-marines"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "irony",
+        "loyalty",
+        "military",
+        "there",
+        "thing"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"There's no such thing as an ex-marine.\" — EX-MARINES | Metamensagem",
+      "descriptionSeo": "Citação de EX-MARINES sobre temas ligados a reflexao. “There's no such thing as an ex-marine.” articula reflexao, irony, loyalty em registro de reflexao, com…",
+      "keywordsSeo": [
+        "frases de EX-MARINES",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases irony",
+        "frases loyalty",
+        "frases military",
+        "irony",
+        "loyalty",
+        "military",
+        "reflexao"
+      ],
+      "canonicalSlug": "there-s-no-such-thing-as-an-ex-marine",
+      "relatedKeywords": [
+        "reflexao",
+        "irony",
+        "loyalty",
+        "military",
+        "ex-marines"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "There's no such thing as an ex-marine.",
+    "autor_original": "EX-MARINES",
+    "autor_slug": "ex-marines",
+    "categoria": "reflexao",
+    "contextos": [
+      "loyalty",
+      "military"
+    ],
+    "palavras_chave": [
+      "irony",
+      "loyalty",
+      "military",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

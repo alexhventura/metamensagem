@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_4e4ee40e51",
+    "slug": "novelist-by-day",
+    "texto": "Novelist by day",
+    "autor": "screenwriter by night.",
+    "autorSlug": "screenwriter-by-night",
+    "explicacao": "Citação de screenwriter by night. sobre temas ligados a reflexao. “Novelist by day” articula reflexao, a-d-posey, novelist em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "a-d-posey"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "a-d-posey",
+        "novelist"
+      ],
+      "palavrasChave": [
+        "a-d-posey",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "a-d-posey",
+        "screenwriter-by-night"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "a-d-posey",
+        "novelist",
+        "reflexao",
+        "a-d-posey"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Novelist by day\" — screenwriter by night. | Metamensagem",
+      "descriptionSeo": "Citação de screenwriter by night. sobre temas ligados a reflexao. “Novelist by day” articula reflexao, a-d-posey, novelist em registro de reflexao, com relevâ…",
+      "keywordsSeo": [
+        "frases de screenwriter by night.",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases a d posey",
+        "a-d-posey",
+        "reflexao"
+      ],
+      "canonicalSlug": "novelist-by-day",
+      "relatedKeywords": [
+        "reflexao",
+        "a-d-posey",
+        "screenwriter-by-night"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Novelist by day",
+    "autor_original": "screenwriter by night.",
+    "autor_slug": "screenwriter-by-night",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "a-d-posey",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

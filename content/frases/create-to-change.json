@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_5301e0a302",
+    "slug": "don-t-just-create",
+    "texto": "Don’t just create",
+    "autor": "create to change",
+    "autorSlug": "create-to-change",
+    "explicacao": "Citação de create to change sobre temas ligados a reflexao. “Don’t just create” articula reflexao, change-to-improve, create em registro de reflexao, com relevância para contextos como mudanca e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "change-to-improve"
+      ],
+      "contextos": [
+        "mudanca",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "change-to-improve",
+        "create"
+      ],
+      "palavrasChave": [
+        "change-to-improve",
+        "reflexao",
+        "mudanca"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "change-to-improve",
+        "mudanca",
+        "create-to-change"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "change-to-improve",
+        "create",
+        "reflexao",
+        "change-to-improve"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Don’t just create\" — create to change | Metamensagem",
+      "descriptionSeo": "Citação de create to change sobre temas ligados a reflexao. “Don’t just create” articula reflexao, change-to-improve, create em registro de reflexao, com rele…",
+      "keywordsSeo": [
+        "frases de create to change",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases change to improve",
+        "frases mudanca",
+        "change-to-improve",
+        "reflexao",
+        "mudanca"
+      ],
+      "canonicalSlug": "don-t-just-create",
+      "relatedKeywords": [
+        "reflexao",
+        "change-to-improve",
+        "create-to-change"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Don’t just create",
+    "autor_original": "create to change",
+    "autor_slug": "create-to-change",
+    "categoria": "reflexao",
+    "contextos": [
+      "mudanca",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "change-to-improve",
+      "reflexao",
+      "mudanca"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -2,27 +2,115 @@
   {
     "id": "f_b9txby5fw",
     "slug": "se-nao-deu-certo-hoje-amanha-eu-acordo-mais-cedo-preparo-m",
+    "texto": "Se não deu certo hoje, amanhã eu acordo mais cedo, preparo meu mate e tento de novo!",
+    "autor": "Carlos Eduardo Back",
+    "autorSlug": "carlos-eduardo-back",
+    "explicacao": "De Carlos Eduardo Back, tom matinal e brasileiro. Depois de um dia frustrado, propõe recomeço prático: acordar cedo, preparar mate e tentar outra vez, sem dramatizar a falha.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional",
+        "certo",
+        "amanhã",
+        "acordo",
+        "preparo",
+        "tento"
+      ],
+      "palavrasChave": [
+        "bom-dia",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional",
+        "inspiracao",
+        "carlos-eduardo-back"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional",
+        "certo",
+        "amanhã",
+        "acordo"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Se não deu certo hoje, amanhã eu acordo mais cedo, p…\" — Carlos Eduardo Back | Metamensagem",
+      "descriptionSeo": "De Carlos Eduardo Back, tom matinal e brasileiro. Depois de um dia frustrado, propõe recomeço prático: acordar cedo, preparar mate e tentar outra vez, sem dra…",
+      "keywordsSeo": [
+        "frases de Carlos Eduardo Back",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases bom dia",
+        "frases inspiracao",
+        "frases inspiracional",
+        "bom-dia",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "se-nao-deu-certo-hoje-amanha-eu-acordo-mais-cedo-preparo-m",
+      "relatedKeywords": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional",
+        "carlos-eduardo-back"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Se não deu certo hoje, amanhã eu acordo mais cedo, preparo meu mate e tento de novo!",
     "autor_original": "Carlos Eduardo Back",
-    "categoria": "bom-dia",
+    "autor_slug": "carlos-eduardo-back",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "De Carlos Eduardo Back, tom matinal e brasileiro. Depois de um dia frustrado, propõe recomeço prático: acordar cedo, preparar mate e tentar outra vez, sem dramatizar a falha.",
     "palavras_chave": [
       "bom-dia",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

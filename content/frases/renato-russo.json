@@ -1,102 +1,590 @@
 [
   {
-    "id": "f_exi9il56g",
-    "slug": "nunca-deixe-que-lhe-digam-que-nao-vale-a-pena-acreditar-no-s",
-    "frase_original": "Nunca deixe que lhe digam que não vale a pena acreditar no sonho que se tem ou que os seus planos nunca vão dar certo ou que você nunca vai ser alguém...",
+    "id": "f_csv_fcf407c75f",
+    "slug": "nao-estatize-meus-sentimentos-pra-seu-governo-o-meu-estado-e-independente",
+    "texto": "Não estatize meus sentimentos. Pra seu governo, o meu estado é independente.",
+    "autor": "Renato Russo",
+    "autorSlug": "renato-russo",
+    "explicacao": "Citação de Renato Russo sobre limites e escolhas conscientes. “Não estatize meus sentimentos. Pra seu governo, o meu estado é independente.” articula amor, vida, love em registro de amor, com relevância para contextos como termino e love.",
+    "semantica": {
+      "categoriaPrincipal": "amor",
+      "categorias": [
+        "amor",
+        "vida",
+        "love",
+        "poetry"
+      ],
+      "contextos": [
+        "termino",
+        "love",
+        "poetry"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "amor",
+        "vida",
+        "love",
+        "poetry",
+        "estatize",
+        "sentimentos",
+        "governo",
+        "estado"
+      ],
+      "palavrasChave": [
+        "vida",
+        "love",
+        "poetry",
+        "amor",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amor",
+        "vida",
+        "love",
+        "poetry",
+        "termino",
+        "renato-russo"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amor",
+        "vida",
+        "love",
+        "poetry",
+        "estatize",
+        "sentimentos"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Não estatize meus sentimentos. Pra seu governo, o me…\" — Renato Russo | Metamensagem",
+      "descriptionSeo": "Citação de Renato Russo sobre limites e escolhas conscientes. “Não estatize meus sentimentos. Pra seu governo, o meu estado é independente.” articula amor, vi…",
+      "keywordsSeo": [
+        "frases de Renato Russo",
+        "frases sobre amor",
+        "frases amor",
+        "frases vida",
+        "frases termino",
+        "frases love",
+        "vida",
+        "love",
+        "poetry",
+        "amor"
+      ],
+      "canonicalSlug": "nao-estatize-meus-sentimentos-pra-seu-governo-o-meu-estado-e-independente",
+      "relatedKeywords": [
+        "amor",
+        "vida",
+        "love",
+        "poetry",
+        "renato-russo"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Não estatize meus sentimentos. Pra seu governo, o meu estado é independente.",
     "autor_original": "Renato Russo",
-    "categoria": "inspiracional",
+    "autor_slug": "renato-russo",
+    "categoria": "amor",
     "contextos": [
-      "reflexao",
-      "sonhos"
+      "termino",
+      "love",
+      "poetry"
     ],
-    "explicacao": "Trecho da canção Tempo Perdido, de Renato Russo e Legião Urbana. Responde a quem desacredita sonhos e projetos. É hino de resistência para jovens e artistas que ouvem críticas sobre futuro e identidade.",
     "palavras_chave": [
-      "inspiracional",
-      "reflexao",
-      "sonhos"
+      "vida",
+      "love",
+      "poetry",
+      "amor",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_exi9il56g",
+    "slug": "nunca-deixe-que-lhe-digam-que-nao-vale-a-pena-acreditar-no-s",
+    "texto": "Nunca deixe que lhe digam que não vale a pena acreditar no sonho que se tem ou que os seus planos nunca vão dar certo ou que você nunca vai ser alguém...",
+    "autor": "Renato Russo",
+    "autorSlug": "renato-russo",
+    "explicacao": "Trecho da canção Tempo Perdido, de Renato Russo e Legião Urbana. Responde a quem desacredita sonhos e projetos. É hino de resistência para jovens e artistas que ouvem críticas sobre futuro e identidade.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sonhos"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao",
+        "sonhos"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sonhos",
+        "nunca",
+        "deixe",
+        "digam",
+        "acreditar"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "sonhos",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sonhos",
+        "inspiracao",
+        "renato-russo"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 41,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sonhos",
+        "nunca",
+        "deixe"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Nunca deixe que lhe digam que não vale a pena acredi…\" — Renato Russo | Metamensagem",
+      "descriptionSeo": "Trecho da canção Tempo Perdido, de Renato Russo e Legião Urbana. Responde a quem desacredita sonhos e projetos. É hino de resistência para jovens e artistas q…",
+      "keywordsSeo": [
+        "frases de Renato Russo",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "sonhos",
+        "motivacao"
+      ],
+      "canonicalSlug": "nunca-deixe-que-lhe-digam-que-nao-vale-a-pena-acreditar-no-s",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sonhos",
+        "renato-russo"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Nunca deixe que lhe digam que não vale a pena acreditar no sonho que se tem ou que os seus planos nunca vão dar certo ou que você nunca vai ser alguém...",
+    "autor_original": "Renato Russo",
+    "autor_slug": "renato-russo",
+    "categoria": "motivacao",
+    "contextos": [
+      "inspiracao",
+      "reflexao",
+      "sonhos"
+    ],
+    "palavras_chave": [
+      "inspiracional",
+      "reflexao",
+      "sonhos",
+      "motivacao",
+      "inspiracao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   },
   {
     "id": "f_hoq3zuvav",
     "slug": "nunca-deixe-que-lhe-digam-que-nao-vale-a-pena-acreditar-no-s-2",
+    "texto": "Nunca deixe que lhe digam que não vale a pena acreditar no sonho que se tem ou que os seus planos nunca vão dar certo ou que você nunca vai ser alguém...",
+    "autor": "Renato Russo",
+    "autorSlug": "renato-russo",
+    "explicacao": "Mesma passagem de Tempo Perdido, aqui enfatizando otimismo diante de ceticismo alheio. Renato Russo defende manter fé nos próprios planos mesmo sob desânimo externo. Muito usada como frase motivacional sobre sonhos.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sonhos"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo",
+        "sonhos"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "nunca",
+        "deixe",
+        "digam",
+        "acreditar"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "inspiracao",
+        "renato-russo"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 41,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "nunca",
+        "deixe"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Nunca deixe que lhe digam que não vale a pena acredi…\" — Renato Russo | Metamensagem",
+      "descriptionSeo": "Mesma passagem de Tempo Perdido, aqui enfatizando otimismo diante de ceticismo alheio. Renato Russo defende manter fé nos próprios planos mesmo sob desânimo e…",
+      "keywordsSeo": [
+        "frases de Renato Russo",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "motivacao"
+      ],
+      "canonicalSlug": "nunca-deixe-que-lhe-digam-que-nao-vale-a-pena-acreditar-no-s-2",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "renato-russo"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Nunca deixe que lhe digam que não vale a pena acreditar no sonho que se tem ou que os seus planos nunca vão dar certo ou que você nunca vai ser alguém...",
     "autor_original": "Renato Russo",
-    "categoria": "inspiracional",
+    "autor_slug": "renato-russo",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo",
       "sonhos"
     ],
-    "explicacao": "Mesma passagem de Tempo Perdido, aqui enfatizando otimismo diante de ceticismo alheio. Renato Russo defende manter fé nos próprios planos mesmo sob desânimo externo. Muito usada como frase motivacional sobre sonhos.",
     "palavras_chave": [
       "inspiracional",
       "otimismo",
-      "sonhos"
+      "sonhos",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   },
   {
     "id": "f_j4cv54xh4",
     "slug": "um-dia-pretendo-tentar-descobrir-porque-e-mais-forte-quem-sa",
+    "texto": "Um dia pretendo Tentar descobrir Porque é mais forte Quem sabe mentir Não quero lembrar Que eu minto também.",
+    "autor": "Renato Russo",
+    "autorSlug": "renato-russo",
+    "explicacao": "Outro trecho de Tempo Perdido, mais introspectivo. Renato Russo questiona por que quem mente parece mais forte e reconhece sua própria hipocrisia. Reflexão sobre moral, fraqueza e autoconhecimento na letra.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "termino",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "pretendo",
+        "tentar",
+        "descobrir",
+        "porque",
+        "forte"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "termino",
+        "renato-russo"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "pretendo",
+        "tentar",
+        "descobrir"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Um dia pretendo Tentar descobrir Porque é mais forte…\" — Renato Russo | Metamensagem",
+      "descriptionSeo": "Outro trecho de Tempo Perdido, mais introspectivo. Renato Russo questiona por que quem mente parece mais forte e reconhece sua própria hipocrisia. Reflexão so…",
+      "keywordsSeo": [
+        "frases de Renato Russo",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases termino",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "um-dia-pretendo-tentar-descobrir-porque-e-mais-forte-quem-sa",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "renato-russo"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Um dia pretendo Tentar descobrir Porque é mais forte Quem sabe mentir Não quero lembrar Que eu minto também.",
     "autor_original": "Renato Russo",
-    "categoria": "inspiracional",
+    "autor_slug": "renato-russo",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
+      "termino",
       "reflexao"
     ],
-    "explicacao": "Outro trecho de Tempo Perdido, mais introspectivo. Renato Russo questiona por que quem mente parece mais forte e reconhece sua própria hipocrisia. Reflexão sobre moral, fraqueza e autoconhecimento na letra.",
     "palavras_chave": [
       "inspiracional",
-      "reflexao"
+      "reflexao",
+      "motivacao",
+      "inspiracao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   },
   {
     "id": "f_x91moc55k",
     "slug": "quando-tudo-nos-parece-dar-errado-acontecem-coisas-boas-que",
+    "texto": "Quando tudo nos parece dar errado Acontecem coisas boas Que não teriam acontecido Se tudo tivesse dado certo.",
+    "autor": "Renato Russo",
+    "autorSlug": "renato-russo",
+    "explicacao": "Verso de Tempo Perdido que consola quando planos parecem falhar. Renato Russo sugere que fracassos abrem caminho para bons acontecimentos inesperados. Tom de otimismo realista sobre imprevistos da vida.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "quando",
+        "parece",
+        "errado",
+        "acontecem",
+        "coisas"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "renato-russo"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "quando",
+        "parece",
+        "errado"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Quando tudo nos parece dar errado Acontecem coisas b…\" — Renato Russo | Metamensagem",
+      "descriptionSeo": "Verso de Tempo Perdido que consola quando planos parecem falhar. Renato Russo sugere que fracassos abrem caminho para bons acontecimentos inesperados. Tom de…",
+      "keywordsSeo": [
+        "frases de Renato Russo",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "quando-tudo-nos-parece-dar-errado-acontecem-coisas-boas-que",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "renato-russo"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Quando tudo nos parece dar errado Acontecem coisas boas Que não teriam acontecido Se tudo tivesse dado certo.",
     "autor_original": "Renato Russo",
-    "categoria": "inspiracional",
+    "autor_slug": "renato-russo",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Verso de Tempo Perdido que consola quando planos parecem falhar. Renato Russo sugere que fracassos abrem caminho para bons acontecimentos inesperados. Tom de otimismo realista sobre imprevistos da vida.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

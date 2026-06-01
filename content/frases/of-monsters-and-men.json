@@ -1,0 +1,124 @@
+[
+  {
+    "id": "f_csv_b38da9b0e6",
+    "slug": "after-every-sunny-day-comes-a-stormy-night",
+    "texto": "After every sunny day, comes a stormy night",
+    "autor": "Of Monsters and Men",
+    "autorSlug": "of-monsters-and-men",
+    "explicacao": "Citação de Of Monsters and Men sobre temas ligados a reflexao. “After every sunny day, comes a stormy night” articula reflexao, depression, esperanca em registro de reflexao, com relevância para contextos como dia-chuvoso e boa-noite.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "depression",
+        "esperanca"
+      ],
+      "contextos": [
+        "dia-chuvoso",
+        "boa-noite",
+        "reflexao-noturna",
+        "esperanca"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "depression",
+        "esperanca",
+        "after",
+        "every",
+        "sunny",
+        "comes",
+        "stormy"
+      ],
+      "palavrasChave": [
+        "depression",
+        "esperanca",
+        "reflexao",
+        "dia-chuvoso",
+        "boa-noite",
+        "reflexao-noturna"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "depression",
+        "esperanca",
+        "dia-chuvoso",
+        "boa-noite",
+        "reflexao-noturna",
+        "of-monsters-and-men"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "depression",
+        "esperanca",
+        "after",
+        "every",
+        "sunny"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"After every sunny day, comes a stormy night\" — Of Monsters and Men | Metamensagem",
+      "descriptionSeo": "Citação de Of Monsters and Men sobre temas ligados a reflexao. “After every sunny day, comes a stormy night” articula reflexao, depression, esperanca em regis…",
+      "keywordsSeo": [
+        "frases de Of Monsters and Men",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases depression",
+        "frases dia chuvoso",
+        "frases boa noite",
+        "depression",
+        "esperanca",
+        "reflexao",
+        "dia-chuvoso"
+      ],
+      "canonicalSlug": "after-every-sunny-day-comes-a-stormy-night",
+      "relatedKeywords": [
+        "reflexao",
+        "depression",
+        "esperanca",
+        "of-monsters-and-men"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "After every sunny day, comes a stormy night",
+    "autor_original": "Of Monsters and Men",
+    "autor_slug": "of-monsters-and-men",
+    "categoria": "reflexao",
+    "contextos": [
+      "dia-chuvoso",
+      "boa-noite",
+      "reflexao-noturna",
+      "esperanca"
+    ],
+    "palavras_chave": [
+      "depression",
+      "esperanca",
+      "reflexao",
+      "dia-chuvoso",
+      "boa-noite",
+      "reflexao-noturna"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

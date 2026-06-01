@@ -2,25 +2,105 @@
   {
     "id": "f_di7mzjazc",
     "slug": "conquiste-a-confianca-atraves-de-seus-feitos-e-evite-contest",
+    "texto": "Conquiste a confiança através de seus feitos e evite contestações sobre seus atos.",
+    "autor": "Carlos Alberto Brumm",
+    "autorSlug": "carlos-alberto-brumm",
+    "explicacao": "De Carlos Alberto Brumm, conselho sobre credibilidade. Defende que confiança nasce de resultados consistentes, reduzindo a necessidade de justificar cada ato diante dos outros.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "conquiste",
+        "confiança",
+        "através",
+        "feitos",
+        "evite"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "inspiracao",
+        "carlos-alberto-brumm"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "conquiste",
+        "confiança",
+        "através",
+        "feitos"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Conquiste a confiança através de seus feitos e evite…\" — Carlos Alberto Brumm | Metamensagem",
+      "descriptionSeo": "De Carlos Alberto Brumm, conselho sobre credibilidade. Defende que confiança nasce de resultados consistentes, reduzindo a necessidade de justificar cada ato…",
+      "keywordsSeo": [
+        "frases de Carlos Alberto Brumm",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "conquiste-a-confianca-atraves-de-seus-feitos-e-evite-contest",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "carlos-alberto-brumm"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Conquiste a confiança através de seus feitos e evite contestações sobre seus atos.",
     "autor_original": "Carlos Alberto Brumm",
-    "categoria": "inspiracional",
+    "autor_slug": "carlos-alberto-brumm",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao"
     ],
-    "explicacao": "De Carlos Alberto Brumm, conselho sobre credibilidade. Defende que confiança nasce de resultados consistentes, reduzindo a necessidade de justificar cada ato diante dos outros.",
     "palavras_chave": [
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

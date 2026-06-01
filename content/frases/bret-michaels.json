@@ -1,0 +1,106 @@
+[
+  {
+    "id": "f_csv_1f8a9b894f",
+    "slug": "my-life-is-part-humor-part-roses-part-thorns",
+    "texto": "My life is part humor, part roses, part thorns.",
+    "autor": "Bret Michaels",
+    "autorSlug": "bret-michaels",
+    "explicacao": "Citação de Bret Michaels sobre sentido da existência e experiência vivida. “My life is part humor, part roses, part thorns.” articula vida, roses, my-life em registro de vida, com relevância para contextos como roses e my-life.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "roses",
+        "my-life"
+      ],
+      "contextos": [
+        "roses",
+        "my-life"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "roses",
+        "my-life",
+        "humor",
+        "thorns"
+      ],
+      "palavrasChave": [
+        "vida",
+        "roses",
+        "my-life"
+      ],
+      "tagsSeo": [
+        "vida",
+        "roses",
+        "my-life",
+        "bret-michaels"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "roses",
+        "my-life",
+        "humor",
+        "thorns",
+        "vida"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My life is part humor, part roses, part thorns.\" — Bret Michaels | Metamensagem",
+      "descriptionSeo": "Citação de Bret Michaels sobre sentido da existência e experiência vivida. “My life is part humor, part roses, part thorns.” articula vida, roses, my-life em…",
+      "keywordsSeo": [
+        "frases de Bret Michaels",
+        "frases sobre vida",
+        "frases vida",
+        "frases roses",
+        "frases my life",
+        "vida",
+        "roses",
+        "my-life"
+      ],
+      "canonicalSlug": "my-life-is-part-humor-part-roses-part-thorns",
+      "relatedKeywords": [
+        "vida",
+        "roses",
+        "my-life",
+        "bret-michaels"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My life is part humor, part roses, part thorns.",
+    "autor_original": "Bret Michaels",
+    "autor_slug": "bret-michaels",
+    "categoria": "vida",
+    "contextos": [
+      "roses",
+      "my-life"
+    ],
+    "palavras_chave": [
+      "vida",
+      "roses",
+      "my-life"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

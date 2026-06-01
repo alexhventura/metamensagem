@@ -1,0 +1,112 @@
+[
+  {
+    "id": "f_csv_caa1ec43af",
+    "slug": "art-thou-the-king-of-the-jews",
+    "texto": "Art thou the King of the Jews?",
+    "autor": "Pontius Pilate",
+    "autorSlug": "pontius-pilate",
+    "explicacao": "Pergunta retórica de Pontius Pilate que provoca temas ligados a reflexao. Ao questionar “Art thou the King of the Jews?”, o texto convida o leitor a revisar crenças sobre reflexao, king, thou, com foco em thou e jews.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "king",
+        "thou",
+        "jews"
+      ],
+      "contextos": [
+        "thou",
+        "jews"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "king",
+        "thou",
+        "jews"
+      ],
+      "palavrasChave": [
+        "king",
+        "thou",
+        "jews",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "king",
+        "thou",
+        "jews",
+        "pontius-pilate"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "king",
+        "thou",
+        "jews",
+        "reflexao",
+        "king"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Art thou the King of the Jews?\" — Pontius Pilate | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Pontius Pilate que provoca temas ligados a reflexao. Ao questionar “Art thou the King of the Jews?”, o texto convida o leitor a revisar c…",
+      "keywordsSeo": [
+        "frases de Pontius Pilate",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases king",
+        "frases thou",
+        "frases jews",
+        "king",
+        "thou",
+        "jews",
+        "reflexao"
+      ],
+      "canonicalSlug": "art-thou-the-king-of-the-jews",
+      "relatedKeywords": [
+        "reflexao",
+        "king",
+        "thou",
+        "jews",
+        "pontius-pilate"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Art thou the King of the Jews?",
+    "autor_original": "Pontius Pilate",
+    "autor_slug": "pontius-pilate",
+    "categoria": "reflexao",
+    "contextos": [
+      "thou",
+      "jews"
+    ],
+    "palavras_chave": [
+      "king",
+      "thou",
+      "jews",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

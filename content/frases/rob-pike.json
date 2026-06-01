@@ -1,0 +1,115 @@
+[
+  {
+    "id": "f_csv_67f42a25c2",
+    "slug": "we-don-t-believe-we-ve-solved-the-multicore-programming-problem-but-we-think-we",
+    "texto": "We don't believe we've solved the multicore-programming problem. But we think we've built an environment in which a certain class of problems can take advantage of the multicore architecture.",
+    "autor": "Rob Pike",
+    "autorSlug": "rob-pike",
+    "explicacao": "Citação de Rob Pike sobre limites e escolhas conscientes. “We don't believe we've solved the multicore-programming problem. But we think we've built an envi…” articula reflexao, problems, believe em registro de reflexao, com relevância para contextos como believe e problem.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "problems",
+        "believe",
+        "problem"
+      ],
+      "contextos": [
+        "believe",
+        "problem"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "problems",
+        "believe",
+        "problem",
+        "multicore",
+        "solved",
+        "programming"
+      ],
+      "palavrasChave": [
+        "problems",
+        "believe",
+        "problem",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "problems",
+        "believe",
+        "problem",
+        "rob-pike"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 45,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "problems",
+        "believe",
+        "problem",
+        "multicore",
+        "solved"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"We don't believe we've solved the multicore-programm…\" — Rob Pike | Metamensagem",
+      "descriptionSeo": "Citação de Rob Pike sobre limites e escolhas conscientes. “We don't believe we've solved the multicore-programming problem. But we think we've built an envi…”…",
+      "keywordsSeo": [
+        "frases de Rob Pike",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases problems",
+        "frases believe",
+        "frases problem",
+        "problems",
+        "believe",
+        "problem",
+        "reflexao"
+      ],
+      "canonicalSlug": "we-don-t-believe-we-ve-solved-the-multicore-programming-problem-but-we-think-we",
+      "relatedKeywords": [
+        "reflexao",
+        "problems",
+        "believe",
+        "problem",
+        "rob-pike"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "We don't believe we've solved the multicore-programming problem. But we think we've built an environment in which a certain class of problems can take advantage of the multicore architecture.",
+    "autor_original": "Rob Pike",
+    "autor_slug": "rob-pike",
+    "categoria": "reflexao",
+    "contextos": [
+      "believe",
+      "problem"
+    ],
+    "palavras_chave": [
+      "problems",
+      "believe",
+      "problem",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

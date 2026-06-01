@@ -7,3 +7,8 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Monolitos gerados localmente (GitHub >100MB); site usa frases-v2/shards + feed-sample
+public/frases-cms.json
+public/frases-index.json
+content/frases/frases.json

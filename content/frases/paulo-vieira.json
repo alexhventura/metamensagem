@@ -2,25 +2,105 @@
   {
     "id": "f_sy6en3ljh",
     "slug": "faca-sua-parte-tudo-acontece-no-seu-tempo-talvez-o-seu-tem",
+    "texto": "Faça sua parte, tudo acontece no seu tempo. Talvez o seu tempo não chegou ainda! E não se esqueça, quando você muda, as pessoas mudam ao seu redor!",
+    "autor": "Paulo Vieira",
+    "autorSlug": "paulo-vieira",
+    "explicacao": "Paulo Vieira, coach e autor de O Poder da Ação, costuma falar sobre responsabilidade pessoal e timing da vida. Aqui ele pede paciência sem paralisia: faça o que depende de você e confie que resultados vêm no momento certo. Também lembra que mudanças internas influenciam o ambiente.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "tempo",
+        "parte",
+        "acontece",
+        "talvez",
+        "chegou"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "inspiracao",
+        "paulo-vieira"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 38,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "tempo",
+        "parte",
+        "acontece",
+        "talvez"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Faça sua parte, tudo acontece no seu tempo. Talvez o…\" — Paulo Vieira | Metamensagem",
+      "descriptionSeo": "Paulo Vieira, coach e autor de O Poder da Ação, costuma falar sobre responsabilidade pessoal e timing da vida. Aqui ele pede paciência sem paralisia: faça o q…",
+      "keywordsSeo": [
+        "frases de Paulo Vieira",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "faca-sua-parte-tudo-acontece-no-seu-tempo-talvez-o-seu-tem",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "paulo-vieira"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Faça sua parte, tudo acontece no seu tempo. Talvez o seu tempo não chegou ainda! E não se esqueça, quando você muda, as pessoas mudam ao seu redor!",
     "autor_original": "Paulo Vieira",
-    "categoria": "inspiracional",
+    "autor_slug": "paulo-vieira",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao"
     ],
-    "explicacao": "Paulo Vieira, coach e autor de O Poder da Ação, costuma falar sobre responsabilidade pessoal e timing da vida. Aqui ele pede paciência sem paralisia: faça o que depende de você e confie que resultados vêm no momento certo. Também lembra que mudanças internas influenciam o ambiente.",
     "palavras_chave": [
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

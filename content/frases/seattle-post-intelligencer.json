@@ -1,0 +1,96 @@
+[
+  {
+    "id": "f_csv_cdb90dcaef",
+    "slug": "an-incredibly-beautiful-read",
+    "texto": "an incredibly beautiful read",
+    "autor": "Seattle Post-Intelligencer",
+    "autorSlug": "seattle-post-intelligencer",
+    "explicacao": "Citação de Seattle Post-Intelligencer sobre temas ligados a reflexao. “an incredibly beautiful read” articula reflexao, reading, incredibly em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "reading"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "reading",
+        "incredibly",
+        "beautiful"
+      ],
+      "palavrasChave": [
+        "reading",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "reading",
+        "seattle-post-intelligencer"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "reading",
+        "incredibly",
+        "beautiful",
+        "reflexao",
+        "reading"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"an incredibly beautiful read\" — Seattle Post-Intelligencer | Metamensagem",
+      "descriptionSeo": "Citação de Seattle Post-Intelligencer sobre temas ligados a reflexao. “an incredibly beautiful read” articula reflexao, reading, incredibly em registro de ref…",
+      "keywordsSeo": [
+        "frases de Seattle Post-Intelligencer",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases reading",
+        "reading",
+        "reflexao"
+      ],
+      "canonicalSlug": "an-incredibly-beautiful-read",
+      "relatedKeywords": [
+        "reflexao",
+        "reading",
+        "seattle-post-intelligencer"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "an incredibly beautiful read",
+    "autor_original": "Seattle Post-Intelligencer",
+    "autor_slug": "seattle-post-intelligencer",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "reading",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

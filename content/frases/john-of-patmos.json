@@ -1,0 +1,108 @@
+[
+  {
+    "id": "f_csv_24d25bb6c1",
+    "slug": "none-of-the-dead-come-back-but-some-stay",
+    "texto": "None of the dead come back. But some stay.",
+    "autor": "John of Patmos",
+    "autorSlug": "john-of-patmos",
+    "explicacao": "Citação de John of Patmos sobre temas ligados a reflexao. “None of the dead come back. But some stay.” articula reflexao, dead, death-ghosts em registro de reflexao, com relevância para contextos como luto e death-ghosts.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "dead",
+        "death-ghosts"
+      ],
+      "contextos": [
+        "luto",
+        "death-ghosts"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "dead",
+        "death-ghosts"
+      ],
+      "palavrasChave": [
+        "dead",
+        "death-ghosts",
+        "reflexao",
+        "luto"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "dead",
+        "death-ghosts",
+        "luto",
+        "john-of-patmos"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "dead",
+        "death-ghosts",
+        "reflexao",
+        "dead"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"None of the dead come back. But some stay.\" — John of Patmos | Metamensagem",
+      "descriptionSeo": "Citação de John of Patmos sobre temas ligados a reflexao. “None of the dead come back. But some stay.” articula reflexao, dead, death-ghosts em registro de re…",
+      "keywordsSeo": [
+        "frases de John of Patmos",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases dead",
+        "frases luto",
+        "frases death ghosts",
+        "dead",
+        "death-ghosts",
+        "reflexao",
+        "luto"
+      ],
+      "canonicalSlug": "none-of-the-dead-come-back-but-some-stay",
+      "relatedKeywords": [
+        "reflexao",
+        "dead",
+        "death-ghosts",
+        "john-of-patmos"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "None of the dead come back. But some stay.",
+    "autor_original": "John of Patmos",
+    "autor_slug": "john-of-patmos",
+    "categoria": "reflexao",
+    "contextos": [
+      "luto",
+      "death-ghosts"
+    ],
+    "palavras_chave": [
+      "dead",
+      "death-ghosts",
+      "reflexao",
+      "luto"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

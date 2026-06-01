@@ -1,0 +1,92 @@
+[
+  {
+    "id": "f_csv_888166c9b7",
+    "slug": "but-you-re-a-monk",
+    "texto": "But you're a monk!",
+    "autor": "Van Helsing",
+    "autorSlug": "van-helsing",
+    "explicacao": "Citação de Van Helsing sobre temas ligados a reflexao. “But you're a monk!” articula reflexao, thriller em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "thriller"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "thriller"
+      ],
+      "palavrasChave": [
+        "thriller",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "thriller",
+        "van-helsing"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "thriller",
+        "reflexao",
+        "thriller"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"But you're a monk!\" — Van Helsing | Metamensagem",
+      "descriptionSeo": "Citação de Van Helsing sobre temas ligados a reflexao. “But you're a monk!” articula reflexao, thriller em registro de reflexao, com relevância para contextos…",
+      "keywordsSeo": [
+        "frases de Van Helsing",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases thriller",
+        "thriller",
+        "reflexao"
+      ],
+      "canonicalSlug": "but-you-re-a-monk",
+      "relatedKeywords": [
+        "reflexao",
+        "thriller",
+        "van-helsing"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "But you're a monk!",
+    "autor_original": "Van Helsing",
+    "autor_slug": "van-helsing",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "thriller",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

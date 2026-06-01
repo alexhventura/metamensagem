@@ -2,25 +2,105 @@
   {
     "id": "f_1m6y59qoc",
     "slug": "os-indecisos-pensam-os-fracos-desistem-mas-os-fortes-conti",
+    "texto": "Os indecisos pensam, os fracos desistem, mas os fortes continuam até conquistar.",
+    "autor": "Plínio de Sá",
+    "autorSlug": "plinio-de-sa",
+    "explicacao": "Plínio de Sá resume, em tom de autoajuda, três posturas diante de obstáculos: hesitar, desistir ou persistir. A frase valoriza a continuidade até a conquista. Serve como estímulo para quem está entre desistir e seguir em frente.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "indecisos",
+        "pensam",
+        "fracos",
+        "desistem",
+        "fortes"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "inspiracao",
+        "plinio-de-sa"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "indecisos",
+        "pensam",
+        "fracos",
+        "desistem"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Os indecisos pensam, os fracos desistem, mas os fort…\" — Plínio de Sá | Metamensagem",
+      "descriptionSeo": "Plínio de Sá resume, em tom de autoajuda, três posturas diante de obstáculos: hesitar, desistir ou persistir. A frase valoriza a continuidade até a conquista.…",
+      "keywordsSeo": [
+        "frases de Plínio de Sá",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "os-indecisos-pensam-os-fracos-desistem-mas-os-fortes-conti",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "plinio-de-sa"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Os indecisos pensam, os fracos desistem, mas os fortes continuam até conquistar.",
     "autor_original": "Plínio de Sá",
-    "categoria": "inspiracional",
+    "autor_slug": "plinio-de-sa",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao"
     ],
-    "explicacao": "Plínio de Sá resume, em tom de autoajuda, três posturas diante de obstáculos: hesitar, desistir ou persistir. A frase valoriza a continuidade até a conquista. Serve como estímulo para quem está entre desistir e seguir em frente.",
     "palavras_chave": [
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

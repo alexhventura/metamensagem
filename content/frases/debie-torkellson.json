@@ -1,0 +1,119 @@
+[
+  {
+    "id": "f_csv_b35b430fef",
+    "slug": "keep-the-magic-alive",
+    "texto": "Keep the Magic Alive!",
+    "autor": "Debie Torkellson",
+    "autorSlug": "debie-torkellson",
+    "explicacao": "Citação de Debie Torkellson sobre sentido da existência e experiência vivida. “Keep the Magic Alive!” articula amizade, love, magic em registro de amizade, com relevância para contextos como love e magic.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "love",
+        "magic",
+        "witches"
+      ],
+      "contextos": [
+        "love",
+        "magic",
+        "witches"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "amizade",
+        "love",
+        "magic",
+        "alive"
+      ],
+      "palavrasChave": [
+        "amizade",
+        "love",
+        "magic",
+        "witches",
+        "amor"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "love",
+        "magic",
+        "witches",
+        "amor",
+        "debie-torkellson"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "love",
+        "magic",
+        "alive",
+        "amizade",
+        "love"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Keep the Magic Alive!\" — Debie Torkellson | Metamensagem",
+      "descriptionSeo": "Citação de Debie Torkellson sobre sentido da existência e experiência vivida. “Keep the Magic Alive!” articula amizade, love, magic em registro de amizade, co…",
+      "keywordsSeo": [
+        "frases de Debie Torkellson",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases love",
+        "frases magic",
+        "amizade",
+        "love",
+        "magic",
+        "witches"
+      ],
+      "canonicalSlug": "keep-the-magic-alive",
+      "relatedKeywords": [
+        "amor",
+        "amizade",
+        "love",
+        "magic",
+        "witches",
+        "debie-torkellson"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Keep the Magic Alive!",
+    "autor_original": "Debie Torkellson",
+    "autor_slug": "debie-torkellson",
+    "categoria": "amizade",
+    "contextos": [
+      "love",
+      "magic",
+      "witches"
+    ],
+    "palavras_chave": [
+      "amizade",
+      "love",
+      "magic",
+      "witches",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

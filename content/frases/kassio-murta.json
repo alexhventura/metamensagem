@@ -2,25 +2,105 @@
   {
     "id": "f_mxsz8nl7d",
     "slug": "enquanto-voce-tiver-saude-fisica-e-mental-estara-imparavel",
+    "texto": "Enquanto você tiver saúde física e mental, estará imparável!",
+    "autor": "Kassio Murta",
+    "autorSlug": "kassio-murta",
+    "explicacao": "Kassio Murta afirma que saúde física e mental tornam a pessoa imparável. Mensagem de conteúdo motivacional sobre bem-estar como base para produtividade e conquistas.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "enquanto",
+        "tiver",
+        "saúde",
+        "física",
+        "mental"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "inspiracao",
+        "kassio-murta"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "enquanto",
+        "tiver",
+        "saúde",
+        "física"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Enquanto você tiver saúde física e mental, estará im…\" — Kassio Murta | Metamensagem",
+      "descriptionSeo": "Kassio Murta afirma que saúde física e mental tornam a pessoa imparável. Mensagem de conteúdo motivacional sobre bem-estar como base para produtividade e conq…",
+      "keywordsSeo": [
+        "frases de Kassio Murta",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "enquanto-voce-tiver-saude-fisica-e-mental-estara-imparavel",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "kassio-murta"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Enquanto você tiver saúde física e mental, estará imparável!",
     "autor_original": "Kassio Murta",
-    "categoria": "inspiracional",
+    "autor_slug": "kassio-murta",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao"
     ],
-    "explicacao": "Kassio Murta afirma que saúde física e mental tornam a pessoa imparável. Mensagem de conteúdo motivacional sobre bem-estar como base para produtividade e conquistas.",
     "palavras_chave": [
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

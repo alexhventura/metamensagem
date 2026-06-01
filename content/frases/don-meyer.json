@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_101535ed58",
+    "slug": "shout-praise-and-whisper-criticism",
+    "texto": "Shout praise and whisper criticism.",
+    "autor": "Don Meyer",
+    "autorSlug": "don-meyer",
+    "explicacao": "Citação de Don Meyer sobre temas ligados a reflexao. “Shout praise and whisper criticism.” articula reflexao, criticism, praise em registro de reflexao, com relevância para contextos como praise.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "criticism",
+        "praise"
+      ],
+      "contextos": [
+        "praise"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "criticism",
+        "praise",
+        "shout",
+        "whisper"
+      ],
+      "palavrasChave": [
+        "criticism",
+        "praise",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "criticism",
+        "praise",
+        "don-meyer"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "criticism",
+        "praise",
+        "shout",
+        "whisper",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Shout praise and whisper criticism.\" — Don Meyer | Metamensagem",
+      "descriptionSeo": "Citação de Don Meyer sobre temas ligados a reflexao. “Shout praise and whisper criticism.” articula reflexao, criticism, praise em registro de reflexao, com r…",
+      "keywordsSeo": [
+        "frases de Don Meyer",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases criticism",
+        "frases praise",
+        "criticism",
+        "praise",
+        "reflexao"
+      ],
+      "canonicalSlug": "shout-praise-and-whisper-criticism",
+      "relatedKeywords": [
+        "reflexao",
+        "criticism",
+        "praise",
+        "don-meyer"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Shout praise and whisper criticism.",
+    "autor_original": "Don Meyer",
+    "autor_slug": "don-meyer",
+    "categoria": "reflexao",
+    "contextos": [
+      "praise"
+    ],
+    "palavras_chave": [
+      "criticism",
+      "praise",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

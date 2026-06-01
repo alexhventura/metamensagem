@@ -2,25 +2,102 @@
   {
     "id": "f_ikp6ilok3",
     "slug": "eu-faco-a-minha-sorte",
+    "texto": "Eu faço a minha sorte!",
+    "autor": "Shay Patrick Cormac",
+    "autorSlug": "shay-patrick-cormac",
+    "explicacao": "Shay Patrick Cormac, de Assassin's Creed Rogue, declara autonomia diante do acaso. Não espera sorte: constrói seu próprio caminho. Frase de empoderamento típica de personagens que desafiam o destino.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "minha",
+        "sorte"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "inspiracao",
+        "shay-patrick-cormac"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "minha",
+        "sorte",
+        "motivacao",
+        "inspiracional"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Eu faço a minha sorte!\" — Shay Patrick Cormac | Metamensagem",
+      "descriptionSeo": "Shay Patrick Cormac, de Assassin's Creed Rogue, declara autonomia diante do acaso. Não espera sorte: constrói seu próprio caminho. Frase de empoderamento típi…",
+      "keywordsSeo": [
+        "frases de Shay Patrick Cormac",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "eu-faco-a-minha-sorte",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "shay-patrick-cormac"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Eu faço a minha sorte!",
     "autor_original": "Shay Patrick Cormac",
-    "categoria": "inspiracional",
+    "autor_slug": "shay-patrick-cormac",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao"
     ],
-    "explicacao": "Shay Patrick Cormac, de Assassin's Creed Rogue, declara autonomia diante do acaso. Não espera sorte: constrói seu próprio caminho. Frase de empoderamento típica de personagens que desafiam o destino.",
     "palavras_chave": [
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

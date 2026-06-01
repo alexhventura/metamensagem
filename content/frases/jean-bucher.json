@@ -1,0 +1,111 @@
+[
+  {
+    "id": "f_csv_e898b48cf2",
+    "slug": "people-who-have-the-most-birthdays-live-the-longest",
+    "texto": "People who have the most birthdays live the longest.",
+    "autor": "Jean Bucher",
+    "autorSlug": "jean-bucher",
+    "explicacao": "Citação de Jean Bucher sobre sentido da existência e experiência vivida. “People who have the most birthdays live the longest.” articula vida, birthdays, age em registro de vida, com relevância para contextos como aniversario e age.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "birthdays",
+        "age"
+      ],
+      "contextos": [
+        "aniversario",
+        "age"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "birthdays",
+        "age",
+        "people",
+        "longest"
+      ],
+      "palavrasChave": [
+        "birthdays",
+        "age",
+        "vida",
+        "aniversario"
+      ],
+      "tagsSeo": [
+        "vida",
+        "birthdays",
+        "age",
+        "aniversario",
+        "jean-bucher"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "birthdays",
+        "age",
+        "people",
+        "longest",
+        "vida"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"People who have the most birthdays live the longest.\" — Jean Bucher | Metamensagem",
+      "descriptionSeo": "Citação de Jean Bucher sobre sentido da existência e experiência vivida. “People who have the most birthdays live the longest.” articula vida, birthdays, age…",
+      "keywordsSeo": [
+        "frases de Jean Bucher",
+        "frases sobre vida",
+        "frases vida",
+        "frases birthdays",
+        "frases aniversario",
+        "frases age",
+        "birthdays",
+        "age",
+        "vida",
+        "aniversario"
+      ],
+      "canonicalSlug": "people-who-have-the-most-birthdays-live-the-longest",
+      "relatedKeywords": [
+        "vida",
+        "birthdays",
+        "age",
+        "jean-bucher"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "People who have the most birthdays live the longest.",
+    "autor_original": "Jean Bucher",
+    "autor_slug": "jean-bucher",
+    "categoria": "vida",
+    "contextos": [
+      "aniversario",
+      "age"
+    ],
+    "palavras_chave": [
+      "birthdays",
+      "age",
+      "vida",
+      "aniversario"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

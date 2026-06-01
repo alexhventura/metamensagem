@@ -2,27 +2,115 @@
   {
     "id": "f_cdrxid4py",
     "slug": "levanto-os-meus-olhos-para-os-montes-e-pergunto-de-onde-me",
+    "texto": "Levanto os meus olhos para os montes e pergunto: De onde me vem o socorro? O meu socorro vem do Senhor, que fez os céus e a terra. Ele não permitirá que você tropece; o seu protetor se manterá alerta, sim, o protetor de Israel não dormirá, ele está sempre alerta! Salmos 121:1-4",
+    "autor": "Bíblia Sagrada",
+    "autorSlug": "biblia-sagrada",
+    "explicacao": "Trecho do Salmo 121, da tradição bíblica cristã. É uma oração de viagem ou angústia: o fiel ergue os olhos aos montes e confia que a proteção vem de Deus, guardião vigilante.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "fe",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "socorro",
+        "protetor",
+        "alerta",
+        "levanto",
+        "olhos"
+      ],
+      "palavrasChave": [
+        "fe",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "inspiracao",
+        "biblia-sagrada"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 53,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "socorro",
+        "protetor",
+        "alerta"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Levanto os meus olhos para os montes e pergunto: De …\" — Bíblia Sagrada | Metamensagem",
+      "descriptionSeo": "Trecho do Salmo 121, da tradição bíblica cristã. É uma oração de viagem ou angústia: o fiel ergue os olhos aos montes e confia que a proteção vem de Deus, gua…",
+      "keywordsSeo": [
+        "frases de Bíblia Sagrada",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases fe",
+        "frases inspiracao",
+        "frases inspiracional",
+        "fe",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "levanto-os-meus-olhos-para-os-montes-e-pergunto-de-onde-me",
+      "relatedKeywords": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "biblia-sagrada"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Levanto os meus olhos para os montes e pergunto: De onde me vem o socorro? O meu socorro vem do Senhor, que fez os céus e a terra. Ele não permitirá que você tropece; o seu protetor se manterá alerta, sim, o protetor de Israel não dormirá, ele está sempre alerta! Salmos 121:1-4",
     "autor_original": "Bíblia Sagrada",
-    "categoria": "fe",
+    "autor_slug": "biblia-sagrada",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "Trecho do Salmo 121, da tradição bíblica cristã. É uma oração de viagem ou angústia: o fiel ergue os olhos aos montes e confia que a proteção vem de Deus, guardião vigilante.",
     "palavras_chave": [
       "fe",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

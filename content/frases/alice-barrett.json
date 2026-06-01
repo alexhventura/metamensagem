@@ -1,0 +1,112 @@
+[
+  {
+    "id": "f_csv_2046c10536",
+    "slug": "i-m-a-just-a-mom-when-i-walk-down-the-street",
+    "texto": "I'm a just a mom when I walk down the street.",
+    "autor": "Alice Barrett",
+    "autorSlug": "alice-barrett",
+    "explicacao": "Citação de Alice Barrett sobre temas ligados a reflexao. “I'm a just a mom when I walk down the street.” articula reflexao, walk, down em registro de reflexao, com relevância para contextos como down e street.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "walk",
+        "down",
+        "street"
+      ],
+      "contextos": [
+        "down",
+        "street"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "walk",
+        "down",
+        "street"
+      ],
+      "palavrasChave": [
+        "walk",
+        "down",
+        "street",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "walk",
+        "down",
+        "street",
+        "alice-barrett"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "walk",
+        "down",
+        "street",
+        "reflexao",
+        "walk"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I'm a just a mom when I walk down the street.\" — Alice Barrett | Metamensagem",
+      "descriptionSeo": "Citação de Alice Barrett sobre temas ligados a reflexao. “I'm a just a mom when I walk down the street.” articula reflexao, walk, down em registro de reflexao…",
+      "keywordsSeo": [
+        "frases de Alice Barrett",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases walk",
+        "frases down",
+        "frases street",
+        "walk",
+        "down",
+        "street",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-m-a-just-a-mom-when-i-walk-down-the-street",
+      "relatedKeywords": [
+        "reflexao",
+        "walk",
+        "down",
+        "street",
+        "alice-barrett"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I'm a just a mom when I walk down the street.",
+    "autor_original": "Alice Barrett",
+    "autor_slug": "alice-barrett",
+    "categoria": "reflexao",
+    "contextos": [
+      "down",
+      "street"
+    ],
+    "palavras_chave": [
+      "walk",
+      "down",
+      "street",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

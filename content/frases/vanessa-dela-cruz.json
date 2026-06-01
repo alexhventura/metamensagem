@@ -1,0 +1,133 @@
+[
+  {
+    "id": "f_csv_127cf4a0f9",
+    "slug": "read-books-and-be-happy",
+    "texto": "Read books and be happy.",
+    "autor": "Vanessa Dela Cruz",
+    "autorSlug": "vanessa-dela-cruz",
+    "explicacao": "Citação de Vanessa Dela Cruz sobre temas ligados a felicidade. “Read books and be happy.” articula felicidade, book, books-reading em registro de felicidade, com relevância para contextos como books-reading e happy-life.",
+    "semantica": {
+      "categoriaPrincipal": "felicidade",
+      "categorias": [
+        "felicidade",
+        "book",
+        "books-reading",
+        "happy-life",
+        "love-quotes"
+      ],
+      "contextos": [
+        "books-reading",
+        "happy-life",
+        "love-quotes"
+      ],
+      "emocoes": [
+        "alegria",
+        "felicidade",
+        "amor"
+      ],
+      "temas": [
+        "felicidade",
+        "book",
+        "books-reading",
+        "happy-life",
+        "books",
+        "happy"
+      ],
+      "palavrasChave": [
+        "book",
+        "books-reading",
+        "happy-life",
+        "love-quotes",
+        "felicidade",
+        "alegria",
+        "amor"
+      ],
+      "tagsSeo": [
+        "felicidade",
+        "book",
+        "books-reading",
+        "happy-life",
+        "love-quotes",
+        "alegria",
+        "amor",
+        "vanessa-dela-cruz"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "felicidade",
+        "book",
+        "books-reading",
+        "happy-life",
+        "books",
+        "happy"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Read books and be happy.\" — Vanessa Dela Cruz | Metamensagem",
+      "descriptionSeo": "Citação de Vanessa Dela Cruz sobre temas ligados a felicidade. “Read books and be happy.” articula felicidade, book, books-reading em registro de felicidade,…",
+      "keywordsSeo": [
+        "frases de Vanessa Dela Cruz",
+        "frases sobre felicidade",
+        "frases felicidade",
+        "frases book",
+        "frases books reading",
+        "frases happy life",
+        "book",
+        "books-reading",
+        "happy-life",
+        "love-quotes"
+      ],
+      "canonicalSlug": "read-books-and-be-happy",
+      "relatedKeywords": [
+        "alegria",
+        "felicidade",
+        "amor",
+        "book",
+        "books-reading",
+        "happy-life",
+        "love-quotes",
+        "vanessa-dela-cruz"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Read books and be happy.",
+    "autor_original": "Vanessa Dela Cruz",
+    "autor_slug": "vanessa-dela-cruz",
+    "categoria": "felicidade",
+    "contextos": [
+      "books-reading",
+      "happy-life",
+      "love-quotes"
+    ],
+    "palavras_chave": [
+      "book",
+      "books-reading",
+      "happy-life",
+      "love-quotes",
+      "felicidade",
+      "alegria",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

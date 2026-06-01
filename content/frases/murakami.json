@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_4f3505158d",
+    "slug": "put-a-tiger-on-your-tank",
+    "texto": "Put a tiger on your tank",
+    "autor": "murakami",
+    "autorSlug": "murakami",
+    "explicacao": "Citação de murakami sobre temas ligados a reflexao. “Put a tiger on your tank” articula reflexao, irony, tiger em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "irony"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "irony",
+        "tiger"
+      ],
+      "palavrasChave": [
+        "irony",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "irony",
+        "murakami"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "irony",
+        "tiger",
+        "reflexao",
+        "irony"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Put a tiger on your tank\" — murakami | Metamensagem",
+      "descriptionSeo": "Citação de murakami sobre temas ligados a reflexao. “Put a tiger on your tank” articula reflexao, irony, tiger em registro de reflexao, com relevância para co…",
+      "keywordsSeo": [
+        "frases de murakami",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases irony",
+        "irony",
+        "reflexao"
+      ],
+      "canonicalSlug": "put-a-tiger-on-your-tank",
+      "relatedKeywords": [
+        "reflexao",
+        "irony",
+        "murakami"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Put a tiger on your tank",
+    "autor_original": "murakami",
+    "autor_slug": "murakami",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "irony",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

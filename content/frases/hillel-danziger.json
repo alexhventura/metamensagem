@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_4de061ad7e",
+    "slug": "if-i-am-not-for-myself-who-is-for-me",
+    "texto": "If I am not for myself who is for me?",
+    "autor": "Hillel Danziger",
+    "autorSlug": "hillel-danziger",
+    "explicacao": "Pergunta retórica de Hillel Danziger que provoca temas ligados a autoestima. Ao questionar “If I am not for myself who is for me?”, o texto convida o leitor a revisar crenças sobre autoestima, self-confidence, reflexao, com foco em reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "autoestima",
+      "categorias": [
+        "autoestima",
+        "self-confidence",
+        "reflexao"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "autoestima",
+        "self-confidence",
+        "reflexao",
+        "myself"
+      ],
+      "palavrasChave": [
+        "self-confidence",
+        "reflexao",
+        "autoestima"
+      ],
+      "tagsSeo": [
+        "autoestima",
+        "self-confidence",
+        "reflexao",
+        "hillel-danziger"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "autoestima",
+        "self-confidence",
+        "reflexao",
+        "myself",
+        "autoestima",
+        "self-confidence"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"If I am not for myself who is for me?\" — Hillel Danziger | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Hillel Danziger que provoca temas ligados a autoestima. Ao questionar “If I am not for myself who is for me?”, o texto convida o leitor a…",
+      "keywordsSeo": [
+        "frases de Hillel Danziger",
+        "frases sobre autoestima",
+        "frases autoestima",
+        "frases self confidence",
+        "frases reflexao",
+        "self-confidence",
+        "reflexao",
+        "autoestima"
+      ],
+      "canonicalSlug": "if-i-am-not-for-myself-who-is-for-me",
+      "relatedKeywords": [
+        "autoestima",
+        "self-confidence",
+        "reflexao",
+        "hillel-danziger"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "If I am not for myself who is for me?",
+    "autor_original": "Hillel Danziger",
+    "autor_slug": "hillel-danziger",
+    "categoria": "autoestima",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "self-confidence",
+      "reflexao",
+      "autoestima"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

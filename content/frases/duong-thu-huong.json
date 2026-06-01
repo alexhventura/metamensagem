@@ -1,0 +1,108 @@
+[
+  {
+    "id": "f_csv_fac0081139",
+    "slug": "a-rich-man-loves-to-work-a-poor-man-loves-to-eat",
+    "texto": "A rich man loves to work, a poor man loves to eat.",
+    "autor": "Dương Thu Hương",
+    "autorSlug": "duong-thu-huong",
+    "explicacao": "Citação de Dương Thu Hương sobre vínculos afetivos e cuidado mútuo. “A rich man loves to work, a poor man loves to eat.” articula reflexao, wealth, loves em registro de reflexao, com relevância para contextos como trabalho e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "wealth"
+      ],
+      "contextos": [
+        "trabalho",
+        "reflexao"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "reflexao",
+        "wealth",
+        "loves"
+      ],
+      "palavrasChave": [
+        "wealth",
+        "reflexao",
+        "trabalho",
+        "amor"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "wealth",
+        "trabalho",
+        "amor",
+        "duong-thu-huong"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "wealth",
+        "loves",
+        "reflexao",
+        "wealth"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A rich man loves to work, a poor man loves to eat.\" — Dương Thu Hương | Metamensagem",
+      "descriptionSeo": "Citação de Dương Thu Hương sobre vínculos afetivos e cuidado mútuo. “A rich man loves to work, a poor man loves to eat.” articula reflexao, wealth, loves em r…",
+      "keywordsSeo": [
+        "frases de Dương Thu Hương",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases wealth",
+        "frases trabalho",
+        "wealth",
+        "reflexao",
+        "trabalho",
+        "amor"
+      ],
+      "canonicalSlug": "a-rich-man-loves-to-work-a-poor-man-loves-to-eat",
+      "relatedKeywords": [
+        "amor",
+        "reflexao",
+        "wealth",
+        "duong-thu-huong"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A rich man loves to work, a poor man loves to eat.",
+    "autor_original": "Dương Thu Hương",
+    "autor_slug": "duong-thu-huong",
+    "categoria": "reflexao",
+    "contextos": [
+      "trabalho",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "wealth",
+      "reflexao",
+      "trabalho",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

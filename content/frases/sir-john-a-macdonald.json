@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_e7cad407f0",
+    "slug": "old-tomorrow",
+    "texto": "'Old Tomorrow.'",
+    "autor": "Sir John A. Macdonald",
+    "autorSlug": "sir-john-a-macdonald",
+    "explicacao": "Citação de Sir John A. Macdonald sobre temas ligados a tempo. “'Old Tomorrow.'” articula tempo, canada, canadians em registro de tempo, com relevância para contextos como canadians.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "canada",
+        "canadians"
+      ],
+      "contextos": [
+        "canadians"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "canada",
+        "canadians",
+        "tomorrow"
+      ],
+      "palavrasChave": [
+        "canada",
+        "canadians",
+        "tempo"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "canada",
+        "canadians",
+        "sir-john-a-macdonald"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "canada",
+        "canadians",
+        "tomorrow",
+        "tempo",
+        "canada"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"'Old Tomorrow.'\" — Sir John A. Macdonald | Metamensagem",
+      "descriptionSeo": "Citação de Sir John A. Macdonald sobre temas ligados a tempo. “'Old Tomorrow.'” articula tempo, canada, canadians em registro de tempo, com relevância para co…",
+      "keywordsSeo": [
+        "frases de Sir John A. Macdonald",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases canada",
+        "frases canadians",
+        "canada",
+        "canadians",
+        "tempo"
+      ],
+      "canonicalSlug": "old-tomorrow",
+      "relatedKeywords": [
+        "tempo",
+        "canada",
+        "canadians",
+        "sir-john-a-macdonald"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "'Old Tomorrow.'",
+    "autor_original": "Sir John A. Macdonald",
+    "autor_slug": "sir-john-a-macdonald",
+    "categoria": "tempo",
+    "contextos": [
+      "canadians"
+    ],
+    "palavras_chave": [
+      "canada",
+      "canadians",
+      "tempo"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

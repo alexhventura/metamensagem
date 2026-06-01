@@ -2,27 +2,114 @@
   {
     "id": "f_uvzzsda23",
     "slug": "acreditar-e-o-nome-do-primeiro-degrau-de-uma-escada-chamada",
+    "texto": "Acreditar é o nome do primeiro degrau de uma escada chamada sucesso . Cigano Romani",
+    "autor": "Cigano Romani",
+    "autorSlug": "cigano-romani",
+    "explicacao": "Mensagem atribuída a Cigano Romani, no registro motivacional popular. Usa a escada como metáfora: acreditar seria o primeiro degrau imprescindível rumo ao sucesso.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "sucesso"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao",
+        "sucesso"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "sucesso",
+        "acreditar",
+        "primeiro",
+        "degrau",
+        "escada",
+        "chamada"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "sucesso",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "sucesso",
+        "inspiracao",
+        "cigano-romani"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "sucesso",
+        "acreditar",
+        "primeiro",
+        "degrau"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Acreditar é o nome do primeiro degrau de uma escada …\" — Cigano Romani | Metamensagem",
+      "descriptionSeo": "Mensagem atribuída a Cigano Romani, no registro motivacional popular. Usa a escada como metáfora: acreditar seria o primeiro degrau imprescindível rumo ao suc…",
+      "keywordsSeo": [
+        "frases de Cigano Romani",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "sucesso",
+        "inspiracao"
+      ],
+      "canonicalSlug": "acreditar-e-o-nome-do-primeiro-degrau-de-uma-escada-chamada",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "sucesso",
+        "cigano-romani"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Acreditar é o nome do primeiro degrau de uma escada chamada sucesso . Cigano Romani",
     "autor_original": "Cigano Romani",
-    "categoria": "inspiracional",
+    "autor_slug": "cigano-romani",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao",
       "sucesso"
     ],
-    "explicacao": "Mensagem atribuída a Cigano Romani, no registro motivacional popular. Usa a escada como metáfora: acreditar seria o primeiro degrau imprescindível rumo ao sucesso.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
-      "sucesso"
+      "sucesso",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

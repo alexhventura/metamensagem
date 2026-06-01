@@ -1,0 +1,107 @@
+[
+  {
+    "id": "f_csv_3e4ece617d",
+    "slug": "my-mother-once-said-that-having-a-small-child-is-like-having-a-permanently-drunk",
+    "texto": "My mother once said that having a small child is like having a permanently drunk houseguest.",
+    "autor": "Moira Hodgson",
+    "autorSlug": "moira-hodgson",
+    "explicacao": "Metáfora atribuída a Moira Hodgson: compara elementos do cotidiano para falar de temas ligados a familia. O trecho “My mother once said that having a small child is like having a permanently drunk houseguest.” usa imagem concreta para lembrar que familia, children, reflexao pedem movimento e interpretação pessoal, em tom de reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "children",
+        "reflexao"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "children",
+        "reflexao",
+        "having",
+        "mother",
+        "small",
+        "child",
+        "permanently"
+      ],
+      "palavrasChave": [
+        "children",
+        "reflexao",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "children",
+        "reflexao",
+        "moira-hodgson"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "children",
+        "reflexao",
+        "having",
+        "mother",
+        "small"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My mother once said that having a small child is lik…\" — Moira Hodgson | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Moira Hodgson: compara elementos do cotidiano para falar de temas ligados a familia. O trecho “My mother once said that having a small ch…",
+      "keywordsSeo": [
+        "frases de Moira Hodgson",
+        "frases sobre familia",
+        "frases familia",
+        "frases children",
+        "frases reflexao",
+        "children",
+        "reflexao",
+        "familia"
+      ],
+      "canonicalSlug": "my-mother-once-said-that-having-a-small-child-is-like-having-a-permanently-drunk",
+      "relatedKeywords": [
+        "familia",
+        "children",
+        "reflexao",
+        "moira-hodgson"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My mother once said that having a small child is like having a permanently drunk houseguest.",
+    "autor_original": "Moira Hodgson",
+    "autor_slug": "moira-hodgson",
+    "categoria": "familia",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "children",
+      "reflexao",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

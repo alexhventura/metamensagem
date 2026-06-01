@@ -1,0 +1,121 @@
+[
+  {
+    "id": "f_csv_b012fd8b65",
+    "slug": "i-decide-a-book-is-bad-if-i-get-angrier-and-angrier-as-i-read-it",
+    "texto": "I decide a book is bad if I get angrier and angrier as I read it.",
+    "autor": "Daniel T. O'Hara",
+    "autorSlug": "daniel-t-o-hara",
+    "explicacao": "Citação de Daniel T. O'Hara sobre temas ligados a reflexao. “I decide a book is bad if I get angrier and angrier as I read it.” articula reflexao, anger, badness em registro de reflexao, com relevância para contextos como badness e books.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "anger",
+        "badness",
+        "books",
+        "reading"
+      ],
+      "contextos": [
+        "badness",
+        "books",
+        "reading"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "anger",
+        "badness",
+        "books",
+        "angrier",
+        "decide"
+      ],
+      "palavrasChave": [
+        "anger",
+        "badness",
+        "books",
+        "reading",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "anger",
+        "badness",
+        "books",
+        "reading",
+        "daniel-t-o-hara"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "anger",
+        "badness",
+        "books",
+        "angrier",
+        "decide"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I decide a book is bad if I get angrier and angrier …\" — Daniel T. O'Hara | Metamensagem",
+      "descriptionSeo": "Citação de Daniel T. O'Hara sobre temas ligados a reflexao. “I decide a book is bad if I get angrier and angrier as I read it.” articula reflexao, anger, badn…",
+      "keywordsSeo": [
+        "frases de Daniel T. O'Hara",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases anger",
+        "frases badness",
+        "frases books",
+        "anger",
+        "badness",
+        "books",
+        "reading"
+      ],
+      "canonicalSlug": "i-decide-a-book-is-bad-if-i-get-angrier-and-angrier-as-i-read-it",
+      "relatedKeywords": [
+        "reflexao",
+        "anger",
+        "badness",
+        "books",
+        "reading",
+        "daniel-t-o-hara"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I decide a book is bad if I get angrier and angrier as I read it.",
+    "autor_original": "Daniel T. O'Hara",
+    "autor_slug": "daniel-t-o-hara",
+    "categoria": "reflexao",
+    "contextos": [
+      "badness",
+      "books",
+      "reading"
+    ],
+    "palavras_chave": [
+      "anger",
+      "badness",
+      "books",
+      "reading",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

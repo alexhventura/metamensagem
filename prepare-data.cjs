@@ -17,6 +17,38 @@
 const fs = require('fs');
 const path = require('path');
 
+function sleepMs(ms) {
+    const end = Date.now() + ms;
+    while (Date.now() < end) { /* sync wait for Windows locks */ }
+}
+
+function atomicWriteJson(filePath, data, retries = 8) {
+    const dir = path.dirname(filePath);
+    fs.mkdirSync(dir, { recursive: true });
+    const body = JSON.stringify(data);
+    const tmp = path.join(dir, `._tmp_${path.basename(filePath)}_${process.pid}`);
+    for (let attempt = 0; attempt < retries; attempt++) {
+        try {
+            fs.writeFileSync(tmp, body, 'utf8');
+            if (fs.existsSync(filePath)) {
+                try {
+                    fs.renameSync(tmp, filePath);
+                } catch {
+                    fs.copyFileSync(tmp, filePath);
+                    try { fs.unlinkSync(tmp); } catch { /* ignore */ }
+                }
+            } else {
+                fs.renameSync(tmp, filePath);
+            }
+            return;
+        } catch (e) {
+            try { if (fs.existsSync(tmp)) fs.unlinkSync(tmp); } catch { /* ignore */ }
+            if (attempt === retries - 1) throw e;
+            sleepMs(200 * (attempt + 1));
+        }
+    }
+}
+
 const INPUT_METAFORAS = path.join(__dirname, 'public', 'metaforas.json');
 const INPUT_FRASES = path.join(__dirname, 'public', 'frases.json');
 const OUTPUT_DIR = path.join(__dirname, 'public', 'metaforas');
@@ -160,13 +192,13 @@ async function run() {
         authorMap[autor] = (authorMap[autor] || 0) + 1;
     }
 
-    fs.writeFileSync(INDEX_METAFORAS_FILE, JSON.stringify(indexMetaforas));
-    fs.writeFileSync(TAGS_FILE, JSON.stringify(Object.fromEntries(Object.entries(tagMap).sort((a,b) => b[1] - a[1]))));
-    fs.writeFileSync(AUTORES_FILE, JSON.stringify(Object.entries(authorMap).map(([autor, quantidade]) => ({ autor, quantidade })).sort((a, b) => b.quantidade - a.quantidade)));
+    atomicWriteJson(INDEX_METAFORAS_FILE, indexMetaforas);
+    atomicWriteJson(TAGS_FILE, Object.fromEntries(Object.entries(tagMap).sort((a,b) => b[1] - a[1])));
+    atomicWriteJson(AUTORES_FILE, Object.entries(authorMap).map(([autor, quantidade]) => ({ autor, quantidade })).sort((a, b) => b.quantidade - a.quantidade));
     
     const cmsFromContent = buildCmsFromContent();
     if (cmsFromContent?.length) {
-        fs.writeFileSync(CMS_FRASES_FILE, JSON.stringify(cmsFromContent));
+        atomicWriteJson(CMS_FRASES_FILE, cmsFromContent);
         const indexFromCms = cmsFromContent.map((f) => ({
             id: f.id,
             slug: f.slug,
@@ -175,7 +207,7 @@ async function run() {
             autor: f.autor_original,
             tags: f.palavras_chave?.length ? f.palavras_chave : [f.categoria, ...f.contextos],
         }));
-        fs.writeFileSync(INDEX_FRASES_FILE, JSON.stringify(indexFromCms));
+        atomicWriteJson(INDEX_FRASES_FILE, indexFromCms);
         console.log(`✅ frases-cms.json + frases-index.json — ${cmsFromContent.length} frases (content/).`);
     } else if (fs.existsSync(INPUT_FRASES)) {
         const frases = JSON.parse(fs.readFileSync(INPUT_FRASES, 'utf8'));
@@ -199,7 +231,7 @@ async function run() {
             textoKeys.add(key);
             merged.push(normalized);
         }
-        fs.writeFileSync(INDEX_FRASES_FILE, JSON.stringify(merged));
+        atomicWriteJson(INDEX_FRASES_FILE, merged);
         console.log(`✅ frases-index.json — ${merged.length} frases (${frases.length} locais + enriquecidas, deduplicadas).`);
     }
     console.log('✅ Metadata e índices gerados.');
@@ -210,9 +242,16 @@ async function run() {
         const chunk = metaforas.slice(i, i + CHUNK_SIZE);
         chunk.forEach(m => {
             const filePath = path.join(OUTPUT_DIR, `${m.id}.json`);
-            fs.writeFileSync(filePath, JSON.stringify(m));
+            atomicWriteJson(filePath, m);
         });
         console.log(`📦 Processados ${Math.min(i + CHUNK_SIZE, metaforas.length)} / ${metaforas.length}`);
+    }
+
+    try {
+        const { generateHomeBootstrap } = await import('./scripts/generate-home-bootstrap.mjs');
+        generateHomeBootstrap();
+    } catch (e) {
+        console.warn('⚠ home-bootstrap:', e.message);
     }
 
     console.log('✨ Fim do processamento.');

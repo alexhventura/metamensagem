@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_39cb27785c",
+    "slug": "some-say-they-see-poetry-in-my-paintings-i-see-only-science",
+    "texto": "Some say they see poetry in my paintings I see only science.",
+    "autor": "Georges Seurat",
+    "autorSlug": "georges-seurat",
+    "explicacao": "Citação de Georges Seurat sobre temas ligados a familia. “Some say they see poetry in my paintings I see only science.” articula familia, poetry, see em registro de familia, com relevância para contextos como see e say.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "poetry",
+        "see",
+        "say"
+      ],
+      "contextos": [
+        "see",
+        "say"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "poetry",
+        "see",
+        "say",
+        "paintings",
+        "science"
+      ],
+      "palavrasChave": [
+        "poetry",
+        "see",
+        "say",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "poetry",
+        "see",
+        "say",
+        "georges-seurat"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "poetry",
+        "see",
+        "say",
+        "paintings",
+        "science"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Some say they see poetry in my paintings I see only …\" — Georges Seurat | Metamensagem",
+      "descriptionSeo": "Citação de Georges Seurat sobre temas ligados a familia. “Some say they see poetry in my paintings I see only science.” articula familia, poetry, see em regis…",
+      "keywordsSeo": [
+        "frases de Georges Seurat",
+        "frases sobre familia",
+        "frases familia",
+        "frases poetry",
+        "frases see",
+        "frases say",
+        "poetry",
+        "see",
+        "say",
+        "familia"
+      ],
+      "canonicalSlug": "some-say-they-see-poetry-in-my-paintings-i-see-only-science",
+      "relatedKeywords": [
+        "familia",
+        "poetry",
+        "see",
+        "say",
+        "georges-seurat"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Some say they see poetry in my paintings I see only science.",
+    "autor_original": "Georges Seurat",
+    "autor_slug": "georges-seurat",
+    "categoria": "familia",
+    "contextos": [
+      "see",
+      "say"
+    ],
+    "palavras_chave": [
+      "poetry",
+      "see",
+      "say",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

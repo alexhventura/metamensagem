@@ -2,25 +2,113 @@
   {
     "id": "f_tzb3b8lgy",
     "slug": "e-a-inveja-a-primeira-a-descobrir-todos-os-meritos",
+    "texto": "É a inveja a primeira a descobrir todos os méritos.",
+    "autor": "Emanuel Wertheimer",
+    "autorSlug": "emanuel-wertheimer",
+    "explicacao": "Emanuel Wertheimer ironiza a inveja como detector involuntário de méritos alheios. Aforismo sobre como o ciume revela, antes de tudo, o que o invejoso reconhece de valioso no outro — mesmo negando admiração.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inveja",
+        "primeira",
+        "descobrir",
+        "todos",
+        "méritos"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "emanuel-wertheimer"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inveja",
+        "primeira",
+        "descobrir"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"É a inveja a primeira a descobrir todos os méritos.\" — Emanuel Wertheimer | Metamensagem",
+      "descriptionSeo": "Emanuel Wertheimer ironiza a inveja como detector involuntário de méritos alheios. Aforismo sobre como o ciume revela, antes de tudo, o que o invejoso reconhe…",
+      "keywordsSeo": [
+        "frases de Emanuel Wertheimer",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "e-a-inveja-a-primeira-a-descobrir-todos-os-meritos",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "emanuel-wertheimer"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "É a inveja a primeira a descobrir todos os méritos.",
     "autor_original": "Emanuel Wertheimer",
-    "categoria": "inspiracional",
+    "autor_slug": "emanuel-wertheimer",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "reflexao"
     ],
-    "explicacao": "Emanuel Wertheimer ironiza a inveja como detector involuntário de méritos alheios. Aforismo sobre como o ciume revela, antes de tudo, o que o invejoso reconhece de valioso no outro — mesmo negando admiração.",
     "palavras_chave": [
       "inspiracional",
-      "reflexao"
+      "reflexao",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

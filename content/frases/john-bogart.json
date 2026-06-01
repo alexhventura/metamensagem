@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_50a10b1ab0",
+    "slug": "if-a-man-bites-a-dog-that-is-news",
+    "texto": "If a man bites a dog that is news.",
+    "autor": "John Bogart",
+    "autorSlug": "john-bogart",
+    "explicacao": "Citação de John Bogart sobre temas ligados a reflexao. “If a man bites a dog that is news.” articula reflexao, news, bites em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "news"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "news",
+        "bites"
+      ],
+      "palavrasChave": [
+        "news",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "news",
+        "john-bogart"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "news",
+        "bites",
+        "reflexao",
+        "news"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"If a man bites a dog that is news.\" — John Bogart | Metamensagem",
+      "descriptionSeo": "Citação de John Bogart sobre temas ligados a reflexao. “If a man bites a dog that is news.” articula reflexao, news, bites em registro de reflexao, com relevâ…",
+      "keywordsSeo": [
+        "frases de John Bogart",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases news",
+        "news",
+        "reflexao"
+      ],
+      "canonicalSlug": "if-a-man-bites-a-dog-that-is-news",
+      "relatedKeywords": [
+        "reflexao",
+        "news",
+        "john-bogart"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "If a man bites a dog that is news.",
+    "autor_original": "John Bogart",
+    "autor_slug": "john-bogart",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "news",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_e49528c1f3",
+    "slug": "if-i-am-not-for-myself-who-will-be-2",
+    "texto": "If I am not for myself who will be?",
+    "autor": "Pirke Avot",
+    "autorSlug": "pirke-avot",
+    "explicacao": "Pergunta retórica de Pirke Avot que provoca temas ligados a sabedoria. Ao questionar “If I am not for myself who will be?”, o texto convida o leitor a revisar crenças sobre sabedoria, self, knowledge, com foco em knowledge.",
+    "semantica": {
+      "categoriaPrincipal": "sabedoria",
+      "categorias": [
+        "sabedoria",
+        "self",
+        "knowledge"
+      ],
+      "contextos": [
+        "knowledge"
+      ],
+      "emocoes": [],
+      "temas": [
+        "sabedoria",
+        "self",
+        "knowledge",
+        "myself"
+      ],
+      "palavrasChave": [
+        "self",
+        "knowledge",
+        "sabedoria"
+      ],
+      "tagsSeo": [
+        "sabedoria",
+        "self",
+        "knowledge",
+        "pirke-avot"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "sabedoria",
+        "self",
+        "knowledge",
+        "myself",
+        "sabedoria",
+        "self"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"If I am not for myself who will be?\" — Pirke Avot | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Pirke Avot que provoca temas ligados a sabedoria. Ao questionar “If I am not for myself who will be?”, o texto convida o leitor a revisar…",
+      "keywordsSeo": [
+        "frases de Pirke Avot",
+        "frases sobre sabedoria",
+        "frases sabedoria",
+        "frases self",
+        "frases knowledge",
+        "self",
+        "knowledge",
+        "sabedoria"
+      ],
+      "canonicalSlug": "if-i-am-not-for-myself-who-will-be-2",
+      "relatedKeywords": [
+        "sabedoria",
+        "self",
+        "knowledge",
+        "pirke-avot"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "If I am not for myself who will be?",
+    "autor_original": "Pirke Avot",
+    "autor_slug": "pirke-avot",
+    "categoria": "sabedoria",
+    "contextos": [
+      "knowledge"
+    ],
+    "palavras_chave": [
+      "self",
+      "knowledge",
+      "sabedoria"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

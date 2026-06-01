@@ -1,0 +1,97 @@
+[
+  {
+    "id": "f_csv_5246d5d030",
+    "slug": "here-there-every-where",
+    "texto": "Here,there,every where",
+    "autor": "mary dohning hahn",
+    "autorSlug": "mary-dohning-hahn",
+    "explicacao": "Citação de mary dohning hahn sobre temas ligados a reflexao. “Here,there,every where” articula reflexao, mystery, there em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "mystery"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "mystery",
+        "there",
+        "every",
+        "where"
+      ],
+      "palavrasChave": [
+        "mystery",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "mystery",
+        "mary-dohning-hahn"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "mystery",
+        "there",
+        "every",
+        "where",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Here,there,every where\" — mary dohning hahn | Metamensagem",
+      "descriptionSeo": "Citação de mary dohning hahn sobre temas ligados a reflexao. “Here,there,every where” articula reflexao, mystery, there em registro de reflexao, com relevânci…",
+      "keywordsSeo": [
+        "frases de mary dohning hahn",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases mystery",
+        "mystery",
+        "reflexao"
+      ],
+      "canonicalSlug": "here-there-every-where",
+      "relatedKeywords": [
+        "reflexao",
+        "mystery",
+        "mary-dohning-hahn"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Here,there,every where",
+    "autor_original": "mary dohning hahn",
+    "autor_slug": "mary-dohning-hahn",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "mystery",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

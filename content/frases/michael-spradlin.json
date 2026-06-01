@@ -1,0 +1,126 @@
+[
+  {
+    "id": "f_csv_e21af27447",
+    "slug": "i-remember-as-a-child-my-mother-loved-dean-martin-every-christmas-about-the-o",
+    "texto": "I remember as a child, my mother loved Dean Martin. Every Christmas, about the only Christmas album that we were able to listen to was the Dean Martin Christmas album.",
+    "autor": "Michael Spradlin",
+    "autorSlug": "michael-spradlin",
+    "explicacao": "Citação de Michael Spradlin sobre vínculos afetivos e cuidado mútuo. “I remember as a child, my mother loved Dean Martin. Every Christmas, about the only Christmas alb…” articula familia, mother, child em registro de familia, com relevância para contextos como natal e child.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "mother",
+        "child",
+        "remember"
+      ],
+      "contextos": [
+        "natal",
+        "child",
+        "remember"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "familia",
+        "mother",
+        "child",
+        "remember",
+        "christmas",
+        "martin",
+        "album"
+      ],
+      "palavrasChave": [
+        "mother",
+        "child",
+        "remember",
+        "familia",
+        "natal",
+        "amor"
+      ],
+      "tagsSeo": [
+        "familia",
+        "mother",
+        "child",
+        "remember",
+        "natal",
+        "amor",
+        "michael-spradlin"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 42,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "mother",
+        "child",
+        "remember",
+        "christmas",
+        "martin"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I remember as a child, my mother loved Dean Martin. …\" — Michael Spradlin | Metamensagem",
+      "descriptionSeo": "Citação de Michael Spradlin sobre vínculos afetivos e cuidado mútuo. “I remember as a child, my mother loved Dean Martin. Every Christmas, about the only Chri…",
+      "keywordsSeo": [
+        "frases de Michael Spradlin",
+        "frases sobre familia",
+        "frases familia",
+        "frases mother",
+        "frases natal",
+        "frases child",
+        "mother",
+        "child",
+        "remember",
+        "familia"
+      ],
+      "canonicalSlug": "i-remember-as-a-child-my-mother-loved-dean-martin-every-christmas-about-the-o",
+      "relatedKeywords": [
+        "amor",
+        "familia",
+        "mother",
+        "child",
+        "remember",
+        "michael-spradlin"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I remember as a child, my mother loved Dean Martin. Every Christmas, about the only Christmas album that we were able to listen to was the Dean Martin Christmas album.",
+    "autor_original": "Michael Spradlin",
+    "autor_slug": "michael-spradlin",
+    "categoria": "familia",
+    "contextos": [
+      "natal",
+      "child",
+      "remember"
+    ],
+    "palavras_chave": [
+      "mother",
+      "child",
+      "remember",
+      "familia",
+      "natal",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -2,25 +2,111 @@
   {
     "id": "f_4cfwiohvx",
     "slug": "voce-pode-fazer-tudo-que-quiser-se-voce-for-otimista",
+    "texto": "Você pode fazer tudo que quiser, se você for otimista.",
+    "autor": "O lado bom da vida",
+    "autorSlug": "o-lado-bom-da-vida",
+    "explicacao": "Frase do arquivo “O lado bom da vida”, possivelmente ligada a filme ou coleção inspiracional. Defende que otimismo amplia possibilidades de ação. Clichê motivacional sobre atitude mental e realização.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "fazer",
+        "quiser",
+        "otimista"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "o-lado-bom-da-vida"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "fazer",
+        "quiser",
+        "otimista"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Você pode fazer tudo que quiser, se você for otimista.\" — O lado bom da vida | Metamensagem",
+      "descriptionSeo": "Frase do arquivo “O lado bom da vida”, possivelmente ligada a filme ou coleção inspiracional. Defende que otimismo amplia possibilidades de ação. Clichê motiv…",
+      "keywordsSeo": [
+        "frases de O lado bom da vida",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "voce-pode-fazer-tudo-que-quiser-se-voce-for-otimista",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "o-lado-bom-da-vida"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Você pode fazer tudo que quiser, se você for otimista.",
     "autor_original": "O lado bom da vida",
-    "categoria": "inspiracional",
+    "autor_slug": "o-lado-bom-da-vida",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Frase do arquivo “O lado bom da vida”, possivelmente ligada a filme ou coleção inspiracional. Defende que otimismo amplia possibilidades de ação. Clichê motivacional sobre atitude mental e realização.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -2,29 +2,130 @@
   {
     "id": "f_2654qi0df",
     "slug": "seja-grato-por-tudo-que-voce-viveu-ate-aqui-gratidao-deixa",
+    "texto": "⁠Seja grato por tudo que você viveu até aqui, gratidão deixa a vida mais leve, te torna uma pessoa mais nobre e feliz.",
+    "autor": "Guilherme Paixão",
+    "autorSlug": "guilherme-paixao",
+    "explicacao": "Guilherme Paixão prega gratidão pelo que se viveu como caminho para leveza e felicidade. Tom de conteúdo motivacional sobre reconhecer o passado como base para uma vida mais nobre e serena.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "amor",
+        "felicidade",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "felicidade",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [
+        "gratidao",
+        "felicidade",
+        "amor"
+      ],
+      "temas": [
+        "motivacao",
+        "amor",
+        "felicidade",
+        "inspiracional",
+        "grato",
+        "viveu",
+        "gratidão",
+        "deixa"
+      ],
+      "palavrasChave": [
+        "amor",
+        "felicidade",
+        "inspiracional",
+        "motivacao",
+        "inspiracao",
+        "gratidao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "amor",
+        "felicidade",
+        "inspiracional",
+        "inspiracao",
+        "gratidao",
+        "guilherme-paixao"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 39,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "amor",
+        "felicidade",
+        "inspiracional",
+        "grato",
+        "viveu"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠Seja grato por tudo que você viveu até aqui, gratid…\" — Guilherme Paixão | Metamensagem",
+      "descriptionSeo": "Guilherme Paixão prega gratidão pelo que se viveu como caminho para leveza e felicidade. Tom de conteúdo motivacional sobre reconhecer o passado como base par…",
+      "keywordsSeo": [
+        "frases de Guilherme Paixão",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases amor",
+        "frases inspiracao",
+        "frases felicidade",
+        "amor",
+        "felicidade",
+        "inspiracional",
+        "motivacao"
+      ],
+      "canonicalSlug": "seja-grato-por-tudo-que-voce-viveu-ate-aqui-gratidao-deixa",
+      "relatedKeywords": [
+        "gratidao",
+        "felicidade",
+        "amor",
+        "motivacao",
+        "inspiracional",
+        "guilherme-paixao"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠Seja grato por tudo que você viveu até aqui, gratidão deixa a vida mais leve, te torna uma pessoa mais nobre e feliz.",
     "autor_original": "Guilherme Paixão",
-    "categoria": "amor",
+    "autor_slug": "guilherme-paixao",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "felicidade",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "Guilherme Paixão prega gratidão pelo que se viveu como caminho para leveza e felicidade. Tom de conteúdo motivacional sobre reconhecer o passado como base para uma vida mais nobre e serena.",
     "palavras_chave": [
       "amor",
       "felicidade",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao",
+      "gratidao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -2,27 +2,118 @@
   {
     "id": "f_82edkl12e",
     "slug": "a-desistencia-de-hoje-pode-ser-o-arrependimento-do-amanha",
+    "texto": "⁠A desistência de hoje pode ser o arrependimento do amanhã.",
+    "autor": "Juvenildo Pessoa",
+    "autorSlug": "juvenildo-pessoa",
+    "explicacao": "Juvenildo Pessoa alerta que desistir hoje gera arrependimento amanhã. Frase motivacional sobre consequências futuras da falta de perseverança, no estilo de lembretes matinais ou de bom-dia.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "termino",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional",
+        "desistência",
+        "arrependimento",
+        "amanhã"
+      ],
+      "palavrasChave": [
+        "bom-dia",
+        "inspiracional",
+        "motivacao",
+        "inspiracao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional",
+        "inspiracao",
+        "termino",
+        "juvenildo-pessoa"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional",
+        "desistência",
+        "arrependimento",
+        "amanhã"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠A desistência de hoje pode ser o arrependimento do …\" — Juvenildo Pessoa | Metamensagem",
+      "descriptionSeo": "Juvenildo Pessoa alerta que desistir hoje gera arrependimento amanhã. Frase motivacional sobre consequências futuras da falta de perseverança, no estilo de le…",
+      "keywordsSeo": [
+        "frases de Juvenildo Pessoa",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases bom dia",
+        "frases inspiracao",
+        "frases termino",
+        "bom-dia",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "a-desistencia-de-hoje-pode-ser-o-arrependimento-do-amanha",
+      "relatedKeywords": [
+        "motivacao",
+        "bom-dia",
+        "inspiracional",
+        "juvenildo-pessoa"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠A desistência de hoje pode ser o arrependimento do amanhã.",
     "autor_original": "Juvenildo Pessoa",
-    "categoria": "bom-dia",
+    "autor_slug": "juvenildo-pessoa",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
+      "termino",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "Juvenildo Pessoa alerta que desistir hoje gera arrependimento amanhã. Frase motivacional sobre consequências futuras da falta de perseverança, no estilo de lembretes matinais ou de bom-dia.",
     "palavras_chave": [
       "bom-dia",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

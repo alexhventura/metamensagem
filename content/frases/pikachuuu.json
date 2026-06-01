@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_df6dfd9a54",
+    "slug": "two-worlds-one-family",
+    "texto": "Two worlds one family",
+    "autor": "Pikachuuu",
+    "autorSlug": "pikachuuu",
+    "explicacao": "Citação de Pikachuuu sobre temas ligados a familia. “Two worlds one family” articula familia, lonely, tarzan em registro de familia, com relevância para contextos como tarzan.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "lonely",
+        "tarzan"
+      ],
+      "contextos": [
+        "tarzan"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "lonely",
+        "tarzan",
+        "worlds",
+        "family"
+      ],
+      "palavrasChave": [
+        "lonely",
+        "tarzan",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "lonely",
+        "tarzan",
+        "pikachuuu"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "lonely",
+        "tarzan",
+        "worlds",
+        "family",
+        "familia"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Two worlds one family\" — Pikachuuu | Metamensagem",
+      "descriptionSeo": "Citação de Pikachuuu sobre temas ligados a familia. “Two worlds one family” articula familia, lonely, tarzan em registro de familia, com relevância para conte…",
+      "keywordsSeo": [
+        "frases de Pikachuuu",
+        "frases sobre familia",
+        "frases familia",
+        "frases lonely",
+        "frases tarzan",
+        "lonely",
+        "tarzan",
+        "familia"
+      ],
+      "canonicalSlug": "two-worlds-one-family",
+      "relatedKeywords": [
+        "familia",
+        "lonely",
+        "tarzan",
+        "pikachuuu"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Two worlds one family",
+    "autor_original": "Pikachuuu",
+    "autor_slug": "pikachuuu",
+    "categoria": "familia",
+    "contextos": [
+      "tarzan"
+    ],
+    "palavras_chave": [
+      "lonely",
+      "tarzan",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

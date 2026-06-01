@@ -1,0 +1,98 @@
+[
+  {
+    "id": "f_csv_92d3e1da38",
+    "slug": "tastes-like-something-that-rhymes-with-cat-apollon",
+    "texto": "Tastes like something that rhymes with cat.\" -Apollon",
+    "autor": "Kate Wrath",
+    "autorSlug": "kate-wrath",
+    "explicacao": "Metáfora atribuída a Kate Wrath: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “Tastes like something that rhymes with cat.\" -Apollon” usa imagem concreta para lembrar que reflexao, food, tastes pedem movimento e interpretação pessoal, em tom de reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "food"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "food",
+        "tastes",
+        "something",
+        "rhymes",
+        "apollon"
+      ],
+      "palavrasChave": [
+        "food",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "food",
+        "kate-wrath"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "food",
+        "tastes",
+        "something",
+        "rhymes",
+        "apollon"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Tastes like something that rhymes with cat.\" -Apollon\" — Kate Wrath | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Kate Wrath: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “Tastes like something that rhymes with cat.\"…",
+      "keywordsSeo": [
+        "frases de Kate Wrath",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases food",
+        "food",
+        "reflexao"
+      ],
+      "canonicalSlug": "tastes-like-something-that-rhymes-with-cat-apollon",
+      "relatedKeywords": [
+        "reflexao",
+        "food",
+        "kate-wrath"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Tastes like something that rhymes with cat.\" -Apollon",
+    "autor_original": "Kate Wrath",
+    "autor_slug": "kate-wrath",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "food",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

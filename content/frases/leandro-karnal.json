@@ -2,25 +2,111 @@
   {
     "id": "f_oybu3091q",
     "slug": "ainda-que-eu-seja-um-otimista-melancolico-sou-um-otimista",
+    "texto": "Ainda que eu seja um otimista melancólico, sou um otimista.",
+    "autor": "Leandro Karnal",
+    "autorSlug": "leandro-karnal",
+    "explicacao": "Leandro Karnal costuma falar em palestras e livros sobre conviver com a melancolia sem renunciar à esperança. Aqui ele admite a contradição humana — ver o lado sombrio e ainda assim escolher o otimismo. A citação resume sua postura filosófica acessível ao público brasileiro.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "ainda",
+        "melancólico"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "leandro-karnal"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "ainda",
+        "melancólico"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Ainda que eu seja um otimista melancólico, sou um ot…\" — Leandro Karnal | Metamensagem",
+      "descriptionSeo": "Leandro Karnal costuma falar em palestras e livros sobre conviver com a melancolia sem renunciar à esperança. Aqui ele admite a contradição humana — ver o lad…",
+      "keywordsSeo": [
+        "frases de Leandro Karnal",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "ainda-que-eu-seja-um-otimista-melancolico-sou-um-otimista",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "leandro-karnal"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Ainda que eu seja um otimista melancólico, sou um otimista.",
     "autor_original": "Leandro Karnal",
-    "categoria": "inspiracional",
+    "autor_slug": "leandro-karnal",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Leandro Karnal costuma falar em palestras e livros sobre conviver com a melancolia sem renunciar à esperança. Aqui ele admite a contradição humana — ver o lado sombrio e ainda assim escolher o otimismo. A citação resume sua postura filosófica acessível ao público brasileiro.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

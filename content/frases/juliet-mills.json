@@ -1,0 +1,123 @@
+[
+  {
+    "id": "f_csv_0ecc3cd84f",
+    "slug": "my-hobbies-are-cooking-and-gardening-especially-growing-orchids-i-love-soccer",
+    "texto": "My hobbies are cooking and gardening, especially growing orchids. I love soccer, my husband and I support a British team called Chelsea, and I also enjoy tennis. We have 3 cats.",
+    "autor": "Juliet Mills",
+    "autorSlug": "juliet-mills",
+    "explicacao": "Citação de Juliet Mills sobre vínculos afetivos e cuidado mútuo. “My hobbies are cooking and gardening, especially growing orchids. I love soccer, my husband and I…” articula amor, love, team em registro de amor, com relevância para contextos como team e cats.",
+    "semantica": {
+      "categoriaPrincipal": "amor",
+      "categorias": [
+        "amor",
+        "love",
+        "team",
+        "cats"
+      ],
+      "contextos": [
+        "team",
+        "cats"
+      ],
+      "emocoes": [
+        "alegria",
+        "amor"
+      ],
+      "temas": [
+        "amor",
+        "love",
+        "team",
+        "cats",
+        "hobbies",
+        "cooking",
+        "gardening",
+        "especially"
+      ],
+      "palavrasChave": [
+        "love",
+        "team",
+        "cats",
+        "amor",
+        "alegria"
+      ],
+      "tagsSeo": [
+        "amor",
+        "love",
+        "team",
+        "cats",
+        "alegria",
+        "juliet-mills"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 43,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amor",
+        "love",
+        "team",
+        "cats",
+        "hobbies",
+        "cooking"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My hobbies are cooking and gardening, especially gro…\" — Juliet Mills | Metamensagem",
+      "descriptionSeo": "Citação de Juliet Mills sobre vínculos afetivos e cuidado mútuo. “My hobbies are cooking and gardening, especially growing orchids. I love soccer, my husband…",
+      "keywordsSeo": [
+        "frases de Juliet Mills",
+        "frases sobre amor",
+        "frases amor",
+        "frases love",
+        "frases team",
+        "frases cats",
+        "love",
+        "team",
+        "cats",
+        "amor"
+      ],
+      "canonicalSlug": "my-hobbies-are-cooking-and-gardening-especially-growing-orchids-i-love-soccer",
+      "relatedKeywords": [
+        "alegria",
+        "amor",
+        "love",
+        "team",
+        "cats",
+        "juliet-mills"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My hobbies are cooking and gardening, especially growing orchids. I love soccer, my husband and I support a British team called Chelsea, and I also enjoy tennis. We have 3 cats.",
+    "autor_original": "Juliet Mills",
+    "autor_slug": "juliet-mills",
+    "categoria": "amor",
+    "contextos": [
+      "team",
+      "cats"
+    ],
+    "palavras_chave": [
+      "love",
+      "team",
+      "cats",
+      "amor",
+      "alegria"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

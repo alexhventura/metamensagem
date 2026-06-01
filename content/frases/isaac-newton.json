@@ -2,121 +2,6034 @@
   {
     "id": "f_5d99yy4kv",
     "slug": "tenho-a-impressao-de-ter-sido-uma-crianca-brincando-a-beira",
+    "texto": "Tenho a impressão de ter sido uma criança brincando à beira-mar, divertindo-me em descobrir uma pedrinha mais lisa ou uma concha mais bonita que as outras, enquanto o imenso oceano da verdade continua misterioso diante de meus olhos.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Isaac Newton humildemente compara seu trabalho a brincar na praia enquanto o oceano da verdade permanece inexplorado. Reflexão do físico sobre os limites do conhecimento humano diante do universo.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "tenho",
+        "impressão",
+        "criança",
+        "brincando",
+        "beira"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 47,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "tenho",
+        "impressão",
+        "criança"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Tenho a impressão de ter sido uma criança brincando …\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Isaac Newton humildemente compara seu trabalho a brincar na praia enquanto o oceano da verdade permanece inexplorado. Reflexão do físico sobre os limites do c…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "tenho-a-impressao-de-ter-sido-uma-crianca-brincando-a-beira",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Tenho a impressão de ter sido uma criança brincando à beira-mar, divertindo-me em descobrir uma pedrinha mais lisa ou uma concha mais bonita que as outras, enquanto o imenso oceano da verdade continua misterioso diante de meus olhos.",
     "autor_original": "Isaac Newton",
-    "categoria": "inspiracional",
+    "autor_slug": "isaac-newton",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "reflexao"
     ],
-    "explicacao": "Isaac Newton humildemente compara seu trabalho a brincar na praia enquanto o oceano da verdade permanece inexplorado. Reflexão do físico sobre os limites do conhecimento humano diante do universo.",
     "palavras_chave": [
       "inspiracional",
-      "reflexao"
+      "reflexao",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": "1643",
     "autor_tipo": "fisico-matematico",
     "nacionalidade": "ingles",
     "nascimento_falecimento": "1643-1727",
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_01817554cb",
+    "slug": "a-vulgar-mechanick-can-practice-what-he-has-been-taught-or-seen-done-but-if-he",
+    "texto": "A Vulgar Mechanick can practice what he has been taught or seen done, but if he is in an error he knows not how to find it out and correct it, and if you put him out of his road he is at a stand. Whereas he that is able to reason nimbly and judiciously about figure, force, and motion, is never at rest till he gets over every rub.(from a letter dated 25 May, 1694)",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre limites e escolhas conscientes. “A Vulgar Mechanick can practice what he has been taught or seen done, but if he is in an error he…” articula reflexao, error, reason em registro de reflexao, com relevância para contextos como viagem e reason.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "error",
+        "reason",
+        "science",
+        "widsom"
+      ],
+      "contextos": [
+        "viagem",
+        "reason",
+        "science",
+        "widsom"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "reflexao",
+        "error",
+        "reason",
+        "science",
+        "vulgar",
+        "mechanick",
+        "practice",
+        "taught"
+      ],
+      "palavrasChave": [
+        "error",
+        "reason",
+        "science",
+        "widsom",
+        "reflexao",
+        "viagem",
+        "determinacao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "error",
+        "reason",
+        "science",
+        "widsom",
+        "viagem",
+        "determinacao",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 64,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "error",
+        "reason",
+        "science",
+        "vulgar",
+        "mechanick"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"A Vulgar Mechanick can practice what he has been tau…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre limites e escolhas conscientes. “A Vulgar Mechanick can practice what he has been taught or seen done, but if he is in an error…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases error",
+        "frases viagem",
+        "frases reason",
+        "error",
+        "reason",
+        "science",
+        "widsom"
+      ],
+      "canonicalSlug": "a-vulgar-mechanick-can-practice-what-he-has-been-taught-or-seen-done-but-if-he",
+      "relatedKeywords": [
+        "determinacao",
+        "reflexao",
+        "error",
+        "reason",
+        "science",
+        "widsom",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A Vulgar Mechanick can practice what he has been taught or seen done, but if he is in an error he knows not how to find it out and correct it, and if you put him out of his road he is at a stand. Whereas he that is able to reason nimbly and judiciously about figure, force, and motion, is never at rest till he gets over every rub.(from a letter dated 25 May, 1694)",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "viagem",
+      "reason",
+      "science",
+      "widsom"
+    ],
+    "palavras_chave": [
+      "error",
+      "reason",
+      "science",
+      "widsom",
+      "reflexao",
+      "viagem",
+      "determinacao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_03b1bb5272",
+    "slug": "i-do-not-know-what-i-may-appear-to-the-world-but-to-myself-i-seem-to-have-been-2",
+    "texto": "I do not know what I may appear to the world; but to myself, I seem to have been only like a boy playing on the seashore, and diverting myself now and then in finding a smoother pebble or prettier shell than ordinary, while the great ocean of truth lay all undiscovered before me.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Metáfora atribuída a Isaac Newton: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “I do not know what I may appear to the world; but to myself, I seem to have been only like a boy …” usa imagem concreta para lembrar que reflexao, myself, great pedem movimento e interpretação pessoal, em tom de great e ocean.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "myself",
+        "great",
+        "ocean"
+      ],
+      "contextos": [
+        "great",
+        "ocean"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "myself",
+        "great",
+        "ocean",
+        "appear",
+        "world",
+        "playing",
+        "seashore"
+      ],
+      "palavrasChave": [
+        "myself",
+        "great",
+        "ocean",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "myself",
+        "great",
+        "ocean",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 54,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "myself",
+        "great",
+        "ocean",
+        "appear",
+        "world"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"I do not know what I may appear to the world; but to…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Isaac Newton: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “I do not know what I may appear to the wor…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases myself",
+        "frases great",
+        "frases ocean",
+        "myself",
+        "great",
+        "ocean",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-do-not-know-what-i-may-appear-to-the-world-but-to-myself-i-seem-to-have-been-2",
+      "relatedKeywords": [
+        "reflexao",
+        "myself",
+        "great",
+        "ocean",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I do not know what I may appear to the world; but to myself, I seem to have been only like a boy playing on the seashore, and diverting myself now and then in finding a smoother pebble or prettier shell than ordinary, while the great ocean of truth lay all undiscovered before me.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "great",
+      "ocean"
+    ],
+    "palavras_chave": [
+      "myself",
+      "great",
+      "ocean",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_0ff66af20d",
+    "slug": "blind-metaphysical-necessity-which-is-certainly-the-same-always-and-every-where",
+    "texto": "Blind metaphysical necessity, which is certainly the same always and every where, could produce no variety of things. All that diversity of natural things which we find suited to different times and places could arise from nothing but the ideas and will of a Being, necessarily existing.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre passagem do tempo e prioridades. “Blind metaphysical necessity, which is certainly the same always and every where, could produce n…” articula reflexao, darwinism, evolution em registro de reflexao, com relevância para contextos como evolution e id.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "darwinism",
+        "evolution",
+        "id",
+        "intelligent-design"
+      ],
+      "contextos": [
+        "evolution",
+        "id",
+        "intelligent-design",
+        "macroevolution",
+        "naturalism"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "darwinism",
+        "evolution",
+        "id",
+        "which",
+        "could",
+        "things",
+        "blind"
+      ],
+      "palavrasChave": [
+        "darwinism",
+        "evolution",
+        "id",
+        "intelligent-design",
+        "macroevolution",
+        "naturalism",
+        "religion-and-science",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "darwinism",
+        "evolution",
+        "id",
+        "intelligent-design",
+        "macroevolution",
+        "naturalism",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 62,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "darwinism",
+        "evolution",
+        "id",
+        "which",
+        "could"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Blind metaphysical necessity, which is certainly the…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre passagem do tempo e prioridades. “Blind metaphysical necessity, which is certainly the same always and every where, could produc…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases darwinism",
+        "frases evolution",
+        "frases id",
+        "darwinism",
+        "evolution",
+        "id",
+        "intelligent-design"
+      ],
+      "canonicalSlug": "blind-metaphysical-necessity-which-is-certainly-the-same-always-and-every-where",
+      "relatedKeywords": [
+        "reflexao",
+        "darwinism",
+        "evolution",
+        "id",
+        "intelligent-design",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Blind metaphysical necessity, which is certainly the same always and every where, could produce no variety of things. All that diversity of natural things which we find suited to different times and places could arise from nothing but the ideas and will of a Being, necessarily existing.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "evolution",
+      "id",
+      "intelligent-design",
+      "macroevolution",
+      "naturalism"
+    ],
+    "palavras_chave": [
+      "darwinism",
+      "evolution",
+      "id",
+      "intelligent-design",
+      "macroevolution",
+      "naturalism",
+      "religion-and-science",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_178de23980",
+    "slug": "what-goes-up-must-come-down",
+    "texto": "What goes up must come down.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Orientação direta de Isaac Newton sobre temas ligados a reflexao. A afirmação “What goes up must come down.” funciona como lembrete prático ligado a reflexao, apple, newton, útil em momentos de newton e science.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "apple",
+        "newton",
+        "science"
+      ],
+      "contextos": [
+        "newton",
+        "science"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "apple",
+        "newton",
+        "science"
+      ],
+      "palavrasChave": [
+        "apple",
+        "newton",
+        "science",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "apple",
+        "newton",
+        "science",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "apple",
+        "newton",
+        "science",
+        "reflexao",
+        "apple"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"What goes up must come down.\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Orientação direta de Isaac Newton sobre temas ligados a reflexao. A afirmação “What goes up must come down.” funciona como lembrete prático ligado a reflexao,…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases apple",
+        "frases newton",
+        "frases science",
+        "apple",
+        "newton",
+        "science",
+        "reflexao"
+      ],
+      "canonicalSlug": "what-goes-up-must-come-down",
+      "relatedKeywords": [
+        "reflexao",
+        "apple",
+        "newton",
+        "science",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "What goes up must come down.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "newton",
+      "science"
+    ],
+    "palavras_chave": [
+      "apple",
+      "newton",
+      "science",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_2614270a13",
+    "slug": "to-me-there-has-never-been-a-higher-source-of-earthly-honor-or-distinction-than",
+    "texto": "To me there has never been a higher source of earthly honor or distinction than that connected with advances in science.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre limites e escolhas conscientes. “To me there has never been a higher source of earthly honor or distinction than that connected wi…” articula reflexao, honor, me em registro de reflexao, com relevância para contextos como me e connected.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "honor",
+        "me",
+        "connected"
+      ],
+      "contextos": [
+        "me",
+        "connected"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "reflexao",
+        "honor",
+        "me",
+        "connected",
+        "there",
+        "never",
+        "higher",
+        "source"
+      ],
+      "palavrasChave": [
+        "honor",
+        "me",
+        "connected",
+        "reflexao",
+        "determinacao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "honor",
+        "me",
+        "connected",
+        "determinacao",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 38,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "honor",
+        "me",
+        "connected",
+        "there",
+        "never"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"To me there has never been a higher source of earthl…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre limites e escolhas conscientes. “To me there has never been a higher source of earthly honor or distinction than that connected…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases honor",
+        "frases me",
+        "frases connected",
+        "honor",
+        "me",
+        "connected",
+        "reflexao"
+      ],
+      "canonicalSlug": "to-me-there-has-never-been-a-higher-source-of-earthly-honor-or-distinction-than",
+      "relatedKeywords": [
+        "determinacao",
+        "reflexao",
+        "honor",
+        "me",
+        "connected",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "To me there has never been a higher source of earthly honor or distinction than that connected with advances in science.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "me",
+      "connected"
+    ],
+    "palavras_chave": [
+      "honor",
+      "me",
+      "connected",
+      "reflexao",
+      "determinacao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_2918161de3",
+    "slug": "if-anyone-offers-conjectures-about-the-truth-of-things-from-the-mere-possibility",
+    "texto": "If anyone offers conjectures about the truth of things from the mere possibility of hypotheses, I do not see by what stipulation anything certain can be determined in any science, since one or another set of hypotheses may always be devised which will appear to supply new difficulties.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “If anyone offers conjectures about the truth of things from the mere possibility of hypotheses, I…” articula reflexao, verdade, new em registro de reflexao, com relevância para contextos como new e see.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "verdade",
+        "new",
+        "see"
+      ],
+      "contextos": [
+        "new",
+        "see"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "reflexao",
+        "verdade",
+        "new",
+        "see",
+        "hypotheses",
+        "anyone",
+        "offers",
+        "conjectures"
+      ],
+      "palavrasChave": [
+        "verdade",
+        "new",
+        "see",
+        "reflexao",
+        "determinacao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "verdade",
+        "new",
+        "see",
+        "determinacao",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 54,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "verdade",
+        "new",
+        "see",
+        "hypotheses",
+        "anyone"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"If anyone offers conjectures about the truth of thin…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “If anyone offers conjectures about the truth of things from the mere possibility of hypotheses, I…” a…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases verdade",
+        "frases new",
+        "frases see",
+        "verdade",
+        "new",
+        "see",
+        "reflexao"
+      ],
+      "canonicalSlug": "if-anyone-offers-conjectures-about-the-truth-of-things-from-the-mere-possibility",
+      "relatedKeywords": [
+        "determinacao",
+        "reflexao",
+        "verdade",
+        "new",
+        "see",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "If anyone offers conjectures about the truth of things from the mere possibility of hypotheses, I do not see by what stipulation anything certain can be determined in any science, since one or another set of hypotheses may always be devised which will appear to supply new difficulties.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "new",
+      "see"
+    ],
+    "palavras_chave": [
+      "verdade",
+      "new",
+      "see",
+      "reflexao",
+      "determinacao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_2a10820bda",
+    "slug": "my-powers-are-ordinary-only-my-application-brings-me-success",
+    "texto": "My powers are ordinary. Only my application brings me success.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre esforço, persistência e resultados. “My powers are ordinary. Only my application brings me success.” articula sucesso, me, ordinary em registro de sucesso, com relevância para contextos como ordinary e application.",
+    "semantica": {
+      "categoriaPrincipal": "sucesso",
+      "categorias": [
+        "sucesso",
+        "me",
+        "ordinary",
+        "application"
+      ],
+      "contextos": [
+        "ordinary",
+        "application"
+      ],
+      "emocoes": [],
+      "temas": [
+        "sucesso",
+        "me",
+        "ordinary",
+        "application",
+        "powers",
+        "brings",
+        "success"
+      ],
+      "palavrasChave": [
+        "me",
+        "ordinary",
+        "application",
+        "sucesso"
+      ],
+      "tagsSeo": [
+        "sucesso",
+        "me",
+        "ordinary",
+        "application",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "sucesso",
+        "me",
+        "ordinary",
+        "application",
+        "powers",
+        "brings"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"My powers are ordinary. Only my application brings m…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre esforço, persistência e resultados. “My powers are ordinary. Only my application brings me success.” articula sucesso, me, ordin…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre sucesso",
+        "frases sucesso",
+        "frases me",
+        "frases ordinary",
+        "frases application",
+        "me",
+        "ordinary",
+        "application",
+        "sucesso"
+      ],
+      "canonicalSlug": "my-powers-are-ordinary-only-my-application-brings-me-success",
+      "relatedKeywords": [
+        "sucesso",
+        "me",
+        "ordinary",
+        "application",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My powers are ordinary. Only my application brings me success.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "sucesso",
+    "contextos": [
+      "ordinary",
+      "application"
+    ],
+    "palavras_chave": [
+      "me",
+      "ordinary",
+      "application",
+      "sucesso"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_2b44b18516",
+    "slug": "gravity-may-put-the-planets-into-motion-but-without-the-divine-power-it-could",
+    "texto": "Gravity may put the planets into motion, but without the divine Power, it could never put them into such a circulating motion as they have about the Sun; and therefore, for this as well as other reasons, I am compelled to ascribe the frame of this System to an intelligent Agent.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre limites e escolhas conscientes. “Gravity may put the planets into motion, but without the divine Power, it could never put them in…” articula espiritualidade, sun, i-am em registro de espiritualidade, com relevância para contextos como i-am e intelligent.",
+    "semantica": {
+      "categoriaPrincipal": "espiritualidade",
+      "categorias": [
+        "espiritualidade",
+        "sun",
+        "i-am",
+        "intelligent"
+      ],
+      "contextos": [
+        "i-am",
+        "intelligent"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "espiritualidade",
+        "sun",
+        "i-am",
+        "intelligent",
+        "motion",
+        "gravity",
+        "planets",
+        "without"
+      ],
+      "palavrasChave": [
+        "sun",
+        "i-am",
+        "intelligent",
+        "espiritualidade",
+        "determinacao"
+      ],
+      "tagsSeo": [
+        "espiritualidade",
+        "sun",
+        "i-am",
+        "intelligent",
+        "determinacao",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 53,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "espiritualidade",
+        "sun",
+        "i-am",
+        "intelligent",
+        "motion",
+        "gravity"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Gravity may put the planets into motion, but without…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre limites e escolhas conscientes. “Gravity may put the planets into motion, but without the divine Power, it could never put them…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre espiritualidade",
+        "frases espiritualidade",
+        "frases sun",
+        "frases i am",
+        "frases intelligent",
+        "sun",
+        "i-am",
+        "intelligent",
+        "espiritualidade"
+      ],
+      "canonicalSlug": "gravity-may-put-the-planets-into-motion-but-without-the-divine-power-it-could",
+      "relatedKeywords": [
+        "determinacao",
+        "espiritualidade",
+        "sun",
+        "i-am",
+        "intelligent",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Gravity may put the planets into motion, but without the divine Power, it could never put them into such a circulating motion as they have about the Sun; and therefore, for this as well as other reasons, I am compelled to ascribe the frame of this System to an intelligent Agent.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "espiritualidade",
+    "contextos": [
+      "i-am",
+      "intelligent"
+    ],
+    "palavras_chave": [
+      "sun",
+      "i-am",
+      "intelligent",
+      "espiritualidade",
+      "determinacao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_2cb1420e03",
+    "slug": "if-i-have-done-the-public-any-service-it-is-due-to-my-patient-thought",
+    "texto": "If I have done the public any service, it is due to my patient thought.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “If I have done the public any service, it is due to my patient thought.” articula reflexao, service, thought em registro de reflexao, com relevância para contextos como thought e done.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "service",
+        "thought",
+        "done"
+      ],
+      "contextos": [
+        "thought",
+        "done"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "service",
+        "thought",
+        "done",
+        "public",
+        "patient"
+      ],
+      "palavrasChave": [
+        "service",
+        "thought",
+        "done",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "service",
+        "thought",
+        "done",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "service",
+        "thought",
+        "done",
+        "public",
+        "patient"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"If I have done the public any service, it is due to …\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “If I have done the public any service, it is due to my patient thought.” articula reflexao, service,…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases service",
+        "frases thought",
+        "frases done",
+        "service",
+        "thought",
+        "done",
+        "reflexao"
+      ],
+      "canonicalSlug": "if-i-have-done-the-public-any-service-it-is-due-to-my-patient-thought",
+      "relatedKeywords": [
+        "reflexao",
+        "service",
+        "thought",
+        "done",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "If I have done the public any service, it is due to my patient thought.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "thought",
+      "done"
+    ],
+    "palavras_chave": [
+      "service",
+      "thought",
+      "done",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_2d644999f8",
+    "slug": "if-i-have-been-able-to-see-further-than-others-it-is-because-i-have-stood-on-th",
+    "texto": "If I have been able to see further than others, it is because I have stood on the shoulders of giants",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Orientação direta de Isaac Newton sobre temas ligados a reflexao. A afirmação “If I have been able to see further than others, it is because I have stood on the shoulders of gi…” funciona como lembrete prático ligado a reflexao, science, further, útil em momentos de reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "science"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "science",
+        "further",
+        "others",
+        "because",
+        "stood",
+        "shoulders"
+      ],
+      "palavrasChave": [
+        "science",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "science",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "science",
+        "further",
+        "others",
+        "because",
+        "stood"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"If I have been able to see further than others, it i…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Orientação direta de Isaac Newton sobre temas ligados a reflexao. A afirmação “If I have been able to see further than others, it is because I have stood on t…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases science",
+        "science",
+        "reflexao"
+      ],
+      "canonicalSlug": "if-i-have-been-able-to-see-further-than-others-it-is-because-i-have-stood-on-th",
+      "relatedKeywords": [
+        "reflexao",
+        "science",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "If I have been able to see further than others, it is because I have stood on the shoulders of giants",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "science",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_36ed5032d2",
+    "slug": "i-do-not-know-what-i-may-appear-to-the-world-but-to-myself-i-seem-to-have-been",
+    "texto": "I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the sea-shore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Metáfora atribuída a Isaac Newton: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “I do not know what I may appear to the world, but to myself I seem to have been only like a boy p…” usa imagem concreta para lembrar que reflexao, science, verdade pedem movimento e interpretação pessoal, em tom de verdade.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "science",
+        "verdade"
+      ],
+      "contextos": [
+        "verdade"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "science",
+        "verdade",
+        "myself",
+        "appear",
+        "world",
+        "playing",
+        "shore"
+      ],
+      "palavrasChave": [
+        "science",
+        "verdade",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "science",
+        "verdade",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 52,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "science",
+        "verdade",
+        "myself",
+        "appear",
+        "world"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"I do not know what I may appear to the world, but to…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Isaac Newton: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “I do not know what I may appear to the wor…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases science",
+        "frases verdade",
+        "science",
+        "verdade",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-do-not-know-what-i-may-appear-to-the-world-but-to-myself-i-seem-to-have-been",
+      "relatedKeywords": [
+        "reflexao",
+        "science",
+        "verdade",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the sea-shore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "verdade"
+    ],
+    "palavras_chave": [
+      "science",
+      "verdade",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_41a8aee087",
+    "slug": "truth-is-the-offspring-of-silence-and-meditation-i-keep-the-subject-constantly",
+    "texto": "Truth is the offspring of silence and meditation. I keep the subject constantly before me and wait 'til the first dawnings open slowly, by little and little, into a full and clear light.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “Truth is the offspring of silence and meditation. I keep the subject constantly before me and wai…” articula reflexao, clarity, clear em registro de reflexao, com relevância para contextos como reflexao-noturna e clear.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "clarity",
+        "clear",
+        "dawnings",
+        "full"
+      ],
+      "contextos": [
+        "reflexao-noturna",
+        "clear",
+        "dawnings",
+        "full",
+        "light"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "clarity",
+        "clear",
+        "dawnings",
+        "little",
+        "truth",
+        "offspring",
+        "silence"
+      ],
+      "palavrasChave": [
+        "clarity",
+        "clear",
+        "dawnings",
+        "full",
+        "light",
+        "meditation",
+        "offspring",
+        "reflexao",
+        "reflexao-noturna"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "clarity",
+        "clear",
+        "dawnings",
+        "full",
+        "reflexao-noturna",
+        "light",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 52,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "clarity",
+        "clear",
+        "dawnings",
+        "little",
+        "truth"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Truth is the offspring of silence and meditation. I …\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “Truth is the offspring of silence and meditation. I keep the subject constantly before me and wai…” a…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases clarity",
+        "frases reflexao noturna",
+        "frases clear",
+        "clarity",
+        "clear",
+        "dawnings",
+        "full"
+      ],
+      "canonicalSlug": "truth-is-the-offspring-of-silence-and-meditation-i-keep-the-subject-constantly",
+      "relatedKeywords": [
+        "reflexao",
+        "clarity",
+        "clear",
+        "dawnings",
+        "full",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Truth is the offspring of silence and meditation. I keep the subject constantly before me and wait 'til the first dawnings open slowly, by little and little, into a full and clear light.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao-noturna",
+      "clear",
+      "dawnings",
+      "full",
+      "light"
+    ],
+    "palavras_chave": [
+      "clarity",
+      "clear",
+      "dawnings",
+      "full",
+      "light",
+      "meditation",
+      "offspring",
+      "reflexao",
+      "reflexao-noturna"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_42f47f1233",
+    "slug": "it-is-indeed-a-matter-of-great-difficulty-to-discover-and-effectually-to-distin",
+    "texto": "It is indeed a matter of great difficulty to discover, and effectually to distinguish, the true motions of particular bodies from the apparent because the parts of that immovable space, in which those motions are performed, do by no means come under the observation of our senses.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “It is indeed a matter of great difficulty to discover, and effectually to distinguish, the true m…” articula reflexao, great, matter em registro de reflexao, com relevância para contextos como matter e observation.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "great",
+        "matter",
+        "observation"
+      ],
+      "contextos": [
+        "matter",
+        "observation"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "great",
+        "matter",
+        "observation",
+        "motions",
+        "indeed",
+        "difficulty"
+      ],
+      "palavrasChave": [
+        "great",
+        "matter",
+        "observation",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "great",
+        "matter",
+        "observation",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 54,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "great",
+        "matter",
+        "observation",
+        "motions",
+        "indeed"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"It is indeed a matter of great difficulty to discove…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “It is indeed a matter of great difficulty to discover, and effectually to distinguish, the true m…” a…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases great",
+        "frases matter",
+        "frases observation",
+        "great",
+        "matter",
+        "observation",
+        "reflexao"
+      ],
+      "canonicalSlug": "it-is-indeed-a-matter-of-great-difficulty-to-discover-and-effectually-to-distin",
+      "relatedKeywords": [
+        "reflexao",
+        "great",
+        "matter",
+        "observation",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "It is indeed a matter of great difficulty to discover, and effectually to distinguish, the true motions of particular bodies from the apparent because the parts of that immovable space, in which those motions are performed, do by no means come under the observation of our senses.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "matter",
+      "observation"
+    ],
+    "palavras_chave": [
+      "great",
+      "matter",
+      "observation",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_49516ade2e",
+    "slug": "the-word-god-usually-signifies-lord-but-every-lord-is-not-a-god-it-is-the",
+    "texto": "The word 'God' usually signifies 'Lord', but every lord is not a God. It is the dominion of a spiritual being which constitutes a God: a true, supreme, or imaginary dominion makes a true, supreme, or imaginary God.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a fe. “The word 'God' usually signifies 'Lord', but every lord is not a God. It is the dominion of a spi…” articula fe, spiritual, true em registro de fe, com relevância para contextos como true e being.",
+    "semantica": {
+      "categoriaPrincipal": "fe",
+      "categorias": [
+        "fe",
+        "spiritual",
+        "true",
+        "being"
+      ],
+      "contextos": [
+        "true",
+        "being"
+      ],
+      "emocoes": [],
+      "temas": [
+        "fe",
+        "spiritual",
+        "true",
+        "being",
+        "dominion",
+        "supreme",
+        "imaginary",
+        "usually"
+      ],
+      "palavrasChave": [
+        "spiritual",
+        "true",
+        "being",
+        "fe"
+      ],
+      "tagsSeo": [
+        "fe",
+        "spiritual",
+        "true",
+        "being",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 47,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "fe",
+        "spiritual",
+        "true",
+        "being",
+        "dominion",
+        "supreme"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"The word 'God' usually signifies 'Lord', but every l…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a fe. “The word 'God' usually signifies 'Lord', but every lord is not a God. It is the dominion of a spi…” articul…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre fe",
+        "frases fe",
+        "frases spiritual",
+        "frases true",
+        "frases being",
+        "spiritual",
+        "true",
+        "being",
+        "fe"
+      ],
+      "canonicalSlug": "the-word-god-usually-signifies-lord-but-every-lord-is-not-a-god-it-is-the",
+      "relatedKeywords": [
+        "fe",
+        "spiritual",
+        "true",
+        "being",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The word 'God' usually signifies 'Lord', but every lord is not a God. It is the dominion of a spiritual being which constitutes a God: a true, supreme, or imaginary dominion makes a true, supreme, or imaginary God.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "fe",
+    "contextos": [
+      "true",
+      "being"
+    ],
+    "palavras_chave": [
+      "spiritual",
+      "true",
+      "being",
+      "fe"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_52172da44a",
+    "slug": "the-motions-of-the-comets-are-exceedingly-regular-and-they-observe-the-same-law",
+    "texto": "The motions of the comets are exceedingly regular, and they observe the same laws as the motions of the planets, but they differ from the motions of vortices in every particular and are often contrary to them.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “The motions of the comets are exceedingly regular, and they observe the same laws as the motions …” articula reflexao, same, laws em registro de reflexao, com relevância para contextos como laws e observe.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "same",
+        "laws",
+        "observe"
+      ],
+      "contextos": [
+        "laws",
+        "observe"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "same",
+        "laws",
+        "observe",
+        "motions",
+        "comets",
+        "exceedingly",
+        "regular"
+      ],
+      "palavrasChave": [
+        "same",
+        "laws",
+        "observe",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "same",
+        "laws",
+        "observe",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 46,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "same",
+        "laws",
+        "observe",
+        "motions",
+        "comets"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"The motions of the comets are exceedingly regular, a…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “The motions of the comets are exceedingly regular, and they observe the same laws as the motions …” a…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases same",
+        "frases laws",
+        "frases observe",
+        "same",
+        "laws",
+        "observe",
+        "reflexao"
+      ],
+      "canonicalSlug": "the-motions-of-the-comets-are-exceedingly-regular-and-they-observe-the-same-law",
+      "relatedKeywords": [
+        "reflexao",
+        "same",
+        "laws",
+        "observe",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The motions of the comets are exceedingly regular, and they observe the same laws as the motions of the planets, but they differ from the motions of vortices in every particular and are often contrary to them.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "laws",
+      "observe"
+    ],
+    "palavras_chave": [
+      "same",
+      "laws",
+      "observe",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_589acc9be3",
+    "slug": "to-explain-all-nature-is-too-difficult-a-task-for-any-one-man-or-even-for-any-on",
+    "texto": "To explain all nature is too difficult a task for any one man or even for any one age",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “To explain all nature is too difficult a task for any one man or even for any one age” articula reflexao, nature, philosophy em registro de reflexao, com relevância para contextos como philosophy e physics.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "nature",
+        "philosophy",
+        "physics",
+        "science"
+      ],
+      "contextos": [
+        "philosophy",
+        "physics",
+        "science",
+        "stars"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "nature",
+        "philosophy",
+        "physics",
+        "explain",
+        "difficult"
+      ],
+      "palavrasChave": [
+        "nature",
+        "philosophy",
+        "physics",
+        "science",
+        "stars",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "nature",
+        "philosophy",
+        "physics",
+        "science",
+        "stars",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 38,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "nature",
+        "philosophy",
+        "physics",
+        "explain",
+        "difficult"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"To explain all nature is too difficult a task for an…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “To explain all nature is too difficult a task for any one man or even for any one age” articula refle…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases nature",
+        "frases philosophy",
+        "frases physics",
+        "nature",
+        "philosophy",
+        "physics",
+        "science"
+      ],
+      "canonicalSlug": "to-explain-all-nature-is-too-difficult-a-task-for-any-one-man-or-even-for-any-on",
+      "relatedKeywords": [
+        "reflexao",
+        "nature",
+        "philosophy",
+        "physics",
+        "science",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "To explain all nature is too difficult a task for any one man or even for any one age",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "philosophy",
+      "physics",
+      "science",
+      "stars"
+    ],
+    "palavras_chave": [
+      "nature",
+      "philosophy",
+      "physics",
+      "science",
+      "stars",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_58e1783700",
+    "slug": "if-i-have-ever-made-any-valuable-discoveries-it-has-been-owing-more-to-patient",
+    "texto": "If I have ever made any valuable discoveries it has been owing more to patient attention than to any other talent.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre esforço, persistência e resultados. “If I have ever made any valuable discoveries it has been owing more to patient attention than to …” articula reflexao, concentration, valuable em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "concentration"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "concentration",
+        "valuable",
+        "discoveries",
+        "owing",
+        "patient",
+        "attention"
+      ],
+      "palavrasChave": [
+        "concentration",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "concentration",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 35,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "concentration",
+        "valuable",
+        "discoveries",
+        "owing",
+        "patient"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"If I have ever made any valuable discoveries it has …\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre esforço, persistência e resultados. “If I have ever made any valuable discoveries it has been owing more to patient attention th…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases concentration",
+        "concentration",
+        "reflexao"
+      ],
+      "canonicalSlug": "if-i-have-ever-made-any-valuable-discoveries-it-has-been-owing-more-to-patient",
+      "relatedKeywords": [
+        "reflexao",
+        "concentration",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "If I have ever made any valuable discoveries it has been owing more to patient attention than to any other talent.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "concentration",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_5994066fbd",
+    "slug": "we-are-certainly-not-to-relinquish-the-evidence-of-experiments-for-the-sake-of-d",
+    "texto": "We are certainly not to relinquish the evidence of experiments for the sake of dreams and vain fictions of our own devising; nor are we to recede from the analogy of Nature, which is wont to be simple and always consonant to itself.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a motivacao. “We are certainly not to relinquish the evidence of experiments for the sake of dreams and vain fi…” articula motivacao, nature, simple em registro de motivacao, com relevância para contextos como simple e always.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "nature",
+        "simple",
+        "always"
+      ],
+      "contextos": [
+        "simple",
+        "always"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "nature",
+        "simple",
+        "always",
+        "certainly",
+        "relinquish",
+        "evidence",
+        "experiments"
+      ],
+      "palavrasChave": [
+        "nature",
+        "simple",
+        "always",
+        "motivacao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "nature",
+        "simple",
+        "always",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 49,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "nature",
+        "simple",
+        "always",
+        "certainly",
+        "relinquish"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"We are certainly not to relinquish the evidence of e…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a motivacao. “We are certainly not to relinquish the evidence of experiments for the sake of dreams and vain fi…”…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases nature",
+        "frases simple",
+        "frases always",
+        "nature",
+        "simple",
+        "always",
+        "motivacao"
+      ],
+      "canonicalSlug": "we-are-certainly-not-to-relinquish-the-evidence-of-experiments-for-the-sake-of-d",
+      "relatedKeywords": [
+        "motivacao",
+        "nature",
+        "simple",
+        "always",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "We are certainly not to relinquish the evidence of experiments for the sake of dreams and vain fictions of our own devising; nor are we to recede from the analogy of Nature, which is wont to be simple and always consonant to itself.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "motivacao",
+    "contextos": [
+      "simple",
+      "always"
+    ],
+    "palavras_chave": [
+      "nature",
+      "simple",
+      "always",
+      "motivacao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_5cf792d598",
+    "slug": "eorum-omnium-actiones-in-se-invicem",
+    "texto": "eorum omnium actiones in se invicem",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a motivacao. “eorum omnium actiones in se invicem” articula motivacao, inspiracional, science em registro de motivacao, com relevância para contextos como inspiracao e science.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "science"
+      ],
+      "contextos": [
+        "inspiracao",
+        "science"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "science",
+        "eorum",
+        "omnium",
+        "actiones",
+        "invicem"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "science",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "science",
+        "inspiracao",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "science",
+        "eorum",
+        "omnium",
+        "actiones"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"eorum omnium actiones in se invicem\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a motivacao. “eorum omnium actiones in se invicem” articula motivacao, inspiracional, science em registro de motiv…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases science",
+        "inspiracional",
+        "science",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "eorum-omnium-actiones-in-se-invicem",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "science",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "eorum omnium actiones in se invicem",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "motivacao",
+    "contextos": [
+      "inspiracao",
+      "science"
+    ],
+    "palavras_chave": [
+      "inspiracional",
+      "science",
+      "motivacao",
+      "inspiracao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_65bca2855b",
+    "slug": "genius-is-patience",
+    "texto": "Genius is patience.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “Genius is patience.” articula reflexao, genius, patience em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "genius"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "genius",
+        "patience"
+      ],
+      "palavrasChave": [
+        "genius",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "genius",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "genius",
+        "patience",
+        "reflexao",
+        "genius"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Genius is patience.\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “Genius is patience.” articula reflexao, genius, patience em registro de reflexao, com relevância para…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases genius",
+        "genius",
+        "reflexao"
+      ],
+      "canonicalSlug": "genius-is-patience",
+      "relatedKeywords": [
+        "reflexao",
+        "genius",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Genius is patience.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "genius",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_6928270cda",
+    "slug": "religion-and-philosophy-are-to-be-preserved-distinct-we-are-not-to-introduce-di",
+    "texto": "Religion and philosophy are to be preserved distinct. We are not to introduce divine revelations into philosophy, nor philosophical opinions into religion.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a fe. “Religion and philosophy are to be preserved distinct. We are not to introduce divine revelations …” articula fe, philosophy, opinions em registro de fe, com relevância para contextos como opinions e divine.",
+    "semantica": {
+      "categoriaPrincipal": "fe",
+      "categorias": [
+        "fe",
+        "philosophy",
+        "opinions",
+        "divine"
+      ],
+      "contextos": [
+        "opinions",
+        "divine"
+      ],
+      "emocoes": [],
+      "temas": [
+        "fe",
+        "philosophy",
+        "opinions",
+        "divine",
+        "religion",
+        "preserved",
+        "distinct",
+        "introduce"
+      ],
+      "palavrasChave": [
+        "philosophy",
+        "opinions",
+        "divine",
+        "fe"
+      ],
+      "tagsSeo": [
+        "fe",
+        "philosophy",
+        "opinions",
+        "divine",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 41,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "fe",
+        "philosophy",
+        "opinions",
+        "divine",
+        "religion",
+        "preserved"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Religion and philosophy are to be preserved distinct…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a fe. “Religion and philosophy are to be preserved distinct. We are not to introduce divine revelations …” articul…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre fe",
+        "frases fe",
+        "frases philosophy",
+        "frases opinions",
+        "frases divine",
+        "philosophy",
+        "opinions",
+        "divine",
+        "fe"
+      ],
+      "canonicalSlug": "religion-and-philosophy-are-to-be-preserved-distinct-we-are-not-to-introduce-di",
+      "relatedKeywords": [
+        "fe",
+        "philosophy",
+        "opinions",
+        "divine",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Religion and philosophy are to be preserved distinct. We are not to introduce divine revelations into philosophy, nor philosophical opinions into religion.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "fe",
+    "contextos": [
+      "opinions",
+      "divine"
+    ],
+    "palavras_chave": [
+      "philosophy",
+      "opinions",
+      "divine",
+      "fe"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_6a4fdb6971",
+    "slug": "how-came-the-bodies-of-animals-to-be-contrived-with-so-much-art-and-for-what-en",
+    "texto": "How came the bodies of animals to be contrived with so much art, and for what ends were their several parts?Was the eye contrived without skill in Opticks, and the ear without knowledge of sounds?...and these things being rightly dispatch’d, does it not appear from phænomena that there is a Being incorporeal, living, intelligent...?",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Pergunta retórica de Isaac Newton que provoca temas ligados a sabedoria. Ao questionar “How came the bodies of animals to be contrived with so much art, and for what ends were their sev…”, o texto convida o leitor a revisar crenças sobre sabedoria, id, intelligent-design, com foco em termino e intelligent-design.",
+    "semantica": {
+      "categoriaPrincipal": "sabedoria",
+      "categorias": [
+        "sabedoria",
+        "id",
+        "intelligent-design",
+        "naturalism",
+        "religion-and-science"
+      ],
+      "contextos": [
+        "termino",
+        "intelligent-design",
+        "naturalism",
+        "religion-and-science",
+        "science"
+      ],
+      "emocoes": [],
+      "temas": [
+        "sabedoria",
+        "id",
+        "intelligent-design",
+        "naturalism",
+        "contrived",
+        "without",
+        "being",
+        "bodies"
+      ],
+      "palavrasChave": [
+        "id",
+        "intelligent-design",
+        "naturalism",
+        "religion-and-science",
+        "science",
+        "science-and-religion",
+        "sabedoria",
+        "termino"
+      ],
+      "tagsSeo": [
+        "sabedoria",
+        "id",
+        "intelligent-design",
+        "naturalism",
+        "religion-and-science",
+        "termino",
+        "science",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 65,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "sabedoria",
+        "id",
+        "intelligent-design",
+        "naturalism",
+        "contrived",
+        "without"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"How came the bodies of animals to be contrived with …\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Isaac Newton que provoca temas ligados a sabedoria. Ao questionar “How came the bodies of animals to be contrived with so much art, and f…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre sabedoria",
+        "frases sabedoria",
+        "frases id",
+        "frases termino",
+        "frases intelligent design",
+        "id",
+        "intelligent-design",
+        "naturalism",
+        "religion-and-science"
+      ],
+      "canonicalSlug": "how-came-the-bodies-of-animals-to-be-contrived-with-so-much-art-and-for-what-en",
+      "relatedKeywords": [
+        "sabedoria",
+        "id",
+        "intelligent-design",
+        "naturalism",
+        "religion-and-science",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "How came the bodies of animals to be contrived with so much art, and for what ends were their several parts?Was the eye contrived without skill in Opticks, and the ear without knowledge of sounds?...and these things being rightly dispatch’d, does it not appear from phænomena that there is a Being incorporeal, living, intelligent...?",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "sabedoria",
+    "contextos": [
+      "termino",
+      "intelligent-design",
+      "naturalism",
+      "religion-and-science",
+      "science"
+    ],
+    "palavras_chave": [
+      "id",
+      "intelligent-design",
+      "naturalism",
+      "religion-and-science",
+      "science",
+      "science-and-religion",
+      "sabedoria",
+      "termino"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_77ff24b25a",
+    "slug": "if-i-have-seen-farther-it-is-by-standing-on-the-shoulders-of-giants",
+    "texto": "If I have seen farther it is by standing on the shoulders of giants.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Orientação direta de Isaac Newton sobre temas ligados a reflexao. A afirmação “If I have seen farther it is by standing on the shoulders of giants.” funciona como lembrete prático ligado a reflexao, science, technology, útil em momentos de technology.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "science",
+        "technology"
+      ],
+      "contextos": [
+        "technology"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "science",
+        "technology",
+        "farther",
+        "standing",
+        "shoulders",
+        "giants"
+      ],
+      "palavrasChave": [
+        "science",
+        "technology",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "science",
+        "technology",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "science",
+        "technology",
+        "farther",
+        "standing",
+        "shoulders"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"If I have seen farther it is by standing on the shou…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Orientação direta de Isaac Newton sobre temas ligados a reflexao. A afirmação “If I have seen farther it is by standing on the shoulders of giants.” funciona…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases science",
+        "frases technology",
+        "science",
+        "technology",
+        "reflexao"
+      ],
+      "canonicalSlug": "if-i-have-seen-farther-it-is-by-standing-on-the-shoulders-of-giants",
+      "relatedKeywords": [
+        "reflexao",
+        "science",
+        "technology",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "If I have seen farther it is by standing on the shoulders of giants.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "technology"
+    ],
+    "palavras_chave": [
+      "science",
+      "technology",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_7bd40d5e90",
+    "slug": "truth-is-ever-to-be-found-in-simplicity-and-not-in-the-multiplicity-and-confusi",
+    "texto": "Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things.” articula reflexao, simplicity, truth-is em registro de reflexao, com relevância para contextos como truth-is.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "simplicity",
+        "truth-is"
+      ],
+      "contextos": [
+        "truth-is"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "simplicity",
+        "truth-is",
+        "truth",
+        "found",
+        "multiplicity",
+        "confusion"
+      ],
+      "palavrasChave": [
+        "simplicity",
+        "truth-is",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "simplicity",
+        "truth-is",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "simplicity",
+        "truth-is",
+        "truth",
+        "found",
+        "multiplicity"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Truth is ever to be found in simplicity, and not in …\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things.” articu…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases simplicity",
+        "frases truth is",
+        "simplicity",
+        "truth-is",
+        "reflexao"
+      ],
+      "canonicalSlug": "truth-is-ever-to-be-found-in-simplicity-and-not-in-the-multiplicity-and-confusi",
+      "relatedKeywords": [
+        "reflexao",
+        "simplicity",
+        "truth-is",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "truth-is"
+    ],
+    "palavras_chave": [
+      "simplicity",
+      "truth-is",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_8a59e4b388",
+    "slug": "to-every-action-there-is-always-opposed-an-equal-reaction",
+    "texto": "To every action there is always opposed an equal reaction.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “To every action there is always opposed an equal reaction.” articula reflexao, action, equal em registro de reflexao, com relevância para contextos como equal e reaction.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "action",
+        "equal",
+        "reaction"
+      ],
+      "contextos": [
+        "equal",
+        "reaction"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "action",
+        "equal",
+        "reaction",
+        "every",
+        "there",
+        "always",
+        "opposed"
+      ],
+      "palavrasChave": [
+        "action",
+        "equal",
+        "reaction",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "action",
+        "equal",
+        "reaction",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "action",
+        "equal",
+        "reaction",
+        "every",
+        "there"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"To every action there is always opposed an equal rea…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “To every action there is always opposed an equal reaction.” articula reflexao, action, equal em regis…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases action",
+        "frases equal",
+        "frases reaction",
+        "action",
+        "equal",
+        "reaction",
+        "reflexao"
+      ],
+      "canonicalSlug": "to-every-action-there-is-always-opposed-an-equal-reaction",
+      "relatedKeywords": [
+        "reflexao",
+        "action",
+        "equal",
+        "reaction",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "To every action there is always opposed an equal reaction.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "equal",
+      "reaction"
+    ],
+    "palavras_chave": [
+      "action",
+      "equal",
+      "reaction",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_8becbcff53",
+    "slug": "this-principle-of-nature-being-very-remote-from-the-conceptions-of-philosophers",
+    "texto": "This principle of nature being very remote from the conceptions of Philosophers, I forbore to describe it in that book, least I should be accounted an extravagant freak and so prejudice my Readers against all those things which were the main designe of the book.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Orientação direta de Isaac Newton sobre temas ligados a fe. A afirmação “This principle of nature being very remote from the conceptions of Philosophers, I forbore to des…” funciona como lembrete prático ligado a fe, nerdiness, religion, útil em momentos de religion e science.",
+    "semantica": {
+      "categoriaPrincipal": "fe",
+      "categorias": [
+        "fe",
+        "nerdiness",
+        "religion",
+        "science"
+      ],
+      "contextos": [
+        "religion",
+        "science"
+      ],
+      "emocoes": [],
+      "temas": [
+        "fe",
+        "nerdiness",
+        "religion",
+        "science",
+        "principle",
+        "nature",
+        "being",
+        "remote"
+      ],
+      "palavrasChave": [
+        "nerdiness",
+        "religion",
+        "science",
+        "fe"
+      ],
+      "tagsSeo": [
+        "fe",
+        "nerdiness",
+        "religion",
+        "science",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 52,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "fe",
+        "nerdiness",
+        "religion",
+        "science",
+        "principle",
+        "nature"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"This principle of nature being very remote from the …\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Orientação direta de Isaac Newton sobre temas ligados a fe. A afirmação “This principle of nature being very remote from the conceptions of Philosophers, I fo…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre fe",
+        "frases fe",
+        "frases nerdiness",
+        "frases religion",
+        "frases science",
+        "nerdiness",
+        "religion",
+        "science",
+        "fe"
+      ],
+      "canonicalSlug": "this-principle-of-nature-being-very-remote-from-the-conceptions-of-philosophers",
+      "relatedKeywords": [
+        "fe",
+        "nerdiness",
+        "religion",
+        "science",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "This principle of nature being very remote from the conceptions of Philosophers, I forbore to describe it in that book, least I should be accounted an extravagant freak and so prejudice my Readers against all those things which were the main designe of the book.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "fe",
+    "contextos": [
+      "religion",
+      "science"
+    ],
+    "palavras_chave": [
+      "nerdiness",
+      "religion",
+      "science",
+      "fe"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_9fdbb81719",
+    "slug": "gravity-explains-the-motions-of-the-planets-but-it-cannot-explain-who-sets-the",
+    "texto": "Gravity explains the motions of the planets, but it cannot explain who sets the planets in motion.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre limites e escolhas conscientes. “Gravity explains the motions of the planets, but it cannot explain who sets the planets in motion.” articula fe, id, intelligent-design em registro de fe, com relevância para contextos como intelligent-design e religion.",
+    "semantica": {
+      "categoriaPrincipal": "fe",
+      "categorias": [
+        "fe",
+        "id",
+        "intelligent-design",
+        "religion",
+        "religion-and-science"
+      ],
+      "contextos": [
+        "intelligent-design",
+        "religion",
+        "religion-and-science",
+        "science",
+        "science-and-religion"
+      ],
+      "emocoes": [],
+      "temas": [
+        "fe",
+        "id",
+        "intelligent-design",
+        "religion",
+        "planets",
+        "gravity",
+        "explains",
+        "motions"
+      ],
+      "palavrasChave": [
+        "id",
+        "intelligent-design",
+        "religion",
+        "religion-and-science",
+        "science",
+        "science-and-religion",
+        "fe"
+      ],
+      "tagsSeo": [
+        "fe",
+        "id",
+        "intelligent-design",
+        "religion",
+        "religion-and-science",
+        "science",
+        "science-and-religion",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 41,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "fe",
+        "id",
+        "intelligent-design",
+        "religion",
+        "planets",
+        "gravity"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Gravity explains the motions of the planets, but it …\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre limites e escolhas conscientes. “Gravity explains the motions of the planets, but it cannot explain who sets the planets in moti…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre fe",
+        "frases fe",
+        "frases id",
+        "frases intelligent design",
+        "frases religion",
+        "id",
+        "intelligent-design",
+        "religion",
+        "religion-and-science"
+      ],
+      "canonicalSlug": "gravity-explains-the-motions-of-the-planets-but-it-cannot-explain-who-sets-the",
+      "relatedKeywords": [
+        "fe",
+        "id",
+        "intelligent-design",
+        "religion",
+        "religion-and-science",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Gravity explains the motions of the planets, but it cannot explain who sets the planets in motion.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "fe",
+    "contextos": [
+      "intelligent-design",
+      "religion",
+      "religion-and-science",
+      "science",
+      "science-and-religion"
+    ],
+    "palavras_chave": [
+      "id",
+      "intelligent-design",
+      "religion",
+      "religion-and-science",
+      "science",
+      "science-and-religion",
+      "fe"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_a0036eda96",
+    "slug": "tact-is-the-art-of-making-a-point-without-making-an-enemy",
+    "texto": "Tact is the art of making a point without making an enemy.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “Tact is the art of making a point without making an enemy.” articula reflexao, enemy, without em registro de reflexao, com relevância para contextos como without e point.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "enemy",
+        "without",
+        "point"
+      ],
+      "contextos": [
+        "without",
+        "point"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "enemy",
+        "without",
+        "point",
+        "making"
+      ],
+      "palavrasChave": [
+        "enemy",
+        "without",
+        "point",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "enemy",
+        "without",
+        "point",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "enemy",
+        "without",
+        "point",
+        "making",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Tact is the art of making a point without making an …\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “Tact is the art of making a point without making an enemy.” articula reflexao, enemy, without em regi…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases enemy",
+        "frases without",
+        "frases point",
+        "enemy",
+        "without",
+        "point",
+        "reflexao"
+      ],
+      "canonicalSlug": "tact-is-the-art-of-making-a-point-without-making-an-enemy",
+      "relatedKeywords": [
+        "reflexao",
+        "enemy",
+        "without",
+        "point",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Tact is the art of making a point without making an enemy.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "without",
+      "point"
+    ],
+    "palavras_chave": [
+      "enemy",
+      "without",
+      "point",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_a6df77f725",
+    "slug": "god-who-gave-animals-self-motion-beyond-our-understanding-is-without-doubt-able",
+    "texto": "God who gave Animals self motion beyond our understanding is without doubt able to implant other principles of motion in bodies [which] we may understand as little. Some would readily grant this may be a Spiritual one; yet a mechanical one might be showne, did not I think it better to pass it by.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a fe. “God who gave Animals self motion beyond our understanding is without doubt able to implant other …” articula fe, god, metaphysics em registro de fe, com relevância para contextos como metaphysics e motion.",
+    "semantica": {
+      "categoriaPrincipal": "fe",
+      "categorias": [
+        "fe",
+        "god",
+        "metaphysics",
+        "motion",
+        "nature"
+      ],
+      "contextos": [
+        "metaphysics",
+        "motion",
+        "nature"
+      ],
+      "emocoes": [],
+      "temas": [
+        "fe",
+        "god",
+        "metaphysics",
+        "motion",
+        "animals",
+        "beyond",
+        "understanding",
+        "without"
+      ],
+      "palavrasChave": [
+        "god",
+        "metaphysics",
+        "motion",
+        "nature",
+        "fe"
+      ],
+      "tagsSeo": [
+        "fe",
+        "god",
+        "metaphysics",
+        "motion",
+        "nature",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 57,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "fe",
+        "god",
+        "metaphysics",
+        "motion",
+        "animals",
+        "beyond"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"God who gave Animals self motion beyond our understa…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a fe. “God who gave Animals self motion beyond our understanding is without doubt able to implant other …” articul…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre fe",
+        "frases fe",
+        "frases god",
+        "frases metaphysics",
+        "frases motion",
+        "god",
+        "metaphysics",
+        "motion",
+        "nature"
+      ],
+      "canonicalSlug": "god-who-gave-animals-self-motion-beyond-our-understanding-is-without-doubt-able",
+      "relatedKeywords": [
+        "fe",
+        "god",
+        "metaphysics",
+        "motion",
+        "nature",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "God who gave Animals self motion beyond our understanding is without doubt able to implant other principles of motion in bodies [which] we may understand as little. Some would readily grant this may be a Spiritual one; yet a mechanical one might be showne, did not I think it better to pass it by.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "fe",
+    "contextos": [
+      "metaphysics",
+      "motion",
+      "nature"
+    ],
+    "palavras_chave": [
+      "god",
+      "metaphysics",
+      "motion",
+      "nature",
+      "fe"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_ae3b04e825",
+    "slug": "no-great-discovery-was-ever-made-without-a-bold-guess",
+    "texto": "No great discovery was ever made without a bold guess.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “No great discovery was ever made without a bold guess.” articula reflexao, discovery, great em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "discovery"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "discovery",
+        "great",
+        "without",
+        "guess"
+      ],
+      "palavrasChave": [
+        "discovery",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "discovery",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "discovery",
+        "great",
+        "without",
+        "guess",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"No great discovery was ever made without a bold guess.\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “No great discovery was ever made without a bold guess.” articula reflexao, discovery, great em regist…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases discovery",
+        "discovery",
+        "reflexao"
+      ],
+      "canonicalSlug": "no-great-discovery-was-ever-made-without-a-bold-guess",
+      "relatedKeywords": [
+        "reflexao",
+        "discovery",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "No great discovery was ever made without a bold guess.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "discovery",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_b20f265329",
+    "slug": "god-in-the-beginning-formed-matter-in-solid-massy-hard-impenetrable-movable",
+    "texto": "God in the beginning formed matter in solid, massy, hard, impenetrable, movable particles, of such sizes and figures, and with such other properties, and in such proportion to space, as most conduced to the end for which he formed them.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a fe. “God in the beginning formed matter in solid, massy, hard, impenetrable, movable particles, of suc…” articula fe, god, beginning em registro de fe, com relevância para contextos como termino e beginning.",
+    "semantica": {
+      "categoriaPrincipal": "fe",
+      "categorias": [
+        "fe",
+        "god",
+        "beginning",
+        "end"
+      ],
+      "contextos": [
+        "termino",
+        "beginning",
+        "end"
+      ],
+      "emocoes": [],
+      "temas": [
+        "fe",
+        "god",
+        "beginning",
+        "end",
+        "formed",
+        "matter",
+        "solid",
+        "massy"
+      ],
+      "palavrasChave": [
+        "god",
+        "beginning",
+        "end",
+        "fe",
+        "termino"
+      ],
+      "tagsSeo": [
+        "fe",
+        "god",
+        "beginning",
+        "end",
+        "termino",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 49,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "fe",
+        "god",
+        "beginning",
+        "end",
+        "formed",
+        "matter"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"God in the beginning formed matter in solid, massy, …\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a fe. “God in the beginning formed matter in solid, massy, hard, impenetrable, movable particles, of suc…” articul…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre fe",
+        "frases fe",
+        "frases god",
+        "frases termino",
+        "frases beginning",
+        "god",
+        "beginning",
+        "end",
+        "fe"
+      ],
+      "canonicalSlug": "god-in-the-beginning-formed-matter-in-solid-massy-hard-impenetrable-movable",
+      "relatedKeywords": [
+        "fe",
+        "god",
+        "beginning",
+        "end",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "God in the beginning formed matter in solid, massy, hard, impenetrable, movable particles, of such sizes and figures, and with such other properties, and in such proportion to space, as most conduced to the end for which he formed them.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "fe",
+    "contextos": [
+      "termino",
+      "beginning",
+      "end"
+    ],
+    "palavras_chave": [
+      "god",
+      "beginning",
+      "end",
+      "fe",
+      "termino"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_b3f8442efd",
+    "slug": "fidelity-and-allegiance-sworn-to-the-king-is-only-such-a-fidelity-and-obedience",
+    "texto": "Fidelity and allegiance sworn to the King is only such a fidelity and obedience as is due to him by the law of the land; for were that faith and allegiance more than what the law requires, we would swear ourselves slaves and the King absolute; whereas, by the law, we are free men, notwithstanding those oaths.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a fe. “Fidelity and allegiance sworn to the King is only such a fidelity and obedience as is due to him …” articula fe, law, men em registro de fe, com relevância para contextos como men e free.",
+    "semantica": {
+      "categoriaPrincipal": "fe",
+      "categorias": [
+        "fe",
+        "law",
+        "men",
+        "free"
+      ],
+      "contextos": [
+        "men",
+        "free"
+      ],
+      "emocoes": [],
+      "temas": [
+        "fe",
+        "law",
+        "men",
+        "free",
+        "fidelity",
+        "allegiance",
+        "sworn",
+        "obedience"
+      ],
+      "palavrasChave": [
+        "law",
+        "men",
+        "free",
+        "fe"
+      ],
+      "tagsSeo": [
+        "fe",
+        "law",
+        "men",
+        "free",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 57,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "fe",
+        "law",
+        "men",
+        "free",
+        "fidelity",
+        "allegiance"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Fidelity and allegiance sworn to the King is only su…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a fe. “Fidelity and allegiance sworn to the King is only such a fidelity and obedience as is due to him …” articul…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre fe",
+        "frases fe",
+        "frases law",
+        "frases men",
+        "frases free",
+        "law",
+        "men",
+        "free",
+        "fe"
+      ],
+      "canonicalSlug": "fidelity-and-allegiance-sworn-to-the-king-is-only-such-a-fidelity-and-obedience",
+      "relatedKeywords": [
+        "fe",
+        "law",
+        "men",
+        "free",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Fidelity and allegiance sworn to the King is only such a fidelity and obedience as is due to him by the law of the land; for were that faith and allegiance more than what the law requires, we would swear ourselves slaves and the King absolute; whereas, by the law, we are free men, notwithstanding those oaths.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "fe",
+    "contextos": [
+      "men",
+      "free"
+    ],
+    "palavras_chave": [
+      "law",
+      "men",
+      "free",
+      "fe"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_c399640ba9",
+    "slug": "atheism-is-so-senseless-when-i-look-at-the-solar-system-i-see-the-earth-at-the",
+    "texto": "Atheism is so senseless. When I look at the solar system, I see the earth at the right distance from the sun to receive the proper amounts of heat and light. This did not happen by chance.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “Atheism is so senseless. When I look at the solar system, I see the earth at the right distance f…” articula reflexao, light, sun em registro de reflexao, com relevância para contextos como sun e earth.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "light",
+        "sun",
+        "earth"
+      ],
+      "contextos": [
+        "sun",
+        "earth"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "light",
+        "sun",
+        "earth",
+        "atheism",
+        "senseless",
+        "solar",
+        "system"
+      ],
+      "palavrasChave": [
+        "light",
+        "sun",
+        "earth",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "light",
+        "sun",
+        "earth",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 44,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "light",
+        "sun",
+        "earth",
+        "atheism",
+        "senseless"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Atheism is so senseless. When I look at the solar sy…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “Atheism is so senseless. When I look at the solar system, I see the earth at the right distance f…” a…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases light",
+        "frases sun",
+        "frases earth",
+        "light",
+        "sun",
+        "earth",
+        "reflexao"
+      ],
+      "canonicalSlug": "atheism-is-so-senseless-when-i-look-at-the-solar-system-i-see-the-earth-at-the",
+      "relatedKeywords": [
+        "reflexao",
+        "light",
+        "sun",
+        "earth",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Atheism is so senseless. When I look at the solar system, I see the earth at the right distance from the sun to receive the proper amounts of heat and light. This did not happen by chance.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "sun",
+      "earth"
+    ],
+    "palavras_chave": [
+      "light",
+      "sun",
+      "earth",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_c4c675aed2",
+    "slug": "god-made-and-governs-the-world-invisibly-and-has-commanded-us-to-love-and-worsh",
+    "texto": "God made and governs the world invisibly, and has commanded us to love and worship him and no other God; to honor our parents and masters, and love our neighbours as ourselves; and to be temperate, just, and peaceable, and to be merciful even to brute beasts.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre vínculos afetivos e cuidado mútuo. “God made and governs the world invisibly, and has commanded us to love and worship him and no oth…” articula amor, love, parents em registro de amor, com relevância para contextos como parents e world.",
+    "semantica": {
+      "categoriaPrincipal": "amor",
+      "categorias": [
+        "amor",
+        "love",
+        "parents",
+        "world"
+      ],
+      "contextos": [
+        "parents",
+        "world"
+      ],
+      "emocoes": [
+        "paz",
+        "amor"
+      ],
+      "temas": [
+        "amor",
+        "love",
+        "parents",
+        "world",
+        "governs",
+        "invisibly",
+        "commanded",
+        "worship"
+      ],
+      "palavrasChave": [
+        "love",
+        "parents",
+        "world",
+        "amor",
+        "paz"
+      ],
+      "tagsSeo": [
+        "amor",
+        "love",
+        "parents",
+        "world",
+        "paz",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 51,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amor",
+        "love",
+        "parents",
+        "world",
+        "governs",
+        "invisibly"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"God made and governs the world invisibly, and has co…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre vínculos afetivos e cuidado mútuo. “God made and governs the world invisibly, and has commanded us to love and worship him and n…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre amor",
+        "frases amor",
+        "frases love",
+        "frases parents",
+        "frases world",
+        "love",
+        "parents",
+        "world",
+        "amor"
+      ],
+      "canonicalSlug": "god-made-and-governs-the-world-invisibly-and-has-commanded-us-to-love-and-worsh",
+      "relatedKeywords": [
+        "paz",
+        "amor",
+        "love",
+        "parents",
+        "world",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "God made and governs the world invisibly, and has commanded us to love and worship him and no other God; to honor our parents and masters, and love our neighbours as ourselves; and to be temperate, just, and peaceable, and to be merciful even to brute beasts.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "amor",
+    "contextos": [
+      "parents",
+      "world"
+    ],
+    "palavras_chave": [
+      "love",
+      "parents",
+      "world",
+      "amor",
+      "paz"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_c6cf6890b8",
+    "slug": "to-explain-all-nature-is-too-difficult-a-task-for-any-one-man-or-even-for-any-on-2",
+    "texto": "To explain all nature is too difficult a task for any one man or even for any one age. 'Tis much better to do a little with certainty & leave the rest for others that come after you.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “To explain all nature is too difficult a task for any one man or even for any one age. 'Tis much …” articula reflexao, age, man em registro de reflexao, com relevância para contextos como man e better.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "age",
+        "man",
+        "better"
+      ],
+      "contextos": [
+        "man",
+        "better"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "age",
+        "man",
+        "better",
+        "explain",
+        "nature",
+        "difficult",
+        "little"
+      ],
+      "palavrasChave": [
+        "age",
+        "man",
+        "better",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "age",
+        "man",
+        "better",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 44,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "age",
+        "man",
+        "better",
+        "explain",
+        "nature"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"To explain all nature is too difficult a task for an…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “To explain all nature is too difficult a task for any one man or even for any one age. 'Tis much …” a…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases age",
+        "frases man",
+        "frases better",
+        "age",
+        "man",
+        "better",
+        "reflexao"
+      ],
+      "canonicalSlug": "to-explain-all-nature-is-too-difficult-a-task-for-any-one-man-or-even-for-any-on-2",
+      "relatedKeywords": [
+        "reflexao",
+        "age",
+        "man",
+        "better",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "To explain all nature is too difficult a task for any one man or even for any one age. 'Tis much better to do a little with certainty & leave the rest for others that come after you.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "man",
+      "better"
+    ],
+    "palavras_chave": [
+      "age",
+      "man",
+      "better",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_c79df5c474",
+    "slug": "i-have-a-fundamental-belief-in-the-bible-as-the-word-of-god-written-by-those-wh",
+    "texto": "I have a fundamental belief in the Bible as the Word of God, written by those who were inspired. I study the Bible daily.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a motivacao. “I have a fundamental belief in the Bible as the Word of God, written by those who were inspired. …” articula motivacao, daily, bible em registro de motivacao, com relevância para contextos como inspiracao e estudos.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "daily",
+        "bible",
+        "belief"
+      ],
+      "contextos": [
+        "inspiracao",
+        "estudos",
+        "bible",
+        "belief"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "daily",
+        "bible",
+        "belief",
+        "fundamental",
+        "written",
+        "those"
+      ],
+      "palavrasChave": [
+        "daily",
+        "bible",
+        "belief",
+        "motivacao",
+        "inspiracao",
+        "estudos"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "daily",
+        "bible",
+        "belief",
+        "inspiracao",
+        "estudos",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 38,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "daily",
+        "bible",
+        "belief",
+        "fundamental",
+        "written"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"I have a fundamental belief in the Bible as the Word…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a motivacao. “I have a fundamental belief in the Bible as the Word of God, written by those who were inspired. …”…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases daily",
+        "frases inspiracao",
+        "frases estudos",
+        "daily",
+        "bible",
+        "belief",
+        "motivacao"
+      ],
+      "canonicalSlug": "i-have-a-fundamental-belief-in-the-bible-as-the-word-of-god-written-by-those-wh",
+      "relatedKeywords": [
+        "motivacao",
+        "daily",
+        "bible",
+        "belief",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I have a fundamental belief in the Bible as the Word of God, written by those who were inspired. I study the Bible daily.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "motivacao",
+    "contextos": [
+      "inspiracao",
+      "estudos",
+      "bible",
+      "belief"
+    ],
+    "palavras_chave": [
+      "daily",
+      "bible",
+      "belief",
+      "motivacao",
+      "inspiracao",
+      "estudos"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_c9a1224a20",
+    "slug": "errors-are-not-in-the-art-but-in-the-artificers",
+    "texto": "Errors are not in the art but in the artificers.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “Errors are not in the art but in the artificers.” articula reflexao, errors, artificers em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "errors"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "errors",
+        "artificers"
+      ],
+      "palavrasChave": [
+        "errors",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "errors",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "errors",
+        "artificers",
+        "reflexao",
+        "errors"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Errors are not in the art but in the artificers.\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “Errors are not in the art but in the artificers.” articula reflexao, errors, artificers em registro d…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases errors",
+        "errors",
+        "reflexao"
+      ],
+      "canonicalSlug": "errors-are-not-in-the-art-but-in-the-artificers",
+      "relatedKeywords": [
+        "reflexao",
+        "errors",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Errors are not in the art but in the artificers.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "errors",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_d1259f6010",
+    "slug": "if-i-have-seen-further-than-others-it-is-by-standing-upon-the-shoulders-of-gian",
+    "texto": "If I have seen further than others, it is by standing upon the shoulders of giants.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Orientação direta de Isaac Newton sobre temas ligados a reflexao. A afirmação “If I have seen further than others, it is by standing upon the shoulders of giants.” funciona como lembrete prático ligado a reflexao, giants, standing, útil em momentos de standing e shoulders.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "giants",
+        "standing",
+        "shoulders"
+      ],
+      "contextos": [
+        "standing",
+        "shoulders"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "giants",
+        "standing",
+        "shoulders",
+        "further",
+        "others"
+      ],
+      "palavrasChave": [
+        "giants",
+        "standing",
+        "shoulders",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "giants",
+        "standing",
+        "shoulders",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "giants",
+        "standing",
+        "shoulders",
+        "further",
+        "others"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"If I have seen further than others, it is by standin…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Orientação direta de Isaac Newton sobre temas ligados a reflexao. A afirmação “If I have seen further than others, it is by standing upon the shoulders of gia…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases giants",
+        "frases standing",
+        "frases shoulders",
+        "giants",
+        "standing",
+        "shoulders",
+        "reflexao"
+      ],
+      "canonicalSlug": "if-i-have-seen-further-than-others-it-is-by-standing-upon-the-shoulders-of-gian",
+      "relatedKeywords": [
+        "reflexao",
+        "giants",
+        "standing",
+        "shoulders",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "If I have seen further than others, it is by standing upon the shoulders of giants.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "standing",
+      "shoulders"
+    ],
+    "palavras_chave": [
+      "giants",
+      "standing",
+      "shoulders",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_d24a3503b9",
+    "slug": "truth-is-ever-to-be-found-in-the-simplicity-and-not-in-the-multiplicity-and-con",
+    "texto": "Truth is ever to be found in the simplicity, and not in the multiplicity and confusion of things.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “Truth is ever to be found in the simplicity, and not in the multiplicity and confusion of things.” articula reflexao, simplicity, verdade em registro de reflexao, com relevância para contextos como verdade.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "simplicity",
+        "verdade"
+      ],
+      "contextos": [
+        "verdade"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "simplicity",
+        "verdade",
+        "truth",
+        "found",
+        "multiplicity",
+        "confusion"
+      ],
+      "palavrasChave": [
+        "simplicity",
+        "verdade",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "simplicity",
+        "verdade",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "simplicity",
+        "verdade",
+        "truth",
+        "found",
+        "multiplicity"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Truth is ever to be found in the simplicity, and not…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “Truth is ever to be found in the simplicity, and not in the multiplicity and confusion of things.” ar…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases simplicity",
+        "frases verdade",
+        "simplicity",
+        "verdade",
+        "reflexao"
+      ],
+      "canonicalSlug": "truth-is-ever-to-be-found-in-the-simplicity-and-not-in-the-multiplicity-and-con",
+      "relatedKeywords": [
+        "reflexao",
+        "simplicity",
+        "verdade",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Truth is ever to be found in the simplicity, and not in the multiplicity and confusion of things.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "verdade"
+    ],
+    "palavras_chave": [
+      "simplicity",
+      "verdade",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_db70b01235",
+    "slug": "nature-is-pleased-with-simplicity-and-nature-is-no-dummy",
+    "texto": "Nature is pleased with simplicity. And nature is no dummy",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a sabedoria. “Nature is pleased with simplicity. And nature is no dummy” articula sabedoria, nature, philosophy em registro de sabedoria, com relevância para contextos como philosophy e simplicity.",
+    "semantica": {
+      "categoriaPrincipal": "sabedoria",
+      "categorias": [
+        "sabedoria",
+        "nature",
+        "philosophy",
+        "simplicity"
+      ],
+      "contextos": [
+        "philosophy",
+        "simplicity",
+        "sabedoria"
+      ],
+      "emocoes": [],
+      "temas": [
+        "sabedoria",
+        "nature",
+        "philosophy",
+        "simplicity",
+        "pleased",
+        "dummy"
+      ],
+      "palavrasChave": [
+        "nature",
+        "philosophy",
+        "simplicity",
+        "sabedoria"
+      ],
+      "tagsSeo": [
+        "sabedoria",
+        "nature",
+        "philosophy",
+        "simplicity",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "sabedoria",
+        "nature",
+        "philosophy",
+        "simplicity",
+        "pleased",
+        "dummy"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Nature is pleased with simplicity. And nature is no …\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a sabedoria. “Nature is pleased with simplicity. And nature is no dummy” articula sabedoria, nature, philosophy em…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre sabedoria",
+        "frases sabedoria",
+        "frases nature",
+        "frases philosophy",
+        "frases simplicity",
+        "nature",
+        "philosophy",
+        "simplicity",
+        "sabedoria"
+      ],
+      "canonicalSlug": "nature-is-pleased-with-simplicity-and-nature-is-no-dummy",
+      "relatedKeywords": [
+        "sabedoria",
+        "nature",
+        "philosophy",
+        "simplicity",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Nature is pleased with simplicity. And nature is no dummy",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "sabedoria",
+    "contextos": [
+      "philosophy",
+      "simplicity",
+      "sabedoria"
+    ],
+    "palavras_chave": [
+      "nature",
+      "philosophy",
+      "simplicity",
+      "sabedoria"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_db85f2bf11",
+    "slug": "plato-is-my-friend-aristotle-is-my-friend-but-my-greatest-friend-is-truth",
+    "texto": "Plato is my friend, Aristotle is my friend, but my greatest friend is truth.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a amizade. “Plato is my friend, Aristotle is my friend, but my greatest friend is truth.” articula amizade, isaac-newton, verdade em registro de amizade, com relevância para contextos como termino e isaac-newton.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "isaac-newton",
+        "verdade"
+      ],
+      "contextos": [
+        "termino",
+        "isaac-newton",
+        "verdade"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "isaac-newton",
+        "verdade",
+        "friend",
+        "plato",
+        "aristotle",
+        "greatest",
+        "truth"
+      ],
+      "palavrasChave": [
+        "amizade",
+        "isaac-newton",
+        "verdade",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "isaac-newton",
+        "verdade",
+        "termino"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "isaac-newton",
+        "verdade",
+        "friend",
+        "plato",
+        "aristotle"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Plato is my friend, Aristotle is my friend, but my g…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a amizade. “Plato is my friend, Aristotle is my friend, but my greatest friend is truth.” articula amizade, isaac-…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases isaac newton",
+        "frases termino",
+        "amizade",
+        "isaac-newton",
+        "verdade",
+        "termino"
+      ],
+      "canonicalSlug": "plato-is-my-friend-aristotle-is-my-friend-but-my-greatest-friend-is-truth",
+      "relatedKeywords": [
+        "amizade",
+        "isaac-newton",
+        "verdade"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Plato is my friend, Aristotle is my friend, but my greatest friend is truth.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "isaac-newton",
+      "verdade"
+    ],
+    "palavras_chave": [
+      "amizade",
+      "isaac-newton",
+      "verdade",
+      "termino"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_dbf76177e1",
+    "slug": "in-the-absence-of-any-other-proof-the-thumb-alone-would-convince-me-of-god-s-ex",
+    "texto": "In the absence of any other proof, the thumb alone would convince me of God's existence.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “In the absence of any other proof, the thumb alone would convince me of God's existence.” articula reflexao, alone, me em registro de reflexao, com relevância para contextos como me e existence.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "alone",
+        "me",
+        "existence"
+      ],
+      "contextos": [
+        "me",
+        "existence"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "alone",
+        "me",
+        "existence",
+        "absence",
+        "other",
+        "proof",
+        "thumb"
+      ],
+      "palavrasChave": [
+        "alone",
+        "me",
+        "existence",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "alone",
+        "me",
+        "existence",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "alone",
+        "me",
+        "existence",
+        "absence",
+        "other"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"In the absence of any other proof, the thumb alone w…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “In the absence of any other proof, the thumb alone would convince me of God's existence.” articula re…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases alone",
+        "frases me",
+        "frases existence",
+        "alone",
+        "me",
+        "existence",
+        "reflexao"
+      ],
+      "canonicalSlug": "in-the-absence-of-any-other-proof-the-thumb-alone-would-convince-me-of-god-s-ex",
+      "relatedKeywords": [
+        "reflexao",
+        "alone",
+        "me",
+        "existence",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "In the absence of any other proof, the thumb alone would convince me of God's existence.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "me",
+      "existence"
+    ],
+    "palavras_chave": [
+      "alone",
+      "me",
+      "existence",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_e167e9b4b8",
+    "slug": "i-can-calculate-the-motion-of-heavenly-bodies-but-not-the-madness-of-people",
+    "texto": "I can calculate the motion of heavenly bodies but not the madness of people.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a sabedoria. “I can calculate the motion of heavenly bodies but not the madness of people.” articula sabedoria, human-nature, ignorance em registro de sabedoria, com relevância para contextos como ignorance e knowledge.",
+    "semantica": {
+      "categoriaPrincipal": "sabedoria",
+      "categorias": [
+        "sabedoria",
+        "human-nature",
+        "ignorance",
+        "knowledge"
+      ],
+      "contextos": [
+        "ignorance",
+        "knowledge",
+        "sabedoria"
+      ],
+      "emocoes": [],
+      "temas": [
+        "sabedoria",
+        "human-nature",
+        "ignorance",
+        "knowledge",
+        "calculate",
+        "motion",
+        "heavenly",
+        "bodies"
+      ],
+      "palavrasChave": [
+        "human-nature",
+        "ignorance",
+        "knowledge",
+        "sabedoria"
+      ],
+      "tagsSeo": [
+        "sabedoria",
+        "human-nature",
+        "ignorance",
+        "knowledge",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 35,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "sabedoria",
+        "human-nature",
+        "ignorance",
+        "knowledge",
+        "calculate",
+        "motion"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"I can calculate the motion of heavenly bodies but no…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a sabedoria. “I can calculate the motion of heavenly bodies but not the madness of people.” articula sabedoria, hu…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre sabedoria",
+        "frases sabedoria",
+        "frases human nature",
+        "frases ignorance",
+        "frases knowledge",
+        "human-nature",
+        "ignorance",
+        "knowledge",
+        "sabedoria"
+      ],
+      "canonicalSlug": "i-can-calculate-the-motion-of-heavenly-bodies-but-not-the-madness-of-people",
+      "relatedKeywords": [
+        "sabedoria",
+        "human-nature",
+        "ignorance",
+        "knowledge",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I can calculate the motion of heavenly bodies but not the madness of people.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "sabedoria",
+    "contextos": [
+      "ignorance",
+      "knowledge",
+      "sabedoria"
+    ],
+    "palavras_chave": [
+      "human-nature",
+      "ignorance",
+      "knowledge",
+      "sabedoria"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_f464b6169b",
+    "slug": "plato-is-my-friend-aristotle-is-my-friend-but-my-greatest-friend-is-truth-2",
+    "texto": "Plato is my friend; Aristotle is my friend, but my greatest friend is truth.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a amizade. “Plato is my friend; Aristotle is my friend, but my greatest friend is truth.” articula amizade, greatest, my-friend em registro de amizade, com relevância para contextos como termino e greatest.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "greatest",
+        "my-friend"
+      ],
+      "contextos": [
+        "termino",
+        "greatest",
+        "my-friend"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "greatest",
+        "my-friend",
+        "friend",
+        "plato",
+        "aristotle",
+        "truth"
+      ],
+      "palavrasChave": [
+        "amizade",
+        "greatest",
+        "my-friend",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "greatest",
+        "my-friend",
+        "termino",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "greatest",
+        "my-friend",
+        "friend",
+        "plato",
+        "aristotle"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Plato is my friend; Aristotle is my friend, but my g…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a amizade. “Plato is my friend; Aristotle is my friend, but my greatest friend is truth.” articula amizade, greate…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases greatest",
+        "frases termino",
+        "amizade",
+        "greatest",
+        "my-friend",
+        "termino"
+      ],
+      "canonicalSlug": "plato-is-my-friend-aristotle-is-my-friend-but-my-greatest-friend-is-truth-2",
+      "relatedKeywords": [
+        "amizade",
+        "greatest",
+        "my-friend",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Plato is my friend; Aristotle is my friend, but my greatest friend is truth.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "greatest",
+      "my-friend"
+    ],
+    "palavras_chave": [
+      "amizade",
+      "greatest",
+      "my-friend",
+      "termino"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_f6dd85ab31",
+    "slug": "the-smaller-the-planets-are-they-are-other-things-being-equal-of-so-much-the",
+    "texto": "The smaller the planets are, they are, other things being equal, of so much the greater density; for so the powers of gravity on their several surfaces come nearer to equality. They are likewise, other things being equal, of the greater density, as they are nearer to the sun.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a sabedoria. “The smaller the planets are, they are, other things being equal, of so much the greater density; …” articula sabedoria, sun, equal em registro de sabedoria, com relevância para contextos como equal e gravity.",
+    "semantica": {
+      "categoriaPrincipal": "sabedoria",
+      "categorias": [
+        "sabedoria",
+        "sun",
+        "equal",
+        "gravity"
+      ],
+      "contextos": [
+        "equal",
+        "gravity"
+      ],
+      "emocoes": [],
+      "temas": [
+        "sabedoria",
+        "sun",
+        "equal",
+        "gravity",
+        "other",
+        "things",
+        "being",
+        "greater"
+      ],
+      "palavrasChave": [
+        "sun",
+        "equal",
+        "gravity",
+        "sabedoria"
+      ],
+      "tagsSeo": [
+        "sabedoria",
+        "sun",
+        "equal",
+        "gravity",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 53,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "sabedoria",
+        "sun",
+        "equal",
+        "gravity",
+        "other",
+        "things"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"The smaller the planets are, they are, other things …\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a sabedoria. “The smaller the planets are, they are, other things being equal, of so much the greater density; …”…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre sabedoria",
+        "frases sabedoria",
+        "frases sun",
+        "frases equal",
+        "frases gravity",
+        "sun",
+        "equal",
+        "gravity",
+        "sabedoria"
+      ],
+      "canonicalSlug": "the-smaller-the-planets-are-they-are-other-things-being-equal-of-so-much-the",
+      "relatedKeywords": [
+        "sabedoria",
+        "sun",
+        "equal",
+        "gravity",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The smaller the planets are, they are, other things being equal, of so much the greater density; for so the powers of gravity on their several surfaces come nearer to equality. They are likewise, other things being equal, of the greater density, as they are nearer to the sun.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "sabedoria",
+    "contextos": [
+      "equal",
+      "gravity"
+    ],
+    "palavras_chave": [
+      "sun",
+      "equal",
+      "gravity",
+      "sabedoria"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_f9203c359c",
+    "slug": "for-i-see-not-what-there-is-desirable-in-publick-esteeme-were-i-able-to-acquire",
+    "texto": "For I see not what there is desirable in publick esteeme, were I able to acquire & maintaine it. It would perhaps increase my acquaintance, the thing which I chiefly study to decline.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a educacao. “For I see not what there is desirable in publick esteeme, were I able to acquire & maintaine it. …” articula educacao, fame, introversion em registro de educacao, com relevância para contextos como estudos e introversion.",
+    "semantica": {
+      "categoriaPrincipal": "educacao",
+      "categorias": [
+        "educacao",
+        "fame",
+        "introversion"
+      ],
+      "contextos": [
+        "estudos",
+        "introversion"
+      ],
+      "emocoes": [],
+      "temas": [
+        "educacao",
+        "fame",
+        "introversion",
+        "there",
+        "desirable",
+        "publick",
+        "esteeme",
+        "acquire"
+      ],
+      "palavrasChave": [
+        "fame",
+        "introversion",
+        "educacao",
+        "estudos"
+      ],
+      "tagsSeo": [
+        "educacao",
+        "fame",
+        "introversion",
+        "estudos",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 42,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "educacao",
+        "fame",
+        "introversion",
+        "there",
+        "desirable",
+        "publick"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"For I see not what there is desirable in publick est…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a educacao. “For I see not what there is desirable in publick esteeme, were I able to acquire & maintaine it. …” a…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre educacao",
+        "frases educacao",
+        "frases fame",
+        "frases estudos",
+        "frases introversion",
+        "fame",
+        "introversion",
+        "educacao",
+        "estudos"
+      ],
+      "canonicalSlug": "for-i-see-not-what-there-is-desirable-in-publick-esteeme-were-i-able-to-acquire",
+      "relatedKeywords": [
+        "educacao",
+        "fame",
+        "introversion",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "For I see not what there is desirable in publick esteeme, were I able to acquire & maintaine it. It would perhaps increase my acquaintance, the thing which I chiefly study to decline.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "educacao",
+    "contextos": [
+      "estudos",
+      "introversion"
+    ],
+    "palavras_chave": [
+      "fame",
+      "introversion",
+      "educacao",
+      "estudos"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_fc9c039efd",
+    "slug": "a-man-may-imagine-things-that-are-false-but-he-can-only-understand-things-that",
+    "texto": "A man may imagine things that are false, but he can only understand things that are true, for if the things be false, the apprehension of them is not understanding.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a reflexao. “A man may imagine things that are false, but he can only understand things that are true, for if …” articula reflexao, man, understanding em registro de reflexao, com relevância para contextos como understanding e true.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "man",
+        "understanding",
+        "true"
+      ],
+      "contextos": [
+        "understanding",
+        "true"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "man",
+        "understanding",
+        "true",
+        "things",
+        "false",
+        "imagine",
+        "understand"
+      ],
+      "palavrasChave": [
+        "man",
+        "understanding",
+        "true",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "man",
+        "understanding",
+        "true",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 42,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "man",
+        "understanding",
+        "true",
+        "things",
+        "false"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"A man may imagine things that are false, but he can …\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a reflexao. “A man may imagine things that are false, but he can only understand things that are true, for if …” a…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases man",
+        "frases understanding",
+        "frases true",
+        "man",
+        "understanding",
+        "true",
+        "reflexao"
+      ],
+      "canonicalSlug": "a-man-may-imagine-things-that-are-false-but-he-can-only-understand-things-that",
+      "relatedKeywords": [
+        "reflexao",
+        "man",
+        "understanding",
+        "true",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A man may imagine things that are false, but he can only understand things that are true, for if the things be false, the apprehension of them is not understanding.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
+    "contextos": [
+      "understanding",
+      "true"
+    ],
+    "palavras_chave": [
+      "man",
+      "understanding",
+      "true",
+      "reflexao"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_fe7c60f430",
+    "slug": "this-most-beautiful-system-of-the-sun-planets-and-comets-could-only-proceed-fr",
+    "texto": "This most beautiful system of the sun, planets and comets, could only proceed from the counsel and dominion of an intelligent and powerful Being.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Citação de Isaac Newton sobre temas ligados a fe. “This most beautiful system of the sun, planets and comets, could only proceed from the counsel an…” articula fe, god, id em registro de fe, com relevância para contextos como id e intelligent-design.",
+    "semantica": {
+      "categoriaPrincipal": "fe",
+      "categorias": [
+        "fe",
+        "god",
+        "id",
+        "intelligent-design",
+        "religion"
+      ],
+      "contextos": [
+        "id",
+        "intelligent-design",
+        "religion",
+        "religion-and-science",
+        "science"
+      ],
+      "emocoes": [],
+      "temas": [
+        "fe",
+        "god",
+        "id",
+        "intelligent-design",
+        "beautiful",
+        "system",
+        "planets",
+        "comets"
+      ],
+      "palavrasChave": [
+        "god",
+        "id",
+        "intelligent-design",
+        "religion",
+        "religion-and-science",
+        "science",
+        "science-and-religion",
+        "fe"
+      ],
+      "tagsSeo": [
+        "fe",
+        "god",
+        "id",
+        "intelligent-design",
+        "religion",
+        "religion-and-science",
+        "science",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1643",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 48,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "fe",
+        "god",
+        "id",
+        "intelligent-design",
+        "beautiful",
+        "system"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"This most beautiful system of the sun, planets and c…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Citação de Isaac Newton sobre temas ligados a fe. “This most beautiful system of the sun, planets and comets, could only proceed from the counsel an…” articul…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre fe",
+        "frases fe",
+        "frases god",
+        "frases id",
+        "frases intelligent design",
+        "god",
+        "id",
+        "intelligent-design",
+        "religion"
+      ],
+      "canonicalSlug": "this-most-beautiful-system-of-the-sun-planets-and-comets-could-only-proceed-fr",
+      "relatedKeywords": [
+        "fe",
+        "god",
+        "id",
+        "intelligent-design",
+        "religion",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "This most beautiful system of the sun, planets and comets, could only proceed from the counsel and dominion of an intelligent and powerful Being.",
+    "autor_original": "Isaac Newton",
+    "autor_slug": "isaac-newton",
+    "categoria": "fe",
+    "contextos": [
+      "id",
+      "intelligent-design",
+      "religion",
+      "religion-and-science",
+      "science"
+    ],
+    "palavras_chave": [
+      "god",
+      "id",
+      "intelligent-design",
+      "religion",
+      "religion-and-science",
+      "science",
+      "science-and-religion",
+      "fe"
+    ],
+    "ano_ou_data": "1643",
+    "autor_tipo": "fisico-matematico",
+    "nacionalidade": "ingles",
+    "nascimento_falecimento": "1643-1727",
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   },
   {
     "id": "f_in_001",
     "slug": "ombros-de-gigantes",
+    "texto": "If I have seen further it is by standing on the shoulders of giants.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Newton escreveu a carta a Hooke reconhecendo devedores intelectuais. A metáfora dos “ombros de gigantes” expressa humildade científica: descobertas amplificam o trabalho de gerações anteriores.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "ciencia",
+        "aprendizado"
+      ],
+      "contextos": [
+        "termino",
+        "conhecimento"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "ciencia",
+        "aprendizado",
+        "further",
+        "standing",
+        "shoulders",
+        "giants"
+      ],
+      "palavrasChave": [
+        "ciencia",
+        "aprendizado",
+        "reflexao",
+        "termino",
+        "conhecimento"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "ciencia",
+        "aprendizado",
+        "termino",
+        "conhecimento",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1675",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "ciencia",
+        "aprendizado",
+        "further",
+        "standing",
+        "shoulders"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"If I have seen further it is by standing on the shou…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Newton escreveu a carta a Hooke reconhecendo devedores intelectuais. A metáfora dos “ombros de gigantes” expressa humildade científica: descobertas amplificam…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases ciencia",
+        "frases termino",
+        "frases conhecimento",
+        "ciencia",
+        "aprendizado",
+        "reflexao",
+        "termino"
+      ],
+      "canonicalSlug": "ombros-de-gigantes",
+      "relatedKeywords": [
+        "reflexao",
+        "ciencia",
+        "aprendizado",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "If I have seen further it is by standing on the shoulders of giants.",
     "autor_original": "Isaac Newton",
-    "categoria": "ciencia",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
     "contextos": [
+      "termino",
       "conhecimento"
     ],
-    "explicacao": "Newton escreveu a carta a Hooke reconhecendo devedores intelectuais. A metáfora dos “ombros de gigantes” expressa humildade científica: descobertas amplificam o trabalho de gerações anteriores.",
     "palavras_chave": [
       "ciencia",
-      "aprendizado"
+      "aprendizado",
+      "reflexao",
+      "termino",
+      "conhecimento"
     ],
+    "ano_ou_data": "1675",
     "autor_tipo": "fisico-matematico",
     "nacionalidade": "ingles",
     "nascimento_falecimento": "1643-1727",
-    "ano_ou_data": "1675",
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   },
   {
     "id": "f_in_002",
     "slug": "lei-da-acao-e-reacao",
+    "texto": "For every action, there is an equal and opposite reaction.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Enunciado da terceira lei do movimento em Principia (1687). Newton formaliza que forças agem em pares iguais e opostos — base da mecânica clássica e metáfora frequente sobre consequências das ações.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "fisica",
+        "acao"
+      ],
+      "contextos": [
+        "lei-natural"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "fisica",
+        "acao",
+        "every",
+        "action",
+        "there",
+        "equal",
+        "opposite"
+      ],
+      "palavrasChave": [
+        "fisica",
+        "acao",
+        "reflexao",
+        "lei-natural"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "fisica",
+        "acao",
+        "lei-natural",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1687",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "fisica",
+        "acao",
+        "every",
+        "action",
+        "there"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"For every action, there is an equal and opposite rea…\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Enunciado da terceira lei do movimento em Principia (1687). Newton formaliza que forças agem em pares iguais e opostos — base da mecânica clássica e metáfora…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases fisica",
+        "frases lei natural",
+        "fisica",
+        "acao",
+        "reflexao",
+        "lei-natural"
+      ],
+      "canonicalSlug": "lei-da-acao-e-reacao",
+      "relatedKeywords": [
+        "reflexao",
+        "fisica",
+        "acao",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "For every action, there is an equal and opposite reaction.",
     "autor_original": "Isaac Newton",
-    "categoria": "fisica",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
     "contextos": [
       "lei-natural"
     ],
-    "explicacao": "Enunciado da terceira lei do movimento em Principia (1687). Newton formaliza que forças agem em pares iguais e opostos — base da mecânica clássica e metáfora frequente sobre consequências das ações.",
     "palavras_chave": [
       "fisica",
-      "acao"
+      "acao",
+      "reflexao",
+      "lei-natural"
     ],
+    "ano_ou_data": "1687",
     "autor_tipo": "fisico-matematico",
     "nacionalidade": "ingles",
     "nascimento_falecimento": "1643-1727",
-    "ano_ou_data": "1687",
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   },
   {
     "id": "f_in_003",
     "slug": "paciencia-e-chave",
+    "texto": "Patience is the key to success in science.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Atribuída a Newton no espírito de sua prática experimental. A investigação natural exigia anos de cálculo e observação; a paciência aparece como virtude indispensável ao cientista.",
+    "semantica": {
+      "categoriaPrincipal": "sucesso",
+      "categorias": [
+        "sucesso",
+        "paciencia",
+        "disciplina"
+      ],
+      "contextos": [
+        "persistencia"
+      ],
+      "emocoes": [],
+      "temas": [
+        "sucesso",
+        "paciencia",
+        "disciplina",
+        "patience",
+        "success",
+        "science"
+      ],
+      "palavrasChave": [
+        "paciencia",
+        "disciplina",
+        "sucesso",
+        "persistencia"
+      ],
+      "tagsSeo": [
+        "sucesso",
+        "paciencia",
+        "disciplina",
+        "persistencia",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1680",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "sucesso",
+        "paciencia",
+        "disciplina",
+        "patience",
+        "success",
+        "science"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Patience is the key to success in science.\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Atribuída a Newton no espírito de sua prática experimental. A investigação natural exigia anos de cálculo e observação; a paciência aparece como virtude indis…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre sucesso",
+        "frases sucesso",
+        "frases paciencia",
+        "frases persistencia",
+        "paciencia",
+        "disciplina",
+        "sucesso",
+        "persistencia"
+      ],
+      "canonicalSlug": "paciencia-e-chave",
+      "relatedKeywords": [
+        "sucesso",
+        "paciencia",
+        "disciplina",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Patience is the key to success in science.",
     "autor_original": "Isaac Newton",
-    "categoria": "disciplina",
+    "autor_slug": "isaac-newton",
+    "categoria": "sucesso",
     "contextos": [
       "persistencia"
     ],
-    "explicacao": "Atribuída a Newton no espírito de sua prática experimental. A investigação natural exigia anos de cálculo e observação; a paciência aparece como virtude indispensável ao cientista.",
     "palavras_chave": [
       "paciencia",
-      "disciplina"
+      "disciplina",
+      "sucesso",
+      "persistencia"
     ],
+    "ano_ou_data": "1680",
     "autor_tipo": "fisico-matematico",
     "nacionalidade": "ingles",
     "nascimento_falecimento": "1643-1727",
-    "ano_ou_data": "1680",
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   },
   {
     "id": "f_in_004",
     "slug": "verdade-vem-da-observacao",
+    "texto": "Truth is ever to be found in simplicity.",
+    "autor": "Isaac Newton",
+    "autorSlug": "isaac-newton",
+    "explicacao": "Newton buscava leis simples para fenômenos complexos. A citação reflete confiança de que princípios econômicos e elegantes apontam melhor para a verdade do que explicações prolixas.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "verdade",
+        "simplicidade"
+      ],
+      "contextos": [
+        "observacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "verdade",
+        "simplicidade",
+        "truth",
+        "found",
+        "simplicity"
+      ],
+      "palavrasChave": [
+        "verdade",
+        "simplicidade",
+        "reflexao",
+        "observacao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "verdade",
+        "simplicidade",
+        "observacao",
+        "isaac-newton"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "1685",
+      "periodoHistorico": "1643-1727",
+      "nacionalidadeAutor": "ingles",
+      "nascimentoAutor": "1643",
+      "falecimentoAutor": "1727",
+      "tipoAutor": "fisico-matematico",
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "verdade",
+        "simplicidade",
+        "truth",
+        "found",
+        "simplicity"
+      ],
+      "biografiaAutorCurta": "Isaac Newton. Cientista e físico teórico, referência na física moderna."
+    },
+    "seo": {
+      "titleSeo": "\"Truth is ever to be found in simplicity.\" — Isaac Newton | Metamensagem",
+      "descriptionSeo": "Newton buscava leis simples para fenômenos complexos. A citação reflete confiança de que princípios econômicos e elegantes apontam melhor para a verdade do qu…",
+      "keywordsSeo": [
+        "frases de Isaac Newton",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases verdade",
+        "frases observacao",
+        "verdade",
+        "simplicidade",
+        "reflexao",
+        "observacao"
+      ],
+      "canonicalSlug": "verdade-vem-da-observacao",
+      "relatedKeywords": [
+        "reflexao",
+        "verdade",
+        "simplicidade",
+        "isaac-newton"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Truth is ever to be found in simplicity.",
     "autor_original": "Isaac Newton",
-    "categoria": "verdade",
+    "autor_slug": "isaac-newton",
+    "categoria": "reflexao",
     "contextos": [
       "observacao"
     ],
-    "explicacao": "Newton buscava leis simples para fenômenos complexos. A citação reflete confiança de que princípios econômicos e elegantes apontam melhor para a verdade do que explicações prolixas.",
     "palavras_chave": [
       "verdade",
-      "simplicidade"
+      "simplicidade",
+      "reflexao",
+      "observacao"
     ],
+    "ano_ou_data": "1685",
     "autor_tipo": "fisico-matematico",
     "nacionalidade": "ingles",
     "nascimento_falecimento": "1643-1727",
-    "ano_ou_data": "1685",
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

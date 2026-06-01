@@ -2,31 +2,134 @@
   {
     "id": "f_ffrtxlcnx",
     "slug": "estou-neste-mundo-para-aprender-com-meus-erros-superar-pro",
+    "texto": "Estou neste mundo, para aprender com meus erros, superar provações e buscar o auto conhecimento com o objetivo de evoluir e me tornar um ser humano cada dia melhor. Se eu não buscar esta evolução espiritual, realmente a vida não faz sentido algum.",
+    "autor": "Aline Wega - Palestrante Motivacional",
+    "autorSlug": "aline-wega-palestrante-motivacional",
+    "explicacao": "Texto de Aline Wega, palestrante motivacional, com tom autobiográfico. Expõe uma busca por autoconhecimento e evolução espiritual como condição para dar sentido à vida e aos erros do percurso.",
+    "semantica": {
+      "categoriaPrincipal": "espiritualidade",
+      "categorias": [
+        "espiritualidade",
+        "aprendizado",
+        "foco",
+        "inspiracional",
+        "motivacao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "termino",
+        "foco",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "espiritualidade",
+        "aprendizado",
+        "foco",
+        "inspiracional",
+        "buscar",
+        "estou",
+        "neste",
+        "mundo"
+      ],
+      "palavrasChave": [
+        "aprendizado",
+        "foco",
+        "inspiracional",
+        "motivacao",
+        "sabedoria",
+        "espiritualidade",
+        "inspiracao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "espiritualidade",
+        "aprendizado",
+        "foco",
+        "inspiracional",
+        "motivacao",
+        "inspiracao",
+        "termino",
+        "aline-wega-palestrante-motivacional"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 54,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "espiritualidade",
+        "aprendizado",
+        "foco",
+        "inspiracional",
+        "buscar",
+        "estou"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Estou neste mundo, para aprender com meus erros, sup…\" — Aline Wega - Palestrante Motivacional | Metamensagem",
+      "descriptionSeo": "Texto de Aline Wega, palestrante motivacional, com tom autobiográfico. Expõe uma busca por autoconhecimento e evolução espiritual como condição para dar senti…",
+      "keywordsSeo": [
+        "frases de Aline Wega - Palestrante Motivacional",
+        "frases sobre espiritualidade",
+        "frases espiritualidade",
+        "frases aprendizado",
+        "frases inspiracao",
+        "frases termino",
+        "aprendizado",
+        "foco",
+        "inspiracional",
+        "motivacao"
+      ],
+      "canonicalSlug": "estou-neste-mundo-para-aprender-com-meus-erros-superar-pro",
+      "relatedKeywords": [
+        "espiritualidade",
+        "aprendizado",
+        "foco",
+        "inspiracional",
+        "motivacao",
+        "aline-wega-palestrante-motivacional"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Estou neste mundo, para aprender com meus erros, superar provações e buscar o auto conhecimento com o objetivo de evoluir e me tornar um ser humano cada dia melhor. Se eu não buscar esta evolução espiritual, realmente a vida não faz sentido algum.",
     "autor_original": "Aline Wega - Palestrante Motivacional",
-    "categoria": "aprendizado",
+    "autor_slug": "aline-wega-palestrante-motivacional",
+    "categoria": "espiritualidade",
     "contextos": [
+      "inspiracao",
+      "termino",
       "foco",
       "inspiracional",
-      "motivacao",
-      "sabedoria"
+      "motivacao"
     ],
-    "explicacao": "Texto de Aline Wega, palestrante motivacional, com tom autobiográfico. Expõe uma busca por autoconhecimento e evolução espiritual como condição para dar sentido à vida e aos erros do percurso.",
     "palavras_chave": [
       "aprendizado",
       "foco",
       "inspiracional",
       "motivacao",
-      "sabedoria"
+      "sabedoria",
+      "espiritualidade",
+      "inspiracao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,0 +1,96 @@
+[
+  {
+    "id": "f_csv_32f09d56e4",
+    "slug": "moonlight-is-sculpture",
+    "texto": "Moonlight is sculpture",
+    "autor": "sunlight is painting.",
+    "autorSlug": "sunlight-is-painting",
+    "explicacao": "Citação de sunlight is painting. sobre temas ligados a reflexao. “Moonlight is sculpture” articula reflexao, nathaniel-hawthorne, moonlight em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "nathaniel-hawthorne"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "nathaniel-hawthorne",
+        "moonlight",
+        "sculpture"
+      ],
+      "palavrasChave": [
+        "nathaniel-hawthorne",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "nathaniel-hawthorne",
+        "sunlight-is-painting"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "nathaniel-hawthorne",
+        "moonlight",
+        "sculpture",
+        "reflexao",
+        "nathaniel-hawthorne"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Moonlight is sculpture\" — sunlight is painting. | Metamensagem",
+      "descriptionSeo": "Citação de sunlight is painting. sobre temas ligados a reflexao. “Moonlight is sculpture” articula reflexao, nathaniel-hawthorne, moonlight em registro de ref…",
+      "keywordsSeo": [
+        "frases de sunlight is painting.",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases nathaniel hawthorne",
+        "nathaniel-hawthorne",
+        "reflexao"
+      ],
+      "canonicalSlug": "moonlight-is-sculpture",
+      "relatedKeywords": [
+        "reflexao",
+        "nathaniel-hawthorne",
+        "sunlight-is-painting"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Moonlight is sculpture",
+    "autor_original": "sunlight is painting.",
+    "autor_slug": "sunlight-is-painting",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "nathaniel-hawthorne",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -2,33 +2,131 @@
   {
     "id": "f_haplq032s",
     "slug": "o-sucesso-na-vida-vem-quando-voce-simplesmente-se-recusa-a",
+    "texto": "⁠O sucesso na vida vem quando você simplesmente se recusa a desistir e seus objetivos são tão fortes que os obstáculos, o fracasso e a perda atuam apenas como motivação.",
+    "autor": "Emeldito Covane",
+    "autorSlug": "emeldito-covane",
+    "explicacao": "Emeldito Covane define sucesso como recusa em desistir diante de obstáculos. Mensagem motivacional típica sobre resiliência, comum em conteúdo de superação pessoal e empreendedorismo.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "sabedoria",
+        "sucesso"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao",
+        "sabedoria",
+        "sucesso"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "sucesso",
+        "quando",
+        "simplesmente",
+        "recusa",
+        "desistir"
+      ],
+      "palavrasChave": [
+        "foco",
+        "inspiracional",
+        "motivacao",
+        "sabedoria",
+        "sucesso",
+        "superacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "sabedoria",
+        "sucesso",
+        "inspiracao",
+        "emeldito-covane"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 48,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "sucesso",
+        "quando",
+        "simplesmente"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠O sucesso na vida vem quando você simplesmente se r…\" — Emeldito Covane | Metamensagem",
+      "descriptionSeo": "Emeldito Covane define sucesso como recusa em desistir diante de obstáculos. Mensagem motivacional típica sobre resiliência, comum em conteúdo de superação pe…",
+      "keywordsSeo": [
+        "frases de Emeldito Covane",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases foco",
+        "frases inspiracao",
+        "frases inspiracional",
+        "foco",
+        "inspiracional",
+        "motivacao",
+        "sabedoria"
+      ],
+      "canonicalSlug": "o-sucesso-na-vida-vem-quando-voce-simplesmente-se-recusa-a",
+      "relatedKeywords": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "sabedoria",
+        "sucesso",
+        "emeldito-covane"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠O sucesso na vida vem quando você simplesmente se recusa a desistir e seus objetivos são tão fortes que os obstáculos, o fracasso e a perda atuam apenas como motivação.",
     "autor_original": "Emeldito Covane",
-    "categoria": "foco",
+    "autor_slug": "emeldito-covane",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao",
       "sabedoria",
-      "sucesso",
-      "superacao"
+      "sucesso"
     ],
-    "explicacao": "Emeldito Covane define sucesso como recusa em desistir diante de obstáculos. Mensagem motivacional típica sobre resiliência, comum em conteúdo de superação pessoal e empreendedorismo.",
     "palavras_chave": [
       "foco",
       "inspiracional",
       "motivacao",
       "sabedoria",
       "sucesso",
-      "superacao"
+      "superacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

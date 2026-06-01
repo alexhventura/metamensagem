@@ -1,0 +1,92 @@
+[
+  {
+    "id": "f_csv_b4b42adaef",
+    "slug": "ah-the-fat-s-in-the-fire",
+    "texto": "AH the fat's in the fire.",
+    "autor": "John Marston",
+    "autorSlug": "john-marston",
+    "explicacao": "Citação de John Marston sobre temas ligados a reflexao. “AH the fat's in the fire.” articula reflexao, fire em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "fire"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "fire"
+      ],
+      "palavrasChave": [
+        "fire",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "fire",
+        "john-marston"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "fire",
+        "reflexao",
+        "fire"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"AH the fat's in the fire.\" — John Marston | Metamensagem",
+      "descriptionSeo": "Citação de John Marston sobre temas ligados a reflexao. “AH the fat's in the fire.” articula reflexao, fire em registro de reflexao, com relevância para conte…",
+      "keywordsSeo": [
+        "frases de John Marston",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases fire",
+        "fire",
+        "reflexao"
+      ],
+      "canonicalSlug": "ah-the-fat-s-in-the-fire",
+      "relatedKeywords": [
+        "reflexao",
+        "fire",
+        "john-marston"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "AH the fat's in the fire.",
+    "autor_original": "John Marston",
+    "autor_slug": "john-marston",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "fire",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

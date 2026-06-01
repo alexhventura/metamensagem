@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_b76c5808cf",
+    "slug": "my-books-are-water",
+    "texto": "My books are water",
+    "autor": "those of the great geniuses is wine. Everybody drinks water.",
+    "autorSlug": "those-of-the-great-geniuses-is-wine-everybody-drinks-water",
+    "explicacao": "Citação de those of the great geniuses is wine. Everybody drinks water. sobre temas ligados a reflexao. “My books are water” articula reflexao, mark-twain, notebook em registro de reflexao, com relevância para contextos como notebook.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "mark-twain",
+        "notebook"
+      ],
+      "contextos": [
+        "notebook"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "mark-twain",
+        "notebook",
+        "books",
+        "water"
+      ],
+      "palavrasChave": [
+        "mark-twain",
+        "notebook",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "mark-twain",
+        "notebook",
+        "those-of-the-great-geniuses-is-wine-everybody-drinks-water"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "mark-twain",
+        "notebook",
+        "books",
+        "water",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My books are water\" — those of the great geniuses is wine. Everybody drinks water. | Metamensagem",
+      "descriptionSeo": "Citação de those of the great geniuses is wine. Everybody drinks water. sobre temas ligados a reflexao. “My books are water” articula reflexao, mark-twain, no…",
+      "keywordsSeo": [
+        "frases de those of the great geniuses is wine. Everybody drinks water.",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases mark twain",
+        "frases notebook",
+        "mark-twain",
+        "notebook",
+        "reflexao"
+      ],
+      "canonicalSlug": "my-books-are-water",
+      "relatedKeywords": [
+        "reflexao",
+        "mark-twain",
+        "notebook",
+        "those-of-the-great-geniuses-is-wine-everybody-drinks-water"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My books are water",
+    "autor_original": "those of the great geniuses is wine. Everybody drinks water.",
+    "autor_slug": "those-of-the-great-geniuses-is-wine-everybody-drinks-water",
+    "categoria": "reflexao",
+    "contextos": [
+      "notebook"
+    ],
+    "palavras_chave": [
+      "mark-twain",
+      "notebook",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

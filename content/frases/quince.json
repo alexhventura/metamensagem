@@ -1,0 +1,115 @@
+[
+  {
+    "id": "f_csv_0ef2deb047",
+    "slug": "a-stranger-is-a-friend-you-have-not-met-before",
+    "texto": "A stranger is a friend you have not met before.",
+    "autor": "Quince",
+    "autorSlug": "quince",
+    "explicacao": "Citação de Quince sobre temas ligados a amizade. “A stranger is a friend you have not met before.” articula amizade, esperanca, paz em registro de amizade, com relevância para contextos como termino e esperanca.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "esperanca",
+        "paz"
+      ],
+      "contextos": [
+        "termino",
+        "esperanca",
+        "paz"
+      ],
+      "emocoes": [
+        "paz"
+      ],
+      "temas": [
+        "amizade",
+        "esperanca",
+        "paz",
+        "stranger",
+        "friend",
+        "before"
+      ],
+      "palavrasChave": [
+        "amizade",
+        "esperanca",
+        "paz",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "esperanca",
+        "paz",
+        "termino",
+        "quince"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "esperanca",
+        "paz",
+        "stranger",
+        "friend",
+        "before"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A stranger is a friend you have not met before.\" — Quince | Metamensagem",
+      "descriptionSeo": "Citação de Quince sobre temas ligados a amizade. “A stranger is a friend you have not met before.” articula amizade, esperanca, paz em registro de amizade, co…",
+      "keywordsSeo": [
+        "frases de Quince",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases esperanca",
+        "frases termino",
+        "amizade",
+        "esperanca",
+        "paz",
+        "termino"
+      ],
+      "canonicalSlug": "a-stranger-is-a-friend-you-have-not-met-before",
+      "relatedKeywords": [
+        "paz",
+        "amizade",
+        "esperanca",
+        "quince"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A stranger is a friend you have not met before.",
+    "autor_original": "Quince",
+    "autor_slug": "quince",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "esperanca",
+      "paz"
+    ],
+    "palavras_chave": [
+      "amizade",
+      "esperanca",
+      "paz",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

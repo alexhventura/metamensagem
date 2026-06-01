@@ -2,29 +2,134 @@
   {
     "id": "f_ulsy1brft",
     "slug": "aqui-reformam-se-sonhos-remendam-se-coracoes-alinhava-se",
+    "texto": "\"Aqui reformam-se sonhos, remendam-se corações, alinhava-se otimismo, costuram-se desilusões. Borda-se carinho, pregam-se esperanças, confecciona-se amor, presponta-se ternura, remodelam-se almas.Aceitam-se encomendas.",
+    "autor": "Marilene A. Branquinho",
+    "autorSlug": "marilene-a-branquinho",
+    "explicacao": "Marilene A. Branquinho usa metáfora de ateliê: sonhos, corações e otimismo são “costurados” no cotidiano. Texto poético de acolhimento emocional. A frase convida a reparar feridas afetivas com esperança e trabalho afetivo.",
+    "semantica": {
+      "categoriaPrincipal": "amor",
+      "categorias": [
+        "amor",
+        "inspiracional",
+        "otimismo",
+        "sonhos"
+      ],
+      "contextos": [
+        "inspiracao",
+        "termino",
+        "inspiracional",
+        "otimismo",
+        "sonhos"
+      ],
+      "emocoes": [
+        "esperanca",
+        "amor"
+      ],
+      "temas": [
+        "amor",
+        "inspiracional",
+        "otimismo",
+        "reformam",
+        "sonhos",
+        "remendam",
+        "corações",
+        "alinhava"
+      ],
+      "palavrasChave": [
+        "amor",
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "inspiracao",
+        "termino",
+        "esperanca"
+      ],
+      "tagsSeo": [
+        "amor",
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "inspiracao",
+        "termino",
+        "esperanca",
+        "marilene-a-branquinho"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 49,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amor",
+        "inspiracional",
+        "otimismo",
+        "reformam",
+        "sonhos",
+        "remendam"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"\"Aqui reformam-se sonhos, remendam-se corações, alin…\" — Marilene A. Branquinho | Metamensagem",
+      "descriptionSeo": "Marilene A. Branquinho usa metáfora de ateliê: sonhos, corações e otimismo são “costurados” no cotidiano. Texto poético de acolhimento emocional. A frase conv…",
+      "keywordsSeo": [
+        "frases de Marilene A. Branquinho",
+        "frases sobre amor",
+        "frases amor",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases termino",
+        "amor",
+        "inspiracional",
+        "otimismo",
+        "sonhos"
+      ],
+      "canonicalSlug": "aqui-reformam-se-sonhos-remendam-se-coracoes-alinhava-se",
+      "relatedKeywords": [
+        "esperanca",
+        "amor",
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "marilene-a-branquinho"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "\"Aqui reformam-se sonhos, remendam-se corações, alinhava-se otimismo, costuram-se desilusões. Borda-se carinho, pregam-se esperanças, confecciona-se amor, presponta-se ternura, remodelam-se almas.Aceitam-se encomendas.",
     "autor_original": "Marilene A. Branquinho",
+    "autor_slug": "marilene-a-branquinho",
     "categoria": "amor",
     "contextos": [
+      "inspiracao",
+      "termino",
       "inspiracional",
       "otimismo",
       "sonhos"
     ],
-    "explicacao": "Marilene A. Branquinho usa metáfora de ateliê: sonhos, corações e otimismo são “costurados” no cotidiano. Texto poético de acolhimento emocional. A frase convida a reparar feridas afetivas com esperança e trabalho afetivo.",
     "palavras_chave": [
       "amor",
       "inspiracional",
       "otimismo",
-      "sonhos"
+      "sonhos",
+      "inspiracao",
+      "termino",
+      "esperanca"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

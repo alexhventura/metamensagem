@@ -2,53 +2,230 @@
   {
     "id": "f_bd4k9htnd",
     "slug": "se-voce-quer-chegar-la-tudo-o-que-precisa-fazer-e-tentar",
+    "texto": "Se você quer chegar lá, tudo o que precisa fazer é tentar.",
+    "autor": "O Menino que Descobriu o Vento",
+    "autorSlug": "o-menino-que-descobriu-o-vento",
+    "explicacao": "Do filme/livro “O Menino que Descobriu o Vento”, sobre William Kamkwamba, que construiu moinho no Malawi. A lição é tentar apesar da pobreza e do ceticismo alheio. Contexto: superação africana e educação.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "chegar",
+        "precisa",
+        "fazer",
+        "tentar"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "inspiracao",
+        "o-menino-que-descobriu-o-vento"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "chegar",
+        "precisa",
+        "fazer",
+        "tentar"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Se você quer chegar lá, tudo o que precisa fazer é t…\" — O Menino que Descobriu o Vento | Metamensagem",
+      "descriptionSeo": "Do filme/livro “O Menino que Descobriu o Vento”, sobre William Kamkwamba, que construiu moinho no Malawi. A lição é tentar apesar da pobreza e do ceticismo al…",
+      "keywordsSeo": [
+        "frases de O Menino que Descobriu o Vento",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "se-voce-quer-chegar-la-tudo-o-que-precisa-fazer-e-tentar",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "o-menino-que-descobriu-o-vento"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Se você quer chegar lá, tudo o que precisa fazer é tentar.",
     "autor_original": "O Menino que Descobriu o Vento",
-    "categoria": "inspiracional",
+    "autor_slug": "o-menino-que-descobriu-o-vento",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao"
     ],
-    "explicacao": "Do filme/livro “O Menino que Descobriu o Vento”, sobre William Kamkwamba, que construiu moinho no Malawi. A lição é tentar apesar da pobreza e do ceticismo alheio. Contexto: superação africana e educação.",
     "palavras_chave": [
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   },
   {
     "id": "f_tdnxg1d5i",
     "slug": "independentemente-do-que-voce-quiser-fazer-se-o-fizer-com-t",
+    "texto": "Independentemente do que você quiser fazer, se o fizer com todo o seu coração, vai acontecer.",
+    "autor": "O Menino que Descobriu o Vento",
+    "autorSlug": "o-menino-que-descobriu-o-vento",
+    "explicacao": "Outra mensagem da mesma história: dedicação total ao que se ama faz acontecer. Reforça paixão e esforço sincero. Eco da narrativa de inovação juvenil contra a fome e a descrença.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "sabedoria"
+      ],
+      "contextos": [
+        "inspiracao",
+        "termino",
+        "inspiracional",
+        "motivacao",
+        "sabedoria"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "independentemente",
+        "quiser",
+        "fazer",
+        "fizer",
+        "coração"
+      ],
+      "palavrasChave": [
+        "fe",
+        "inspiracional",
+        "motivacao",
+        "sabedoria",
+        "inspiracao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "sabedoria",
+        "inspiracao",
+        "termino",
+        "o-menino-que-descobriu-o-vento"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 37,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "independentemente",
+        "quiser",
+        "fazer"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Independentemente do que você quiser fazer, se o fiz…\" — O Menino que Descobriu o Vento | Metamensagem",
+      "descriptionSeo": "Outra mensagem da mesma história: dedicação total ao que se ama faz acontecer. Reforça paixão e esforço sincero. Eco da narrativa de inovação juvenil contra a…",
+      "keywordsSeo": [
+        "frases de O Menino que Descobriu o Vento",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases fe",
+        "frases inspiracao",
+        "frases termino",
+        "fe",
+        "inspiracional",
+        "motivacao",
+        "sabedoria"
+      ],
+      "canonicalSlug": "independentemente-do-que-voce-quiser-fazer-se-o-fizer-com-t",
+      "relatedKeywords": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "sabedoria",
+        "o-menino-que-descobriu-o-vento"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Independentemente do que você quiser fazer, se o fizer com todo o seu coração, vai acontecer.",
     "autor_original": "O Menino que Descobriu o Vento",
-    "categoria": "fe",
+    "autor_slug": "o-menino-que-descobriu-o-vento",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
+      "termino",
       "inspiracional",
       "motivacao",
       "sabedoria"
     ],
-    "explicacao": "Outra mensagem da mesma história: dedicação total ao que se ama faz acontecer. Reforça paixão e esforço sincero. Eco da narrativa de inovação juvenil contra a fome e a descrença.",
     "palavras_chave": [
       "fe",
       "inspiracional",
       "motivacao",
-      "sabedoria"
+      "sabedoria",
+      "inspiracao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

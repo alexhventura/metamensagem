@@ -2,27 +2,119 @@
   {
     "id": "f_uxxc75311",
     "slug": "a-persistencia-sem-resiliencia-e-como-um-mar-revolto-sem-co",
+    "texto": "⁠A persistência sem resiliência é como um mar revolto sem correntezas...",
+    "autor": "Bruno Carvalho",
+    "autorSlug": "bruno-carvalho",
+    "explicacao": "De Bruno Carvalho, usando metáfora sobre persistência e resiliência. Compara insistência sem flexibilidade a mar agitado sem direção, sugerindo que perseverar também exige adaptação.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "persistencia"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao",
+        "persistencia"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "persistência",
+        "resiliência",
+        "revolto",
+        "correntezas"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "persistencia",
+        "inspiracao",
+        "determinacao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "inspiracao",
+        "determinacao",
+        "bruno-carvalho"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "persistência",
+        "resiliência",
+        "revolto"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠A persistência sem resiliência é como um mar revolt…\" — Bruno Carvalho | Metamensagem",
+      "descriptionSeo": "De Bruno Carvalho, usando metáfora sobre persistência e resiliência. Compara insistência sem flexibilidade a mar agitado sem direção, sugerindo que perseverar…",
+      "keywordsSeo": [
+        "frases de Bruno Carvalho",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "persistencia",
+        "inspiracao"
+      ],
+      "canonicalSlug": "a-persistencia-sem-resiliencia-e-como-um-mar-revolto-sem-co",
+      "relatedKeywords": [
+        "determinacao",
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "bruno-carvalho"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠A persistência sem resiliência é como um mar revolto sem correntezas...",
     "autor_original": "Bruno Carvalho",
-    "categoria": "inspiracional",
+    "autor_slug": "bruno-carvalho",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao",
       "persistencia"
     ],
-    "explicacao": "De Bruno Carvalho, usando metáfora sobre persistência e resiliência. Compara insistência sem flexibilidade a mar agitado sem direção, sugerindo que perseverar também exige adaptação.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
-      "persistencia"
+      "persistencia",
+      "inspiracao",
+      "determinacao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

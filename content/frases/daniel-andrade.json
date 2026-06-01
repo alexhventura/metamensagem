@@ -2,25 +2,112 @@
   {
     "id": "f_8yq4n0qmb",
     "slug": "vamos-desejar-coisas-boas-para-nos-a-comecar-com-uma-boa-no",
+    "texto": "Vamos desejar coisas boas para nós. A começar com uma boa noite de sono!",
+    "autor": "Daniel Andrade",
+    "autorSlug": "daniel-andrade",
+    "explicacao": "De Daniel Andrade, mensagem leve de autocuidado. Propõe começar desejando coisas boas para si, como uma boa noite de sono, num gesto simples de gentileza consigo mesmo.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "boa-noite",
+        "inspiracao",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "vamos",
+        "desejar",
+        "coisas",
+        "começar",
+        "noite"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "boa-noite",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "boa-noite",
+        "inspiracao",
+        "daniel-andrade"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "vamos",
+        "desejar",
+        "coisas",
+        "começar"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Vamos desejar coisas boas para nós. A começar com um…\" — Daniel Andrade | Metamensagem",
+      "descriptionSeo": "De Daniel Andrade, mensagem leve de autocuidado. Propõe começar desejando coisas boas para si, como uma boa noite de sono, num gesto simples de gentileza cons…",
+      "keywordsSeo": [
+        "frases de Daniel Andrade",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases boa noite",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "boa-noite",
+        "inspiracao"
+      ],
+      "canonicalSlug": "vamos-desejar-coisas-boas-para-nos-a-comecar-com-uma-boa-no",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "daniel-andrade"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Vamos desejar coisas boas para nós. A começar com uma boa noite de sono!",
     "autor_original": "Daniel Andrade",
-    "categoria": "inspiracional",
+    "autor_slug": "daniel-andrade",
+    "categoria": "motivacao",
     "contextos": [
+      "boa-noite",
+      "inspiracao",
       "motivacao"
     ],
-    "explicacao": "De Daniel Andrade, mensagem leve de autocuidado. Propõe começar desejando coisas boas para si, como uma boa noite de sono, num gesto simples de gentileza consigo mesmo.",
     "palavras_chave": [
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "boa-noite",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

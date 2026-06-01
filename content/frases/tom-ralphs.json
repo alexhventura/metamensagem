@@ -1,0 +1,115 @@
+[
+  {
+    "id": "f_csv_5eca63ca1a",
+    "slug": "i-find-the-more-i-drink-the-more-interesting-others-become",
+    "texto": "I find the more I drink the more interesting others become.",
+    "autor": "Tom Ralphs",
+    "autorSlug": "tom-ralphs",
+    "explicacao": "Citação de Tom Ralphs sobre temas ligados a reflexao. “I find the more I drink the more interesting others become.” articula reflexao, eat, drink em registro de reflexao, com relevância para contextos como drink e merry.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "eat",
+        "drink",
+        "merry"
+      ],
+      "contextos": [
+        "drink",
+        "merry"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "eat",
+        "drink",
+        "merry",
+        "interesting",
+        "others",
+        "become"
+      ],
+      "palavrasChave": [
+        "eat",
+        "drink",
+        "merry",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "eat",
+        "drink",
+        "merry",
+        "tom-ralphs"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "eat",
+        "drink",
+        "merry",
+        "interesting",
+        "others"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I find the more I drink the more interesting others …\" — Tom Ralphs | Metamensagem",
+      "descriptionSeo": "Citação de Tom Ralphs sobre temas ligados a reflexao. “I find the more I drink the more interesting others become.” articula reflexao, eat, drink em registro…",
+      "keywordsSeo": [
+        "frases de Tom Ralphs",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases eat",
+        "frases drink",
+        "frases merry",
+        "eat",
+        "drink",
+        "merry",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-find-the-more-i-drink-the-more-interesting-others-become",
+      "relatedKeywords": [
+        "reflexao",
+        "eat",
+        "drink",
+        "merry",
+        "tom-ralphs"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I find the more I drink the more interesting others become.",
+    "autor_original": "Tom Ralphs",
+    "autor_slug": "tom-ralphs",
+    "categoria": "reflexao",
+    "contextos": [
+      "drink",
+      "merry"
+    ],
+    "palavras_chave": [
+      "eat",
+      "drink",
+      "merry",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

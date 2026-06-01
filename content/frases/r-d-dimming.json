@@ -1,0 +1,110 @@
+[
+  {
+    "id": "f_csv_4f74ccdd2a",
+    "slug": "a-good-book-has-no-ending",
+    "texto": "A good book has no ending.",
+    "autor": "R. D. Dimming",
+    "autorSlug": "r-d-dimming",
+    "explicacao": "Citação de R. D. Dimming sobre temas ligados a reflexao. “A good book has no ending.” articula reflexao, books, reading em registro de reflexao, com relevância para contextos como termino e reading.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "books",
+        "reading"
+      ],
+      "contextos": [
+        "termino",
+        "reading"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "books",
+        "reading",
+        "ending"
+      ],
+      "palavrasChave": [
+        "books",
+        "reading",
+        "reflexao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "books",
+        "reading",
+        "termino",
+        "r-d-dimming"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "books",
+        "reading",
+        "ending",
+        "reflexao",
+        "books"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A good book has no ending.\" — R. D. Dimming | Metamensagem",
+      "descriptionSeo": "Citação de R. D. Dimming sobre temas ligados a reflexao. “A good book has no ending.” articula reflexao, books, reading em registro de reflexao, com relevânci…",
+      "keywordsSeo": [
+        "frases de R. D. Dimming",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases books",
+        "frases termino",
+        "frases reading",
+        "books",
+        "reading",
+        "reflexao",
+        "termino"
+      ],
+      "canonicalSlug": "a-good-book-has-no-ending",
+      "relatedKeywords": [
+        "reflexao",
+        "books",
+        "reading",
+        "r-d-dimming"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A good book has no ending.",
+    "autor_original": "R. D. Dimming",
+    "autor_slug": "r-d-dimming",
+    "categoria": "reflexao",
+    "contextos": [
+      "termino",
+      "reading"
+    ],
+    "palavras_chave": [
+      "books",
+      "reading",
+      "reflexao",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

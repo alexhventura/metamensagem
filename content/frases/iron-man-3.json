@@ -1,0 +1,121 @@
+[
+  {
+    "id": "f_csv_6b9b0c0cbb",
+    "slug": "we-create-our-own-enemies",
+    "texto": "We create our own enemies",
+    "autor": "iron man 3",
+    "autorSlug": "iron-man-3",
+    "explicacao": "Citação de iron man 3 sobre temas ligados a reflexao. “We create our own enemies” articula reflexao, fact, movie em registro de reflexao, com relevância para contextos como movie e quote.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "fact",
+        "movie",
+        "quote",
+        "true"
+      ],
+      "contextos": [
+        "movie",
+        "quote",
+        "true"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "fact",
+        "movie",
+        "quote",
+        "create",
+        "enemies"
+      ],
+      "palavrasChave": [
+        "fact",
+        "movie",
+        "quote",
+        "true",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "fact",
+        "movie",
+        "quote",
+        "true",
+        "iron-man-3"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "fact",
+        "movie",
+        "quote",
+        "create",
+        "enemies"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"We create our own enemies\" — iron man 3 | Metamensagem",
+      "descriptionSeo": "Citação de iron man 3 sobre temas ligados a reflexao. “We create our own enemies” articula reflexao, fact, movie em registro de reflexao, com relevância para…",
+      "keywordsSeo": [
+        "frases de iron man 3",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases fact",
+        "frases movie",
+        "frases quote",
+        "fact",
+        "movie",
+        "quote",
+        "true"
+      ],
+      "canonicalSlug": "we-create-our-own-enemies",
+      "relatedKeywords": [
+        "reflexao",
+        "fact",
+        "movie",
+        "quote",
+        "true",
+        "iron-man-3"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "We create our own enemies",
+    "autor_original": "iron man 3",
+    "autor_slug": "iron-man-3",
+    "categoria": "reflexao",
+    "contextos": [
+      "movie",
+      "quote",
+      "true"
+    ],
+    "palavras_chave": [
+      "fact",
+      "movie",
+      "quote",
+      "true",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

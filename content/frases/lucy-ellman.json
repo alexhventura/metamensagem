@@ -1,0 +1,107 @@
+[
+  {
+    "id": "f_csv_72d5026b12",
+    "slug": "writing-a-novel-without-being-asked-seems-a-bit-like-having-a-baby-when-you-have",
+    "texto": "Writing a novel without being asked seems a bit like having a baby when you have nowhere to live.",
+    "autor": "Lucy Ellman",
+    "autorSlug": "lucy-ellman",
+    "explicacao": "Metáfora atribuída a Lucy Ellman: compara elementos do cotidiano para falar de sentido da existência e experiência vivida. O trecho “Writing a novel without being asked seems a bit like having a baby when you have nowhere to live.” usa imagem concreta para lembrar que fe, faith, unity pedem movimento e interpretação pessoal, em tom de unity.",
+    "semantica": {
+      "categoriaPrincipal": "fe",
+      "categorias": [
+        "fe",
+        "faith",
+        "unity"
+      ],
+      "contextos": [
+        "unity"
+      ],
+      "emocoes": [],
+      "temas": [
+        "fe",
+        "faith",
+        "unity",
+        "writing",
+        "novel",
+        "without",
+        "being",
+        "asked"
+      ],
+      "palavrasChave": [
+        "faith",
+        "unity",
+        "fe"
+      ],
+      "tagsSeo": [
+        "fe",
+        "faith",
+        "unity",
+        "lucy-ellman"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "fe",
+        "faith",
+        "unity",
+        "writing",
+        "novel",
+        "without"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Writing a novel without being asked seems a bit like…\" — Lucy Ellman | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Lucy Ellman: compara elementos do cotidiano para falar de sentido da existência e experiência vivida. O trecho “Writing a novel without b…",
+      "keywordsSeo": [
+        "frases de Lucy Ellman",
+        "frases sobre fe",
+        "frases fe",
+        "frases faith",
+        "frases unity",
+        "faith",
+        "unity",
+        "fe"
+      ],
+      "canonicalSlug": "writing-a-novel-without-being-asked-seems-a-bit-like-having-a-baby-when-you-have",
+      "relatedKeywords": [
+        "fe",
+        "faith",
+        "unity",
+        "lucy-ellman"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Writing a novel without being asked seems a bit like having a baby when you have nowhere to live.",
+    "autor_original": "Lucy Ellman",
+    "autor_slug": "lucy-ellman",
+    "categoria": "fe",
+    "contextos": [
+      "unity"
+    ],
+    "palavras_chave": [
+      "faith",
+      "unity",
+      "fe"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

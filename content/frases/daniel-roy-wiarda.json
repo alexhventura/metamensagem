@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_0fee80466b",
+    "slug": "adventure-the-pursuit-of-life",
+    "texto": "Adventure: the pursuit of life.",
+    "autor": "Daniel Roy Wiarda",
+    "autorSlug": "daniel-roy-wiarda",
+    "explicacao": "Citação de Daniel Roy Wiarda sobre sentido da existência e experiência vivida. “Adventure: the pursuit of life.” articula vida, adventure, pursuit em registro de vida, com relevância para contextos como vida.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "adventure"
+      ],
+      "contextos": [
+        "vida"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "adventure",
+        "pursuit"
+      ],
+      "palavrasChave": [
+        "adventure",
+        "vida"
+      ],
+      "tagsSeo": [
+        "vida",
+        "adventure",
+        "daniel-roy-wiarda"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "adventure",
+        "pursuit",
+        "vida",
+        "adventure"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Adventure: the pursuit of life.\" — Daniel Roy Wiarda | Metamensagem",
+      "descriptionSeo": "Citação de Daniel Roy Wiarda sobre sentido da existência e experiência vivida. “Adventure: the pursuit of life.” articula vida, adventure, pursuit em registro…",
+      "keywordsSeo": [
+        "frases de Daniel Roy Wiarda",
+        "frases sobre vida",
+        "frases vida",
+        "frases adventure",
+        "adventure",
+        "vida"
+      ],
+      "canonicalSlug": "adventure-the-pursuit-of-life",
+      "relatedKeywords": [
+        "vida",
+        "adventure",
+        "daniel-roy-wiarda"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Adventure: the pursuit of life.",
+    "autor_original": "Daniel Roy Wiarda",
+    "autor_slug": "daniel-roy-wiarda",
+    "categoria": "vida",
+    "contextos": [
+      "vida"
+    ],
+    "palavras_chave": [
+      "adventure",
+      "vida"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

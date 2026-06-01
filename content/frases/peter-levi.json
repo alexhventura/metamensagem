@@ -1,0 +1,96 @@
+[
+  {
+    "id": "f_csv_c922f35f2e",
+    "slug": "no-hope-no-action",
+    "texto": "No hope no action.",
+    "autor": "Peter Levi",
+    "autorSlug": "peter-levi",
+    "explicacao": "Citação de Peter Levi sobre temas ligados a reflexao. “No hope no action.” articula reflexao, esperanca, action em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "esperanca"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [
+        "esperanca"
+      ],
+      "temas": [
+        "reflexao",
+        "esperanca",
+        "action"
+      ],
+      "palavrasChave": [
+        "esperanca",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "esperanca",
+        "peter-levi"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "esperanca",
+        "action",
+        "reflexao",
+        "esperanca"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"No hope no action.\" — Peter Levi | Metamensagem",
+      "descriptionSeo": "Citação de Peter Levi sobre temas ligados a reflexao. “No hope no action.” articula reflexao, esperanca, action em registro de reflexao, com relevância para c…",
+      "keywordsSeo": [
+        "frases de Peter Levi",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases esperanca",
+        "esperanca",
+        "reflexao"
+      ],
+      "canonicalSlug": "no-hope-no-action",
+      "relatedKeywords": [
+        "esperanca",
+        "reflexao",
+        "peter-levi"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "No hope no action.",
+    "autor_original": "Peter Levi",
+    "autor_slug": "peter-levi",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "esperanca",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

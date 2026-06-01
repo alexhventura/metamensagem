@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_6c48630602",
+    "slug": "meow-said-the-chicken",
+    "texto": "Meow!\" said the chicken.",
+    "autor": "Roger Hargreaves",
+    "autorSlug": "roger-hargreaves",
+    "explicacao": "Citação de Roger Hargreaves sobre temas ligados a reflexao. “Meow!\" said the chicken.” articula reflexao, animals, silly-quotes em registro de reflexao, com relevância para contextos como silly-quotes.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "animals",
+        "silly-quotes"
+      ],
+      "contextos": [
+        "silly-quotes"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "animals",
+        "silly-quotes",
+        "chicken"
+      ],
+      "palavrasChave": [
+        "animals",
+        "silly-quotes",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "animals",
+        "silly-quotes",
+        "roger-hargreaves"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "animals",
+        "silly-quotes",
+        "chicken",
+        "reflexao",
+        "animals"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Meow!\" said the chicken.\" — Roger Hargreaves | Metamensagem",
+      "descriptionSeo": "Citação de Roger Hargreaves sobre temas ligados a reflexao. “Meow!\" said the chicken.” articula reflexao, animals, silly-quotes em registro de reflexao, com r…",
+      "keywordsSeo": [
+        "frases de Roger Hargreaves",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases animals",
+        "frases silly quotes",
+        "animals",
+        "silly-quotes",
+        "reflexao"
+      ],
+      "canonicalSlug": "meow-said-the-chicken",
+      "relatedKeywords": [
+        "reflexao",
+        "animals",
+        "silly-quotes",
+        "roger-hargreaves"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Meow!\" said the chicken.",
+    "autor_original": "Roger Hargreaves",
+    "autor_slug": "roger-hargreaves",
+    "categoria": "reflexao",
+    "contextos": [
+      "silly-quotes"
+    ],
+    "palavras_chave": [
+      "animals",
+      "silly-quotes",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

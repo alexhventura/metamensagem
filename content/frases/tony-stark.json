@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f_csv_bfa708002a",
+    "slug": "sometimes-you-gotta-run-before-you-can-walk",
+    "texto": "sometimes you gotta Run before you can Walk.",
+    "autor": "Tony Stark",
+    "autorSlug": "tony-stark",
+    "explicacao": "Citação de Tony Stark sobre passagem do tempo e prioridades. “sometimes you gotta Run before you can Walk.” articula tempo, advice, iron-man em registro de tempo, com relevância para contextos como iron-man e tony-stark.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "advice",
+        "iron-man",
+        "tony-stark"
+      ],
+      "contextos": [
+        "iron-man",
+        "tony-stark"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "advice",
+        "iron-man",
+        "tony-stark",
+        "sometimes",
+        "gotta",
+        "before"
+      ],
+      "palavrasChave": [
+        "advice",
+        "iron-man",
+        "tony-stark",
+        "tempo"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "advice",
+        "iron-man",
+        "tony-stark"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "advice",
+        "iron-man",
+        "tony-stark",
+        "sometimes",
+        "gotta"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"sometimes you gotta Run before you can Walk.\" — Tony Stark | Metamensagem",
+      "descriptionSeo": "Citação de Tony Stark sobre passagem do tempo e prioridades. “sometimes you gotta Run before you can Walk.” articula tempo, advice, iron-man em registro de te…",
+      "keywordsSeo": [
+        "frases de Tony Stark",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases advice",
+        "frases iron man",
+        "frases tony stark",
+        "advice",
+        "iron-man",
+        "tony-stark",
+        "tempo"
+      ],
+      "canonicalSlug": "sometimes-you-gotta-run-before-you-can-walk",
+      "relatedKeywords": [
+        "tempo",
+        "advice",
+        "iron-man",
+        "tony-stark"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "sometimes you gotta Run before you can Walk.",
+    "autor_original": "Tony Stark",
+    "autor_slug": "tony-stark",
+    "categoria": "tempo",
+    "contextos": [
+      "iron-man",
+      "tony-stark"
+    ],
+    "palavras_chave": [
+      "advice",
+      "iron-man",
+      "tony-stark",
+      "tempo"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

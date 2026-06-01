@@ -2,25 +2,102 @@
   {
     "id": "f_kp9egokt4",
     "slug": "nao-e-possivel-ser-bom-pela-metade",
+    "texto": "Não é possível ser bom pela metade.",
+    "autor": "Leon Tolstói",
+    "autorSlug": "leon-tolstoi",
+    "explicacao": "Em obras como Guerra e Paz, Tolstói defende uma ética integral: bondade não se faz pela metade nem por conveniência. A frase cobra coerência moral total. Surge do pensamento moralista do autor sobre virtude e responsabilidade pessoal.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "possível",
+        "metade"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "inspiracao",
+        "leon-tolstoi"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "possível",
+        "metade",
+        "motivacao",
+        "inspiracional"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Não é possível ser bom pela metade.\" — Leon Tolstói | Metamensagem",
+      "descriptionSeo": "Em obras como Guerra e Paz, Tolstói defende uma ética integral: bondade não se faz pela metade nem por conveniência. A frase cobra coerência moral total. Surg…",
+      "keywordsSeo": [
+        "frases de Leon Tolstói",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "nao-e-possivel-ser-bom-pela-metade",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "leon-tolstoi"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Não é possível ser bom pela metade.",
     "autor_original": "Leon Tolstói",
-    "categoria": "inspiracional",
+    "autor_slug": "leon-tolstoi",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao"
     ],
-    "explicacao": "Em obras como Guerra e Paz, Tolstói defende uma ética integral: bondade não se faz pela metade nem por conveniência. A frase cobra coerência moral total. Surge do pensamento moralista do autor sobre virtude e responsabilidade pessoal.",
     "palavras_chave": [
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

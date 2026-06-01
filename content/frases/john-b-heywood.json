@@ -1,0 +1,188 @@
+[
+  {
+    "id": "f_csv_345324ca2a",
+    "slug": "a-woman-hath-nine-lives-like-a-cat",
+    "texto": "A woman hath nine lives like a cat.",
+    "autor": "John B. Heywood",
+    "autorSlug": "john-b-heywood",
+    "explicacao": "Citação de John B. Heywood sobre sentido da existência e experiência vivida. “A woman hath nine lives like a cat.” articula reflexao, cats, woman em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "cats"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "cats",
+        "woman",
+        "lives"
+      ],
+      "palavrasChave": [
+        "cats",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "cats",
+        "john-b-heywood"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "cats",
+        "woman",
+        "lives",
+        "reflexao",
+        "cats"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A woman hath nine lives like a cat.\" — John B. Heywood | Metamensagem",
+      "descriptionSeo": "Citação de John B. Heywood sobre sentido da existência e experiência vivida. “A woman hath nine lives like a cat.” articula reflexao, cats, woman em registro…",
+      "keywordsSeo": [
+        "frases de John B. Heywood",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases cats",
+        "cats",
+        "reflexao"
+      ],
+      "canonicalSlug": "a-woman-hath-nine-lives-like-a-cat",
+      "relatedKeywords": [
+        "reflexao",
+        "cats",
+        "john-b-heywood"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A woman hath nine lives like a cat.",
+    "autor_original": "John B. Heywood",
+    "autor_slug": "john-b-heywood",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "cats",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_61bc4e3832",
+    "slug": "would-ye-both-eat-your-cake-and-have-your-cake",
+    "texto": "Would ye both eat your cake and have your cake?",
+    "autor": "John B. Heywood",
+    "autorSlug": "john-b-heywood",
+    "explicacao": "Pergunta retórica de John B. Heywood que provoca temas ligados a reflexao. Ao questionar “Would ye both eat your cake and have your cake?”, o texto convida o leitor a revisar crenças sobre reflexao, choice, would, com foco em reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "choice"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "choice",
+        "would"
+      ],
+      "palavrasChave": [
+        "choice",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "choice",
+        "john-b-heywood"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "choice",
+        "would",
+        "reflexao",
+        "choice"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Would ye both eat your cake and have your cake?\" — John B. Heywood | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de John B. Heywood que provoca temas ligados a reflexao. Ao questionar “Would ye both eat your cake and have your cake?”, o texto convida o…",
+      "keywordsSeo": [
+        "frases de John B. Heywood",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases choice",
+        "choice",
+        "reflexao"
+      ],
+      "canonicalSlug": "would-ye-both-eat-your-cake-and-have-your-cake",
+      "relatedKeywords": [
+        "reflexao",
+        "choice",
+        "john-b-heywood"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Would ye both eat your cake and have your cake?",
+    "autor_original": "John B. Heywood",
+    "autor_slug": "john-b-heywood",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "choice",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

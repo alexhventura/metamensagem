@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_5a5a6e4dea",
+    "slug": "i-only-read-books-i-know-i-will-like",
+    "texto": "I only read books I know I will like",
+    "autor": "Vicky Unwin",
+    "autorSlug": "vicky-unwin",
+    "explicacao": "Citação de Vicky Unwin sobre temas ligados a reflexao. “I only read books I know I will like” articula reflexao, biography, history em registro de reflexao, com relevância para contextos como history.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "biography",
+        "history"
+      ],
+      "contextos": [
+        "history"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "biography",
+        "history",
+        "books"
+      ],
+      "palavrasChave": [
+        "biography",
+        "history",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "biography",
+        "history",
+        "vicky-unwin"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "biography",
+        "history",
+        "books",
+        "reflexao",
+        "biography"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I only read books I know I will like\" — Vicky Unwin | Metamensagem",
+      "descriptionSeo": "Citação de Vicky Unwin sobre temas ligados a reflexao. “I only read books I know I will like” articula reflexao, biography, history em registro de reflexao, c…",
+      "keywordsSeo": [
+        "frases de Vicky Unwin",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases biography",
+        "frases history",
+        "biography",
+        "history",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-only-read-books-i-know-i-will-like",
+      "relatedKeywords": [
+        "reflexao",
+        "biography",
+        "history",
+        "vicky-unwin"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I only read books I know I will like",
+    "autor_original": "Vicky Unwin",
+    "autor_slug": "vicky-unwin",
+    "categoria": "reflexao",
+    "contextos": [
+      "history"
+    ],
+    "palavras_chave": [
+      "biography",
+      "history",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_1236d2cdb2",
+    "slug": "every-reader-his-or-her-book-every-book-its-reader",
+    "texto": "Every reader his or her book.Every book its reader.",
+    "autor": "S.R. Ranganathan",
+    "autorSlug": "s-r-ranganathan",
+    "explicacao": "Citação de S.R. Ranganathan sobre temas ligados a reflexao. “Every reader his or her book.Every book its reader.” articula reflexao, librarians, libraries em registro de reflexao, com relevância para contextos como libraries.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "librarians",
+        "libraries"
+      ],
+      "contextos": [
+        "libraries"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "librarians",
+        "libraries",
+        "every",
+        "reader"
+      ],
+      "palavrasChave": [
+        "librarians",
+        "libraries",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "librarians",
+        "libraries",
+        "s-r-ranganathan"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "librarians",
+        "libraries",
+        "every",
+        "reader",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Every reader his or her book.Every book its reader.\" — S.R. Ranganathan | Metamensagem",
+      "descriptionSeo": "Citação de S.R. Ranganathan sobre temas ligados a reflexao. “Every reader his or her book.Every book its reader.” articula reflexao, librarians, libraries em…",
+      "keywordsSeo": [
+        "frases de S.R. Ranganathan",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases librarians",
+        "frases libraries",
+        "librarians",
+        "libraries",
+        "reflexao"
+      ],
+      "canonicalSlug": "every-reader-his-or-her-book-every-book-its-reader",
+      "relatedKeywords": [
+        "reflexao",
+        "librarians",
+        "libraries",
+        "s-r-ranganathan"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Every reader his or her book.Every book its reader.",
+    "autor_original": "S.R. Ranganathan",
+    "autor_slug": "s-r-ranganathan",
+    "categoria": "reflexao",
+    "contextos": [
+      "libraries"
+    ],
+    "palavras_chave": [
+      "librarians",
+      "libraries",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

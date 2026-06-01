@@ -2,25 +2,112 @@
   {
     "id": "f_lrefi10e1",
     "slug": "invejo-sua-capacidade-de-substituir-a-realidade-pelo-otimism",
+    "texto": "Invejo sua capacidade de substituir a realidade pelo otimismo.",
+    "autor": "Série Bones",
+    "autorSlug": "serie-bones",
+    "explicacao": "Fala da série Bones, provavelmente de Temperance Brennan sobre Booth. Ela admite, com ironia, invejar a capacidade dele de ver o lado bom mesmo diante de fatos duros. Contraste entre racionalidade e otimismo emocional.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "invejo",
+        "capacidade",
+        "substituir",
+        "realidade"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "serie-bones"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "invejo",
+        "capacidade",
+        "substituir"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Invejo sua capacidade de substituir a realidade pelo…\" — Série Bones | Metamensagem",
+      "descriptionSeo": "Fala da série Bones, provavelmente de Temperance Brennan sobre Booth. Ela admite, com ironia, invejar a capacidade dele de ver o lado bom mesmo diante de fato…",
+      "keywordsSeo": [
+        "frases de Série Bones",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "invejo-sua-capacidade-de-substituir-a-realidade-pelo-otimism",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "serie-bones"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Invejo sua capacidade de substituir a realidade pelo otimismo.",
     "autor_original": "Série Bones",
-    "categoria": "inspiracional",
+    "autor_slug": "serie-bones",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Fala da série Bones, provavelmente de Temperance Brennan sobre Booth. Ela admite, com ironia, invejar a capacidade dele de ver o lado bom mesmo diante de fatos duros. Contraste entre racionalidade e otimismo emocional.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

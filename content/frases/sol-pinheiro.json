@@ -2,29 +2,127 @@
   {
     "id": "f_iv67cpo7y",
     "slug": "otimismo-e-sabedoria-acorde-com-alegria-nao-reclame-da-vid",
+    "texto": "Otimismo é sabedoria! Acorde com alegria, não reclame da vida, agradeça, sorria, abrace seu dia e seja feliz!",
+    "autor": "Sol Pinheiro",
+    "autorSlug": "sol-pinheiro",
+    "explicacao": "Sol Pinheiro escreve mensagem matinal sobre otimismo como sabedoria prática. Acordar com gratidão, sorrir e abraçar o dia. Tom de autoajuda espiritual para começar bem a jornada diária.",
+    "semantica": {
+      "categoriaPrincipal": "felicidade",
+      "categorias": [
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "sabedoria"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "otimismo",
+        "sabedoria"
+      ],
+      "emocoes": [
+        "alegria",
+        "felicidade"
+      ],
+      "temas": [
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "sabedoria",
+        "acorde",
+        "alegria",
+        "reclame"
+      ],
+      "palavrasChave": [
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "sabedoria",
+        "inspiracao",
+        "alegria"
+      ],
+      "tagsSeo": [
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "sabedoria",
+        "inspiracao",
+        "alegria",
+        "sol-pinheiro"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 38,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "sabedoria",
+        "acorde",
+        "alegria"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Otimismo é sabedoria! Acorde com alegria, não reclam…\" — Sol Pinheiro | Metamensagem",
+      "descriptionSeo": "Sol Pinheiro escreve mensagem matinal sobre otimismo como sabedoria prática. Acordar com gratidão, sorrir e abraçar o dia. Tom de autoajuda espiritual para co…",
+      "keywordsSeo": [
+        "frases de Sol Pinheiro",
+        "frases sobre felicidade",
+        "frases felicidade",
+        "frases inspiracional",
+        "frases inspiracao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "sabedoria"
+      ],
+      "canonicalSlug": "otimismo-e-sabedoria-acorde-com-alegria-nao-reclame-da-vid",
+      "relatedKeywords": [
+        "alegria",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "sabedoria",
+        "sol-pinheiro"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Otimismo é sabedoria! Acorde com alegria, não reclame da vida, agradeça, sorria, abrace seu dia e seja feliz!",
     "autor_original": "Sol Pinheiro",
+    "autor_slug": "sol-pinheiro",
     "categoria": "felicidade",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "otimismo",
       "sabedoria"
     ],
-    "explicacao": "Sol Pinheiro escreve mensagem matinal sobre otimismo como sabedoria prática. Acordar com gratidão, sorrir e abraçar o dia. Tom de autoajuda espiritual para começar bem a jornada diária.",
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "otimismo",
-      "sabedoria"
+      "sabedoria",
+      "inspiracao",
+      "alegria"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

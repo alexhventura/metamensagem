@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f_csv_22542bc712",
+    "slug": "books-are-another-kind-of-magic",
+    "texto": "Books are another kind of magic.",
+    "autor": "G. Lyness",
+    "autorSlug": "g-lyness",
+    "explicacao": "Citação de G. Lyness sobre temas ligados a reflexao. “Books are another kind of magic.” articula reflexao, books, magic em registro de reflexao, com relevância para contextos como magic e reading.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "books",
+        "magic",
+        "reading"
+      ],
+      "contextos": [
+        "magic",
+        "reading"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "books",
+        "magic",
+        "reading",
+        "another"
+      ],
+      "palavrasChave": [
+        "books",
+        "magic",
+        "reading",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "books",
+        "magic",
+        "reading",
+        "g-lyness"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "books",
+        "magic",
+        "reading",
+        "another",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Books are another kind of magic.\" — G. Lyness | Metamensagem",
+      "descriptionSeo": "Citação de G. Lyness sobre temas ligados a reflexao. “Books are another kind of magic.” articula reflexao, books, magic em registro de reflexao, com relevânci…",
+      "keywordsSeo": [
+        "frases de G. Lyness",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases books",
+        "frases magic",
+        "frases reading",
+        "books",
+        "magic",
+        "reading",
+        "reflexao"
+      ],
+      "canonicalSlug": "books-are-another-kind-of-magic",
+      "relatedKeywords": [
+        "reflexao",
+        "books",
+        "magic",
+        "reading",
+        "g-lyness"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Books are another kind of magic.",
+    "autor_original": "G. Lyness",
+    "autor_slug": "g-lyness",
+    "categoria": "reflexao",
+    "contextos": [
+      "magic",
+      "reading"
+    ],
+    "palavras_chave": [
+      "books",
+      "magic",
+      "reading",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

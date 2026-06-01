@@ -1,0 +1,98 @@
+[
+  {
+    "id": "f_csv_647d0f4b4f",
+    "slug": "soldiers-strike-the-foe-in-the-face",
+    "texto": "Soldiers strike the foe in the face!",
+    "autor": "Florus",
+    "autorSlug": "florus",
+    "explicacao": "Citação de Florus sobre temas ligados a reflexao. “Soldiers strike the foe in the face!” articula reflexao, coragem, soldiers em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "coragem"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [
+        "coragem"
+      ],
+      "temas": [
+        "reflexao",
+        "coragem",
+        "soldiers",
+        "strike"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "coragem",
+        "florus"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "coragem",
+        "soldiers",
+        "strike",
+        "reflexao",
+        "coragem"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Soldiers strike the foe in the face!\" — Florus | Metamensagem",
+      "descriptionSeo": "Citação de Florus sobre temas ligados a reflexao. “Soldiers strike the foe in the face!” articula reflexao, coragem, soldiers em registro de reflexao, com rel…",
+      "keywordsSeo": [
+        "frases de Florus",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases coragem",
+        "coragem",
+        "reflexao"
+      ],
+      "canonicalSlug": "soldiers-strike-the-foe-in-the-face",
+      "relatedKeywords": [
+        "coragem",
+        "reflexao",
+        "florus"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Soldiers strike the foe in the face!",
+    "autor_original": "Florus",
+    "autor_slug": "florus",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "coragem",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

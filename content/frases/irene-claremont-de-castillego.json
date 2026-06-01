@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_002d0c69e1",
+    "slug": "we-are-new-every-day",
+    "texto": "We are new every day.",
+    "autor": "Irene Claremont de Castillego",
+    "autorSlug": "irene-claremont-de-castillego",
+    "explicacao": "Citação de Irene Claremont de Castillego sobre temas ligados a reflexao. “We are new every day.” articula reflexao, mornings, every em registro de reflexao, com relevância para contextos como bom-dia e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "mornings"
+      ],
+      "contextos": [
+        "bom-dia",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "mornings",
+        "every"
+      ],
+      "palavrasChave": [
+        "mornings",
+        "reflexao",
+        "bom-dia"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "mornings",
+        "bom-dia",
+        "irene-claremont-de-castillego"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "mornings",
+        "every",
+        "reflexao",
+        "mornings"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"We are new every day.\" — Irene Claremont de Castillego | Metamensagem",
+      "descriptionSeo": "Citação de Irene Claremont de Castillego sobre temas ligados a reflexao. “We are new every day.” articula reflexao, mornings, every em registro de reflexao, c…",
+      "keywordsSeo": [
+        "frases de Irene Claremont de Castillego",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases mornings",
+        "frases bom dia",
+        "mornings",
+        "reflexao",
+        "bom-dia"
+      ],
+      "canonicalSlug": "we-are-new-every-day",
+      "relatedKeywords": [
+        "reflexao",
+        "mornings",
+        "irene-claremont-de-castillego"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "We are new every day.",
+    "autor_original": "Irene Claremont de Castillego",
+    "autor_slug": "irene-claremont-de-castillego",
+    "categoria": "reflexao",
+    "contextos": [
+      "bom-dia",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "mornings",
+      "reflexao",
+      "bom-dia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

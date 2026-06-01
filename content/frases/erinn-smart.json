@@ -1,0 +1,112 @@
+[
+  {
+    "id": "f_csv_188b771629",
+    "slug": "my-brother-is-my-best-friend",
+    "texto": "My brother is my best friend.",
+    "autor": "Erinn Smart",
+    "autorSlug": "erinn-smart",
+    "explicacao": "Citação de Erinn Smart sobre temas ligados a amizade. “My brother is my best friend.” articula amizade, best-friend, brother em registro de amizade, com relevância para contextos como termino e brother.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "best-friend",
+        "brother"
+      ],
+      "contextos": [
+        "termino",
+        "brother",
+        "amizade"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "best-friend",
+        "brother",
+        "friend"
+      ],
+      "palavrasChave": [
+        "best-friend",
+        "brother",
+        "amizade",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "best-friend",
+        "brother",
+        "termino",
+        "erinn-smart"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "best-friend",
+        "brother",
+        "friend",
+        "amizade",
+        "best-friend"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My brother is my best friend.\" — Erinn Smart | Metamensagem",
+      "descriptionSeo": "Citação de Erinn Smart sobre temas ligados a amizade. “My brother is my best friend.” articula amizade, best-friend, brother em registro de amizade, com relev…",
+      "keywordsSeo": [
+        "frases de Erinn Smart",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases best friend",
+        "frases termino",
+        "frases brother",
+        "best-friend",
+        "brother",
+        "amizade",
+        "termino"
+      ],
+      "canonicalSlug": "my-brother-is-my-best-friend",
+      "relatedKeywords": [
+        "amizade",
+        "best-friend",
+        "brother",
+        "erinn-smart"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My brother is my best friend.",
+    "autor_original": "Erinn Smart",
+    "autor_slug": "erinn-smart",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "brother",
+      "amizade"
+    ],
+    "palavras_chave": [
+      "best-friend",
+      "brother",
+      "amizade",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

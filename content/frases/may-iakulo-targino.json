@@ -2,27 +2,113 @@
   {
     "id": "f_yoc9v9cwc",
     "slug": "nao-adianta-sofrer-por-um-sonho-que-nao-se-busca",
+    "texto": "⁠Não adianta sofrer por um sonho que não se busca.",
+    "autor": "May Iakulo Targino",
+    "autorSlug": "may-iakulo-targino",
+    "explicacao": "May Iakulo Targino alerta contra sofrer por sonhos que não se persegue. Mensagem motivacional direta. Convoca ação em vez de lamento passivo diante de objetivos adiados.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "sonhos"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao",
+        "sonhos"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "sonhos",
+        "adianta",
+        "sofrer",
+        "sonho",
+        "busca"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "sonhos",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "sonhos",
+        "inspiracao",
+        "may-iakulo-targino"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "sonhos",
+        "adianta",
+        "sofrer",
+        "sonho"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠Não adianta sofrer por um sonho que não se busca.\" — May Iakulo Targino | Metamensagem",
+      "descriptionSeo": "May Iakulo Targino alerta contra sofrer por sonhos que não se persegue. Mensagem motivacional direta. Convoca ação em vez de lamento passivo diante de objetiv…",
+      "keywordsSeo": [
+        "frases de May Iakulo Targino",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "sonhos",
+        "inspiracao"
+      ],
+      "canonicalSlug": "nao-adianta-sofrer-por-um-sonho-que-nao-se-busca",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "sonhos",
+        "may-iakulo-targino"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠Não adianta sofrer por um sonho que não se busca.",
     "autor_original": "May Iakulo Targino",
-    "categoria": "inspiracional",
+    "autor_slug": "may-iakulo-targino",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao",
       "sonhos"
     ],
-    "explicacao": "May Iakulo Targino alerta contra sofrer por sonhos que não se persegue. Mensagem motivacional direta. Convoca ação em vez de lamento passivo diante de objetivos adiados.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
-      "sonhos"
+      "sonhos",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

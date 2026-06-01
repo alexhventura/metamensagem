@@ -1,0 +1,120 @@
+[
+  {
+    "id": "f_csv_e705976f4b",
+    "slug": "my-mother-asked-me-what-i-wanted-for-my-birthday-so-i-said-i-wanted-to-read-poe",
+    "texto": "My mother asked me what I wanted for my birthday, so I said I wanted to read poetry with her.",
+    "autor": "Guy Johnson",
+    "autorSlug": "guy-johnson",
+    "explicacao": "Citação de Guy Johnson sobre temas ligados a familia. “My mother asked me what I wanted for my birthday, so I said I wanted to read poetry with her.” articula familia, mother, poetry em registro de familia, com relevância para contextos como aniversario e poetry.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "mother",
+        "poetry",
+        "me"
+      ],
+      "contextos": [
+        "aniversario",
+        "poetry",
+        "me"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "mother",
+        "poetry",
+        "me",
+        "wanted",
+        "asked",
+        "birthday"
+      ],
+      "palavrasChave": [
+        "mother",
+        "poetry",
+        "me",
+        "familia",
+        "aniversario"
+      ],
+      "tagsSeo": [
+        "familia",
+        "mother",
+        "poetry",
+        "me",
+        "aniversario",
+        "guy-johnson"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 35,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "mother",
+        "poetry",
+        "me",
+        "wanted",
+        "asked"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My mother asked me what I wanted for my birthday, so…\" — Guy Johnson | Metamensagem",
+      "descriptionSeo": "Citação de Guy Johnson sobre temas ligados a familia. “My mother asked me what I wanted for my birthday, so I said I wanted to read poetry with her.” articula…",
+      "keywordsSeo": [
+        "frases de Guy Johnson",
+        "frases sobre familia",
+        "frases familia",
+        "frases mother",
+        "frases aniversario",
+        "frases poetry",
+        "mother",
+        "poetry",
+        "me",
+        "familia"
+      ],
+      "canonicalSlug": "my-mother-asked-me-what-i-wanted-for-my-birthday-so-i-said-i-wanted-to-read-poe",
+      "relatedKeywords": [
+        "familia",
+        "mother",
+        "poetry",
+        "me",
+        "guy-johnson"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My mother asked me what I wanted for my birthday, so I said I wanted to read poetry with her.",
+    "autor_original": "Guy Johnson",
+    "autor_slug": "guy-johnson",
+    "categoria": "familia",
+    "contextos": [
+      "aniversario",
+      "poetry",
+      "me"
+    ],
+    "palavras_chave": [
+      "mother",
+      "poetry",
+      "me",
+      "familia",
+      "aniversario"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

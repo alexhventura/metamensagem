@@ -1,0 +1,202 @@
+[
+  {
+    "id": "f_csv_9c6e1b95b7",
+    "slug": "fortunate-are-the-people-whose-roots-are-deep",
+    "texto": "Fortunate are the people whose roots are deep.",
+    "autor": "Agnes Meyer",
+    "autorSlug": "agnes-meyer",
+    "explicacao": "Citação de Agnes Meyer sobre temas ligados a reflexao. “Fortunate are the people whose roots are deep.” articula reflexao, past, fortunate em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "past"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "past",
+        "fortunate",
+        "people",
+        "whose",
+        "roots"
+      ],
+      "palavrasChave": [
+        "past",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "past",
+        "agnes-meyer"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "past",
+        "fortunate",
+        "people",
+        "whose",
+        "roots"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Fortunate are the people whose roots are deep.\" — Agnes Meyer | Metamensagem",
+      "descriptionSeo": "Citação de Agnes Meyer sobre temas ligados a reflexao. “Fortunate are the people whose roots are deep.” articula reflexao, past, fortunate em registro de refl…",
+      "keywordsSeo": [
+        "frases de Agnes Meyer",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases past",
+        "past",
+        "reflexao"
+      ],
+      "canonicalSlug": "fortunate-are-the-people-whose-roots-are-deep",
+      "relatedKeywords": [
+        "reflexao",
+        "past",
+        "agnes-meyer"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Fortunate are the people whose roots are deep.",
+    "autor_original": "Agnes Meyer",
+    "autor_slug": "agnes-meyer",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "past",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_c2103c64a8",
+    "slug": "there-is-a-need-for-heroism-in-american-life-today",
+    "texto": "There is a need for heroism in American life today.",
+    "autor": "Agnes Meyer",
+    "autorSlug": "agnes-meyer",
+    "explicacao": "Citação de Agnes Meyer sobre sentido da existência e experiência vivida. “There is a need for heroism in American life today.” articula tempo, role, models em registro de tempo, com relevância para contextos como models.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "role",
+        "models"
+      ],
+      "contextos": [
+        "models"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "role",
+        "models",
+        "there",
+        "heroism",
+        "american",
+        "today"
+      ],
+      "palavrasChave": [
+        "role",
+        "models",
+        "tempo"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "role",
+        "models",
+        "agnes-meyer"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "role",
+        "models",
+        "there",
+        "heroism",
+        "american"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"There is a need for heroism in American life today.\" — Agnes Meyer | Metamensagem",
+      "descriptionSeo": "Citação de Agnes Meyer sobre sentido da existência e experiência vivida. “There is a need for heroism in American life today.” articula tempo, role, models em…",
+      "keywordsSeo": [
+        "frases de Agnes Meyer",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases role",
+        "frases models",
+        "role",
+        "models",
+        "tempo"
+      ],
+      "canonicalSlug": "there-is-a-need-for-heroism-in-american-life-today",
+      "relatedKeywords": [
+        "tempo",
+        "role",
+        "models",
+        "agnes-meyer"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "There is a need for heroism in American life today.",
+    "autor_original": "Agnes Meyer",
+    "autor_slug": "agnes-meyer",
+    "categoria": "tempo",
+    "contextos": [
+      "models"
+    ],
+    "palavras_chave": [
+      "role",
+      "models",
+      "tempo"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

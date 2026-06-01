@@ -1,0 +1,134 @@
+[
+  {
+    "id": "f_csv_523a09a329",
+    "slug": "i-was-impressed-by-the-scene-in-apollo-13-where-the-astronauts-request-confirmat",
+    "texto": "I was impressed by the scene in Apollo 13 where the astronauts request confirmation of their calculations and several people at Mission Control dive for their slide rules. For several months after that, my standard response to statements like \"We must implement multi-processor object-oriented Java-based client-server technologies immediately!\" was \"You know, FORTRAN and slide rules put men on the moon and got them back safely multiple times.\"Tended to shut them up, at least for a moment.",
+    "autor": "Matt Roberts",
+    "autorSlug": "matt-roberts",
+    "explicacao": "Metáfora atribuída a Matt Roberts: compara elementos do cotidiano para falar de passagem do tempo e prioridades. O trecho “I was impressed by the scene in Apollo 13 where the astronauts request confirmation of their calc…” usa imagem concreta para lembrar que tempo, fortran, nasa pedem movimento e interpretação pessoal, em tom de termino e nasa.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "fortran",
+        "nasa",
+        "slide-rules",
+        "technology"
+      ],
+      "contextos": [
+        "termino",
+        "nasa",
+        "slide-rules",
+        "technology"
+      ],
+      "emocoes": [
+        "saudade"
+      ],
+      "temas": [
+        "tempo",
+        "fortran",
+        "nasa",
+        "slide-rules",
+        "several",
+        "slide",
+        "rules",
+        "impressed"
+      ],
+      "palavrasChave": [
+        "fortran",
+        "nasa",
+        "slide-rules",
+        "technology",
+        "tempo",
+        "termino",
+        "saudade"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "fortran",
+        "nasa",
+        "slide-rules",
+        "technology",
+        "termino",
+        "saudade",
+        "matt-roberts"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 77,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "fortran",
+        "nasa",
+        "slide-rules",
+        "several",
+        "slide"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I was impressed by the scene in Apollo 13 where the …\" — Matt Roberts | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Matt Roberts: compara elementos do cotidiano para falar de passagem do tempo e prioridades. O trecho “I was impressed by the scene in Apo…",
+      "keywordsSeo": [
+        "frases de Matt Roberts",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases fortran",
+        "frases termino",
+        "frases nasa",
+        "fortran",
+        "nasa",
+        "slide-rules",
+        "technology"
+      ],
+      "canonicalSlug": "i-was-impressed-by-the-scene-in-apollo-13-where-the-astronauts-request-confirmat",
+      "relatedKeywords": [
+        "saudade",
+        "tempo",
+        "fortran",
+        "nasa",
+        "slide-rules",
+        "technology",
+        "matt-roberts"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I was impressed by the scene in Apollo 13 where the astronauts request confirmation of their calculations and several people at Mission Control dive for their slide rules. For several months after that, my standard response to statements like \"We must implement multi-processor object-oriented Java-based client-server technologies immediately!\" was \"You know, FORTRAN and slide rules put men on the moon and got them back safely multiple times.\"Tended to shut them up, at least for a moment.",
+    "autor_original": "Matt Roberts",
+    "autor_slug": "matt-roberts",
+    "categoria": "tempo",
+    "contextos": [
+      "termino",
+      "nasa",
+      "slide-rules",
+      "technology"
+    ],
+    "palavras_chave": [
+      "fortran",
+      "nasa",
+      "slide-rules",
+      "technology",
+      "tempo",
+      "termino",
+      "saudade"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,136 @@
+[
+  {
+    "id": "f_csv_1e31bf9bd8",
+    "slug": "love-that-literature",
+    "texto": "Love that Literature.",
+    "autor": "S. McPherson",
+    "autorSlug": "s-mcpherson",
+    "explicacao": "Citação de S. McPherson sobre vínculos afetivos e cuidado mútuo. “Love that Literature.” articula motivacao, believe, dream em registro de motivacao, com relevância para contextos como dream e read.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "believe",
+        "dream",
+        "read",
+        "stories"
+      ],
+      "contextos": [
+        "dream",
+        "read",
+        "stories",
+        "storytelling",
+        "write"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "motivacao",
+        "believe",
+        "dream",
+        "read",
+        "literature"
+      ],
+      "palavrasChave": [
+        "believe",
+        "dream",
+        "read",
+        "stories",
+        "storytelling",
+        "write",
+        "motivacao",
+        "amor"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "believe",
+        "dream",
+        "read",
+        "stories",
+        "storytelling",
+        "write",
+        "amor",
+        "s-mcpherson"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "believe",
+        "dream",
+        "read",
+        "literature",
+        "motivacao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Love that Literature.\" — S. McPherson | Metamensagem",
+      "descriptionSeo": "Citação de S. McPherson sobre vínculos afetivos e cuidado mútuo. “Love that Literature.” articula motivacao, believe, dream em registro de motivacao, com rele…",
+      "keywordsSeo": [
+        "frases de S. McPherson",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases believe",
+        "frases dream",
+        "frases read",
+        "believe",
+        "dream",
+        "read",
+        "stories"
+      ],
+      "canonicalSlug": "love-that-literature",
+      "relatedKeywords": [
+        "amor",
+        "motivacao",
+        "believe",
+        "dream",
+        "read",
+        "stories",
+        "s-mcpherson"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Love that Literature.",
+    "autor_original": "S. McPherson",
+    "autor_slug": "s-mcpherson",
+    "categoria": "motivacao",
+    "contextos": [
+      "dream",
+      "read",
+      "stories",
+      "storytelling",
+      "write"
+    ],
+    "palavras_chave": [
+      "believe",
+      "dream",
+      "read",
+      "stories",
+      "storytelling",
+      "write",
+      "motivacao",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,121 @@
+[
+  {
+    "id": "f_csv_b2fe0d53d3",
+    "slug": "i-work-on-openbsd-fulltime-as-the-project-leader-i-set-some-directions-increa",
+    "texto": "I work on OpenBSD fulltime, as the project leader. I set some directions, increase communication between the developers, and try to be involved in nearly every aspect of the base system.",
+    "autor": "Theo de Raadt",
+    "autorSlug": "theo-de-raadt",
+    "explicacao": "Orientação direta de Theo de Raadt sobre passagem do tempo e prioridades. A afirmação “I work on OpenBSD fulltime, as the project leader. I set some directions, increase communication …” funciona como lembrete prático ligado a lideranca, work, leader, útil em momentos de trabalho e leader.",
+    "semantica": {
+      "categoriaPrincipal": "lideranca",
+      "categorias": [
+        "lideranca",
+        "work",
+        "leader",
+        "try"
+      ],
+      "contextos": [
+        "trabalho",
+        "leader",
+        "try"
+      ],
+      "emocoes": [],
+      "temas": [
+        "lideranca",
+        "work",
+        "leader",
+        "try",
+        "openbsd",
+        "fulltime",
+        "project",
+        "directions"
+      ],
+      "palavrasChave": [
+        "work",
+        "leader",
+        "try",
+        "lideranca",
+        "trabalho"
+      ],
+      "tagsSeo": [
+        "lideranca",
+        "work",
+        "leader",
+        "try",
+        "trabalho",
+        "theo-de-raadt"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 44,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "lideranca",
+        "work",
+        "leader",
+        "try",
+        "openbsd",
+        "fulltime"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I work on OpenBSD fulltime, as the project leader. I…\" — Theo de Raadt | Metamensagem",
+      "descriptionSeo": "Orientação direta de Theo de Raadt sobre passagem do tempo e prioridades. A afirmação “I work on OpenBSD fulltime, as the project leader. I set some direction…",
+      "keywordsSeo": [
+        "frases de Theo de Raadt",
+        "frases sobre lideranca",
+        "frases lideranca",
+        "frases work",
+        "frases trabalho",
+        "frases leader",
+        "work",
+        "leader",
+        "try",
+        "lideranca"
+      ],
+      "canonicalSlug": "i-work-on-openbsd-fulltime-as-the-project-leader-i-set-some-directions-increa",
+      "relatedKeywords": [
+        "lideranca",
+        "work",
+        "leader",
+        "try",
+        "theo-de-raadt"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I work on OpenBSD fulltime, as the project leader. I set some directions, increase communication between the developers, and try to be involved in nearly every aspect of the base system.",
+    "autor_original": "Theo de Raadt",
+    "autor_slug": "theo-de-raadt",
+    "categoria": "lideranca",
+    "contextos": [
+      "trabalho",
+      "leader",
+      "try"
+    ],
+    "palavras_chave": [
+      "work",
+      "leader",
+      "try",
+      "lideranca",
+      "trabalho"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

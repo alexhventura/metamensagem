@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_551624cf13",
+    "slug": "life-is-awesome",
+    "texto": "life is awesome",
+    "autor": "Sedonia Guillone",
+    "autorSlug": "sedonia-guillone",
+    "explicacao": "Citação de Sedonia Guillone sobre sentido da existência e experiência vivida. “life is awesome” articula reflexao, life-lessons, awesome em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "life-lessons"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "life-lessons",
+        "awesome"
+      ],
+      "palavrasChave": [
+        "life-lessons",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "life-lessons",
+        "sedonia-guillone"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "life-lessons",
+        "awesome",
+        "reflexao",
+        "life-lessons"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"life is awesome\" — Sedonia Guillone | Metamensagem",
+      "descriptionSeo": "Citação de Sedonia Guillone sobre sentido da existência e experiência vivida. “life is awesome” articula reflexao, life-lessons, awesome em registro de reflex…",
+      "keywordsSeo": [
+        "frases de Sedonia Guillone",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases life lessons",
+        "life-lessons",
+        "reflexao"
+      ],
+      "canonicalSlug": "life-is-awesome",
+      "relatedKeywords": [
+        "reflexao",
+        "life-lessons",
+        "sedonia-guillone"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "life is awesome",
+    "autor_original": "Sedonia Guillone",
+    "autor_slug": "sedonia-guillone",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "life-lessons",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_7317da7eed",
+    "slug": "a-great-many-things-keep-happening-some-good-some-bad",
+    "texto": "A great many things keep happening, some good, some bad.",
+    "autor": "Gregory of Tours",
+    "autorSlug": "gregory-of-tours",
+    "explicacao": "Citação de Gregory of Tours sobre temas ligados a vida. “A great many things keep happening, some good, some bad.” articula vida, changes, history em registro de vida, com relevância para contextos como mudanca e history.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "changes",
+        "history"
+      ],
+      "contextos": [
+        "mudanca",
+        "history",
+        "vida"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "changes",
+        "history",
+        "great",
+        "things",
+        "happening"
+      ],
+      "palavrasChave": [
+        "changes",
+        "history",
+        "vida",
+        "mudanca"
+      ],
+      "tagsSeo": [
+        "vida",
+        "changes",
+        "history",
+        "mudanca",
+        "gregory-of-tours"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "changes",
+        "history",
+        "great",
+        "things",
+        "happening"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A great many things keep happening, some good, some …\" — Gregory of Tours | Metamensagem",
+      "descriptionSeo": "Citação de Gregory of Tours sobre temas ligados a vida. “A great many things keep happening, some good, some bad.” articula vida, changes, history em registro…",
+      "keywordsSeo": [
+        "frases de Gregory of Tours",
+        "frases sobre vida",
+        "frases vida",
+        "frases changes",
+        "frases mudanca",
+        "frases history",
+        "changes",
+        "history",
+        "vida",
+        "mudanca"
+      ],
+      "canonicalSlug": "a-great-many-things-keep-happening-some-good-some-bad",
+      "relatedKeywords": [
+        "vida",
+        "changes",
+        "history",
+        "gregory-of-tours"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A great many things keep happening, some good, some bad.",
+    "autor_original": "Gregory of Tours",
+    "autor_slug": "gregory-of-tours",
+    "categoria": "vida",
+    "contextos": [
+      "mudanca",
+      "history",
+      "vida"
+    ],
+    "palavras_chave": [
+      "changes",
+      "history",
+      "vida",
+      "mudanca"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

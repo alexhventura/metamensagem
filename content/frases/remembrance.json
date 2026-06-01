@@ -1,0 +1,105 @@
+[
+  {
+    "id": "f_csv_55e8e1dc12",
+    "slug": "once-again-standing-on-past-route",
+    "texto": "Once again standing on past route.",
+    "autor": "Remembrance",
+    "autorSlug": "remembrance",
+    "explicacao": "Citação de Remembrance sobre temas ligados a reflexao. “Once again standing on past route.” articula reflexao, past, relationship em registro de reflexao, com relevância para contextos como relationship.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "past",
+        "relationship"
+      ],
+      "contextos": [
+        "relationship"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "past",
+        "relationship",
+        "again",
+        "standing",
+        "route"
+      ],
+      "palavrasChave": [
+        "past",
+        "relationship",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "past",
+        "relationship",
+        "remembrance"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "past",
+        "relationship",
+        "again",
+        "standing",
+        "route"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Once again standing on past route.\" — Remembrance | Metamensagem",
+      "descriptionSeo": "Citação de Remembrance sobre temas ligados a reflexao. “Once again standing on past route.” articula reflexao, past, relationship em registro de reflexao, com…",
+      "keywordsSeo": [
+        "frases de Remembrance",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases past",
+        "frases relationship",
+        "past",
+        "relationship",
+        "reflexao"
+      ],
+      "canonicalSlug": "once-again-standing-on-past-route",
+      "relatedKeywords": [
+        "reflexao",
+        "past",
+        "relationship",
+        "remembrance"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Once again standing on past route.",
+    "autor_original": "Remembrance",
+    "autor_slug": "remembrance",
+    "categoria": "reflexao",
+    "contextos": [
+      "relationship"
+    ],
+    "palavras_chave": [
+      "past",
+      "relationship",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

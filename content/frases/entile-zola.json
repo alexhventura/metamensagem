@@ -1,0 +1,108 @@
+[
+  {
+    "id": "f_csv_6e83aa7bf5",
+    "slug": "a-work-of-art-is-a-corner-of-creation-seen-through-a-temperament",
+    "texto": "A work of art is a corner of creation seen through a temperament.",
+    "autor": "Entile Zola",
+    "autorSlug": "entile-zola",
+    "explicacao": "Citação de Entile Zola sobre temas ligados a trabalho. “A work of art is a corner of creation seen through a temperament.” articula trabalho, art, artist em registro de trabalho, com relevância para contextos como trabalho e artist.",
+    "semantica": {
+      "categoriaPrincipal": "trabalho",
+      "categorias": [
+        "trabalho",
+        "art",
+        "artist"
+      ],
+      "contextos": [
+        "trabalho",
+        "artist"
+      ],
+      "emocoes": [],
+      "temas": [
+        "trabalho",
+        "art",
+        "artist",
+        "corner",
+        "creation",
+        "through",
+        "temperament"
+      ],
+      "palavrasChave": [
+        "art",
+        "artist",
+        "trabalho"
+      ],
+      "tagsSeo": [
+        "trabalho",
+        "art",
+        "artist",
+        "entile-zola"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "trabalho",
+        "art",
+        "artist",
+        "corner",
+        "creation",
+        "through"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A work of art is a corner of creation seen through a…\" — Entile Zola | Metamensagem",
+      "descriptionSeo": "Citação de Entile Zola sobre temas ligados a trabalho. “A work of art is a corner of creation seen through a temperament.” articula trabalho, art, artist em r…",
+      "keywordsSeo": [
+        "frases de Entile Zola",
+        "frases sobre trabalho",
+        "frases trabalho",
+        "frases art",
+        "frases artist",
+        "art",
+        "artist",
+        "trabalho"
+      ],
+      "canonicalSlug": "a-work-of-art-is-a-corner-of-creation-seen-through-a-temperament",
+      "relatedKeywords": [
+        "trabalho",
+        "art",
+        "artist",
+        "entile-zola"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A work of art is a corner of creation seen through a temperament.",
+    "autor_original": "Entile Zola",
+    "autor_slug": "entile-zola",
+    "categoria": "trabalho",
+    "contextos": [
+      "trabalho",
+      "artist"
+    ],
+    "palavras_chave": [
+      "art",
+      "artist",
+      "trabalho"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

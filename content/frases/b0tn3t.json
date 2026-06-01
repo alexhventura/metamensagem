@@ -2,27 +2,117 @@
   {
     "id": "f_4urippy4t",
     "slug": "a-alma-de-um-guerreiro-e-sua-honra-nao-se-conquistam-em-apen",
+    "texto": "A alma de um guerreiro e sua honra não se conquistam em apenas uma batalha.",
+    "autor": "B0TN3T",
+    "autorSlug": "b0tn3t",
+    "explicacao": "Atribuída a B0TN3T, provavelmente de conteúdo digital ou gaming. Usa linguagem de guerreiro para dizer que honra e caráter se constroem ao longo de muitas provações, não numa única luta.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "coragem",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [
+        "coragem"
+      ],
+      "temas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "guerreiro",
+        "honra",
+        "conquistam",
+        "apenas",
+        "batalha"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "inspiracao",
+        "b0tn3t"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "guerreiro",
+        "honra",
+        "conquistam"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A alma de um guerreiro e sua honra não se conquistam…\" — B0TN3T | Metamensagem",
+      "descriptionSeo": "Atribuída a B0TN3T, provavelmente de conteúdo digital ou gaming. Usa linguagem de guerreiro para dizer que honra e caráter se constroem ao longo de muitas pro…",
+      "keywordsSeo": [
+        "frases de B0TN3T",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases coragem",
+        "frases inspiracao",
+        "frases inspiracional",
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "a-alma-de-um-guerreiro-e-sua-honra-nao-se-conquistam-em-apen",
+      "relatedKeywords": [
+        "coragem",
+        "motivacao",
+        "inspiracional",
+        "b0tn3t"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "A alma de um guerreiro e sua honra não se conquistam em apenas uma batalha.",
     "autor_original": "B0TN3T",
-    "categoria": "coragem",
+    "autor_slug": "b0tn3t",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "Atribuída a B0TN3T, provavelmente de conteúdo digital ou gaming. Usa linguagem de guerreiro para dizer que honra e caráter se constroem ao longo de muitas provações, não numa única luta.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

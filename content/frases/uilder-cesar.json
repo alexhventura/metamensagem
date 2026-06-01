@@ -2,27 +2,120 @@
   {
     "id": "f_9oxzqwzxp",
     "slug": "meu-otimismo-foi-tudo-que-precisava-para-meus-objetivos-torn",
+    "texto": "Meu otimismo foi tudo que precisava para meus objetivos tornarem reais.",
+    "autor": "Uilder César",
+    "autorSlug": "uilder-cesar",
+    "explicacao": "Uilder César atribui realização de objetivos ao otimismo como fator decisivo. Crença positiva teria sido suficiente para concretizar metas. Testemunho pessoal de mentalidade vencedora.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "otimismo",
+        "precisava",
+        "objetivos",
+        "tornarem",
+        "reais"
+      ],
+      "palavrasChave": [
+        "foco",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "uilder-cesar"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "otimismo",
+        "precisava",
+        "objetivos"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Meu otimismo foi tudo que precisava para meus objeti…\" — Uilder César | Metamensagem",
+      "descriptionSeo": "Uilder César atribui realização de objetivos ao otimismo como fator decisivo. Crença positiva teria sido suficiente para concretizar metas. Testemunho pessoal…",
+      "keywordsSeo": [
+        "frases de Uilder César",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases foco",
+        "frases inspiracao",
+        "frases inspiracional",
+        "foco",
+        "inspiracional",
+        "otimismo",
+        "motivacao"
+      ],
+      "canonicalSlug": "meu-otimismo-foi-tudo-que-precisava-para-meus-objetivos-torn",
+      "relatedKeywords": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "otimismo",
+        "uilder-cesar"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Meu otimismo foi tudo que precisava para meus objetivos tornarem reais.",
     "autor_original": "Uilder César",
-    "categoria": "foco",
+    "autor_slug": "uilder-cesar",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "Uilder César atribui realização de objetivos ao otimismo como fator decisivo. Crença positiva teria sido suficiente para concretizar metas. Testemunho pessoal de mentalidade vencedora.",
     "palavras_chave": [
       "foco",
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

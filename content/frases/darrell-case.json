@@ -1,0 +1,116 @@
+[
+  {
+    "id": "f_csv_ac2e88c258",
+    "slug": "an-author-is-an-artist-who-paints-a-picture-in-the-imagination-of-the-reader",
+    "texto": "An author is an artist who paints a picture in the imagination of the reader.",
+    "autor": "Darrell Case",
+    "autorSlug": "darrell-case",
+    "explicacao": "Citação de Darrell Case sobre temas ligados a familia. “An author is an artist who paints a picture in the imagination of the reader.” articula familia, author, reader em registro de familia, com relevância para contextos como reader e writer.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "author",
+        "reader",
+        "writer"
+      ],
+      "contextos": [
+        "reader",
+        "writer"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "author",
+        "reader",
+        "writer",
+        "artist",
+        "paints",
+        "picture",
+        "imagination"
+      ],
+      "palavrasChave": [
+        "author",
+        "reader",
+        "writer",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "author",
+        "reader",
+        "writer",
+        "darrell-case"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "author",
+        "reader",
+        "writer",
+        "artist",
+        "paints"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"An author is an artist who paints a picture in the i…\" — Darrell Case | Metamensagem",
+      "descriptionSeo": "Citação de Darrell Case sobre temas ligados a familia. “An author is an artist who paints a picture in the imagination of the reader.” articula familia, autho…",
+      "keywordsSeo": [
+        "frases de Darrell Case",
+        "frases sobre familia",
+        "frases familia",
+        "frases author",
+        "frases reader",
+        "frases writer",
+        "author",
+        "reader",
+        "writer",
+        "familia"
+      ],
+      "canonicalSlug": "an-author-is-an-artist-who-paints-a-picture-in-the-imagination-of-the-reader",
+      "relatedKeywords": [
+        "familia",
+        "author",
+        "reader",
+        "writer",
+        "darrell-case"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "An author is an artist who paints a picture in the imagination of the reader.",
+    "autor_original": "Darrell Case",
+    "autor_slug": "darrell-case",
+    "categoria": "familia",
+    "contextos": [
+      "reader",
+      "writer"
+    ],
+    "palavras_chave": [
+      "author",
+      "reader",
+      "writer",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

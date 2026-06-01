@@ -1,0 +1,105 @@
+[
+  {
+    "id": "f_csv_3b9cb49648",
+    "slug": "some-books-are-undeservedly-forgotten",
+    "texto": "Some books are undeservedly forgotten",
+    "autor": "none are undeservedly remembered.",
+    "autorSlug": "none-are-undeservedly-remembered",
+    "explicacao": "Citação de none are undeservedly remembered. sobre temas ligados a reflexao. “Some books are undeservedly forgotten” articula reflexao, w-h-auden, the-dyer-s-hand em registro de reflexao, com relevância para contextos como the-dyer-s-hand.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "w-h-auden",
+        "the-dyer-s-hand"
+      ],
+      "contextos": [
+        "the-dyer-s-hand"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "w-h-auden",
+        "the-dyer-s-hand",
+        "books",
+        "undeservedly",
+        "forgotten"
+      ],
+      "palavrasChave": [
+        "w-h-auden",
+        "the-dyer-s-hand",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "w-h-auden",
+        "the-dyer-s-hand",
+        "none-are-undeservedly-remembered"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "w-h-auden",
+        "the-dyer-s-hand",
+        "books",
+        "undeservedly",
+        "forgotten"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Some books are undeservedly forgotten\" — none are undeservedly remembered. | Metamensagem",
+      "descriptionSeo": "Citação de none are undeservedly remembered. sobre temas ligados a reflexao. “Some books are undeservedly forgotten” articula reflexao, w-h-auden, the-dyer-s-…",
+      "keywordsSeo": [
+        "frases de none are undeservedly remembered.",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases w h auden",
+        "frases the dyer s hand",
+        "w-h-auden",
+        "the-dyer-s-hand",
+        "reflexao"
+      ],
+      "canonicalSlug": "some-books-are-undeservedly-forgotten",
+      "relatedKeywords": [
+        "reflexao",
+        "w-h-auden",
+        "the-dyer-s-hand",
+        "none-are-undeservedly-remembered"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Some books are undeservedly forgotten",
+    "autor_original": "none are undeservedly remembered.",
+    "autor_slug": "none-are-undeservedly-remembered",
+    "categoria": "reflexao",
+    "contextos": [
+      "the-dyer-s-hand"
+    ],
+    "palavras_chave": [
+      "w-h-auden",
+      "the-dyer-s-hand",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { absoluteUrl } from '@/lib/seo/url';
 import { getAllFrases, getFraseBySlug } from '@/lib/loadFrases';
 
 export const revalidate = 3600;
@@ -28,10 +29,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       type: 'article',
-      url: `https://metamensagem.com/frases/${frase.slug}`,
+      url: absoluteUrl(`/frases/${frase.slug}`),
     },
     alternates: {
-      canonical: `https://metamensagem.com/frases/${frase.slug}`,
+      canonical: absoluteUrl(`/frases/${frase.slug}`),
     },
   };
 }

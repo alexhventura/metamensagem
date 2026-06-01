@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_fe09ecb19e",
+    "slug": "some-day-they-will-know-what-i-mean",
+    "texto": "Some day they will know what I mean.",
+    "autor": "Tom Thomson",
+    "autorSlug": "tom-thomson",
+    "explicacao": "Citação de Tom Thomson sobre temas ligados a familia. “Some day they will know what I mean.” articula familia, painters, painting em registro de familia, com relevância para contextos como painting.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "painters",
+        "painting"
+      ],
+      "contextos": [
+        "painting"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "painters",
+        "painting"
+      ],
+      "palavrasChave": [
+        "painters",
+        "painting",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "painters",
+        "painting",
+        "tom-thomson"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "painters",
+        "painting",
+        "familia",
+        "painters"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Some day they will know what I mean.\" — Tom Thomson | Metamensagem",
+      "descriptionSeo": "Citação de Tom Thomson sobre temas ligados a familia. “Some day they will know what I mean.” articula familia, painters, painting em registro de familia, com…",
+      "keywordsSeo": [
+        "frases de Tom Thomson",
+        "frases sobre familia",
+        "frases familia",
+        "frases painters",
+        "frases painting",
+        "painters",
+        "painting",
+        "familia"
+      ],
+      "canonicalSlug": "some-day-they-will-know-what-i-mean",
+      "relatedKeywords": [
+        "familia",
+        "painters",
+        "painting",
+        "tom-thomson"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Some day they will know what I mean.",
+    "autor_original": "Tom Thomson",
+    "autor_slug": "tom-thomson",
+    "categoria": "familia",
+    "contextos": [
+      "painting"
+    ],
+    "palavras_chave": [
+      "painters",
+      "painting",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

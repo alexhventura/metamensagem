@@ -2,25 +2,105 @@
   {
     "id": "f_8ao0te5gr",
     "slug": "a-vida-tem-uma-conexao-imensuravel-divinal-aquilo-porque",
+    "texto": "⁠⁠A vida tem uma conexão imensurável, divinal. Aquilo porque lutamos todos os dias compõe uma parte irretocável da nossa essência.",
+    "autor": "Diego Ferrari",
+    "autorSlug": "diego-ferrari",
+    "explicacao": "Diego Ferrari enfatiza que a luta diária não é vazia, mas parte essencial da identidade de cada um. A frase sugere uma visão espiritual da vida, comum em mensagens motivacionais sobre propósito e conexão com algo maior.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "conexão",
+        "imensurável",
+        "divinal",
+        "aquilo",
+        "porque"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "inspiracao",
+        "diego-ferrari"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 37,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "conexão",
+        "imensurável",
+        "divinal",
+        "aquilo"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠⁠A vida tem uma conexão imensurável, divinal. Aquil…\" — Diego Ferrari | Metamensagem",
+      "descriptionSeo": "Diego Ferrari enfatiza que a luta diária não é vazia, mas parte essencial da identidade de cada um. A frase sugere uma visão espiritual da vida, comum em mens…",
+      "keywordsSeo": [
+        "frases de Diego Ferrari",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "a-vida-tem-uma-conexao-imensuravel-divinal-aquilo-porque",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "diego-ferrari"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠⁠A vida tem uma conexão imensurável, divinal. Aquilo porque lutamos todos os dias compõe uma parte irretocável da nossa essência.",
     "autor_original": "Diego Ferrari",
-    "categoria": "inspiracional",
+    "autor_slug": "diego-ferrari",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao"
     ],
-    "explicacao": "Diego Ferrari enfatiza que a luta diária não é vazia, mas parte essencial da identidade de cada um. A frase sugere uma visão espiritual da vida, comum em mensagens motivacionais sobre propósito e conexão com algo maior.",
     "palavras_chave": [
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

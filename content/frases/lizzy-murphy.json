@@ -1,0 +1,96 @@
+[
+  {
+    "id": "f_csv_8984d82cf0",
+    "slug": "you-know-what-happened-to-her-right",
+    "texto": "You know what happened to her, right?",
+    "autor": "Lizzy Murphy",
+    "autorSlug": "lizzy-murphy",
+    "explicacao": "Pergunta retórica de Lizzy Murphy que provoca temas ligados a reflexao. Ao questionar “You know what happened to her, right?”, o texto convida o leitor a revisar crenças sobre reflexao, action, happened, com foco em reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "action"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "action",
+        "happened",
+        "right"
+      ],
+      "palavrasChave": [
+        "action",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "action",
+        "lizzy-murphy"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "action",
+        "happened",
+        "right",
+        "reflexao",
+        "action"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"You know what happened to her, right?\" — Lizzy Murphy | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Lizzy Murphy que provoca temas ligados a reflexao. Ao questionar “You know what happened to her, right?”, o texto convida o leitor a revi…",
+      "keywordsSeo": [
+        "frases de Lizzy Murphy",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases action",
+        "action",
+        "reflexao"
+      ],
+      "canonicalSlug": "you-know-what-happened-to-her-right",
+      "relatedKeywords": [
+        "reflexao",
+        "action",
+        "lizzy-murphy"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "You know what happened to her, right?",
+    "autor_original": "Lizzy Murphy",
+    "autor_slug": "lizzy-murphy",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "action",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

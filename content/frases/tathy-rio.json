@@ -2,31 +2,131 @@
   {
     "id": "f_lgsjuq1h4",
     "slug": "seja-fiel-a-sua-determinacao-tenha-disciplina-em-alguma-ar",
+    "texto": "⁠Seja fiel à sua determinação! Tenha disciplina em alguma área da sua vida cotidiana, pois será aí que você encontrará a saída! A disciplina irá te reerguer sempre, mesmo nos dias que você acordar desmotivado! Motivação nem sempre você terá, mas a disciplina será um vício!",
+    "autor": "Tathy Rio",
+    "autorSlug": "tathy-rio",
+    "explicacao": "Tathy Rio escreve sobre disciplina versus motivação. Nem sempre haverá ânimo, mas hábitos firmes sustentam nos dias difíceis. Mensagem de rotina e foco para quem busca reerguer-se constantemente.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "bom-dia",
+        "determinacao",
+        "foco",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "determinacao",
+        "foco",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "bom-dia",
+        "determinacao",
+        "foco",
+        "disciplina",
+        "sempre",
+        "determinação",
+        "tenha"
+      ],
+      "palavrasChave": [
+        "bom-dia",
+        "determinacao",
+        "foco",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "bom-dia",
+        "determinacao",
+        "foco",
+        "inspiracional",
+        "inspiracao",
+        "tathy-rio"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 57,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "bom-dia",
+        "determinacao",
+        "foco",
+        "disciplina",
+        "sempre"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠Seja fiel à sua determinação! Tenha disciplina em a…\" — Tathy Rio | Metamensagem",
+      "descriptionSeo": "Tathy Rio escreve sobre disciplina versus motivação. Nem sempre haverá ânimo, mas hábitos firmes sustentam nos dias difíceis. Mensagem de rotina e foco para q…",
+      "keywordsSeo": [
+        "frases de Tathy Rio",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases bom dia",
+        "frases inspiracao",
+        "frases determinacao",
+        "bom-dia",
+        "determinacao",
+        "foco",
+        "inspiracional"
+      ],
+      "canonicalSlug": "seja-fiel-a-sua-determinacao-tenha-disciplina-em-alguma-ar",
+      "relatedKeywords": [
+        "determinacao",
+        "motivacao",
+        "bom-dia",
+        "foco",
+        "inspiracional",
+        "tathy-rio"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠Seja fiel à sua determinação! Tenha disciplina em alguma área da sua vida cotidiana, pois será aí que você encontrará a saída! A disciplina irá te reerguer sempre, mesmo nos dias que você acordar desmotivado! Motivação nem sempre você terá, mas a disciplina será um vício!",
     "autor_original": "Tathy Rio",
-    "categoria": "bom-dia",
+    "autor_slug": "tathy-rio",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "determinacao",
       "foco",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "Tathy Rio escreve sobre disciplina versus motivação. Nem sempre haverá ânimo, mas hábitos firmes sustentam nos dias difíceis. Mensagem de rotina e foco para quem busca reerguer-se constantemente.",
     "palavras_chave": [
       "bom-dia",
       "determinacao",
       "foco",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,26 +1,1664 @@
 [
   {
-    "id": "f_snd8co82w",
-    "slug": "sinto-me-deveras-otimista-quanto-ao-futuro-do-pessimismo",
-    "frase_original": "Sinto-me deveras otimista quanto ao futuro do pessimismo.",
+    "id": "f_csv_514dc70fc3",
+    "slug": "to-be-adult-is-to-be-alone",
+    "texto": "To be adult is to be alone.",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Citação de Jean Rostand sobre temas ligados a reflexao. “To be adult is to be alone.” articula reflexao, adult, alone em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "adult"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "adult",
+        "alone"
+      ],
+      "palavrasChave": [
+        "adult",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "adult",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "adult",
+        "alone",
+        "reflexao",
+        "adult"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"To be adult is to be alone.\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Citação de Jean Rostand sobre temas ligados a reflexao. “To be adult is to be alone.” articula reflexao, adult, alone em registro de reflexao, com relevância…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases adult",
+        "adult",
+        "reflexao"
+      ],
+      "canonicalSlug": "to-be-adult-is-to-be-alone",
+      "relatedKeywords": [
+        "reflexao",
+        "adult",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "To be adult is to be alone.",
     "autor_original": "Jean Rostand",
-    "categoria": "inspiracional",
+    "autor_slug": "jean-rostand",
+    "categoria": "reflexao",
     "contextos": [
-      "otimismo"
+      "reflexao"
     ],
-    "explicacao": "Jean Rostand faz humor intelectual sobre o futuro do pessimismo com ironia otimista. O biólogo e ensaísta franceses brinca com a contradição de esperar algo positivo de uma visão negativa do mundo.",
     "palavras_chave": [
-      "inspiracional",
-      "otimismo"
+      "adult",
+      "reflexao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_527a9bbccb",
+    "slug": "science-has-made-us-gods-even-before-we-are-worthy-of-being-men",
+    "texto": "Science has made us gods even before we are worthy of being men.",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Citação de Jean Rostand sobre temas ligados a autoestima. “Science has made us gods even before we are worthy of being men.” articula autoestima, gods, men em registro de autoestima, com relevância para contextos como men e science.",
+    "semantica": {
+      "categoriaPrincipal": "autoestima",
+      "categorias": [
+        "autoestima",
+        "gods",
+        "men",
+        "science"
+      ],
+      "contextos": [
+        "men",
+        "science"
+      ],
+      "emocoes": [],
+      "temas": [
+        "autoestima",
+        "gods",
+        "men",
+        "science",
+        "before",
+        "worthy",
+        "being"
+      ],
+      "palavrasChave": [
+        "gods",
+        "men",
+        "science",
+        "autoestima"
+      ],
+      "tagsSeo": [
+        "autoestima",
+        "gods",
+        "men",
+        "science",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "autoestima",
+        "gods",
+        "men",
+        "science",
+        "before",
+        "worthy"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Science has made us gods even before we are worthy o…\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Citação de Jean Rostand sobre temas ligados a autoestima. “Science has made us gods even before we are worthy of being men.” articula autoestima, gods, men em…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre autoestima",
+        "frases autoestima",
+        "frases gods",
+        "frases men",
+        "frases science",
+        "gods",
+        "men",
+        "science",
+        "autoestima"
+      ],
+      "canonicalSlug": "science-has-made-us-gods-even-before-we-are-worthy-of-being-men",
+      "relatedKeywords": [
+        "autoestima",
+        "gods",
+        "men",
+        "science",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Science has made us gods even before we are worthy of being men.",
+    "autor_original": "Jean Rostand",
+    "autor_slug": "jean-rostand",
+    "categoria": "autoestima",
+    "contextos": [
+      "men",
+      "science"
+    ],
+    "palavras_chave": [
+      "gods",
+      "men",
+      "science",
+      "autoestima"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_55453f3b7b",
+    "slug": "god-that-dumping-ground-of-our-dreams",
+    "texto": "God that dumping ground of our dreams.",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Citação de Jean Rostand sobre temas ligados a motivacao. “God that dumping ground of our dreams.” articula motivacao, god, reflexao em registro de motivacao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "god",
+        "reflexao"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "god",
+        "reflexao",
+        "dumping",
+        "ground",
+        "dreams"
+      ],
+      "palavrasChave": [
+        "god",
+        "reflexao",
+        "motivacao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "god",
+        "reflexao",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "god",
+        "reflexao",
+        "dumping",
+        "ground",
+        "dreams"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"God that dumping ground of our dreams.\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Citação de Jean Rostand sobre temas ligados a motivacao. “God that dumping ground of our dreams.” articula motivacao, god, reflexao em registro de motivacao,…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases god",
+        "frases reflexao",
+        "god",
+        "reflexao",
+        "motivacao"
+      ],
+      "canonicalSlug": "god-that-dumping-ground-of-our-dreams",
+      "relatedKeywords": [
+        "motivacao",
+        "god",
+        "reflexao",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "God that dumping ground of our dreams.",
+    "autor_original": "Jean Rostand",
+    "autor_slug": "jean-rostand",
+    "categoria": "motivacao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "god",
+      "reflexao",
+      "motivacao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_5ead149f68",
+    "slug": "the-obligation-to-endure-gives-us-the-right-to-know",
+    "texto": "The obligation to endure gives us the right to know.",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Citação de Jean Rostand sobre temas ligados a saude mental. “The obligation to endure gives us the right to know.” articula saude-mental, environmentalism, morality em registro de saude mental, com relevância para contextos como termino e morality.",
+    "semantica": {
+      "categoriaPrincipal": "saude-mental",
+      "categorias": [
+        "saude-mental",
+        "environmentalism",
+        "morality"
+      ],
+      "contextos": [
+        "termino",
+        "morality"
+      ],
+      "emocoes": [],
+      "temas": [
+        "saude-mental",
+        "environmentalism",
+        "morality",
+        "obligation",
+        "endure",
+        "gives",
+        "right"
+      ],
+      "palavrasChave": [
+        "environmentalism",
+        "morality",
+        "saude-mental",
+        "termino"
+      ],
+      "tagsSeo": [
+        "saude-mental",
+        "environmentalism",
+        "morality",
+        "termino",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "saude-mental",
+        "environmentalism",
+        "morality",
+        "obligation",
+        "endure",
+        "gives"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The obligation to endure gives us the right to know.\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Citação de Jean Rostand sobre temas ligados a saude mental. “The obligation to endure gives us the right to know.” articula saude-mental, environmentalism, mo…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre saude mental",
+        "frases saude mental",
+        "frases environmentalism",
+        "frases termino",
+        "frases morality",
+        "environmentalism",
+        "morality",
+        "saude-mental",
+        "termino"
+      ],
+      "canonicalSlug": "the-obligation-to-endure-gives-us-the-right-to-know",
+      "relatedKeywords": [
+        "saude-mental",
+        "environmentalism",
+        "morality",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The obligation to endure gives us the right to know.",
+    "autor_original": "Jean Rostand",
+    "autor_slug": "jean-rostand",
+    "categoria": "saude-mental",
+    "contextos": [
+      "termino",
+      "morality"
+    ],
+    "palavras_chave": [
+      "environmentalism",
+      "morality",
+      "saude-mental",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_75c57ddcca",
+    "slug": "truth-is-always-served-by-great-minds-even-if-they-fight-it",
+    "texto": "Truth is always served by great minds, even if they fight it.",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Citação de Jean Rostand sobre temas ligados a reflexao. “Truth is always served by great minds, even if they fight it.” articula reflexao, great, fight em registro de reflexao, com relevância para contextos como fight e truth-is.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "great",
+        "fight",
+        "truth-is"
+      ],
+      "contextos": [
+        "fight",
+        "truth-is"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "great",
+        "fight",
+        "truth-is",
+        "truth",
+        "always",
+        "served",
+        "minds"
+      ],
+      "palavrasChave": [
+        "great",
+        "fight",
+        "truth-is",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "great",
+        "fight",
+        "truth-is",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "great",
+        "fight",
+        "truth-is",
+        "truth",
+        "always"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Truth is always served by great minds, even if they …\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Citação de Jean Rostand sobre temas ligados a reflexao. “Truth is always served by great minds, even if they fight it.” articula reflexao, great, fight em reg…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases great",
+        "frases fight",
+        "frases truth is",
+        "great",
+        "fight",
+        "truth-is",
+        "reflexao"
+      ],
+      "canonicalSlug": "truth-is-always-served-by-great-minds-even-if-they-fight-it",
+      "relatedKeywords": [
+        "reflexao",
+        "great",
+        "fight",
+        "truth-is",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Truth is always served by great minds, even if they fight it.",
+    "autor_original": "Jean Rostand",
+    "autor_slug": "jean-rostand",
+    "categoria": "reflexao",
+    "contextos": [
+      "fight",
+      "truth-is"
+    ],
+    "palavras_chave": [
+      "great",
+      "fight",
+      "truth-is",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_8888d21498",
+    "slug": "stupidity-outrage-vanity-cruelty-iniquity-bad-faith-falsehood-we-fail-to",
+    "texto": "Stupidity, outrage, vanity, cruelty, iniquity, bad faith, falsehood - we fail to see the whole array when it is facing in the same direction as we.",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Citação de Jean Rostand sobre temas ligados a fe. “Stupidity, outrage, vanity, cruelty, iniquity, bad faith, falsehood - we fail to see the whole ar…” articula fe, stupidity, direction em registro de fe, com relevância para contextos como direction e see.",
+    "semantica": {
+      "categoriaPrincipal": "fe",
+      "categorias": [
+        "fe",
+        "stupidity",
+        "direction",
+        "see"
+      ],
+      "contextos": [
+        "direction",
+        "see"
+      ],
+      "emocoes": [],
+      "temas": [
+        "fe",
+        "stupidity",
+        "direction",
+        "see",
+        "outrage",
+        "vanity",
+        "cruelty",
+        "iniquity"
+      ],
+      "palavrasChave": [
+        "stupidity",
+        "direction",
+        "see",
+        "fe"
+      ],
+      "tagsSeo": [
+        "fe",
+        "stupidity",
+        "direction",
+        "see",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 40,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "fe",
+        "stupidity",
+        "direction",
+        "see",
+        "outrage",
+        "vanity"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Stupidity, outrage, vanity, cruelty, iniquity, bad f…\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Citação de Jean Rostand sobre temas ligados a fe. “Stupidity, outrage, vanity, cruelty, iniquity, bad faith, falsehood - we fail to see the whole ar…” articul…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre fe",
+        "frases fe",
+        "frases stupidity",
+        "frases direction",
+        "frases see",
+        "stupidity",
+        "direction",
+        "see",
+        "fe"
+      ],
+      "canonicalSlug": "stupidity-outrage-vanity-cruelty-iniquity-bad-faith-falsehood-we-fail-to",
+      "relatedKeywords": [
+        "fe",
+        "stupidity",
+        "direction",
+        "see",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Stupidity, outrage, vanity, cruelty, iniquity, bad faith, falsehood - we fail to see the whole array when it is facing in the same direction as we.",
+    "autor_original": "Jean Rostand",
+    "autor_slug": "jean-rostand",
+    "categoria": "fe",
+    "contextos": [
+      "direction",
+      "see"
+    ],
+    "palavras_chave": [
+      "stupidity",
+      "direction",
+      "see",
+      "fe"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_a524959de0",
+    "slug": "nothing-leads-the-scientist-so-astray-as-a-premature-truth",
+    "texto": "Nothing leads the scientist so astray as a premature truth.",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Citação de Jean Rostand sobre temas ligados a reflexao. “Nothing leads the scientist so astray as a premature truth.” articula reflexao, nothing, premature em registro de reflexao, com relevância para contextos como premature e leads.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "nothing",
+        "premature",
+        "leads"
+      ],
+      "contextos": [
+        "premature",
+        "leads"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "nothing",
+        "premature",
+        "leads",
+        "scientist",
+        "astray"
+      ],
+      "palavrasChave": [
+        "nothing",
+        "premature",
+        "leads",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "nothing",
+        "premature",
+        "leads",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "nothing",
+        "premature",
+        "leads",
+        "scientist",
+        "astray"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Nothing leads the scientist so astray as a premature…\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Citação de Jean Rostand sobre temas ligados a reflexao. “Nothing leads the scientist so astray as a premature truth.” articula reflexao, nothing, premature em…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases nothing",
+        "frases premature",
+        "frases leads",
+        "nothing",
+        "premature",
+        "leads",
+        "reflexao"
+      ],
+      "canonicalSlug": "nothing-leads-the-scientist-so-astray-as-a-premature-truth",
+      "relatedKeywords": [
+        "reflexao",
+        "nothing",
+        "premature",
+        "leads",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Nothing leads the scientist so astray as a premature truth.",
+    "autor_original": "Jean Rostand",
+    "autor_slug": "jean-rostand",
+    "categoria": "reflexao",
+    "contextos": [
+      "premature",
+      "leads"
+    ],
+    "palavras_chave": [
+      "nothing",
+      "premature",
+      "leads",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_adb1058fa1",
+    "slug": "my-pessimism-goes-to-the-point-of-suspecting-the-sincerity-of-the-pessimists",
+    "texto": "My pessimism goes to the point of suspecting the sincerity of the pessimists.",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Citação de Jean Rostand sobre temas ligados a reflexao. “My pessimism goes to the point of suspecting the sincerity of the pessimists.” articula reflexao, optimism, pessimism em registro de reflexao, com relevância para contextos como pessimism.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "optimism",
+        "pessimism"
+      ],
+      "contextos": [
+        "pessimism"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "optimism",
+        "pessimism",
+        "point",
+        "suspecting",
+        "sincerity",
+        "pessimists"
+      ],
+      "palavrasChave": [
+        "optimism",
+        "pessimism",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "optimism",
+        "pessimism",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "optimism",
+        "pessimism",
+        "point",
+        "suspecting",
+        "sincerity"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My pessimism goes to the point of suspecting the sin…\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Citação de Jean Rostand sobre temas ligados a reflexao. “My pessimism goes to the point of suspecting the sincerity of the pessimists.” articula reflexao, opt…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases optimism",
+        "frases pessimism",
+        "optimism",
+        "pessimism",
+        "reflexao"
+      ],
+      "canonicalSlug": "my-pessimism-goes-to-the-point-of-suspecting-the-sincerity-of-the-pessimists",
+      "relatedKeywords": [
+        "reflexao",
+        "optimism",
+        "pessimism",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My pessimism goes to the point of suspecting the sincerity of the pessimists.",
+    "autor_original": "Jean Rostand",
+    "autor_slug": "jean-rostand",
+    "categoria": "reflexao",
+    "contextos": [
+      "pessimism"
+    ],
+    "palavras_chave": [
+      "optimism",
+      "pessimism",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_b7c1cf06a6",
+    "slug": "think-why-think-we-have-computers-to-do-that-for-us",
+    "texto": "Think? Why think! We have computers to do that for us.",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Pergunta retórica de Jean Rostand que provoca temas ligados a reflexao. Ao questionar “Think? Why think! We have computers to do that for us.”, o texto convida o leitor a revisar crenças sobre reflexao, humor, vida, com foco em vida e verdade.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "humor",
+        "vida",
+        "verdade"
+      ],
+      "contextos": [
+        "vida",
+        "verdade"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "humor",
+        "vida",
+        "verdade",
+        "think",
+        "computers"
+      ],
+      "palavrasChave": [
+        "humor",
+        "vida",
+        "verdade",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "humor",
+        "vida",
+        "verdade",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "humor",
+        "vida",
+        "verdade",
+        "think",
+        "computers"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Think? Why think! We have computers to do that for us.\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Jean Rostand que provoca temas ligados a reflexao. Ao questionar “Think? Why think! We have computers to do that for us.”, o texto convid…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases humor",
+        "frases vida",
+        "frases verdade",
+        "humor",
+        "vida",
+        "verdade",
+        "reflexao"
+      ],
+      "canonicalSlug": "think-why-think-we-have-computers-to-do-that-for-us",
+      "relatedKeywords": [
+        "reflexao",
+        "humor",
+        "vida",
+        "verdade",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Think? Why think! We have computers to do that for us.",
+    "autor_original": "Jean Rostand",
+    "autor_slug": "jean-rostand",
+    "categoria": "reflexao",
+    "contextos": [
+      "vida",
+      "verdade"
+    ],
+    "palavras_chave": [
+      "humor",
+      "vida",
+      "verdade",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_c687dbd7fc",
+    "slug": "to-be-adult-is-to-be-alone-etre-adulte-c-est-etre-seul",
+    "texto": "To be adult is to be alone (etre adulte c'est etre seul).",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Citação de Jean Rostand sobre temas ligados a reflexao. “To be adult is to be alone (etre adulte c'est etre seul).” articula reflexao, loneliness, adult em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "loneliness"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "loneliness",
+        "adult",
+        "alone",
+        "adulte"
+      ],
+      "palavrasChave": [
+        "loneliness",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "loneliness",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "loneliness",
+        "adult",
+        "alone",
+        "adulte",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"To be adult is to be alone (etre adulte c'est etre s…\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Citação de Jean Rostand sobre temas ligados a reflexao. “To be adult is to be alone (etre adulte c'est etre seul).” articula reflexao, loneliness, adult em re…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases loneliness",
+        "loneliness",
+        "reflexao"
+      ],
+      "canonicalSlug": "to-be-adult-is-to-be-alone-etre-adulte-c-est-etre-seul",
+      "relatedKeywords": [
+        "reflexao",
+        "loneliness",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "To be adult is to be alone (etre adulte c'est etre seul).",
+    "autor_original": "Jean Rostand",
+    "autor_slug": "jean-rostand",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "loneliness",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_d22d4ab53c",
+    "slug": "never-feel-remorse-for-what-you-have-thought-about-your-wife-she-has-thought-muc",
+    "texto": "Never feel remorse for what you have thought about your wife she has thought much worse things about you.",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Citação de Jean Rostand sobre limites e escolhas conscientes. “Never feel remorse for what you have thought about your wife she has thought much worse things ab…” articula reflexao, wife, thought em registro de reflexao, com relevância para contextos como thought e you.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "wife",
+        "thought",
+        "you"
+      ],
+      "contextos": [
+        "thought",
+        "you"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "reflexao",
+        "wife",
+        "thought",
+        "you",
+        "about",
+        "never",
+        "remorse",
+        "worse"
+      ],
+      "palavrasChave": [
+        "wife",
+        "thought",
+        "you",
+        "reflexao",
+        "determinacao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "wife",
+        "thought",
+        "you",
+        "determinacao",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 36,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "wife",
+        "thought",
+        "you",
+        "about",
+        "never"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Never feel remorse for what you have thought about y…\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Citação de Jean Rostand sobre limites e escolhas conscientes. “Never feel remorse for what you have thought about your wife she has thought much worse things…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases wife",
+        "frases thought",
+        "frases you",
+        "wife",
+        "thought",
+        "you",
+        "reflexao"
+      ],
+      "canonicalSlug": "never-feel-remorse-for-what-you-have-thought-about-your-wife-she-has-thought-muc",
+      "relatedKeywords": [
+        "determinacao",
+        "reflexao",
+        "wife",
+        "thought",
+        "you",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Never feel remorse for what you have thought about your wife she has thought much worse things about you.",
+    "autor_original": "Jean Rostand",
+    "autor_slug": "jean-rostand",
+    "categoria": "reflexao",
+    "contextos": [
+      "thought",
+      "you"
+    ],
+    "palavras_chave": [
+      "wife",
+      "thought",
+      "you",
+      "reflexao",
+      "determinacao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_dc3af5d237",
+    "slug": "the-least-one-can-say-of-power-is-that-a-vocation-for-it-is-suspicious",
+    "texto": "The least one can say of power is that a vocation for it is suspicious.",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Citação de Jean Rostand sobre temas ligados a reflexao. “The least one can say of power is that a vocation for it is suspicious.” articula reflexao, say, vocation em registro de reflexao, com relevância para contextos como vocation e suspicious.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "say",
+        "vocation",
+        "suspicious"
+      ],
+      "contextos": [
+        "vocation",
+        "suspicious"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "say",
+        "vocation",
+        "suspicious",
+        "least",
+        "power"
+      ],
+      "palavrasChave": [
+        "say",
+        "vocation",
+        "suspicious",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "say",
+        "vocation",
+        "suspicious",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "say",
+        "vocation",
+        "suspicious",
+        "least",
+        "power"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The least one can say of power is that a vocation fo…\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Citação de Jean Rostand sobre temas ligados a reflexao. “The least one can say of power is that a vocation for it is suspicious.” articula reflexao, say, voca…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases say",
+        "frases vocation",
+        "frases suspicious",
+        "say",
+        "vocation",
+        "suspicious",
+        "reflexao"
+      ],
+      "canonicalSlug": "the-least-one-can-say-of-power-is-that-a-vocation-for-it-is-suspicious",
+      "relatedKeywords": [
+        "reflexao",
+        "say",
+        "vocation",
+        "suspicious",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The least one can say of power is that a vocation for it is suspicious.",
+    "autor_original": "Jean Rostand",
+    "autor_slug": "jean-rostand",
+    "categoria": "reflexao",
+    "contextos": [
+      "vocation",
+      "suspicious"
+    ],
+    "palavras_chave": [
+      "say",
+      "vocation",
+      "suspicious",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_e43f97b422",
+    "slug": "a-body-of-work-such-as-pasteur-s-is-inconceivable-in-our-time-no-man-would-be-g",
+    "texto": "A body of work such as Pasteur's is inconceivable in our time: no man would be given a chance to create a whole science. Nowadays a path is scarcely opened up when the crowd begins to pour in.",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Citação de Jean Rostand sobre passagem do tempo e prioridades. “A body of work such as Pasteur's is inconceivable in our time: no man would be given a chance to …” articula sucesso, achievement, admiration em registro de sucesso, com relevância para contextos como trabalho e admiration.",
+    "semantica": {
+      "categoriaPrincipal": "sucesso",
+      "categorias": [
+        "sucesso",
+        "achievement",
+        "admiration",
+        "inconceivable",
+        "louis-pasteur"
+      ],
+      "contextos": [
+        "trabalho",
+        "admiration",
+        "inconceivable",
+        "louis-pasteur",
+        "praise"
+      ],
+      "emocoes": [],
+      "temas": [
+        "sucesso",
+        "achievement",
+        "admiration",
+        "inconceivable",
+        "pasteur",
+        "would",
+        "given",
+        "chance"
+      ],
+      "palavrasChave": [
+        "achievement",
+        "admiration",
+        "inconceivable",
+        "louis-pasteur",
+        "praise",
+        "science",
+        "scientist",
+        "sucesso",
+        "trabalho"
+      ],
+      "tagsSeo": [
+        "sucesso",
+        "achievement",
+        "admiration",
+        "inconceivable",
+        "louis-pasteur",
+        "trabalho",
+        "praise",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 53,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "sucesso",
+        "achievement",
+        "admiration",
+        "inconceivable",
+        "pasteur",
+        "would"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A body of work such as Pasteur's is inconceivable in…\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Citação de Jean Rostand sobre passagem do tempo e prioridades. “A body of work such as Pasteur's is inconceivable in our time: no man would be given a chance…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre sucesso",
+        "frases sucesso",
+        "frases achievement",
+        "frases trabalho",
+        "frases admiration",
+        "achievement",
+        "admiration",
+        "inconceivable",
+        "louis-pasteur"
+      ],
+      "canonicalSlug": "a-body-of-work-such-as-pasteur-s-is-inconceivable-in-our-time-no-man-would-be-g",
+      "relatedKeywords": [
+        "sucesso",
+        "achievement",
+        "admiration",
+        "inconceivable",
+        "louis-pasteur",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A body of work such as Pasteur's is inconceivable in our time: no man would be given a chance to create a whole science. Nowadays a path is scarcely opened up when the crowd begins to pour in.",
+    "autor_original": "Jean Rostand",
+    "autor_slug": "jean-rostand",
+    "categoria": "sucesso",
+    "contextos": [
+      "trabalho",
+      "admiration",
+      "inconceivable",
+      "louis-pasteur",
+      "praise"
+    ],
+    "palavras_chave": [
+      "achievement",
+      "admiration",
+      "inconceivable",
+      "louis-pasteur",
+      "praise",
+      "science",
+      "scientist",
+      "sucesso",
+      "trabalho"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_eeae6a5ae2",
+    "slug": "beauty-in-art-is-often-nothing-but-ugliness-subdued",
+    "texto": "Beauty in art is often nothing but ugliness subdued.",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Citação de Jean Rostand sobre temas ligados a reflexao. “Beauty in art is often nothing but ugliness subdued.” articula reflexao, art, nothing em registro de reflexao, com relevância para contextos como nothing e ugliness.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "art",
+        "nothing",
+        "ugliness"
+      ],
+      "contextos": [
+        "nothing",
+        "ugliness"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "art",
+        "nothing",
+        "ugliness",
+        "beauty",
+        "often",
+        "subdued"
+      ],
+      "palavrasChave": [
+        "art",
+        "nothing",
+        "ugliness",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "art",
+        "nothing",
+        "ugliness",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "art",
+        "nothing",
+        "ugliness",
+        "beauty",
+        "often"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Beauty in art is often nothing but ugliness subdued.\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Citação de Jean Rostand sobre temas ligados a reflexao. “Beauty in art is often nothing but ugliness subdued.” articula reflexao, art, nothing em registro de…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases art",
+        "frases nothing",
+        "frases ugliness",
+        "art",
+        "nothing",
+        "ugliness",
+        "reflexao"
+      ],
+      "canonicalSlug": "beauty-in-art-is-often-nothing-but-ugliness-subdued",
+      "relatedKeywords": [
+        "reflexao",
+        "art",
+        "nothing",
+        "ugliness",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Beauty in art is often nothing but ugliness subdued.",
+    "autor_original": "Jean Rostand",
+    "autor_slug": "jean-rostand",
+    "categoria": "reflexao",
+    "contextos": [
+      "nothing",
+      "ugliness"
+    ],
+    "palavras_chave": [
+      "art",
+      "nothing",
+      "ugliness",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_snd8co82w",
+    "slug": "sinto-me-deveras-otimista-quanto-ao-futuro-do-pessimismo",
+    "texto": "Sinto-me deveras otimista quanto ao futuro do pessimismo.",
+    "autor": "Jean Rostand",
+    "autorSlug": "jean-rostand",
+    "explicacao": "Jean Rostand faz humor intelectual sobre o futuro do pessimismo com ironia otimista. O biólogo e ensaísta franceses brinca com a contradição de esperar algo positivo de uma visão negativa do mundo.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sinto",
+        "deveras",
+        "otimista",
+        "quanto",
+        "futuro"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "jean-rostand"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sinto",
+        "deveras",
+        "otimista"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Sinto-me deveras otimista quanto ao futuro do pessim…\" — Jean Rostand | Metamensagem",
+      "descriptionSeo": "Jean Rostand faz humor intelectual sobre o futuro do pessimismo com ironia otimista. O biólogo e ensaísta franceses brinca com a contradição de esperar algo p…",
+      "keywordsSeo": [
+        "frases de Jean Rostand",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "sinto-me-deveras-otimista-quanto-ao-futuro-do-pessimismo",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "jean-rostand"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Sinto-me deveras otimista quanto ao futuro do pessimismo.",
+    "autor_original": "Jean Rostand",
+    "autor_slug": "jean-rostand",
+    "categoria": "motivacao",
+    "contextos": [
+      "inspiracao",
+      "otimismo"
+    ],
+    "palavras_chave": [
+      "inspiracional",
+      "otimismo",
+      "motivacao",
+      "inspiracao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

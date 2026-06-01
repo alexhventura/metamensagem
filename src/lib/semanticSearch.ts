@@ -1,9 +1,7 @@
-import Fuse from 'fuse.js';
-import { safeLower, safeText, safeTags } from './safeContent';
+﻿import { safeLower, safeText, safeTags } from './safeContent';
 import { slugFromTag } from './tagsSeo';
 import { THEME_KEYWORDS } from './tagSemantics';
 
-/** Sinônimos e intenções emocionais para a busca (PT). */
 const SEARCH_SYNONYMS: Record<string, string[]> = {
   amor: ['carinho', 'afeto', 'paixão', 'coração', 'amar'],
   motivacao: ['motivação', 'ânimo', 'inspirar', 'força', 'vontade'],
@@ -26,20 +24,15 @@ const SEARCH_SYNONYMS: Record<string, string[]> = {
   metáfora: ['metafora', 'história', 'parábola'],
 };
 
-/** Expande termos de busca com sinônimos e keywords de tags. */
 export function expandSearchTerms(query: unknown): string[] {
   const q = safeLower(query);
   if (!q) return [];
-
   const terms = new Set<string>([q]);
   const slug = slugFromTag(q);
-
   if (SEARCH_SYNONYMS[q]) SEARCH_SYNONYMS[q].forEach((t) => terms.add(t));
   if (SEARCH_SYNONYMS[slug]) SEARCH_SYNONYMS[slug].forEach((t) => terms.add(t));
-
   const themeKw = THEME_KEYWORDS[slug];
   if (themeKw) themeKw.slice(0, 6).forEach((t) => terms.add(t));
-
   return [...terms].filter((t) => t.length >= 2).slice(0, 12);
 }
 
@@ -55,7 +48,6 @@ export interface SearchableItem {
 export function matchesSemanticSearch(item: SearchableItem, query: unknown): boolean {
   const terms = expandSearchTerms(query);
   if (!terms.length) return true;
-
   const blob = [
     safeText(item.texto),
     safeText(item.titulo),
@@ -68,29 +60,32 @@ export function matchesSemanticSearch(item: SearchableItem, query: unknown): boo
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '');
-
   return terms.some((t) => {
-    const n = t
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '');
+    const n = t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     return blob.includes(n);
   });
 }
 
-/** Busca Fuse + sinônimos/intenção emocional (reutiliza o banco atual). */
 export function searchBancoSemantico<T extends SearchableItem & { id: string }>(
   banco: T[],
-  query: unknown,
-  keys: string[] = ['texto', 'titulo', 'autor', 'tags', 'resumo']
+  query: unknown
 ): T[] {
   const q = safeText(query);
   if (!q) return banco;
+  return banco.filter((item) => matchesSemanticSearch(item, q));
+}
 
+export async function searchBancoSemanticoFuzzy<T extends SearchableItem & { id: string }>(
+  banco: T[],
+  query: unknown,
+  keys: string[] = ['texto', 'titulo', 'autor', 'tags', 'resumo']
+): Promise<T[]> {
+  const q = safeText(query);
+  if (!q) return banco;
+  const { default: Fuse } = await import('fuse.js');
   const fuse = new Fuse(banco, { keys, threshold: 0.38, ignoreLocation: true });
   const ids = new Set<string>();
   const terms = [q, ...expandSearchTerms(q)];
-
   for (const term of terms) {
     fuse.search(term).forEach((r) => ids.add(r.item.id));
   }

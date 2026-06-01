@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_84e610e83f",
+    "slug": "is-thyselves-even-a-word",
+    "texto": "Is thyselves even a word?",
+    "autor": "Emma Harrison",
+    "autorSlug": "emma-harrison",
+    "explicacao": "Pergunta retórica de Emma Harrison que provoca temas ligados a humor. Ao questionar “Is thyselves even a word?”, o texto convida o leitor a revisar crenças sobre humor, magic, thyselves, com foco em magic.",
+    "semantica": {
+      "categoriaPrincipal": "humor",
+      "categorias": [
+        "humor",
+        "magic"
+      ],
+      "contextos": [
+        "magic"
+      ],
+      "emocoes": [],
+      "temas": [
+        "humor",
+        "magic",
+        "thyselves"
+      ],
+      "palavrasChave": [
+        "humor",
+        "magic"
+      ],
+      "tagsSeo": [
+        "humor",
+        "magic",
+        "emma-harrison"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "humor",
+        "magic",
+        "thyselves",
+        "humor",
+        "magic"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Is thyselves even a word?\" — Emma Harrison | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Emma Harrison que provoca temas ligados a humor. Ao questionar “Is thyselves even a word?”, o texto convida o leitor a revisar crenças so…",
+      "keywordsSeo": [
+        "frases de Emma Harrison",
+        "frases sobre humor",
+        "frases humor",
+        "frases magic",
+        "humor",
+        "magic"
+      ],
+      "canonicalSlug": "is-thyselves-even-a-word",
+      "relatedKeywords": [
+        "humor",
+        "magic",
+        "emma-harrison"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Is thyselves even a word?",
+    "autor_original": "Emma Harrison",
+    "autor_slug": "emma-harrison",
+    "categoria": "humor",
+    "contextos": [
+      "magic"
+    ],
+    "palavras_chave": [
+      "humor",
+      "magic"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

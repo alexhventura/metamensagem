@@ -1,12 +1,14 @@
 import { safeText } from './safeContent';
+import { SITE_ORIGIN, absoluteUrl } from '../../lib/seo/url';
+
+export { SITE_ORIGIN, absoluteUrl };
 
 /** Configuração central de SEO (Google, Open Graph, URLs canônicas). */
 
-export const SITE_ORIGIN = 'https://metamensagem.com';
 export const SITE_NAME = 'Metamensagem';
 export const DEFAULT_DESCRIPTION =
   'Frases inspiradoras e metáforas terapêuticas para reflexão, mudança de atitude e compartilhamento. Mente, Mensagem e Mudança.';
-export const OG_IMAGE = `${SITE_ORIGIN}/web-app-manifest-512x512.png`;
+export const OG_IMAGE = absoluteUrl('/web-app-manifest-512x512.png');
 export const GOOGLE_SITE_VERIFICATION = '5274c569177c382e';
 
 export function slugFromTitulo(texto: unknown): string {
@@ -21,8 +23,8 @@ export function slugFromTitulo(texto: unknown): string {
 export function urlMetafora(id: string, titulo?: string): string {
   const slug = titulo ? slugFromTitulo(titulo) : '';
   return slug
-    ? `${SITE_ORIGIN}/metafora/${id}/${slug}`
-    : `${SITE_ORIGIN}/metafora/${id}`;
+    ? absoluteUrl(`/metafora/${id}/${slug}`)
+    : absoluteUrl(`/metafora/${id}`);
 }
 
 export const WEB_SITE_JSON_LD = {
@@ -36,7 +38,7 @@ export const WEB_SITE_JSON_LD = {
     '@type': 'Organization',
     name: SITE_NAME,
     url: SITE_ORIGIN,
-    logo: `${SITE_ORIGIN}/web-app-manifest-512x512.png`,
+    logo: OG_IMAGE,
   },
   potentialAction: {
     '@type': 'SearchAction',

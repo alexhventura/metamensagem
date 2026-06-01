@@ -1,0 +1,97 @@
+[
+  {
+    "id": "f_csv_5aaa993f32",
+    "slug": "the-greater-the-truth-the-greater-the-libel",
+    "texto": "The greater the truth the greater the libel.",
+    "autor": "Lord Ellenborough",
+    "autorSlug": "lord-ellenborough",
+    "explicacao": "Citação de Lord Ellenborough sobre temas ligados a reflexao. “The greater the truth the greater the libel.” articula reflexao, trust, greater em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "trust"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "trust",
+        "greater",
+        "truth",
+        "libel"
+      ],
+      "palavrasChave": [
+        "trust",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "trust",
+        "lord-ellenborough"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "trust",
+        "greater",
+        "truth",
+        "libel",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The greater the truth the greater the libel.\" — Lord Ellenborough | Metamensagem",
+      "descriptionSeo": "Citação de Lord Ellenborough sobre temas ligados a reflexao. “The greater the truth the greater the libel.” articula reflexao, trust, greater em registro de r…",
+      "keywordsSeo": [
+        "frases de Lord Ellenborough",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases trust",
+        "trust",
+        "reflexao"
+      ],
+      "canonicalSlug": "the-greater-the-truth-the-greater-the-libel",
+      "relatedKeywords": [
+        "reflexao",
+        "trust",
+        "lord-ellenborough"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The greater the truth the greater the libel.",
+    "autor_original": "Lord Ellenborough",
+    "autor_slug": "lord-ellenborough",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "trust",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

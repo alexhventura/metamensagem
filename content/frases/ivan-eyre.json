@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_46a3ea2985",
+    "slug": "when-i-look-at-a-painting-it-isn-t-only-the-painting-that-i-see-but-the-thing-th",
+    "texto": "When I look at a painting it isn't only the painting that I see but the thing that I am. If there is more in the painting than I am then I won't see it.",
+    "autor": "Ivan Eyre",
+    "autorSlug": "ivan-eyre",
+    "explicacao": "Citação de Ivan Eyre sobre temas ligados a familia. “When I look at a painting it isn't only the painting that I see but the thing that I am. If there…” articula familia, painters, painting em registro de familia, com relevância para contextos como painting.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "painters",
+        "painting"
+      ],
+      "contextos": [
+        "painting"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "painters",
+        "painting",
+        "thing",
+        "there"
+      ],
+      "palavrasChave": [
+        "painters",
+        "painting",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "painters",
+        "painting",
+        "ivan-eyre"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 39,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "painters",
+        "painting",
+        "thing",
+        "there",
+        "familia"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"When I look at a painting it isn't only the painting…\" — Ivan Eyre | Metamensagem",
+      "descriptionSeo": "Citação de Ivan Eyre sobre temas ligados a familia. “When I look at a painting it isn't only the painting that I see but the thing that I am. If there…” artic…",
+      "keywordsSeo": [
+        "frases de Ivan Eyre",
+        "frases sobre familia",
+        "frases familia",
+        "frases painters",
+        "frases painting",
+        "painters",
+        "painting",
+        "familia"
+      ],
+      "canonicalSlug": "when-i-look-at-a-painting-it-isn-t-only-the-painting-that-i-see-but-the-thing-th",
+      "relatedKeywords": [
+        "familia",
+        "painters",
+        "painting",
+        "ivan-eyre"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "When I look at a painting it isn't only the painting that I see but the thing that I am. If there is more in the painting than I am then I won't see it.",
+    "autor_original": "Ivan Eyre",
+    "autor_slug": "ivan-eyre",
+    "categoria": "familia",
+    "contextos": [
+      "painting"
+    ],
+    "palavras_chave": [
+      "painters",
+      "painting",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

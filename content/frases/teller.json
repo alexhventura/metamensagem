@@ -1,0 +1,118 @@
+[
+  {
+    "id": "f_csv_8ec9255778",
+    "slug": "i-m-more-apt-to-cry-at-something-beautiful-than-at-something-sad",
+    "texto": "I'm more apt to cry at something beautiful than at something sad.",
+    "autor": "Teller",
+    "autorSlug": "teller",
+    "explicacao": "Citação de Teller sobre temas ligados a reflexao. “I'm more apt to cry at something beautiful than at something sad.” articula reflexao, beautiful, cry em registro de reflexao, com relevância para contextos como cry e something.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "beautiful",
+        "cry",
+        "something"
+      ],
+      "contextos": [
+        "cry",
+        "something"
+      ],
+      "emocoes": [
+        "tristeza"
+      ],
+      "temas": [
+        "reflexao",
+        "beautiful",
+        "cry",
+        "something"
+      ],
+      "palavrasChave": [
+        "beautiful",
+        "cry",
+        "something",
+        "reflexao",
+        "tristeza"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "beautiful",
+        "cry",
+        "something",
+        "tristeza",
+        "teller"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "beautiful",
+        "cry",
+        "something",
+        "reflexao",
+        "beautiful"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I'm more apt to cry at something beautiful than at s…\" — Teller | Metamensagem",
+      "descriptionSeo": "Citação de Teller sobre temas ligados a reflexao. “I'm more apt to cry at something beautiful than at something sad.” articula reflexao, beautiful, cry em reg…",
+      "keywordsSeo": [
+        "frases de Teller",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases beautiful",
+        "frases cry",
+        "frases something",
+        "beautiful",
+        "cry",
+        "something",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-m-more-apt-to-cry-at-something-beautiful-than-at-something-sad",
+      "relatedKeywords": [
+        "tristeza",
+        "reflexao",
+        "beautiful",
+        "cry",
+        "something",
+        "teller"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I'm more apt to cry at something beautiful than at something sad.",
+    "autor_original": "Teller",
+    "autor_slug": "teller",
+    "categoria": "reflexao",
+    "contextos": [
+      "cry",
+      "something"
+    ],
+    "palavras_chave": [
+      "beautiful",
+      "cry",
+      "something",
+      "reflexao",
+      "tristeza"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

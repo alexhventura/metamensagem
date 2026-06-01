@@ -1,8 +1,54 @@
-{
+﻿{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "metamensagem.com.br" }],
+      "destination": "https://metamensagem.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.metamensagem.com.br" }],
+      "destination": "https://metamensagem.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.metamensagem.com" }],
+      "destination": "https://metamensagem.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/((?!metaforas/|brand/|favicon|apple-touch-icon|web-app-manifest|site\\.webmanifest|theme-init\\.js|google[0-9a-f]+\\.html|ads\\.txt|robots\\.txt|sitemap\\.xml|frases-index\\.json|metaforas-index\\.json|metaforas\\.json|frases\\.json|assets/).*)",
+      "source": "/((?!metaforas/|brand/|favicon|apple-touch-icon|web-app-manifest|site\\.webmanifest|theme-init\\.js|google[0-9a-f]+\\.html|ads\\.txt|robots\\.txt|sitemap[^/]*\\.xml|frases-index\\.json|metaforas-index\\.json|home-bootstrap\\.json|frases-v2/|seo-graph/|metaforas\\.json|frases\\.json|assets/).*)",
       "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(home-bootstrap\\.json|frases-v2/manifest\\.json|metaforas-index\\.json)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/frases-v2/detail/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, immutable" }
+      ]
+    },
+    {
+      "source": "/seo-graph/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+      ]
     }
   ]
 }

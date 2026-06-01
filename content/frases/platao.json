@@ -2,25 +2,112 @@
   {
     "id": "f_hr9lma4t2",
     "slug": "nao-espere-por-uma-crise-para-descobrir-o-que-e-importante-e",
+    "texto": "Não espere por uma crise para descobrir o que é importante em sua vida.",
+    "autor": "Platão",
+    "autorSlug": "platao",
+    "explicacao": "Atribuída a Platão, em espírito estoico e filosófico. Alerta para não adiar a reflexão sobre o que realmente importa até uma crise forçar escolhas. Convida a definir prioridades antes que circunstâncias extremas decidam por nós.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "espere",
+        "crise",
+        "descobrir",
+        "importante"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "platao"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": "428",
+      "periodoHistorico": "428-348 a.C.",
+      "nacionalidadeAutor": "grego",
+      "nascimentoAutor": "428",
+      "falecimentoAutor": "348",
+      "tipoAutor": "filosofo",
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "espere",
+        "crise",
+        "descobrir"
+      ],
+      "biografiaAutorCurta": "Platão. Filósofo e pensador, com obras sobre ética, política e metafísica."
+    },
+    "seo": {
+      "titleSeo": "\"Não espere por uma crise para descobrir o que é impo…\" — Platão | Metamensagem",
+      "descriptionSeo": "Atribuída a Platão, em espírito estoico e filosófico. Alerta para não adiar a reflexão sobre o que realmente importa até uma crise forçar escolhas. Convida a…",
+      "keywordsSeo": [
+        "frases de Platão",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "nao-espere-por-uma-crise-para-descobrir-o-que-e-importante-e",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "platao"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Não espere por uma crise para descobrir o que é importante em sua vida.",
     "autor_original": "Platão",
-    "categoria": "inspiracional",
+    "autor_slug": "platao",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "reflexao"
     ],
-    "explicacao": "Atribuída a Platão, em espírito estoico e filosófico. Alerta para não adiar a reflexão sobre o que realmente importa até uma crise forçar escolhas. Convida a definir prioridades antes que circunstâncias extremas decidam por nós.",
     "palavras_chave": [
       "inspiracional",
-      "reflexao"
+      "reflexao",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": "428",
     "autor_tipo": "filosofo",
     "nacionalidade": "grego",
     "nascimento_falecimento": "428-348 a.C.",
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

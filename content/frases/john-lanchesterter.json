@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_8ba38827f3",
+    "slug": "it-was-a-rule-of-london-life-that-anybody-could-be-anybody",
+    "texto": "It was a rule of London life that anybody could be anybody",
+    "autor": "John Lanchesterter",
+    "autorSlug": "john-lanchesterter",
+    "explicacao": "Citação de John Lanchesterter sobre sentido da existência e experiência vivida. “It was a rule of London life that anybody could be anybody” articula vida, city, london em registro de vida, com relevância para contextos como vida e london.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "city",
+        "london",
+        "rules"
+      ],
+      "contextos": [
+        "vida",
+        "london",
+        "rules"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "city",
+        "london",
+        "anybody",
+        "could"
+      ],
+      "palavrasChave": [
+        "city",
+        "vida",
+        "london",
+        "rules"
+      ],
+      "tagsSeo": [
+        "vida",
+        "city",
+        "london",
+        "rules",
+        "john-lanchesterter"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "city",
+        "london",
+        "anybody",
+        "could",
+        "vida"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"It was a rule of London life that anybody could be a…\" — John Lanchesterter | Metamensagem",
+      "descriptionSeo": "Citação de John Lanchesterter sobre sentido da existência e experiência vivida. “It was a rule of London life that anybody could be anybody” articula vida, ci…",
+      "keywordsSeo": [
+        "frases de John Lanchesterter",
+        "frases sobre vida",
+        "frases vida",
+        "frases city",
+        "frases london",
+        "city",
+        "vida",
+        "london",
+        "rules"
+      ],
+      "canonicalSlug": "it-was-a-rule-of-london-life-that-anybody-could-be-anybody",
+      "relatedKeywords": [
+        "vida",
+        "city",
+        "london",
+        "rules",
+        "john-lanchesterter"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "It was a rule of London life that anybody could be anybody",
+    "autor_original": "John Lanchesterter",
+    "autor_slug": "john-lanchesterter",
+    "categoria": "vida",
+    "contextos": [
+      "vida",
+      "london",
+      "rules"
+    ],
+    "palavras_chave": [
+      "city",
+      "vida",
+      "london",
+      "rules"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

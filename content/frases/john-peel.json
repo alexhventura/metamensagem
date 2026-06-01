@@ -1,0 +1,98 @@
+[
+  {
+    "id": "f_csv_7071ae9a17",
+    "slug": "i-just-want-to-hear-something-i-haven-t-heard-before",
+    "texto": "I just want to hear something I haven't heard before",
+    "autor": "John Peel",
+    "autorSlug": "john-peel",
+    "explicacao": "Citação de John Peel sobre temas ligados a reflexao. “I just want to hear something I haven't heard before” articula reflexao, music, something em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "music"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "music",
+        "something",
+        "haven",
+        "heard",
+        "before"
+      ],
+      "palavrasChave": [
+        "music",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "music",
+        "john-peel"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "music",
+        "something",
+        "haven",
+        "heard",
+        "before"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I just want to hear something I haven't heard before\" — John Peel | Metamensagem",
+      "descriptionSeo": "Citação de John Peel sobre temas ligados a reflexao. “I just want to hear something I haven't heard before” articula reflexao, music, something em registro de…",
+      "keywordsSeo": [
+        "frases de John Peel",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases music",
+        "music",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-just-want-to-hear-something-i-haven-t-heard-before",
+      "relatedKeywords": [
+        "reflexao",
+        "music",
+        "john-peel"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I just want to hear something I haven't heard before",
+    "autor_original": "John Peel",
+    "autor_slug": "john-peel",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "music",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,4 +1,5 @@
 import {
+  absoluteUrl,
   DEFAULT_DESCRIPTION,
   SITE_NAME,
   SITE_ORIGIN,
@@ -30,7 +31,7 @@ export function pathFromTag(tag: string): string {
 }
 
 export function urlFromTag(tag: string): string {
-  return `${SITE_ORIGIN}${pathFromTag(tag)}`;
+  return absoluteUrl(pathFromTag(tag));
 }
 
 export interface TagRegistryEntry {

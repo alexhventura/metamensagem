@@ -1,0 +1,96 @@
+[
+  {
+    "id": "f_csv_ab49c6bb0d",
+    "slug": "everyone-has-more-choices-than-they-are-made-to-believe",
+    "texto": "Everyone has more choices than they are made to believe.",
+    "autor": "Yesim Sireli",
+    "autorSlug": "yesim-sireli",
+    "explicacao": "Citação de Yesim Sireli sobre temas ligados a vida. “Everyone has more choices than they are made to believe.” articula vida, choices, everyone em registro de vida, com relevância para contextos como vida.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "choices"
+      ],
+      "contextos": [
+        "vida"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "choices",
+        "everyone",
+        "believe"
+      ],
+      "palavrasChave": [
+        "choices",
+        "vida"
+      ],
+      "tagsSeo": [
+        "vida",
+        "choices",
+        "yesim-sireli"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "choices",
+        "everyone",
+        "believe",
+        "vida",
+        "choices"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Everyone has more choices than they are made to beli…\" — Yesim Sireli | Metamensagem",
+      "descriptionSeo": "Citação de Yesim Sireli sobre temas ligados a vida. “Everyone has more choices than they are made to believe.” articula vida, choices, everyone em registro de…",
+      "keywordsSeo": [
+        "frases de Yesim Sireli",
+        "frases sobre vida",
+        "frases vida",
+        "frases choices",
+        "choices",
+        "vida"
+      ],
+      "canonicalSlug": "everyone-has-more-choices-than-they-are-made-to-believe",
+      "relatedKeywords": [
+        "vida",
+        "choices",
+        "yesim-sireli"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Everyone has more choices than they are made to believe.",
+    "autor_original": "Yesim Sireli",
+    "autor_slug": "yesim-sireli",
+    "categoria": "vida",
+    "contextos": [
+      "vida"
+    ],
+    "palavras_chave": [
+      "choices",
+      "vida"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_0332836e89",
+    "slug": "the-difficulty-in-life-is-the-choice",
+    "texto": "The difficulty in life is the choice.",
+    "autor": "George A. Moore",
+    "autorSlug": "george-a-moore",
+    "explicacao": "Citação de George A. Moore sobre sentido da existência e experiência vivida. “The difficulty in life is the choice.” articula reflexao, choice, difficulty em registro de reflexao, com relevância para contextos como difficulty.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "choice",
+        "difficulty"
+      ],
+      "contextos": [
+        "difficulty"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "choice",
+        "difficulty"
+      ],
+      "palavrasChave": [
+        "choice",
+        "difficulty",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "choice",
+        "difficulty",
+        "george-a-moore"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "choice",
+        "difficulty",
+        "reflexao",
+        "choice"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The difficulty in life is the choice.\" — George A. Moore | Metamensagem",
+      "descriptionSeo": "Citação de George A. Moore sobre sentido da existência e experiência vivida. “The difficulty in life is the choice.” articula reflexao, choice, difficulty em…",
+      "keywordsSeo": [
+        "frases de George A. Moore",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases choice",
+        "frases difficulty",
+        "choice",
+        "difficulty",
+        "reflexao"
+      ],
+      "canonicalSlug": "the-difficulty-in-life-is-the-choice",
+      "relatedKeywords": [
+        "reflexao",
+        "choice",
+        "difficulty",
+        "george-a-moore"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The difficulty in life is the choice.",
+    "autor_original": "George A. Moore",
+    "autor_slug": "george-a-moore",
+    "categoria": "reflexao",
+    "contextos": [
+      "difficulty"
+    ],
+    "palavras_chave": [
+      "choice",
+      "difficulty",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

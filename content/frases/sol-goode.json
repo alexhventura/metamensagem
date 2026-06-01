@@ -1,0 +1,126 @@
+[
+  {
+    "id": "f_csv_ea48d9d7ff",
+    "slug": "i-like-strangers-they-say-the-nicest-things",
+    "texto": "I like strangers, they say the nicest things",
+    "autor": "Sol Goode",
+    "autorSlug": "sol-goode",
+    "explicacao": "Metáfora atribuída a Sol Goode: compara elementos do cotidiano para falar de temas ligados a amizade. O trecho “I like strangers, they say the nicest things” usa imagem concreta para lembrar que amizade, friends, vida pedem movimento e interpretação pessoal, em tom de termino e vida.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "friends",
+        "vida",
+        "strangers",
+        "sabedoria"
+      ],
+      "contextos": [
+        "termino",
+        "vida",
+        "strangers",
+        "sabedoria"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "friends",
+        "vida",
+        "strangers",
+        "nicest",
+        "things"
+      ],
+      "palavrasChave": [
+        "friends",
+        "vida",
+        "strangers",
+        "sabedoria",
+        "amizade",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "friends",
+        "vida",
+        "strangers",
+        "sabedoria",
+        "termino",
+        "sol-goode"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "friends",
+        "vida",
+        "strangers",
+        "nicest",
+        "things"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I like strangers, they say the nicest things\" — Sol Goode | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Sol Goode: compara elementos do cotidiano para falar de temas ligados a amizade. O trecho “I like strangers, they say the nicest things”…",
+      "keywordsSeo": [
+        "frases de Sol Goode",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases friends",
+        "frases termino",
+        "frases vida",
+        "friends",
+        "vida",
+        "strangers",
+        "sabedoria"
+      ],
+      "canonicalSlug": "i-like-strangers-they-say-the-nicest-things",
+      "relatedKeywords": [
+        "amizade",
+        "friends",
+        "vida",
+        "strangers",
+        "sabedoria",
+        "sol-goode"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I like strangers, they say the nicest things",
+    "autor_original": "Sol Goode",
+    "autor_slug": "sol-goode",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "vida",
+      "strangers",
+      "sabedoria"
+    ],
+    "palavras_chave": [
+      "friends",
+      "vida",
+      "strangers",
+      "sabedoria",
+      "amizade",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

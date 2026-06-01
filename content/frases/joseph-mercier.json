@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_6692721948",
+    "slug": "giving-is-living",
+    "texto": "Giving is Living",
+    "autor": "Joseph Mercier",
+    "autorSlug": "joseph-mercier",
+    "explicacao": "Citação de Joseph Mercier sobre temas ligados a vida. “Giving is Living” articula vida, chairity, giving em registro de vida, com relevância para contextos como giving.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "chairity",
+        "giving"
+      ],
+      "contextos": [
+        "giving"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "chairity",
+        "giving",
+        "living"
+      ],
+      "palavrasChave": [
+        "chairity",
+        "giving",
+        "vida"
+      ],
+      "tagsSeo": [
+        "vida",
+        "chairity",
+        "giving",
+        "joseph-mercier"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "chairity",
+        "giving",
+        "living",
+        "vida",
+        "chairity"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Giving is Living\" — Joseph Mercier | Metamensagem",
+      "descriptionSeo": "Citação de Joseph Mercier sobre temas ligados a vida. “Giving is Living” articula vida, chairity, giving em registro de vida, com relevância para contextos co…",
+      "keywordsSeo": [
+        "frases de Joseph Mercier",
+        "frases sobre vida",
+        "frases vida",
+        "frases chairity",
+        "frases giving",
+        "chairity",
+        "giving",
+        "vida"
+      ],
+      "canonicalSlug": "giving-is-living",
+      "relatedKeywords": [
+        "vida",
+        "chairity",
+        "giving",
+        "joseph-mercier"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Giving is Living",
+    "autor_original": "Joseph Mercier",
+    "autor_slug": "joseph-mercier",
+    "categoria": "vida",
+    "contextos": [
+      "giving"
+    ],
+    "palavras_chave": [
+      "chairity",
+      "giving",
+      "vida"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

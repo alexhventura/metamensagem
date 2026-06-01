@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_f2be6b3313",
+    "slug": "nobody-knows-the-truffles-i-ve-seen",
+    "texto": "Nobody knows the truffles I've seen.",
+    "autor": "George Lang",
+    "autorSlug": "george-lang",
+    "explicacao": "Citação de George Lang sobre temas ligados a reflexao. “Nobody knows the truffles I've seen.” articula reflexao, chocolate, food em registro de reflexao, com relevância para contextos como food e truffles.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "chocolate",
+        "food",
+        "truffles"
+      ],
+      "contextos": [
+        "food",
+        "truffles"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "chocolate",
+        "food",
+        "truffles",
+        "nobody",
+        "knows"
+      ],
+      "palavrasChave": [
+        "chocolate",
+        "food",
+        "truffles",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "chocolate",
+        "food",
+        "truffles",
+        "george-lang"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "chocolate",
+        "food",
+        "truffles",
+        "nobody",
+        "knows"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Nobody knows the truffles I've seen.\" — George Lang | Metamensagem",
+      "descriptionSeo": "Citação de George Lang sobre temas ligados a reflexao. “Nobody knows the truffles I've seen.” articula reflexao, chocolate, food em registro de reflexao, com…",
+      "keywordsSeo": [
+        "frases de George Lang",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases chocolate",
+        "frases food",
+        "frases truffles",
+        "chocolate",
+        "food",
+        "truffles",
+        "reflexao"
+      ],
+      "canonicalSlug": "nobody-knows-the-truffles-i-ve-seen",
+      "relatedKeywords": [
+        "reflexao",
+        "chocolate",
+        "food",
+        "truffles",
+        "george-lang"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Nobody knows the truffles I've seen.",
+    "autor_original": "George Lang",
+    "autor_slug": "george-lang",
+    "categoria": "reflexao",
+    "contextos": [
+      "food",
+      "truffles"
+    ],
+    "palavras_chave": [
+      "chocolate",
+      "food",
+      "truffles",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,105 @@
+[
+  {
+    "id": "f_csv_e8fa2effc7",
+    "slug": "god-hates-those-who-praise-themselves",
+    "texto": "God hates those who praise themselves.",
+    "autor": "St. Clement",
+    "autorSlug": "st-clement",
+    "explicacao": "Citação de St. Clement sobre temas ligados a fe. “God hates those who praise themselves.” articula fe, self, praise em registro de fe, com relevância para contextos como praise.",
+    "semantica": {
+      "categoriaPrincipal": "fe",
+      "categorias": [
+        "fe",
+        "self",
+        "praise"
+      ],
+      "contextos": [
+        "praise"
+      ],
+      "emocoes": [],
+      "temas": [
+        "fe",
+        "self",
+        "praise",
+        "hates",
+        "those",
+        "themselves"
+      ],
+      "palavrasChave": [
+        "self",
+        "praise",
+        "fe"
+      ],
+      "tagsSeo": [
+        "fe",
+        "self",
+        "praise",
+        "st-clement"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "fe",
+        "self",
+        "praise",
+        "hates",
+        "those",
+        "themselves"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"God hates those who praise themselves.\" — St. Clement | Metamensagem",
+      "descriptionSeo": "Citação de St. Clement sobre temas ligados a fe. “God hates those who praise themselves.” articula fe, self, praise em registro de fe, com relevância para con…",
+      "keywordsSeo": [
+        "frases de St. Clement",
+        "frases sobre fe",
+        "frases fe",
+        "frases self",
+        "frases praise",
+        "self",
+        "praise",
+        "fe"
+      ],
+      "canonicalSlug": "god-hates-those-who-praise-themselves",
+      "relatedKeywords": [
+        "fe",
+        "self",
+        "praise",
+        "st-clement"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "God hates those who praise themselves.",
+    "autor_original": "St. Clement",
+    "autor_slug": "st-clement",
+    "categoria": "fe",
+    "contextos": [
+      "praise"
+    ],
+    "palavras_chave": [
+      "self",
+      "praise",
+      "fe"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

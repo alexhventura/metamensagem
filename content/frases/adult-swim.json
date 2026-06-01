@@ -1,0 +1,115 @@
+[
+  {
+    "id": "f_csv_8af7777fec",
+    "slug": "the-dawn-is-your-enemy",
+    "texto": "The dawn is your enemy.",
+    "autor": "adult swim",
+    "autorSlug": "adult-swim",
+    "explicacao": "Citação de adult swim sobre temas ligados a reflexao. “The dawn is your enemy.” articula reflexao, dawn, night em registro de reflexao, com relevância para contextos como boa-noite e reflexao-noturna.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "dawn",
+        "night"
+      ],
+      "contextos": [
+        "boa-noite",
+        "reflexao-noturna",
+        "night"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "dawn",
+        "night",
+        "enemy"
+      ],
+      "palavrasChave": [
+        "dawn",
+        "night",
+        "reflexao",
+        "boa-noite",
+        "reflexao-noturna"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "dawn",
+        "night",
+        "boa-noite",
+        "reflexao-noturna",
+        "adult-swim"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "dawn",
+        "night",
+        "enemy",
+        "reflexao",
+        "dawn"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The dawn is your enemy.\" — adult swim | Metamensagem",
+      "descriptionSeo": "Citação de adult swim sobre temas ligados a reflexao. “The dawn is your enemy.” articula reflexao, dawn, night em registro de reflexao, com relevância para co…",
+      "keywordsSeo": [
+        "frases de adult swim",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases dawn",
+        "frases boa noite",
+        "frases reflexao noturna",
+        "dawn",
+        "night",
+        "reflexao",
+        "boa-noite"
+      ],
+      "canonicalSlug": "the-dawn-is-your-enemy",
+      "relatedKeywords": [
+        "reflexao",
+        "dawn",
+        "night",
+        "adult-swim"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The dawn is your enemy.",
+    "autor_original": "adult swim",
+    "autor_slug": "adult-swim",
+    "categoria": "reflexao",
+    "contextos": [
+      "boa-noite",
+      "reflexao-noturna",
+      "night"
+    ],
+    "palavras_chave": [
+      "dawn",
+      "night",
+      "reflexao",
+      "boa-noite",
+      "reflexao-noturna"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

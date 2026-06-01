@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f_csv_f73076fd9b",
+    "slug": "michael-is-not-only-my-friend-he-s-my-family",
+    "texto": "Michael is not only my friend, he's my family.",
+    "autor": "Emmanuel Lewis",
+    "autorSlug": "emmanuel-lewis",
+    "explicacao": "Citação de Emmanuel Lewis sobre temas ligados a amizade. “Michael is not only my friend, he's my family.” articula amizade, only, my-friend em registro de amizade, com relevância para contextos como termino e only.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "only",
+        "my-friend"
+      ],
+      "contextos": [
+        "termino",
+        "only",
+        "my-friend"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "only",
+        "my-friend",
+        "michael",
+        "friend",
+        "family"
+      ],
+      "palavrasChave": [
+        "amizade",
+        "only",
+        "my-friend",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "only",
+        "my-friend",
+        "termino",
+        "emmanuel-lewis"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "only",
+        "my-friend",
+        "michael",
+        "friend",
+        "family"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Michael is not only my friend, he's my family.\" — Emmanuel Lewis | Metamensagem",
+      "descriptionSeo": "Citação de Emmanuel Lewis sobre temas ligados a amizade. “Michael is not only my friend, he's my family.” articula amizade, only, my-friend em registro de ami…",
+      "keywordsSeo": [
+        "frases de Emmanuel Lewis",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases only",
+        "frases termino",
+        "amizade",
+        "only",
+        "my-friend",
+        "termino"
+      ],
+      "canonicalSlug": "michael-is-not-only-my-friend-he-s-my-family",
+      "relatedKeywords": [
+        "amizade",
+        "only",
+        "my-friend",
+        "emmanuel-lewis"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Michael is not only my friend, he's my family.",
+    "autor_original": "Emmanuel Lewis",
+    "autor_slug": "emmanuel-lewis",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "only",
+      "my-friend"
+    ],
+    "palavras_chave": [
+      "amizade",
+      "only",
+      "my-friend",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,115 @@
+[
+  {
+    "id": "f_csv_73401206cd",
+    "slug": "every-child-should-be-read-to",
+    "texto": "Every child should be read to.",
+    "autor": "Kim Hansen",
+    "autorSlug": "kim-hansen",
+    "explicacao": "Orientação direta de Kim Hansen sobre temas ligados a familia. A afirmação “Every child should be read to.” funciona como lembrete prático ligado a familia, children-books, kids-books, útil em momentos de kids-books e parenting.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "children-books",
+        "kids-books",
+        "parenting"
+      ],
+      "contextos": [
+        "kids-books",
+        "parenting"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "children-books",
+        "kids-books",
+        "parenting",
+        "every",
+        "child",
+        "should"
+      ],
+      "palavrasChave": [
+        "children-books",
+        "kids-books",
+        "parenting",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "children-books",
+        "kids-books",
+        "parenting",
+        "kim-hansen"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "children-books",
+        "kids-books",
+        "parenting",
+        "every",
+        "child"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Every child should be read to.\" — Kim Hansen | Metamensagem",
+      "descriptionSeo": "Orientação direta de Kim Hansen sobre temas ligados a familia. A afirmação “Every child should be read to.” funciona como lembrete prático ligado a familia, c…",
+      "keywordsSeo": [
+        "frases de Kim Hansen",
+        "frases sobre familia",
+        "frases familia",
+        "frases children books",
+        "frases kids books",
+        "frases parenting",
+        "children-books",
+        "kids-books",
+        "parenting",
+        "familia"
+      ],
+      "canonicalSlug": "every-child-should-be-read-to",
+      "relatedKeywords": [
+        "familia",
+        "children-books",
+        "kids-books",
+        "parenting",
+        "kim-hansen"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Every child should be read to.",
+    "autor_original": "Kim Hansen",
+    "autor_slug": "kim-hansen",
+    "categoria": "familia",
+    "contextos": [
+      "kids-books",
+      "parenting"
+    ],
+    "palavras_chave": [
+      "children-books",
+      "kids-books",
+      "parenting",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

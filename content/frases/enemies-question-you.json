@@ -1,0 +1,111 @@
+[
+  {
+    "id": "f_csv_1ac2485a15",
+    "slug": "friends-ask-you-questions",
+    "texto": "Friends ask you questions",
+    "autor": "enemies question you.",
+    "autorSlug": "enemies-question-you",
+    "explicacao": "Citação de enemies question you. sobre temas ligados a amizade. “Friends ask you questions” articula amizade, criss-jami, healology em registro de amizade, com relevância para contextos como termino e healology.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "criss-jami",
+        "healology"
+      ],
+      "contextos": [
+        "termino",
+        "healology"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "criss-jami",
+        "healology",
+        "friends",
+        "questions"
+      ],
+      "palavrasChave": [
+        "criss-jami",
+        "healology",
+        "amizade",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "criss-jami",
+        "healology",
+        "termino",
+        "enemies-question-you"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "criss-jami",
+        "healology",
+        "friends",
+        "questions",
+        "amizade"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Friends ask you questions\" — enemies question you. | Metamensagem",
+      "descriptionSeo": "Citação de enemies question you. sobre temas ligados a amizade. “Friends ask you questions” articula amizade, criss-jami, healology em registro de amizade, co…",
+      "keywordsSeo": [
+        "frases de enemies question you.",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases criss jami",
+        "frases termino",
+        "frases healology",
+        "criss-jami",
+        "healology",
+        "amizade",
+        "termino"
+      ],
+      "canonicalSlug": "friends-ask-you-questions",
+      "relatedKeywords": [
+        "amizade",
+        "criss-jami",
+        "healology",
+        "enemies-question-you"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Friends ask you questions",
+    "autor_original": "enemies question you.",
+    "autor_slug": "enemies-question-you",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "healology"
+    ],
+    "palavras_chave": [
+      "criss-jami",
+      "healology",
+      "amizade",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "id": "f_csv_89ba0c27c6",
+    "slug": "like-the-sundial-my-paint-box-counts-no-hours-but-sunny-ones",
+    "texto": "Like the sundial, my paint box counts no hours but sunny ones.",
+    "autor": "Arthur Rackham",
+    "autorSlug": "arthur-rackham",
+    "explicacao": "Metáfora atribuída a Arthur Rackham: compara elementos do cotidiano para falar de temas ligados a familia. O trecho “Like the sundial, my paint box counts no hours but sunny ones.” usa imagem concreta para lembrar que familia, art, painting pedem movimento e interpretação pessoal, em tom de painting.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "art",
+        "painting"
+      ],
+      "contextos": [
+        "painting"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "art",
+        "painting",
+        "sundial",
+        "paint",
+        "counts",
+        "hours",
+        "sunny"
+      ],
+      "palavrasChave": [
+        "art",
+        "painting",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "art",
+        "painting",
+        "arthur-rackham"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "art",
+        "painting",
+        "sundial",
+        "paint",
+        "counts"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Like the sundial, my paint box counts no hours but s…\" — Arthur Rackham | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Arthur Rackham: compara elementos do cotidiano para falar de temas ligados a familia. O trecho “Like the sundial, my paint box counts no…",
+      "keywordsSeo": [
+        "frases de Arthur Rackham",
+        "frases sobre familia",
+        "frases familia",
+        "frases art",
+        "frases painting",
+        "art",
+        "painting",
+        "familia"
+      ],
+      "canonicalSlug": "like-the-sundial-my-paint-box-counts-no-hours-but-sunny-ones",
+      "relatedKeywords": [
+        "familia",
+        "art",
+        "painting",
+        "arthur-rackham"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Like the sundial, my paint box counts no hours but sunny ones.",
+    "autor_original": "Arthur Rackham",
+    "autor_slug": "arthur-rackham",
+    "categoria": "familia",
+    "contextos": [
+      "painting"
+    ],
+    "palavras_chave": [
+      "art",
+      "painting",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

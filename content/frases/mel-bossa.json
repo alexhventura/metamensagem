@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f_csv_ffe3b0bfac",
+    "slug": "you-could-cut-all-that",
+    "texto": "You could cut...all that",
+    "autor": "Mel Bossa",
+    "autorSlug": "mel-bossa",
+    "explicacao": "Citação de Mel Bossa sobre temas ligados a amor. “You could cut...all that” articula amor, historical-romance, prisoners em registro de amor, com relevância para contextos como prisoners e queer.",
+    "semantica": {
+      "categoriaPrincipal": "amor",
+      "categorias": [
+        "amor",
+        "historical-romance",
+        "prisoners",
+        "queer"
+      ],
+      "contextos": [
+        "prisoners",
+        "queer"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amor",
+        "historical-romance",
+        "prisoners",
+        "queer",
+        "could"
+      ],
+      "palavrasChave": [
+        "historical-romance",
+        "prisoners",
+        "queer",
+        "amor"
+      ],
+      "tagsSeo": [
+        "amor",
+        "historical-romance",
+        "prisoners",
+        "queer",
+        "mel-bossa"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amor",
+        "historical-romance",
+        "prisoners",
+        "queer",
+        "could",
+        "amor"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"You could cut...all that\" — Mel Bossa | Metamensagem",
+      "descriptionSeo": "Citação de Mel Bossa sobre temas ligados a amor. “You could cut...all that” articula amor, historical-romance, prisoners em registro de amor, com relevância p…",
+      "keywordsSeo": [
+        "frases de Mel Bossa",
+        "frases sobre amor",
+        "frases amor",
+        "frases historical romance",
+        "frases prisoners",
+        "frases queer",
+        "historical-romance",
+        "prisoners",
+        "queer",
+        "amor"
+      ],
+      "canonicalSlug": "you-could-cut-all-that",
+      "relatedKeywords": [
+        "amor",
+        "historical-romance",
+        "prisoners",
+        "queer",
+        "mel-bossa"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "You could cut...all that",
+    "autor_original": "Mel Bossa",
+    "autor_slug": "mel-bossa",
+    "categoria": "amor",
+    "contextos": [
+      "prisoners",
+      "queer"
+    ],
+    "palavras_chave": [
+      "historical-romance",
+      "prisoners",
+      "queer",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

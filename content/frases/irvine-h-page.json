@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_1bf002ffc7",
+    "slug": "i-came-i-saw-i-concurred-2",
+    "texto": "I came I saw I concurred.",
+    "autor": "Irvine H. Page",
+    "autorSlug": "irvine-h-page",
+    "explicacao": "Citação de Irvine H. Page sobre temas ligados a reflexao. “I came I saw I concurred.” articula reflexao, medicine, sickness em registro de reflexao, com relevância para contextos como sickness.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "medicine",
+        "sickness"
+      ],
+      "contextos": [
+        "sickness"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "medicine",
+        "sickness",
+        "concurred"
+      ],
+      "palavrasChave": [
+        "medicine",
+        "sickness",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "medicine",
+        "sickness",
+        "irvine-h-page"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "medicine",
+        "sickness",
+        "concurred",
+        "reflexao",
+        "medicine"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I came I saw I concurred.\" — Irvine H. Page | Metamensagem",
+      "descriptionSeo": "Citação de Irvine H. Page sobre temas ligados a reflexao. “I came I saw I concurred.” articula reflexao, medicine, sickness em registro de reflexao, com relev…",
+      "keywordsSeo": [
+        "frases de Irvine H. Page",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases medicine",
+        "frases sickness",
+        "medicine",
+        "sickness",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-came-i-saw-i-concurred-2",
+      "relatedKeywords": [
+        "reflexao",
+        "medicine",
+        "sickness",
+        "irvine-h-page"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I came I saw I concurred.",
+    "autor_original": "Irvine H. Page",
+    "autor_slug": "irvine-h-page",
+    "categoria": "reflexao",
+    "contextos": [
+      "sickness"
+    ],
+    "palavras_chave": [
+      "medicine",
+      "sickness",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

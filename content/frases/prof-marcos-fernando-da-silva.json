@@ -2,29 +2,124 @@
   {
     "id": "f_1q7m6t8p6",
     "slug": "5-chaves-para-o-sucesso-em-uma-palavra-1-organizacao-2",
+    "texto": "5 chaves para o sucesso em uma palavra! 1 - Organização 2 - Priorização 3 - Determinação 4 - Motivação 5 - Inspiração Todas elas com a mesma sufixação, pois a ação não é se não a direção!",
+    "autor": "Prof. Marcos Fernando da Silva",
+    "autorSlug": "prof-marcos-fernando-da-silva",
+    "explicacao": "Prof. Marcos Fernando da Silva lista cinco qualidades com sufixo -ação: organização, priorização, determinação, motivação e inspiração. O trocadilho final liga todas à ação concreta. É fórmula de produtividade para quem busca sucesso.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "sucesso"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao",
+        "sucesso"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "chaves",
+        "sucesso",
+        "palavra",
+        "organização",
+        "priorização"
+      ],
+      "palavrasChave": [
+        "determinacao",
+        "inspiracional",
+        "motivacao",
+        "sucesso",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "sucesso",
+        "inspiracao",
+        "prof-marcos-fernando-da-silva"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 46,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "chaves",
+        "sucesso",
+        "palavra"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"5 chaves para o sucesso em uma palavra! 1 - Organiza…\" — Prof. Marcos Fernando da Silva | Metamensagem",
+      "descriptionSeo": "Prof. Marcos Fernando da Silva lista cinco qualidades com sufixo -ação: organização, priorização, determinação, motivação e inspiração. O trocadilho final lig…",
+      "keywordsSeo": [
+        "frases de Prof. Marcos Fernando da Silva",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases determinacao",
+        "frases inspiracao",
+        "frases inspiracional",
+        "determinacao",
+        "inspiracional",
+        "motivacao",
+        "sucesso"
+      ],
+      "canonicalSlug": "5-chaves-para-o-sucesso-em-uma-palavra-1-organizacao-2",
+      "relatedKeywords": [
+        "determinacao",
+        "motivacao",
+        "inspiracional",
+        "sucesso",
+        "prof-marcos-fernando-da-silva"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "5 chaves para o sucesso em uma palavra! 1 - Organização 2 - Priorização 3 - Determinação 4 - Motivação 5 - Inspiração Todas elas com a mesma sufixação, pois a ação não é se não a direção!",
     "autor_original": "Prof. Marcos Fernando da Silva",
-    "categoria": "determinacao",
+    "autor_slug": "prof-marcos-fernando-da-silva",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao",
       "sucesso"
     ],
-    "explicacao": "Prof. Marcos Fernando da Silva lista cinco qualidades com sufixo -ação: organização, priorização, determinação, motivação e inspiração. O trocadilho final liga todas à ação concreta. É fórmula de produtividade para quem busca sucesso.",
     "palavras_chave": [
       "determinacao",
       "inspiracional",
       "motivacao",
-      "sucesso"
+      "sucesso",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

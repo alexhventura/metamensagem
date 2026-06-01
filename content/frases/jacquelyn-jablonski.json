@@ -1,0 +1,118 @@
+[
+  {
+    "id": "f_csv_fe464d8ca3",
+    "slug": "i-love-mexican-food-and-there-s-a-really-good-restaurant-called-el-parador-that",
+    "texto": "I love Mexican food, and there's a really good restaurant called El Parador that I love.",
+    "autor": "Jacquelyn Jablonski",
+    "autorSlug": "jacquelyn-jablonski",
+    "explicacao": "Citação de Jacquelyn Jablonski sobre vínculos afetivos e cuidado mútuo. “I love Mexican food, and there's a really good restaurant called El Parador that I love.” articula amor, love, good em registro de amor, com relevância para contextos como good e restaurant.",
+    "semantica": {
+      "categoriaPrincipal": "amor",
+      "categorias": [
+        "amor",
+        "love",
+        "good",
+        "restaurant"
+      ],
+      "contextos": [
+        "good",
+        "restaurant"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "amor",
+        "love",
+        "good",
+        "restaurant",
+        "mexican",
+        "there",
+        "really",
+        "called"
+      ],
+      "palavrasChave": [
+        "love",
+        "good",
+        "restaurant",
+        "amor"
+      ],
+      "tagsSeo": [
+        "amor",
+        "love",
+        "good",
+        "restaurant",
+        "jacquelyn-jablonski"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amor",
+        "love",
+        "good",
+        "restaurant",
+        "mexican",
+        "there"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I love Mexican food, and there's a really good resta…\" — Jacquelyn Jablonski | Metamensagem",
+      "descriptionSeo": "Citação de Jacquelyn Jablonski sobre vínculos afetivos e cuidado mútuo. “I love Mexican food, and there's a really good restaurant called El Parador that I lo…",
+      "keywordsSeo": [
+        "frases de Jacquelyn Jablonski",
+        "frases sobre amor",
+        "frases amor",
+        "frases love",
+        "frases good",
+        "frases restaurant",
+        "love",
+        "good",
+        "restaurant",
+        "amor"
+      ],
+      "canonicalSlug": "i-love-mexican-food-and-there-s-a-really-good-restaurant-called-el-parador-that",
+      "relatedKeywords": [
+        "amor",
+        "love",
+        "good",
+        "restaurant",
+        "jacquelyn-jablonski"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I love Mexican food, and there's a really good restaurant called El Parador that I love.",
+    "autor_original": "Jacquelyn Jablonski",
+    "autor_slug": "jacquelyn-jablonski",
+    "categoria": "amor",
+    "contextos": [
+      "good",
+      "restaurant"
+    ],
+    "palavras_chave": [
+      "love",
+      "good",
+      "restaurant",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "id": "f_csv_8c3b8ab500",
+    "slug": "will-you-be-the-one-reading-the-book-or-writing-the-book",
+    "texto": "will you be the one reading the book or writing the book",
+    "autor": "Abe",
+    "autorSlug": "abe",
+    "explicacao": "Citação de Abe sobre temas ligados a reflexao. “will you be the one reading the book or writing the book” articula reflexao, ego, reading em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "ego"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "ego",
+        "reading",
+        "writing"
+      ],
+      "palavrasChave": [
+        "ego",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "ego",
+        "abe"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "ego",
+        "reading",
+        "writing",
+        "reflexao",
+        "ego"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"will you be the one reading the book or writing the …\" — Abe | Metamensagem",
+      "descriptionSeo": "Citação de Abe sobre temas ligados a reflexao. “will you be the one reading the book or writing the book” articula reflexao, ego, reading em registro de refle…",
+      "keywordsSeo": [
+        "frases de Abe",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases ego",
+        "ego",
+        "reflexao"
+      ],
+      "canonicalSlug": "will-you-be-the-one-reading-the-book-or-writing-the-book",
+      "relatedKeywords": [
+        "reflexao",
+        "ego",
+        "abe"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "will you be the one reading the book or writing the book",
+    "autor_original": "Abe",
+    "autor_slug": "abe",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "ego",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

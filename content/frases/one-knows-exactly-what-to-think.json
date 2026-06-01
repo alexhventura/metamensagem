@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_d6284110d9",
+    "slug": "i-beg-your-pardon",
+    "texto": "I beg your pardon",
+    "autor": "one knows exactly what to think.",
+    "autorSlug": "one-knows-exactly-what-to-think",
+    "explicacao": "Citação de one knows exactly what to think. sobre temas ligados a reflexao. “I beg your pardon” articula reflexao, jane-austen, pride-and-prejudice em registro de reflexao, com relevância para contextos como pride-and-prejudice.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "jane-austen",
+        "pride-and-prejudice"
+      ],
+      "contextos": [
+        "pride-and-prejudice"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "jane-austen",
+        "pride-and-prejudice",
+        "pardon"
+      ],
+      "palavrasChave": [
+        "jane-austen",
+        "pride-and-prejudice",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "jane-austen",
+        "pride-and-prejudice",
+        "one-knows-exactly-what-to-think"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "jane-austen",
+        "pride-and-prejudice",
+        "pardon",
+        "reflexao",
+        "jane-austen"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I beg your pardon\" — one knows exactly what to think. | Metamensagem",
+      "descriptionSeo": "Citação de one knows exactly what to think. sobre temas ligados a reflexao. “I beg your pardon” articula reflexao, jane-austen, pride-and-prejudice em registr…",
+      "keywordsSeo": [
+        "frases de one knows exactly what to think.",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases jane austen",
+        "frases pride and prejudice",
+        "jane-austen",
+        "pride-and-prejudice",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-beg-your-pardon",
+      "relatedKeywords": [
+        "reflexao",
+        "jane-austen",
+        "pride-and-prejudice",
+        "one-knows-exactly-what-to-think"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I beg your pardon",
+    "autor_original": "one knows exactly what to think.",
+    "autor_slug": "one-knows-exactly-what-to-think",
+    "categoria": "reflexao",
+    "contextos": [
+      "pride-and-prejudice"
+    ],
+    "palavras_chave": [
+      "jane-austen",
+      "pride-and-prejudice",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

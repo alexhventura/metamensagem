@@ -1,0 +1,125 @@
+[
+  {
+    "id": "f_csv_525545a111",
+    "slug": "put-your-body-first",
+    "texto": "Put your Body First!",
+    "autor": "Catherine Piot",
+    "autorSlug": "catherine-piot",
+    "explicacao": "Citação de Catherine Piot sobre temas ligados a reflexao. “Put your Body First!” articula reflexao, fitness, health em registro de reflexao, com relevância para contextos como academia e health.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "fitness",
+        "health",
+        "nutrition",
+        "sport"
+      ],
+      "contextos": [
+        "academia",
+        "health",
+        "nutrition",
+        "sport"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "fitness",
+        "health",
+        "nutrition",
+        "first"
+      ],
+      "palavrasChave": [
+        "fitness",
+        "health",
+        "nutrition",
+        "sport",
+        "reflexao",
+        "academia"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "fitness",
+        "health",
+        "nutrition",
+        "sport",
+        "academia",
+        "catherine-piot"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "fitness",
+        "health",
+        "nutrition",
+        "first",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Put your Body First!\" — Catherine Piot | Metamensagem",
+      "descriptionSeo": "Citação de Catherine Piot sobre temas ligados a reflexao. “Put your Body First!” articula reflexao, fitness, health em registro de reflexao, com relevância pa…",
+      "keywordsSeo": [
+        "frases de Catherine Piot",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases fitness",
+        "frases academia",
+        "frases health",
+        "fitness",
+        "health",
+        "nutrition",
+        "sport"
+      ],
+      "canonicalSlug": "put-your-body-first",
+      "relatedKeywords": [
+        "reflexao",
+        "fitness",
+        "health",
+        "nutrition",
+        "sport",
+        "catherine-piot"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Put your Body First!",
+    "autor_original": "Catherine Piot",
+    "autor_slug": "catherine-piot",
+    "categoria": "reflexao",
+    "contextos": [
+      "academia",
+      "health",
+      "nutrition",
+      "sport"
+    ],
+    "palavras_chave": [
+      "fitness",
+      "health",
+      "nutrition",
+      "sport",
+      "reflexao",
+      "academia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

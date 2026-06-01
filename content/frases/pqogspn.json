@@ -2,25 +2,113 @@
   {
     "id": "f_a0lx2in34",
     "slug": "quase-sempre-me-frustro-com-as-minhas-expectativas-por-isso",
+    "texto": "Quase sempre me frustro com as minhas expectativas, por isso prefiro não ser tão otimista na maior parte do tempo.",
+    "autor": "PQOGSPN!",
+    "autorSlug": "pqogspn",
+    "explicacao": "Texto atribuído a PQOGSPN!, provavelmente de perfil ou blog pessoal. A autora admite que expectativas altas geram frustração e prefere moderar o otimismo. É uma reflexão honesta sobre proteger-se emocionalmente sem perder esperança.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "quase",
+        "sempre",
+        "frustro",
+        "minhas",
+        "expectativas"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "pqogspn"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 35,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "quase",
+        "sempre",
+        "frustro"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Quase sempre me frustro com as minhas expectativas, …\" — PQOGSPN! | Metamensagem",
+      "descriptionSeo": "Texto atribuído a PQOGSPN!, provavelmente de perfil ou blog pessoal. A autora admite que expectativas altas geram frustração e prefere moderar o otimismo. É u…",
+      "keywordsSeo": [
+        "frases de PQOGSPN!",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "quase-sempre-me-frustro-com-as-minhas-expectativas-por-isso",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "pqogspn"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Quase sempre me frustro com as minhas expectativas, por isso prefiro não ser tão otimista na maior parte do tempo.",
     "autor_original": "PQOGSPN!",
-    "categoria": "inspiracional",
+    "autor_slug": "pqogspn",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Texto atribuído a PQOGSPN!, provavelmente de perfil ou blog pessoal. A autora admite que expectativas altas geram frustração e prefere moderar o otimismo. É uma reflexão honesta sobre proteger-se emocionalmente sem perder esperança.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

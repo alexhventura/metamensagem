@@ -1,0 +1,106 @@
+[
+  {
+    "id": "f_csv_5ee6b359b3",
+    "slug": "remember-light-and-shadow-never-stand-still",
+    "texto": "Remember, light and shadow never stand still.",
+    "autor": "Benjamin West",
+    "autorSlug": "benjamin-west",
+    "explicacao": "Citação de Benjamin West sobre limites e escolhas conscientes. “Remember, light and shadow never stand still.” articula vida, art, remember em registro de vida, com relevância para contextos como vida.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "art"
+      ],
+      "contextos": [
+        "vida"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "vida",
+        "art",
+        "remember",
+        "light",
+        "shadow",
+        "never",
+        "stand"
+      ],
+      "palavrasChave": [
+        "art",
+        "vida",
+        "determinacao"
+      ],
+      "tagsSeo": [
+        "vida",
+        "art",
+        "determinacao",
+        "benjamin-west"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "art",
+        "remember",
+        "light",
+        "shadow",
+        "never"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Remember, light and shadow never stand still.\" — Benjamin West | Metamensagem",
+      "descriptionSeo": "Citação de Benjamin West sobre limites e escolhas conscientes. “Remember, light and shadow never stand still.” articula vida, art, remember em registro de vid…",
+      "keywordsSeo": [
+        "frases de Benjamin West",
+        "frases sobre vida",
+        "frases vida",
+        "frases art",
+        "art",
+        "vida",
+        "determinacao"
+      ],
+      "canonicalSlug": "remember-light-and-shadow-never-stand-still",
+      "relatedKeywords": [
+        "determinacao",
+        "vida",
+        "art",
+        "benjamin-west"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Remember, light and shadow never stand still.",
+    "autor_original": "Benjamin West",
+    "autor_slug": "benjamin-west",
+    "categoria": "vida",
+    "contextos": [
+      "vida"
+    ],
+    "palavras_chave": [
+      "art",
+      "vida",
+      "determinacao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

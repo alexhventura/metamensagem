@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_124d5b2fd0",
+    "slug": "not-today-not-tomorrow",
+    "texto": "....not today, not tomorrow....",
+    "autor": "The Walking Dead",
+    "autorSlug": "the-walking-dead",
+    "explicacao": "Citação de The Walking Dead sobre temas ligados a tempo. “....not today, not tomorrow....” articula tempo, comic, survival em registro de tempo, com relevância para contextos como survival.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "comic",
+        "survival"
+      ],
+      "contextos": [
+        "survival"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "comic",
+        "survival",
+        "today",
+        "tomorrow"
+      ],
+      "palavrasChave": [
+        "comic",
+        "survival",
+        "tempo"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "comic",
+        "survival",
+        "the-walking-dead"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "comic",
+        "survival",
+        "today",
+        "tomorrow",
+        "tempo"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"....not today, not tomorrow....\" — The Walking Dead | Metamensagem",
+      "descriptionSeo": "Citação de The Walking Dead sobre temas ligados a tempo. “....not today, not tomorrow....” articula tempo, comic, survival em registro de tempo, com relevânci…",
+      "keywordsSeo": [
+        "frases de The Walking Dead",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases comic",
+        "frases survival",
+        "comic",
+        "survival",
+        "tempo"
+      ],
+      "canonicalSlug": "not-today-not-tomorrow",
+      "relatedKeywords": [
+        "tempo",
+        "comic",
+        "survival",
+        "the-walking-dead"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "....not today, not tomorrow....",
+    "autor_original": "The Walking Dead",
+    "autor_slug": "the-walking-dead",
+    "categoria": "tempo",
+    "contextos": [
+      "survival"
+    ],
+    "palavras_chave": [
+      "comic",
+      "survival",
+      "tempo"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

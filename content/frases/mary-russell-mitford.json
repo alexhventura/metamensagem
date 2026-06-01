@@ -1,0 +1,111 @@
+[
+  {
+    "id": "f_csv_9f8fdc2a48",
+    "slug": "friendship-is-the-bread-of-the-heart",
+    "texto": "Friendship is the bread of the heart.",
+    "autor": "Mary Russell Mitford",
+    "autorSlug": "mary-russell-mitford",
+    "explicacao": "Citação de Mary Russell Mitford sobre vínculos afetivos e cuidado mútuo. “Friendship is the bread of the heart.” articula amizade, reflexao, friendship em registro de amizade, com relevância para contextos como termino e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "reflexao"
+      ],
+      "contextos": [
+        "termino",
+        "reflexao"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "amizade",
+        "reflexao",
+        "friendship",
+        "bread",
+        "heart"
+      ],
+      "palavrasChave": [
+        "amizade",
+        "reflexao",
+        "termino",
+        "amor"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "reflexao",
+        "termino",
+        "amor",
+        "mary-russell-mitford"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "reflexao",
+        "friendship",
+        "bread",
+        "heart",
+        "amizade"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Friendship is the bread of the heart.\" — Mary Russell Mitford | Metamensagem",
+      "descriptionSeo": "Citação de Mary Russell Mitford sobre vínculos afetivos e cuidado mútuo. “Friendship is the bread of the heart.” articula amizade, reflexao, friendship em reg…",
+      "keywordsSeo": [
+        "frases de Mary Russell Mitford",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases reflexao",
+        "frases termino",
+        "amizade",
+        "reflexao",
+        "termino",
+        "amor"
+      ],
+      "canonicalSlug": "friendship-is-the-bread-of-the-heart",
+      "relatedKeywords": [
+        "amor",
+        "amizade",
+        "reflexao",
+        "mary-russell-mitford"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Friendship is the bread of the heart.",
+    "autor_original": "Mary Russell Mitford",
+    "autor_slug": "mary-russell-mitford",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "amizade",
+      "reflexao",
+      "termino",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

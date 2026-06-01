@@ -2,25 +2,113 @@
   {
     "id": "f_i63faytv7",
     "slug": "uma-pessimista-uma-otimista-nenhuma-das-alternativas-uma",
+    "texto": "“Uma pessimista? Uma otimista? Nenhuma das alternativas. Uma idiota.”",
+    "autor": "Os 13 Porquês",
+    "autorSlug": "os-13-porques",
+    "explicacao": "Diálogo de “Os 13 Porquês” (série/livro): rejeita rótulos de pessimista ou otimista como simplificações. Tom crítico e amargo sobre romantização da dor adolescente. Contexto: debate sobre saúde mental e narrativas fáceis.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "pessimista",
+        "otimista",
+        "nenhuma",
+        "alternativas",
+        "idiota"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "os-13-porques"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "pessimista",
+        "otimista",
+        "nenhuma"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"“Uma pessimista? Uma otimista? Nenhuma das alternati…\" — Os 13 Porquês | Metamensagem",
+      "descriptionSeo": "Diálogo de “Os 13 Porquês” (série/livro): rejeita rótulos de pessimista ou otimista como simplificações. Tom crítico e amargo sobre romantização da dor adoles…",
+      "keywordsSeo": [
+        "frases de Os 13 Porquês",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "uma-pessimista-uma-otimista-nenhuma-das-alternativas-uma",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "os-13-porques"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "“Uma pessimista? Uma otimista? Nenhuma das alternativas. Uma idiota.”",
     "autor_original": "Os 13 Porquês",
-    "categoria": "inspiracional",
+    "autor_slug": "os-13-porques",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Diálogo de “Os 13 Porquês” (série/livro): rejeita rótulos de pessimista ou otimista como simplificações. Tom crítico e amargo sobre romantização da dor adolescente. Contexto: debate sobre saúde mental e narrativas fáceis.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

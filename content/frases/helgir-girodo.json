@@ -2,33 +2,140 @@
   {
     "id": "f_1d8z24mnn",
     "slug": "ponha-motivacao-musica-determinacao-fe-coragem-e-alegria",
+    "texto": "Ponha motivação, música, determinação, fé, coragem e alegria em sua vida e você fará dez vezes mais atividades que nunca fez antes.",
+    "autor": "Helgir Girodo",
+    "autorSlug": "helgir-girodo",
+    "explicacao": "Helgir Girodo lista ingredientes — motivação, fé, coragem — para multiplicar a produtividade. Mensagem motivacional brasileira no estilo receita-prática para transformar a rotina diária.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "coragem",
+        "determinacao",
+        "fe",
+        "felicidade"
+      ],
+      "contextos": [
+        "inspiracao",
+        "determinacao",
+        "fe",
+        "felicidade",
+        "inspiracional"
+      ],
+      "emocoes": [
+        "alegria",
+        "coragem",
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "coragem",
+        "determinacao",
+        "fe",
+        "ponha",
+        "motivação",
+        "música",
+        "determinação"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "determinacao",
+        "fe",
+        "felicidade",
+        "inspiracional",
+        "motivacao",
+        "inspiracao",
+        "alegria"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "coragem",
+        "determinacao",
+        "fe",
+        "felicidade",
+        "inspiracao",
+        "inspiracional",
+        "alegria",
+        "helgir-girodo"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 45,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "coragem",
+        "determinacao",
+        "fe",
+        "ponha",
+        "motivação"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Ponha motivação, música, determinação, fé, coragem e…\" — Helgir Girodo | Metamensagem",
+      "descriptionSeo": "Helgir Girodo lista ingredientes — motivação, fé, coragem — para multiplicar a produtividade. Mensagem motivacional brasileira no estilo receita-prática para…",
+      "keywordsSeo": [
+        "frases de Helgir Girodo",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases coragem",
+        "frases inspiracao",
+        "frases determinacao",
+        "coragem",
+        "determinacao",
+        "fe",
+        "felicidade"
+      ],
+      "canonicalSlug": "ponha-motivacao-musica-determinacao-fe-coragem-e-alegria",
+      "relatedKeywords": [
+        "alegria",
+        "coragem",
+        "determinacao",
+        "motivacao",
+        "fe",
+        "felicidade",
+        "helgir-girodo"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Ponha motivação, música, determinação, fé, coragem e alegria em sua vida e você fará dez vezes mais atividades que nunca fez antes.",
     "autor_original": "Helgir Girodo",
-    "categoria": "coragem",
+    "autor_slug": "helgir-girodo",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "determinacao",
       "fe",
       "felicidade",
-      "inspiracional",
-      "motivacao"
+      "inspiracional"
     ],
-    "explicacao": "Helgir Girodo lista ingredientes — motivação, fé, coragem — para multiplicar a produtividade. Mensagem motivacional brasileira no estilo receita-prática para transformar a rotina diária.",
     "palavras_chave": [
       "coragem",
       "determinacao",
       "fe",
       "felicidade",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao",
+      "alegria"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "f_csv_41e5b19472",
+    "slug": "i-waited-for-something-something-died-so-i-waited-for-nothing-nothing-arrived",
+    "texto": "I waited for something,something died.So I waited for nothing,Nothing arrived.",
+    "autor": "Villagers",
+    "autorSlug": "villagers",
+    "explicacao": "Citação de Villagers sobre temas ligados a vida. “I waited for something,something died.So I waited for nothing,Nothing arrived.” articula vida, music, waited em registro de vida, com relevância para contextos como music.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "music"
+      ],
+      "contextos": [
+        "music"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "music",
+        "waited",
+        "something",
+        "nothing",
+        "arrived"
+      ],
+      "palavrasChave": [
+        "vida",
+        "music"
+      ],
+      "tagsSeo": [
+        "vida",
+        "music",
+        "villagers"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "music",
+        "waited",
+        "something",
+        "nothing",
+        "arrived"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I waited for something,something died.So I waited fo…\" — Villagers | Metamensagem",
+      "descriptionSeo": "Citação de Villagers sobre temas ligados a vida. “I waited for something,something died.So I waited for nothing,Nothing arrived.” articula vida, music, waited…",
+      "keywordsSeo": [
+        "frases de Villagers",
+        "frases sobre vida",
+        "frases vida",
+        "frases music",
+        "vida",
+        "music"
+      ],
+      "canonicalSlug": "i-waited-for-something-something-died-so-i-waited-for-nothing-nothing-arrived",
+      "relatedKeywords": [
+        "vida",
+        "music",
+        "villagers"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I waited for something,something died.So I waited for nothing,Nothing arrived.",
+    "autor_original": "Villagers",
+    "autor_slug": "villagers",
+    "categoria": "vida",
+    "contextos": [
+      "music"
+    ],
+    "palavras_chave": [
+      "vida",
+      "music"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

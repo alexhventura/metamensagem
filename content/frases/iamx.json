@@ -1,0 +1,105 @@
+[
+  {
+    "id": "f_csv_8215d3f5fe",
+    "slug": "my-secret-friend-oh-take-me-to-the-river-my-secret-friend-so-we-can-swim-foreve",
+    "texto": "My secret friend,Oh, take me to the river.My secret friend,So we can swim forever.",
+    "autor": "İamx",
+    "autorSlug": "iamx",
+    "explicacao": "Citação de İamx sobre temas ligados a amizade. “My secret friend,Oh, take me to the river.My secret friend,So we can swim forever.” articula amizade, lonely, secret em registro de amizade, com relevância para contextos como termino e lonely.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "lonely"
+      ],
+      "contextos": [
+        "termino",
+        "lonely"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "lonely",
+        "secret",
+        "friend",
+        "river",
+        "forever"
+      ],
+      "palavrasChave": [
+        "amizade",
+        "lonely",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "lonely",
+        "termino",
+        "iamx"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "lonely",
+        "secret",
+        "friend",
+        "river",
+        "forever"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My secret friend,Oh, take me to the river.My secret …\" — İamx | Metamensagem",
+      "descriptionSeo": "Citação de İamx sobre temas ligados a amizade. “My secret friend,Oh, take me to the river.My secret friend,So we can swim forever.” articula amizade, lonely,…",
+      "keywordsSeo": [
+        "frases de İamx",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases lonely",
+        "frases termino",
+        "amizade",
+        "lonely",
+        "termino"
+      ],
+      "canonicalSlug": "my-secret-friend-oh-take-me-to-the-river-my-secret-friend-so-we-can-swim-foreve",
+      "relatedKeywords": [
+        "amizade",
+        "lonely",
+        "iamx"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My secret friend,Oh, take me to the river.My secret friend,So we can swim forever.",
+    "autor_original": "İamx",
+    "autor_slug": "iamx",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "lonely"
+    ],
+    "palavras_chave": [
+      "amizade",
+      "lonely",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

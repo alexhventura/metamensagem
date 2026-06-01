@@ -2,25 +2,119 @@
   {
     "id": "f_vfmv7d530",
     "slug": "ser-otimista-e-bom-mas-corre-se-um-grande-risco-de-viver-de",
+    "texto": "Ser otimista é bom, mas corre-se um grande risco de viver decepcionado. Ser pessimista é ruim e o risco é ainda maior de não se viver nada. Ser realista é ótimo porque se encara os fatos e vive-se a esperança de melhorá-los.",
+    "autor": "Jader Medeiros",
+    "autorSlug": "jader-medeiros",
+    "explicacao": "Jader Medeiros compara riscos do otimismo, pessimismo e realismo na vida. Defende o equilíbrio: encarar fatos com lucidez, mas manter esperança de transformá-los — evitando ilusão e paralisia.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [
+        "esperanca"
+      ],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "risco",
+        "viver",
+        "otimista",
+        "corre",
+        "grande"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao",
+        "esperanca"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "esperanca",
+        "jader-medeiros"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 46,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "risco",
+        "viver",
+        "otimista"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Ser otimista é bom, mas corre-se um grande risco de …\" — Jader Medeiros | Metamensagem",
+      "descriptionSeo": "Jader Medeiros compara riscos do otimismo, pessimismo e realismo na vida. Defende o equilíbrio: encarar fatos com lucidez, mas manter esperança de transformá-…",
+      "keywordsSeo": [
+        "frases de Jader Medeiros",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "ser-otimista-e-bom-mas-corre-se-um-grande-risco-de-viver-de",
+      "relatedKeywords": [
+        "esperanca",
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "jader-medeiros"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Ser otimista é bom, mas corre-se um grande risco de viver decepcionado. Ser pessimista é ruim e o risco é ainda maior de não se viver nada. Ser realista é ótimo porque se encara os fatos e vive-se a esperança de melhorá-los.",
     "autor_original": "Jader Medeiros",
-    "categoria": "inspiracional",
+    "autor_slug": "jader-medeiros",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Jader Medeiros compara riscos do otimismo, pessimismo e realismo na vida. Defende o equilíbrio: encarar fatos com lucidez, mas manter esperança de transformá-los — evitando ilusão e paralisia.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao",
+      "esperanca"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

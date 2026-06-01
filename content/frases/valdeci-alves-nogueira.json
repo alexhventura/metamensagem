@@ -2,27 +2,127 @@
   {
     "id": "f_7tozampkc",
     "slug": "uma-pessoa-alegre-e-otimista-e-como-um-casamento-feliz-ning",
+    "texto": "Uma pessoa alegre e otimista é como um casamento feliz; ninguém deseja a separação.",
+    "autor": "Valdeci Alves Nogueira",
+    "autorSlug": "valdeci-alves-nogueira",
+    "explicacao": "Valdeci Alves Nogueira compara pessoa alegre e otimista a casamento feliz: ninguém quer separação. Otimismo atrai e retém convivência. Metáfora sobre magnetismo social da positividade.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "casamento",
+        "inspiracao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "emocoes": [
+        "felicidade"
+      ],
+      "temas": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "pessoa",
+        "alegre",
+        "otimista",
+        "casamento"
+      ],
+      "palavrasChave": [
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "casamento",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "casamento",
+        "inspiracao",
+        "valdeci-alves-nogueira"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "pessoa",
+        "alegre"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Uma pessoa alegre e otimista é como um casamento fel…\" — Valdeci Alves Nogueira | Metamensagem",
+      "descriptionSeo": "Valdeci Alves Nogueira compara pessoa alegre e otimista a casamento feliz: ninguém quer separação. Otimismo atrai e retém convivência. Metáfora sobre magnetis…",
+      "keywordsSeo": [
+        "frases de Valdeci Alves Nogueira",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases felicidade",
+        "frases casamento",
+        "frases inspiracao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "motivacao"
+      ],
+      "canonicalSlug": "uma-pessoa-alegre-e-otimista-e-como-um-casamento-feliz-ning",
+      "relatedKeywords": [
+        "felicidade",
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "valdeci-alves-nogueira"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Uma pessoa alegre e otimista é como um casamento feliz; ninguém deseja a separação.",
     "autor_original": "Valdeci Alves Nogueira",
-    "categoria": "felicidade",
+    "autor_slug": "valdeci-alves-nogueira",
+    "categoria": "motivacao",
     "contextos": [
+      "casamento",
+      "inspiracao",
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "Valdeci Alves Nogueira compara pessoa alegre e otimista a casamento feliz: ninguém quer separação. Otimismo atrai e retém convivência. Metáfora sobre magnetismo social da positividade.",
     "palavras_chave": [
       "felicidade",
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "casamento",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

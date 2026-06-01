@@ -2,31 +2,135 @@
   {
     "id": "f_duibajt0d",
     "slug": "pare-de-seguir-na-direcao-errada-nao-repita-os-mesmos-erros",
+    "texto": "Pare de seguir na direção errada, não repita os mesmos erros, tenha coragem e determinação, dando um novo rumo a sua vida, pois você nasceu para vencer, então coloques a caminho da vitória!⁠",
+    "autor": "Dilson Kutscher",
+    "autorSlug": "dilson-kutscher",
+    "explicacao": "Dilson Kutscher exorta o leitor a interromper ciclos de erro e assumir um novo rumo com coragem. Tom típico de coach ou palestrante motivacional, voltado a quem precisa de empurrão para mudar de direção na vida.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "aprendizado",
+        "coragem",
+        "determinacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "termino",
+        "coragem",
+        "determinacao",
+        "inspiracional"
+      ],
+      "emocoes": [
+        "coragem",
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "aprendizado",
+        "coragem",
+        "determinacao",
+        "seguir",
+        "direção",
+        "errada",
+        "repita"
+      ],
+      "palavrasChave": [
+        "aprendizado",
+        "coragem",
+        "determinacao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "aprendizado",
+        "coragem",
+        "determinacao",
+        "inspiracional",
+        "inspiracao",
+        "termino",
+        "dilson-kutscher"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 49,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "aprendizado",
+        "coragem",
+        "determinacao",
+        "seguir",
+        "direção"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Pare de seguir na direção errada, não repita os mesm…\" — Dilson Kutscher | Metamensagem",
+      "descriptionSeo": "Dilson Kutscher exorta o leitor a interromper ciclos de erro e assumir um novo rumo com coragem. Tom típico de coach ou palestrante motivacional, voltado a qu…",
+      "keywordsSeo": [
+        "frases de Dilson Kutscher",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases aprendizado",
+        "frases inspiracao",
+        "frases termino",
+        "aprendizado",
+        "coragem",
+        "determinacao",
+        "inspiracional"
+      ],
+      "canonicalSlug": "pare-de-seguir-na-direcao-errada-nao-repita-os-mesmos-erros",
+      "relatedKeywords": [
+        "coragem",
+        "determinacao",
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "dilson-kutscher"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Pare de seguir na direção errada, não repita os mesmos erros, tenha coragem e determinação, dando um novo rumo a sua vida, pois você nasceu para vencer, então coloques a caminho da vitória!⁠",
     "autor_original": "Dilson Kutscher",
-    "categoria": "aprendizado",
+    "autor_slug": "dilson-kutscher",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
+      "termino",
       "coragem",
       "determinacao",
-      "inspiracional",
-      "motivacao"
+      "inspiracional"
     ],
-    "explicacao": "Dilson Kutscher exorta o leitor a interromper ciclos de erro e assumir um novo rumo com coragem. Tom típico de coach ou palestrante motivacional, voltado a quem precisa de empurrão para mudar de direção na vida.",
     "palavras_chave": [
       "aprendizado",
       "coragem",
       "determinacao",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

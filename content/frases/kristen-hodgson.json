@@ -1,0 +1,92 @@
+[
+  {
+    "id": "f_csv_de15a7e6b2",
+    "slug": "i-like-my-food",
+    "texto": "I LIKE my Food.",
+    "autor": "Kristen Hodgson",
+    "autorSlug": "kristen-hodgson",
+    "explicacao": "Citação de Kristen Hodgson sobre temas ligados a reflexao. “I LIKE my Food.” articula reflexao, food em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "food"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "food"
+      ],
+      "palavrasChave": [
+        "food",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "food",
+        "kristen-hodgson"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "food",
+        "reflexao",
+        "food"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I LIKE my Food.\" — Kristen Hodgson | Metamensagem",
+      "descriptionSeo": "Citação de Kristen Hodgson sobre temas ligados a reflexao. “I LIKE my Food.” articula reflexao, food em registro de reflexao, com relevância para contextos co…",
+      "keywordsSeo": [
+        "frases de Kristen Hodgson",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases food",
+        "food",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-like-my-food",
+      "relatedKeywords": [
+        "reflexao",
+        "food",
+        "kristen-hodgson"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I LIKE my Food.",
+    "autor_original": "Kristen Hodgson",
+    "autor_slug": "kristen-hodgson",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "food",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

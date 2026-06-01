@@ -1,0 +1,116 @@
+[
+  {
+    "id": "f_csv_0ae2a47f35",
+    "slug": "happiness-held-is-the-seed-happiness-shared-is-the-flower",
+    "texto": "Happiness held is the seed Happiness shared is the flower.",
+    "autor": "John Harrigan",
+    "autorSlug": "john-harrigan",
+    "explicacao": "Citação de John Harrigan sobre temas ligados a felicidade. “Happiness held is the seed Happiness shared is the flower.” articula felicidade, flower, seed em registro de felicidade, com relevância para contextos como seed e held.",
+    "semantica": {
+      "categoriaPrincipal": "felicidade",
+      "categorias": [
+        "felicidade",
+        "flower",
+        "seed",
+        "held"
+      ],
+      "contextos": [
+        "seed",
+        "held"
+      ],
+      "emocoes": [
+        "felicidade"
+      ],
+      "temas": [
+        "felicidade",
+        "flower",
+        "seed",
+        "held",
+        "happiness",
+        "shared"
+      ],
+      "palavrasChave": [
+        "flower",
+        "seed",
+        "held",
+        "felicidade"
+      ],
+      "tagsSeo": [
+        "felicidade",
+        "flower",
+        "seed",
+        "held",
+        "john-harrigan"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "felicidade",
+        "flower",
+        "seed",
+        "held",
+        "happiness",
+        "shared"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Happiness held is the seed Happiness shared is the f…\" — John Harrigan | Metamensagem",
+      "descriptionSeo": "Citação de John Harrigan sobre temas ligados a felicidade. “Happiness held is the seed Happiness shared is the flower.” articula felicidade, flower, seed em r…",
+      "keywordsSeo": [
+        "frases de John Harrigan",
+        "frases sobre felicidade",
+        "frases felicidade",
+        "frases flower",
+        "frases seed",
+        "frases held",
+        "flower",
+        "seed",
+        "held",
+        "felicidade"
+      ],
+      "canonicalSlug": "happiness-held-is-the-seed-happiness-shared-is-the-flower",
+      "relatedKeywords": [
+        "felicidade",
+        "flower",
+        "seed",
+        "held",
+        "john-harrigan"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Happiness held is the seed Happiness shared is the flower.",
+    "autor_original": "John Harrigan",
+    "autor_slug": "john-harrigan",
+    "categoria": "felicidade",
+    "contextos": [
+      "seed",
+      "held"
+    ],
+    "palavras_chave": [
+      "flower",
+      "seed",
+      "held",
+      "felicidade"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

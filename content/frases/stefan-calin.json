@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_a1c77e51af",
+    "slug": "the-main-thing-is-to-keep-the-main-thing-the-main-thing",
+    "texto": "The main thing is to keep THE MAIN THING the main thing",
+    "autor": "stefan calin",
+    "autorSlug": "stefan-calin",
+    "explicacao": "Citação de stefan calin sobre temas ligados a reflexao. “The main thing is to keep THE MAIN THING the main thing” articula reflexao, science, thing em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "science"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "science",
+        "thing"
+      ],
+      "palavrasChave": [
+        "science",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "science",
+        "stefan-calin"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "science",
+        "thing",
+        "reflexao",
+        "science"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The main thing is to keep THE MAIN THING the main thing\" — stefan calin | Metamensagem",
+      "descriptionSeo": "Citação de stefan calin sobre temas ligados a reflexao. “The main thing is to keep THE MAIN THING the main thing” articula reflexao, science, thing em registr…",
+      "keywordsSeo": [
+        "frases de stefan calin",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases science",
+        "science",
+        "reflexao"
+      ],
+      "canonicalSlug": "the-main-thing-is-to-keep-the-main-thing-the-main-thing",
+      "relatedKeywords": [
+        "reflexao",
+        "science",
+        "stefan-calin"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The main thing is to keep THE MAIN THING the main thing",
+    "autor_original": "stefan calin",
+    "autor_slug": "stefan-calin",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "science",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -2,31 +2,131 @@
   {
     "id": "f_85ndv27ku",
     "slug": "desafios-sao-fases-da-superacao-se-encarada-com-disciplina",
+    "texto": "\"Desafios são fases da superação, se encarada com disciplina e determinação.\"",
+    "autor": "Nelio Wanderley",
+    "autorSlug": "nelio-wanderley",
+    "explicacao": "Nelio Wanderley resume que desafios viram superação com disciplina e determinação. Frase curta de palestra ou rede social. Tom militarizado de foco e superação de obstáculos.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "determinacao",
+        "foco",
+        "inspiracional",
+        "superacao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "foco",
+        "inspiracional",
+        "motivacao",
+        "superacao"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "determinacao",
+        "foco",
+        "inspiracional",
+        "desafios",
+        "fases",
+        "superação",
+        "encarada"
+      ],
+      "palavrasChave": [
+        "determinacao",
+        "foco",
+        "inspiracional",
+        "motivacao",
+        "superacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "determinacao",
+        "foco",
+        "inspiracional",
+        "superacao",
+        "inspiracao",
+        "nelio-wanderley"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 37,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "determinacao",
+        "foco",
+        "inspiracional",
+        "desafios",
+        "fases"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"\"Desafios são fases da superação, se encarada com di…\" — Nelio Wanderley | Metamensagem",
+      "descriptionSeo": "Nelio Wanderley resume que desafios viram superação com disciplina e determinação. Frase curta de palestra ou rede social. Tom militarizado de foco e superaçã…",
+      "keywordsSeo": [
+        "frases de Nelio Wanderley",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases determinacao",
+        "frases inspiracao",
+        "frases foco",
+        "determinacao",
+        "foco",
+        "inspiracional",
+        "motivacao"
+      ],
+      "canonicalSlug": "desafios-sao-fases-da-superacao-se-encarada-com-disciplina",
+      "relatedKeywords": [
+        "determinacao",
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "superacao",
+        "nelio-wanderley"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "\"Desafios são fases da superação, se encarada com disciplina e determinação.\"",
     "autor_original": "Nelio Wanderley",
-    "categoria": "determinacao",
+    "autor_slug": "nelio-wanderley",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "foco",
       "inspiracional",
       "motivacao",
       "superacao"
     ],
-    "explicacao": "Nelio Wanderley resume que desafios viram superação com disciplina e determinação. Frase curta de palestra ou rede social. Tom militarizado de foco e superação de obstáculos.",
     "palavras_chave": [
       "determinacao",
       "foco",
       "inspiracional",
       "motivacao",
-      "superacao"
+      "superacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

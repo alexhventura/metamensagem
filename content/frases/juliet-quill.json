@@ -1,0 +1,123 @@
+[
+  {
+    "id": "f_csv_98e2b1bb1b",
+    "slug": "fries-before-guys",
+    "texto": "Fries Before Guys",
+    "autor": "Juliet Quill",
+    "autorSlug": "juliet-quill",
+    "explicacao": "Citação de Juliet Quill sobre temas ligados a humor. “Fries Before Guys” articula humor, boys, food em registro de humor, com relevância para contextos como food e girls.",
+    "semantica": {
+      "categoriaPrincipal": "humor",
+      "categorias": [
+        "humor",
+        "boys",
+        "food",
+        "girls",
+        "random"
+      ],
+      "contextos": [
+        "food",
+        "girls",
+        "humor",
+        "random"
+      ],
+      "emocoes": [],
+      "temas": [
+        "humor",
+        "boys",
+        "food",
+        "girls",
+        "fries",
+        "before"
+      ],
+      "palavrasChave": [
+        "boys",
+        "food",
+        "girls",
+        "humor",
+        "random"
+      ],
+      "tagsSeo": [
+        "humor",
+        "boys",
+        "food",
+        "girls",
+        "random",
+        "juliet-quill"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "humor",
+        "boys",
+        "food",
+        "girls",
+        "fries",
+        "before"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Fries Before Guys\" — Juliet Quill | Metamensagem",
+      "descriptionSeo": "Citação de Juliet Quill sobre temas ligados a humor. “Fries Before Guys” articula humor, boys, food em registro de humor, com relevância para contextos como f…",
+      "keywordsSeo": [
+        "frases de Juliet Quill",
+        "frases sobre humor",
+        "frases humor",
+        "frases boys",
+        "frases food",
+        "frases girls",
+        "boys",
+        "food",
+        "girls",
+        "humor"
+      ],
+      "canonicalSlug": "fries-before-guys",
+      "relatedKeywords": [
+        "humor",
+        "boys",
+        "food",
+        "girls",
+        "random",
+        "juliet-quill"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Fries Before Guys",
+    "autor_original": "Juliet Quill",
+    "autor_slug": "juliet-quill",
+    "categoria": "humor",
+    "contextos": [
+      "food",
+      "girls",
+      "humor",
+      "random"
+    ],
+    "palavras_chave": [
+      "boys",
+      "food",
+      "girls",
+      "humor",
+      "random"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

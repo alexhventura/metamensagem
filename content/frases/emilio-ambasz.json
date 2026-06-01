@@ -1,0 +1,116 @@
+[
+  {
+    "id": "f_csv_9d5f28be6b",
+    "slug": "princeton-is-a-sublime-undergraduate-university-it-has-a-good-architecture-scho",
+    "texto": "Princeton is a sublime undergraduate university. It has a good architecture school.",
+    "autor": "Emilio Ambasz",
+    "autorSlug": "emilio-ambasz",
+    "explicacao": "Citação de Emilio Ambasz sobre temas ligados a educacao. “Princeton is a sublime undergraduate university. It has a good architecture school.” articula educacao, good, school em registro de educacao, com relevância para contextos como school e university.",
+    "semantica": {
+      "categoriaPrincipal": "educacao",
+      "categorias": [
+        "educacao",
+        "good",
+        "school",
+        "university"
+      ],
+      "contextos": [
+        "school",
+        "university"
+      ],
+      "emocoes": [],
+      "temas": [
+        "educacao",
+        "good",
+        "school",
+        "university",
+        "princeton",
+        "sublime",
+        "undergraduate",
+        "architecture"
+      ],
+      "palavrasChave": [
+        "good",
+        "school",
+        "university",
+        "educacao"
+      ],
+      "tagsSeo": [
+        "educacao",
+        "good",
+        "school",
+        "university",
+        "emilio-ambasz"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "educacao",
+        "good",
+        "school",
+        "university",
+        "princeton",
+        "sublime"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Princeton is a sublime undergraduate university. It …\" — Emilio Ambasz | Metamensagem",
+      "descriptionSeo": "Citação de Emilio Ambasz sobre temas ligados a educacao. “Princeton is a sublime undergraduate university. It has a good architecture school.” articula educac…",
+      "keywordsSeo": [
+        "frases de Emilio Ambasz",
+        "frases sobre educacao",
+        "frases educacao",
+        "frases good",
+        "frases school",
+        "frases university",
+        "good",
+        "school",
+        "university",
+        "educacao"
+      ],
+      "canonicalSlug": "princeton-is-a-sublime-undergraduate-university-it-has-a-good-architecture-scho",
+      "relatedKeywords": [
+        "educacao",
+        "good",
+        "school",
+        "university",
+        "emilio-ambasz"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Princeton is a sublime undergraduate university. It has a good architecture school.",
+    "autor_original": "Emilio Ambasz",
+    "autor_slug": "emilio-ambasz",
+    "categoria": "educacao",
+    "contextos": [
+      "school",
+      "university"
+    ],
+    "palavras_chave": [
+      "good",
+      "school",
+      "university",
+      "educacao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

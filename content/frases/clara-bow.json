@@ -1,0 +1,112 @@
+[
+  {
+    "id": "f_csv_56249d020b",
+    "slug": "the-more-i-see-of-men-the-more-i-like-dogs",
+    "texto": "The more I see of men, the more I like dogs.",
+    "autor": "Clara Bow",
+    "autorSlug": "clara-bow",
+    "explicacao": "Metáfora atribuída a Clara Bow: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “The more I see of men, the more I like dogs.” usa imagem concreta para lembrar que reflexao, dogs, see pedem movimento e interpretação pessoal, em tom de see e like.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "dogs",
+        "see",
+        "like"
+      ],
+      "contextos": [
+        "see",
+        "like"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "dogs",
+        "see",
+        "like"
+      ],
+      "palavrasChave": [
+        "dogs",
+        "see",
+        "like",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "dogs",
+        "see",
+        "like",
+        "clara-bow"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "dogs",
+        "see",
+        "like",
+        "reflexao",
+        "dogs"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The more I see of men, the more I like dogs.\" — Clara Bow | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Clara Bow: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “The more I see of men, the more I like dogs.”…",
+      "keywordsSeo": [
+        "frases de Clara Bow",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases dogs",
+        "frases see",
+        "frases like",
+        "dogs",
+        "see",
+        "like",
+        "reflexao"
+      ],
+      "canonicalSlug": "the-more-i-see-of-men-the-more-i-like-dogs",
+      "relatedKeywords": [
+        "reflexao",
+        "dogs",
+        "see",
+        "like",
+        "clara-bow"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The more I see of men, the more I like dogs.",
+    "autor_original": "Clara Bow",
+    "autor_slug": "clara-bow",
+    "categoria": "reflexao",
+    "contextos": [
+      "see",
+      "like"
+    ],
+    "palavras_chave": [
+      "dogs",
+      "see",
+      "like",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

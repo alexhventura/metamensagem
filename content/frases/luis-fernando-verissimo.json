@@ -1,26 +1,232 @@
 [
   {
-    "id": "f_k8u6ulo6y",
-    "slug": "os-tristes-acham-que-o-vento-geme-os-alegres-acham-que-ele",
-    "frase_original": "Os tristes acham que o vento geme; Os alegres acham que ele canta.",
+    "id": "f_csv_27320c45ed",
+    "slug": "intellectual-controversies-tend-to-be-like-dog-fights-without-the-teeth-in-whic",
+    "texto": "Intellectual controversies tend to be like dog fights without the teeth, in which the barking not the biting does the damage.",
+    "autor": "Luis Fernando Verissimo",
+    "autorSlug": "luis-fernando-verissimo",
+    "explicacao": "Metáfora atribuída a Luis Fernando Verissimo: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “Intellectual controversies tend to be like dog fights without the teeth, in which the barking not…” usa imagem concreta para lembrar que reflexao, humour, intellectuals pedem movimento e interpretação pessoal, em tom de termino e intellectuals.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "humour",
+        "intellectuals"
+      ],
+      "contextos": [
+        "termino",
+        "intellectuals"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "humour",
+        "intellectuals",
+        "intellectual",
+        "controversies",
+        "fights",
+        "without",
+        "teeth"
+      ],
+      "palavrasChave": [
+        "humour",
+        "intellectuals",
+        "reflexao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "humour",
+        "intellectuals",
+        "termino",
+        "luis-fernando-verissimo"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 36,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "humour",
+        "intellectuals",
+        "intellectual",
+        "controversies",
+        "fights"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Intellectual controversies tend to be like dog fight…\" — Luis Fernando Verissimo | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Luis Fernando Verissimo: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “Intellectual controversies tend…",
+      "keywordsSeo": [
+        "frases de Luis Fernando Verissimo",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases humour",
+        "frases termino",
+        "frases intellectuals",
+        "humour",
+        "intellectuals",
+        "reflexao",
+        "termino"
+      ],
+      "canonicalSlug": "intellectual-controversies-tend-to-be-like-dog-fights-without-the-teeth-in-whic",
+      "relatedKeywords": [
+        "reflexao",
+        "humour",
+        "intellectuals",
+        "luis-fernando-verissimo"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Intellectual controversies tend to be like dog fights without the teeth, in which the barking not the biting does the damage.",
     "autor_original": "Luis Fernando Verissimo",
-    "categoria": "inspiracional",
+    "autor_slug": "luis-fernando-verissimo",
+    "categoria": "reflexao",
     "contextos": [
-      "otimismo"
+      "termino",
+      "intellectuals"
     ],
-    "explicacao": "Luis Fernando Veríssimo contrasta como tristes e alegres interpretam o mesmo vento — gemido ou canto. Crônica de humor filosófico sobre perspectiva. A frase mostra que o clima emocional colore a percepção da realidade.",
     "palavras_chave": [
-      "inspiracional",
-      "otimismo"
+      "humour",
+      "intellectuals",
+      "reflexao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_k8u6ulo6y",
+    "slug": "os-tristes-acham-que-o-vento-geme-os-alegres-acham-que-ele",
+    "texto": "Os tristes acham que o vento geme; Os alegres acham que ele canta.",
+    "autor": "Luis Fernando Verissimo",
+    "autorSlug": "luis-fernando-verissimo",
+    "explicacao": "Luis Fernando Veríssimo contrasta como tristes e alegres interpretam o mesmo vento — gemido ou canto. Crônica de humor filosófico sobre perspectiva. A frase mostra que o clima emocional colore a percepção da realidade.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [
+        "tristeza"
+      ],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "acham",
+        "tristes",
+        "vento",
+        "alegres",
+        "canta"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao",
+        "tristeza"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "tristeza",
+        "luis-fernando-verissimo"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "acham",
+        "tristes",
+        "vento"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Os tristes acham que o vento geme; Os alegres acham …\" — Luis Fernando Verissimo | Metamensagem",
+      "descriptionSeo": "Luis Fernando Veríssimo contrasta como tristes e alegres interpretam o mesmo vento — gemido ou canto. Crônica de humor filosófico sobre perspectiva. A frase m…",
+      "keywordsSeo": [
+        "frases de Luis Fernando Verissimo",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "os-tristes-acham-que-o-vento-geme-os-alegres-acham-que-ele",
+      "relatedKeywords": [
+        "tristeza",
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "luis-fernando-verissimo"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Os tristes acham que o vento geme; Os alegres acham que ele canta.",
+    "autor_original": "Luis Fernando Verissimo",
+    "autor_slug": "luis-fernando-verissimo",
+    "categoria": "motivacao",
+    "contextos": [
+      "inspiracao",
+      "otimismo"
+    ],
+    "palavras_chave": [
+      "inspiracional",
+      "otimismo",
+      "motivacao",
+      "inspiracao",
+      "tristeza"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

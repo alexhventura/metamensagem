@@ -2,25 +2,117 @@
   {
     "id": "f_v3wumk11t",
     "slug": "o-estimulo-o-apoio-o-incentivo-a-motivacao-o-reforco-e",
+    "texto": "“O estímulo, o apoio, o incentivo, a motivação, o reforço e o investimento são indispensáveis aos trabalhos e aos estudos.”",
+    "autor": "Estela Joaquina Valadares Canabrava",
+    "autorSlug": "estela-joaquina-valadares-canabrava",
+    "explicacao": "Estela Joaquina Valadares Canabrava defende que estudo e trabalho exigem apoio e incentivo. Visão pedagógica sobre a importância do ambiente motivador para o aprendizado e o desenvolvimento profissional.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "trabalho",
+        "estudos",
+        "inspiracao",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "estímulo",
+        "apoio",
+        "incentivo",
+        "motivação",
+        "reforço"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "trabalho",
+        "estudos",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "trabalho",
+        "estudos",
+        "inspiracao",
+        "estela-joaquina-valadares-canabrava"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 36,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "estímulo",
+        "apoio",
+        "incentivo",
+        "motivação"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"“O estímulo, o apoio, o incentivo, a motivação, o re…\" — Estela Joaquina Valadares Canabrava | Metamensagem",
+      "descriptionSeo": "Estela Joaquina Valadares Canabrava defende que estudo e trabalho exigem apoio e incentivo. Visão pedagógica sobre a importância do ambiente motivador para o…",
+      "keywordsSeo": [
+        "frases de Estela Joaquina Valadares Canabrava",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases trabalho",
+        "frases estudos",
+        "inspiracional",
+        "motivacao",
+        "trabalho",
+        "estudos"
+      ],
+      "canonicalSlug": "o-estimulo-o-apoio-o-incentivo-a-motivacao-o-reforco-e",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "estela-joaquina-valadares-canabrava"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "“O estímulo, o apoio, o incentivo, a motivação, o reforço e o investimento são indispensáveis aos trabalhos e aos estudos.”",
     "autor_original": "Estela Joaquina Valadares Canabrava",
-    "categoria": "inspiracional",
+    "autor_slug": "estela-joaquina-valadares-canabrava",
+    "categoria": "motivacao",
     "contextos": [
+      "trabalho",
+      "estudos",
+      "inspiracao",
       "motivacao"
     ],
-    "explicacao": "Estela Joaquina Valadares Canabrava defende que estudo e trabalho exigem apoio e incentivo. Visão pedagógica sobre a importância do ambiente motivador para o aprendizado e o desenvolvimento profissional.",
     "palavras_chave": [
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "trabalho",
+      "estudos",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

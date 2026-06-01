@@ -1,0 +1,116 @@
+[
+  {
+    "id": "f_csv_7dd07ac55e",
+    "slug": "i-ll-tell-you-a-story-about-johnny-magory",
+    "texto": "I'll tell you a story about Johnny Magory!",
+    "autor": "Emma-Jane Leeson",
+    "autorSlug": "emma-jane-leeson",
+    "explicacao": "Citação de Emma-Jane Leeson sobre temas ligados a familia. “I'll tell you a story about Johnny Magory!” articula familia, children-books, fiction em registro de familia, com relevância para contextos como fiction e ireland.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "children-books",
+        "fiction",
+        "ireland"
+      ],
+      "contextos": [
+        "fiction",
+        "ireland"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "children-books",
+        "fiction",
+        "ireland",
+        "story",
+        "about",
+        "johnny",
+        "magory"
+      ],
+      "palavrasChave": [
+        "children-books",
+        "fiction",
+        "ireland",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "children-books",
+        "fiction",
+        "ireland",
+        "emma-jane-leeson"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "children-books",
+        "fiction",
+        "ireland",
+        "story",
+        "about"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I'll tell you a story about Johnny Magory!\" — Emma-Jane Leeson | Metamensagem",
+      "descriptionSeo": "Citação de Emma-Jane Leeson sobre temas ligados a familia. “I'll tell you a story about Johnny Magory!” articula familia, children-books, fiction em registro…",
+      "keywordsSeo": [
+        "frases de Emma-Jane Leeson",
+        "frases sobre familia",
+        "frases familia",
+        "frases children books",
+        "frases fiction",
+        "frases ireland",
+        "children-books",
+        "fiction",
+        "ireland",
+        "familia"
+      ],
+      "canonicalSlug": "i-ll-tell-you-a-story-about-johnny-magory",
+      "relatedKeywords": [
+        "familia",
+        "children-books",
+        "fiction",
+        "ireland",
+        "emma-jane-leeson"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I'll tell you a story about Johnny Magory!",
+    "autor_original": "Emma-Jane Leeson",
+    "autor_slug": "emma-jane-leeson",
+    "categoria": "familia",
+    "contextos": [
+      "fiction",
+      "ireland"
+    ],
+    "palavras_chave": [
+      "children-books",
+      "fiction",
+      "ireland",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

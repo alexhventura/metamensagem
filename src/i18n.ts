@@ -1,13 +1,17 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import { de, hi, it, ja } from './i18n/extraLocales';
 
 const resources = {
   pt: {
     translation: {
       "app": {
         "title": "Metamensagem",
-        "tagline": "Mente, Mensagem e Mudança."
+        "tagline": "Mente, Mensagem e Mudança.",
+        "tagline_before": "Mente, Mensagem e",
+        "tagline_highlight": "Mudança.",
+        "slogan": "Palavras que atravessam fronteiras e aproximam pessoas."
       },
       "nav": {
         "home": "Início",
@@ -34,6 +38,7 @@ const resources = {
         "copy": "Copiar",
         "share": "Compartilhar",
         "edit_image": "Editar Imagem",
+        "generate_image": "Gerar Imagem",
         "read": "Ler",
         "read_metaphor": "Ler Metáfora",
         "learn_more": "Saiba mais",
@@ -41,6 +46,14 @@ const resources = {
         "copied": "Copiado!",
         "link_copied": "Link copiado!",
         "translate": "Traduzir"
+      },
+      "translate_menu": {
+        "language": "Idioma",
+        "translating": "Traduzindo...",
+        "unavailable": "Tradução indisponível",
+        "success": "✓ Traduzido para {{lang}}",
+        "original": "Ver original",
+        "retry": "Tentar novamente"
       },
       "editor": {
         "title": "Gerar Post Premium",
@@ -68,7 +81,10 @@ const resources = {
     translation: {
       "app": {
         "title": "Metamensagem",
-        "tagline": "Mind, Message and Change."
+        "tagline": "Mind, Message and Change.",
+        "tagline_before": "Mind, Message and",
+        "tagline_highlight": "Change.",
+        "slogan": "Words that cross borders and bring people closer."
       },
       "nav": {
         "home": "Home",
@@ -94,6 +110,7 @@ const resources = {
         "copy": "Copy",
         "share": "Share",
         "edit_image": "Edit Image",
+        "generate_image": "Generate Image",
         "read": "Read",
         "read_metaphor": "Read Metaphor",
         "learn_more": "Learn more",
@@ -101,6 +118,14 @@ const resources = {
         "copied": "Copied!",
         "link_copied": "Link copied!",
         "translate": "Translate"
+      },
+      "translate_menu": {
+        "language": "Language",
+        "translating": "Translating...",
+        "unavailable": "Translation unavailable",
+        "success": "✓ Translated to {{lang}}",
+        "original": "View original",
+        "retry": "Try again"
       },
       "editor": {
         "title": "Generate Premium Post",
@@ -119,7 +144,10 @@ const resources = {
     translation: {
       "app": {
         "title": "Metamensagem",
-        "tagline": "Mente, Mensaje y Cambio."
+        "tagline": "Mente, Mensaje y Cambio.",
+        "tagline_before": "Mente, Mensaje y",
+        "tagline_highlight": "Cambio.",
+        "slogan": "Palabras que cruzan fronteras y acercan personas."
       },
       "nav": {
         "home": "Inicio",
@@ -145,6 +173,7 @@ const resources = {
         "copy": "Copiar",
         "share": "Compartir",
         "edit_image": "Editar Imagen",
+        "generate_image": "Generar Imagen",
         "read": "Leer",
         "read_metaphor": "Leer Metáfora",
         "learn_more": "Saber más",
@@ -152,6 +181,14 @@ const resources = {
         "copied": "¡Copiado!",
         "link_copied": "¡Enlace copiado!",
         "translate": "Traducir"
+      },
+      "translate_menu": {
+        "language": "Idioma",
+        "translating": "Traduciendo...",
+        "unavailable": "Traducción no disponible",
+        "success": "✓ Traducido al {{lang}}",
+        "original": "Ver original",
+        "retry": "Intentar de nuevo"
       },
       "editor": {
         "title": "Generar Post Premium",
@@ -170,7 +207,10 @@ const resources = {
     translation: {
       "app": {
         "title": "Metamensagem",
-        "tagline": "Esprit, Message et Changement."
+        "tagline": "Esprit, Message et Changement.",
+        "tagline_before": "Esprit, Message et",
+        "tagline_highlight": "Changement.",
+        "slogan": "Des mots qui traversent les frontières et rapprochent les gens."
       },
       "nav": {
         "home": "Accueil",
@@ -196,6 +236,7 @@ const resources = {
         "copy": "Copier",
         "share": "Partager",
         "edit_image": "Modifier l'image",
+        "generate_image": "Générer une image",
         "read": "Lire",
         "read_metaphor": "Lire la Métaphore",
         "learn_more": "En savoir plus",
@@ -203,6 +244,14 @@ const resources = {
         "copied": "Copié !",
         "link_copied": "Lien copié !",
         "translate": "Traduire"
+      },
+      "translate_menu": {
+        "language": "Langue",
+        "translating": "Traduction en cours...",
+        "unavailable": "Traduction indisponible",
+        "success": "✓ Traduit en {{lang}}",
+        "original": "Voir l'original",
+        "retry": "Réessayer"
       },
       "editor": {
         "title": "Générer un Post Premium",
@@ -216,7 +265,11 @@ const resources = {
         "reset": "Réinitialiser"
       }
     }
-  }
+  },
+  de,
+  it,
+  ja,
+  hi,
 };
 
 i18n
@@ -225,9 +278,16 @@ i18n
   .init({
     resources,
     fallbackLng: 'pt',
+    supportedLngs: ['pt', 'en', 'es', 'fr', 'de', 'it', 'ja', 'hi'],
+    nonExplicitSupportedLngs: true,
+    load: 'languageOnly',
     interpolation: {
-      escapeValue: false
-    }
+      escapeValue: false,
+    },
+    detection: {
+      order: ['localStorage', 'navigator', 'htmlTag'],
+      caches: ['localStorage'],
+    },
   });
 
 export default i18n;

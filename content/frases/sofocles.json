@@ -2,25 +2,119 @@
   {
     "id": "f_cxmysxd4g",
     "slug": "o-animo-tranquilo-de-um-justo-pode-descobrir-mais-coisas-que",
+    "texto": "O ânimo tranquilo de um justo pode descobrir mais coisas que todos os sábios.",
+    "autor": "Sófocles",
+    "autorSlug": "sofocles",
+    "explicacao": "Sófocles, dramaturgo grego, sugere que integridade serena pode revelar mais que erudição. O justo de espírito tranquilo enxerga o essencial. Valoriza caráter e equilíbrio emocional sobre mera inteligência.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [
+        "serenidade"
+      ],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "ânimo",
+        "tranquilo",
+        "justo",
+        "descobrir",
+        "coisas"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao",
+        "serenidade"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "serenidade",
+        "sofocles"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "ânimo",
+        "tranquilo",
+        "justo"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O ânimo tranquilo de um justo pode descobrir mais co…\" — Sófocles | Metamensagem",
+      "descriptionSeo": "Sófocles, dramaturgo grego, sugere que integridade serena pode revelar mais que erudição. O justo de espírito tranquilo enxerga o essencial. Valoriza caráter…",
+      "keywordsSeo": [
+        "frases de Sófocles",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "o-animo-tranquilo-de-um-justo-pode-descobrir-mais-coisas-que",
+      "relatedKeywords": [
+        "serenidade",
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sofocles"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O ânimo tranquilo de um justo pode descobrir mais coisas que todos os sábios.",
     "autor_original": "Sófocles",
-    "categoria": "inspiracional",
+    "autor_slug": "sofocles",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "reflexao"
     ],
-    "explicacao": "Sófocles, dramaturgo grego, sugere que integridade serena pode revelar mais que erudição. O justo de espírito tranquilo enxerga o essencial. Valoriza caráter e equilíbrio emocional sobre mera inteligência.",
     "palavras_chave": [
       "inspiracional",
-      "reflexao"
+      "reflexao",
+      "motivacao",
+      "inspiracao",
+      "serenidade"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,12 +1,11 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+﻿import React, { useState, useEffect, useRef, useMemo, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Link, useParams, useLocation, useNavigate } from 'react-router-dom';
-import Fuse from 'fuse.js';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import Terms from './views/Terms';
-import Privacy from './views/Privacy';
-import Contact from './views/Contact';
-import Cookies from './views/Cookies';
+const Terms = lazy(() => import('./views/Terms'));
+const Privacy = lazy(() => import('./views/Privacy'));
+const Contact = lazy(() => import('./views/Contact'));
+const Cookies = lazy(() => import('./views/Cookies'));
 import { 
   Copy, 
   Moon, 
@@ -32,10 +31,14 @@ import {
   ChevronLeft
 } from 'lucide-react';
 
-import CustomModalGeradorPost from './components/ModalGeradorPost';
+const ImageGeneratorModal = lazy(() => import('./components/image-generator'));
+import { quoteFromItem } from './components/image-generator/utils/quoteFromItem';
 import GoogleAdSense from './components/GoogleAdSense';
+import AdSlot from './components/AdSlot';
+import { loadHomeBootstrap, scheduleCatalogPrefetch } from './lib/homeData';
 import { CardTranslateMenu } from './components/CardTranslateMenu';
 import { type CardContentDisplay } from './lib/translation';
+import { useTranslatedViewMeta } from './lib/useTranslatedViewMeta';
 import { sanitizeTextForTranslation } from './lib/textSanitize';
 
 import SocialHub from './components/SocialHub';
@@ -50,16 +53,17 @@ import {
   OG_IMAGE,
   SITE_NAME,
   SITE_ORIGIN,
+  absoluteUrl,
   WEB_SITE_JSON_LD,
   urlMetafora,
 } from './lib/seo';
 import { buildTagRegistry, pathFromTag } from './lib/tagsSeo';
+import { SEO_LOCALES } from './lib/i18nRoutes';
 import { searchBancoSemantico } from './lib/semanticSearch';
 import { sanitizeContentBanco } from './lib/safeContent';
 import { pruneInvalidTranslationCache } from './lib/translation';
-import TagCategoriaView from './views/TagCategoria';
-import FraseDetalheView from './views/FraseDetalhe';
-import { primeFrasesCms, fraseToListItem } from './lib/frasesModel';
+const TagCategoriaView = lazy(() => import('./views/TagCategoria'));
+const FraseDetalheView = lazy(() => import('./views/FraseDetalhe'));
 import { GRID_CONTENT } from './lib/contentGrid';
 import { flattenFeedWithAds } from './lib/feedWithAds';
 import { normalizarParaSlug } from './lib/slug';
@@ -69,32 +73,16 @@ import CardTooltip from './components/CardTooltip';
 import { CARD_ACTION_BTN, cardNeutralActionClass } from './lib/cardTheme';
 import { useTheme } from './context/ThemeContext';
 
-async function montarBanco(metaforasRaw: unknown[], frasesRaw: unknown[]): Promise<ItemConteudo[]> {
-  const metaforas = sanitizeContentBanco(metaforasRaw);
-  try {
-    const cmsRes = await fetch('/frases-cms.json');
-    if (cmsRes.ok) {
-      const cms = await cmsRes.json();
-      primeFrasesCms(cms);
-      const frases = cms.map(fraseToListItem) as ItemConteudo[];
-      return [...metaforas, ...frases];
-    }
-  } catch {
-    /* fallback índice */
-  }
-  return sanitizeContentBanco([...metaforas, ...frasesRaw]);
-}
-
 interface ModalProps {
   item: ItemConteudo;
   onClose: () => void;
 }
 
-// --- CONFIGURAÇÃO DE FRASES LOADING ---
+// --- CONFIGURAÃ‡ÃƒO DE FRASES LOADING ---
 const FRASES_MOTIVACIONAIS_LOADING = [
-  "A sabedoria não está em reter o conhecimento, mas em compartilhá-lo.",
-  "Preparando uma dose de inspiração para transformar o dia de alguém...",
-  "Grandes ideias merecem formatos incríveis. Quase pronto!",
+  "A sabedoria nÃ£o estÃ¡ em reter o conhecimento, mas em compartilhÃ¡-lo.",
+  "Preparando uma dose de inspiraÃ§Ã£o para transformar o dia de alguÃ©m...",
+  "Grandes ideias merecem formatos incrÃ­veis. Quase pronto!",
   "A metamensagem certa pode ser a chave para mudar uma atitude hoje.",
   "Eternizando palavras de impacto em um design premium..."
 ];
@@ -106,6 +94,7 @@ export default function App() {
   const [toast, setToast] = useState<{ mensagem: string; tipo: 'sucesso' | 'info' | 'erro' } | null>(null);
   const [bancoTotal, setBancoTotal] = useState<ItemConteudo[]>([]);
   const [bancoRandom, setBancoRandom] = useState<ItemConteudo[]>([]);
+  const [tagsBootstrap, setTagsBootstrap] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
   const shuffleArray = (array: any[]) => {
@@ -126,51 +115,39 @@ export default function App() {
     pruneInvalidTranslationCache();
   }, []);
 
-  // Carregamento de Indexes (Arquitetura Performance + Offline-First)
+  // Home: bootstrap leve; catÃ¡logo completo em idle (O(1) inicial)
   useEffect(() => {
-    const carregarIndices = async () => {
-      const CACHE_NAME = 'mm-data-v1';
-      const urls = ['/metaforas-index.json', '/frases-index.json'];
-      
+    let cancelled = false;
+    (async () => {
       try {
-        const cache = await caches.open(CACHE_NAME);
-        const cachedResponses = await Promise.all(urls.map(url => cache.match(url)));
-        
-        let dataToSet: ItemConteudo[] = [];
-
-        if (cachedResponses.every(res => res)) {
-          const cachedData = await Promise.all(cachedResponses.map(res => res!.json()));
-          dataToSet = await montarBanco(cachedData[0], cachedData[1]);
-          setBancoTotal(dataToSet);
-          setBancoRandom(shuffleArray(dataToSet));
-          setLoading(false);
-          console.log("⚡ Indices carregados do Cache Storage");
-        }
-
-        const networkResponses = await Promise.all(urls.map(url => fetch(url)));
-        const clonedResponses = networkResponses.map(res => res.clone());
-        const networkData = await Promise.all(networkResponses.map(res => res.json()));
-        
-        await Promise.all(clonedResponses.map((res, i) => cache.put(urls[i], res)));
-        
-        const finalData = await montarBanco(networkData[0], networkData[1]);
-        setBancoTotal(finalData);
-        setBancoRandom(shuffleArray(finalData));
-        console.log("🔄 Indices atualizados via Network");
+        const boot = await loadHomeBootstrap();
+        if (cancelled) return;
+        setBancoTotal(boot.items);
+        setBancoRandom(shuffleArray(boot.items.filter((i) => i.tipo === 'frase')));
+        setTagsBootstrap(boot.tags);
       } catch (e) {
-        console.error("Falha na sincronização Edge", e);
+        console.error('Falha ao carregar home-bootstrap', e);
       } finally {
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       }
+      scheduleCatalogPrefetch((full) => {
+        if (cancelled) return;
+        setBancoTotal(full.items);
+        setBancoRandom(shuffleArray(full.items.filter((i) => i.tipo === 'frase')));
+        setTagsBootstrap(full.tags);
+      });
+    })();
+    return () => {
+      cancelled = true;
     };
-    carregarIndices();
   }, []);
 
   const tagRegistry = useMemo(() => buildTagRegistry(bancoTotal), [bancoTotal]);
 
   const tagsUnicas = useMemo(() => {
-    return tagRegistry.map((r) => r.tag);
-  }, [tagRegistry]);
+    const fromRegistry = tagRegistry.map((r) => r.tag);
+    return fromRegistry.length ? fromRegistry : tagsBootstrap;
+  }, [tagRegistry, tagsBootstrap]);
 
   return (
     <BrowserRouter>
@@ -202,7 +179,7 @@ export default function App() {
           )}
         </AnimatePresence>
 
-        {/* SEO GLOBAL DINÂMICO BASE */}
+        {/* SEO GLOBAL DINÃ‚MICO BASE */}
         <MudarMetaSEO
           title={t('app.title')}
           description={DEFAULT_DESCRIPTION}
@@ -236,23 +213,23 @@ export default function App() {
           <SocialHub tema={tema} />
         </div>
 
-        {/* SUBHEADER DE NAVEGAÇÃO REFORÇADA */}
+        {/* SUBHEADER DE NAVEGAÃ‡ÃƒO REFORÃ‡ADA */}
         <div className={`py-4 border-b sticky top-20 z-30 backdrop-blur-md transition-colors ${
           tema === 'light' ? 'bg-purple-50/80 border-purple-100/50' : 'bg-[#050505]/90 border-purple-900/20'
         }`}>
           <div className="max-w-5xl mx-auto px-4 flex justify-center gap-12 md:gap-20">
             <Link to="/frases" className={`text-[11px] font-black uppercase tracking-[0.4em] transition-all flex items-center gap-2.5 ${tema === 'light' ? 'text-purple-600' : 'text-purple-400'} hover:scale-105 active:scale-95`}>
               <div className="w-1 h-1 bg-purple-500 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.5)]"></div>
-              Frases
+              {t('nav.quotes')}
             </Link>
             <Link to="/metaforas" className={`text-[11px] font-black uppercase tracking-[0.4em] transition-all flex items-center gap-2.5 ${tema === 'light' ? 'text-purple-600' : 'text-purple-400'} hover:scale-105 active:scale-95`}>
               <div className="w-1 h-1 bg-purple-500 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.5)]"></div>
-              Metáforas
+              {t('nav.metaforas')}
             </Link>
           </div>
         </div>
 
-        {/* ROTAS DA APLICAÇÃO */}
+        {/* ROTAS DA APLICAÃ‡ÃƒO */}
         <div className="flex-1 flex flex-col">
           {loading ? (
             <div className="flex-1 flex items-center justify-center">
@@ -262,31 +239,46 @@ export default function App() {
               </div>
             </div>
           ) : (
-            <Routes>
-              <Route path="/" element={<HomeView tema={tema} toast={mostrarToast} banco={bancoTotal} tags={tagsUnicas} bancoRandom={bancoRandom} />} />
-              <Route path="/frases" element={<FrasesView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
-              <Route path="/frases/:slug" element={<FraseDetalheView tema={tema} toast={mostrarToast} />} />
-              <Route path="/metaforas" element={<MetaforasView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
-              <Route path="/metafora/:id/*" element={<MetaforaDetalheView tema={tema} banco={bancoTotal} toast={mostrarToast} />} />
-              <Route path="/sobre" element={<Contact tema={tema} />} />
-              <Route path="/contato" element={<Contact tema={tema} />} />
-              <Route path="/privacidade" element={<Privacy tema={tema} />} />
-              <Route path="/termos" element={<Terms tema={tema} />} />
-              <Route path="/cookies" element={<Cookies tema={tema} />} />
-              <Route
-                path="/:tagSlug"
-                element={
-                  <TagCategoriaView
-                    tema={tema}
-                    toast={mostrarToast}
-                    banco={bancoTotal}
-                    registry={tagRegistry}
-                    AdBanner={AdBanner}
-                    MudarMetaSEO={MudarMetaSEO}
+            <Suspense
+              fallback={
+                <div className="flex-1 flex items-center justify-center py-20">
+                  <div className="w-10 h-10 border-4 border-[#A855F7] border-t-transparent rounded-full animate-spin" />
+                </div>
+              }
+            >
+              <Routes>
+                <Route path="/" element={<HomeView tema={tema} toast={mostrarToast} banco={bancoTotal} bancoRandom={bancoRandom} />} />
+                <Route path="/frases" element={<FrasesView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
+                <Route path="/frases/:slug" element={<FraseDetalheView tema={tema} toast={mostrarToast} />} />
+                {SEO_LOCALES.map((lang) => (
+                  <Route
+                    key={lang}
+                    path={`/${lang}/frases/:slug`}
+                    element={<FraseDetalheView tema={tema} toast={mostrarToast} />}
                   />
-                }
-              />
-            </Routes>
+                ))}
+                <Route path="/metaforas" element={<MetaforasView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
+                <Route path="/metafora/:id/*" element={<MetaforaDetalheView tema={tema} banco={bancoTotal} toast={mostrarToast} />} />
+                <Route path="/sobre" element={<Contact tema={tema} />} />
+                <Route path="/contato" element={<Contact tema={tema} />} />
+                <Route path="/privacidade" element={<Privacy tema={tema} />} />
+                <Route path="/termos" element={<Terms tema={tema} />} />
+                <Route path="/cookies" element={<Cookies tema={tema} />} />
+                <Route
+                  path="/:tagSlug"
+                  element={
+                    <TagCategoriaView
+                      tema={tema}
+                      toast={mostrarToast}
+                      banco={bancoTotal}
+                      registry={tagRegistry}
+                      AdBanner={AdSlot}
+                      MudarMetaSEO={MudarMetaSEO}
+                    />
+                  }
+                />
+              </Routes>
+            </Suspense>
           )}
         </div>
 
@@ -298,7 +290,7 @@ export default function App() {
             <Link to="/termos">{t('nav.terms')}</Link>
             <Link to="/cookies">{t('nav.cookies')}</Link>
           </div>
-          <p>© 2025 Metamensagem.com. Todos os direitos reservados.</p>
+          <p>Â© 2025 Metamensagem.com. Todos os direitos reservados.</p>
         </footer>
       </div>
     </BrowserRouter>
@@ -310,42 +302,11 @@ export default function App() {
 // ===================================================
 
 /**
- * Zonas de conteúdo para AdSense Auto Ads (in-feed / in-page).
- * Detectadas em: HomeView, FrasesView, MetaforasView (a cada 6 cards), MetaforaDetalheView (rodapé).
- * Sem <ins> manual — o Google Auto Ads usa a estrutura da página; min-height reduz CLS.
+ * Zonas de conteÃºdo para AdSense Auto Ads (in-feed / in-page).
+ * Detectadas em: HomeView, FrasesView, MetaforasView (a cada 6 cards), MetaforaDetalheView (rodapÃ©).
+ * Sem <ins> manual â€” o Google Auto Ads usa a estrutura da pÃ¡gina; min-height reduz CLS.
  */
-function AdBanner({
-  tema,
-  placement,
-}: {
-  tema: string;
-  placement:
-    | 'home-in-feed'
-    | 'frases-in-feed'
-    | 'metaforas-in-feed'
-    | 'metafora-detail-footer'
-    | 'tag-in-feed';
-}) {
-  return (
-    <aside
-      data-mm-ad-zone="adsense-auto-ads"
-      data-mm-ad-placement={placement}
-      aria-label="Área de publicidade"
-      className={`w-full min-h-[90px] py-10 px-6 rounded-[2.5rem] border-2 border-dashed flex flex-col items-center justify-center text-center transition-all ${
-        tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-400' : 'bg-zinc-950 border-zinc-900 text-zinc-700'
-      }`}
-    >
-      <span className="text-[10px] font-mono tracking-[0.5em] uppercase mb-2 pointer-events-none select-none">
-        Espaço para Monetização
-      </span>
-      <p className="text-[9px] opacity-40 uppercase tracking-widest pointer-events-none select-none">
-        Publicidade Responsiva MM
-      </p>
-    </aside>
-  );
-}
-
-// COMPONENTE AUXILIAR SEO DINÂMICO
+// COMPONENTE AUXILIAR SEO DINÃ‚MICO
 function MudarMetaSEO({
   title,
   description,
@@ -366,7 +327,7 @@ function MudarMetaSEO({
     const desc = description?.trim() || DEFAULT_DESCRIPTION;
     const canon =
       canonical ||
-      `${SITE_ORIGIN}${window.location.pathname}${window.location.search || ''}`;
+      absoluteUrl(`${window.location.pathname}${window.location.search || ''}`);
     const pageUrl = canon;
 
     document.title = siteTitle;
@@ -460,7 +421,7 @@ function HeaderBrandButton() {
       type="button"
       onClick={handleClick}
       className="flex items-center gap-2.5 group min-w-0 cursor-pointer bg-transparent border-0 p-0 text-left"
-      aria-label="Metamensagem — atualizar página"
+      aria-label="Metamensagem â€” atualizar pÃ¡gina"
     >
       <img
         src="/brand/logo.svg"
@@ -478,17 +439,29 @@ function HeaderBrandButton() {
 }
 
 // ===================================================
-// VISÃO: HOME (CONSUMO DE INDEX)
+// VISÃƒO: HOME (CONSUMO DE INDEX)
 // ===================================================
-function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toast: any; banco: ItemConteudo[]; tags: string[]; bancoRandom: ItemConteudo[] }) {
+function HomeView({ tema, toast, banco, bancoRandom }: { tema: string; toast: any; banco: ItemConteudo[]; bancoRandom: ItemConteudo[] }) {
   const { t } = useTranslation();
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(10);
-  const [itemPost, setItemPost] = useState<ItemConteudo | null>(null);
+  const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
+  const bancoFrases = useMemo(() => banco.filter((i) => i.tipo === 'frase'), [banco]);
+  const bancoRandomFrases = useMemo(
+    () => bancoRandom.filter((i) => i.tipo === 'frase'),
+    [bancoRandom]
+  );
+  const tagsFrases = useMemo(
+    () =>
+      Array.from(new Set(bancoFrases.flatMap((f) => f.tags || [])))
+        .sort()
+        .slice(0, 12),
+    [bancoFrases]
+  );
   const resultadosFiltrados = useMemo(() => {
-    if (!busca.trim()) return bancoRandom;
-    return searchBancoSemantico(banco, busca);
-  }, [busca, banco, bancoRandom]);
+    if (!busca.trim()) return bancoRandomFrases;
+    return searchBancoSemantico(bancoFrases, busca);
+  }, [busca, bancoFrases, bancoRandomFrases]);
 
   const itensHome = useMemo(
     () =>
@@ -508,40 +481,55 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
       <MudarMetaSEO
         title={t('app.tagline')}
         description={DEFAULT_DESCRIPTION}
-        canonical={`${SITE_ORIGIN}/`}
+        canonical={SITE_ORIGIN}
       />
 
-      <section className="text-center py-12">
-        <motion.h1 
+      <section className="text-center pt-2 pb-6 md:pt-4 md:pb-8">
+        <motion.h1
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="text-5xl md:text-7xl font-black mb-8 tracking-tighter leading-none"
+          className="text-5xl md:text-7xl font-black mb-3 tracking-tighter leading-none"
         >
-          {t('app.tagline').split('Mudança.')[0]} <br />
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8B5CF6] via-[#A855F7] to-[#D946EF]">Mudança.</span>
+          {t('app.tagline_before')} <br />
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8B5CF6] via-[#A855F7] to-[#D946EF]">
+            {t('app.tagline_highlight')}
+          </span>
         </motion.h1>
-        
+        <p
+          className={`text-sm md:text-[15px] font-medium tracking-wide max-w-md mx-auto mb-8 ${
+            tema === 'light' ? 'text-zinc-500' : 'text-zinc-400/90'
+          }`}
+        >
+          {t('app.slogan')}
+        </p>
+
         <div className="relative max-w-2xl mx-auto">
           <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-zinc-500" size={20} />
-          <input 
-            type="text" 
-            placeholder={t('home.search_placeholder')} 
+          <input
+            type="text"
+            placeholder={t('home.search_placeholder')}
             value={busca}
-            onChange={e => { setBusca(e.target.value); setItensVisiveis(10); }}
+            onChange={(e) => {
+              setBusca(e.target.value);
+              setItensVisiveis(10);
+            }}
             className={`w-full py-5 pl-14 pr-6 rounded-[2rem] border-2 font-medium outline-none transition-all shadow-xl ${
-              tema === 'light' ? 'bg-white border-zinc-100 text-black focus:border-[#A855F7] shadow-zinc-200' : 'bg-zinc-900 border-zinc-800 text-white focus:border-[#A855F7] shadow-black/50'
+              tema === 'light'
+                ? 'bg-white border-zinc-100 text-black focus:border-[#A855F7] shadow-zinc-200'
+                : 'bg-zinc-900 border-zinc-800 text-white focus:border-[#A855F7] shadow-black/50'
             }`}
           />
         </div>
 
-        {/* TAG CLOUD — links indexáveis (filtro local permanece na barra de busca) */}
         <div className="flex flex-wrap justify-center gap-2 mt-8 max-w-2xl mx-auto">
-          {tags.slice(0, 12).map(tag => (
+          {tagsFrases.map((tag) => (
             <Link
               key={tag}
               to={pathFromTag(tag)}
               className={`px-3.5 py-1.5 rounded-full text-[11px] font-bold border transition-colors ${
-                tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-600 hover:border-[#A855F7] hover:text-[#A855F7]' : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:border-[#A855F7] hover:text-[#A855F7]'
+                tema === 'light'
+                  ? 'bg-zinc-100 border-zinc-200 text-zinc-600 hover:border-[#A855F7] hover:text-[#A855F7]'
+                  : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:border-[#A855F7] hover:text-[#A855F7]'
               }`}
             >
               #{tag}
@@ -562,7 +550,7 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
                   animate={{ opacity: 1 }}
                   className="col-span-full h-full"
                 >
-                  <AdBanner tema={tema} placement="home-in-feed" />
+                  <AdSlot tema={tema} placement="home-in-feed" />
                 </motion.div>
               );
             }
@@ -574,7 +562,9 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
                 item={item}
                 tema={tema}
                 toast={toast}
-                onEditImage={item.tipo === 'frase' ? setItemPost : undefined}
+                onGenerateImage={
+                  item.tipo === 'frase' ? (quote) => setImageQuote(quote) : undefined
+                }
               />
             );
           })}
@@ -592,19 +582,22 @@ function HomeView({ tema, toast, banco, tags, bancoRandom }: { tema: string; toa
 
       <SocialHub tema={tema} />
 
-      {itemPost && (
-        <CustomModalGeradorPost
-          item={itemPost}
-          onClose={() => setItemPost(null)}
-          toast={toast}
-          temaGlobal={tema}
-        />
+      {imageQuote && (
+        <Suspense fallback={null}>
+          <ImageGeneratorModal
+            open
+            quote={imageQuote}
+            onClose={() => setImageQuote(null)}
+            toast={toast}
+            tema={tema}
+          />
+        </Suspense>
       )}
     </motion.div>
   );
 }
 
-/** Contador discreto abaixo do título (coleção / filtro ativo). */
+/** Contador discreto abaixo do tÃ­tulo (coleÃ§Ã£o / filtro ativo). */
 function ColecaoContador({
   tema,
   total,
@@ -623,8 +616,8 @@ function ColecaoContador({
   const rotulo = total === 1 ? singular : plural;
   const texto =
     buscaAtiva && visiveis !== undefined && visiveis !== total
-      ? `${visiveis.toLocaleString('pt-BR')} de ${total.toLocaleString('pt-BR')} ${rotulo} disponíveis`
-      : `${total.toLocaleString('pt-BR')} ${rotulo} disponíveis`;
+      ? `${visiveis.toLocaleString('pt-BR')} de ${total.toLocaleString('pt-BR')} ${rotulo} disponÃ­veis`
+      : `${total.toLocaleString('pt-BR')} ${rotulo} disponÃ­veis`;
 
   return (
     <p
@@ -639,12 +632,12 @@ function ColecaoContador({
 }
 
 // ===================================================
-// VISÃO: LISTA DE FRASES
+// VISÃƒO: LISTA DE FRASES
 // ===================================================
 function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: ItemConteudo[] }) {
   const { t } = useTranslation();
   const [busca, setBusca] = useState('');
-  const [itemPost, setItemPost] = useState<ItemConteudo | null>(null);
+  const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
   const baseFrases = useMemo(() => {
     const list = banco.filter(i => i.tipo === 'frase');
     const newArr = [...list];
@@ -657,8 +650,8 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
 
   const frases = useMemo(() => {
     if (!busca.trim()) return baseFrases;
-    return searchBancoSemantico(baseFrases, busca, ['texto', 'autor', 'tags']);
-  }, [busca, baseFrases]);
+      return searchBancoSemantico(baseFrases, busca);
+    }, [busca, baseFrases]);
 
   const tags = useMemo(() => {
     return Array.from(new Set(baseFrases.flatMap(f => f.tags || []))).sort().slice(0, 10);
@@ -677,13 +670,13 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
     >
       <MudarMetaSEO
         title="Banco Total de Frases"
-        description="Explore milhares de insights e citações curtas catalogadas para status, redes sociais e reflexão."
-        canonical={`${SITE_ORIGIN}/frases`}
+        description="Explore milhares de insights e citaÃ§Ãµes curtas catalogadas para status, redes sociais e reflexÃ£o."
+        canonical={absoluteUrl('/frases')}
       />
       
       <div className="text-center mb-12">
         <h2 className="text-3xl font-black mb-2 uppercase tracking-widest text-[#A855F7] flex items-center justify-center gap-3">
-          <Quote /> Coleção de Frases
+          <Quote /> ColeÃ§Ã£o de Frases
         </h2>
         <ColecaoContador
           tema={tema}
@@ -717,7 +710,7 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
           if (itemObj.tipoItem === 'anuncio') {
             return (
               <div key={itemObj.id} className="col-span-full">
-                <AdBanner tema={tema} placement="frases-in-feed" />
+                <AdSlot tema={tema} placement="frases-in-feed" />
               </div>
             );
           }
@@ -728,7 +721,7 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
               item={itemObj.content}
               tema={tema}
               toast={toast}
-              onEditImage={setItemPost}
+              onGenerateImage={(quote) => setImageQuote(quote)}
             />
           );
         })}
@@ -736,12 +729,13 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
       
       <SocialHub tema={tema} />
 
-      {itemPost && (
-        <CustomModalGeradorPost
-          item={itemPost}
-          onClose={() => setItemPost(null)}
+      {imageQuote && (
+        <ImageGeneratorModal
+          open
+          quote={imageQuote}
+          onClose={() => setImageQuote(null)}
           toast={toast}
-          temaGlobal={tema}
+          tema={tema}
         />
       )}
     </motion.div>
@@ -749,7 +743,7 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
 }
 
 // ===================================================
-// VISÃO: LISTA DE METÁFORAS
+// VISÃƒO: LISTA DE METÃFORAS
 // ===================================================
 function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco: ItemConteudo[] }) {
   const { t } = useTranslation();
@@ -758,7 +752,7 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
 
   const metaforas = useMemo(() => {
     if (!busca.trim()) return baseMetaforas;
-    return searchBancoSemantico(baseMetaforas, busca, ['titulo', 'texto', 'autor', 'tags', 'resumo']);
+    return searchBancoSemantico(baseMetaforas, busca);
   }, [busca, baseMetaforas]);
 
   const tags = useMemo(() => {
@@ -777,28 +771,28 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
       className="max-w-7xl w-full mx-auto px-4 py-8 flex-1"
     >
       <MudarMetaSEO
-        title="Índice de Metáforas Terapêuticas"
-        description="Contos e narrativas profundas focadas em psicologia aplicada, insights inconscientes e reprogramação de atitudes."
-        canonical={`${SITE_ORIGIN}/metaforas`}
+        title="Ãndice de MetÃ¡foras TerapÃªuticas"
+        description="Contos e narrativas profundas focadas em psicologia aplicada, insights inconscientes e reprogramaÃ§Ã£o de atitudes."
+        canonical={absoluteUrl('/metaforas')}
       />
       
       <div className="text-center mb-12">
         <h2 className="text-3xl font-black mb-2 uppercase tracking-widest text-[#A855F7] flex items-center justify-center gap-3">
-          <BookOpen /> Arquivo de Metáforas
+          <BookOpen /> Arquivo de MetÃ¡foras
         </h2>
         <ColecaoContador
           tema={tema}
           total={baseMetaforas.length}
           visiveis={metaforas.length}
           buscaAtiva={!!busca.trim()}
-          singular="metáfora"
-          plural="metáforas"
+          singular="metÃ¡fora"
+          plural="metÃ¡foras"
         />
         <div className="relative max-w-xl mx-auto">
           <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />
           <input 
             type="text" 
-            placeholder="Encontrar metáfora..." 
+            placeholder="Encontrar metÃ¡fora..." 
             value={busca}
             onChange={e => setBusca(e.target.value)}
             className={`w-full py-4 pl-14 pr-6 rounded-2xl border-2 font-medium outline-none transition-all ${
@@ -818,7 +812,7 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
           if (itemObj.tipoItem === 'anuncio') {
             return (
               <div key={itemObj.id} className="col-span-full">
-                <AdBanner tema={tema} placement="metaforas-in-feed" />
+                <AdSlot tema={tema} placement="metaforas-in-feed" />
               </div>
             );
           }
@@ -839,7 +833,7 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
   );
 }
 
-// VISÃO: DETALHE DA METÁFORA (CARREGAMENTO DINÂMICO ESTRUTURADO)
+// VISÃƒO: DETALHE DA METÃFORA (CARREGAMENTO DINÃ‚MICO ESTRUTURADO)
 // ===================================================
 function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: ItemConteudo[]; toast: any }) {
   const { t } = useTranslation();
@@ -852,6 +846,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
     isTranslated: false,
   });
   const [translating, setTranslating] = useState(false);
+  useTranslatedViewMeta(display.isTranslated);
 
   const navigation = useMemo(() => {
     if (!id || banco.length === 0) return { prev: null, next: null };
@@ -920,7 +915,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
     );
   }
 
-  if (!item) return <div className="p-20 text-center text-red-500">Metáfora não localizada no fragmento de borda.</div>;
+  if (!item) return <div className="p-20 text-center text-red-500">MetÃ¡fora nÃ£o localizada no fragmento de borda.</div>;
 
   const palavras = item.texto ? item.texto.split(/\s+/).length : 0;
   const tempoLeitura = Math.ceil(palavras / 200);
@@ -933,7 +928,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
     description: item.resumo,
     abstract: item.resumo,
     articleBody: item.texto?.substring(0, 5000),
-    author: { '@type': 'Person', name: item.autor || 'Anônimo' },
+    author: { '@type': 'Person', name: item.autor || 'AnÃ´nimo' },
     url: canonicalUrl,
     mainEntityOfPage: canonicalUrl,
     publisher: {
@@ -952,7 +947,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       className="max-w-4xl w-full mx-auto px-4 py-12 flex-1"
     >
       <MudarMetaSEO
-        title={item.titulo || 'Metáfora terapêutica'}
+        title={item.titulo || 'MetÃ¡fora terapÃªutica'}
         description={item.resumo || DEFAULT_DESCRIPTION}
         canonical={canonicalUrl}
         ogType="article"
@@ -962,7 +957,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       <div className={`mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b pb-10 ${tema === 'light' ? 'border-zinc-200' : 'border-zinc-800'}`}>
         <div className="flex-1">
           <Link to="/metaforas" className="text-[10px] uppercase font-black text-[#A855F7] tracking-[0.2em] mb-4 flex items-center gap-2 hover:gap-3 transition-all">
-            <ChevronRight size={12} className="rotate-180" /> Metáfora Terapêutica
+            <ChevronRight size={12} className="rotate-180" /> MetÃ¡fora TerapÃªutica
           </Link>
           <AnimatePresence mode="wait">
             <motion.h1
@@ -977,7 +972,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
             </motion.h1>
           </AnimatePresence>
           <div className="flex items-center gap-4 text-xs font-bold text-zinc-500">
-            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><BookOpen size={14} /> ~{tempoLeitura} MIN DE REFLEXÃO</span>
+            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><BookOpen size={14} /> ~{tempoLeitura} MIN DE REFLEXÃƒO</span>
             <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><Quote size={14} /> SABEDORIA SECULAR</span>
           </div>
         </div>
@@ -1018,7 +1013,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
               onClick={() => {
                 const titulo = display.titulo ?? item.titulo;
                 const texto = display.texto || item.texto;
-                navigator.clipboard.writeText(`${titulo}\n\n${texto}\n— ${item.autor}`);
+                navigator.clipboard.writeText(`${titulo}\n\n${texto}\nâ€” ${item.autor}`);
                 toast(t('common.copied'));
               }}
               className={`${CARD_ACTION_BTN} ${cardNeutralActionClass(tema)}`}
@@ -1055,7 +1050,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
 
        <SocialHub tema={tema} />
 
-      {/* NAVEGAÇÃO ENTRE METAFORAS */}
+      {/* NAVEGAÃ‡ÃƒO ENTRE METAFORAS */}
       <div className="mt-12 flex flex-col sm:flex-row justify-between gap-4">
         {navigation.prev ? (
           <Link 
@@ -1076,7 +1071,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
             className={`flex-1 flex items-center justify-end gap-3 p-5 rounded-3xl border transition-all ${tema === 'light' ? 'bg-white border-zinc-100 hover:bg-zinc-50' : 'bg-zinc-900/50 border-white/5 hover:bg-zinc-900'}`}
           >
             <div className="text-right overflow-hidden">
-              <span className="text-[8px] font-black text-zinc-500 uppercase block mb-1">Próxima</span>
+              <span className="text-[8px] font-black text-zinc-500 uppercase block mb-1">PrÃ³xima</span>
               <span className="text-xs font-bold truncate block leading-tight">{navigation.next.titulo}</span>
             </div>
             <ChevronRight size={16} className="text-purple-500 shrink-0" />
@@ -1085,11 +1080,12 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       </div>
       
       <div className="mt-12">
-        <AdBanner tema={tema} placement="metafora-detail-footer" />
+        <AdSlot tema={tema} placement="metafora-detail-footer" />
       </div>
     </motion.div>
   );
 }
+
 
 
 

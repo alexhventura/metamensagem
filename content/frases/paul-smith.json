@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_4db941cbf3",
+    "slug": "a-story-is-the-shortest-distance-between-being-a-stranger-and-being-a-friend",
+    "texto": "A story is the shortest distance between being a stranger and being a friend.",
+    "autor": "Paul Smith",
+    "autorSlug": "paul-smith",
+    "explicacao": "Citação de Paul Smith sobre temas ligados a amizade. “A story is the shortest distance between being a stranger and being a friend.” articula amizade, story, stranger em registro de amizade, com relevância para contextos como termino e story.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "story",
+        "stranger"
+      ],
+      "contextos": [
+        "termino",
+        "story",
+        "stranger"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "story",
+        "stranger",
+        "being",
+        "shortest",
+        "distance",
+        "between"
+      ],
+      "palavrasChave": [
+        "amizade",
+        "story",
+        "stranger",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "story",
+        "stranger",
+        "termino",
+        "paul-smith"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "story",
+        "stranger",
+        "being",
+        "shortest",
+        "distance"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A story is the shortest distance between being a str…\" — Paul Smith | Metamensagem",
+      "descriptionSeo": "Citação de Paul Smith sobre temas ligados a amizade. “A story is the shortest distance between being a stranger and being a friend.” articula amizade, story,…",
+      "keywordsSeo": [
+        "frases de Paul Smith",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases story",
+        "frases termino",
+        "amizade",
+        "story",
+        "stranger",
+        "termino"
+      ],
+      "canonicalSlug": "a-story-is-the-shortest-distance-between-being-a-stranger-and-being-a-friend",
+      "relatedKeywords": [
+        "amizade",
+        "story",
+        "stranger",
+        "paul-smith"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A story is the shortest distance between being a stranger and being a friend.",
+    "autor_original": "Paul Smith",
+    "autor_slug": "paul-smith",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "story",
+      "stranger"
+    ],
+    "palavras_chave": [
+      "amizade",
+      "story",
+      "stranger",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

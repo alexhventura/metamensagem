@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_4e5cc6bd23",
+    "slug": "i-may-be-small-but-i-ve-got-friends-that-make-me-ten-feet-tall",
+    "texto": "I may be small, but I've got friends that make me ten feet tall.",
+    "autor": "Mickey Mouse",
+    "autorSlug": "mickey-mouse",
+    "explicacao": "Citação de Mickey Mouse sobre temas ligados a amizade. “I may be small, but I've got friends that make me ten feet tall.” articula amizade, friends, small em registro de amizade, com relevância para contextos como termino e amizade.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "friends"
+      ],
+      "contextos": [
+        "termino",
+        "amizade"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "friends",
+        "small"
+      ],
+      "palavrasChave": [
+        "friends",
+        "amizade",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "friends",
+        "termino",
+        "mickey-mouse"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "friends",
+        "small",
+        "amizade",
+        "friends"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I may be small, but I've got friends that make me te…\" — Mickey Mouse | Metamensagem",
+      "descriptionSeo": "Citação de Mickey Mouse sobre temas ligados a amizade. “I may be small, but I've got friends that make me ten feet tall.” articula amizade, friends, small em…",
+      "keywordsSeo": [
+        "frases de Mickey Mouse",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases friends",
+        "frases termino",
+        "friends",
+        "amizade",
+        "termino"
+      ],
+      "canonicalSlug": "i-may-be-small-but-i-ve-got-friends-that-make-me-ten-feet-tall",
+      "relatedKeywords": [
+        "amizade",
+        "friends",
+        "mickey-mouse"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I may be small, but I've got friends that make me ten feet tall.",
+    "autor_original": "Mickey Mouse",
+    "autor_slug": "mickey-mouse",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "amizade"
+    ],
+    "palavras_chave": [
+      "friends",
+      "amizade",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

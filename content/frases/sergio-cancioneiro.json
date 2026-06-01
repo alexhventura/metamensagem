@@ -2,29 +2,127 @@
   {
     "id": "f_z2an41gt8",
     "slug": "o-otimista-tem-a-leveza-na-alma-a-pureza-na-mente-e-a-benevo",
+    "texto": "O otimista tem a leveza na alma a pureza na mente e a benevolência no coração, o pessimista o peso, a poluição, e a negatividade.",
+    "autor": "Sérgio Cancioneiro",
+    "autorSlug": "sergio-cancioneiro",
+    "explicacao": "Sérgio Cancioneiro opõe otimista e pessimista em termos de alma, mente e coração. Leveza e benevolência versus peso e negatividade. Defesa poética de uma postura luminosa diante do mundo.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "sabedoria"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "otimismo",
+        "sabedoria"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "leveza",
+        "pureza",
+        "mente"
+      ],
+      "palavrasChave": [
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "sabedoria",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "sabedoria",
+        "inspiracao",
+        "sergio-cancioneiro"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 40,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "leveza"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O otimista tem a leveza na alma a pureza na mente e …\" — Sérgio Cancioneiro | Metamensagem",
+      "descriptionSeo": "Sérgio Cancioneiro opõe otimista e pessimista em termos de alma, mente e coração. Leveza e benevolência versus peso e negatividade. Defesa poética de uma post…",
+      "keywordsSeo": [
+        "frases de Sérgio Cancioneiro",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases fe",
+        "frases inspiracao",
+        "frases inspiracional",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "sabedoria"
+      ],
+      "canonicalSlug": "o-otimista-tem-a-leveza-na-alma-a-pureza-na-mente-e-a-benevo",
+      "relatedKeywords": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "sabedoria",
+        "sergio-cancioneiro"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O otimista tem a leveza na alma a pureza na mente e a benevolência no coração, o pessimista o peso, a poluição, e a negatividade.",
     "autor_original": "Sérgio Cancioneiro",
-    "categoria": "fe",
+    "autor_slug": "sergio-cancioneiro",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "otimismo",
       "sabedoria"
     ],
-    "explicacao": "Sérgio Cancioneiro opõe otimista e pessimista em termos de alma, mente e coração. Leveza e benevolência versus peso e negatividade. Defesa poética de uma postura luminosa diante do mundo.",
     "palavras_chave": [
       "fe",
       "inspiracional",
       "otimismo",
-      "sabedoria"
+      "sabedoria",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,0 +1,108 @@
+[
+  {
+    "id": "f_csv_2ca490f503",
+    "slug": "hello-my-name-is-jaako-and-i-am-an-addict-i-am-addicted-to-reading",
+    "texto": "Hello, my name is Jaako and I am an addict. I am addicted to reading.",
+    "autor": "Jaako J. Wallenius",
+    "autorSlug": "jaako-j-wallenius",
+    "explicacao": "Citação de Jaako J. Wallenius sobre temas ligados a humor. “Hello, my name is Jaako and I am an addict. I am addicted to reading.” articula humor, addiction, reading em registro de humor, com relevância para contextos como humor e reading.",
+    "semantica": {
+      "categoriaPrincipal": "humor",
+      "categorias": [
+        "humor",
+        "addiction",
+        "reading"
+      ],
+      "contextos": [
+        "humor",
+        "reading"
+      ],
+      "emocoes": [],
+      "temas": [
+        "humor",
+        "addiction",
+        "reading",
+        "hello",
+        "jaako",
+        "addict",
+        "addicted"
+      ],
+      "palavrasChave": [
+        "addiction",
+        "humor",
+        "reading"
+      ],
+      "tagsSeo": [
+        "humor",
+        "addiction",
+        "reading",
+        "jaako-j-wallenius"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "humor",
+        "addiction",
+        "reading",
+        "hello",
+        "jaako",
+        "addict"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Hello, my name is Jaako and I am an addict. I am add…\" — Jaako J. Wallenius | Metamensagem",
+      "descriptionSeo": "Citação de Jaako J. Wallenius sobre temas ligados a humor. “Hello, my name is Jaako and I am an addict. I am addicted to reading.” articula humor, addiction,…",
+      "keywordsSeo": [
+        "frases de Jaako J. Wallenius",
+        "frases sobre humor",
+        "frases humor",
+        "frases addiction",
+        "frases reading",
+        "addiction",
+        "humor",
+        "reading"
+      ],
+      "canonicalSlug": "hello-my-name-is-jaako-and-i-am-an-addict-i-am-addicted-to-reading",
+      "relatedKeywords": [
+        "humor",
+        "addiction",
+        "reading",
+        "jaako-j-wallenius"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Hello, my name is Jaako and I am an addict. I am addicted to reading.",
+    "autor_original": "Jaako J. Wallenius",
+    "autor_slug": "jaako-j-wallenius",
+    "categoria": "humor",
+    "contextos": [
+      "humor",
+      "reading"
+    ],
+    "palavras_chave": [
+      "addiction",
+      "humor",
+      "reading"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

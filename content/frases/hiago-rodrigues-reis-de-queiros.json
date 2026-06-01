@@ -2,25 +2,113 @@
   {
     "id": "f_17cy4ppl6",
     "slug": "eu-nasci-otimista-mas-depois-descobri-que-iria-morrer",
+    "texto": "Eu nasci otimista, mas depois descobri que iria morrer.",
+    "autor": "Hiago Rodrigues Reis de Queirós",
+    "autorSlug": "hiago-rodrigues-reis-de-queiros",
+    "explicacao": "Hiago Rodrigues Reis de Queirós faz humor existencial: nasceu otimista até descobrir a mortalidade. Piada sobre choque entre ingenuidade infantil e consciência da finitude, com tom irônico e reflexivo.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "nasci",
+        "otimista",
+        "depois",
+        "descobri",
+        "morrer"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "hiago-rodrigues-reis-de-queiros"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "nasci",
+        "otimista",
+        "depois"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Eu nasci otimista, mas depois descobri que iria morrer.\" — Hiago Rodrigues Reis de Queirós | Metamensagem",
+      "descriptionSeo": "Hiago Rodrigues Reis de Queirós faz humor existencial: nasceu otimista até descobrir a mortalidade. Piada sobre choque entre ingenuidade infantil e consciênci…",
+      "keywordsSeo": [
+        "frases de Hiago Rodrigues Reis de Queirós",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "eu-nasci-otimista-mas-depois-descobri-que-iria-morrer",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "hiago-rodrigues-reis-de-queiros"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Eu nasci otimista, mas depois descobri que iria morrer.",
     "autor_original": "Hiago Rodrigues Reis de Queirós",
-    "categoria": "inspiracional",
+    "autor_slug": "hiago-rodrigues-reis-de-queiros",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Hiago Rodrigues Reis de Queirós faz humor existencial: nasceu otimista até descobrir a mortalidade. Piada sobre choque entre ingenuidade infantil e consciência da finitude, com tom irônico e reflexivo.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

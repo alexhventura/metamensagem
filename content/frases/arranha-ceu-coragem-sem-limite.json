@@ -2,27 +2,115 @@
   {
     "id": "f_6kkw47rfi",
     "slug": "tudo-e-possivel-com-a-motivacao-adequada",
+    "texto": "⁠Tudo é possível com a motivação adequada.",
+    "autor": "Arranha-Céu: Coragem Sem Limite",
+    "autorSlug": "arranha-ceu-coragem-sem-limite",
+    "explicacao": "Frase do filme de animação \"Arranha-Céu: Coragem Sem Limite\", ligada a motivação e coragem. Resume a moral da história: limites caem quando há propósito e incentivo suficientes para agir.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "coragem",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [
+        "coragem"
+      ],
+      "temas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "possível",
+        "motivação",
+        "adequada"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "inspiracao",
+        "arranha-ceu-coragem-sem-limite"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "possível",
+        "motivação",
+        "adequada"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠Tudo é possível com a motivação adequada.\" — Arranha-Céu: Coragem Sem Limite | Metamensagem",
+      "descriptionSeo": "Frase do filme de animação \"Arranha-Céu: Coragem Sem Limite\", ligada a motivação e coragem. Resume a moral da história: limites caem quando há propósito e inc…",
+      "keywordsSeo": [
+        "frases de Arranha-Céu: Coragem Sem Limite",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases coragem",
+        "frases inspiracao",
+        "frases inspiracional",
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "tudo-e-possivel-com-a-motivacao-adequada",
+      "relatedKeywords": [
+        "coragem",
+        "motivacao",
+        "inspiracional",
+        "arranha-ceu-coragem-sem-limite"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠Tudo é possível com a motivação adequada.",
     "autor_original": "Arranha-Céu: Coragem Sem Limite",
-    "categoria": "coragem",
+    "autor_slug": "arranha-ceu-coragem-sem-limite",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "Frase do filme de animação \"Arranha-Céu: Coragem Sem Limite\", ligada a motivação e coragem. Resume a moral da história: limites caem quando há propósito e incentivo suficientes para agir.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

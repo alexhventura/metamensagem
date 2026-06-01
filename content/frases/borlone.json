@@ -2,27 +2,116 @@
   {
     "id": "f_w6rwxvcak",
     "slug": "sonhe-lute-e-conquiste-voce-nasceu-pra-vencer",
+    "texto": "Sonhe, lute e conquiste. Você nasceu pra vencer!",
+    "autor": "Borlone",
+    "autorSlug": "borlone",
+    "explicacao": "Mensagem curta atribuída a Borlone, no estilo motivacional brasileiro. Encadeia sonho, luta e conquista como chamado existencial, afirmando que vencer faz parte da vocação humana.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "coragem",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [
+        "coragem"
+      ],
+      "temas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "sonhe",
+        "conquiste",
+        "nasceu",
+        "vencer"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "inspiracao",
+        "borlone"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "sonhe",
+        "conquiste",
+        "nasceu"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Sonhe, lute e conquiste. Você nasceu pra vencer!\" — Borlone | Metamensagem",
+      "descriptionSeo": "Mensagem curta atribuída a Borlone, no estilo motivacional brasileiro. Encadeia sonho, luta e conquista como chamado existencial, afirmando que vencer faz par…",
+      "keywordsSeo": [
+        "frases de Borlone",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases coragem",
+        "frases inspiracao",
+        "frases inspiracional",
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "sonhe-lute-e-conquiste-voce-nasceu-pra-vencer",
+      "relatedKeywords": [
+        "coragem",
+        "motivacao",
+        "inspiracional",
+        "borlone"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Sonhe, lute e conquiste. Você nasceu pra vencer!",
     "autor_original": "Borlone",
-    "categoria": "coragem",
+    "autor_slug": "borlone",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "Mensagem curta atribuída a Borlone, no estilo motivacional brasileiro. Encadeia sonho, luta e conquista como chamado existencial, afirmando que vencer faz parte da vocação humana.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -2,25 +2,113 @@
   {
     "id": "f_rriiswgwf",
     "slug": "o-otimista-pensa-que-este-e-o-melhor-de-todos-os-mundos-poss",
+    "texto": "O otimista pensa que este é o melhor de todos os mundos possíveis. O pessimista receia que isso seja verdade.",
+    "autor": "Robert Oppenheimer",
+    "autorSlug": "robert-oppenheimer",
+    "explicacao": "Robert Oppenheimer, físico da bomba atômica, faz trocadilho filosófico sobre otimismo e pessimismo. O otimista acha este o melhor mundo possível; o pessimista teme que seja. Ironia sobre visões opostas diante da mesma realidade.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "pensa",
+        "melhor",
+        "todos",
+        "mundos"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "robert-oppenheimer"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 34,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "pensa",
+        "melhor"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O otimista pensa que este é o melhor de todos os mun…\" — Robert Oppenheimer | Metamensagem",
+      "descriptionSeo": "Robert Oppenheimer, físico da bomba atômica, faz trocadilho filosófico sobre otimismo e pessimismo. O otimista acha este o melhor mundo possível; o pessimista…",
+      "keywordsSeo": [
+        "frases de Robert Oppenheimer",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "o-otimista-pensa-que-este-e-o-melhor-de-todos-os-mundos-poss",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "robert-oppenheimer"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O otimista pensa que este é o melhor de todos os mundos possíveis. O pessimista receia que isso seja verdade.",
     "autor_original": "Robert Oppenheimer",
-    "categoria": "inspiracional",
+    "autor_slug": "robert-oppenheimer",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Robert Oppenheimer, físico da bomba atômica, faz trocadilho filosófico sobre otimismo e pessimismo. O otimista acha este o melhor mundo possível; o pessimista teme que seja. Ironia sobre visões opostas diante da mesma realidade.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

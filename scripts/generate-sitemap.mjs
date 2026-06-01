@@ -5,10 +5,10 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { absoluteUrl } from './lib/site-url.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(__dirname, '..', 'public');
-const SITE = 'https://metamensagem.com';
 
 function slugFromTitulo(texto) {
   return texto
@@ -35,11 +35,13 @@ function urlEntry(loc, priority = '0.8', changefreq = 'monthly') {
   </url>`;
 }
 
+/** Rotas estáticas do SPA Vite (src/App.tsx). */
 const staticPages = [
   { path: '/', priority: '1.0', changefreq: 'daily' },
   { path: '/frases', priority: '0.9', changefreq: 'weekly' },
   { path: '/metaforas', priority: '0.9', changefreq: 'weekly' },
   { path: '/sobre', priority: '0.5', changefreq: 'yearly' },
+  { path: '/contato', priority: '0.5', changefreq: 'yearly' },
   { path: '/privacidade', priority: '0.3', changefreq: 'yearly' },
   { path: '/termos', priority: '0.3', changefreq: 'yearly' },
   { path: '/cookies', priority: '0.3', changefreq: 'yearly' },
@@ -75,7 +77,7 @@ function collectTagSlugs(items) {
 
 const tagSlugs = collectTagSlugs([...metaforas, ...frases]);
 const tagPages = tagSlugs.map((slug) =>
-  urlEntry(`${SITE}/${TAG_URL_PREFIX}-${slug}`, '0.85', 'weekly')
+  urlEntry(absoluteUrl(`/${TAG_URL_PREFIX}-${slug}`), '0.85', 'weekly')
 );
 
 const TAG_PATH_ALIASES = {
@@ -88,19 +90,19 @@ const TAG_PATH_ALIASES = {
   'mensagens-de-superacao': 'superacao',
   'mensagens-motivacionais': 'motivacao',
 };
-const aliasPages = Object.keys(TAG_PATH_ALIASES).map((path) =>
-  urlEntry(`${SITE}/${path}`, '0.84', 'weekly')
+const aliasPages = Object.keys(TAG_PATH_ALIASES).map((aliasPath) =>
+  urlEntry(absoluteUrl(`/${aliasPath}`), '0.84', 'weekly')
 );
 
 const entries = [
-  ...staticPages.map((p) => urlEntry(`${SITE}${p.path}`, p.priority, p.changefreq)),
+  ...staticPages.map((p) => urlEntry(absoluteUrl(p.path), p.priority, p.changefreq)),
   ...tagPages,
   ...aliasPages,
   ...metaforas.map((m) => {
     const slug = m.titulo ? slugFromTitulo(m.titulo) : '';
     const loc = slug
-      ? `${SITE}/metafora/${m.id}/${slug}`
-      : `${SITE}/metafora/${m.id}`;
+      ? absoluteUrl(`/metafora/${m.id}/${slug}`)
+      : absoluteUrl(`/metafora/${m.id}`);
     return urlEntry(loc, '0.7', 'monthly');
   }),
 ];

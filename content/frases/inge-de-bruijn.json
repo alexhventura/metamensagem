@@ -1,0 +1,111 @@
+[
+  {
+    "id": "f_csv_be8ada1a0d",
+    "slug": "i-love-to-smile",
+    "texto": "I love to smile.",
+    "autor": "Inge de Bruijn",
+    "autorSlug": "inge-de-bruijn",
+    "explicacao": "Citação de Inge de Bruijn sobre vínculos afetivos e cuidado mútuo. “I love to smile.” articula amor, love, i-love em registro de amor, com relevância para contextos como i-love.",
+    "semantica": {
+      "categoriaPrincipal": "amor",
+      "categorias": [
+        "amor",
+        "love",
+        "i-love"
+      ],
+      "contextos": [
+        "i-love"
+      ],
+      "emocoes": [
+        "alegria",
+        "amor"
+      ],
+      "temas": [
+        "amor",
+        "love",
+        "i-love",
+        "smile"
+      ],
+      "palavrasChave": [
+        "love",
+        "i-love",
+        "amor",
+        "alegria"
+      ],
+      "tagsSeo": [
+        "amor",
+        "love",
+        "i-love",
+        "alegria",
+        "inge-de-bruijn"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amor",
+        "love",
+        "i-love",
+        "smile",
+        "amor",
+        "love"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I love to smile.\" — Inge de Bruijn | Metamensagem",
+      "descriptionSeo": "Citação de Inge de Bruijn sobre vínculos afetivos e cuidado mútuo. “I love to smile.” articula amor, love, i-love em registro de amor, com relevância para con…",
+      "keywordsSeo": [
+        "frases de Inge de Bruijn",
+        "frases sobre amor",
+        "frases amor",
+        "frases love",
+        "frases i love",
+        "love",
+        "i-love",
+        "amor",
+        "alegria"
+      ],
+      "canonicalSlug": "i-love-to-smile",
+      "relatedKeywords": [
+        "alegria",
+        "amor",
+        "love",
+        "i-love",
+        "inge-de-bruijn"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I love to smile.",
+    "autor_original": "Inge de Bruijn",
+    "autor_slug": "inge-de-bruijn",
+    "categoria": "amor",
+    "contextos": [
+      "i-love"
+    ],
+    "palavras_chave": [
+      "love",
+      "i-love",
+      "amor",
+      "alegria"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

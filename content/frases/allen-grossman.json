@@ -1,0 +1,105 @@
+[
+  {
+    "id": "f_csv_58329ab82f",
+    "slug": "a-poem-is-about-something-the-way-a-cat-is-about-the-house",
+    "texto": "A poem is about something the way a cat is about the house.",
+    "autor": "Allen Grossman",
+    "autorSlug": "allen-grossman",
+    "explicacao": "Citação de Allen Grossman sobre temas ligados a reflexao. “A poem is about something the way a cat is about the house.” articula reflexao, poem, poetry em registro de reflexao, com relevância para contextos como poetry.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "poem",
+        "poetry"
+      ],
+      "contextos": [
+        "poetry"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "poem",
+        "poetry",
+        "about",
+        "something",
+        "house"
+      ],
+      "palavrasChave": [
+        "poem",
+        "poetry",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "poem",
+        "poetry",
+        "allen-grossman"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "poem",
+        "poetry",
+        "about",
+        "something",
+        "house"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A poem is about something the way a cat is about the…\" — Allen Grossman | Metamensagem",
+      "descriptionSeo": "Citação de Allen Grossman sobre temas ligados a reflexao. “A poem is about something the way a cat is about the house.” articula reflexao, poem, poetry em reg…",
+      "keywordsSeo": [
+        "frases de Allen Grossman",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases poem",
+        "frases poetry",
+        "poem",
+        "poetry",
+        "reflexao"
+      ],
+      "canonicalSlug": "a-poem-is-about-something-the-way-a-cat-is-about-the-house",
+      "relatedKeywords": [
+        "reflexao",
+        "poem",
+        "poetry",
+        "allen-grossman"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A poem is about something the way a cat is about the house.",
+    "autor_original": "Allen Grossman",
+    "autor_slug": "allen-grossman",
+    "categoria": "reflexao",
+    "contextos": [
+      "poetry"
+    ],
+    "palavras_chave": [
+      "poem",
+      "poetry",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

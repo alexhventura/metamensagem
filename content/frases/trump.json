@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_c3ee9ab68e",
+    "slug": "our-navy-is-great-our-navy-is-great-our-people-are-great-great",
+    "texto": "Our Navy is great. Our navy is great. Our people are great... Great.",
+    "autor": "Trump",
+    "autorSlug": "trump",
+    "explicacao": "Citação de Trump sobre temas ligados a reflexao. “Our Navy is great. Our navy is great. Our people are great... Great.” articula reflexao, great, people em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "great"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "great",
+        "people"
+      ],
+      "palavrasChave": [
+        "great",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "great",
+        "trump"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "great",
+        "people",
+        "reflexao",
+        "great"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Our Navy is great. Our navy is great. Our people are…\" — Trump | Metamensagem",
+      "descriptionSeo": "Citação de Trump sobre temas ligados a reflexao. “Our Navy is great. Our navy is great. Our people are great... Great.” articula reflexao, great, people em re…",
+      "keywordsSeo": [
+        "frases de Trump",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases great",
+        "great",
+        "reflexao"
+      ],
+      "canonicalSlug": "our-navy-is-great-our-navy-is-great-our-people-are-great-great",
+      "relatedKeywords": [
+        "reflexao",
+        "great",
+        "trump"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Our Navy is great. Our navy is great. Our people are great... Great.",
+    "autor_original": "Trump",
+    "autor_slug": "trump",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "great",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

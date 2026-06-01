@@ -2,27 +2,120 @@
   {
     "id": "f_gvlci90o0",
     "slug": "tomo-cuidado-pra-que-os-desequilibrados-nao-abalem-minha-fe",
+    "texto": "Tomo cuidado pra que os desequilibrados não abalem minha fé, pra eu enfrentar com otimismo essa loucura.",
+    "autor": "Chorão",
+    "autorSlug": "chorao",
+    "explicacao": "De Chorão, vocalista do Charlie Brown Jr., provavelmente de letra ou entrevista. Fala em proteger a fé contra pessoas desestabilizadoras e enfrentar a loucura do mundo com otimismo.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "cuidado",
+        "desequilibrados",
+        "abalem",
+        "minha"
+      ],
+      "palavrasChave": [
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "chorao"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 36,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "cuidado",
+        "desequilibrados"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Tomo cuidado pra que os desequilibrados não abalem m…\" — Chorão | Metamensagem",
+      "descriptionSeo": "De Chorão, vocalista do Charlie Brown Jr., provavelmente de letra ou entrevista. Fala em proteger a fé contra pessoas desestabilizadoras e enfrentar a loucura…",
+      "keywordsSeo": [
+        "frases de Chorão",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases fe",
+        "frases inspiracao",
+        "frases inspiracional",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "motivacao"
+      ],
+      "canonicalSlug": "tomo-cuidado-pra-que-os-desequilibrados-nao-abalem-minha-fe",
+      "relatedKeywords": [
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "chorao"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Tomo cuidado pra que os desequilibrados não abalem minha fé, pra eu enfrentar com otimismo essa loucura.",
     "autor_original": "Chorão",
-    "categoria": "fe",
+    "autor_slug": "chorao",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "De Chorão, vocalista do Charlie Brown Jr., provavelmente de letra ou entrevista. Fala em proteger a fé contra pessoas desestabilizadoras e enfrentar a loucura do mundo com otimismo.",
     "palavras_chave": [
       "fe",
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_b6c470fbf7",
+    "slug": "it-s-the-story-that-counts",
+    "texto": "It's the story that counts.",
+    "autor": "Vincente Minnelli",
+    "autorSlug": "vincente-minnelli",
+    "explicacao": "Citação de Vincente Minnelli sobre temas ligados a reflexao. “It's the story that counts.” articula reflexao, story, counts em registro de reflexao, com relevância para contextos como counts.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "story",
+        "counts"
+      ],
+      "contextos": [
+        "counts"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "story",
+        "counts"
+      ],
+      "palavrasChave": [
+        "story",
+        "counts",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "story",
+        "counts",
+        "vincente-minnelli"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "story",
+        "counts",
+        "reflexao",
+        "story"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"It's the story that counts.\" — Vincente Minnelli | Metamensagem",
+      "descriptionSeo": "Citação de Vincente Minnelli sobre temas ligados a reflexao. “It's the story that counts.” articula reflexao, story, counts em registro de reflexao, com relev…",
+      "keywordsSeo": [
+        "frases de Vincente Minnelli",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases story",
+        "frases counts",
+        "story",
+        "counts",
+        "reflexao"
+      ],
+      "canonicalSlug": "it-s-the-story-that-counts",
+      "relatedKeywords": [
+        "reflexao",
+        "story",
+        "counts",
+        "vincente-minnelli"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "It's the story that counts.",
+    "autor_original": "Vincente Minnelli",
+    "autor_slug": "vincente-minnelli",
+    "categoria": "reflexao",
+    "contextos": [
+      "counts"
+    ],
+    "palavras_chave": [
+      "story",
+      "counts",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,115 @@
+[
+  {
+    "id": "f_csv_1f8043dd0e",
+    "slug": "a-child-s-name-is-his-portal-to-the-world",
+    "texto": "A child's name is his portal to the world.",
+    "autor": "George Hagen",
+    "autorSlug": "george-hagen",
+    "explicacao": "Citação de George Hagen sobre temas ligados a familia. “A child's name is his portal to the world.” articula familia, birth, vida em registro de familia, com relevância para contextos como vida e name.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "birth",
+        "vida",
+        "name"
+      ],
+      "contextos": [
+        "vida",
+        "name"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "birth",
+        "vida",
+        "name",
+        "child",
+        "portal",
+        "world"
+      ],
+      "palavrasChave": [
+        "birth",
+        "vida",
+        "name",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "birth",
+        "vida",
+        "name",
+        "george-hagen"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "birth",
+        "vida",
+        "name",
+        "child",
+        "portal"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A child's name is his portal to the world.\" — George Hagen | Metamensagem",
+      "descriptionSeo": "Citação de George Hagen sobre temas ligados a familia. “A child's name is his portal to the world.” articula familia, birth, vida em registro de familia, com…",
+      "keywordsSeo": [
+        "frases de George Hagen",
+        "frases sobre familia",
+        "frases familia",
+        "frases birth",
+        "frases vida",
+        "frases name",
+        "birth",
+        "vida",
+        "name",
+        "familia"
+      ],
+      "canonicalSlug": "a-child-s-name-is-his-portal-to-the-world",
+      "relatedKeywords": [
+        "familia",
+        "birth",
+        "vida",
+        "name",
+        "george-hagen"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A child's name is his portal to the world.",
+    "autor_original": "George Hagen",
+    "autor_slug": "george-hagen",
+    "categoria": "familia",
+    "contextos": [
+      "vida",
+      "name"
+    ],
+    "palavras_chave": [
+      "birth",
+      "vida",
+      "name",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

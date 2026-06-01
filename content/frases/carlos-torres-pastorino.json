@@ -2,27 +2,120 @@
   {
     "id": "f_bq0elwkgh",
     "slug": "procure-descobrir-o-seu-caminho-na-vida-ninguem-e-responsav",
+    "texto": "Procure descobrir o seu caminho na vida. Ninguém é responsável por nosso destino, a não ser nós mesmos.",
+    "autor": "Carlos Torres Pastorino",
+    "autorSlug": "carlos-torres-pastorino",
+    "explicacao": "De Carlos Torres Pastorino, mensagem sobre autonomia existencial. Insiste que cada pessoa precisa descobrir seu caminho, porque ninguém mais pode assumir inteiramente o próprio destino.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao",
+        "sabedoria"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "procure",
+        "descobrir",
+        "caminho",
+        "ninguém"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "inspiracao",
+        "carlos-torres-pastorino"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 36,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "procure",
+        "descobrir"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Procure descobrir o seu caminho na vida. Ninguém é r…\" — Carlos Torres Pastorino | Metamensagem",
+      "descriptionSeo": "De Carlos Torres Pastorino, mensagem sobre autonomia existencial. Insiste que cada pessoa precisa descobrir seu caminho, porque ninguém mais pode assumir inte…",
+      "keywordsSeo": [
+        "frases de Carlos Torres Pastorino",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "motivacao"
+      ],
+      "canonicalSlug": "procure-descobrir-o-seu-caminho-na-vida-ninguem-e-responsav",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "carlos-torres-pastorino"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Procure descobrir o seu caminho na vida. Ninguém é responsável por nosso destino, a não ser nós mesmos.",
     "autor_original": "Carlos Torres Pastorino",
-    "categoria": "inspiracional",
+    "autor_slug": "carlos-torres-pastorino",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "reflexao",
       "sabedoria"
     ],
-    "explicacao": "De Carlos Torres Pastorino, mensagem sobre autonomia existencial. Insiste que cada pessoa precisa descobrir seu caminho, porque ninguém mais pode assumir inteiramente o próprio destino.",
     "palavras_chave": [
       "inspiracional",
       "reflexao",
-      "sabedoria"
+      "sabedoria",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

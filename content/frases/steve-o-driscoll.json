@@ -1,0 +1,98 @@
+[
+  {
+    "id": "f_csv_6f1350ba8e",
+    "slug": "this-is-a-fun-action-story-and-light-reading",
+    "texto": "This is a fun action story and light reading.",
+    "autor": "Steve O'Driscoll",
+    "autorSlug": "steve-o-driscoll",
+    "explicacao": "Citação de Steve O'Driscoll sobre temas ligados a reflexao. “This is a fun action story and light reading.” articula reflexao, fun, action em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "fun"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "fun",
+        "action",
+        "story",
+        "light",
+        "reading"
+      ],
+      "palavrasChave": [
+        "fun",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "fun",
+        "steve-o-driscoll"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "fun",
+        "action",
+        "story",
+        "light",
+        "reading"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"This is a fun action story and light reading.\" — Steve O'Driscoll | Metamensagem",
+      "descriptionSeo": "Citação de Steve O'Driscoll sobre temas ligados a reflexao. “This is a fun action story and light reading.” articula reflexao, fun, action em registro de refl…",
+      "keywordsSeo": [
+        "frases de Steve O'Driscoll",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases fun",
+        "fun",
+        "reflexao"
+      ],
+      "canonicalSlug": "this-is-a-fun-action-story-and-light-reading",
+      "relatedKeywords": [
+        "reflexao",
+        "fun",
+        "steve-o-driscoll"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "This is a fun action story and light reading.",
+    "autor_original": "Steve O'Driscoll",
+    "autor_slug": "steve-o-driscoll",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "fun",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

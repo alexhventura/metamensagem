@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_c1ef9605c7",
+    "slug": "life-is-what-you-portrait-it",
+    "texto": "Life is what you portrait it!",
+    "autor": "Mohammad Hossein Khosh Bayan",
+    "autorSlug": "mohammad-hossein-khosh-bayan",
+    "explicacao": "Citação de Mohammad Hossein Khosh Bayan sobre sentido da existência e experiência vivida. “Life is what you portrait it!” articula vida, philosophy, portrait em registro de vida, com relevância para contextos como philosophy.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "philosophy"
+      ],
+      "contextos": [
+        "philosophy"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "philosophy",
+        "portrait"
+      ],
+      "palavrasChave": [
+        "vida",
+        "philosophy"
+      ],
+      "tagsSeo": [
+        "vida",
+        "philosophy",
+        "mohammad-hossein-khosh-bayan"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "philosophy",
+        "portrait",
+        "vida",
+        "philosophy"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Life is what you portrait it!\" — Mohammad Hossein Khosh Bayan | Metamensagem",
+      "descriptionSeo": "Citação de Mohammad Hossein Khosh Bayan sobre sentido da existência e experiência vivida. “Life is what you portrait it!” articula vida, philosophy, portrait…",
+      "keywordsSeo": [
+        "frases de Mohammad Hossein Khosh Bayan",
+        "frases sobre vida",
+        "frases vida",
+        "frases philosophy",
+        "vida",
+        "philosophy"
+      ],
+      "canonicalSlug": "life-is-what-you-portrait-it",
+      "relatedKeywords": [
+        "vida",
+        "philosophy",
+        "mohammad-hossein-khosh-bayan"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Life is what you portrait it!",
+    "autor_original": "Mohammad Hossein Khosh Bayan",
+    "autor_slug": "mohammad-hossein-khosh-bayan",
+    "categoria": "vida",
+    "contextos": [
+      "philosophy"
+    ],
+    "palavras_chave": [
+      "vida",
+      "philosophy"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

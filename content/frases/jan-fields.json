@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f_csv_7e814822f5",
+    "slug": "i-m-big-on-tomato-mozzarella-salad-that-s-my-favorite-all-time-food",
+    "texto": "I'm big on tomato mozzarella salad. That's my favorite all-time food.",
+    "autor": "Jan Fields",
+    "autorSlug": "jan-fields",
+    "explicacao": "Citação de Jan Fields sobre passagem do tempo e prioridades. “I'm big on tomato mozzarella salad. That's my favorite all-time food.” articula tempo, favorite, salad em registro de tempo, com relevância para contextos como salad e tomato.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "favorite",
+        "salad",
+        "tomato"
+      ],
+      "contextos": [
+        "salad",
+        "tomato"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "favorite",
+        "salad",
+        "tomato",
+        "mozzarella"
+      ],
+      "palavrasChave": [
+        "favorite",
+        "salad",
+        "tomato",
+        "tempo"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "favorite",
+        "salad",
+        "tomato",
+        "jan-fields"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "favorite",
+        "salad",
+        "tomato",
+        "mozzarella",
+        "tempo"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I'm big on tomato mozzarella salad. That's my favori…\" — Jan Fields | Metamensagem",
+      "descriptionSeo": "Citação de Jan Fields sobre passagem do tempo e prioridades. “I'm big on tomato mozzarella salad. That's my favorite all-time food.” articula tempo, favorite,…",
+      "keywordsSeo": [
+        "frases de Jan Fields",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases favorite",
+        "frases salad",
+        "frases tomato",
+        "favorite",
+        "salad",
+        "tomato",
+        "tempo"
+      ],
+      "canonicalSlug": "i-m-big-on-tomato-mozzarella-salad-that-s-my-favorite-all-time-food",
+      "relatedKeywords": [
+        "tempo",
+        "favorite",
+        "salad",
+        "tomato",
+        "jan-fields"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I'm big on tomato mozzarella salad. That's my favorite all-time food.",
+    "autor_original": "Jan Fields",
+    "autor_slug": "jan-fields",
+    "categoria": "tempo",
+    "contextos": [
+      "salad",
+      "tomato"
+    ],
+    "palavras_chave": [
+      "favorite",
+      "salad",
+      "tomato",
+      "tempo"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

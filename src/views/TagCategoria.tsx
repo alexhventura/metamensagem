@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { lazy, Suspense, useMemo, useState } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search } from 'lucide-react';
@@ -25,7 +25,9 @@ import { GRID_CONTENT } from '../lib/contentGrid';
 import { flattenFeedWithAds } from '../lib/feedWithAds';
 import type { ItemConteudo } from '../types/content';
 import ContentCard from '../components/ContentCard';
-import CustomModalGeradorPost from '../components/ModalGeradorPost';
+
+import { quoteFromItem } from '../components/image-generator/utils/quoteFromItem';
+const ImageGeneratorModal = lazy(() => import('../components/image-generator'));
 
 type TagCategoriaProps = {
   tema: string;
@@ -53,7 +55,7 @@ export default function TagCategoriaView({
   const { tagSlug: tagSlugParam } = useParams<{ tagSlug: string }>();
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(24);
-  const [itemPost, setItemPost] = useState<ItemConteudo | null>(null);
+  const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
 
   const resolvedSlug = useMemo(
     () => extractSlugFromTagUrlSegment(tagSlugParam),
@@ -251,7 +253,9 @@ export default function TagCategoriaView({
                   item={item}
                   tema={tema}
                   toast={toast}
-                  onEditImage={item.tipo === 'frase' ? setItemPost : undefined}
+                  onGenerateImage={
+                    item.tipo === 'frase' ? (quote) => setImageQuote(quote) : undefined
+                  }
                 />
               );
             })
@@ -275,13 +279,16 @@ export default function TagCategoriaView({
         {matchStats.related > 0 && ` · ${matchStats.related} relacionadas`}
       </p>
 
-      {itemPost && (
-        <CustomModalGeradorPost
-          item={itemPost}
-          onClose={() => setItemPost(null)}
+      {imageQuote && (
+        <Suspense fallback={null}>
+        <ImageGeneratorModal
+          open
+          quote={imageQuote}
+          onClose={() => setImageQuote(null)}
           toast={toast}
-          temaGlobal={tema}
+          tema={tema}
         />
+        </Suspense>
       )}
     </motion.article>
   );

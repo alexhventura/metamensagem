@@ -1,0 +1,118 @@
+[
+  {
+    "id": "f_csv_23ec1e5de8",
+    "slug": "many-cats-are-the-death-of-the-mouse",
+    "texto": "Many cats are the death of the mouse.",
+    "autor": "Kaspar Hauser",
+    "autorSlug": "kaspar-hauser",
+    "explicacao": "Citação de Kaspar Hauser sobre temas ligados a reflexao. “Many cats are the death of the mouse.” articula reflexao, cats, pet em registro de reflexao, com relevância para contextos como luto e pet.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "cats",
+        "pet",
+        "mouse"
+      ],
+      "contextos": [
+        "luto",
+        "pet",
+        "mouse"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "cats",
+        "pet",
+        "mouse",
+        "death"
+      ],
+      "palavrasChave": [
+        "cats",
+        "pet",
+        "mouse",
+        "reflexao",
+        "luto"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "cats",
+        "pet",
+        "mouse",
+        "luto",
+        "kaspar-hauser"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "cats",
+        "pet",
+        "mouse",
+        "death",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Many cats are the death of the mouse.\" — Kaspar Hauser | Metamensagem",
+      "descriptionSeo": "Citação de Kaspar Hauser sobre temas ligados a reflexao. “Many cats are the death of the mouse.” articula reflexao, cats, pet em registro de reflexao, com rel…",
+      "keywordsSeo": [
+        "frases de Kaspar Hauser",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases cats",
+        "frases luto",
+        "frases pet",
+        "cats",
+        "pet",
+        "mouse",
+        "reflexao"
+      ],
+      "canonicalSlug": "many-cats-are-the-death-of-the-mouse",
+      "relatedKeywords": [
+        "reflexao",
+        "cats",
+        "pet",
+        "mouse",
+        "kaspar-hauser"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Many cats are the death of the mouse.",
+    "autor_original": "Kaspar Hauser",
+    "autor_slug": "kaspar-hauser",
+    "categoria": "reflexao",
+    "contextos": [
+      "luto",
+      "pet",
+      "mouse"
+    ],
+    "palavras_chave": [
+      "cats",
+      "pet",
+      "mouse",
+      "reflexao",
+      "luto"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

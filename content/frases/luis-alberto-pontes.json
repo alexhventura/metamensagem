@@ -2,27 +2,120 @@
   {
     "id": "f_u8mwhi10w",
     "slug": "entre-todas-as-insanidades-da-mente-humana-eu-fico-com-o-ot",
+    "texto": "Entre todas as insanidades da mente humana, eu fico com o otimismo.",
+    "autor": "Luis Alberto Pontes",
+    "autorSlug": "luis-alberto-pontes",
+    "explicacao": "Luis Alberto Pontes, autor brasileiro de frases e reflexões, escolhe o otimismo entre as “loucuras” da mente. Tom irônico e afirmativo. A citação circula em materiais inspiracionais que defendem uma atitude positiva diante da complexidade humana.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sabedoria"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo",
+        "sabedoria"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sabedoria",
+        "entre",
+        "todas",
+        "insanidades",
+        "mente"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "sabedoria",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sabedoria",
+        "inspiracao",
+        "luis-alberto-pontes"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sabedoria",
+        "entre",
+        "todas"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Entre todas as insanidades da mente humana, eu fico …\" — Luis Alberto Pontes | Metamensagem",
+      "descriptionSeo": "Luis Alberto Pontes, autor brasileiro de frases e reflexões, escolhe o otimismo entre as “loucuras” da mente. Tom irônico e afirmativo. A citação circula em m…",
+      "keywordsSeo": [
+        "frases de Luis Alberto Pontes",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "sabedoria",
+        "motivacao"
+      ],
+      "canonicalSlug": "entre-todas-as-insanidades-da-mente-humana-eu-fico-com-o-ot",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sabedoria",
+        "luis-alberto-pontes"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Entre todas as insanidades da mente humana, eu fico com o otimismo.",
     "autor_original": "Luis Alberto Pontes",
-    "categoria": "inspiracional",
+    "autor_slug": "luis-alberto-pontes",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo",
       "sabedoria"
     ],
-    "explicacao": "Luis Alberto Pontes, autor brasileiro de frases e reflexões, escolhe o otimismo entre as “loucuras” da mente. Tom irônico e afirmativo. A citação circula em materiais inspiracionais que defendem uma atitude positiva diante da complexidade humana.",
     "palavras_chave": [
       "inspiracional",
       "otimismo",
-      "sabedoria"
+      "sabedoria",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

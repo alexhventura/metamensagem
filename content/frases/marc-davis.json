@@ -1,0 +1,111 @@
+[
+  {
+    "id": "f_csv_ea73364999",
+    "slug": "my-father-was-something-of-a-rainbow-chaser",
+    "texto": "My father was something of a rainbow-chaser.",
+    "autor": "Marc Davis",
+    "autorSlug": "marc-davis",
+    "explicacao": "Citação de Marc Davis sobre temas ligados a familia. “My father was something of a rainbow-chaser.” articula familia, father, something em registro de familia, com relevância para contextos como dia-chuvoso e something.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "father",
+        "something"
+      ],
+      "contextos": [
+        "dia-chuvoso",
+        "something"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "father",
+        "something",
+        "rainbow",
+        "chaser"
+      ],
+      "palavrasChave": [
+        "father",
+        "something",
+        "familia",
+        "dia-chuvoso"
+      ],
+      "tagsSeo": [
+        "familia",
+        "father",
+        "something",
+        "dia-chuvoso",
+        "marc-davis"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "father",
+        "something",
+        "rainbow",
+        "chaser",
+        "familia"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My father was something of a rainbow-chaser.\" — Marc Davis | Metamensagem",
+      "descriptionSeo": "Citação de Marc Davis sobre temas ligados a familia. “My father was something of a rainbow-chaser.” articula familia, father, something em registro de familia…",
+      "keywordsSeo": [
+        "frases de Marc Davis",
+        "frases sobre familia",
+        "frases familia",
+        "frases father",
+        "frases dia chuvoso",
+        "frases something",
+        "father",
+        "something",
+        "familia",
+        "dia-chuvoso"
+      ],
+      "canonicalSlug": "my-father-was-something-of-a-rainbow-chaser",
+      "relatedKeywords": [
+        "familia",
+        "father",
+        "something",
+        "marc-davis"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My father was something of a rainbow-chaser.",
+    "autor_original": "Marc Davis",
+    "autor_slug": "marc-davis",
+    "categoria": "familia",
+    "contextos": [
+      "dia-chuvoso",
+      "something"
+    ],
+    "palavras_chave": [
+      "father",
+      "something",
+      "familia",
+      "dia-chuvoso"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

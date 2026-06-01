@@ -2,25 +2,113 @@
   {
     "id": "f_mstm7r3q9",
     "slug": "o-pessimista-olha-para-baixo-e-bate-a-cabeca-o-otimista-olh",
+    "texto": "O pessimista olha para baixo e bate a cabeça. O otimista olha para cima, e tropeça. O realista olha para frente, e reajusta seu caminho.",
+    "autor": "Ezekiel - The Walking Dead",
+    "autorSlug": "ezekiel-the-walking-dead",
+    "explicacao": "Fala atribuída a Ezekiel, personagem de The Walking Dead, sobre três posturas diante da vida. Num mundo pós-apocalíptico, a frase equilibra pessimismo, otimismo ingênuo e pragmatismo adaptativo.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "pessimista",
+        "baixo",
+        "cabeça",
+        "otimista",
+        "tropeça"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "ezekiel-the-walking-dead"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 37,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "pessimista",
+        "baixo",
+        "cabeça"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O pessimista olha para baixo e bate a cabeça. O otim…\" — Ezekiel - The Walking Dead | Metamensagem",
+      "descriptionSeo": "Fala atribuída a Ezekiel, personagem de The Walking Dead, sobre três posturas diante da vida. Num mundo pós-apocalíptico, a frase equilibra pessimismo, otimis…",
+      "keywordsSeo": [
+        "frases de Ezekiel - The Walking Dead",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "o-pessimista-olha-para-baixo-e-bate-a-cabeca-o-otimista-olh",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "ezekiel-the-walking-dead"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O pessimista olha para baixo e bate a cabeça. O otimista olha para cima, e tropeça. O realista olha para frente, e reajusta seu caminho.",
     "autor_original": "Ezekiel - The Walking Dead",
-    "categoria": "inspiracional",
+    "autor_slug": "ezekiel-the-walking-dead",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Fala atribuída a Ezekiel, personagem de The Walking Dead, sobre três posturas diante da vida. Num mundo pós-apocalíptico, a frase equilibra pessimismo, otimismo ingênuo e pragmatismo adaptativo.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

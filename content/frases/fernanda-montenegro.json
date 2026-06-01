@@ -2,25 +2,112 @@
   {
     "id": "f_7lho9qyl5",
     "slug": "tenho-um-otimismo-realista-porque-a-condicao-humana-e-falha",
+    "texto": "Tenho um otimismo realista, porque a condição humana é falha. Todos nós somos atores nesse palco que é o mundo.",
+    "autor": "Fernanda Montenegro",
+    "autorSlug": "fernanda-montenegro",
+    "explicacao": "Fernanda Montenegro articula um otimismo realista, reconhecendo falhas humanas. Como atriz consagrada, fala da condição humana como performance — todos interpretam papéis neste palco que é o mundo.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "tenho",
+        "realista",
+        "porque",
+        "condição"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "fernanda-montenegro"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 35,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "tenho",
+        "realista",
+        "porque"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Tenho um otimismo realista, porque a condição humana…\" — Fernanda Montenegro | Metamensagem",
+      "descriptionSeo": "Fernanda Montenegro articula um otimismo realista, reconhecendo falhas humanas. Como atriz consagrada, fala da condição humana como performance — todos interp…",
+      "keywordsSeo": [
+        "frases de Fernanda Montenegro",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "tenho-um-otimismo-realista-porque-a-condicao-humana-e-falha",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "fernanda-montenegro"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Tenho um otimismo realista, porque a condição humana é falha. Todos nós somos atores nesse palco que é o mundo.",
     "autor_original": "Fernanda Montenegro",
-    "categoria": "inspiracional",
+    "autor_slug": "fernanda-montenegro",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Fernanda Montenegro articula um otimismo realista, reconhecendo falhas humanas. Como atriz consagrada, fala da condição humana como performance — todos interpretam papéis neste palco que é o mundo.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

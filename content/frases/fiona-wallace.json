@@ -1,0 +1,105 @@
+[
+  {
+    "id": "f_csv_f221d0712d",
+    "slug": "the-monsters-are-gone-really-doubtful-i-killed-the-monsters-that-s-what-fa",
+    "texto": "The monsters are gone.\"\"Really?\" Doubtful.\"I killed the monsters. That's what fathers do.",
+    "autor": "Fiona Wallace",
+    "autorSlug": "fiona-wallace",
+    "explicacao": "Pergunta retórica de Fiona Wallace que provoca temas ligados a familia. Ao questionar “The monsters are gone.\"\"Really?\" Doubtful.\"I killed the monsters. That's what fathers do.”, o texto convida o leitor a revisar crenças sobre familia, fathers, monsters, com foco em monsters.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "fathers",
+        "monsters"
+      ],
+      "contextos": [
+        "monsters"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "fathers",
+        "monsters",
+        "really",
+        "doubtful",
+        "killed"
+      ],
+      "palavrasChave": [
+        "fathers",
+        "monsters",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "fathers",
+        "monsters",
+        "fiona-wallace"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "fathers",
+        "monsters",
+        "really",
+        "doubtful",
+        "killed"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The monsters are gone.\"\"Really?\" Doubtful.\"I killed …\" — Fiona Wallace | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Fiona Wallace que provoca temas ligados a familia. Ao questionar “The monsters are gone.\"\"Really?\" Doubtful.\"I killed the monsters. That'…",
+      "keywordsSeo": [
+        "frases de Fiona Wallace",
+        "frases sobre familia",
+        "frases familia",
+        "frases fathers",
+        "frases monsters",
+        "fathers",
+        "monsters",
+        "familia"
+      ],
+      "canonicalSlug": "the-monsters-are-gone-really-doubtful-i-killed-the-monsters-that-s-what-fa",
+      "relatedKeywords": [
+        "familia",
+        "fathers",
+        "monsters",
+        "fiona-wallace"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The monsters are gone.\"\"Really?\" Doubtful.\"I killed the monsters. That's what fathers do.",
+    "autor_original": "Fiona Wallace",
+    "autor_slug": "fiona-wallace",
+    "categoria": "familia",
+    "contextos": [
+      "monsters"
+    ],
+    "palavras_chave": [
+      "fathers",
+      "monsters",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

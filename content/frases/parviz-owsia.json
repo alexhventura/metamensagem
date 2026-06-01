@@ -1,0 +1,134 @@
+[
+  {
+    "id": "f_csv_d0691f4a16",
+    "slug": "i-was-born-tomorrowtoday-i-liveyesterday-killed-me",
+    "texto": "I was born tomorrowtoday I liveyesterday killed me",
+    "autor": "Parviz Owsia",
+    "autorSlug": "parviz-owsia",
+    "explicacao": "Citação de Parviz Owsia sobre sentido da existência e experiência vivida. “I was born tomorrowtoday I liveyesterday killed me” articula tempo, born, death em registro de tempo, com relevância para contextos como luto e death.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "born",
+        "death",
+        "killed",
+        "vida"
+      ],
+      "contextos": [
+        "luto",
+        "death",
+        "killed",
+        "vida",
+        "parviz-owsia"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "born",
+        "death",
+        "killed",
+        "tomorrowtoday",
+        "liveyesterday"
+      ],
+      "palavrasChave": [
+        "born",
+        "death",
+        "killed",
+        "vida",
+        "parviz-owsia",
+        "today",
+        "tomorrow",
+        "tempo",
+        "luto"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "born",
+        "death",
+        "killed",
+        "vida",
+        "luto",
+        "parviz-owsia"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 39,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "born",
+        "death",
+        "killed",
+        "tomorrowtoday",
+        "liveyesterday"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I was born tomorrowtoday I liveyesterday killed me\" — Parviz Owsia | Metamensagem",
+      "descriptionSeo": "Citação de Parviz Owsia sobre sentido da existência e experiência vivida. “I was born tomorrowtoday I liveyesterday killed me” articula tempo, born, death em…",
+      "keywordsSeo": [
+        "frases de Parviz Owsia",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases born",
+        "frases luto",
+        "frases death",
+        "born",
+        "death",
+        "killed",
+        "vida"
+      ],
+      "canonicalSlug": "i-was-born-tomorrowtoday-i-liveyesterday-killed-me",
+      "relatedKeywords": [
+        "tempo",
+        "born",
+        "death",
+        "killed",
+        "vida",
+        "parviz-owsia"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I was born tomorrowtoday I liveyesterday killed me",
+    "autor_original": "Parviz Owsia",
+    "autor_slug": "parviz-owsia",
+    "categoria": "tempo",
+    "contextos": [
+      "luto",
+      "death",
+      "killed",
+      "vida",
+      "parviz-owsia"
+    ],
+    "palavras_chave": [
+      "born",
+      "death",
+      "killed",
+      "vida",
+      "parviz-owsia",
+      "today",
+      "tomorrow",
+      "tempo",
+      "luto"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

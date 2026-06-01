@@ -1,0 +1,107 @@
+[
+  {
+    "id": "f_csv_914f9d1b18",
+    "slug": "my-father-spoke-french-with-a-bank-of-montreal-accent",
+    "texto": "My father spoke French with a Bank of Montreal accent.",
+    "autor": "Hartland de Montarville Molson",
+    "autorSlug": "hartland-de-montarville-molson",
+    "explicacao": "Citação de Hartland de Montarville Molson sobre temas ligados a familia. “My father spoke French with a Bank of Montreal accent.” articula familia, canada, canadians em registro de familia, com relevância para contextos como canadians.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "canada",
+        "canadians"
+      ],
+      "contextos": [
+        "canadians"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "canada",
+        "canadians",
+        "father",
+        "spoke",
+        "french",
+        "montreal",
+        "accent"
+      ],
+      "palavrasChave": [
+        "canada",
+        "canadians",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "canada",
+        "canadians",
+        "hartland-de-montarville-molson"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "canada",
+        "canadians",
+        "father",
+        "spoke",
+        "french"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My father spoke French with a Bank of Montreal accent.\" — Hartland de Montarville Molson | Metamensagem",
+      "descriptionSeo": "Citação de Hartland de Montarville Molson sobre temas ligados a familia. “My father spoke French with a Bank of Montreal accent.” articula familia, canada, ca…",
+      "keywordsSeo": [
+        "frases de Hartland de Montarville Molson",
+        "frases sobre familia",
+        "frases familia",
+        "frases canada",
+        "frases canadians",
+        "canada",
+        "canadians",
+        "familia"
+      ],
+      "canonicalSlug": "my-father-spoke-french-with-a-bank-of-montreal-accent",
+      "relatedKeywords": [
+        "familia",
+        "canada",
+        "canadians",
+        "hartland-de-montarville-molson"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My father spoke French with a Bank of Montreal accent.",
+    "autor_original": "Hartland de Montarville Molson",
+    "autor_slug": "hartland-de-montarville-molson",
+    "categoria": "familia",
+    "contextos": [
+      "canadians"
+    ],
+    "palavras_chave": [
+      "canada",
+      "canadians",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

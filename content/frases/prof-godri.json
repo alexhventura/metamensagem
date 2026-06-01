@@ -2,25 +2,113 @@
   {
     "id": "f_otuqlxw8a",
     "slug": "o-otimista-sabe-que-vencera-apesar-das-adversidades-sabe-qu",
+    "texto": "O otimista sabe que vencerá apesar das adversidades, sabe que o fracasso e os problemas são momentâneos e que tem capacidade para superá-los. E esse, acredite, é o primeiro passo para vencer qualquer obstáculo.",
+    "autor": "Prof. Godri",
+    "autorSlug": "prof-godri",
+    "explicacao": "Prof. Godri descreve o otimismo como crença de que adversidades são temporárias e superáveis. Para ele, essa mentalidade é o primeiro passo para vencer obstáculos. É conselho típico de palestras motivacionais sobre resiliência.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "vencerá",
+        "apesar",
+        "adversidades",
+        "fracasso"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "prof-godri"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 45,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "vencerá",
+        "apesar"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O otimista sabe que vencerá apesar das adversidades,…\" — Prof. Godri | Metamensagem",
+      "descriptionSeo": "Prof. Godri descreve o otimismo como crença de que adversidades são temporárias e superáveis. Para ele, essa mentalidade é o primeiro passo para vencer obstác…",
+      "keywordsSeo": [
+        "frases de Prof. Godri",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "o-otimista-sabe-que-vencera-apesar-das-adversidades-sabe-qu",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "prof-godri"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O otimista sabe que vencerá apesar das adversidades, sabe que o fracasso e os problemas são momentâneos e que tem capacidade para superá-los. E esse, acredite, é o primeiro passo para vencer qualquer obstáculo.",
     "autor_original": "Prof. Godri",
-    "categoria": "inspiracional",
+    "autor_slug": "prof-godri",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Prof. Godri descreve o otimismo como crença de que adversidades são temporárias e superáveis. Para ele, essa mentalidade é o primeiro passo para vencer obstáculos. É conselho típico de palestras motivacionais sobre resiliência.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

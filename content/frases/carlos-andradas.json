@@ -2,31 +2,129 @@
   {
     "id": "f_jy2ja6j7v",
     "slug": "a-coragem-esta-um-passo-a-frente-do-medo-e-a-fe-dois-passo",
+    "texto": "⁠A coragem está um passo à frente do medo. E a Fé dois passos diante dos dois, com Ela abraçamos a coragem e vencemos o medo. Adaptação ao Poema de Colliman Young.",
+    "autor": "Carlos Andradas",
+    "autorSlug": "carlos-andradas",
+    "explicacao": "Adaptação de Carlos Andradas a um poema de Colliman Young, com ênfase cristã. Ordena medo, coragem e fé como degraus: a fé ficaria à frente, capaz de abraçar a coragem e vencer o medo.",
+    "semantica": {
+      "categoriaPrincipal": "coragem",
+      "categorias": [
+        "coragem",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "superacao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "superacao"
+      ],
+      "emocoes": [
+        "coragem"
+      ],
+      "temas": [
+        "coragem",
+        "fe",
+        "inspiracional",
+        "passo",
+        "frente",
+        "passos",
+        "diante"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "superacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "coragem",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "superacao",
+        "inspiracao",
+        "carlos-andradas"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 46,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "coragem",
+        "fe",
+        "inspiracional",
+        "passo",
+        "frente",
+        "passos"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠A coragem está um passo à frente do medo. E a Fé do…\" — Carlos Andradas | Metamensagem",
+      "descriptionSeo": "Adaptação de Carlos Andradas a um poema de Colliman Young, com ênfase cristã. Ordena medo, coragem e fé como degraus: a fé ficaria à frente, capaz de abraçar…",
+      "keywordsSeo": [
+        "frases de Carlos Andradas",
+        "frases sobre coragem",
+        "frases coragem",
+        "frases fe",
+        "frases inspiracao",
+        "coragem",
+        "fe",
+        "inspiracional",
+        "otimismo"
+      ],
+      "canonicalSlug": "a-coragem-esta-um-passo-a-frente-do-medo-e-a-fe-dois-passo",
+      "relatedKeywords": [
+        "coragem",
+        "fe",
+        "inspiracional",
+        "otimismo",
+        "superacao",
+        "carlos-andradas"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠A coragem está um passo à frente do medo. E a Fé dois passos diante dos dois, com Ela abraçamos a coragem e vencemos o medo. Adaptação ao Poema de Colliman Young.",
     "autor_original": "Carlos Andradas",
+    "autor_slug": "carlos-andradas",
     "categoria": "coragem",
     "contextos": [
+      "inspiracao",
       "fe",
       "inspiracional",
       "otimismo",
       "superacao"
     ],
-    "explicacao": "Adaptação de Carlos Andradas a um poema de Colliman Young, com ênfase cristã. Ordena medo, coragem e fé como degraus: a fé ficaria à frente, capaz de abraçar a coragem e vencer o medo.",
     "palavras_chave": [
       "coragem",
       "fe",
       "inspiracional",
       "otimismo",
-      "superacao"
+      "superacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

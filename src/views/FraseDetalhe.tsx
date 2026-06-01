@@ -1,11 +1,12 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useEffect, useMemo, useState, lazy, Suspense } from 'react';
+const ImageGeneratorModal = lazy(() => import('../components/image-generator'));
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, Copy, Image as ImageIcon, Share2 } from 'lucide-react';
+import { ChevronLeft, Copy, Share2, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import CardTooltip from '../components/CardTooltip';
 import { CardTranslateMenu } from '../components/CardTranslateMenu';
-import CustomModalGeradorPost from '../components/ModalGeradorPost';
+
 import {
   CARD_ACTION_BTN,
   FRASE_DETAIL_INFO_BG_LIGHT,
@@ -18,25 +19,44 @@ import {
 import { type CardContentDisplay } from '../lib/translation';
 import {
   getFraseCmsBySlugSync,
-  loadFrasesCms,
+  loadFraseDetailBySlug,
   fraseToListItem,
   type FraseCms,
 } from '../lib/frasesModel';
-import { DEFAULT_DESCRIPTION, SITE_ORIGIN } from '../lib/seo';
 import { pathFromTag } from '../lib/tagsSeo';
+import {
+  fraseCanonicalUrl,
+  fraseHreflangAlternates,
+  htmlLangAttribute,
+  parseFraseRoute,
+  resolveFraseContentLocale,
+  seoLocaleFromLanguageOriginal,
+} from '../lib/i18nRoutes';
+import { availableLanguagesFromMeta, loadFraseI18nMeta } from '../lib/globalSeoClient';
+import { pickTitleDescription } from '../../lib/seo/i18nTemplates';
+import { useTranslatedViewMeta } from '../lib/useTranslatedViewMeta';
+import { SEO_LOCALES } from '../lib/i18nRoutes';
+import { applyHreflangLinks } from '../lib/seoHreflang';
+import type { SeoLocale } from '../../lib/i18n/locales';
 import type { ItemConteudo } from '../types/content';
 
 function MudarMetaSEO({
   title,
   description,
   canonical,
+  hreflangLinks,
+  htmlLang,
 }: {
   title: string;
   description: string;
   canonical: string;
+  hreflangLinks: { hreflang: string; href: string }[];
+  htmlLang: string;
 }) {
   useEffect(() => {
-    document.title = `${title} | Metamensagem`;
+    const prevLang = document.documentElement.lang;
+    document.documentElement.lang = htmlLang;
+    document.title = title.includes('Metamensagem') ? title : `${title} | Metamensagem`;
     const desc = document.querySelector('meta[name="description"]');
     if (desc) desc.setAttribute('content', description);
     let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
@@ -46,7 +66,11 @@ function MudarMetaSEO({
       document.head.appendChild(link);
     }
     link.href = canonical;
-  }, [title, description, canonical]);
+    applyHreflangLinks(hreflangLinks);
+    return () => {
+      document.documentElement.lang = prevLang;
+    };
+  }, [title, description, canonical, hreflangLinks, htmlLang]);
 
   return null;
 }
@@ -89,12 +113,15 @@ export default function FraseDetalheView({
   toast: (msg: string) => void;
 }) {
   const { slug } = useParams<{ slug: string }>();
-  const { t } = useTranslation();
+  const location = useLocation();
+  const routeInfo = useMemo(() => parseFraseRoute(location.pathname), [location.pathname]);
+  const { t, i18n } = useTranslation();
+  const [i18nMeta, setI18nMeta] = useState<Awaited<ReturnType<typeof loadFraseI18nMeta>>>(null);
   const [frase, setFrase] = useState<FraseCms | null>(() =>
     slug ? getFraseCmsBySlugSync(slug) ?? null : null
   );
   const [loading, setLoading] = useState(!frase);
-  const [itemPost, setItemPost] = useState<ItemConteudo | null>(null);
+  const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
   const [display, setDisplay] = useState<CardContentDisplay>({
     texto: '',
     isTranslated: false,
@@ -104,16 +131,51 @@ export default function FraseDetalheView({
   useEffect(() => {
     if (!slug) return;
     let cancel = false;
-    loadFrasesCms().then((all) => {
+    (async () => {
+      const [fromShard, meta] = await Promise.all([
+        loadFraseDetailBySlug(slug),
+        loadFraseI18nMeta(slug),
+      ]);
       if (cancel) return;
-      const found = all.find((f) => f.slug === slug.toLowerCase());
-      setFrase(found ?? null);
+      if (meta) setI18nMeta(meta);
+      if (fromShard) {
+        setFrase(fromShard);
+        setLoading(false);
+        return;
+      }
+      const sync = getFraseCmsBySlugSync(slug);
+      setFrase(sync ?? null);
       setLoading(false);
-    });
+    })();
     return () => {
       cancel = true;
     };
   }, [slug]);
+
+  const defaultLocale: SeoLocale = useMemo(
+    () =>
+      seoLocaleFromLanguageOriginal(
+        frase?.semantica?.languageOriginal ||
+          frase?.semantica?.idiomaOriginal ||
+          i18nMeta?.languageOriginal
+      ),
+    [frase, i18nMeta?.languageOriginal]
+  );
+
+  const contentLocale: SeoLocale = useMemo(
+    () => resolveFraseContentLocale(routeInfo?.prefixLocale ?? null, defaultLocale),
+    [routeInfo?.prefixLocale, defaultLocale]
+  );
+
+  useEffect(() => {
+    if (
+      contentLocale &&
+      i18n.language !== contentLocale &&
+      (SEO_LOCALES as readonly string[]).includes(contentLocale)
+    ) {
+      void i18n.changeLanguage(contentLocale);
+    }
+  }, [contentLocale, i18n]);
 
   useEffect(() => {
     if (!frase) return;
@@ -127,12 +189,24 @@ export default function FraseDetalheView({
     [frase]
   );
 
-  const canonical = frase ? `${SITE_ORIGIN}/frases/${frase.slug}` : '';
+  const canonical = frase ? fraseCanonicalUrl(frase.slug, contentLocale, defaultLocale) : '';
+  const availableLangs = frase
+    ? availableLanguagesFromMeta(
+        i18nMeta,
+        frase.semantica?.languageOriginal || frase.semantica?.idiomaOriginal
+      )
+    : [defaultLocale];
+  const hreflangLinks = frase
+    ? fraseHreflangAlternates(frase.slug, defaultLocale, availableLangs)
+    : [];
+  const pageHtmlLang = htmlLangAttribute(contentLocale);
   const quoteText = display.texto || frase?.frase_original || '';
+  const authorLine = display.autor || frase?.autor_original || '';
+  useTranslatedViewMeta(display.isTranslated);
 
   const handleCopy = () => {
     if (!frase) return;
-    navigator.clipboard.writeText(`${quoteText} — ${frase.autor_original}`);
+    navigator.clipboard.writeText(`${quoteText} — ${authorLine}`);
     toast(t('common.copied'));
   };
 
@@ -141,7 +215,7 @@ export default function FraseDetalheView({
     const shareUrl = canonical;
     const payload = {
       title: frase.autor_original,
-      text: `${quoteText} — ${frase.autor_original}`,
+      text: `${quoteText} — ${authorLine}`,
       url: shareUrl,
     };
     try {
@@ -175,9 +249,13 @@ export default function FraseDetalheView({
     );
   }
 
-  const description =
+  const descriptionFallback =
     frase.explicacao ||
     `Frase de ${frase.autor_original}${frase.ano_ou_data ? ` (${frase.ano_ou_data})` : ''}`;
+  const seoPack = pickTitleDescription(i18nMeta, contentLocale, {
+    title: frase.frase_original.slice(0, 70),
+    description: descriptionFallback,
+  });
 
   const neutralAction = cardNeutralActionClass(tema);
   const hasExtraInfo =
@@ -199,10 +277,20 @@ export default function FraseDetalheView({
       className="max-w-3xl w-full mx-auto px-4 py-10 flex-1"
     >
       <MudarMetaSEO
-        title={frase.frase_original.slice(0, 70)}
-        description={description}
+        title={seoPack.title}
+        description={seoPack.description}
         canonical={canonical}
+        hreflangLinks={hreflangLinks}
+        htmlLang={pageHtmlLang}
       />
+
+      <nav className="sr-only" aria-label="Idiomas">
+        {hreflangLinks.map((l) => (
+          <a key={l.hreflang} href={l.href} hrefLang={l.hreflang}>
+            {l.hreflang}
+          </a>
+        ))}
+      </nav>
 
       <Link
         to="/frases"
@@ -217,7 +305,6 @@ export default function FraseDetalheView({
             tema === 'light' ? 'bg-white' : 'bg-[#0a0a0a]'
           }`}
         >
-          {/* Bloco principal: frase + autor + ações */}
           <div className="p-8 md:p-10">
             <div className="flex items-center gap-2 mb-6">
               <span className={`w-1.5 h-1.5 rounded-full ${cardAccentDotClass('purple')}`} />
@@ -246,7 +333,7 @@ export default function FraseDetalheView({
                 tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'
               }`}
             >
-              — {frase.autor_original}
+              — {authorLine}
             </p>
 
             <div className="flex flex-wrap gap-1.5 mb-8">
@@ -293,7 +380,15 @@ export default function FraseDetalheView({
                   tema={tema}
                   accent="purple"
                   contentId={frase.id}
-                  source={translateSource}
+                  source={
+                    frase
+                      ? {
+                          texto: frase.frase_original,
+                          autor: frase.autor_original,
+                          explicacao: frase.explicacao ?? undefined,
+                        }
+                      : translateSource
+                  }
                   onDisplayChange={setDisplay}
                   onLoadingChange={setTranslating}
                   tooltipLabel={t('common.translate')}
@@ -301,19 +396,31 @@ export default function FraseDetalheView({
                 />
               </CardTooltip>
 
-              <CardTooltip text={t('common.edit_image')} tema={tema}>
+              <CardTooltip text={t('common.generate_image', 'Gerar Imagem')} tema={tema}>
                 <button
                   type="button"
-                  onClick={() => setItemPost(listItem)}
+                  onClick={() =>
+                    setImageQuote({
+                      id: frase.id,
+                      texto: display.texto || frase.frase_original,
+                      autor: display.autor || frase.autor_original,
+                      tags: frase.palavras_chave.length
+                        ? frase.palavras_chave
+                        : [frase.categoria, ...frase.contextos],
+                      categoria: frase.categoria,
+                      slug: frase.slug,
+                      locale,
+                    })
+                  }
                   className={cardImageBtnClass('purple')}
+                  aria-label={t('common.generate_image', 'Gerar Imagem')}
                 >
-                  <ImageIcon size={18} />
+                  <Sparkles size={18} />
                 </button>
               </CardTooltip>
             </div>
           </div>
 
-          {/* Informações adicionais — lavanda no modo claro */}
           {hasExtraInfo ? (
             <div
               className={`px-8 md:px-10 pb-8 md:pb-10 pt-6 border-t ${
@@ -336,7 +443,7 @@ export default function FraseDetalheView({
                       tema === 'light' ? 'text-zinc-800' : 'text-zinc-400'
                     }`}
                   >
-                    {frase.explicacao}
+                    {display.explicacao ?? frase.explicacao}
                   </p>
                 </section>
               ) : null}
@@ -369,13 +476,16 @@ export default function FraseDetalheView({
         </div>
       </article>
 
-      {itemPost && (
-        <CustomModalGeradorPost
-          item={itemPost}
-          onClose={() => setItemPost(null)}
-          toast={toast}
-          temaGlobal={tema}
-        />
+      {imageQuote && (
+        <Suspense fallback={null}>
+          <ImageGeneratorModal
+            open
+            quote={imageQuote}
+            onClose={() => setImageQuote(null)}
+            toast={toast}
+            tema={tema}
+          />
+        </Suspense>
       )}
     </motion.div>
   );

@@ -2,25 +2,113 @@
   {
     "id": "f_xd0hhhvc4",
     "slug": "seja-otimista-pois-enquanto-uns-enxergaram-apenas-um-espel",
+    "texto": "\"Seja otimista, pois enquanto uns enxergaram apenas um espelho quebrado, outro chegou com um olhar diferente, criou o \"globo espelhado\" e coloriu a boate\"",
+    "autor": "Talita Galhardo",
+    "autorSlug": "talita-galhardo",
+    "explicacao": "Talita Galhardo usa metáfora do espelho quebrado transformado em globo de boate. Onde uns veem lixo, o otimista vê matéria-prima para algo novo. Lição sobre criatividade e ressignificação.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "enquanto",
+        "enxergaram",
+        "apenas",
+        "espelho"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "talita-galhardo"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 39,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "enquanto",
+        "enxergaram"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"\"Seja otimista, pois enquanto uns enxergaram apenas …\" — Talita Galhardo | Metamensagem",
+      "descriptionSeo": "Talita Galhardo usa metáfora do espelho quebrado transformado em globo de boate. Onde uns veem lixo, o otimista vê matéria-prima para algo novo. Lição sobre c…",
+      "keywordsSeo": [
+        "frases de Talita Galhardo",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "seja-otimista-pois-enquanto-uns-enxergaram-apenas-um-espel",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "talita-galhardo"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "\"Seja otimista, pois enquanto uns enxergaram apenas um espelho quebrado, outro chegou com um olhar diferente, criou o \"globo espelhado\" e coloriu a boate\"",
     "autor_original": "Talita Galhardo",
-    "categoria": "inspiracional",
+    "autor_slug": "talita-galhardo",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Talita Galhardo usa metáfora do espelho quebrado transformado em globo de boate. Onde uns veem lixo, o otimista vê matéria-prima para algo novo. Lição sobre criatividade e ressignificação.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

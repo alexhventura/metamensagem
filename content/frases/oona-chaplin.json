@@ -1,0 +1,116 @@
+[
+  {
+    "id": "f_csv_290fbe8773",
+    "slug": "my-grandmother-died-in-1991-and-i-was-born-in-86-we-only-met-once-but-i-didn",
+    "texto": "My grandmother died in 1991 and I was born in '86. We only met once, but I didn't speak English and she didn't speak Spanish - so we had a communication problem.",
+    "autor": "Oona Chaplin",
+    "autorSlug": "oona-chaplin",
+    "explicacao": "Citação de Oona Chaplin sobre temas ligados a familia. “My grandmother died in 1991 and I was born in '86. We only met once, but I didn't speak English a…” articula familia, speak, problem em registro de familia, com relevância para contextos como problem e born.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "speak",
+        "problem",
+        "born"
+      ],
+      "contextos": [
+        "problem",
+        "born"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "speak",
+        "problem",
+        "born",
+        "grandmother",
+        "english",
+        "spanish",
+        "communication"
+      ],
+      "palavrasChave": [
+        "speak",
+        "problem",
+        "born",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "speak",
+        "problem",
+        "born",
+        "oona-chaplin"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 42,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "speak",
+        "problem",
+        "born",
+        "grandmother",
+        "english"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My grandmother died in 1991 and I was born in '86. W…\" — Oona Chaplin | Metamensagem",
+      "descriptionSeo": "Citação de Oona Chaplin sobre temas ligados a familia. “My grandmother died in 1991 and I was born in '86. We only met once, but I didn't speak English a…” ar…",
+      "keywordsSeo": [
+        "frases de Oona Chaplin",
+        "frases sobre familia",
+        "frases familia",
+        "frases speak",
+        "frases problem",
+        "frases born",
+        "speak",
+        "problem",
+        "born",
+        "familia"
+      ],
+      "canonicalSlug": "my-grandmother-died-in-1991-and-i-was-born-in-86-we-only-met-once-but-i-didn",
+      "relatedKeywords": [
+        "familia",
+        "speak",
+        "problem",
+        "born",
+        "oona-chaplin"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My grandmother died in 1991 and I was born in '86. We only met once, but I didn't speak English and she didn't speak Spanish - so we had a communication problem.",
+    "autor_original": "Oona Chaplin",
+    "autor_slug": "oona-chaplin",
+    "categoria": "familia",
+    "contextos": [
+      "problem",
+      "born"
+    ],
+    "palavras_chave": [
+      "speak",
+      "problem",
+      "born",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

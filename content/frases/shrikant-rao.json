@@ -1,0 +1,117 @@
+[
+  {
+    "id": "f_csv_2126b743e2",
+    "slug": "living-a-happy-life-is-more-than-enough",
+    "texto": "Living a happy life is more than enough.",
+    "autor": "Shrikant Rao",
+    "autorSlug": "shrikant-rao",
+    "explicacao": "Citação de Shrikant Rao sobre sentido da existência e experiência vivida. “Living a happy life is more than enough.” articula vida, happy, living em registro de vida, com relevância para contextos como vida e living.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "happy",
+        "living"
+      ],
+      "contextos": [
+        "vida",
+        "living"
+      ],
+      "emocoes": [
+        "alegria",
+        "felicidade"
+      ],
+      "temas": [
+        "vida",
+        "happy",
+        "living",
+        "enough"
+      ],
+      "palavrasChave": [
+        "happy",
+        "vida",
+        "living",
+        "alegria",
+        "felicidade"
+      ],
+      "tagsSeo": [
+        "vida",
+        "happy",
+        "living",
+        "alegria",
+        "felicidade",
+        "shrikant-rao"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "happy",
+        "living",
+        "enough",
+        "vida",
+        "happy"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Living a happy life is more than enough.\" — Shrikant Rao | Metamensagem",
+      "descriptionSeo": "Citação de Shrikant Rao sobre sentido da existência e experiência vivida. “Living a happy life is more than enough.” articula vida, happy, living em registro…",
+      "keywordsSeo": [
+        "frases de Shrikant Rao",
+        "frases sobre vida",
+        "frases vida",
+        "frases happy",
+        "frases living",
+        "happy",
+        "vida",
+        "living",
+        "alegria"
+      ],
+      "canonicalSlug": "living-a-happy-life-is-more-than-enough",
+      "relatedKeywords": [
+        "alegria",
+        "felicidade",
+        "vida",
+        "happy",
+        "living",
+        "shrikant-rao"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Living a happy life is more than enough.",
+    "autor_original": "Shrikant Rao",
+    "autor_slug": "shrikant-rao",
+    "categoria": "vida",
+    "contextos": [
+      "vida",
+      "living"
+    ],
+    "palavras_chave": [
+      "happy",
+      "vida",
+      "living",
+      "alegria",
+      "felicidade"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

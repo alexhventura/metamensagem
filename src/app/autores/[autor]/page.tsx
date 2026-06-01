@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { absoluteUrl } from '@/lib/seo/url';
 import { getAutorMeta, getAutores, getFrasesFiltered } from '@/lib/loadFrases';
 
 export const revalidate = 3600;
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Frases de ${meta.nome}`,
     description: `Coleção de frases e mensagens de ${meta.nome} no Metamensagem.`,
     alternates: {
-      canonical: `https://metamensagem.com/autores/${meta.slug}`,
+      canonical: absoluteUrl(`/autores/${meta.slug}`),
     },
   };
 }

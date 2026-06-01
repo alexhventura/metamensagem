@@ -1,26 +1,814 @@
 [
   {
-    "id": "f_tzzqpjolr",
-    "slug": "quem-nao-sabe-nada-tem-de-acreditar-em-tudo",
-    "frase_original": "Quem não sabe nada tem de acreditar em tudo.",
+    "id": "f_csv_0403025fab",
+    "slug": "i-know-that-no-reader-ever-asks-a-question-a-writer-must-force-his-favors-upon",
+    "texto": "I know that no reader ever asks a question. A writer must force his favors upon his readers.",
+    "autor": "Jan Neruda",
+    "autorSlug": "jan-neruda",
+    "explicacao": "Orientação direta de Jan Neruda sobre temas ligados a reflexao. A afirmação “I know that no reader ever asks a question. A writer must force his favors upon his readers.” funciona como lembrete prático ligado a reflexao, creativity, readers, útil em momentos de readers e writers.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "creativity",
+        "readers",
+        "writers",
+        "writing"
+      ],
+      "contextos": [
+        "readers",
+        "writers",
+        "writing"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "creativity",
+        "readers",
+        "writers",
+        "reader",
+        "question",
+        "writer",
+        "force"
+      ],
+      "palavrasChave": [
+        "creativity",
+        "readers",
+        "writers",
+        "writing",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "creativity",
+        "readers",
+        "writers",
+        "writing",
+        "jan-neruda"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 37,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "creativity",
+        "readers",
+        "writers",
+        "reader",
+        "question"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I know that no reader ever asks a question. A writer…\" — Jan Neruda | Metamensagem",
+      "descriptionSeo": "Orientação direta de Jan Neruda sobre temas ligados a reflexao. A afirmação “I know that no reader ever asks a question. A writer must force his favors upon h…",
+      "keywordsSeo": [
+        "frases de Jan Neruda",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases creativity",
+        "frases readers",
+        "frases writers",
+        "creativity",
+        "readers",
+        "writers",
+        "writing"
+      ],
+      "canonicalSlug": "i-know-that-no-reader-ever-asks-a-question-a-writer-must-force-his-favors-upon",
+      "relatedKeywords": [
+        "reflexao",
+        "creativity",
+        "readers",
+        "writers",
+        "writing",
+        "jan-neruda"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I know that no reader ever asks a question. A writer must force his favors upon his readers.",
     "autor_original": "Jan Neruda",
-    "categoria": "inspiracional",
+    "autor_slug": "jan-neruda",
+    "categoria": "reflexao",
     "contextos": [
-      "reflexao"
+      "readers",
+      "writers",
+      "writing"
     ],
-    "explicacao": "Jan Neruda observa que quem nada sabe precisa crer em tudo por falta de critério. Aforismo sobre ignorância e credulidade, possivelmente confundido com o poeta Pablo Neruda em algumas citações.",
     "palavras_chave": [
-      "inspiracional",
+      "creativity",
+      "readers",
+      "writers",
+      "writing",
       "reflexao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_0db972e640",
+    "slug": "at-least-when-one-speaks-of-oneself-one-is-passionate-well-informed-and-specifi",
+    "texto": "At least when one speaks of oneself one is passionate, well-informed and specific.",
+    "autor": "Jan Neruda",
+    "autorSlug": "jan-neruda",
+    "explicacao": "Citação de Jan Neruda sobre temas ligados a autoestima. “At least when one speaks of oneself one is passionate, well-informed and specific.” articula autoestima, ego, identity em registro de autoestima, com relevância para contextos como identity.",
+    "semantica": {
+      "categoriaPrincipal": "autoestima",
+      "categorias": [
+        "autoestima",
+        "ego",
+        "identity"
+      ],
+      "contextos": [
+        "identity"
+      ],
+      "emocoes": [],
+      "temas": [
+        "autoestima",
+        "ego",
+        "identity",
+        "least",
+        "speaks",
+        "oneself",
+        "passionate",
+        "informed"
+      ],
+      "palavrasChave": [
+        "ego",
+        "identity",
+        "autoestima"
+      ],
+      "tagsSeo": [
+        "autoestima",
+        "ego",
+        "identity",
+        "jan-neruda"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "autoestima",
+        "ego",
+        "identity",
+        "least",
+        "speaks",
+        "oneself"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"At least when one speaks of oneself one is passionat…\" — Jan Neruda | Metamensagem",
+      "descriptionSeo": "Citação de Jan Neruda sobre temas ligados a autoestima. “At least when one speaks of oneself one is passionate, well-informed and specific.” articula autoesti…",
+      "keywordsSeo": [
+        "frases de Jan Neruda",
+        "frases sobre autoestima",
+        "frases autoestima",
+        "frases ego",
+        "frases identity",
+        "ego",
+        "identity",
+        "autoestima"
+      ],
+      "canonicalSlug": "at-least-when-one-speaks-of-oneself-one-is-passionate-well-informed-and-specifi",
+      "relatedKeywords": [
+        "autoestima",
+        "ego",
+        "identity",
+        "jan-neruda"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "At least when one speaks of oneself one is passionate, well-informed and specific.",
+    "autor_original": "Jan Neruda",
+    "autor_slug": "jan-neruda",
+    "categoria": "autoestima",
+    "contextos": [
+      "identity"
+    ],
+    "palavras_chave": [
+      "ego",
+      "identity",
+      "autoestima"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_6c129817eb",
+    "slug": "men-are-jealous-of-every-woman-even-when-they-don-t-have-the-slightest-interest",
+    "texto": "Men are jealous of every woman, even when they don’t have the slightest interest in her themselves.",
+    "autor": "Jan Neruda",
+    "autorSlug": "jan-neruda",
+    "explicacao": "Citação de Jan Neruda sobre temas ligados a reflexao. “Men are jealous of every woman, even when they don’t have the slightest interest in her themselves.” articula reflexao, jealousy, men em registro de reflexao, com relevância para contextos como men e relationships.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "jealousy",
+        "men",
+        "relationships",
+        "women"
+      ],
+      "contextos": [
+        "men",
+        "relationships",
+        "women"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "jealousy",
+        "men",
+        "relationships",
+        "jealous",
+        "every",
+        "woman",
+        "slightest"
+      ],
+      "palavrasChave": [
+        "jealousy",
+        "men",
+        "relationships",
+        "women",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "jealousy",
+        "men",
+        "relationships",
+        "women",
+        "jan-neruda"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 37,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "jealousy",
+        "men",
+        "relationships",
+        "jealous",
+        "every"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Men are jealous of every woman, even when they don’t…\" — Jan Neruda | Metamensagem",
+      "descriptionSeo": "Citação de Jan Neruda sobre temas ligados a reflexao. “Men are jealous of every woman, even when they don’t have the slightest interest in her themselves.” ar…",
+      "keywordsSeo": [
+        "frases de Jan Neruda",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases jealousy",
+        "frases men",
+        "frases relationships",
+        "jealousy",
+        "men",
+        "relationships",
+        "women"
+      ],
+      "canonicalSlug": "men-are-jealous-of-every-woman-even-when-they-don-t-have-the-slightest-interest",
+      "relatedKeywords": [
+        "reflexao",
+        "jealousy",
+        "men",
+        "relationships",
+        "women",
+        "jan-neruda"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Men are jealous of every woman, even when they don’t have the slightest interest in her themselves.",
+    "autor_original": "Jan Neruda",
+    "autor_slug": "jan-neruda",
+    "categoria": "reflexao",
+    "contextos": [
+      "men",
+      "relationships",
+      "women"
+    ],
+    "palavras_chave": [
+      "jealousy",
+      "men",
+      "relationships",
+      "women",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_85a794f4e7",
+    "slug": "the-face-of-the-dead-man-was-concealed-of-course-our-customs-not-being-those-o",
+    "texto": "The face of the dead man was concealed, of course, our customs not being those of the south, where corpses are carried to the grave in open coffins, that they might – one last time before slipping into the pit – be warmed by the light of the sun.",
+    "autor": "Jan Neruda",
+    "autorSlug": "jan-neruda",
+    "explicacao": "Citação de Jan Neruda sobre passagem do tempo e prioridades. “The face of the dead man was concealed, of course, our customs not being those of the south, wher…” articula tempo, burial, coffin em registro de tempo, com relevância para contextos como luto e coffin.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "burial",
+        "coffin",
+        "corpse",
+        "death"
+      ],
+      "contextos": [
+        "luto",
+        "coffin",
+        "corpse",
+        "death",
+        "funeral"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "burial",
+        "coffin",
+        "corpse",
+        "concealed",
+        "course",
+        "customs",
+        "being"
+      ],
+      "palavrasChave": [
+        "burial",
+        "coffin",
+        "corpse",
+        "death",
+        "funeral",
+        "tempo",
+        "luto"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "burial",
+        "coffin",
+        "corpse",
+        "death",
+        "luto",
+        "funeral",
+        "jan-neruda"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 54,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "burial",
+        "coffin",
+        "corpse",
+        "concealed",
+        "course"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The face of the dead man was concealed, of course, o…\" — Jan Neruda | Metamensagem",
+      "descriptionSeo": "Citação de Jan Neruda sobre passagem do tempo e prioridades. “The face of the dead man was concealed, of course, our customs not being those of the south, whe…",
+      "keywordsSeo": [
+        "frases de Jan Neruda",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases burial",
+        "frases luto",
+        "frases coffin",
+        "burial",
+        "coffin",
+        "corpse",
+        "death"
+      ],
+      "canonicalSlug": "the-face-of-the-dead-man-was-concealed-of-course-our-customs-not-being-those-o",
+      "relatedKeywords": [
+        "tempo",
+        "burial",
+        "coffin",
+        "corpse",
+        "death",
+        "jan-neruda"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The face of the dead man was concealed, of course, our customs not being those of the south, where corpses are carried to the grave in open coffins, that they might – one last time before slipping into the pit – be warmed by the light of the sun.",
+    "autor_original": "Jan Neruda",
+    "autor_slug": "jan-neruda",
+    "categoria": "tempo",
+    "contextos": [
+      "luto",
+      "coffin",
+      "corpse",
+      "death",
+      "funeral"
+    ],
+    "palavras_chave": [
+      "burial",
+      "coffin",
+      "corpse",
+      "death",
+      "funeral",
+      "tempo",
+      "luto"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_a89ad235d3",
+    "slug": "no-one-has-the-right-to-enter-literature-without-fresh-new-ideas-we-ve-got-too",
+    "texto": "No one has the right to enter literature without fresh new ideas. We’ve got too many dexterous drudges as it is.",
+    "autor": "Jan Neruda",
+    "autorSlug": "jan-neruda",
+    "explicacao": "Citação de Jan Neruda sobre temas ligados a reflexao. “No one has the right to enter literature without fresh new ideas. We’ve got too many dexterous dr…” articula reflexao, creativity, literature em registro de reflexao, com relevância para contextos como literature e writers.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "creativity",
+        "literature",
+        "writers",
+        "writing"
+      ],
+      "contextos": [
+        "literature",
+        "writers",
+        "writing"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "creativity",
+        "literature",
+        "writers",
+        "right",
+        "enter",
+        "without",
+        "fresh"
+      ],
+      "palavrasChave": [
+        "creativity",
+        "literature",
+        "writers",
+        "writing",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "creativity",
+        "literature",
+        "writers",
+        "writing",
+        "jan-neruda"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 39,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "creativity",
+        "literature",
+        "writers",
+        "right",
+        "enter"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"No one has the right to enter literature without fre…\" — Jan Neruda | Metamensagem",
+      "descriptionSeo": "Citação de Jan Neruda sobre temas ligados a reflexao. “No one has the right to enter literature without fresh new ideas. We’ve got too many dexterous dr…” art…",
+      "keywordsSeo": [
+        "frases de Jan Neruda",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases creativity",
+        "frases literature",
+        "frases writers",
+        "creativity",
+        "literature",
+        "writers",
+        "writing"
+      ],
+      "canonicalSlug": "no-one-has-the-right-to-enter-literature-without-fresh-new-ideas-we-ve-got-too",
+      "relatedKeywords": [
+        "reflexao",
+        "creativity",
+        "literature",
+        "writers",
+        "writing",
+        "jan-neruda"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "No one has the right to enter literature without fresh new ideas. We’ve got too many dexterous drudges as it is.",
+    "autor_original": "Jan Neruda",
+    "autor_slug": "jan-neruda",
+    "categoria": "reflexao",
+    "contextos": [
+      "literature",
+      "writers",
+      "writing"
+    ],
+    "palavras_chave": [
+      "creativity",
+      "literature",
+      "writers",
+      "writing",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_e70c1e0521",
+    "slug": "i-ve-supped-on-potatoes-and-groats-and-am-waiting-to-be-sick-how-about-you-i-su",
+    "texto": "I’ve supped on potatoes and groats and am waiting to be sick. How about you?I supped like the Lord in Heaven.’and what does the Lord in Heaven have for supper?’Nothing.",
+    "autor": "Jan Neruda",
+    "autorSlug": "jan-neruda",
+    "explicacao": "Metáfora atribuída a Jan Neruda: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “I’ve supped on potatoes and groats and am waiting to be sick. How about you?I supped like the Lor…” usa imagem concreta para lembrar que reflexao, food, hunger pedem movimento e interpretação pessoal, em tom de hunger.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "food",
+        "hunger"
+      ],
+      "contextos": [
+        "hunger"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "food",
+        "hunger",
+        "supped",
+        "heaven",
+        "potatoes",
+        "groats",
+        "waiting"
+      ],
+      "palavrasChave": [
+        "food",
+        "hunger",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "food",
+        "hunger",
+        "jan-neruda"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 40,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "food",
+        "hunger",
+        "supped",
+        "heaven",
+        "potatoes"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I’ve supped on potatoes and groats and am waiting to…\" — Jan Neruda | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Jan Neruda: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “I’ve supped on potatoes and groats and am wa…",
+      "keywordsSeo": [
+        "frases de Jan Neruda",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases food",
+        "frases hunger",
+        "food",
+        "hunger",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-ve-supped-on-potatoes-and-groats-and-am-waiting-to-be-sick-how-about-you-i-su",
+      "relatedKeywords": [
+        "reflexao",
+        "food",
+        "hunger",
+        "jan-neruda"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I’ve supped on potatoes and groats and am waiting to be sick. How about you?I supped like the Lord in Heaven.’and what does the Lord in Heaven have for supper?’Nothing.",
+    "autor_original": "Jan Neruda",
+    "autor_slug": "jan-neruda",
+    "categoria": "reflexao",
+    "contextos": [
+      "hunger"
+    ],
+    "palavras_chave": [
+      "food",
+      "hunger",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_tzzqpjolr",
+    "slug": "quem-nao-sabe-nada-tem-de-acreditar-em-tudo",
+    "texto": "Quem não sabe nada tem de acreditar em tudo.",
+    "autor": "Jan Neruda",
+    "autorSlug": "jan-neruda",
+    "explicacao": "Jan Neruda observa que quem nada sabe precisa crer em tudo por falta de critério. Aforismo sobre ignorância e credulidade, possivelmente confundido com o poeta Pablo Neruda em algumas citações.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "acreditar"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "jan-neruda"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "acreditar",
+        "motivacao",
+        "inspiracional"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Quem não sabe nada tem de acreditar em tudo.\" — Jan Neruda | Metamensagem",
+      "descriptionSeo": "Jan Neruda observa que quem nada sabe precisa crer em tudo por falta de critério. Aforismo sobre ignorância e credulidade, possivelmente confundido com o poet…",
+      "keywordsSeo": [
+        "frases de Jan Neruda",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "quem-nao-sabe-nada-tem-de-acreditar-em-tudo",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "jan-neruda"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Quem não sabe nada tem de acreditar em tudo.",
+    "autor_original": "Jan Neruda",
+    "autor_slug": "jan-neruda",
+    "categoria": "motivacao",
+    "contextos": [
+      "inspiracao",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "inspiracional",
+      "reflexao",
+      "motivacao",
+      "inspiracao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -2,31 +2,131 @@
   {
     "id": "f_lj2p1x2gx",
     "slug": "quero-preciso-desejo-necessito-almejo-sao-apenas-pensam",
+    "texto": "Quero, preciso, desejo, necessito, almejo, são apenas pensamentos dos sonhadores. Busque, continue, lute e conquiste, são as ações dos vencedores. Deixei de ser apenas um sonhador, para me tornar um vencedor.",
+    "autor": "Ronaldo Jesus dos Santos",
+    "autorSlug": "ronaldo-jesus-dos-santos",
+    "explicacao": "Ronaldo Jesus dos Santos contrasta sonhar com agir. Desejos passivos não bastam; busca, luta e conquista definem vencedores. Narrativa pessoal de quem deixou de ser apenas sonhador.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "reflexao",
+        "sonhos"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao",
+        "reflexao",
+        "sonhos"
+      ],
+      "emocoes": [
+        "coragem"
+      ],
+      "temas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "apenas",
+        "quero",
+        "preciso",
+        "desejo",
+        "necessito"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "reflexao",
+        "sonhos",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "reflexao",
+        "sonhos",
+        "inspiracao",
+        "ronaldo-jesus-dos-santos"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 50,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "apenas",
+        "quero",
+        "preciso"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Quero, preciso, desejo, necessito, almejo, são apena…\" — Ronaldo Jesus dos Santos | Metamensagem",
+      "descriptionSeo": "Ronaldo Jesus dos Santos contrasta sonhar com agir. Desejos passivos não bastam; busca, luta e conquista definem vencedores. Narrativa pessoal de quem deixou…",
+      "keywordsSeo": [
+        "frases de Ronaldo Jesus dos Santos",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases coragem",
+        "frases inspiracao",
+        "frases inspiracional",
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "reflexao"
+      ],
+      "canonicalSlug": "quero-preciso-desejo-necessito-almejo-sao-apenas-pensam",
+      "relatedKeywords": [
+        "coragem",
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sonhos",
+        "ronaldo-jesus-dos-santos"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Quero, preciso, desejo, necessito, almejo, são apenas pensamentos dos sonhadores. Busque, continue, lute e conquiste, são as ações dos vencedores. Deixei de ser apenas um sonhador, para me tornar um vencedor.",
     "autor_original": "Ronaldo Jesus dos Santos",
-    "categoria": "coragem",
+    "autor_slug": "ronaldo-jesus-dos-santos",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao",
       "reflexao",
       "sonhos"
     ],
-    "explicacao": "Ronaldo Jesus dos Santos contrasta sonhar com agir. Desejos passivos não bastam; busca, luta e conquista definem vencedores. Narrativa pessoal de quem deixou de ser apenas sonhador.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao",
       "reflexao",
-      "sonhos"
+      "sonhos",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

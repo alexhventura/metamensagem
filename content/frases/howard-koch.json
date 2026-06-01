@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_eebb1697b6",
+    "slug": "we-ll-always-have-paris",
+    "texto": "We'll always have Paris.",
+    "autor": "Howard Koch",
+    "autorSlug": "howard-koch",
+    "explicacao": "Citação de Howard Koch sobre temas ligados a reflexao. “We'll always have Paris.” articula reflexao, casablanca, paris em registro de reflexao, com relevância para contextos como paris.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "casablanca",
+        "paris"
+      ],
+      "contextos": [
+        "paris"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "casablanca",
+        "paris",
+        "always"
+      ],
+      "palavrasChave": [
+        "casablanca",
+        "paris",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "casablanca",
+        "paris",
+        "howard-koch"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "casablanca",
+        "paris",
+        "always",
+        "reflexao",
+        "casablanca"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"We'll always have Paris.\" — Howard Koch | Metamensagem",
+      "descriptionSeo": "Citação de Howard Koch sobre temas ligados a reflexao. “We'll always have Paris.” articula reflexao, casablanca, paris em registro de reflexao, com relevância…",
+      "keywordsSeo": [
+        "frases de Howard Koch",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases casablanca",
+        "frases paris",
+        "casablanca",
+        "paris",
+        "reflexao"
+      ],
+      "canonicalSlug": "we-ll-always-have-paris",
+      "relatedKeywords": [
+        "reflexao",
+        "casablanca",
+        "paris",
+        "howard-koch"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "We'll always have Paris.",
+    "autor_original": "Howard Koch",
+    "autor_slug": "howard-koch",
+    "categoria": "reflexao",
+    "contextos": [
+      "paris"
+    ],
+    "palavras_chave": [
+      "casablanca",
+      "paris",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

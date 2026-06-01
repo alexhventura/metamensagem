@@ -2,25 +2,113 @@
   {
     "id": "f_q0nd9ps7d",
     "slug": "o-otimista-corre-o-risco-de-se-frustrar-ao-final-mas-o-pess",
+    "texto": "O otimista corre o risco de se frustrar ao final, mas o pessimista vive frustrado todos os dias",
+    "autor": "Ricardo Majela",
+    "autorSlug": "ricardo-majela",
+    "explicacao": "Ricardo Majela contrasta otimista e pessimista com ironia: o primeiro pode se frustrar no fim, o segundo vive frustrado sempre. Argumento favorável a tentar e arriscar. Frase popular em posts sobre mentalidade positiva.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "corre",
+        "risco",
+        "frustrar",
+        "final"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "ricardo-majela"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "corre",
+        "risco"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O otimista corre o risco de se frustrar ao final, ma…\" — Ricardo Majela | Metamensagem",
+      "descriptionSeo": "Ricardo Majela contrasta otimista e pessimista com ironia: o primeiro pode se frustrar no fim, o segundo vive frustrado sempre. Argumento favorável a tentar e…",
+      "keywordsSeo": [
+        "frases de Ricardo Majela",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "o-otimista-corre-o-risco-de-se-frustrar-ao-final-mas-o-pess",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "ricardo-majela"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O otimista corre o risco de se frustrar ao final, mas o pessimista vive frustrado todos os dias",
     "autor_original": "Ricardo Majela",
-    "categoria": "inspiracional",
+    "autor_slug": "ricardo-majela",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Ricardo Majela contrasta otimista e pessimista com ironia: o primeiro pode se frustrar no fim, o segundo vive frustrado sempre. Argumento favorável a tentar e arriscar. Frase popular em posts sobre mentalidade positiva.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

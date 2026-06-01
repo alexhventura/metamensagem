@@ -1,0 +1,122 @@
+[
+  {
+    "id": "f_csv_3e5a723fa6",
+    "slug": "art-is-love-made-public",
+    "texto": "Art is love made public.",
+    "autor": "Hernando Fuentes",
+    "autorSlug": "hernando-fuentes",
+    "explicacao": "Citação de Hernando Fuentes sobre vínculos afetivos e cuidado mútuo. “Art is love made public.” articula amor, art, love em registro de amor, com relevância para contextos como love e sense8.",
+    "semantica": {
+      "categoriaPrincipal": "amor",
+      "categorias": [
+        "amor",
+        "art",
+        "love",
+        "sense8",
+        "tvseries"
+      ],
+      "contextos": [
+        "love",
+        "sense8",
+        "tvseries"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "amor",
+        "art",
+        "love",
+        "sense8",
+        "public"
+      ],
+      "palavrasChave": [
+        "art",
+        "love",
+        "sense8",
+        "tvseries",
+        "amor"
+      ],
+      "tagsSeo": [
+        "amor",
+        "art",
+        "love",
+        "sense8",
+        "tvseries",
+        "hernando-fuentes"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amor",
+        "art",
+        "love",
+        "sense8",
+        "public",
+        "amor"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Art is love made public.\" — Hernando Fuentes | Metamensagem",
+      "descriptionSeo": "Citação de Hernando Fuentes sobre vínculos afetivos e cuidado mútuo. “Art is love made public.” articula amor, art, love em registro de amor, com relevância p…",
+      "keywordsSeo": [
+        "frases de Hernando Fuentes",
+        "frases sobre amor",
+        "frases amor",
+        "frases art",
+        "frases love",
+        "frases sense8",
+        "art",
+        "love",
+        "sense8",
+        "tvseries"
+      ],
+      "canonicalSlug": "art-is-love-made-public",
+      "relatedKeywords": [
+        "amor",
+        "art",
+        "love",
+        "sense8",
+        "tvseries",
+        "hernando-fuentes"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Art is love made public.",
+    "autor_original": "Hernando Fuentes",
+    "autor_slug": "hernando-fuentes",
+    "categoria": "amor",
+    "contextos": [
+      "love",
+      "sense8",
+      "tvseries"
+    ],
+    "palavras_chave": [
+      "art",
+      "love",
+      "sense8",
+      "tvseries",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,129 @@
+[
+  {
+    "id": "f_csv_593a587154",
+    "slug": "just-do-it-now",
+    "texto": "Just do it. Now.",
+    "autor": "M. Yeats",
+    "autorSlug": "m-yeats",
+    "explicacao": "Citação de M. Yeats sobre temas ligados a vida. “Just do it. Now.” articula vida, a, advice em registro de vida, com relevância para contextos como advice e been.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "a",
+        "advice",
+        "been",
+        "book"
+      ],
+      "contextos": [
+        "advice",
+        "been",
+        "book",
+        "day",
+        "it-s"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "a",
+        "advice",
+        "been"
+      ],
+      "palavrasChave": [
+        "a",
+        "advice",
+        "been",
+        "book",
+        "day",
+        "it-s",
+        "vida"
+      ],
+      "tagsSeo": [
+        "vida",
+        "a",
+        "advice",
+        "been",
+        "book",
+        "day",
+        "it-s",
+        "m-yeats"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 35,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "a",
+        "advice",
+        "been",
+        "vida",
+        "a"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Just do it. Now.\" — M. Yeats | Metamensagem",
+      "descriptionSeo": "Citação de M. Yeats sobre temas ligados a vida. “Just do it. Now.” articula vida, a, advice em registro de vida, com relevância para contextos como advice e b…",
+      "keywordsSeo": [
+        "frases de M. Yeats",
+        "frases sobre vida",
+        "frases vida",
+        "frases a",
+        "frases advice",
+        "frases been",
+        "a",
+        "advice",
+        "been",
+        "book"
+      ],
+      "canonicalSlug": "just-do-it-now",
+      "relatedKeywords": [
+        "vida",
+        "a",
+        "advice",
+        "been",
+        "book",
+        "m-yeats"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Just do it. Now.",
+    "autor_original": "M. Yeats",
+    "autor_slug": "m-yeats",
+    "categoria": "vida",
+    "contextos": [
+      "advice",
+      "been",
+      "book",
+      "day",
+      "it-s"
+    ],
+    "palavras_chave": [
+      "a",
+      "advice",
+      "been",
+      "book",
+      "day",
+      "it-s",
+      "vida"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

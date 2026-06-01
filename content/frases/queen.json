@@ -1,0 +1,108 @@
+[
+  {
+    "id": "f_csv_b2c8b6f46b",
+    "slug": "the-show-must-go-on",
+    "texto": "The Show Must Go On!",
+    "autor": "Queen",
+    "autorSlug": "queen",
+    "explicacao": "Orientação direta de Queen sobre temas ligados a motivacao. A afirmação “The Show Must Go On!” funciona como lembrete prático ligado a motivacao, inspiracional, music, útil em momentos de inspiracao e music.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "music"
+      ],
+      "contextos": [
+        "inspiracao",
+        "music"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "music"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "music",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "music",
+        "inspiracao",
+        "queen"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "music",
+        "motivacao",
+        "inspiracional"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The Show Must Go On!\" — Queen | Metamensagem",
+      "descriptionSeo": "Orientação direta de Queen sobre temas ligados a motivacao. A afirmação “The Show Must Go On!” funciona como lembrete prático ligado a motivacao, inspiraciona…",
+      "keywordsSeo": [
+        "frases de Queen",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases music",
+        "inspiracional",
+        "music",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "the-show-must-go-on",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "music",
+        "queen"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The Show Must Go On!",
+    "autor_original": "Queen",
+    "autor_slug": "queen",
+    "categoria": "motivacao",
+    "contextos": [
+      "inspiracao",
+      "music"
+    ],
+    "palavras_chave": [
+      "inspiracional",
+      "music",
+      "motivacao",
+      "inspiracao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

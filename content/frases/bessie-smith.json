@@ -1,0 +1,108 @@
+[
+  {
+    "id": "f_csv_9da22bafcc",
+    "slug": "it-s-a-long-old-road-but-i-know-i-m-gonna-find-the-end",
+    "texto": "It's a long old road but I know I'm gonna find the end.",
+    "autor": "Bessie Smith",
+    "autorSlug": "bessie-smith",
+    "explicacao": "Citação de Bessie Smith sobre temas ligados a reflexao. “It's a long old road but I know I'm gonna find the end.” articula reflexao, time, gonna em registro de reflexao, com relevância para contextos como termino e viagem.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "time"
+      ],
+      "contextos": [
+        "termino",
+        "viagem",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "time",
+        "gonna"
+      ],
+      "palavrasChave": [
+        "time",
+        "reflexao",
+        "termino",
+        "viagem"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "time",
+        "termino",
+        "viagem",
+        "bessie-smith"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "time",
+        "gonna",
+        "reflexao",
+        "time"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"It's a long old road but I know I'm gonna find the end.\" — Bessie Smith | Metamensagem",
+      "descriptionSeo": "Citação de Bessie Smith sobre temas ligados a reflexao. “It's a long old road but I know I'm gonna find the end.” articula reflexao, time, gonna em registro d…",
+      "keywordsSeo": [
+        "frases de Bessie Smith",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases time",
+        "frases termino",
+        "frases viagem",
+        "time",
+        "reflexao",
+        "termino",
+        "viagem"
+      ],
+      "canonicalSlug": "it-s-a-long-old-road-but-i-know-i-m-gonna-find-the-end",
+      "relatedKeywords": [
+        "reflexao",
+        "time",
+        "bessie-smith"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "It's a long old road but I know I'm gonna find the end.",
+    "autor_original": "Bessie Smith",
+    "autor_slug": "bessie-smith",
+    "categoria": "reflexao",
+    "contextos": [
+      "termino",
+      "viagem",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "time",
+      "reflexao",
+      "termino",
+      "viagem"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

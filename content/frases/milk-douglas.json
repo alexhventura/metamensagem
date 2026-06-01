@@ -2,25 +2,103 @@
   {
     "id": "f_vf8g06dom",
     "slug": "nos-dias-bons-eu-me-esforco-nos-dias-ruins-eu-me-esforco-ma",
+    "texto": "Nos dias bons eu me esforço, nos dias ruins eu me esforço mais ainda.",
+    "autor": "Milk Douglas",
+    "autorSlug": "milk-douglas",
+    "explicacao": "Milk Douglas (provavelmente Mike Douglas ou autor motivacional catalogado assim) prega esforço redobrado nos dias difíceis. Frase de disciplina e rotina. Contexto: autoajuda sobre consistência além do humor de ocasião.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "esforço",
+        "ruins",
+        "ainda"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "inspiracao",
+        "milk-douglas"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "esforço",
+        "ruins",
+        "ainda",
+        "motivacao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Nos dias bons eu me esforço, nos dias ruins eu me es…\" — Milk Douglas | Metamensagem",
+      "descriptionSeo": "Milk Douglas (provavelmente Mike Douglas ou autor motivacional catalogado assim) prega esforço redobrado nos dias difíceis. Frase de disciplina e rotina. Cont…",
+      "keywordsSeo": [
+        "frases de Milk Douglas",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "nos-dias-bons-eu-me-esforco-nos-dias-ruins-eu-me-esforco-ma",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "milk-douglas"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Nos dias bons eu me esforço, nos dias ruins eu me esforço mais ainda.",
     "autor_original": "Milk Douglas",
-    "categoria": "inspiracional",
+    "autor_slug": "milk-douglas",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao"
     ],
-    "explicacao": "Milk Douglas (provavelmente Mike Douglas ou autor motivacional catalogado assim) prega esforço redobrado nos dias difíceis. Frase de disciplina e rotina. Contexto: autoajuda sobre consistência além do humor de ocasião.",
     "palavras_chave": [
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

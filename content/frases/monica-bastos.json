@@ -2,27 +2,117 @@
   {
     "id": "f_8hp9u391i",
     "slug": "a-verdadeira-grandeza-nao-e-medida-pela-quantidade-de-aplau",
+    "texto": "⁠A verdadeira grandeza não é medida pela quantidade de aplausos que recebemos, mas pela coragem de seguir em frente, mesmo quando muitos conspiram contra nós.",
+    "autor": "Mônica Bastos",
+    "autorSlug": "monica-bastos",
+    "explicacao": "Mônica Bastos define grandeza pela coragem de continuar sem depender de aplausos. Mensagem para quem enfrenta oposição ou ingratidão. Tom de liderança silenciosa e persistência moral.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "coragem",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [
+        "coragem"
+      ],
+      "temas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "verdadeira",
+        "grandeza",
+        "medida",
+        "quantidade",
+        "aplausos"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "inspiracao",
+        "monica-bastos"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 41,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "verdadeira",
+        "grandeza",
+        "medida"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠A verdadeira grandeza não é medida pela quantidade …\" — Mônica Bastos | Metamensagem",
+      "descriptionSeo": "Mônica Bastos define grandeza pela coragem de continuar sem depender de aplausos. Mensagem para quem enfrenta oposição ou ingratidão. Tom de liderança silenci…",
+      "keywordsSeo": [
+        "frases de Mônica Bastos",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases coragem",
+        "frases inspiracao",
+        "frases inspiracional",
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "a-verdadeira-grandeza-nao-e-medida-pela-quantidade-de-aplau",
+      "relatedKeywords": [
+        "coragem",
+        "motivacao",
+        "inspiracional",
+        "monica-bastos"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠A verdadeira grandeza não é medida pela quantidade de aplausos que recebemos, mas pela coragem de seguir em frente, mesmo quando muitos conspiram contra nós.",
     "autor_original": "Mônica Bastos",
-    "categoria": "coragem",
+    "autor_slug": "monica-bastos",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "Mônica Bastos define grandeza pela coragem de continuar sem depender de aplausos. Mensagem para quem enfrenta oposição ou ingratidão. Tom de liderança silenciosa e persistência moral.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

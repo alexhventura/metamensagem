@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_8beac28ac6",
+    "slug": "i-don-t-believe-in-death",
+    "texto": "I don't believe in death.",
+    "autor": "Bob Weir",
+    "autorSlug": "bob-weir",
+    "explicacao": "Citação de Bob Weir sobre limites e escolhas conscientes. “I don't believe in death.” articula reflexao, believe, death em registro de reflexao, com relevância para contextos como luto e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "believe"
+      ],
+      "contextos": [
+        "luto",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "believe",
+        "death"
+      ],
+      "palavrasChave": [
+        "believe",
+        "reflexao",
+        "luto"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "believe",
+        "luto",
+        "bob-weir"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "believe",
+        "death",
+        "reflexao",
+        "believe"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I don't believe in death.\" — Bob Weir | Metamensagem",
+      "descriptionSeo": "Citação de Bob Weir sobre limites e escolhas conscientes. “I don't believe in death.” articula reflexao, believe, death em registro de reflexao, com relevânci…",
+      "keywordsSeo": [
+        "frases de Bob Weir",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases believe",
+        "frases luto",
+        "believe",
+        "reflexao",
+        "luto"
+      ],
+      "canonicalSlug": "i-don-t-believe-in-death",
+      "relatedKeywords": [
+        "reflexao",
+        "believe",
+        "bob-weir"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I don't believe in death.",
+    "autor_original": "Bob Weir",
+    "autor_slug": "bob-weir",
+    "categoria": "reflexao",
+    "contextos": [
+      "luto",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "believe",
+      "reflexao",
+      "luto"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -2,25 +2,113 @@
   {
     "id": "f_5v426tbjy",
     "slug": "acredite-na-justica-mas-nao-a-que-emana-dos-demais-e-sim-na",
+    "texto": "Acredite na justiça, mas não a que emana dos demais e sim na tua própria.",
+    "autor": "Código Samurai",
+    "autorSlug": "codigo-samurai",
+    "explicacao": "Atribuída a \"Código Samurai\", provavelmente de conteúdo inspirado em ética samurai moderna. Defende uma justiça interior, mais confiável do que depender do julgamento alheio.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "acredite",
+        "justiça",
+        "emana",
+        "demais",
+        "própria"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "codigo-samurai"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "acredite",
+        "justiça",
+        "emana"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Acredite na justiça, mas não a que emana dos demais …\" — Código Samurai | Metamensagem",
+      "descriptionSeo": "Atribuída a \"Código Samurai\", provavelmente de conteúdo inspirado em ética samurai moderna. Defende uma justiça interior, mais confiável do que depender do ju…",
+      "keywordsSeo": [
+        "frases de Código Samurai",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "acredite-na-justica-mas-nao-a-que-emana-dos-demais-e-sim-na",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "codigo-samurai"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Acredite na justiça, mas não a que emana dos demais e sim na tua própria.",
     "autor_original": "Código Samurai",
-    "categoria": "inspiracional",
+    "autor_slug": "codigo-samurai",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "reflexao"
     ],
-    "explicacao": "Atribuída a \"Código Samurai\", provavelmente de conteúdo inspirado em ética samurai moderna. Defende uma justiça interior, mais confiável do que depender do julgamento alheio.",
     "palavras_chave": [
       "inspiracional",
-      "reflexao"
+      "reflexao",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,26 +1,216 @@
 [
   {
-    "id": "f_zvy4xti49",
-    "slug": "tentei-descobrir-na-alma-alguma-coisa-mais-profunda-do-que-n",
-    "frase_original": "Tentei descobrir na alma alguma coisa mais profunda do que não saber nada sobre as coisas profundas. Consegui não descobrir.",
+    "id": "f_csv_3ef894783f",
+    "slug": "wisdom-might-be-conversion-into-a-tree",
+    "texto": "Wisdom might be conversion into a tree.",
+    "autor": "Manoel de Barros",
+    "autorSlug": "manoel-de-barros",
+    "explicacao": "Citação de Manoel de Barros sobre temas ligados a reflexao. “Wisdom might be conversion into a tree.” articula reflexao, inspirational-quotes, wisdom em registro de reflexao, com relevância para contextos como inspiracao e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "inspirational-quotes"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "inspirational-quotes",
+        "wisdom",
+        "might",
+        "conversion"
+      ],
+      "palavrasChave": [
+        "inspirational-quotes",
+        "reflexao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "inspirational-quotes",
+        "inspiracao",
+        "manoel-de-barros"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "inspirational-quotes",
+        "wisdom",
+        "might",
+        "conversion",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Wisdom might be conversion into a tree.\" — Manoel de Barros | Metamensagem",
+      "descriptionSeo": "Citação de Manoel de Barros sobre temas ligados a reflexao. “Wisdom might be conversion into a tree.” articula reflexao, inspirational-quotes, wisdom em regis…",
+      "keywordsSeo": [
+        "frases de Manoel de Barros",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases inspirational quotes",
+        "frases inspiracao",
+        "inspirational-quotes",
+        "reflexao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "wisdom-might-be-conversion-into-a-tree",
+      "relatedKeywords": [
+        "reflexao",
+        "inspirational-quotes",
+        "manoel-de-barros"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Wisdom might be conversion into a tree.",
     "autor_original": "Manoel de Barros",
-    "categoria": "inspiracional",
+    "autor_slug": "manoel-de-barros",
+    "categoria": "reflexao",
     "contextos": [
+      "inspiracao",
       "reflexao"
     ],
-    "explicacao": "Manoel de Barros, poeta pantaneiro, ironiza a busca de profundidade na alma e conclui pelo mistério do não-saber. Estilo minimalista e contemplativo. A frase vem de sua poética que valoriza o silêncio e o inefável.",
     "palavras_chave": [
-      "inspiracional",
-      "reflexao"
+      "inspirational-quotes",
+      "reflexao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_zvy4xti49",
+    "slug": "tentei-descobrir-na-alma-alguma-coisa-mais-profunda-do-que-n",
+    "texto": "Tentei descobrir na alma alguma coisa mais profunda do que não saber nada sobre as coisas profundas. Consegui não descobrir.",
+    "autor": "Manoel de Barros",
+    "autorSlug": "manoel-de-barros",
+    "explicacao": "Manoel de Barros, poeta pantaneiro, ironiza a busca de profundidade na alma e conclui pelo mistério do não-saber. Estilo minimalista e contemplativo. A frase vem de sua poética que valoriza o silêncio e o inefável.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "descobrir",
+        "tentei",
+        "alguma",
+        "coisa",
+        "profunda"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "manoel-de-barros"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 36,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "descobrir",
+        "tentei",
+        "alguma"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Tentei descobrir na alma alguma coisa mais profunda …\" — Manoel de Barros | Metamensagem",
+      "descriptionSeo": "Manoel de Barros, poeta pantaneiro, ironiza a busca de profundidade na alma e conclui pelo mistério do não-saber. Estilo minimalista e contemplativo. A frase…",
+      "keywordsSeo": [
+        "frases de Manoel de Barros",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "tentei-descobrir-na-alma-alguma-coisa-mais-profunda-do-que-n",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "manoel-de-barros"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Tentei descobrir na alma alguma coisa mais profunda do que não saber nada sobre as coisas profundas. Consegui não descobrir.",
+    "autor_original": "Manoel de Barros",
+    "autor_slug": "manoel-de-barros",
+    "categoria": "motivacao",
+    "contextos": [
+      "inspiracao",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "inspiracional",
+      "reflexao",
+      "motivacao",
+      "inspiracao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "f_csv_3120e19437",
+    "slug": "roses-are-red-violets-are-blue-god-made-me-pretty-what-happened-to-you",
+    "texto": "Roses are red violets are blue, God made me pretty, what happened to you?",
+    "autor": "rocky quicksilver",
+    "autorSlug": "rocky-quicksilver",
+    "explicacao": "Pergunta retórica de rocky quicksilver que provoca temas ligados a reflexao. Ao questionar “Roses are red violets are blue, God made me pretty, what happened to you?”, o texto convida o leitor a revisar crenças sobre reflexao, humour, roses, com foco em reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "humour"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "humour",
+        "roses",
+        "violets",
+        "pretty",
+        "happened"
+      ],
+      "palavrasChave": [
+        "humour",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "humour",
+        "rocky-quicksilver"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "humour",
+        "roses",
+        "violets",
+        "pretty",
+        "happened"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Roses are red violets are blue, God made me pretty, …\" — rocky quicksilver | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de rocky quicksilver que provoca temas ligados a reflexao. Ao questionar “Roses are red violets are blue, God made me pretty, what happened…",
+      "keywordsSeo": [
+        "frases de rocky quicksilver",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases humour",
+        "humour",
+        "reflexao"
+      ],
+      "canonicalSlug": "roses-are-red-violets-are-blue-god-made-me-pretty-what-happened-to-you",
+      "relatedKeywords": [
+        "reflexao",
+        "humour",
+        "rocky-quicksilver"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Roses are red violets are blue, God made me pretty, what happened to you?",
+    "autor_original": "rocky quicksilver",
+    "autor_slug": "rocky-quicksilver",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "humour",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

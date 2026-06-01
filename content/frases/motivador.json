@@ -2,29 +2,124 @@
   {
     "id": "f_wga0jtlhn",
     "slug": "com-determinacao-e-persistencia-construimos-pontes-sobr",
+    "texto": "⁠🚀 Com determinação e persistência, construímos pontes sobre os abismos da dúvida. 🌉",
+    "autor": "motivador",
+    "autorSlug": "motivador",
+    "explicacao": "Texto genérico de perfil “motivador”: determinação e persistência constroem pontes sobre a dúvida. Imagem de emojis reforça tom digital. Citação de compartilhamento rápido em redes sociais.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "persistencia"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao",
+        "persistencia"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "determinação",
+        "persistência",
+        "construímos",
+        "pontes",
+        "abismos"
+      ],
+      "palavrasChave": [
+        "determinacao",
+        "inspiracional",
+        "motivacao",
+        "persistencia",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "persistencia",
+        "inspiracao",
+        "motivador"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 36,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "determinação",
+        "persistência",
+        "construímos"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠🚀 Com determinação e persistência, construímos pon…\" — motivador | Metamensagem",
+      "descriptionSeo": "Texto genérico de perfil “motivador”: determinação e persistência constroem pontes sobre a dúvida. Imagem de emojis reforça tom digital. Citação de compartilh…",
+      "keywordsSeo": [
+        "frases de motivador",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases determinacao",
+        "frases inspiracao",
+        "frases inspiracional",
+        "determinacao",
+        "inspiracional",
+        "motivacao",
+        "persistencia"
+      ],
+      "canonicalSlug": "com-determinacao-e-persistencia-construimos-pontes-sobr",
+      "relatedKeywords": [
+        "determinacao",
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "motivador"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠🚀 Com determinação e persistência, construímos pontes sobre os abismos da dúvida. 🌉",
     "autor_original": "motivador",
-    "categoria": "determinacao",
+    "autor_slug": "motivador",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao",
       "persistencia"
     ],
-    "explicacao": "Texto genérico de perfil “motivador”: determinação e persistência constroem pontes sobre a dúvida. Imagem de emojis reforça tom digital. Citação de compartilhamento rápido em redes sociais.",
     "palavras_chave": [
       "determinacao",
       "inspiracional",
       "motivacao",
-      "persistencia"
+      "persistencia",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Glyph export test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 24px;
+        background: #111;
+        color: #fff;
+        font-family: Inter, sans-serif;
+      }
+      .card {
+        width: 400px;
+        padding: 32px;
+        background: linear-gradient(135deg, #7c3aed, #000);
+        border-radius: 16px;
+      }
+      .ja {
+        font-family: 'Noto Sans JP', Inter, sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+      }
+      .hi {
+        font-family: 'Noto Sans Devanagari', Inter, sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        margin-top: 16px;
+      }
+      button {
+        margin-top: 16px;
+        padding: 8px 16px;
+      }
+      #status {
+        margin-top: 12px;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card" class="card">
+      <p class="ja">人生は自転車に乗るようなものだ。進歩するには前進し続けなければならない。</p>
+      <p class="hi">जीवन साइकिल चलाने जैसा है। संतुलन बनाए रखने के लिए चलते रहना होगा।</p>
+      <p style="opacity: 0.8; font-size: 14px">— Albert Einstein</p>
+    </div>
+    <button id="btn" type="button">Export PNG (html-to-image)</button>
+    <p id="status">Aguardando…</p>
+    <script type="module">
+      import { toBlob } from 'https://cdn.jsdelivr.net/npm/html-to-image@1.11.13/+esm';
+      const status = document.getElementById('status');
+      document.getElementById('btn').onclick = async () => {
+        status.textContent = 'Gerando…';
+        await document.fonts.ready;
+        try {
+          const blob = await toBlob(document.getElementById('card'), {
+            pixelRatio: 2,
+            cacheBust: true,
+          });
+          if (!blob) throw new Error('blob null');
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'glyph-test.png';
+          a.click();
+          status.textContent = `OK — PNG ${blob.size} bytes (verifique glifos no arquivo baixado)`;
+        } catch (e) {
+          status.textContent = 'ERRO: ' + e.message;
+        }
+      };
+      status.textContent = 'Fontes carregadas. Clique em Export PNG.';
+    </script>
+  </body>
+</html>

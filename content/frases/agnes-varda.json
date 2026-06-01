@@ -1,0 +1,105 @@
+[
+  {
+    "id": "f_csv_e007b6a93c",
+    "slug": "happiness-is-a-beautiful-fruit-that-tastes-of-cruelty",
+    "texto": "Happiness is a beautiful fruit that tastes of cruelty.",
+    "autor": "Agnes Varda",
+    "autorSlug": "agnes-varda",
+    "explicacao": "Citação de Agnes Varda sobre temas ligados a reflexao. “Happiness is a beautiful fruit that tastes of cruelty.” articula reflexao, cruelty, happiness em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "cruelty"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [
+        "felicidade"
+      ],
+      "temas": [
+        "reflexao",
+        "cruelty",
+        "happiness",
+        "beautiful",
+        "fruit",
+        "tastes"
+      ],
+      "palavrasChave": [
+        "cruelty",
+        "reflexao",
+        "felicidade"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "cruelty",
+        "felicidade",
+        "agnes-varda"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "cruelty",
+        "happiness",
+        "beautiful",
+        "fruit",
+        "tastes"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Happiness is a beautiful fruit that tastes of cruelty.\" — Agnes Varda | Metamensagem",
+      "descriptionSeo": "Citação de Agnes Varda sobre temas ligados a reflexao. “Happiness is a beautiful fruit that tastes of cruelty.” articula reflexao, cruelty, happiness em regis…",
+      "keywordsSeo": [
+        "frases de Agnes Varda",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases cruelty",
+        "cruelty",
+        "reflexao",
+        "felicidade"
+      ],
+      "canonicalSlug": "happiness-is-a-beautiful-fruit-that-tastes-of-cruelty",
+      "relatedKeywords": [
+        "felicidade",
+        "reflexao",
+        "cruelty",
+        "agnes-varda"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Happiness is a beautiful fruit that tastes of cruelty.",
+    "autor_original": "Agnes Varda",
+    "autor_slug": "agnes-varda",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "cruelty",
+      "reflexao",
+      "felicidade"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

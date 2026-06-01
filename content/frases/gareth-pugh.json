@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_250e121f0b",
+    "slug": "i-think-in-black",
+    "texto": "I think in black.",
+    "autor": "Gareth Pugh",
+    "autorSlug": "gareth-pugh",
+    "explicacao": "Citação de Gareth Pugh sobre temas ligados a reflexao. “I think in black.” articula reflexao, black, fashion em registro de reflexao, com relevância para contextos como fashion.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "black",
+        "fashion"
+      ],
+      "contextos": [
+        "fashion"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "black",
+        "fashion",
+        "think"
+      ],
+      "palavrasChave": [
+        "black",
+        "fashion",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "black",
+        "fashion",
+        "gareth-pugh"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "black",
+        "fashion",
+        "think",
+        "reflexao",
+        "black"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I think in black.\" — Gareth Pugh | Metamensagem",
+      "descriptionSeo": "Citação de Gareth Pugh sobre temas ligados a reflexao. “I think in black.” articula reflexao, black, fashion em registro de reflexao, com relevância para cont…",
+      "keywordsSeo": [
+        "frases de Gareth Pugh",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases black",
+        "frases fashion",
+        "black",
+        "fashion",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-think-in-black",
+      "relatedKeywords": [
+        "reflexao",
+        "black",
+        "fashion",
+        "gareth-pugh"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I think in black.",
+    "autor_original": "Gareth Pugh",
+    "autor_slug": "gareth-pugh",
+    "categoria": "reflexao",
+    "contextos": [
+      "fashion"
+    ],
+    "palavras_chave": [
+      "black",
+      "fashion",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -2,25 +2,102 @@
   {
     "id": "f_et0utn02y",
     "slug": "treinamento-nao-e-nada-vontade-e-tudo-vontade-e-agir",
+    "texto": "Treinamento não é nada! Vontade é tudo... vontade é agir!",
+    "autor": "Ra's Al Ghul",
+    "autorSlug": "ra-s-al-ghul",
+    "explicacao": "Ra's al Ghul, vilão das histórias do Batman, diz isso ao treinar Bruce Wayne. Minimiza técnica e exalta vontade como motor da ação. Na narrativa, serve para empurrar o herói além do conforto e da hesitação.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "vontade",
+        "treinamento"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "inspiracao",
+        "ra-s-al-ghul"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "vontade",
+        "treinamento",
+        "motivacao",
+        "inspiracional"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Treinamento não é nada! Vontade é tudo... vontade é …\" — Ra's Al Ghul | Metamensagem",
+      "descriptionSeo": "Ra's al Ghul, vilão das histórias do Batman, diz isso ao treinar Bruce Wayne. Minimiza técnica e exalta vontade como motor da ação. Na narrativa, serve para e…",
+      "keywordsSeo": [
+        "frases de Ra's Al Ghul",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "treinamento-nao-e-nada-vontade-e-tudo-vontade-e-agir",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "ra-s-al-ghul"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Treinamento não é nada! Vontade é tudo... vontade é agir!",
     "autor_original": "Ra's Al Ghul",
-    "categoria": "inspiracional",
+    "autor_slug": "ra-s-al-ghul",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao"
     ],
-    "explicacao": "Ra's al Ghul, vilão das histórias do Batman, diz isso ao treinar Bruce Wayne. Minimiza técnica e exalta vontade como motor da ação. Na narrativa, serve para empurrar o herói além do conforto e da hesitação.",
     "palavras_chave": [
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_d1ccb4d42e",
+    "slug": "you-try-you-fail-you-try-you-fail-the-only-true-failure-is-when-you-stop-try",
+    "texto": "You try, you fail, you try, you fail; the only true failure is when you stop trying.",
+    "autor": "Madame Leota",
+    "autorSlug": "madame-leota",
+    "explicacao": "Citação de Madame Leota sobre temas ligados a reflexao. “You try, you fail, you try, you fail; the only true failure is when you stop trying.” articula reflexao, failure, movie em registro de reflexao, com relevância para contextos como movie.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "failure",
+        "movie"
+      ],
+      "contextos": [
+        "movie"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "failure",
+        "movie",
+        "trying"
+      ],
+      "palavrasChave": [
+        "failure",
+        "movie",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "failure",
+        "movie",
+        "madame-leota"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "failure",
+        "movie",
+        "trying",
+        "reflexao",
+        "failure"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"You try, you fail, you try, you fail; the only true …\" — Madame Leota | Metamensagem",
+      "descriptionSeo": "Citação de Madame Leota sobre temas ligados a reflexao. “You try, you fail, you try, you fail; the only true failure is when you stop trying.” articula reflex…",
+      "keywordsSeo": [
+        "frases de Madame Leota",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases failure",
+        "frases movie",
+        "failure",
+        "movie",
+        "reflexao"
+      ],
+      "canonicalSlug": "you-try-you-fail-you-try-you-fail-the-only-true-failure-is-when-you-stop-try",
+      "relatedKeywords": [
+        "reflexao",
+        "failure",
+        "movie",
+        "madame-leota"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "You try, you fail, you try, you fail; the only true failure is when you stop trying.",
+    "autor_original": "Madame Leota",
+    "autor_slug": "madame-leota",
+    "categoria": "reflexao",
+    "contextos": [
+      "movie"
+    ],
+    "palavras_chave": [
+      "failure",
+      "movie",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

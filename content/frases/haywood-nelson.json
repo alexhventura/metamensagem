@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_8812d05aac",
+    "slug": "my-family-was-my-guide-to-my-reality",
+    "texto": "My family was my guide to my reality.",
+    "autor": "Haywood Nelson",
+    "autorSlug": "haywood-nelson",
+    "explicacao": "Citação de Haywood Nelson sobre temas ligados a familia. “My family was my guide to my reality.” articula familia, reality, guide em registro de familia, com relevância para contextos como guide.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "reality",
+        "guide"
+      ],
+      "contextos": [
+        "guide"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "reality",
+        "guide",
+        "family"
+      ],
+      "palavrasChave": [
+        "reality",
+        "guide",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "reality",
+        "guide",
+        "haywood-nelson"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "reality",
+        "guide",
+        "family",
+        "familia",
+        "reality"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My family was my guide to my reality.\" — Haywood Nelson | Metamensagem",
+      "descriptionSeo": "Citação de Haywood Nelson sobre temas ligados a familia. “My family was my guide to my reality.” articula familia, reality, guide em registro de familia, com…",
+      "keywordsSeo": [
+        "frases de Haywood Nelson",
+        "frases sobre familia",
+        "frases familia",
+        "frases reality",
+        "frases guide",
+        "reality",
+        "guide",
+        "familia"
+      ],
+      "canonicalSlug": "my-family-was-my-guide-to-my-reality",
+      "relatedKeywords": [
+        "familia",
+        "reality",
+        "guide",
+        "haywood-nelson"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My family was my guide to my reality.",
+    "autor_original": "Haywood Nelson",
+    "autor_slug": "haywood-nelson",
+    "categoria": "familia",
+    "contextos": [
+      "guide"
+    ],
+    "palavras_chave": [
+      "reality",
+      "guide",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

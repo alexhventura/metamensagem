@@ -2,29 +2,135 @@
   {
     "id": "f_6xel0lu5s",
     "slug": "a-sua-alegria-e-o-seu-otimismo-mesmo-quando-estava-doente",
+    "texto": "⁠A sua alegria e o seu otimismo, mesmo quando estava doente, foram as coisas mais espantosas que já presenciei.",
+    "autor": "Um Amor para Recordar",
+    "autorSlug": "um-amor-para-recordar",
+    "explicacao": "De Um Amor para Recordar, filme baseado em Nicholas Sparks. Personagem admira alegria e otimismo do amado mesmo durante doença. Momento em que amor e admiração se intensificam diante da fragilidade.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "amor",
+        "felicidade",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "felicidade",
+        "inspiracional",
+        "otimismo"
+      ],
+      "emocoes": [
+        "alegria",
+        "felicidade",
+        "amor"
+      ],
+      "temas": [
+        "motivacao",
+        "amor",
+        "felicidade",
+        "inspiracional",
+        "alegria",
+        "otimismo",
+        "mesmo",
+        "quando"
+      ],
+      "palavrasChave": [
+        "amor",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao",
+        "alegria"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "amor",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "alegria",
+        "um-amor-para-recordar"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 39,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "amor",
+        "felicidade",
+        "inspiracional",
+        "alegria",
+        "otimismo"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠A sua alegria e o seu otimismo, mesmo quando estava…\" — Um Amor para Recordar | Metamensagem",
+      "descriptionSeo": "De Um Amor para Recordar, filme baseado em Nicholas Sparks. Personagem admira alegria e otimismo do amado mesmo durante doença. Momento em que amor e admiraçã…",
+      "keywordsSeo": [
+        "frases de Um Amor para Recordar",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases amor",
+        "frases inspiracao",
+        "frases felicidade",
+        "amor",
+        "felicidade",
+        "inspiracional",
+        "otimismo"
+      ],
+      "canonicalSlug": "a-sua-alegria-e-o-seu-otimismo-mesmo-quando-estava-doente",
+      "relatedKeywords": [
+        "alegria",
+        "felicidade",
+        "amor",
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "um-amor-para-recordar"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠A sua alegria e o seu otimismo, mesmo quando estava doente, foram as coisas mais espantosas que já presenciei.",
     "autor_original": "Um Amor para Recordar",
-    "categoria": "amor",
+    "autor_slug": "um-amor-para-recordar",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "felicidade",
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "De Um Amor para Recordar, filme baseado em Nicholas Sparks. Personagem admira alegria e otimismo do amado mesmo durante doença. Momento em que amor e admiração se intensificam diante da fragilidade.",
     "palavras_chave": [
       "amor",
       "felicidade",
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao",
+      "alegria"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

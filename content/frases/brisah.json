@@ -2,29 +2,125 @@
   {
     "id": "f_rzgp58nin",
     "slug": "a-coragem-e-a-determinacao-constituem-a-forca-motivadora-do",
+    "texto": "A coragem e a determinação constituem a força motivadora do desenvolvimento.",
+    "autor": "BrisaH",
+    "autorSlug": "brisah",
+    "explicacao": "Atribuída a BrisaH, com linguagem de desenvolvimento pessoal. Relaciona coragem e determinação como motor do crescimento, sugerindo que avançar exige firmeza interior.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "coragem",
+        "determinacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "determinacao",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [
+        "coragem",
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "coragem",
+        "determinacao",
+        "inspiracional",
+        "determinação",
+        "constituem",
+        "força",
+        "motivadora"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "determinacao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "coragem",
+        "determinacao",
+        "inspiracional",
+        "inspiracao",
+        "brisah"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 35,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "coragem",
+        "determinacao",
+        "inspiracional",
+        "determinação",
+        "constituem"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A coragem e a determinação constituem a força motiva…\" — BrisaH | Metamensagem",
+      "descriptionSeo": "Atribuída a BrisaH, com linguagem de desenvolvimento pessoal. Relaciona coragem e determinação como motor do crescimento, sugerindo que avançar exige firmeza…",
+      "keywordsSeo": [
+        "frases de BrisaH",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases coragem",
+        "frases inspiracao",
+        "frases determinacao",
+        "coragem",
+        "determinacao",
+        "inspiracional",
+        "motivacao"
+      ],
+      "canonicalSlug": "a-coragem-e-a-determinacao-constituem-a-forca-motivadora-do",
+      "relatedKeywords": [
+        "coragem",
+        "determinacao",
+        "motivacao",
+        "inspiracional",
+        "brisah"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "A coragem e a determinação constituem a força motivadora do desenvolvimento.",
     "autor_original": "BrisaH",
-    "categoria": "coragem",
+    "autor_slug": "brisah",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "determinacao",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "Atribuída a BrisaH, com linguagem de desenvolvimento pessoal. Relaciona coragem e determinação como motor do crescimento, sugerindo que avançar exige firmeza interior.",
     "palavras_chave": [
       "coragem",
       "determinacao",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

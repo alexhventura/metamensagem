@@ -2,29 +2,127 @@
   {
     "id": "f_7b07op903",
     "slug": "o-sonho-e-um-esboco-motivacao-a-estrutura-a-persistencia-e",
+    "texto": "O sonho é um esboço, motivação a estrutura, a persistência é a realidade.",
+    "autor": "Pâmela Patrícia Correa da Silva",
+    "autorSlug": "pamela-patricia-correa-da-silva",
+    "explicacao": "Pâmela Patrícia Correa da Silva usa metáfora arquitetônica: sonho esboça, motivação estrutura, persistência concretiza. Frase de planejamento pessoal. Comum em materiais de metas e empreendedorismo feminino.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "sonhos"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao",
+        "persistencia",
+        "sonhos"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "sonho",
+        "esboço",
+        "motivação",
+        "estrutura",
+        "persistência"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "persistencia",
+        "sonhos",
+        "inspiracao",
+        "determinacao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "sonhos",
+        "inspiracao",
+        "determinacao",
+        "pamela-patricia-correa-da-silva"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 35,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "sonho",
+        "esboço",
+        "motivação"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O sonho é um esboço, motivação a estrutura, a persis…\" — Pâmela Patrícia Correa da Silva | Metamensagem",
+      "descriptionSeo": "Pâmela Patrícia Correa da Silva usa metáfora arquitetônica: sonho esboça, motivação estrutura, persistência concretiza. Frase de planejamento pessoal. Comum e…",
+      "keywordsSeo": [
+        "frases de Pâmela Patrícia Correa da Silva",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "persistencia",
+        "sonhos"
+      ],
+      "canonicalSlug": "o-sonho-e-um-esboco-motivacao-a-estrutura-a-persistencia-e",
+      "relatedKeywords": [
+        "determinacao",
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "sonhos",
+        "pamela-patricia-correa-da-silva"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O sonho é um esboço, motivação a estrutura, a persistência é a realidade.",
     "autor_original": "Pâmela Patrícia Correa da Silva",
-    "categoria": "inspiracional",
+    "autor_slug": "pamela-patricia-correa-da-silva",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao",
       "persistencia",
       "sonhos"
     ],
-    "explicacao": "Pâmela Patrícia Correa da Silva usa metáfora arquitetônica: sonho esboça, motivação estrutura, persistência concretiza. Frase de planejamento pessoal. Comum em materiais de metas e empreendedorismo feminino.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
       "persistencia",
-      "sonhos"
+      "sonhos",
+      "inspiracao",
+      "determinacao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

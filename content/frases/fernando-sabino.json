@@ -2,25 +2,113 @@
   {
     "id": "f_wthp1fcj4",
     "slug": "o-otimista-erra-tanto-quanto-o-pessimista-mas-nao-sofre-por",
+    "texto": "O otimista erra tanto quanto o pessimista, mas não sofre por antecipação.",
+    "autor": "Fernando Sabino",
+    "autorSlug": "fernando-sabino",
+    "explicacao": "Fernando Sabino ironiza o otimismo comparando-o ao pessimismo: ambos erram, mas só o pessimista sofre antecipadamente. Aforismo brasileiro clássico sobre escolher esperança sem ilusão de infalibilidade.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "tanto",
+        "quanto",
+        "pessimista",
+        "sofre"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "fernando-sabino"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "tanto",
+        "quanto"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O otimista erra tanto quanto o pessimista, mas não s…\" — Fernando Sabino | Metamensagem",
+      "descriptionSeo": "Fernando Sabino ironiza o otimismo comparando-o ao pessimismo: ambos erram, mas só o pessimista sofre antecipadamente. Aforismo brasileiro clássico sobre esco…",
+      "keywordsSeo": [
+        "frases de Fernando Sabino",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "o-otimista-erra-tanto-quanto-o-pessimista-mas-nao-sofre-por",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "fernando-sabino"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O otimista erra tanto quanto o pessimista, mas não sofre por antecipação.",
     "autor_original": "Fernando Sabino",
-    "categoria": "inspiracional",
+    "autor_slug": "fernando-sabino",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Fernando Sabino ironiza o otimismo comparando-o ao pessimismo: ambos erram, mas só o pessimista sofre antecipadamente. Aforismo brasileiro clássico sobre escolher esperança sem ilusão de infalibilidade.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

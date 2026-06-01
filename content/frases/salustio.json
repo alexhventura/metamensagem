@@ -2,29 +2,126 @@
   {
     "id": "f_maohlfxe4",
     "slug": "o-sucesso-tem-uma-estranha-capacidade-de-esconder-o-erro",
+    "texto": "O sucesso tem uma estranha capacidade de esconder o erro.",
+    "autor": "Salústio",
+    "autorSlug": "salustio",
+    "explicacao": "Salústio, historiador romano, observa que o sucesso pode ocultar erros cometidos no caminho. Vitória nem sempre prova que tudo foi feito certo. Alerta crítico sobre não confundir resultado com acerto.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "sucesso"
+      ],
+      "contextos": [
+        "inspiracao",
+        "termino",
+        "inspiracional",
+        "motivacao",
+        "sucesso"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "sucesso",
+        "estranha",
+        "capacidade",
+        "esconder"
+      ],
+      "palavrasChave": [
+        "aprendizado",
+        "inspiracional",
+        "motivacao",
+        "sucesso",
+        "inspiracao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "sucesso",
+        "inspiracao",
+        "termino",
+        "salustio"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "sucesso",
+        "estranha",
+        "capacidade"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O sucesso tem uma estranha capacidade de esconder o …\" — Salústio | Metamensagem",
+      "descriptionSeo": "Salústio, historiador romano, observa que o sucesso pode ocultar erros cometidos no caminho. Vitória nem sempre prova que tudo foi feito certo. Alerta crítico…",
+      "keywordsSeo": [
+        "frases de Salústio",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases aprendizado",
+        "frases inspiracao",
+        "frases termino",
+        "aprendizado",
+        "inspiracional",
+        "motivacao",
+        "sucesso"
+      ],
+      "canonicalSlug": "o-sucesso-tem-uma-estranha-capacidade-de-esconder-o-erro",
+      "relatedKeywords": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "sucesso",
+        "salustio"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O sucesso tem uma estranha capacidade de esconder o erro.",
     "autor_original": "Salústio",
-    "categoria": "aprendizado",
+    "autor_slug": "salustio",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
+      "termino",
       "inspiracional",
       "motivacao",
       "sucesso"
     ],
-    "explicacao": "Salústio, historiador romano, observa que o sucesso pode ocultar erros cometidos no caminho. Vitória nem sempre prova que tudo foi feito certo. Alerta crítico sobre não confundir resultado com acerto.",
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
       "motivacao",
-      "sucesso"
+      "sucesso",
+      "inspiracao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

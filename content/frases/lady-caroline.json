@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_c45a32b6f5",
+    "slug": "mad-bad-and-dangerous-to-know",
+    "texto": "Mad bad and dangerous to know.",
+    "autor": "Lady Caroline",
+    "autorSlug": "lady-caroline",
+    "explicacao": "Citação de Lady Caroline sobre temas ligados a reflexao. “Mad bad and dangerous to know.” articula reflexao, sanity, insanity em registro de reflexao, com relevância para contextos como insanity.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "sanity",
+        "insanity"
+      ],
+      "contextos": [
+        "insanity"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "sanity",
+        "insanity",
+        "dangerous"
+      ],
+      "palavrasChave": [
+        "sanity",
+        "insanity",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "sanity",
+        "insanity",
+        "lady-caroline"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "sanity",
+        "insanity",
+        "dangerous",
+        "reflexao",
+        "sanity"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Mad bad and dangerous to know.\" — Lady Caroline | Metamensagem",
+      "descriptionSeo": "Citação de Lady Caroline sobre temas ligados a reflexao. “Mad bad and dangerous to know.” articula reflexao, sanity, insanity em registro de reflexao, com rel…",
+      "keywordsSeo": [
+        "frases de Lady Caroline",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases sanity",
+        "frases insanity",
+        "sanity",
+        "insanity",
+        "reflexao"
+      ],
+      "canonicalSlug": "mad-bad-and-dangerous-to-know",
+      "relatedKeywords": [
+        "reflexao",
+        "sanity",
+        "insanity",
+        "lady-caroline"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Mad bad and dangerous to know.",
+    "autor_original": "Lady Caroline",
+    "autor_slug": "lady-caroline",
+    "categoria": "reflexao",
+    "contextos": [
+      "insanity"
+    ],
+    "palavras_chave": [
+      "sanity",
+      "insanity",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

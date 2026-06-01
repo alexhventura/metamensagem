@@ -2,27 +2,126 @@
   {
     "id": "f_pezb7ayib",
     "slug": "se-as-paixoes-aconselham-por-vezes-mais-ousadamente-do-que-a",
+    "texto": "Se as paixões aconselham por vezes mais ousadamente do que a reflexão, isso deve-se a que elas dão mais força para executar.",
+    "autor": "Luc de Clapiers Vauvenargues",
+    "autorSlug": "luc-de-clapiers-vauvenargues",
+    "explicacao": "Vauvenargues, moralista do século XVIII, observa que a paixão às vezes move mais que a reflexão fria porque dá energia para agir. Trecho de Maximes e reflexões sobre caráter. Contexto: debate clássico entre razão e impulso na conduta humana.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao",
+        "sabedoria"
+      ],
+      "emocoes": [
+        "tristeza"
+      ],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "paixões",
+        "aconselham",
+        "vezes",
+        "ousadamente"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "motivacao",
+        "inspiracao",
+        "tristeza"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "inspiracao",
+        "tristeza",
+        "luc-de-clapiers-vauvenargues"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 38,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "paixões",
+        "aconselham"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Se as paixões aconselham por vezes mais ousadamente …\" — Luc de Clapiers Vauvenargues | Metamensagem",
+      "descriptionSeo": "Vauvenargues, moralista do século XVIII, observa que a paixão às vezes move mais que a reflexão fria porque dá energia para agir. Trecho de Maximes e reflexõe…",
+      "keywordsSeo": [
+        "frases de Luc de Clapiers Vauvenargues",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "motivacao"
+      ],
+      "canonicalSlug": "se-as-paixoes-aconselham-por-vezes-mais-ousadamente-do-que-a",
+      "relatedKeywords": [
+        "tristeza",
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "luc-de-clapiers-vauvenargues"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Se as paixões aconselham por vezes mais ousadamente do que a reflexão, isso deve-se a que elas dão mais força para executar.",
     "autor_original": "Luc de Clapiers Vauvenargues",
-    "categoria": "inspiracional",
+    "autor_slug": "luc-de-clapiers-vauvenargues",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "reflexao",
       "sabedoria"
     ],
-    "explicacao": "Vauvenargues, moralista do século XVIII, observa que a paixão às vezes move mais que a reflexão fria porque dá energia para agir. Trecho de Maximes e reflexões sobre caráter. Contexto: debate clássico entre razão e impulso na conduta humana.",
     "palavras_chave": [
       "inspiracional",
       "reflexao",
-      "sabedoria"
+      "sabedoria",
+      "motivacao",
+      "inspiracao",
+      "tristeza"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

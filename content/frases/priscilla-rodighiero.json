@@ -2,29 +2,134 @@
   {
     "id": "f_44glpjxv1",
     "slug": "aprenda-a-ter-bons-pensamentos-e-ser-otimista-sempre-por",
+    "texto": "Aprenda a ter bons pensamentos e ser otimista sempre... Por mais escuro que estejam seus dias, sempre haverá uma nova chance, um novo dia, uma nova luz no fim do túnel, sempre haverá novos sorrisos, boas pessoas, bons amigos.. Lembre-se que quem faz o dia valer a pena é você!",
+    "autor": "Priscilla Rodighiero",
+    "autorSlug": "priscilla-rodighiero",
+    "explicacao": "Priscilla Rodighiero escreve em tom encorajador para momentos difíceis. Lembra que dias escuros passam e que novas chances surgem. O foco final é a responsabilidade pessoal: quem dá sentido ao dia somos nós mesmos.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "termino",
+        "inspiracional",
+        "otimismo",
+        "reflexao"
+      ],
+      "emocoes": [
+        "felicidade"
+      ],
+      "temas": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "sempre",
+        "haverá",
+        "aprenda",
+        "pensamentos"
+      ],
+      "palavrasChave": [
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "reflexao",
+        "motivacao",
+        "inspiracao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "reflexao",
+        "inspiracao",
+        "termino",
+        "priscilla-rodighiero"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 55,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "sempre",
+        "haverá"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Aprenda a ter bons pensamentos e ser otimista sempre…\" — Priscilla Rodighiero | Metamensagem",
+      "descriptionSeo": "Priscilla Rodighiero escreve em tom encorajador para momentos difíceis. Lembra que dias escuros passam e que novas chances surgem. O foco final é a responsabi…",
+      "keywordsSeo": [
+        "frases de Priscilla Rodighiero",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases felicidade",
+        "frases inspiracao",
+        "frases termino",
+        "felicidade",
+        "inspiracional",
+        "otimismo",
+        "reflexao"
+      ],
+      "canonicalSlug": "aprenda-a-ter-bons-pensamentos-e-ser-otimista-sempre-por",
+      "relatedKeywords": [
+        "felicidade",
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "reflexao",
+        "priscilla-rodighiero"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Aprenda a ter bons pensamentos e ser otimista sempre... Por mais escuro que estejam seus dias, sempre haverá uma nova chance, um novo dia, uma nova luz no fim do túnel, sempre haverá novos sorrisos, boas pessoas, bons amigos.. Lembre-se que quem faz o dia valer a pena é você!",
     "autor_original": "Priscilla Rodighiero",
-    "categoria": "felicidade",
+    "autor_slug": "priscilla-rodighiero",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
+      "termino",
       "inspiracional",
       "otimismo",
       "reflexao"
     ],
-    "explicacao": "Priscilla Rodighiero escreve em tom encorajador para momentos difíceis. Lembra que dias escuros passam e que novas chances surgem. O foco final é a responsabilidade pessoal: quem dá sentido ao dia somos nós mesmos.",
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "otimismo",
-      "reflexao"
+      "reflexao",
+      "motivacao",
+      "inspiracao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

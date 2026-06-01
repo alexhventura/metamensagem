@@ -1,0 +1,121 @@
+[
+  {
+    "id": "f_csv_ab7dbadfd3",
+    "slug": "my-father-was-an-electrical-engineer-who-worked-at-westinghouse-in-pittsburgh-w",
+    "texto": "My father was an electrical engineer who worked at Westinghouse in Pittsburgh. When I was growing up, my mother wrote humor columns for the local paper. She was the Erma Bombeck of Murrysville, Pa.",
+    "autor": "Jason Kilar",
+    "autorSlug": "jason-kilar",
+    "explicacao": "Citação de Jason Kilar sobre esforço, persistência e resultados. “My father was an electrical engineer who worked at Westinghouse in Pittsburgh. When I was growing…” articula familia, father, mother em registro de familia, com relevância para contextos como trabalho e mother.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "father",
+        "mother",
+        "growing-up"
+      ],
+      "contextos": [
+        "trabalho",
+        "mother",
+        "growing-up"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "father",
+        "mother",
+        "growing-up",
+        "electrical",
+        "engineer",
+        "worked",
+        "westinghouse"
+      ],
+      "palavrasChave": [
+        "father",
+        "mother",
+        "growing-up",
+        "familia",
+        "trabalho"
+      ],
+      "tagsSeo": [
+        "familia",
+        "father",
+        "mother",
+        "growing-up",
+        "trabalho",
+        "jason-kilar"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 45,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "father",
+        "mother",
+        "growing-up",
+        "electrical",
+        "engineer"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My father was an electrical engineer who worked at W…\" — Jason Kilar | Metamensagem",
+      "descriptionSeo": "Citação de Jason Kilar sobre esforço, persistência e resultados. “My father was an electrical engineer who worked at Westinghouse in Pittsburgh. When I was gr…",
+      "keywordsSeo": [
+        "frases de Jason Kilar",
+        "frases sobre familia",
+        "frases familia",
+        "frases father",
+        "frases trabalho",
+        "frases mother",
+        "father",
+        "mother",
+        "growing-up",
+        "familia"
+      ],
+      "canonicalSlug": "my-father-was-an-electrical-engineer-who-worked-at-westinghouse-in-pittsburgh-w",
+      "relatedKeywords": [
+        "familia",
+        "father",
+        "mother",
+        "growing-up",
+        "jason-kilar"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My father was an electrical engineer who worked at Westinghouse in Pittsburgh. When I was growing up, my mother wrote humor columns for the local paper. She was the Erma Bombeck of Murrysville, Pa.",
+    "autor_original": "Jason Kilar",
+    "autor_slug": "jason-kilar",
+    "categoria": "familia",
+    "contextos": [
+      "trabalho",
+      "mother",
+      "growing-up"
+    ],
+    "palavras_chave": [
+      "father",
+      "mother",
+      "growing-up",
+      "familia",
+      "trabalho"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -2,25 +2,113 @@
   {
     "id": "f_lgn3sljc7",
     "slug": "o-sabio-pode-descobrir-o-mundo-sem-transpor-a-sua-porta-ve",
+    "texto": "O sábio pode descobrir o mundo sem transpor a sua porta. Vê sem olhar, realiza sem agir.",
+    "autor": "Lao-Tsé",
+    "autorSlug": "lao-tse",
+    "explicacao": "Trecho do Tao Te Ching atribuído a Lao-Tsé: o sábio conhece o mundo pela introspecção, sem precisar viajar ou agir no sentido comum. A frase celebra a sabedoria interior e a ação desinteressada (wu wei). Foi dita no contexto da filosofia taoísta sobre contemplação e domínio de si.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sábio",
+        "descobrir",
+        "mundo",
+        "transpor",
+        "porta"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "lao-tse"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sábio",
+        "descobrir",
+        "mundo"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O sábio pode descobrir o mundo sem transpor a sua po…\" — Lao-Tsé | Metamensagem",
+      "descriptionSeo": "Trecho do Tao Te Ching atribuído a Lao-Tsé: o sábio conhece o mundo pela introspecção, sem precisar viajar ou agir no sentido comum. A frase celebra a sabedor…",
+      "keywordsSeo": [
+        "frases de Lao-Tsé",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "o-sabio-pode-descobrir-o-mundo-sem-transpor-a-sua-porta-ve",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "lao-tse"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O sábio pode descobrir o mundo sem transpor a sua porta. Vê sem olhar, realiza sem agir.",
     "autor_original": "Lao-Tsé",
-    "categoria": "inspiracional",
+    "autor_slug": "lao-tse",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "reflexao"
     ],
-    "explicacao": "Trecho do Tao Te Ching atribuído a Lao-Tsé: o sábio conhece o mundo pela introspecção, sem precisar viajar ou agir no sentido comum. A frase celebra a sabedoria interior e a ação desinteressada (wu wei). Foi dita no contexto da filosofia taoísta sobre contemplação e domínio de si.",
     "palavras_chave": [
       "inspiracional",
-      "reflexao"
+      "reflexao",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

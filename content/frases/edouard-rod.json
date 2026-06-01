@@ -2,29 +2,129 @@
   {
     "id": "f_bqa6qa2g7",
     "slug": "no-fundo-de-cada-alma-ha-tesouros-escondidos-que-somente-o-a",
+    "texto": "No fundo de cada alma há tesouros escondidos que somente o amor permite descobrir.",
+    "autor": "Édouard Rod",
+    "autorSlug": "edouard-rod",
+    "explicacao": "Édouard Rod sugere que só o amor revela o que há de mais profundo em cada pessoa. Reflexão sobre intimidade e autoconhecimento mútuo, comum na literatura romântica e existencialista do final do século XIX.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "amor",
+        "inspiracional",
+        "reflexao",
+        "sabedoria"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "motivacao",
+        "amor",
+        "inspiracional",
+        "reflexao",
+        "fundo",
+        "tesouros",
+        "escondidos",
+        "somente"
+      ],
+      "palavrasChave": [
+        "amor",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "amor",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "inspiracao",
+        "edouard-rod"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 36,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "amor",
+        "inspiracional",
+        "reflexao",
+        "fundo",
+        "tesouros"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"No fundo de cada alma há tesouros escondidos que som…\" — Édouard Rod | Metamensagem",
+      "descriptionSeo": "Édouard Rod sugere que só o amor revela o que há de mais profundo em cada pessoa. Reflexão sobre intimidade e autoconhecimento mútuo, comum na literatura româ…",
+      "keywordsSeo": [
+        "frases de Édouard Rod",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases amor",
+        "frases inspiracao",
+        "frases inspiracional",
+        "amor",
+        "inspiracional",
+        "reflexao",
+        "sabedoria"
+      ],
+      "canonicalSlug": "no-fundo-de-cada-alma-ha-tesouros-escondidos-que-somente-o-a",
+      "relatedKeywords": [
+        "amor",
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "edouard-rod"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "No fundo de cada alma há tesouros escondidos que somente o amor permite descobrir.",
     "autor_original": "Édouard Rod",
-    "categoria": "amor",
+    "autor_slug": "edouard-rod",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "reflexao",
       "sabedoria"
     ],
-    "explicacao": "Édouard Rod sugere que só o amor revela o que há de mais profundo em cada pessoa. Reflexão sobre intimidade e autoconhecimento mútuo, comum na literatura romântica e existencialista do final do século XIX.",
     "palavras_chave": [
       "amor",
       "inspiracional",
       "reflexao",
-      "sabedoria"
+      "sabedoria",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

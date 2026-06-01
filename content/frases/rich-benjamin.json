@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_f86269f2d2",
+    "slug": "i-am-a-citizen-at-large-of-everywhere-and-nowhere-so-sometimes-i-get-pretty-ho",
+    "texto": "I am a citizen-at-large, of everywhere and nowhere, so sometimes I get pretty homesick.",
+    "autor": "Rich Benjamin",
+    "autorSlug": "rich-benjamin",
+    "explicacao": "Citação de Rich Benjamin sobre passagem do tempo e prioridades. “I am a citizen-at-large, of everywhere and nowhere, so sometimes I get pretty homesick.” articula tempo, home, travel em registro de tempo, com relevância para contextos como viagem e travel.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "home",
+        "travel"
+      ],
+      "contextos": [
+        "viagem",
+        "travel"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "home",
+        "travel",
+        "citizen",
+        "large",
+        "everywhere",
+        "nowhere",
+        "sometimes"
+      ],
+      "palavrasChave": [
+        "home",
+        "travel",
+        "tempo",
+        "viagem"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "home",
+        "travel",
+        "viagem",
+        "rich-benjamin"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "home",
+        "travel",
+        "citizen",
+        "large",
+        "everywhere"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I am a citizen-at-large, of everywhere and nowhere, …\" — Rich Benjamin | Metamensagem",
+      "descriptionSeo": "Citação de Rich Benjamin sobre passagem do tempo e prioridades. “I am a citizen-at-large, of everywhere and nowhere, so sometimes I get pretty homesick.” arti…",
+      "keywordsSeo": [
+        "frases de Rich Benjamin",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases home",
+        "frases viagem",
+        "frases travel",
+        "home",
+        "travel",
+        "tempo",
+        "viagem"
+      ],
+      "canonicalSlug": "i-am-a-citizen-at-large-of-everywhere-and-nowhere-so-sometimes-i-get-pretty-ho",
+      "relatedKeywords": [
+        "tempo",
+        "home",
+        "travel",
+        "rich-benjamin"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I am a citizen-at-large, of everywhere and nowhere, so sometimes I get pretty homesick.",
+    "autor_original": "Rich Benjamin",
+    "autor_slug": "rich-benjamin",
+    "categoria": "tempo",
+    "contextos": [
+      "viagem",
+      "travel"
+    ],
+    "palavras_chave": [
+      "home",
+      "travel",
+      "tempo",
+      "viagem"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

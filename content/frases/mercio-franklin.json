@@ -2,29 +2,124 @@
   {
     "id": "f_xsj2yms24",
     "slug": "a-vitoria-se-aproxima-quando-a-persistencia-e-a-determinaca",
+    "texto": "⁠A vitória se aproxima quando a persistência e a determinação caminham lado a lado, guiadas pela justiça e pela honestidade.",
+    "autor": "Mércio Franklin",
+    "autorSlug": "mercio-franklin",
+    "explicacao": "Mércio Franklin escreve frase motivacional ligando vitória à persistência, determinação, justiça e honestidade. Estilo de liderança moralizada. Destinada a quem busca sucesso com ética e esforço contínuo.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "persistencia"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao",
+        "persistencia"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "vitória",
+        "aproxima",
+        "quando",
+        "persistência",
+        "determinação"
+      ],
+      "palavrasChave": [
+        "determinacao",
+        "inspiracional",
+        "motivacao",
+        "persistencia",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "persistencia",
+        "inspiracao",
+        "mercio-franklin"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 40,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "vitória",
+        "aproxima",
+        "quando"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠A vitória se aproxima quando a persistência e a det…\" — Mércio Franklin | Metamensagem",
+      "descriptionSeo": "Mércio Franklin escreve frase motivacional ligando vitória à persistência, determinação, justiça e honestidade. Estilo de liderança moralizada. Destinada a qu…",
+      "keywordsSeo": [
+        "frases de Mércio Franklin",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases determinacao",
+        "frases inspiracao",
+        "frases inspiracional",
+        "determinacao",
+        "inspiracional",
+        "motivacao",
+        "persistencia"
+      ],
+      "canonicalSlug": "a-vitoria-se-aproxima-quando-a-persistencia-e-a-determinaca",
+      "relatedKeywords": [
+        "determinacao",
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "mercio-franklin"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠A vitória se aproxima quando a persistência e a determinação caminham lado a lado, guiadas pela justiça e pela honestidade.",
     "autor_original": "Mércio Franklin",
-    "categoria": "determinacao",
+    "autor_slug": "mercio-franklin",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao",
       "persistencia"
     ],
-    "explicacao": "Mércio Franklin escreve frase motivacional ligando vitória à persistência, determinação, justiça e honestidade. Estilo de liderança moralizada. Destinada a quem busca sucesso com ética e esforço contínuo.",
     "palavras_chave": [
       "determinacao",
       "inspiracional",
       "motivacao",
-      "persistencia"
+      "persistencia",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,0 +1,131 @@
+[
+  {
+    "id": "f_csv_667ae3970d",
+    "slug": "some-things-are-meant-to-live-and-die-with-an-artist",
+    "texto": "Some things are meant to live and die with an artist",
+    "autor": "J.R. Stewart",
+    "autorSlug": "j-r-stewart",
+    "explicacao": "Citação de J.R. Stewart sobre sentido da existência e experiência vivida. “Some things are meant to live and die with an artist” articula vida, art, artist em registro de vida, com relevância para contextos como luto e artist.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "art",
+        "artist",
+        "creativity",
+        "death"
+      ],
+      "contextos": [
+        "luto",
+        "artist",
+        "creativity",
+        "death",
+        "live"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "art",
+        "artist",
+        "creativity",
+        "things",
+        "meant"
+      ],
+      "palavrasChave": [
+        "art",
+        "artist",
+        "creativity",
+        "death",
+        "live",
+        "vida",
+        "luto"
+      ],
+      "tagsSeo": [
+        "vida",
+        "art",
+        "artist",
+        "creativity",
+        "death",
+        "luto",
+        "live",
+        "j-r-stewart"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 35,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "art",
+        "artist",
+        "creativity",
+        "things",
+        "meant"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Some things are meant to live and die with an artist\" — J.R. Stewart | Metamensagem",
+      "descriptionSeo": "Citação de J.R. Stewart sobre sentido da existência e experiência vivida. “Some things are meant to live and die with an artist” articula vida, art, artist em…",
+      "keywordsSeo": [
+        "frases de J.R. Stewart",
+        "frases sobre vida",
+        "frases vida",
+        "frases art",
+        "frases luto",
+        "frases artist",
+        "art",
+        "artist",
+        "creativity",
+        "death"
+      ],
+      "canonicalSlug": "some-things-are-meant-to-live-and-die-with-an-artist",
+      "relatedKeywords": [
+        "vida",
+        "art",
+        "artist",
+        "creativity",
+        "death",
+        "j-r-stewart"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Some things are meant to live and die with an artist",
+    "autor_original": "J.R. Stewart",
+    "autor_slug": "j-r-stewart",
+    "categoria": "vida",
+    "contextos": [
+      "luto",
+      "artist",
+      "creativity",
+      "death",
+      "live"
+    ],
+    "palavras_chave": [
+      "art",
+      "artist",
+      "creativity",
+      "death",
+      "live",
+      "vida",
+      "luto"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

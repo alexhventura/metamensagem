@@ -1,0 +1,127 @@
+[
+  {
+    "id": "f_csv_a0c8321f47",
+    "slug": "imagine-that-you-are-stuck-on-a-long-train-ride-and-must-choose-one-of-two-books",
+    "texto": "Imagine that you are stuck on a long train ride and must choose one of two books to read in order to pass the time: the first is a novel whose main character is an office worker who is essentially working to pay his monthly cable bill; the second is about someone who decides to travel in South America (and of course encounters various setbacks in the process), but who pushes beyond the boundaries of conventional American life. Which... book would you pick up to read? Indeed, which of the two characters would you rather be?",
+    "autor": "Mark Thompson",
+    "autorSlug": "mark-thompson",
+    "explicacao": "Pergunta retórica de Mark Thompson que provoca passagem do tempo e prioridades. Ao questionar “Imagine that you are stuck on a long train ride and must choose one of two books to read in order…”, o texto convida o leitor a revisar crenças sobre trabalho, vida, travel, com foco em trabalho e viagem.",
+    "semantica": {
+      "categoriaPrincipal": "trabalho",
+      "categorias": [
+        "trabalho",
+        "vida",
+        "travel",
+        "work"
+      ],
+      "contextos": [
+        "trabalho",
+        "viagem",
+        "dia-chuvoso",
+        "travel",
+        "work"
+      ],
+      "emocoes": [],
+      "temas": [
+        "trabalho",
+        "vida",
+        "travel",
+        "work",
+        "which",
+        "would",
+        "imagine",
+        "stuck"
+      ],
+      "palavrasChave": [
+        "vida",
+        "travel",
+        "work",
+        "trabalho",
+        "viagem",
+        "dia-chuvoso"
+      ],
+      "tagsSeo": [
+        "trabalho",
+        "vida",
+        "travel",
+        "work",
+        "viagem",
+        "dia-chuvoso",
+        "mark-thompson"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 78,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "trabalho",
+        "vida",
+        "travel",
+        "work",
+        "which",
+        "would"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Imagine that you are stuck on a long train ride and …\" — Mark Thompson | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Mark Thompson que provoca passagem do tempo e prioridades. Ao questionar “Imagine that you are stuck on a long train ride and must choose…",
+      "keywordsSeo": [
+        "frases de Mark Thompson",
+        "frases sobre trabalho",
+        "frases trabalho",
+        "frases vida",
+        "frases viagem",
+        "vida",
+        "travel",
+        "work",
+        "trabalho"
+      ],
+      "canonicalSlug": "imagine-that-you-are-stuck-on-a-long-train-ride-and-must-choose-one-of-two-books",
+      "relatedKeywords": [
+        "trabalho",
+        "vida",
+        "travel",
+        "work",
+        "mark-thompson"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Imagine that you are stuck on a long train ride and must choose one of two books to read in order to pass the time: the first is a novel whose main character is an office worker who is essentially working to pay his monthly cable bill; the second is about someone who decides to travel in South America (and of course encounters various setbacks in the process), but who pushes beyond the boundaries of conventional American life. Which... book would you pick up to read? Indeed, which of the two characters would you rather be?",
+    "autor_original": "Mark Thompson",
+    "autor_slug": "mark-thompson",
+    "categoria": "trabalho",
+    "contextos": [
+      "trabalho",
+      "viagem",
+      "dia-chuvoso",
+      "travel",
+      "work"
+    ],
+    "palavras_chave": [
+      "vida",
+      "travel",
+      "work",
+      "trabalho",
+      "viagem",
+      "dia-chuvoso"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

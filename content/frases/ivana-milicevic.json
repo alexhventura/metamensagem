@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f_csv_0746532d52",
+    "slug": "the-princess-bride-is-one-of-my-favorite-movies-of-all-time",
+    "texto": "'The Princess Bride' is one of my favorite movies of all time.",
+    "autor": "Ivana Milicevic",
+    "autorSlug": "ivana-milicevic",
+    "explicacao": "Citação de Ivana Milicevic sobre passagem do tempo e prioridades. “'The Princess Bride' is one of my favorite movies of all time.” articula tempo, movies, bride em registro de tempo, com relevância para contextos como bride e princess.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "movies",
+        "bride",
+        "princess"
+      ],
+      "contextos": [
+        "bride",
+        "princess"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "movies",
+        "bride",
+        "princess",
+        "favorite"
+      ],
+      "palavrasChave": [
+        "movies",
+        "bride",
+        "princess",
+        "tempo"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "movies",
+        "bride",
+        "princess",
+        "ivana-milicevic"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "movies",
+        "bride",
+        "princess",
+        "favorite",
+        "tempo"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"'The Princess Bride' is one of my favorite movies of…\" — Ivana Milicevic | Metamensagem",
+      "descriptionSeo": "Citação de Ivana Milicevic sobre passagem do tempo e prioridades. “'The Princess Bride' is one of my favorite movies of all time.” articula tempo, movies, bri…",
+      "keywordsSeo": [
+        "frases de Ivana Milicevic",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases movies",
+        "frases bride",
+        "frases princess",
+        "movies",
+        "bride",
+        "princess",
+        "tempo"
+      ],
+      "canonicalSlug": "the-princess-bride-is-one-of-my-favorite-movies-of-all-time",
+      "relatedKeywords": [
+        "tempo",
+        "movies",
+        "bride",
+        "princess",
+        "ivana-milicevic"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "'The Princess Bride' is one of my favorite movies of all time.",
+    "autor_original": "Ivana Milicevic",
+    "autor_slug": "ivana-milicevic",
+    "categoria": "tempo",
+    "contextos": [
+      "bride",
+      "princess"
+    ],
+    "palavras_chave": [
+      "movies",
+      "bride",
+      "princess",
+      "tempo"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

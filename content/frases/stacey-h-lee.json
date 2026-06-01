@@ -1,0 +1,106 @@
+[
+  {
+    "id": "f_csv_0a3f6af5ac",
+    "slug": "my-father-said-that-artists-see-the-world-differently-than-normal-people-i-see",
+    "texto": "My father said that artists see the world differently than normal people. I see a tree where you mights see a collection of lines, shapes, and shadows.",
+    "autor": "Stacey H. Lee",
+    "autorSlug": "stacey-h-lee",
+    "explicacao": "Citação de Stacey H. Lee sobre temas ligados a familia. “My father said that artists see the world differently than normal people. I see a tree where you …” articula familia, art, artists em registro de familia, com relevância para contextos como artists.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "art",
+        "artists"
+      ],
+      "contextos": [
+        "artists"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "art",
+        "artists",
+        "father",
+        "world",
+        "differently",
+        "normal"
+      ],
+      "palavrasChave": [
+        "art",
+        "artists",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "art",
+        "artists",
+        "stacey-h-lee"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 39,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "art",
+        "artists",
+        "father",
+        "world",
+        "differently"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My father said that artists see the world differentl…\" — Stacey H. Lee | Metamensagem",
+      "descriptionSeo": "Citação de Stacey H. Lee sobre temas ligados a familia. “My father said that artists see the world differently than normal people. I see a tree where you …” a…",
+      "keywordsSeo": [
+        "frases de Stacey H. Lee",
+        "frases sobre familia",
+        "frases familia",
+        "frases art",
+        "frases artists",
+        "art",
+        "artists",
+        "familia"
+      ],
+      "canonicalSlug": "my-father-said-that-artists-see-the-world-differently-than-normal-people-i-see",
+      "relatedKeywords": [
+        "familia",
+        "art",
+        "artists",
+        "stacey-h-lee"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My father said that artists see the world differently than normal people. I see a tree where you mights see a collection of lines, shapes, and shadows.",
+    "autor_original": "Stacey H. Lee",
+    "autor_slug": "stacey-h-lee",
+    "categoria": "familia",
+    "contextos": [
+      "artists"
+    ],
+    "palavras_chave": [
+      "art",
+      "artists",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

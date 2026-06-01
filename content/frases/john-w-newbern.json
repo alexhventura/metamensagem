@@ -1,0 +1,120 @@
+[
+  {
+    "id": "f_csv_ef24e7cc12",
+    "slug": "yesterday-is-a-cancelled-check-tomorrow-is-a-promissory-note-today-is-cash-in",
+    "texto": "Yesterday is a cancelled check. Tomorrow is a promissory note. Today is cash in hand. Spend It!",
+    "autor": "John W Newbern",
+    "autorSlug": "john-w-newbern",
+    "explicacao": "Citação de John W Newbern sobre temas ligados a tempo. “Yesterday is a cancelled check. Tomorrow is a promissory note. Today is cash in hand. Spend It!” articula tempo, present, reflexao em registro de tempo, com relevância para contextos como termino e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "present",
+        "reflexao"
+      ],
+      "contextos": [
+        "termino",
+        "reflexao"
+      ],
+      "emocoes": [
+        "saudade"
+      ],
+      "temas": [
+        "tempo",
+        "present",
+        "reflexao",
+        "yesterday",
+        "cancelled",
+        "check",
+        "tomorrow",
+        "promissory"
+      ],
+      "palavrasChave": [
+        "present",
+        "reflexao",
+        "tempo",
+        "termino",
+        "saudade"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "present",
+        "reflexao",
+        "termino",
+        "saudade",
+        "john-w-newbern"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "present",
+        "reflexao",
+        "yesterday",
+        "cancelled",
+        "check"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Yesterday is a cancelled check. Tomorrow is a promis…\" — John W Newbern | Metamensagem",
+      "descriptionSeo": "Citação de John W Newbern sobre temas ligados a tempo. “Yesterday is a cancelled check. Tomorrow is a promissory note. Today is cash in hand. Spend It!” artic…",
+      "keywordsSeo": [
+        "frases de John W Newbern",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases present",
+        "frases termino",
+        "frases reflexao",
+        "present",
+        "reflexao",
+        "tempo",
+        "termino"
+      ],
+      "canonicalSlug": "yesterday-is-a-cancelled-check-tomorrow-is-a-promissory-note-today-is-cash-in",
+      "relatedKeywords": [
+        "saudade",
+        "tempo",
+        "present",
+        "reflexao",
+        "john-w-newbern"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Yesterday is a cancelled check. Tomorrow is a promissory note. Today is cash in hand. Spend It!",
+    "autor_original": "John W Newbern",
+    "autor_slug": "john-w-newbern",
+    "categoria": "tempo",
+    "contextos": [
+      "termino",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "present",
+      "reflexao",
+      "tempo",
+      "termino",
+      "saudade"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_98f2477b64",
+    "slug": "a-tap-is-a-zero-length-swipe",
+    "texto": "A tap is a zero-length swipe.",
+    "autor": "Apple Inc.",
+    "autorSlug": "apple-inc",
+    "explicacao": "Citação de Apple Inc. sobre temas ligados a reflexao. “A tap is a zero-length swipe.” articula reflexao, copyright, technology em registro de reflexao, com relevância para contextos como technology.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "copyright",
+        "technology"
+      ],
+      "contextos": [
+        "technology"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "copyright",
+        "technology",
+        "length",
+        "swipe"
+      ],
+      "palavrasChave": [
+        "copyright",
+        "technology",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "copyright",
+        "technology",
+        "apple-inc"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "copyright",
+        "technology",
+        "length",
+        "swipe",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A tap is a zero-length swipe.\" — Apple Inc. | Metamensagem",
+      "descriptionSeo": "Citação de Apple Inc. sobre temas ligados a reflexao. “A tap is a zero-length swipe.” articula reflexao, copyright, technology em registro de reflexao, com re…",
+      "keywordsSeo": [
+        "frases de Apple Inc.",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases copyright",
+        "frases technology",
+        "copyright",
+        "technology",
+        "reflexao"
+      ],
+      "canonicalSlug": "a-tap-is-a-zero-length-swipe",
+      "relatedKeywords": [
+        "reflexao",
+        "copyright",
+        "technology",
+        "apple-inc"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A tap is a zero-length swipe.",
+    "autor_original": "Apple Inc.",
+    "autor_slug": "apple-inc",
+    "categoria": "reflexao",
+    "contextos": [
+      "technology"
+    ],
+    "palavras_chave": [
+      "copyright",
+      "technology",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

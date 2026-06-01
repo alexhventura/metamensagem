@@ -1,0 +1,96 @@
+[
+  {
+    "id": "f_csv_898fe5ddb5",
+    "slug": "you-can-judge-this-book-by-its-cover",
+    "texto": "You can judge this book by its cover.",
+    "autor": "Tom Icon",
+    "autorSlug": "tom-icon",
+    "explicacao": "Citação de Tom Icon sobre temas ligados a reflexao. “You can judge this book by its cover.” articula reflexao, adventure, judge em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "adventure"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "adventure",
+        "judge",
+        "cover"
+      ],
+      "palavrasChave": [
+        "adventure",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "adventure",
+        "tom-icon"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "adventure",
+        "judge",
+        "cover",
+        "reflexao",
+        "adventure"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"You can judge this book by its cover.\" — Tom Icon | Metamensagem",
+      "descriptionSeo": "Citação de Tom Icon sobre temas ligados a reflexao. “You can judge this book by its cover.” articula reflexao, adventure, judge em registro de reflexao, com r…",
+      "keywordsSeo": [
+        "frases de Tom Icon",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases adventure",
+        "adventure",
+        "reflexao"
+      ],
+      "canonicalSlug": "you-can-judge-this-book-by-its-cover",
+      "relatedKeywords": [
+        "reflexao",
+        "adventure",
+        "tom-icon"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "You can judge this book by its cover.",
+    "autor_original": "Tom Icon",
+    "autor_slug": "tom-icon",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "adventure",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

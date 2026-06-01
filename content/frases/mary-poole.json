@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_d4bbce069c",
+    "slug": "he-who-laughs-lasts",
+    "texto": "He who laughs lasts.",
+    "autor": "Mary Poole",
+    "autorSlug": "mary-poole",
+    "explicacao": "Citação de Mary Poole sobre temas ligados a humor. “He who laughs lasts.” articula humor, eat, drink em registro de humor, com relevância para contextos como drink e merry.",
+    "semantica": {
+      "categoriaPrincipal": "humor",
+      "categorias": [
+        "humor",
+        "eat",
+        "drink",
+        "merry"
+      ],
+      "contextos": [
+        "drink",
+        "merry"
+      ],
+      "emocoes": [],
+      "temas": [
+        "humor",
+        "eat",
+        "drink",
+        "merry",
+        "laughs",
+        "lasts"
+      ],
+      "palavrasChave": [
+        "eat",
+        "drink",
+        "merry",
+        "humor"
+      ],
+      "tagsSeo": [
+        "humor",
+        "eat",
+        "drink",
+        "merry",
+        "mary-poole"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "humor",
+        "eat",
+        "drink",
+        "merry",
+        "laughs",
+        "lasts"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"He who laughs lasts.\" — Mary Poole | Metamensagem",
+      "descriptionSeo": "Citação de Mary Poole sobre temas ligados a humor. “He who laughs lasts.” articula humor, eat, drink em registro de humor, com relevância para contextos como…",
+      "keywordsSeo": [
+        "frases de Mary Poole",
+        "frases sobre humor",
+        "frases humor",
+        "frases eat",
+        "frases drink",
+        "frases merry",
+        "eat",
+        "drink",
+        "merry",
+        "humor"
+      ],
+      "canonicalSlug": "he-who-laughs-lasts",
+      "relatedKeywords": [
+        "humor",
+        "eat",
+        "drink",
+        "merry",
+        "mary-poole"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "He who laughs lasts.",
+    "autor_original": "Mary Poole",
+    "autor_slug": "mary-poole",
+    "categoria": "humor",
+    "contextos": [
+      "drink",
+      "merry"
+    ],
+    "palavras_chave": [
+      "eat",
+      "drink",
+      "merry",
+      "humor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

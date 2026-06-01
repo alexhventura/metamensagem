@@ -1,0 +1,115 @@
+[
+  {
+    "id": "f_csv_fcbce3f89a",
+    "slug": "my-father-was-always-telling-himself-no-one-was-perfect-not-even-my-mother",
+    "texto": "My father was always telling himself no one was perfect, not even my mother.",
+    "autor": "Broderick Crawford",
+    "autorSlug": "broderick-crawford",
+    "explicacao": "Citação de Broderick Crawford sobre temas ligados a familia. “My father was always telling himself no one was perfect, not even my mother.” articula familia, father, mother em registro de familia, com relevância para contextos como mother e perfect.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "father",
+        "mother",
+        "perfect"
+      ],
+      "contextos": [
+        "mother",
+        "perfect"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "father",
+        "mother",
+        "perfect",
+        "always",
+        "telling",
+        "himself"
+      ],
+      "palavrasChave": [
+        "father",
+        "mother",
+        "perfect",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "father",
+        "mother",
+        "perfect",
+        "broderick-crawford"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "father",
+        "mother",
+        "perfect",
+        "always",
+        "telling"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My father was always telling himself no one was perf…\" — Broderick Crawford | Metamensagem",
+      "descriptionSeo": "Citação de Broderick Crawford sobre temas ligados a familia. “My father was always telling himself no one was perfect, not even my mother.” articula familia,…",
+      "keywordsSeo": [
+        "frases de Broderick Crawford",
+        "frases sobre familia",
+        "frases familia",
+        "frases father",
+        "frases mother",
+        "frases perfect",
+        "father",
+        "mother",
+        "perfect",
+        "familia"
+      ],
+      "canonicalSlug": "my-father-was-always-telling-himself-no-one-was-perfect-not-even-my-mother",
+      "relatedKeywords": [
+        "familia",
+        "father",
+        "mother",
+        "perfect",
+        "broderick-crawford"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My father was always telling himself no one was perfect, not even my mother.",
+    "autor_original": "Broderick Crawford",
+    "autor_slug": "broderick-crawford",
+    "categoria": "familia",
+    "contextos": [
+      "mother",
+      "perfect"
+    ],
+    "palavras_chave": [
+      "father",
+      "mother",
+      "perfect",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

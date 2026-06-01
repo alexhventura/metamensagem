@@ -2,25 +2,105 @@
   {
     "id": "f_8rgn9acrn",
     "slug": "acredite-em-si-proprio-e-chegara-um-dia-em-que-seu-esforco-s",
+    "texto": "Acredite em si próprio e chegará um dia em que seu esforço será motivação aos desacreditados.",
+    "autor": "Alexandre Alcântara",
+    "autorSlug": "alexandre-alcantara",
+    "explicacao": "Mensagem motivacional de Alexandre Alcântara sobre autoconfiança. Propõe que persistir diante da descrença alheia pode, com o tempo, inspirar quem também duvida de si.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "acredite",
+        "próprio",
+        "chegará",
+        "esforço",
+        "motivação"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "inspiracao",
+        "alexandre-alcantara"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "acredite",
+        "próprio",
+        "chegará",
+        "esforço"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Acredite em si próprio e chegará um dia em que seu e…\" — Alexandre Alcântara | Metamensagem",
+      "descriptionSeo": "Mensagem motivacional de Alexandre Alcântara sobre autoconfiança. Propõe que persistir diante da descrença alheia pode, com o tempo, inspirar quem também duvi…",
+      "keywordsSeo": [
+        "frases de Alexandre Alcântara",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "acredite-em-si-proprio-e-chegara-um-dia-em-que-seu-esforco-s",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "alexandre-alcantara"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Acredite em si próprio e chegará um dia em que seu esforço será motivação aos desacreditados.",
     "autor_original": "Alexandre Alcântara",
-    "categoria": "inspiracional",
+    "autor_slug": "alexandre-alcantara",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao"
     ],
-    "explicacao": "Mensagem motivacional de Alexandre Alcântara sobre autoconfiança. Propõe que persistir diante da descrença alheia pode, com o tempo, inspirar quem também duvida de si.",
     "palavras_chave": [
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_0ccff3054b",
+    "slug": "i-like-science-geography-meteorology-cosmology",
+    "texto": "I like science - geography, meteorology, cosmology.",
+    "autor": "Randy Newman",
+    "autorSlug": "randy-newman",
+    "explicacao": "Metáfora atribuída a Randy Newman: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “I like science - geography, meteorology, cosmology.” usa imagem concreta para lembrar que reflexao, geography, like pedem movimento e interpretação pessoal, em tom de like e cosmology.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "geography",
+        "like",
+        "cosmology"
+      ],
+      "contextos": [
+        "like",
+        "cosmology"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "geography",
+        "like",
+        "cosmology",
+        "science",
+        "meteorology"
+      ],
+      "palavrasChave": [
+        "geography",
+        "like",
+        "cosmology",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "geography",
+        "like",
+        "cosmology",
+        "randy-newman"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "geography",
+        "like",
+        "cosmology",
+        "science",
+        "meteorology"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I like science - geography, meteorology, cosmology.\" — Randy Newman | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Randy Newman: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “I like science - geography, meteorology, c…",
+      "keywordsSeo": [
+        "frases de Randy Newman",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases geography",
+        "frases like",
+        "frases cosmology",
+        "geography",
+        "like",
+        "cosmology",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-like-science-geography-meteorology-cosmology",
+      "relatedKeywords": [
+        "reflexao",
+        "geography",
+        "like",
+        "cosmology",
+        "randy-newman"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I like science - geography, meteorology, cosmology.",
+    "autor_original": "Randy Newman",
+    "autor_slug": "randy-newman",
+    "categoria": "reflexao",
+    "contextos": [
+      "like",
+      "cosmology"
+    ],
+    "palavras_chave": [
+      "geography",
+      "like",
+      "cosmology",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

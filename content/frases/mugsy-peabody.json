@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_4e178b34c4",
+    "slug": "a-dog-is-a-dog-a-bird-is-a-bird-and-a-cat-is-a-person",
+    "texto": "A dog is a dog, a bird is a bird, and a cat is a person.",
+    "autor": "Mugsy Peabody",
+    "autorSlug": "mugsy-peabody",
+    "explicacao": "Citação de Mugsy Peabody sobre temas ligados a reflexao. “A dog is a dog, a bird is a bird, and a cat is a person.” articula reflexao, animals, cats em registro de reflexao, com relevância para contextos como cats.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "animals",
+        "cats"
+      ],
+      "contextos": [
+        "cats"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "animals",
+        "cats",
+        "person"
+      ],
+      "palavrasChave": [
+        "animals",
+        "cats",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "animals",
+        "cats",
+        "mugsy-peabody"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "animals",
+        "cats",
+        "person",
+        "reflexao",
+        "animals"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A dog is a dog, a bird is a bird, and a cat is a per…\" — Mugsy Peabody | Metamensagem",
+      "descriptionSeo": "Citação de Mugsy Peabody sobre temas ligados a reflexao. “A dog is a dog, a bird is a bird, and a cat is a person.” articula reflexao, animals, cats em regist…",
+      "keywordsSeo": [
+        "frases de Mugsy Peabody",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases animals",
+        "frases cats",
+        "animals",
+        "cats",
+        "reflexao"
+      ],
+      "canonicalSlug": "a-dog-is-a-dog-a-bird-is-a-bird-and-a-cat-is-a-person",
+      "relatedKeywords": [
+        "reflexao",
+        "animals",
+        "cats",
+        "mugsy-peabody"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A dog is a dog, a bird is a bird, and a cat is a person.",
+    "autor_original": "Mugsy Peabody",
+    "autor_slug": "mugsy-peabody",
+    "categoria": "reflexao",
+    "contextos": [
+      "cats"
+    ],
+    "palavras_chave": [
+      "animals",
+      "cats",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

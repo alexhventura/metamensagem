@@ -1,0 +1,121 @@
+[
+  {
+    "id": "f_csv_9828752d6b",
+    "slug": "read-write-imagine-create-love-live",
+    "texto": "Read! Write! Imagine! Create! Love! Live!",
+    "autor": "Helen Deakin",
+    "autorSlug": "helen-deakin",
+    "explicacao": "Citação de Helen Deakin sobre vínculos afetivos e cuidado mútuo. “Read! Write! Imagine! Create! Love! Live!” articula vida, living, reading em registro de vida, com relevância para contextos como reading e writing.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "living",
+        "reading",
+        "writing"
+      ],
+      "contextos": [
+        "reading",
+        "writing"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "vida",
+        "living",
+        "reading",
+        "writing",
+        "write",
+        "imagine",
+        "create"
+      ],
+      "palavrasChave": [
+        "living",
+        "reading",
+        "writing",
+        "vida",
+        "amor"
+      ],
+      "tagsSeo": [
+        "vida",
+        "living",
+        "reading",
+        "writing",
+        "amor",
+        "helen-deakin"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "living",
+        "reading",
+        "writing",
+        "write",
+        "imagine"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Read! Write! Imagine! Create! Love! Live!\" — Helen Deakin | Metamensagem",
+      "descriptionSeo": "Citação de Helen Deakin sobre vínculos afetivos e cuidado mútuo. “Read! Write! Imagine! Create! Love! Live!” articula vida, living, reading em registro de vid…",
+      "keywordsSeo": [
+        "frases de Helen Deakin",
+        "frases sobre vida",
+        "frases vida",
+        "frases living",
+        "frases reading",
+        "frases writing",
+        "living",
+        "reading",
+        "writing",
+        "vida"
+      ],
+      "canonicalSlug": "read-write-imagine-create-love-live",
+      "relatedKeywords": [
+        "amor",
+        "vida",
+        "living",
+        "reading",
+        "writing",
+        "helen-deakin"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Read! Write! Imagine! Create! Love! Live!",
+    "autor_original": "Helen Deakin",
+    "autor_slug": "helen-deakin",
+    "categoria": "vida",
+    "contextos": [
+      "reading",
+      "writing"
+    ],
+    "palavras_chave": [
+      "living",
+      "reading",
+      "writing",
+      "vida",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

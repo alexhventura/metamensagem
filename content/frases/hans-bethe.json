@@ -1,0 +1,131 @@
+[
+  {
+    "id": "f_csv_3158cc7906",
+    "slug": "i-am-an-atheist",
+    "texto": "I am an atheist.",
+    "autor": "Hans Bethe",
+    "autorSlug": "hans-bethe",
+    "explicacao": "Citação de Hans Bethe sobre temas ligados a reflexao. “I am an atheist.” articula reflexao, atheism, atheist em registro de reflexao, com relevância para contextos como atheist e bomb.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "atheism",
+        "atheist",
+        "bomb",
+        "nobel-laureate"
+      ],
+      "contextos": [
+        "atheist",
+        "bomb",
+        "nobel-laureate",
+        "nobel-prize",
+        "nuclear"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "atheism",
+        "atheist",
+        "bomb"
+      ],
+      "palavrasChave": [
+        "atheism",
+        "atheist",
+        "bomb",
+        "nobel-laureate",
+        "nobel-prize",
+        "nuclear",
+        "nuke",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "atheism",
+        "atheist",
+        "bomb",
+        "nobel-laureate",
+        "nobel-prize",
+        "nuclear",
+        "hans-bethe"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 35,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "atheism",
+        "atheist",
+        "bomb",
+        "reflexao",
+        "atheism"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I am an atheist.\" — Hans Bethe | Metamensagem",
+      "descriptionSeo": "Citação de Hans Bethe sobre temas ligados a reflexao. “I am an atheist.” articula reflexao, atheism, atheist em registro de reflexao, com relevância para cont…",
+      "keywordsSeo": [
+        "frases de Hans Bethe",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases atheism",
+        "frases atheist",
+        "frases bomb",
+        "atheism",
+        "atheist",
+        "bomb",
+        "nobel-laureate"
+      ],
+      "canonicalSlug": "i-am-an-atheist",
+      "relatedKeywords": [
+        "reflexao",
+        "atheism",
+        "atheist",
+        "bomb",
+        "nobel-laureate",
+        "hans-bethe"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I am an atheist.",
+    "autor_original": "Hans Bethe",
+    "autor_slug": "hans-bethe",
+    "categoria": "reflexao",
+    "contextos": [
+      "atheist",
+      "bomb",
+      "nobel-laureate",
+      "nobel-prize",
+      "nuclear"
+    ],
+    "palavras_chave": [
+      "atheism",
+      "atheist",
+      "bomb",
+      "nobel-laureate",
+      "nobel-prize",
+      "nuclear",
+      "nuke",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

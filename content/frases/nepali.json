@@ -1,0 +1,96 @@
+[
+  {
+    "id": "f_csv_7517e8951a",
+    "slug": "i-am-proud-to-be-nepali",
+    "texto": "I am proud to be Nepali.",
+    "autor": "nepali",
+    "autorSlug": "nepali",
+    "explicacao": "Citação de nepali sobre temas ligados a reflexao. “I am proud to be Nepali.” articula reflexao, country, proud em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "country"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "country",
+        "proud",
+        "nepali"
+      ],
+      "palavrasChave": [
+        "country",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "country",
+        "nepali"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "country",
+        "proud",
+        "nepali",
+        "reflexao",
+        "country"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I am proud to be Nepali.\" — nepali | Metamensagem",
+      "descriptionSeo": "Citação de nepali sobre temas ligados a reflexao. “I am proud to be Nepali.” articula reflexao, country, proud em registro de reflexao, com relevância para co…",
+      "keywordsSeo": [
+        "frases de nepali",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases country",
+        "country",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-am-proud-to-be-nepali",
+      "relatedKeywords": [
+        "reflexao",
+        "country",
+        "nepali"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I am proud to be Nepali.",
+    "autor_original": "nepali",
+    "autor_slug": "nepali",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "country",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -2,27 +2,117 @@
   {
     "id": "f_76mes6oi3",
     "slug": "nunca-desista-de-lutar-pois-as-maiores-vitorias-sao-alca",
+    "texto": "⁠ \"Nunca desista de lutar, pois as maiores vitórias são alcançadas por aqueles que continuam a lutar, mesmo quando tudo parece perdido.\"",
+    "autor": "Marco Aurelio Souza Lima",
+    "autorSlug": "marco-aurelio-souza-lima",
+    "explicacao": "Marco Aurélio Souza Lima escreve mensagem motivacional sobre persistir na luta quando tudo parece perdido. Tom de coaching e superação. Destinada a quem enfrenta fracasso temporário e precisa de encorajamento para continuar.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "coragem",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [
+        "coragem"
+      ],
+      "temas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "lutar",
+        "nunca",
+        "desista",
+        "maiores",
+        "vitórias"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "inspiracao",
+        "marco-aurelio-souza-lima"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 39,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "lutar",
+        "nunca",
+        "desista"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠ \"Nunca desista de lutar, pois as maiores vitórias …\" — Marco Aurelio Souza Lima | Metamensagem",
+      "descriptionSeo": "Marco Aurélio Souza Lima escreve mensagem motivacional sobre persistir na luta quando tudo parece perdido. Tom de coaching e superação. Destinada a quem enfre…",
+      "keywordsSeo": [
+        "frases de Marco Aurelio Souza Lima",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases coragem",
+        "frases inspiracao",
+        "frases inspiracional",
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "nunca-desista-de-lutar-pois-as-maiores-vitorias-sao-alca",
+      "relatedKeywords": [
+        "coragem",
+        "motivacao",
+        "inspiracional",
+        "marco-aurelio-souza-lima"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠ \"Nunca desista de lutar, pois as maiores vitórias são alcançadas por aqueles que continuam a lutar, mesmo quando tudo parece perdido.\"",
     "autor_original": "Marco Aurelio Souza Lima",
-    "categoria": "coragem",
+    "autor_slug": "marco-aurelio-souza-lima",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "Marco Aurélio Souza Lima escreve mensagem motivacional sobre persistir na luta quando tudo parece perdido. Tom de coaching e superação. Destinada a quem enfrenta fracasso temporário e precisa de encorajamento para continuar.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

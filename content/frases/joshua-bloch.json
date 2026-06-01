@@ -1,0 +1,293 @@
+[
+  {
+    "id": "f_csv_674dd8acf0",
+    "slug": "a-second-advantage-of-static-factory-methods-is-that-unlike-constructors-they",
+    "texto": "A second advantage of static factory methods is that, unlike constructors, they are not required to create a new object each time they're invoked.",
+    "autor": "Joshua Bloch",
+    "autorSlug": "joshua-bloch",
+    "explicacao": "Citação de Joshua Bloch sobre passagem do tempo e prioridades. “A second advantage of static factory methods is that, unlike constructors, they are not required …” articula reflexao, kindlehighlight, second em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "kindlehighlight"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "kindlehighlight",
+        "second",
+        "advantage",
+        "static",
+        "factory",
+        "methods"
+      ],
+      "palavrasChave": [
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "kindlehighlight",
+        "joshua-bloch"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 38,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "kindlehighlight",
+        "second",
+        "advantage",
+        "static",
+        "factory"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A second advantage of static factory methods is that…\" — Joshua Bloch | Metamensagem",
+      "descriptionSeo": "Citação de Joshua Bloch sobre passagem do tempo e prioridades. “A second advantage of static factory methods is that, unlike constructors, they are not requir…",
+      "keywordsSeo": [
+        "frases de Joshua Bloch",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases kindlehighlight",
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "canonicalSlug": "a-second-advantage-of-static-factory-methods-is-that-unlike-constructors-they",
+      "relatedKeywords": [
+        "reflexao",
+        "kindlehighlight",
+        "joshua-bloch"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A second advantage of static factory methods is that, unlike constructors, they are not required to create a new object each time they're invoked.",
+    "autor_original": "Joshua Bloch",
+    "autor_slug": "joshua-bloch",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "kindlehighlight",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_736d007faf",
+    "slug": "one-advantage-of-static-factory-methods-is-that-unlike-constructors-they-have",
+    "texto": "One advantage of static factory methods is that, unlike constructors, they have names.",
+    "autor": "Joshua Bloch",
+    "autorSlug": "joshua-bloch",
+    "explicacao": "Citação de Joshua Bloch sobre temas ligados a reflexao. “One advantage of static factory methods is that, unlike constructors, they have names.” articula reflexao, kindlehighlight, advantage em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "kindlehighlight"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "kindlehighlight",
+        "advantage",
+        "static",
+        "factory",
+        "methods",
+        "unlike"
+      ],
+      "palavrasChave": [
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "kindlehighlight",
+        "joshua-bloch"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "kindlehighlight",
+        "advantage",
+        "static",
+        "factory",
+        "methods"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"One advantage of static factory methods is that, unl…\" — Joshua Bloch | Metamensagem",
+      "descriptionSeo": "Citação de Joshua Bloch sobre temas ligados a reflexao. “One advantage of static factory methods is that, unlike constructors, they have names.” articula refl…",
+      "keywordsSeo": [
+        "frases de Joshua Bloch",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases kindlehighlight",
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "canonicalSlug": "one-advantage-of-static-factory-methods-is-that-unlike-constructors-they-have",
+      "relatedKeywords": [
+        "reflexao",
+        "kindlehighlight",
+        "joshua-bloch"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "One advantage of static factory methods is that, unlike constructors, they have names.",
+    "autor_original": "Joshua Bloch",
+    "autor_slug": "joshua-bloch",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "kindlehighlight",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_94564e0fc2",
+    "slug": "builder-pattern-is-more-verbose-than-the-telescoping-constructor-pattern-so-it",
+    "texto": "Builder pattern is more verbose than the telescoping constructor pattern, so it should be used only if there are enough parameters, say, four or more.",
+    "autor": "Joshua Bloch",
+    "autorSlug": "joshua-bloch",
+    "explicacao": "Orientação direta de Joshua Bloch sobre temas ligados a reflexao. A afirmação “Builder pattern is more verbose than the telescoping constructor pattern, so it should be used on…” funciona como lembrete prático ligado a reflexao, kindlehighlight, pattern, útil em momentos de reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "kindlehighlight"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "kindlehighlight",
+        "pattern",
+        "builder",
+        "verbose",
+        "telescoping",
+        "constructor"
+      ],
+      "palavrasChave": [
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "kindlehighlight",
+        "joshua-bloch"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 39,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "kindlehighlight",
+        "pattern",
+        "builder",
+        "verbose",
+        "telescoping"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Builder pattern is more verbose than the telescoping…\" — Joshua Bloch | Metamensagem",
+      "descriptionSeo": "Orientação direta de Joshua Bloch sobre temas ligados a reflexao. A afirmação “Builder pattern is more verbose than the telescoping constructor pattern, so it…",
+      "keywordsSeo": [
+        "frases de Joshua Bloch",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases kindlehighlight",
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "canonicalSlug": "builder-pattern-is-more-verbose-than-the-telescoping-constructor-pattern-so-it",
+      "relatedKeywords": [
+        "reflexao",
+        "kindlehighlight",
+        "joshua-bloch"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Builder pattern is more verbose than the telescoping constructor pattern, so it should be used only if there are enough parameters, say, four or more.",
+    "autor_original": "Joshua Bloch",
+    "autor_slug": "joshua-bloch",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "kindlehighlight",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

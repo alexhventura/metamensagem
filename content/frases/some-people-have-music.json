@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_b4f957c236",
+    "slug": "some-people-have-lives",
+    "texto": "Some people have lives",
+    "autor": "some people have music.",
+    "autorSlug": "some-people-have-music",
+    "explicacao": "Citação de some people have music. sobre sentido da existência e experiência vivida. “Some people have lives” articula vida, john-green, will-grayson em registro de vida, com relevância para contextos como will-grayson.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "john-green",
+        "will-grayson"
+      ],
+      "contextos": [
+        "will-grayson"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "john-green",
+        "will-grayson",
+        "people",
+        "lives"
+      ],
+      "palavrasChave": [
+        "john-green",
+        "will-grayson",
+        "vida"
+      ],
+      "tagsSeo": [
+        "vida",
+        "john-green",
+        "will-grayson",
+        "some-people-have-music"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "john-green",
+        "will-grayson",
+        "people",
+        "lives",
+        "vida"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Some people have lives\" — some people have music. | Metamensagem",
+      "descriptionSeo": "Citação de some people have music. sobre sentido da existência e experiência vivida. “Some people have lives” articula vida, john-green, will-grayson em regis…",
+      "keywordsSeo": [
+        "frases de some people have music.",
+        "frases sobre vida",
+        "frases vida",
+        "frases john green",
+        "frases will grayson",
+        "john-green",
+        "will-grayson",
+        "vida"
+      ],
+      "canonicalSlug": "some-people-have-lives",
+      "relatedKeywords": [
+        "vida",
+        "john-green",
+        "will-grayson",
+        "some-people-have-music"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Some people have lives",
+    "autor_original": "some people have music.",
+    "autor_slug": "some-people-have-music",
+    "categoria": "vida",
+    "contextos": [
+      "will-grayson"
+    ],
+    "palavras_chave": [
+      "john-green",
+      "will-grayson",
+      "vida"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

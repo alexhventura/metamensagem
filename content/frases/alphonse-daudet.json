@@ -1,0 +1,96 @@
+[
+  {
+    "id": "f_csv_1865089e55",
+    "slug": "music-is-another-planet",
+    "texto": "Music is another planet.",
+    "autor": "Alphonse Daudet",
+    "autorSlug": "alphonse-daudet",
+    "explicacao": "Citação de Alphonse Daudet sobre temas ligados a reflexao. “Music is another planet.” articula reflexao, music, another em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "music"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "music",
+        "another",
+        "planet"
+      ],
+      "palavrasChave": [
+        "music",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "music",
+        "alphonse-daudet"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "music",
+        "another",
+        "planet",
+        "reflexao",
+        "music"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Music is another planet.\" — Alphonse Daudet | Metamensagem",
+      "descriptionSeo": "Citação de Alphonse Daudet sobre temas ligados a reflexao. “Music is another planet.” articula reflexao, music, another em registro de reflexao, com relevânci…",
+      "keywordsSeo": [
+        "frases de Alphonse Daudet",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases music",
+        "music",
+        "reflexao"
+      ],
+      "canonicalSlug": "music-is-another-planet",
+      "relatedKeywords": [
+        "reflexao",
+        "music",
+        "alphonse-daudet"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Music is another planet.",
+    "autor_original": "Alphonse Daudet",
+    "autor_slug": "alphonse-daudet",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "music",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

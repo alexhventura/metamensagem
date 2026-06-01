@@ -1,0 +1,33 @@
+{
+  "auditDate": "2026-06-01",
+  "homeCriticalPathBefore": {
+    "json": ["/metaforas-index.json (~116-436KB)", "/frases-v2/feed-sample.json (~1.5MB)", "fallback /frases-cms.json (68KB)"],
+    "scripts": ["adsbygoogle.js sync in index.html", "theme-init.js"],
+    "fonts": ["Inter+Playfair+JetBrains via CSS @import blocking"],
+    "bundle": "monolithic App.tsx + fuse.js + modern-screenshot on first load"
+  },
+  "homeCriticalPathAfter": {
+    "json": ["/home-bootstrap.json (~10KB)"],
+    "deferred": ["/metaforas-index.json", "/frases-v2/feed-sample.json via requestIdleCallback"],
+    "removedFromHome": ["frases-cms.json", "frases-index.json"],
+    "scripts": ["AdSense via adsenseLazy.ts (idle + IntersectionObserver)"],
+    "fonts": ["Inter 400/600 preload; JetBrains deferred"]
+  },
+  "buildGzipKb": {
+    "entry": 3.96,
+    "app": 21.98,
+    "vendorReact": 72.3,
+    "vendorMotion": 42.67,
+    "vendorI18n": 18.81,
+    "modalScreenshot": 14.46
+  },
+  "targets": {
+    "homeJsonMaxKb": 20,
+    "homeBootstrapActualKb": 10,
+    "criticalBundleTargetKb": 80,
+    "clsTarget": 0.05,
+    "lcpTargetMs": 2500
+  },
+  "commands": ["npm run lint", "npm run analyze", "npx vite build"],
+  "lcpDiagnostic": "src/lib/perf/lcpObserver.ts (DEV only)"
+}

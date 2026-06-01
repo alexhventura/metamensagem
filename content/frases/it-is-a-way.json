@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_6e1d634f9c",
+    "slug": "art-is-not-a-thing",
+    "texto": "Art is not a thing",
+    "autor": "it is a way.",
+    "autorSlug": "it-is-a-way",
+    "explicacao": "Citação de it is a way. sobre temas ligados a reflexao. “Art is not a thing” articula reflexao, elbert-hubbard, thing em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "elbert-hubbard"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "elbert-hubbard",
+        "thing"
+      ],
+      "palavrasChave": [
+        "elbert-hubbard",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "elbert-hubbard",
+        "it-is-a-way"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "elbert-hubbard",
+        "thing",
+        "reflexao",
+        "elbert-hubbard"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Art is not a thing\" — it is a way. | Metamensagem",
+      "descriptionSeo": "Citação de it is a way. sobre temas ligados a reflexao. “Art is not a thing” articula reflexao, elbert-hubbard, thing em registro de reflexao, com relevância…",
+      "keywordsSeo": [
+        "frases de it is a way.",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases elbert hubbard",
+        "elbert-hubbard",
+        "reflexao"
+      ],
+      "canonicalSlug": "art-is-not-a-thing",
+      "relatedKeywords": [
+        "reflexao",
+        "elbert-hubbard",
+        "it-is-a-way"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Art is not a thing",
+    "autor_original": "it is a way.",
+    "autor_slug": "it-is-a-way",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "elbert-hubbard",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

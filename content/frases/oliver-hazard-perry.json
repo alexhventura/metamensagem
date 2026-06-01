@@ -1,0 +1,94 @@
+[
+  {
+    "id": "f_csv_9d44eb8a44",
+    "slug": "we-have-met-the-enemy-and-they-are-ours",
+    "texto": "We have met the enemy and they are ours.",
+    "autor": "Oliver Hazard Perry",
+    "autorSlug": "oliver-hazard-perry",
+    "explicacao": "Citação de Oliver Hazard Perry sobre temas ligados a reflexao. “We have met the enemy and they are ours.” articula reflexao, victory, enemy em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "victory"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "victory",
+        "enemy"
+      ],
+      "palavrasChave": [
+        "victory",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "victory",
+        "oliver-hazard-perry"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "victory",
+        "enemy",
+        "reflexao",
+        "victory"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"We have met the enemy and they are ours.\" — Oliver Hazard Perry | Metamensagem",
+      "descriptionSeo": "Citação de Oliver Hazard Perry sobre temas ligados a reflexao. “We have met the enemy and they are ours.” articula reflexao, victory, enemy em registro de ref…",
+      "keywordsSeo": [
+        "frases de Oliver Hazard Perry",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases victory",
+        "victory",
+        "reflexao"
+      ],
+      "canonicalSlug": "we-have-met-the-enemy-and-they-are-ours",
+      "relatedKeywords": [
+        "reflexao",
+        "victory",
+        "oliver-hazard-perry"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "We have met the enemy and they are ours.",
+    "autor_original": "Oliver Hazard Perry",
+    "autor_slug": "oliver-hazard-perry",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "victory",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

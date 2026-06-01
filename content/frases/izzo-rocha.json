@@ -2,29 +2,122 @@
   {
     "id": "f_fvqedjf8c",
     "slug": "nao-importa-as-dificuldades-do-seu-caminho-o-que-voce-nao",
+    "texto": "\"Não importa as dificuldades do seu caminho, o que você não pode é desistir dos seus objetivos\"",
+    "autor": "Izzo Rocha",
+    "autorSlug": "izzo-rocha",
+    "explicacao": "Izzo Rocha reforça que dificuldades no caminho não justificam abandonar objetivos. Mensagem direta de conteúdo motivacional sobre foco e perseverança diante de obstáculos.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "superacao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao",
+        "superacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "importa",
+        "dificuldades",
+        "caminho",
+        "desistir",
+        "objetivos"
+      ],
+      "palavrasChave": [
+        "foco",
+        "inspiracional",
+        "motivacao",
+        "superacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "superacao",
+        "inspiracao",
+        "izzo-rocha"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 37,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "importa",
+        "dificuldades",
+        "caminho"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"\"Não importa as dificuldades do seu caminho, o que v…\" — Izzo Rocha | Metamensagem",
+      "descriptionSeo": "Izzo Rocha reforça que dificuldades no caminho não justificam abandonar objetivos. Mensagem direta de conteúdo motivacional sobre foco e perseverança diante d…",
+      "keywordsSeo": [
+        "frases de Izzo Rocha",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases foco",
+        "frases inspiracao",
+        "frases inspiracional",
+        "foco",
+        "inspiracional",
+        "motivacao",
+        "superacao"
+      ],
+      "canonicalSlug": "nao-importa-as-dificuldades-do-seu-caminho-o-que-voce-nao",
+      "relatedKeywords": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "superacao",
+        "izzo-rocha"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "\"Não importa as dificuldades do seu caminho, o que você não pode é desistir dos seus objetivos\"",
     "autor_original": "Izzo Rocha",
-    "categoria": "foco",
+    "autor_slug": "izzo-rocha",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao",
       "superacao"
     ],
-    "explicacao": "Izzo Rocha reforça que dificuldades no caminho não justificam abandonar objetivos. Mensagem direta de conteúdo motivacional sobre foco e perseverança diante de obstáculos.",
     "palavras_chave": [
       "foco",
       "inspiracional",
       "motivacao",
-      "superacao"
+      "superacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

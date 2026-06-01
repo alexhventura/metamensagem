@@ -1,0 +1,124 @@
+[
+  {
+    "id": "f_csv_936f5b7d75",
+    "slug": "shall-i-compare-thee-to-a-shoggoth",
+    "texto": "Shall I compare thee to a Shoggoth?",
+    "autor": "D.R. O'Brien",
+    "autorSlug": "d-r-o-brien",
+    "explicacao": "Pergunta retórica de D.R. O'Brien que provoca temas ligados a amor. Ao questionar “Shall I compare thee to a Shoggoth?”, o texto convida o leitor a revisar crenças sobre amor, comedy, horror, com foco em horror e lovecraft.",
+    "semantica": {
+      "categoriaPrincipal": "amor",
+      "categorias": [
+        "amor",
+        "comedy",
+        "horror",
+        "lovecraft",
+        "shakespeare"
+      ],
+      "contextos": [
+        "horror",
+        "lovecraft",
+        "shakespeare"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "amor",
+        "comedy",
+        "horror",
+        "lovecraft",
+        "shall",
+        "compare",
+        "shoggoth"
+      ],
+      "palavrasChave": [
+        "comedy",
+        "horror",
+        "lovecraft",
+        "shakespeare",
+        "amor"
+      ],
+      "tagsSeo": [
+        "amor",
+        "comedy",
+        "horror",
+        "lovecraft",
+        "shakespeare",
+        "d-r-o-brien"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amor",
+        "comedy",
+        "horror",
+        "lovecraft",
+        "shall",
+        "compare"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Shall I compare thee to a Shoggoth?\" — D.R. O'Brien | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de D.R. O'Brien que provoca temas ligados a amor. Ao questionar “Shall I compare thee to a Shoggoth?”, o texto convida o leitor a revisar cr…",
+      "keywordsSeo": [
+        "frases de D.R. O'Brien",
+        "frases sobre amor",
+        "frases amor",
+        "frases comedy",
+        "frases horror",
+        "frases lovecraft",
+        "comedy",
+        "horror",
+        "lovecraft",
+        "shakespeare"
+      ],
+      "canonicalSlug": "shall-i-compare-thee-to-a-shoggoth",
+      "relatedKeywords": [
+        "amor",
+        "comedy",
+        "horror",
+        "lovecraft",
+        "shakespeare",
+        "d-r-o-brien"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Shall I compare thee to a Shoggoth?",
+    "autor_original": "D.R. O'Brien",
+    "autor_slug": "d-r-o-brien",
+    "categoria": "amor",
+    "contextos": [
+      "horror",
+      "lovecraft",
+      "shakespeare"
+    ],
+    "palavras_chave": [
+      "comedy",
+      "horror",
+      "lovecraft",
+      "shakespeare",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

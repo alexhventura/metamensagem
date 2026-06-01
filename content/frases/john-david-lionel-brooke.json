@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_534c834f83",
+    "slug": "i-read-therefore-i-write",
+    "texto": "I read therefore I write.",
+    "autor": "John David Lionel Brooke",
+    "autorSlug": "john-david-lionel-brooke",
+    "explicacao": "Citação de John David Lionel Brooke sobre temas ligados a familia. “I read therefore I write.” articula familia, child-abuse-effects, family-relationships em registro de familia, com relevância para contextos como family-relationships e hearing-voices.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "child-abuse-effects",
+        "family-relationships",
+        "hearing-voices"
+      ],
+      "contextos": [
+        "family-relationships",
+        "hearing-voices"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "child-abuse-effects",
+        "family-relationships",
+        "hearing-voices",
+        "therefore",
+        "write"
+      ],
+      "palavrasChave": [
+        "child-abuse-effects",
+        "family-relationships",
+        "hearing-voices",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "child-abuse-effects",
+        "family-relationships",
+        "hearing-voices",
+        "john-david-lionel-brooke"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "child-abuse-effects",
+        "family-relationships",
+        "hearing-voices",
+        "therefore",
+        "write"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I read therefore I write.\" — John David Lionel Brooke | Metamensagem",
+      "descriptionSeo": "Citação de John David Lionel Brooke sobre temas ligados a familia. “I read therefore I write.” articula familia, child-abuse-effects, family-relationships em…",
+      "keywordsSeo": [
+        "frases de John David Lionel Brooke",
+        "frases sobre familia",
+        "frases familia",
+        "frases child abuse effects",
+        "frases family relationships",
+        "frases hearing voices",
+        "child-abuse-effects",
+        "family-relationships",
+        "hearing-voices",
+        "familia"
+      ],
+      "canonicalSlug": "i-read-therefore-i-write",
+      "relatedKeywords": [
+        "familia",
+        "child-abuse-effects",
+        "family-relationships",
+        "hearing-voices",
+        "john-david-lionel-brooke"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I read therefore I write.",
+    "autor_original": "John David Lionel Brooke",
+    "autor_slug": "john-david-lionel-brooke",
+    "categoria": "familia",
+    "contextos": [
+      "family-relationships",
+      "hearing-voices"
+    ],
+    "palavras_chave": [
+      "child-abuse-effects",
+      "family-relationships",
+      "hearing-voices",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

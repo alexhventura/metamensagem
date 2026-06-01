@@ -1,0 +1,121 @@
+[
+  {
+    "id": "f_csv_97424775a0",
+    "slug": "no-parent-should-have-to-bury-their-child",
+    "texto": "No parent should have to bury their child.",
+    "autor": "Theoden",
+    "autorSlug": "theoden",
+    "explicacao": "Orientação direta de Theoden sobre temas ligados a familia. A afirmação “No parent should have to bury their child.” funciona como lembrete prático ligado a familia, lord-of-the-rings, love, útil em momentos de love e pain.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "lord-of-the-rings",
+        "love",
+        "pain"
+      ],
+      "contextos": [
+        "love",
+        "pain"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "familia",
+        "lord-of-the-rings",
+        "love",
+        "pain",
+        "parent",
+        "should",
+        "child"
+      ],
+      "palavrasChave": [
+        "lord-of-the-rings",
+        "love",
+        "pain",
+        "familia",
+        "amor"
+      ],
+      "tagsSeo": [
+        "familia",
+        "lord-of-the-rings",
+        "love",
+        "pain",
+        "amor",
+        "theoden"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "lord-of-the-rings",
+        "love",
+        "pain",
+        "parent",
+        "should"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"No parent should have to bury their child.\" — Theoden | Metamensagem",
+      "descriptionSeo": "Orientação direta de Theoden sobre temas ligados a familia. A afirmação “No parent should have to bury their child.” funciona como lembrete prático ligado a f…",
+      "keywordsSeo": [
+        "frases de Theoden",
+        "frases sobre familia",
+        "frases familia",
+        "frases lord of the rings",
+        "frases love",
+        "frases pain",
+        "lord-of-the-rings",
+        "love",
+        "pain",
+        "familia"
+      ],
+      "canonicalSlug": "no-parent-should-have-to-bury-their-child",
+      "relatedKeywords": [
+        "amor",
+        "familia",
+        "lord-of-the-rings",
+        "love",
+        "pain",
+        "theoden"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "No parent should have to bury their child.",
+    "autor_original": "Theoden",
+    "autor_slug": "theoden",
+    "categoria": "familia",
+    "contextos": [
+      "love",
+      "pain"
+    ],
+    "palavras_chave": [
+      "lord-of-the-rings",
+      "love",
+      "pain",
+      "familia",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -2,31 +2,131 @@
   {
     "id": "f_sed1qhy3y",
     "slug": "todo-sucesso-nasce-do-querer-da-determinacao-e-persistencia",
+    "texto": "Todo sucesso nasce do querer, da determinação e persistência.",
+    "autor": "Everaldo Barros Barbosa",
+    "autorSlug": "everaldo-barros-barbosa",
+    "explicacao": "Everaldo Barros Barbosa resume o sucesso em querer, determinar-se e persistir. Frase direta de conteúdo motivacional brasileiro, com foco em atitude e constância como bases de qualquer conquista.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "persistencia",
+        "sucesso"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao",
+        "persistencia",
+        "sucesso"
+      ],
+      "emocoes": [
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "sucesso",
+        "nasce",
+        "querer",
+        "determinação",
+        "persistência"
+      ],
+      "palavrasChave": [
+        "determinacao",
+        "inspiracional",
+        "motivacao",
+        "persistencia",
+        "sucesso",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "persistencia",
+        "sucesso",
+        "inspiracao",
+        "everaldo-barros-barbosa"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 36,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "determinacao",
+        "inspiracional",
+        "sucesso",
+        "nasce",
+        "querer"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Todo sucesso nasce do querer, da determinação e pers…\" — Everaldo Barros Barbosa | Metamensagem",
+      "descriptionSeo": "Everaldo Barros Barbosa resume o sucesso em querer, determinar-se e persistir. Frase direta de conteúdo motivacional brasileiro, com foco em atitude e constân…",
+      "keywordsSeo": [
+        "frases de Everaldo Barros Barbosa",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases determinacao",
+        "frases inspiracao",
+        "frases inspiracional",
+        "determinacao",
+        "inspiracional",
+        "motivacao",
+        "persistencia"
+      ],
+      "canonicalSlug": "todo-sucesso-nasce-do-querer-da-determinacao-e-persistencia",
+      "relatedKeywords": [
+        "determinacao",
+        "motivacao",
+        "inspiracional",
+        "persistencia",
+        "sucesso",
+        "everaldo-barros-barbosa"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Todo sucesso nasce do querer, da determinação e persistência.",
     "autor_original": "Everaldo Barros Barbosa",
-    "categoria": "determinacao",
+    "autor_slug": "everaldo-barros-barbosa",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao",
       "persistencia",
       "sucesso"
     ],
-    "explicacao": "Everaldo Barros Barbosa resume o sucesso em querer, determinar-se e persistir. Frase direta de conteúdo motivacional brasileiro, com foco em atitude e constância como bases de qualquer conquista.",
     "palavras_chave": [
       "determinacao",
       "inspiracional",
       "motivacao",
       "persistencia",
-      "sucesso"
+      "sucesso",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

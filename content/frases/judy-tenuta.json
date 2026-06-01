@@ -1,0 +1,107 @@
+[
+  {
+    "id": "f_csv_1d43930a54",
+    "slug": "my-mother-said-you-won-t-amount-to-anything-because-you-procrastinate-i-said",
+    "texto": "My mother said \"You won't amount to anything because you procrastinate.\" I said \"Just wait.\"",
+    "autor": "Judy Tenuta",
+    "autorSlug": "judy-tenuta",
+    "explicacao": "Citação de Judy Tenuta sobre temas ligados a familia. “My mother said \"You won't amount to anything because you procrastinate.\" I said \"Just wait.\"” articula familia, vices, foibles em registro de familia, com relevância para contextos como foibles.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "vices",
+        "foibles"
+      ],
+      "contextos": [
+        "foibles"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "vices",
+        "foibles",
+        "mother",
+        "amount",
+        "anything",
+        "because",
+        "procrastinate"
+      ],
+      "palavrasChave": [
+        "vices",
+        "foibles",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "vices",
+        "foibles",
+        "judy-tenuta"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "vices",
+        "foibles",
+        "mother",
+        "amount",
+        "anything"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My mother said \"You won't amount to anything because…\" — Judy Tenuta | Metamensagem",
+      "descriptionSeo": "Citação de Judy Tenuta sobre temas ligados a familia. “My mother said \"You won't amount to anything because you procrastinate.\" I said \"Just wait.\"” articula…",
+      "keywordsSeo": [
+        "frases de Judy Tenuta",
+        "frases sobre familia",
+        "frases familia",
+        "frases vices",
+        "frases foibles",
+        "vices",
+        "foibles",
+        "familia"
+      ],
+      "canonicalSlug": "my-mother-said-you-won-t-amount-to-anything-because-you-procrastinate-i-said",
+      "relatedKeywords": [
+        "familia",
+        "vices",
+        "foibles",
+        "judy-tenuta"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My mother said \"You won't amount to anything because you procrastinate.\" I said \"Just wait.\"",
+    "autor_original": "Judy Tenuta",
+    "autor_slug": "judy-tenuta",
+    "categoria": "familia",
+    "contextos": [
+      "foibles"
+    ],
+    "palavras_chave": [
+      "vices",
+      "foibles",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

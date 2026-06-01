@@ -1,0 +1,120 @@
+[
+  {
+    "id": "f_csv_9930f61b21",
+    "slug": "read-my-book-and-you-shall-know-thee",
+    "texto": "Read my book and you shall know thee",
+    "autor": "Oscar Sanders",
+    "autorSlug": "oscar-sanders",
+    "explicacao": "Citação de Oscar Sanders sobre temas ligados a reflexao. “Read my book and you shall know thee” articula reflexao, horror, novel em registro de reflexao, com relevância para contextos como novel e oscar-sanders-crime.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "horror",
+        "novel",
+        "oscar-sanders-crime",
+        "suspense"
+      ],
+      "contextos": [
+        "novel",
+        "oscar-sanders-crime",
+        "suspense"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "horror",
+        "novel",
+        "oscar-sanders-crime",
+        "shall"
+      ],
+      "palavrasChave": [
+        "horror",
+        "novel",
+        "oscar-sanders-crime",
+        "suspense",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "horror",
+        "novel",
+        "oscar-sanders-crime",
+        "suspense",
+        "oscar-sanders"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "horror",
+        "novel",
+        "oscar-sanders-crime",
+        "shall",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Read my book and you shall know thee\" — Oscar Sanders | Metamensagem",
+      "descriptionSeo": "Citação de Oscar Sanders sobre temas ligados a reflexao. “Read my book and you shall know thee” articula reflexao, horror, novel em registro de reflexao, com…",
+      "keywordsSeo": [
+        "frases de Oscar Sanders",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases horror",
+        "frases novel",
+        "frases oscar sanders crime",
+        "horror",
+        "novel",
+        "oscar-sanders-crime",
+        "suspense"
+      ],
+      "canonicalSlug": "read-my-book-and-you-shall-know-thee",
+      "relatedKeywords": [
+        "reflexao",
+        "horror",
+        "novel",
+        "oscar-sanders-crime",
+        "suspense",
+        "oscar-sanders"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Read my book and you shall know thee",
+    "autor_original": "Oscar Sanders",
+    "autor_slug": "oscar-sanders",
+    "categoria": "reflexao",
+    "contextos": [
+      "novel",
+      "oscar-sanders-crime",
+      "suspense"
+    ],
+    "palavras_chave": [
+      "horror",
+      "novel",
+      "oscar-sanders-crime",
+      "suspense",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

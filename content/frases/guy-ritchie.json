@@ -1,0 +1,118 @@
+[
+  {
+    "id": "f_csv_d40463bf98",
+    "slug": "i-like-death-i-m-a-big-fan-of-it",
+    "texto": "I like death. I'm a big fan of it.",
+    "autor": "Guy Ritchie",
+    "autorSlug": "guy-ritchie",
+    "explicacao": "Citação de Guy Ritchie sobre temas ligados a reflexao. “I like death. I'm a big fan of it.” articula reflexao, big, like em registro de reflexao, com relevância para contextos como luto e like.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "big",
+        "like",
+        "fan"
+      ],
+      "contextos": [
+        "luto",
+        "like",
+        "fan"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "big",
+        "like",
+        "fan",
+        "death"
+      ],
+      "palavrasChave": [
+        "big",
+        "like",
+        "fan",
+        "reflexao",
+        "luto"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "big",
+        "like",
+        "fan",
+        "luto",
+        "guy-ritchie"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "big",
+        "like",
+        "fan",
+        "death",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I like death. I'm a big fan of it.\" — Guy Ritchie | Metamensagem",
+      "descriptionSeo": "Citação de Guy Ritchie sobre temas ligados a reflexao. “I like death. I'm a big fan of it.” articula reflexao, big, like em registro de reflexao, com relevânc…",
+      "keywordsSeo": [
+        "frases de Guy Ritchie",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases big",
+        "frases luto",
+        "frases like",
+        "big",
+        "like",
+        "fan",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-like-death-i-m-a-big-fan-of-it",
+      "relatedKeywords": [
+        "reflexao",
+        "big",
+        "like",
+        "fan",
+        "guy-ritchie"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I like death. I'm a big fan of it.",
+    "autor_original": "Guy Ritchie",
+    "autor_slug": "guy-ritchie",
+    "categoria": "reflexao",
+    "contextos": [
+      "luto",
+      "like",
+      "fan"
+    ],
+    "palavras_chave": [
+      "big",
+      "like",
+      "fan",
+      "reflexao",
+      "luto"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,133 @@
+[
+  {
+    "id": "f_csv_38b10c1e74",
+    "slug": "it-s-elementary-my-dear-winifred",
+    "texto": "It's elementary, my dear Winifred.",
+    "autor": "Miss Mae",
+    "autorSlug": "miss-mae",
+    "explicacao": "Citação de Miss Mae sobre esforço, persistência e resultados. “It's elementary, my dear Winifred.” articula sucesso, castle, games em registro de sucesso, com relevância para contextos como games e london.",
+    "semantica": {
+      "categoriaPrincipal": "sucesso",
+      "categorias": [
+        "sucesso",
+        "castle",
+        "games",
+        "london",
+        "mystery"
+      ],
+      "contextos": [
+        "games",
+        "london",
+        "mystery",
+        "sherlock-holmes",
+        "spiders"
+      ],
+      "emocoes": [],
+      "temas": [
+        "sucesso",
+        "castle",
+        "games",
+        "london",
+        "elementary",
+        "winifred"
+      ],
+      "palavrasChave": [
+        "castle",
+        "games",
+        "london",
+        "mystery",
+        "sherlock-holmes",
+        "spiders",
+        "victorian",
+        "sucesso"
+      ],
+      "tagsSeo": [
+        "sucesso",
+        "castle",
+        "games",
+        "london",
+        "mystery",
+        "sherlock-holmes",
+        "spiders",
+        "miss-mae"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 37,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "sucesso",
+        "castle",
+        "games",
+        "london",
+        "elementary",
+        "winifred"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"It's elementary, my dear Winifred.\" — Miss Mae | Metamensagem",
+      "descriptionSeo": "Citação de Miss Mae sobre esforço, persistência e resultados. “It's elementary, my dear Winifred.” articula sucesso, castle, games em registro de sucesso, com…",
+      "keywordsSeo": [
+        "frases de Miss Mae",
+        "frases sobre sucesso",
+        "frases sucesso",
+        "frases castle",
+        "frases games",
+        "frases london",
+        "castle",
+        "games",
+        "london",
+        "mystery"
+      ],
+      "canonicalSlug": "it-s-elementary-my-dear-winifred",
+      "relatedKeywords": [
+        "sucesso",
+        "castle",
+        "games",
+        "london",
+        "mystery",
+        "miss-mae"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "It's elementary, my dear Winifred.",
+    "autor_original": "Miss Mae",
+    "autor_slug": "miss-mae",
+    "categoria": "sucesso",
+    "contextos": [
+      "games",
+      "london",
+      "mystery",
+      "sherlock-holmes",
+      "spiders"
+    ],
+    "palavras_chave": [
+      "castle",
+      "games",
+      "london",
+      "mystery",
+      "sherlock-holmes",
+      "spiders",
+      "victorian",
+      "sucesso"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

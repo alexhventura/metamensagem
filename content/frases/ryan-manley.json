@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_4b203d4d77",
+    "slug": "forever-s-just-a-word",
+    "texto": "Forever's just a word.",
+    "autor": "Ryan Manley",
+    "autorSlug": "ryan-manley",
+    "explicacao": "Citação de Ryan Manley sobre temas ligados a reflexao. “Forever's just a word.” articula reflexao, love-quotes, forever em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "love-quotes"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "reflexao",
+        "love-quotes",
+        "forever"
+      ],
+      "palavrasChave": [
+        "love-quotes",
+        "reflexao",
+        "amor"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "love-quotes",
+        "amor",
+        "ryan-manley"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "love-quotes",
+        "forever",
+        "reflexao",
+        "love-quotes"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Forever's just a word.\" — Ryan Manley | Metamensagem",
+      "descriptionSeo": "Citação de Ryan Manley sobre temas ligados a reflexao. “Forever's just a word.” articula reflexao, love-quotes, forever em registro de reflexao, com relevânci…",
+      "keywordsSeo": [
+        "frases de Ryan Manley",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases love quotes",
+        "love-quotes",
+        "reflexao",
+        "amor"
+      ],
+      "canonicalSlug": "forever-s-just-a-word",
+      "relatedKeywords": [
+        "amor",
+        "reflexao",
+        "love-quotes",
+        "ryan-manley"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Forever's just a word.",
+    "autor_original": "Ryan Manley",
+    "autor_slug": "ryan-manley",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "love-quotes",
+      "reflexao",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "id": "f_csv_40df67db80",
+    "slug": "friendship-is-the-most-important-thing-of-all",
+    "texto": "Friendship is the most important thing of all.",
+    "autor": "Kim Philby",
+    "autorSlug": "kim-philby",
+    "explicacao": "Citação de Kim Philby sobre temas ligados a amizade. “Friendship is the most important thing of all.” articula amizade, important, most em registro de amizade, com relevância para contextos como termino e most.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "important",
+        "most"
+      ],
+      "contextos": [
+        "termino",
+        "most"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "important",
+        "most",
+        "friendship",
+        "thing"
+      ],
+      "palavrasChave": [
+        "important",
+        "most",
+        "amizade",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "important",
+        "most",
+        "termino",
+        "kim-philby"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "important",
+        "most",
+        "friendship",
+        "thing",
+        "amizade"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Friendship is the most important thing of all.\" — Kim Philby | Metamensagem",
+      "descriptionSeo": "Citação de Kim Philby sobre temas ligados a amizade. “Friendship is the most important thing of all.” articula amizade, important, most em registro de amizade…",
+      "keywordsSeo": [
+        "frases de Kim Philby",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases important",
+        "frases termino",
+        "frases most",
+        "important",
+        "most",
+        "amizade",
+        "termino"
+      ],
+      "canonicalSlug": "friendship-is-the-most-important-thing-of-all",
+      "relatedKeywords": [
+        "amizade",
+        "important",
+        "most",
+        "kim-philby"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Friendship is the most important thing of all.",
+    "autor_original": "Kim Philby",
+    "autor_slug": "kim-philby",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "most"
+    ],
+    "palavras_chave": [
+      "important",
+      "most",
+      "amizade",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

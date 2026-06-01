@@ -2,27 +2,131 @@
   {
     "id": "f_k4c91g7hk",
     "slug": "seja-otimista-e-acredite-que-e-possivel-vencer-todas-as-suas",
+    "texto": "Seja otimista e acredite que é possível vencer todas as suas tribulações que vem enfrentando, nunca perca a esperança, mesmo que o caminho pareça ser árduo demais. Continue persistindo. Às vezes é no último esforço que grandes objetivos se concretizam.",
+    "autor": "Psicanalista Jorge Monteiro",
+    "autorSlug": "psicanalista-jorge-monteiro",
+    "explicacao": "Jorge Monteiro, psicanalista, escreve para quem enfrenta tribulações prolongadas. Incentiva otimismo e persistência mesmo quando o caminho parece árduo. A mensagem é que grandes objetivos às vezes se concretizam no último esforço.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "emocoes": [
+        "esperanca",
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "acredite",
+        "possível",
+        "vencer"
+      ],
+      "palavrasChave": [
+        "foco",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao",
+        "esperanca",
+        "determinacao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "esperanca",
+        "determinacao",
+        "psicanalista-jorge-monteiro"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 51,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "acredite"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Seja otimista e acredite que é possível vencer todas…\" — Psicanalista Jorge Monteiro | Metamensagem",
+      "descriptionSeo": "Jorge Monteiro, psicanalista, escreve para quem enfrenta tribulações prolongadas. Incentiva otimismo e persistência mesmo quando o caminho parece árduo. A men…",
+      "keywordsSeo": [
+        "frases de Psicanalista Jorge Monteiro",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases foco",
+        "frases inspiracao",
+        "frases inspiracional",
+        "foco",
+        "inspiracional",
+        "otimismo",
+        "motivacao"
+      ],
+      "canonicalSlug": "seja-otimista-e-acredite-que-e-possivel-vencer-todas-as-suas",
+      "relatedKeywords": [
+        "esperanca",
+        "determinacao",
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "otimismo",
+        "psicanalista-jorge-monteiro"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Seja otimista e acredite que é possível vencer todas as suas tribulações que vem enfrentando, nunca perca a esperança, mesmo que o caminho pareça ser árduo demais. Continue persistindo. Às vezes é no último esforço que grandes objetivos se concretizam.",
     "autor_original": "Psicanalista Jorge Monteiro",
-    "categoria": "foco",
+    "autor_slug": "psicanalista-jorge-monteiro",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "otimismo"
     ],
-    "explicacao": "Jorge Monteiro, psicanalista, escreve para quem enfrenta tribulações prolongadas. Incentiva otimismo e persistência mesmo quando o caminho parece árduo. A mensagem é que grandes objetivos às vezes se concretizam no último esforço.",
     "palavras_chave": [
       "foco",
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao",
+      "esperanca",
+      "determinacao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

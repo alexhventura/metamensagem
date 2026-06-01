@@ -1,0 +1,96 @@
+[
+  {
+    "id": "f_csv_da87e0f7c0",
+    "slug": "hunger-is-not-debatable",
+    "texto": "Hunger is not debatable.",
+    "autor": "Harry Hopkins",
+    "autorSlug": "harry-hopkins",
+    "explicacao": "Citação de Harry Hopkins sobre temas ligados a reflexao. “Hunger is not debatable.” articula reflexao, food, hunger em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "food"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "food",
+        "hunger",
+        "debatable"
+      ],
+      "palavrasChave": [
+        "food",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "food",
+        "harry-hopkins"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "food",
+        "hunger",
+        "debatable",
+        "reflexao",
+        "food"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Hunger is not debatable.\" — Harry Hopkins | Metamensagem",
+      "descriptionSeo": "Citação de Harry Hopkins sobre temas ligados a reflexao. “Hunger is not debatable.” articula reflexao, food, hunger em registro de reflexao, com relevância pa…",
+      "keywordsSeo": [
+        "frases de Harry Hopkins",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases food",
+        "food",
+        "reflexao"
+      ],
+      "canonicalSlug": "hunger-is-not-debatable",
+      "relatedKeywords": [
+        "reflexao",
+        "food",
+        "harry-hopkins"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Hunger is not debatable.",
+    "autor_original": "Harry Hopkins",
+    "autor_slug": "harry-hopkins",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "food",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

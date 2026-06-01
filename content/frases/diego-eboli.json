@@ -2,27 +2,120 @@
   {
     "id": "f_2dxyqzeyd",
     "slug": "otimismo-e-a-chave-motivacao-a-porta-e-potencial-o-caminho-p",
+    "texto": "Otimismo é a chave Motivação a porta E potencial o caminho para a grande conquista que se chama sonho.",
+    "autor": "Diego Éboli",
+    "autorSlug": "diego-eboli",
+    "explicacao": "Diego Éboli resume em metáforas a receita para realizar sonhos: otimismo abre portas, motivação impulsiona e o potencial define o caminho. Frase típica de conteúdo inspiracional voltado a quem busca conquistas pessoais e profissionais.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sonhos"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo",
+        "sonhos"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "chave",
+        "motivação",
+        "porta",
+        "potencial"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "inspiracao",
+        "diego-eboli"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 36,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "chave",
+        "motivação"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Otimismo é a chave Motivação a porta E potencial o c…\" — Diego Éboli | Metamensagem",
+      "descriptionSeo": "Diego Éboli resume em metáforas a receita para realizar sonhos: otimismo abre portas, motivação impulsiona e o potencial define o caminho. Frase típica de con…",
+      "keywordsSeo": [
+        "frases de Diego Éboli",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "motivacao"
+      ],
+      "canonicalSlug": "otimismo-e-a-chave-motivacao-a-porta-e-potencial-o-caminho-p",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "sonhos",
+        "diego-eboli"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Otimismo é a chave Motivação a porta E potencial o caminho para a grande conquista que se chama sonho.",
     "autor_original": "Diego Éboli",
-    "categoria": "inspiracional",
+    "autor_slug": "diego-eboli",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo",
       "sonhos"
     ],
-    "explicacao": "Diego Éboli resume em metáforas a receita para realizar sonhos: otimismo abre portas, motivação impulsiona e o potencial define o caminho. Frase típica de conteúdo inspiracional voltado a quem busca conquistas pessoais e profissionais.",
     "palavras_chave": [
       "inspiracional",
       "otimismo",
-      "sonhos"
+      "sonhos",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

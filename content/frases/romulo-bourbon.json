@@ -2,29 +2,122 @@
   {
     "id": "f_oay5c47li",
     "slug": "incentivo-vou-correr-atras-do-sonho-alcancar-o-objetivo-i",
+    "texto": "⁠INCENTIVO Vou correr atrás do sonho, alcançar o objetivo, insistir, perseverar, também ser mais proativo. Não preciso de empurrão para agir, sair do chão, sou meu próprio incentivo.",
+    "autor": "Rômulo Bourbon",
+    "autorSlug": "romulo-bourbon",
+    "explicacao": "Rômulo Bourbon escreve poema de autoestímulo intitulado Incentivo. Declara ser seu próprio motor para perseguir sonhos e agir sem depender de empurrão externo. Tom de autonomia e perseverança.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "sonhos"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao",
+        "sonhos"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "incentivo",
+        "correr",
+        "atrás",
+        "sonho",
+        "alcançar"
+      ],
+      "palavrasChave": [
+        "foco",
+        "inspiracional",
+        "motivacao",
+        "sonhos",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "sonhos",
+        "inspiracao",
+        "romulo-bourbon"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 46,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "incentivo",
+        "correr",
+        "atrás"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠INCENTIVO Vou correr atrás do sonho, alcançar o obj…\" — Rômulo Bourbon | Metamensagem",
+      "descriptionSeo": "Rômulo Bourbon escreve poema de autoestímulo intitulado Incentivo. Declara ser seu próprio motor para perseguir sonhos e agir sem depender de empurrão externo…",
+      "keywordsSeo": [
+        "frases de Rômulo Bourbon",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases foco",
+        "frases inspiracao",
+        "frases inspiracional",
+        "foco",
+        "inspiracional",
+        "motivacao",
+        "sonhos"
+      ],
+      "canonicalSlug": "incentivo-vou-correr-atras-do-sonho-alcancar-o-objetivo-i",
+      "relatedKeywords": [
+        "motivacao",
+        "foco",
+        "inspiracional",
+        "sonhos",
+        "romulo-bourbon"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠INCENTIVO Vou correr atrás do sonho, alcançar o objetivo, insistir, perseverar, também ser mais proativo. Não preciso de empurrão para agir, sair do chão, sou meu próprio incentivo.",
     "autor_original": "Rômulo Bourbon",
-    "categoria": "foco",
+    "autor_slug": "romulo-bourbon",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao",
       "sonhos"
     ],
-    "explicacao": "Rômulo Bourbon escreve poema de autoestímulo intitulado Incentivo. Declara ser seu próprio motor para perseguir sonhos e agir sem depender de empurrão externo. Tom de autonomia e perseverança.",
     "palavras_chave": [
       "foco",
       "inspiracional",
       "motivacao",
-      "sonhos"
+      "sonhos",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

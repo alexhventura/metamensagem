@@ -1,0 +1,99 @@
+[
+  {
+    "id": "f_csv_a01d1b2e72",
+    "slug": "the-future-is-hope",
+    "texto": "The future is hope!",
+    "autor": "John Fiske",
+    "autorSlug": "john-fiske",
+    "explicacao": "Citação de John Fiske sobre temas ligados a reflexao. “The future is hope!” articula reflexao, future em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "future"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [
+        "esperanca"
+      ],
+      "temas": [
+        "reflexao",
+        "future"
+      ],
+      "palavrasChave": [
+        "future",
+        "reflexao",
+        "esperanca"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "future",
+        "esperanca",
+        "john-fiske"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "future",
+        "reflexao",
+        "future"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The future is hope!\" — John Fiske | Metamensagem",
+      "descriptionSeo": "Citação de John Fiske sobre temas ligados a reflexao. “The future is hope!” articula reflexao, future em registro de reflexao, com relevância para contextos c…",
+      "keywordsSeo": [
+        "frases de John Fiske",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases future",
+        "future",
+        "reflexao",
+        "esperanca"
+      ],
+      "canonicalSlug": "the-future-is-hope",
+      "relatedKeywords": [
+        "esperanca",
+        "reflexao",
+        "future",
+        "john-fiske"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The future is hope!",
+    "autor_original": "John Fiske",
+    "autor_slug": "john-fiske",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "future",
+      "reflexao",
+      "esperanca"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

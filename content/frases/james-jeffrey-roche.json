@@ -1,0 +1,106 @@
+[
+  {
+    "id": "f_csv_86aa3a8845",
+    "slug": "some-men-borrow-books-some-men-steal-books-and-others-beg-presentation-copies-fr",
+    "texto": "Some men borrow books some men steal books and others beg presentation copies from the author.",
+    "autor": "James Jeffrey Roche",
+    "autorSlug": "james-jeffrey-roche",
+    "explicacao": "Citação de James Jeffrey Roche sobre temas ligados a reflexao. “Some men borrow books some men steal books and others beg presentation copies from the author.” articula reflexao, books, reading em registro de reflexao, com relevância para contextos como reading.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "books",
+        "reading"
+      ],
+      "contextos": [
+        "reading"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "books",
+        "reading",
+        "borrow",
+        "steal",
+        "others",
+        "presentation"
+      ],
+      "palavrasChave": [
+        "books",
+        "reading",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "books",
+        "reading",
+        "james-jeffrey-roche"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "books",
+        "reading",
+        "borrow",
+        "steal",
+        "others"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Some men borrow books some men steal books and other…\" — James Jeffrey Roche | Metamensagem",
+      "descriptionSeo": "Citação de James Jeffrey Roche sobre temas ligados a reflexao. “Some men borrow books some men steal books and others beg presentation copies from the author.…",
+      "keywordsSeo": [
+        "frases de James Jeffrey Roche",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases books",
+        "frases reading",
+        "books",
+        "reading",
+        "reflexao"
+      ],
+      "canonicalSlug": "some-men-borrow-books-some-men-steal-books-and-others-beg-presentation-copies-fr",
+      "relatedKeywords": [
+        "reflexao",
+        "books",
+        "reading",
+        "james-jeffrey-roche"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Some men borrow books some men steal books and others beg presentation copies from the author.",
+    "autor_original": "James Jeffrey Roche",
+    "autor_slug": "james-jeffrey-roche",
+    "categoria": "reflexao",
+    "contextos": [
+      "reading"
+    ],
+    "palavras_chave": [
+      "books",
+      "reading",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

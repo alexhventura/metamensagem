@@ -1,0 +1,106 @@
+[
+  {
+    "id": "f_csv_b685eacb2a",
+    "slug": "cakes-are-like-books-there-are-new-ones-you-want-to-read-and-old-favorites-you",
+    "texto": "Cakes are like books: There are new ones you want to read and old favorites you want to reread.",
+    "autor": "Ellen Rose",
+    "autorSlug": "ellen-rose",
+    "explicacao": "Metáfora atribuída a Ellen Rose: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “Cakes are like books: There are new ones you want to read and old favorites you want to reread.” usa imagem concreta para lembrar que reflexao, books, food pedem movimento e interpretação pessoal, em tom de food.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "books",
+        "food"
+      ],
+      "contextos": [
+        "food"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "books",
+        "food",
+        "cakes",
+        "there",
+        "favorites",
+        "reread"
+      ],
+      "palavrasChave": [
+        "books",
+        "food",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "books",
+        "food",
+        "ellen-rose"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "books",
+        "food",
+        "cakes",
+        "there",
+        "favorites"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Cakes are like books: There are new ones you want to…\" — Ellen Rose | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Ellen Rose: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “Cakes are like books: There are new ones you…",
+      "keywordsSeo": [
+        "frases de Ellen Rose",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases books",
+        "frases food",
+        "books",
+        "food",
+        "reflexao"
+      ],
+      "canonicalSlug": "cakes-are-like-books-there-are-new-ones-you-want-to-read-and-old-favorites-you",
+      "relatedKeywords": [
+        "reflexao",
+        "books",
+        "food",
+        "ellen-rose"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Cakes are like books: There are new ones you want to read and old favorites you want to reread.",
+    "autor_original": "Ellen Rose",
+    "autor_slug": "ellen-rose",
+    "categoria": "reflexao",
+    "contextos": [
+      "food"
+    ],
+    "palavras_chave": [
+      "books",
+      "food",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

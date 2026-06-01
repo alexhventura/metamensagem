@@ -2,27 +2,116 @@
   {
     "id": "f_qseiknajv",
     "slug": "comece-assim-mesmo-nao-espere-a-coragem-chegar-ela-te-enco",
+    "texto": "⁠Comece assim mesmo! Não espere a coragem chegar ela te encontra no caminho.",
+    "autor": "Tombos da vida",
+    "autorSlug": "tombos-da-vida",
+    "explicacao": "Tombos da vida é perfil motivacional. A frase diz para agir sem esperar coragem perfeita — ela surge no caminho. Incentivo a começar mesmo com medo, típico de posts sobre superação.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "coragem",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [
+        "coragem"
+      ],
+      "temas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "comece",
+        "assim",
+        "mesmo",
+        "espere"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "inspiracao",
+        "tombos-da-vida"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "coragem",
+        "inspiracional",
+        "comece",
+        "assim",
+        "mesmo"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠Comece assim mesmo! Não espere a coragem chegar ela…\" — Tombos da vida | Metamensagem",
+      "descriptionSeo": "Tombos da vida é perfil motivacional. A frase diz para agir sem esperar coragem perfeita — ela surge no caminho. Incentivo a começar mesmo com medo, típico de…",
+      "keywordsSeo": [
+        "frases de Tombos da vida",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases coragem",
+        "frases inspiracao",
+        "frases inspiracional",
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "comece-assim-mesmo-nao-espere-a-coragem-chegar-ela-te-enco",
+      "relatedKeywords": [
+        "coragem",
+        "motivacao",
+        "inspiracional",
+        "tombos-da-vida"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠Comece assim mesmo! Não espere a coragem chegar ela te encontra no caminho.",
     "autor_original": "Tombos da vida",
-    "categoria": "coragem",
+    "autor_slug": "tombos-da-vida",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "Tombos da vida é perfil motivacional. A frase diz para agir sem esperar coragem perfeita — ela surge no caminho. Incentivo a começar mesmo com medo, típico de posts sobre superação.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

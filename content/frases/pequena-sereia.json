@@ -2,29 +2,129 @@
   {
     "id": "f_9oc5kc7xl",
     "slug": "e-sabe-o-que-mais-me-da-raiva-de-voce-e-eu-tambem-nao-sei",
+    "texto": "E sabe o que mais me da raiva de você? É, eu também não sei, porque quando eu tento descobrir você simplesmente abre um sorriso e eu ja te amo mais do que antes.",
+    "autor": "Pequena Sereia",
+    "autorSlug": "pequena-sereia",
+    "explicacao": "Trecho atribuído à Pequena Sereia, em tom romântico e leve. A personagem admite não saber por que se irrita com alguém que, ao sorrir, conquista ainda mais seu afeto. Expressa o paradoxo comum do amor: raiva e encantamento misturados.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "reflexao",
+        "sabedoria"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria"
+      ],
+      "emocoes": [
+        "felicidade"
+      ],
+      "temas": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "reflexao",
+        "raiva",
+        "também",
+        "porque",
+        "quando"
+      ],
+      "palavrasChave": [
+        "felicidade",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "inspiracao",
+        "pequena-sereia"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 44,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "felicidade",
+        "inspiracional",
+        "reflexao",
+        "raiva",
+        "também"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"E sabe o que mais me da raiva de você? É, eu também …\" — Pequena Sereia | Metamensagem",
+      "descriptionSeo": "Trecho atribuído à Pequena Sereia, em tom romântico e leve. A personagem admite não saber por que se irrita com alguém que, ao sorrir, conquista ainda mais se…",
+      "keywordsSeo": [
+        "frases de Pequena Sereia",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases felicidade",
+        "frases inspiracao",
+        "frases inspiracional",
+        "felicidade",
+        "inspiracional",
+        "reflexao",
+        "sabedoria"
+      ],
+      "canonicalSlug": "e-sabe-o-que-mais-me-da-raiva-de-voce-e-eu-tambem-nao-sei",
+      "relatedKeywords": [
+        "felicidade",
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "sabedoria",
+        "pequena-sereia"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "E sabe o que mais me da raiva de você? É, eu também não sei, porque quando eu tento descobrir você simplesmente abre um sorriso e eu ja te amo mais do que antes.",
     "autor_original": "Pequena Sereia",
-    "categoria": "felicidade",
+    "autor_slug": "pequena-sereia",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "reflexao",
       "sabedoria"
     ],
-    "explicacao": "Trecho atribuído à Pequena Sereia, em tom romântico e leve. A personagem admite não saber por que se irrita com alguém que, ao sorrir, conquista ainda mais seu afeto. Expressa o paradoxo comum do amor: raiva e encantamento misturados.",
     "palavras_chave": [
       "felicidade",
       "inspiracional",
       "reflexao",
-      "sabedoria"
+      "sabedoria",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

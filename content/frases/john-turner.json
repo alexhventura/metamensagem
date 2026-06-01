@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_13ce02dfec",
+    "slug": "my-time-is-now",
+    "texto": "My time is now.",
+    "autor": "John Turner",
+    "autorSlug": "john-turner",
+    "explicacao": "Citação de John Turner sobre passagem do tempo e prioridades. “My time is now.” articula tempo, now, my-time em registro de tempo, com relevância para contextos como my-time.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "now",
+        "my-time"
+      ],
+      "contextos": [
+        "my-time"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "now",
+        "my-time"
+      ],
+      "palavrasChave": [
+        "now",
+        "my-time",
+        "tempo"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "now",
+        "my-time",
+        "john-turner"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 25,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "now",
+        "my-time",
+        "tempo",
+        "now"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My time is now.\" — John Turner | Metamensagem",
+      "descriptionSeo": "Citação de John Turner sobre passagem do tempo e prioridades. “My time is now.” articula tempo, now, my-time em registro de tempo, com relevância para context…",
+      "keywordsSeo": [
+        "frases de John Turner",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases now",
+        "frases my time",
+        "now",
+        "my-time",
+        "tempo"
+      ],
+      "canonicalSlug": "my-time-is-now",
+      "relatedKeywords": [
+        "tempo",
+        "now",
+        "my-time",
+        "john-turner"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My time is now.",
+    "autor_original": "John Turner",
+    "autor_slug": "john-turner",
+    "categoria": "tempo",
+    "contextos": [
+      "my-time"
+    ],
+    "palavras_chave": [
+      "now",
+      "my-time",
+      "tempo"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

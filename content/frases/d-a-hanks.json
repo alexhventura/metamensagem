@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_3ab79ee7e5",
+    "slug": "i-think-therefore-i-am-dangerous",
+    "texto": "I think, therefore I am, dangerous.",
+    "autor": "D.A. Hanks",
+    "autorSlug": "d-a-hanks",
+    "explicacao": "Citação de D.A. Hanks sobre temas ligados a reflexao. “I think, therefore I am, dangerous.” articula reflexao, pg-45, think em registro de reflexao, com relevância para contextos como think.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "pg-45",
+        "think"
+      ],
+      "contextos": [
+        "think"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "pg-45",
+        "think",
+        "therefore",
+        "dangerous"
+      ],
+      "palavrasChave": [
+        "pg-45",
+        "think",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "pg-45",
+        "think",
+        "d-a-hanks"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "pg-45",
+        "think",
+        "therefore",
+        "dangerous",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I think, therefore I am, dangerous.\" — D.A. Hanks | Metamensagem",
+      "descriptionSeo": "Citação de D.A. Hanks sobre temas ligados a reflexao. “I think, therefore I am, dangerous.” articula reflexao, pg-45, think em registro de reflexao, com relev…",
+      "keywordsSeo": [
+        "frases de D.A. Hanks",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases pg 45",
+        "frases think",
+        "pg-45",
+        "think",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-think-therefore-i-am-dangerous",
+      "relatedKeywords": [
+        "reflexao",
+        "pg-45",
+        "think",
+        "d-a-hanks"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I think, therefore I am, dangerous.",
+    "autor_original": "D.A. Hanks",
+    "autor_slug": "d-a-hanks",
+    "categoria": "reflexao",
+    "contextos": [
+      "think"
+    ],
+    "palavras_chave": [
+      "pg-45",
+      "think",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

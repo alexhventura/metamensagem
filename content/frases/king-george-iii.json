@@ -1,0 +1,116 @@
+[
+  {
+    "id": "f_csv_1e382c10a3",
+    "slug": "nothing-of-importance-happened-today",
+    "texto": "Nothing of importance happened today.",
+    "autor": "King George III",
+    "autorSlug": "king-george-iii",
+    "explicacao": "Citação de King George III sobre temas ligados a tempo. “Nothing of importance happened today.” articula tempo, classic, history em registro de tempo, com relevância para contextos como history e humor.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "classic",
+        "history",
+        "humor"
+      ],
+      "contextos": [
+        "history",
+        "humor"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "classic",
+        "history",
+        "humor",
+        "nothing",
+        "importance",
+        "happened",
+        "today"
+      ],
+      "palavrasChave": [
+        "classic",
+        "history",
+        "humor",
+        "tempo"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "classic",
+        "history",
+        "humor",
+        "king-george-iii"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "classic",
+        "history",
+        "humor",
+        "nothing",
+        "importance"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Nothing of importance happened today.\" — King George III | Metamensagem",
+      "descriptionSeo": "Citação de King George III sobre temas ligados a tempo. “Nothing of importance happened today.” articula tempo, classic, history em registro de tempo, com rel…",
+      "keywordsSeo": [
+        "frases de King George III",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases classic",
+        "frases history",
+        "frases humor",
+        "classic",
+        "history",
+        "humor",
+        "tempo"
+      ],
+      "canonicalSlug": "nothing-of-importance-happened-today",
+      "relatedKeywords": [
+        "tempo",
+        "classic",
+        "history",
+        "humor",
+        "king-george-iii"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Nothing of importance happened today.",
+    "autor_original": "King George III",
+    "autor_slug": "king-george-iii",
+    "categoria": "tempo",
+    "contextos": [
+      "history",
+      "humor"
+    ],
+    "palavras_chave": [
+      "classic",
+      "history",
+      "humor",
+      "tempo"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

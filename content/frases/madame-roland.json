@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_f843f9d38c",
+    "slug": "o-liberty-what-crimes-are-committed-in-thy-name",
+    "texto": "O Liberty! What crimes are committed in thy name!",
+    "autor": "Madame Roland",
+    "autorSlug": "madame-roland",
+    "explicacao": "Citação de Madame Roland sobre temas ligados a reflexao. “O Liberty! What crimes are committed in thy name!” articula reflexao, crimes, liberty em registro de reflexao, com relevância para contextos como liberty.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "crimes",
+        "liberty"
+      ],
+      "contextos": [
+        "liberty"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "crimes",
+        "liberty",
+        "committed"
+      ],
+      "palavrasChave": [
+        "crimes",
+        "liberty",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "crimes",
+        "liberty",
+        "madame-roland"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "crimes",
+        "liberty",
+        "committed",
+        "reflexao",
+        "crimes"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O Liberty! What crimes are committed in thy name!\" — Madame Roland | Metamensagem",
+      "descriptionSeo": "Citação de Madame Roland sobre temas ligados a reflexao. “O Liberty! What crimes are committed in thy name!” articula reflexao, crimes, liberty em registro de…",
+      "keywordsSeo": [
+        "frases de Madame Roland",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases crimes",
+        "frases liberty",
+        "crimes",
+        "liberty",
+        "reflexao"
+      ],
+      "canonicalSlug": "o-liberty-what-crimes-are-committed-in-thy-name",
+      "relatedKeywords": [
+        "reflexao",
+        "crimes",
+        "liberty",
+        "madame-roland"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "O Liberty! What crimes are committed in thy name!",
+    "autor_original": "Madame Roland",
+    "autor_slug": "madame-roland",
+    "categoria": "reflexao",
+    "contextos": [
+      "liberty"
+    ],
+    "palavras_chave": [
+      "crimes",
+      "liberty",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

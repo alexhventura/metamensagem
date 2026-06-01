@@ -2,25 +2,118 @@
   {
     "id": "f_u90g1ta6j",
     "slug": "tem-dias-que-estou-tao-otimista-que-mesmo-lendo-o-atestado-d",
+    "texto": "Tem dias que estou tão otimista que mesmo lendo o atestado de óbito acredito que vai sobreviver.",
+    "autor": "Aylor Lopes Jr.",
+    "autorSlug": "aylor-lopes-jr",
+    "explicacao": "De Aylor Lopes Jr., com humor exagerado sobre otimismo. Brinca com a disposição de ver esperança até onde a lógica não alcança, num registro leve e irônico.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "termino",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "estou",
+        "otimista",
+        "mesmo",
+        "lendo",
+        "atestado"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "termino",
+        "aylor-lopes-jr"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "estou",
+        "otimista",
+        "mesmo"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Tem dias que estou tão otimista que mesmo lendo o at…\" — Aylor Lopes Jr. | Metamensagem",
+      "descriptionSeo": "De Aylor Lopes Jr., com humor exagerado sobre otimismo. Brinca com a disposição de ver esperança até onde a lógica não alcança, num registro leve e irônico.…",
+      "keywordsSeo": [
+        "frases de Aylor Lopes Jr.",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases termino",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "tem-dias-que-estou-tao-otimista-que-mesmo-lendo-o-atestado-d",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "aylor-lopes-jr"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Tem dias que estou tão otimista que mesmo lendo o atestado de óbito acredito que vai sobreviver.",
     "autor_original": "Aylor Lopes Jr.",
-    "categoria": "inspiracional",
+    "autor_slug": "aylor-lopes-jr",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
+      "termino",
       "otimismo"
     ],
-    "explicacao": "De Aylor Lopes Jr., com humor exagerado sobre otimismo. Brinca com a disposição de ver esperança até onde a lógica não alcança, num registro leve e irônico.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

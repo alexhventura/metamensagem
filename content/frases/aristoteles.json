@@ -2,25 +2,113 @@
   {
     "id": "f_th6jq1hgy",
     "slug": "no-fundo-de-um-buraco-ou-de-um-poco-acontece-descobrir-se-a",
+    "texto": "No fundo de um buraco ou de um poço, acontece descobrir-se as estrelas.",
+    "autor": "Aristóteles",
+    "autorSlug": "aristoteles",
+    "explicacao": "Atribuída a Aristóteles, embora a autoria exata seja discutida. Usa buraco ou poço como metáfora de adversidade: do fundo, a perspectiva muda e até o céu pode ser redescoberto.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "fundo",
+        "buraco",
+        "acontece",
+        "descobrir",
+        "estrelas"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "aristoteles"
+      ],
+      "idiomaOriginal": "en",
+      "ano": "384",
+      "periodoHistorico": "384-322 a.C.",
+      "nacionalidadeAutor": "grego",
+      "nascimentoAutor": "384",
+      "falecimentoAutor": "322",
+      "tipoAutor": "filosofo",
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "fundo",
+        "buraco",
+        "acontece"
+      ],
+      "biografiaAutorCurta": "Aristóteles. Filósofo e pensador, com obras sobre ética, política e metafísica."
+    },
+    "seo": {
+      "titleSeo": "\"No fundo de um buraco ou de um poço, acontece descob…\" — Aristóteles | Metamensagem",
+      "descriptionSeo": "Atribuída a Aristóteles, embora a autoria exata seja discutida. Usa buraco ou poço como metáfora de adversidade: do fundo, a perspectiva muda e até o céu pode…",
+      "keywordsSeo": [
+        "frases de Aristóteles",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases reflexao",
+        "inspiracional",
+        "reflexao",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "no-fundo-de-um-buraco-ou-de-um-poco-acontece-descobrir-se-a",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "aristoteles"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "No fundo de um buraco ou de um poço, acontece descobrir-se as estrelas.",
     "autor_original": "Aristóteles",
-    "categoria": "inspiracional",
+    "autor_slug": "aristoteles",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "reflexao"
     ],
-    "explicacao": "Atribuída a Aristóteles, embora a autoria exata seja discutida. Usa buraco ou poço como metáfora de adversidade: do fundo, a perspectiva muda e até o céu pode ser redescoberto.",
     "palavras_chave": [
       "inspiracional",
-      "reflexao"
+      "reflexao",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": "384",
     "autor_tipo": "filosofo",
     "nacionalidade": "grego",
     "nascimento_falecimento": "384-322 a.C.",
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

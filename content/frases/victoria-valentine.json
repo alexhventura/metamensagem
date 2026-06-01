@@ -1,0 +1,122 @@
+[
+  {
+    "id": "f_csv_f184b81f74",
+    "slug": "life-is-a-book-we-fill-the-pages",
+    "texto": "Life is a book. We fill the pages.",
+    "autor": "Victoria Valentine",
+    "autorSlug": "victoria-valentine",
+    "explicacao": "Citação de Victoria Valentine sobre sentido da existência e experiência vivida. “Life is a book. We fill the pages.” articula amor, vida, love em registro de amor, com relevância para contextos como love e philosophy.",
+    "semantica": {
+      "categoriaPrincipal": "amor",
+      "categorias": [
+        "amor",
+        "vida",
+        "love",
+        "philosophy",
+        "romance"
+      ],
+      "contextos": [
+        "love",
+        "philosophy",
+        "romance"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "amor",
+        "vida",
+        "love",
+        "philosophy",
+        "pages"
+      ],
+      "palavrasChave": [
+        "vida",
+        "love",
+        "philosophy",
+        "romance",
+        "amor"
+      ],
+      "tagsSeo": [
+        "amor",
+        "vida",
+        "love",
+        "philosophy",
+        "romance",
+        "victoria-valentine"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amor",
+        "vida",
+        "love",
+        "philosophy",
+        "pages",
+        "amor"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Life is a book. We fill the pages.\" — Victoria Valentine | Metamensagem",
+      "descriptionSeo": "Citação de Victoria Valentine sobre sentido da existência e experiência vivida. “Life is a book. We fill the pages.” articula amor, vida, love em registro de…",
+      "keywordsSeo": [
+        "frases de Victoria Valentine",
+        "frases sobre amor",
+        "frases amor",
+        "frases vida",
+        "frases love",
+        "frases philosophy",
+        "vida",
+        "love",
+        "philosophy",
+        "romance"
+      ],
+      "canonicalSlug": "life-is-a-book-we-fill-the-pages",
+      "relatedKeywords": [
+        "amor",
+        "vida",
+        "love",
+        "philosophy",
+        "romance",
+        "victoria-valentine"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Life is a book. We fill the pages.",
+    "autor_original": "Victoria Valentine",
+    "autor_slug": "victoria-valentine",
+    "categoria": "amor",
+    "contextos": [
+      "love",
+      "philosophy",
+      "romance"
+    ],
+    "palavras_chave": [
+      "vida",
+      "love",
+      "philosophy",
+      "romance",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

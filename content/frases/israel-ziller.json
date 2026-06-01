@@ -2,25 +2,118 @@
   {
     "id": "f_qng0ucxi4",
     "slug": "uma-garrafa-de-vinho-esta-pela-metade-o-pessimista-ve-ela-m",
+    "texto": "Uma garrafa de vinho esta pela metade, o pessimista ve ela meio vazia, o otimista ve meio cheia, o realista está enxendo a proxima taça!",
+    "autor": "Israel Ziller",
+    "autorSlug": "israel-ziller",
+    "explicacao": "Israel Ziller brinca com a metáfora do copo meio cheio ou vazio, acrescentando o realista que enche a próxima taça. Piada sobre otimismo, pessimismo e pragmatismo diante de uma garrafa de vinho.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "termino",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "garrafa",
+        "vinho",
+        "metade",
+        "pessimista",
+        "vazia"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "termino",
+        "israel-ziller"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 37,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "garrafa",
+        "vinho",
+        "metade"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Uma garrafa de vinho esta pela metade, o pessimista …\" — Israel Ziller | Metamensagem",
+      "descriptionSeo": "Israel Ziller brinca com a metáfora do copo meio cheio ou vazio, acrescentando o realista que enche a próxima taça. Piada sobre otimismo, pessimismo e pragmat…",
+      "keywordsSeo": [
+        "frases de Israel Ziller",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases termino",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "uma-garrafa-de-vinho-esta-pela-metade-o-pessimista-ve-ela-m",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "israel-ziller"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Uma garrafa de vinho esta pela metade, o pessimista ve ela meio vazia, o otimista ve meio cheia, o realista está enxendo a proxima taça!",
     "autor_original": "Israel Ziller",
-    "categoria": "inspiracional",
+    "autor_slug": "israel-ziller",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
+      "termino",
       "otimismo"
     ],
-    "explicacao": "Israel Ziller brinca com a metáfora do copo meio cheio ou vazio, acrescentando o realista que enche a próxima taça. Piada sobre otimismo, pessimismo e pragmatismo diante de uma garrafa de vinho.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

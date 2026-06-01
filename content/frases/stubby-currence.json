@@ -2,31 +2,135 @@
   {
     "id": "f_wilqtvv76",
     "slug": "o-unico-lugar-onde-o-sucesso-vem-antes-do-trabalho-e-no-dici",
+    "texto": "O único lugar onde o sucesso vem antes do trabalho é no dicionário.",
+    "autor": "Stubby Currence",
+    "autorSlug": "stubby-currence",
+    "explicacao": "Atribuída a Stubby Currence, usa trocadilho com ordem alfabética: success vem depois de work. Sucesso exige trabalho prévio, não atalhos. Clichê popular em contextos de motivação profissional.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "sabedoria",
+        "sucesso"
+      ],
+      "contextos": [
+        "trabalho",
+        "inspiracao",
+        "termino",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "único",
+        "lugar",
+        "sucesso",
+        "antes",
+        "trabalho"
+      ],
+      "palavrasChave": [
+        "aprendizado",
+        "inspiracional",
+        "motivacao",
+        "sabedoria",
+        "sucesso",
+        "trabalho",
+        "inspiracao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "sabedoria",
+        "sucesso",
+        "trabalho",
+        "inspiracao",
+        "termino",
+        "stubby-currence"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 36,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "único",
+        "lugar",
+        "sucesso"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O único lugar onde o sucesso vem antes do trabalho é…\" — Stubby Currence | Metamensagem",
+      "descriptionSeo": "Atribuída a Stubby Currence, usa trocadilho com ordem alfabética: success vem depois de work. Sucesso exige trabalho prévio, não atalhos. Clichê popular em co…",
+      "keywordsSeo": [
+        "frases de Stubby Currence",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases aprendizado",
+        "frases trabalho",
+        "frases inspiracao",
+        "aprendizado",
+        "inspiracional",
+        "motivacao",
+        "sabedoria"
+      ],
+      "canonicalSlug": "o-unico-lugar-onde-o-sucesso-vem-antes-do-trabalho-e-no-dici",
+      "relatedKeywords": [
+        "motivacao",
+        "aprendizado",
+        "inspiracional",
+        "sabedoria",
+        "sucesso",
+        "stubby-currence"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O único lugar onde o sucesso vem antes do trabalho é no dicionário.",
     "autor_original": "Stubby Currence",
-    "categoria": "aprendizado",
+    "autor_slug": "stubby-currence",
+    "categoria": "motivacao",
     "contextos": [
+      "trabalho",
+      "inspiracao",
+      "termino",
       "inspiracional",
-      "motivacao",
-      "sabedoria",
-      "sucesso"
+      "motivacao"
     ],
-    "explicacao": "Atribuída a Stubby Currence, usa trocadilho com ordem alfabética: success vem depois de work. Sucesso exige trabalho prévio, não atalhos. Clichê popular em contextos de motivação profissional.",
     "palavras_chave": [
       "aprendizado",
       "inspiracional",
       "motivacao",
       "sabedoria",
-      "sucesso"
+      "sucesso",
+      "trabalho",
+      "inspiracao",
+      "termino"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

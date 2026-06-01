@@ -2,25 +2,111 @@
   {
     "id": "f_77muqtlsg",
     "slug": "o-pessimismo-enfraquece-a-alma-mas-o-otimismo-fortalece-a-v",
+    "texto": "O pessimismo enfraquece a alma, mas o otimismo fortalece a vida.",
+    "autor": "Gherheai",
+    "autorSlug": "gherheai",
+    "explicacao": "Gherheai contrasta o efeito do pessimismo e do otimismo sobre a alma e a vida. Mensagem simples de conteúdo inspiracional sobre como a postura mental fortalece ou enfraquece o espírito.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "pessimismo",
+        "enfraquece",
+        "fortalece"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "gherheai"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "pessimismo",
+        "enfraquece",
+        "fortalece"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O pessimismo enfraquece a alma, mas o otimismo forta…\" — Gherheai | Metamensagem",
+      "descriptionSeo": "Gherheai contrasta o efeito do pessimismo e do otimismo sobre a alma e a vida. Mensagem simples de conteúdo inspiracional sobre como a postura mental fortalec…",
+      "keywordsSeo": [
+        "frases de Gherheai",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "o-pessimismo-enfraquece-a-alma-mas-o-otimismo-fortalece-a-v",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "gherheai"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O pessimismo enfraquece a alma, mas o otimismo fortalece a vida.",
     "autor_original": "Gherheai",
-    "categoria": "inspiracional",
+    "autor_slug": "gherheai",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Gherheai contrasta o efeito do pessimismo e do otimismo sobre a alma e a vida. Mensagem simples de conteúdo inspiracional sobre como a postura mental fortalece ou enfraquece o espírito.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -2,25 +2,103 @@
   {
     "id": "f_ctwpso0gp",
     "slug": "suba-a-montanha-conquiste-a-vista",
+    "texto": "\"Suba a montanha. Conquiste a vista.\"",
+    "autor": "Andrés Gianni",
+    "autorSlug": "andres-gianni",
+    "explicacao": "Frase curta de Andrés Gianni, no registro motivacional de superação. Usa a montanha como metáfora de esforço: subir exige persistência; a recompensa é a ampla visão conquistada no topo.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "montanha",
+        "conquiste",
+        "vista"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "inspiracao",
+        "andres-gianni"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "montanha",
+        "conquiste",
+        "vista",
+        "motivacao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"\"Suba a montanha. Conquiste a vista.\"\" — Andrés Gianni | Metamensagem",
+      "descriptionSeo": "Frase curta de Andrés Gianni, no registro motivacional de superação. Usa a montanha como metáfora de esforço: subir exige persistência; a recompensa é a ampla…",
+      "keywordsSeo": [
+        "frases de Andrés Gianni",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "suba-a-montanha-conquiste-a-vista",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "andres-gianni"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "\"Suba a montanha. Conquiste a vista.\"",
     "autor_original": "Andrés Gianni",
-    "categoria": "inspiracional",
+    "autor_slug": "andres-gianni",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao"
     ],
-    "explicacao": "Frase curta de Andrés Gianni, no registro motivacional de superação. Usa a montanha como metáfora de esforço: subir exige persistência; a recompensa é a ampla visão conquistada no topo.",
     "palavras_chave": [
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

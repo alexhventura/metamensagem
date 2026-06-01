@@ -1,0 +1,115 @@
+[
+  {
+    "id": "f_csv_2172790801",
+    "slug": "my-mother-was-american-and-my-father-was-from-the-caribbean-and-there-was-a-bi",
+    "texto": "My mother was American, and my father was from the Caribbean, and there was a big open door into the world of humanity and music.",
+    "autor": "Taj Mahal",
+    "autorSlug": "taj-mahal",
+    "explicacao": "Citação de Taj Mahal sobre temas ligados a familia. “My mother was American, and my father was from the Caribbean, and there was a big open door into …” articula familia, father, mother em registro de familia, com relevância para contextos como mother e humanity.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "father",
+        "mother",
+        "humanity"
+      ],
+      "contextos": [
+        "mother",
+        "humanity"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "father",
+        "mother",
+        "humanity",
+        "american",
+        "caribbean",
+        "there"
+      ],
+      "palavrasChave": [
+        "father",
+        "mother",
+        "humanity",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "father",
+        "mother",
+        "humanity",
+        "taj-mahal"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 38,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "father",
+        "mother",
+        "humanity",
+        "american",
+        "caribbean"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"My mother was American, and my father was from the C…\" — Taj Mahal | Metamensagem",
+      "descriptionSeo": "Citação de Taj Mahal sobre temas ligados a familia. “My mother was American, and my father was from the Caribbean, and there was a big open door into …” artic…",
+      "keywordsSeo": [
+        "frases de Taj Mahal",
+        "frases sobre familia",
+        "frases familia",
+        "frases father",
+        "frases mother",
+        "frases humanity",
+        "father",
+        "mother",
+        "humanity",
+        "familia"
+      ],
+      "canonicalSlug": "my-mother-was-american-and-my-father-was-from-the-caribbean-and-there-was-a-bi",
+      "relatedKeywords": [
+        "familia",
+        "father",
+        "mother",
+        "humanity",
+        "taj-mahal"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "My mother was American, and my father was from the Caribbean, and there was a big open door into the world of humanity and music.",
+    "autor_original": "Taj Mahal",
+    "autor_slug": "taj-mahal",
+    "categoria": "familia",
+    "contextos": [
+      "mother",
+      "humanity"
+    ],
+    "palavras_chave": [
+      "father",
+      "mother",
+      "humanity",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

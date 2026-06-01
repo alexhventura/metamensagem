@@ -1,0 +1,109 @@
+[
+  {
+    "id": "f_csv_d0009a2ecc",
+    "slug": "a-reader-lives-life-personal-within-life-social",
+    "texto": "A Reader lives life (personal) within Life (social).",
+    "autor": "Harpy",
+    "autorSlug": "harpy",
+    "explicacao": "Citação de Harpy sobre sentido da existência e experiência vivida. “A Reader lives life (personal) within Life (social).” articula vida, life-and-living, sacred-life em registro de vida, com relevância para contextos como life-and-living e sacred-life.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "life-and-living",
+        "sacred-life"
+      ],
+      "contextos": [
+        "life-and-living",
+        "sacred-life"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "life-and-living",
+        "sacred-life",
+        "reader",
+        "lives",
+        "personal",
+        "within",
+        "social"
+      ],
+      "palavrasChave": [
+        "vida",
+        "life-and-living",
+        "sacred-life"
+      ],
+      "tagsSeo": [
+        "vida",
+        "life-and-living",
+        "sacred-life",
+        "harpy"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "life-and-living",
+        "sacred-life",
+        "reader",
+        "lives",
+        "personal"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A Reader lives life (personal) within Life (social).\" — Harpy | Metamensagem",
+      "descriptionSeo": "Citação de Harpy sobre sentido da existência e experiência vivida. “A Reader lives life (personal) within Life (social).” articula vida, life-and-living, sacr…",
+      "keywordsSeo": [
+        "frases de Harpy",
+        "frases sobre vida",
+        "frases vida",
+        "frases life and living",
+        "frases sacred life",
+        "vida",
+        "life-and-living",
+        "sacred-life"
+      ],
+      "canonicalSlug": "a-reader-lives-life-personal-within-life-social",
+      "relatedKeywords": [
+        "vida",
+        "life-and-living",
+        "sacred-life",
+        "harpy"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A Reader lives life (personal) within Life (social).",
+    "autor_original": "Harpy",
+    "autor_slug": "harpy",
+    "categoria": "vida",
+    "contextos": [
+      "life-and-living",
+      "sacred-life"
+    ],
+    "palavras_chave": [
+      "vida",
+      "life-and-living",
+      "sacred-life"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

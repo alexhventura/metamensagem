@@ -2,31 +2,129 @@
   {
     "id": "f_dxys6p88k",
     "slug": "o-segredo-da-vida-e-voce-justamente-juntar-toda-a-sua-corage",
+    "texto": "O segredo da vida é você justamente juntar toda a sua coragem e fazer aquilo que achou que teria medo demais para fazer.",
+    "autor": "Felipe Neto",
+    "autorSlug": "felipe-neto",
+    "explicacao": "Felipe Neto resume sua filosofia de vida em coragem para encarar o medo. Mensagem típica do youtuber sobre superação pessoal, voltada a jovens que hesitam diante de desafios por insegurança ou receio.",
+    "semantica": {
+      "categoriaPrincipal": "coragem",
+      "categorias": [
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "sabedoria",
+        "superacao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "motivacao",
+        "sabedoria",
+        "superacao"
+      ],
+      "emocoes": [
+        "coragem"
+      ],
+      "temas": [
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "fazer",
+        "segredo",
+        "justamente",
+        "juntar"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "sabedoria",
+        "superacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "sabedoria",
+        "superacao",
+        "inspiracao",
+        "felipe-neto"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 42,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "fazer",
+        "segredo",
+        "justamente"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O segredo da vida é você justamente juntar toda a su…\" — Felipe Neto | Metamensagem",
+      "descriptionSeo": "Felipe Neto resume sua filosofia de vida em coragem para encarar o medo. Mensagem típica do youtuber sobre superação pessoal, voltada a jovens que hesitam dia…",
+      "keywordsSeo": [
+        "frases de Felipe Neto",
+        "frases sobre coragem",
+        "frases coragem",
+        "frases inspiracional",
+        "frases inspiracao",
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "sabedoria"
+      ],
+      "canonicalSlug": "o-segredo-da-vida-e-voce-justamente-juntar-toda-a-sua-corage",
+      "relatedKeywords": [
+        "coragem",
+        "inspiracional",
+        "motivacao",
+        "sabedoria",
+        "superacao",
+        "felipe-neto"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O segredo da vida é você justamente juntar toda a sua coragem e fazer aquilo que achou que teria medo demais para fazer.",
     "autor_original": "Felipe Neto",
+    "autor_slug": "felipe-neto",
     "categoria": "coragem",
     "contextos": [
+      "inspiracao",
       "inspiracional",
       "motivacao",
       "sabedoria",
       "superacao"
     ],
-    "explicacao": "Felipe Neto resume sua filosofia de vida em coragem para encarar o medo. Mensagem típica do youtuber sobre superação pessoal, voltada a jovens que hesitam diante de desafios por insegurança ou receio.",
     "palavras_chave": [
       "coragem",
       "inspiracional",
       "motivacao",
       "sabedoria",
-      "superacao"
+      "superacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

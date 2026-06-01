@@ -1,0 +1,119 @@
+[
+  {
+    "id": "f_csv_7cf8009306",
+    "slug": "i-am-a-writer-period",
+    "texto": "I am a writer, period!",
+    "autor": "Anita Sax",
+    "autorSlug": "anita-sax",
+    "explicacao": "Citação de Anita Sax sobre temas ligados a educacao. “I am a writer, period!” articula educacao, educational, inspiracional em registro de educacao, com relevância para contextos como inspiracao e inspiracional.",
+    "semantica": {
+      "categoriaPrincipal": "educacao",
+      "categorias": [
+        "educacao",
+        "educational",
+        "inspiracional",
+        "positivity"
+      ],
+      "contextos": [
+        "inspiracao",
+        "inspiracional",
+        "positivity"
+      ],
+      "emocoes": [],
+      "temas": [
+        "educacao",
+        "educational",
+        "inspiracional",
+        "positivity",
+        "writer",
+        "period"
+      ],
+      "palavrasChave": [
+        "educational",
+        "inspiracional",
+        "positivity",
+        "educacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "educacao",
+        "educational",
+        "inspiracional",
+        "positivity",
+        "inspiracao",
+        "anita-sax"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "educacao",
+        "educational",
+        "inspiracional",
+        "positivity",
+        "writer",
+        "period"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I am a writer, period!\" — Anita Sax | Metamensagem",
+      "descriptionSeo": "Citação de Anita Sax sobre temas ligados a educacao. “I am a writer, period!” articula educacao, educational, inspiracional em registro de educacao, com relev…",
+      "keywordsSeo": [
+        "frases de Anita Sax",
+        "frases sobre educacao",
+        "frases educacao",
+        "frases educational",
+        "frases inspiracao",
+        "frases inspiracional",
+        "educational",
+        "inspiracional",
+        "positivity",
+        "educacao"
+      ],
+      "canonicalSlug": "i-am-a-writer-period",
+      "relatedKeywords": [
+        "educacao",
+        "educational",
+        "inspiracional",
+        "positivity",
+        "anita-sax"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I am a writer, period!",
+    "autor_original": "Anita Sax",
+    "autor_slug": "anita-sax",
+    "categoria": "educacao",
+    "contextos": [
+      "inspiracao",
+      "inspiracional",
+      "positivity"
+    ],
+    "palavras_chave": [
+      "educational",
+      "inspiracional",
+      "positivity",
+      "educacao",
+      "inspiracao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -2,25 +2,113 @@
   {
     "id": "f_kvf86cd4p",
     "slug": "otimista-por-natureza-sempre-achei-que-problemas-os-mais-d",
+    "texto": "Otimista por natureza, sempre achei que problemas, os mais difíceis, terminam por serem resolvidos.",
+    "autor": "Zélia Gattai",
+    "autorSlug": "zelia-gattai",
+    "explicacao": "Zélia Gattai, escritora e esposa de Jorge Amado, confessa otimismo natural diante de problemas difíceis. Acreditava que crises tendem a se resolver. Testemunho autobiográfico de fé na vida.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "otimismo"
+      ],
+      "contextos": [
+        "inspiracao",
+        "otimismo"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "natureza",
+        "sempre",
+        "achei",
+        "problemas"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "inspiracao",
+        "zelia-gattai"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 33,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "otimista",
+        "natureza",
+        "sempre"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Otimista por natureza, sempre achei que problemas, o…\" — Zélia Gattai | Metamensagem",
+      "descriptionSeo": "Zélia Gattai, escritora e esposa de Jorge Amado, confessa otimismo natural diante de problemas difíceis. Acreditava que crises tendem a se resolver. Testemunh…",
+      "keywordsSeo": [
+        "frases de Zélia Gattai",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "frases otimismo",
+        "inspiracional",
+        "otimismo",
+        "motivacao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "otimista-por-natureza-sempre-achei-que-problemas-os-mais-d",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "otimismo",
+        "zelia-gattai"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Otimista por natureza, sempre achei que problemas, os mais difíceis, terminam por serem resolvidos.",
     "autor_original": "Zélia Gattai",
-    "categoria": "inspiracional",
+    "autor_slug": "zelia-gattai",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "otimismo"
     ],
-    "explicacao": "Zélia Gattai, escritora e esposa de Jorge Amado, confessa otimismo natural diante de problemas difíceis. Acreditava que crises tendem a se resolver. Testemunho autobiográfico de fé na vida.",
     "palavras_chave": [
       "inspiracional",
-      "otimismo"
+      "otimismo",
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "heuristica-local",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

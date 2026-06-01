@@ -1,0 +1,110 @@
+[
+  {
+    "id": "f_csv_b530f9f5e4",
+    "slug": "if-your-time-hasn-t-come-not-even-a-doctor-can-kill-you",
+    "texto": "If your time hasn't come not even a doctor can kill you.",
+    "autor": "M. A. Perlstein",
+    "autorSlug": "m-a-perlstein",
+    "explicacao": "Citação de M. A. Perlstein sobre passagem do tempo e prioridades. “If your time hasn't come not even a doctor can kill you.” articula tempo, vida, death em registro de tempo, com relevância para contextos como luto e death.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "vida",
+        "death"
+      ],
+      "contextos": [
+        "luto",
+        "death"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "vida",
+        "death",
+        "doctor"
+      ],
+      "palavrasChave": [
+        "vida",
+        "death",
+        "tempo",
+        "luto"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "vida",
+        "death",
+        "luto",
+        "m-a-perlstein"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "vida",
+        "death",
+        "doctor",
+        "tempo",
+        "vida"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"If your time hasn't come not even a doctor can kill …\" — M. A. Perlstein | Metamensagem",
+      "descriptionSeo": "Citação de M. A. Perlstein sobre passagem do tempo e prioridades. “If your time hasn't come not even a doctor can kill you.” articula tempo, vida, death em re…",
+      "keywordsSeo": [
+        "frases de M. A. Perlstein",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases vida",
+        "frases luto",
+        "frases death",
+        "vida",
+        "death",
+        "tempo",
+        "luto"
+      ],
+      "canonicalSlug": "if-your-time-hasn-t-come-not-even-a-doctor-can-kill-you",
+      "relatedKeywords": [
+        "tempo",
+        "vida",
+        "death",
+        "m-a-perlstein"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "If your time hasn't come not even a doctor can kill you.",
+    "autor_original": "M. A. Perlstein",
+    "autor_slug": "m-a-perlstein",
+    "categoria": "tempo",
+    "contextos": [
+      "luto",
+      "death"
+    ],
+    "palavras_chave": [
+      "vida",
+      "death",
+      "tempo",
+      "luto"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

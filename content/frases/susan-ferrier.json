@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_92b2aabab7",
+    "slug": "a-friend-in-need-is-a-friend-indeed",
+    "texto": "A friend in need is a friend indeed.",
+    "autor": "Susan Ferrier",
+    "autorSlug": "susan-ferrier",
+    "explicacao": "Citação de Susan Ferrier sobre temas ligados a amizade. “A friend in need is a friend indeed.” articula amizade, reflexao, friend em registro de amizade, com relevância para contextos como termino e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "reflexao"
+      ],
+      "contextos": [
+        "termino",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "reflexao",
+        "friend",
+        "indeed"
+      ],
+      "palavrasChave": [
+        "amizade",
+        "reflexao",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "reflexao",
+        "termino",
+        "susan-ferrier"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 27,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "reflexao",
+        "friend",
+        "indeed",
+        "amizade",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A friend in need is a friend indeed.\" — Susan Ferrier | Metamensagem",
+      "descriptionSeo": "Citação de Susan Ferrier sobre temas ligados a amizade. “A friend in need is a friend indeed.” articula amizade, reflexao, friend em registro de amizade, com…",
+      "keywordsSeo": [
+        "frases de Susan Ferrier",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases reflexao",
+        "frases termino",
+        "amizade",
+        "reflexao",
+        "termino"
+      ],
+      "canonicalSlug": "a-friend-in-need-is-a-friend-indeed",
+      "relatedKeywords": [
+        "amizade",
+        "reflexao",
+        "susan-ferrier"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A friend in need is a friend indeed.",
+    "autor_original": "Susan Ferrier",
+    "autor_slug": "susan-ferrier",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "amizade",
+      "reflexao",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

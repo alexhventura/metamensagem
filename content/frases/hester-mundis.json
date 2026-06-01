@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f_csv_bd568efc3e",
+    "slug": "there-s-no-such-thing-as-a-nonworking-mother",
+    "texto": "There's no such thing as a nonworking mother.",
+    "autor": "Hester Mundis",
+    "autorSlug": "hester-mundis",
+    "explicacao": "Citação de Hester Mundis sobre temas ligados a familia. “There's no such thing as a nonworking mother.” articula familia, mothers, fathers em registro de familia, com relevância para contextos como trabalho e fathers.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "mothers",
+        "fathers"
+      ],
+      "contextos": [
+        "trabalho",
+        "fathers"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "mothers",
+        "fathers",
+        "there",
+        "thing",
+        "nonworking",
+        "mother"
+      ],
+      "palavrasChave": [
+        "mothers",
+        "fathers",
+        "familia",
+        "trabalho"
+      ],
+      "tagsSeo": [
+        "familia",
+        "mothers",
+        "fathers",
+        "trabalho",
+        "hester-mundis"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "mothers",
+        "fathers",
+        "there",
+        "thing",
+        "nonworking"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"There's no such thing as a nonworking mother.\" — Hester Mundis | Metamensagem",
+      "descriptionSeo": "Citação de Hester Mundis sobre temas ligados a familia. “There's no such thing as a nonworking mother.” articula familia, mothers, fathers em registro de fami…",
+      "keywordsSeo": [
+        "frases de Hester Mundis",
+        "frases sobre familia",
+        "frases familia",
+        "frases mothers",
+        "frases trabalho",
+        "frases fathers",
+        "mothers",
+        "fathers",
+        "familia",
+        "trabalho"
+      ],
+      "canonicalSlug": "there-s-no-such-thing-as-a-nonworking-mother",
+      "relatedKeywords": [
+        "familia",
+        "mothers",
+        "fathers",
+        "hester-mundis"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "There's no such thing as a nonworking mother.",
+    "autor_original": "Hester Mundis",
+    "autor_slug": "hester-mundis",
+    "categoria": "familia",
+    "contextos": [
+      "trabalho",
+      "fathers"
+    ],
+    "palavras_chave": [
+      "mothers",
+      "fathers",
+      "familia",
+      "trabalho"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

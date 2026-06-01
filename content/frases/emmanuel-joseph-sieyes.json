@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_68d4c793e2",
+    "slug": "i-survived-j-ai-vecu",
+    "texto": "I survived. (J'ai vecu.)",
+    "autor": "Emmanuel Joseph Sieyes",
+    "autorSlug": "emmanuel-joseph-sieyes",
+    "explicacao": "Citação de Emmanuel Joseph Sieyes sobre temas ligados a reflexao. “I survived. (J'ai vecu.)” articula reflexao, revolution, reform em registro de reflexao, com relevância para contextos como reform.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "revolution",
+        "reform"
+      ],
+      "contextos": [
+        "reform"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "revolution",
+        "reform",
+        "survived"
+      ],
+      "palavrasChave": [
+        "revolution",
+        "reform",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "revolution",
+        "reform",
+        "emmanuel-joseph-sieyes"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "revolution",
+        "reform",
+        "survived",
+        "reflexao",
+        "revolution"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I survived. (J'ai vecu.)\" — Emmanuel Joseph Sieyes | Metamensagem",
+      "descriptionSeo": "Citação de Emmanuel Joseph Sieyes sobre temas ligados a reflexao. “I survived. (J'ai vecu.)” articula reflexao, revolution, reform em registro de reflexao, co…",
+      "keywordsSeo": [
+        "frases de Emmanuel Joseph Sieyes",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases revolution",
+        "frases reform",
+        "revolution",
+        "reform",
+        "reflexao"
+      ],
+      "canonicalSlug": "i-survived-j-ai-vecu",
+      "relatedKeywords": [
+        "reflexao",
+        "revolution",
+        "reform",
+        "emmanuel-joseph-sieyes"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I survived. (J'ai vecu.)",
+    "autor_original": "Emmanuel Joseph Sieyes",
+    "autor_slug": "emmanuel-joseph-sieyes",
+    "categoria": "reflexao",
+    "contextos": [
+      "reform"
+    ],
+    "palavras_chave": [
+      "revolution",
+      "reform",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

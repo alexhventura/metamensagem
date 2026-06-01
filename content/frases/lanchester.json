@@ -1,0 +1,96 @@
+[
+  {
+    "id": "f_csv_ebaefc6364",
+    "slug": "stuff-is-not-enough",
+    "texto": "Stuff is not enough.",
+    "autor": "Lanchester",
+    "autorSlug": "lanchester",
+    "explicacao": "Citação de Lanchester sobre temas ligados a reflexao. “Stuff is not enough.” articula reflexao, insightful, stuff em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "insightful"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "insightful",
+        "stuff",
+        "enough"
+      ],
+      "palavrasChave": [
+        "insightful",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "insightful",
+        "lanchester"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "insightful",
+        "stuff",
+        "enough",
+        "reflexao",
+        "insightful"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Stuff is not enough.\" — Lanchester | Metamensagem",
+      "descriptionSeo": "Citação de Lanchester sobre temas ligados a reflexao. “Stuff is not enough.” articula reflexao, insightful, stuff em registro de reflexao, com relevância para…",
+      "keywordsSeo": [
+        "frases de Lanchester",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases insightful",
+        "insightful",
+        "reflexao"
+      ],
+      "canonicalSlug": "stuff-is-not-enough",
+      "relatedKeywords": [
+        "reflexao",
+        "insightful",
+        "lanchester"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Stuff is not enough.",
+    "autor_original": "Lanchester",
+    "autor_slug": "lanchester",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "insightful",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

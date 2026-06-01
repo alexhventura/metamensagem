@@ -1,0 +1,101 @@
+[
+  {
+    "id": "f_csv_734b86cd84",
+    "slug": "nothing-is-incidental",
+    "texto": "Nothing is incidental.",
+    "autor": "Pocan Ioan Valentin",
+    "autorSlug": "pocan-ioan-valentin",
+    "explicacao": "Citação de Pocan Ioan Valentin sobre temas ligados a reflexao. “Nothing is incidental.” articula reflexao, incidental, nothing em registro de reflexao, com relevância para contextos como nothing.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "incidental",
+        "nothing"
+      ],
+      "contextos": [
+        "nothing"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "incidental",
+        "nothing"
+      ],
+      "palavrasChave": [
+        "incidental",
+        "nothing",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "incidental",
+        "nothing",
+        "pocan-ioan-valentin"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "incidental",
+        "nothing",
+        "reflexao",
+        "incidental"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Nothing is incidental.\" — Pocan Ioan Valentin | Metamensagem",
+      "descriptionSeo": "Citação de Pocan Ioan Valentin sobre temas ligados a reflexao. “Nothing is incidental.” articula reflexao, incidental, nothing em registro de reflexao, com re…",
+      "keywordsSeo": [
+        "frases de Pocan Ioan Valentin",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases incidental",
+        "frases nothing",
+        "incidental",
+        "nothing",
+        "reflexao"
+      ],
+      "canonicalSlug": "nothing-is-incidental",
+      "relatedKeywords": [
+        "reflexao",
+        "incidental",
+        "nothing",
+        "pocan-ioan-valentin"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Nothing is incidental.",
+    "autor_original": "Pocan Ioan Valentin",
+    "autor_slug": "pocan-ioan-valentin",
+    "categoria": "reflexao",
+    "contextos": [
+      "nothing"
+    ],
+    "palavras_chave": [
+      "incidental",
+      "nothing",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

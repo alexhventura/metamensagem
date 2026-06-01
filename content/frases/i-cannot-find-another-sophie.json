@@ -1,0 +1,105 @@
+[
+  {
+    "id": "f_csv_92505f45c1",
+    "slug": "i-can-find-another-maid",
+    "texto": "I can find another maid",
+    "autor": "I cannot find another Sophie.",
+    "autorSlug": "i-cannot-find-another-sophie",
+    "explicacao": "Citação de I cannot find another Sophie. sobre temas ligados a trabalho. “I can find another maid” articula trabalho, cassandra-clare, clockwork-princess em registro de trabalho, com relevância para contextos como trabalho e clockwork-princess.",
+    "semantica": {
+      "categoriaPrincipal": "trabalho",
+      "categorias": [
+        "trabalho",
+        "cassandra-clare",
+        "clockwork-princess"
+      ],
+      "contextos": [
+        "trabalho",
+        "clockwork-princess"
+      ],
+      "emocoes": [],
+      "temas": [
+        "trabalho",
+        "cassandra-clare",
+        "clockwork-princess",
+        "another"
+      ],
+      "palavrasChave": [
+        "cassandra-clare",
+        "clockwork-princess",
+        "trabalho"
+      ],
+      "tagsSeo": [
+        "trabalho",
+        "cassandra-clare",
+        "clockwork-princess",
+        "i-cannot-find-another-sophie"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "trabalho",
+        "cassandra-clare",
+        "clockwork-princess",
+        "another",
+        "trabalho",
+        "cassandra-clare"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"I can find another maid\" — I cannot find another Sophie. | Metamensagem",
+      "descriptionSeo": "Citação de I cannot find another Sophie. sobre temas ligados a trabalho. “I can find another maid” articula trabalho, cassandra-clare, clockwork-princess em r…",
+      "keywordsSeo": [
+        "frases de I cannot find another Sophie.",
+        "frases sobre trabalho",
+        "frases trabalho",
+        "frases cassandra clare",
+        "frases clockwork princess",
+        "cassandra-clare",
+        "clockwork-princess",
+        "trabalho"
+      ],
+      "canonicalSlug": "i-can-find-another-maid",
+      "relatedKeywords": [
+        "trabalho",
+        "cassandra-clare",
+        "clockwork-princess",
+        "i-cannot-find-another-sophie"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "I can find another maid",
+    "autor_original": "I cannot find another Sophie.",
+    "autor_slug": "i-cannot-find-another-sophie",
+    "categoria": "trabalho",
+    "contextos": [
+      "trabalho",
+      "clockwork-princess"
+    ],
+    "palavras_chave": [
+      "cassandra-clare",
+      "clockwork-princess",
+      "trabalho"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

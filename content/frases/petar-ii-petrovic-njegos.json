@@ -1,0 +1,110 @@
+[
+  {
+    "id": "f_csv_fd6d4aaa09",
+    "slug": "the-one-who-doesn-t-travel-does-not-live",
+    "texto": "The one who doesn't travel, does not live.",
+    "autor": "Petar II Petrović Njegoš",
+    "autorSlug": "petar-ii-petrovic-njegos",
+    "explicacao": "Citação de Petar II Petrović Njegoš sobre sentido da existência e experiência vivida. “The one who doesn't travel, does not live.” articula vida, live, travel em registro de vida, com relevância para contextos como viagem e travel.",
+    "semantica": {
+      "categoriaPrincipal": "vida",
+      "categorias": [
+        "vida",
+        "live",
+        "travel"
+      ],
+      "contextos": [
+        "viagem",
+        "travel"
+      ],
+      "emocoes": [],
+      "temas": [
+        "vida",
+        "live",
+        "travel",
+        "doesn"
+      ],
+      "palavrasChave": [
+        "live",
+        "travel",
+        "vida",
+        "viagem"
+      ],
+      "tagsSeo": [
+        "vida",
+        "live",
+        "travel",
+        "viagem",
+        "petar-ii-petrovic-njegos"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "vida",
+        "live",
+        "travel",
+        "doesn",
+        "vida",
+        "live"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The one who doesn't travel, does not live.\" — Petar II Petrović Njegoš | Metamensagem",
+      "descriptionSeo": "Citação de Petar II Petrović Njegoš sobre sentido da existência e experiência vivida. “The one who doesn't travel, does not live.” articula vida, live, travel…",
+      "keywordsSeo": [
+        "frases de Petar II Petrović Njegoš",
+        "frases sobre vida",
+        "frases vida",
+        "frases live",
+        "frases viagem",
+        "frases travel",
+        "live",
+        "travel",
+        "vida",
+        "viagem"
+      ],
+      "canonicalSlug": "the-one-who-doesn-t-travel-does-not-live",
+      "relatedKeywords": [
+        "vida",
+        "live",
+        "travel",
+        "petar-ii-petrovic-njegos"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The one who doesn't travel, does not live.",
+    "autor_original": "Petar II Petrović Njegoš",
+    "autor_slug": "petar-ii-petrovic-njegos",
+    "categoria": "vida",
+    "contextos": [
+      "viagem",
+      "travel"
+    ],
+    "palavras_chave": [
+      "live",
+      "travel",
+      "vida",
+      "viagem"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

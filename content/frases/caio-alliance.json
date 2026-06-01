@@ -2,27 +2,112 @@
   {
     "id": "f_0dz1fctth",
     "slug": "para-ter-sucesso-e-necessario-viver-o-processo",
+    "texto": "⁠Para ter sucesso, é necessário viver o processo.",
+    "autor": "Caio Alliance",
+    "autorSlug": "caio-alliance",
+    "explicacao": "Mensagem de Caio Alliance sobre sucesso. Enfatiza que resultados duradouros vêm de viver o processo — etapas, rotina e aprendizado — e não apenas de mirar o resultado final.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "sucesso"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao",
+        "sucesso"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "sucesso",
+        "necessário",
+        "viver",
+        "processo"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "sucesso",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "sucesso",
+        "inspiracao",
+        "caio-alliance"
+      ],
+      "idiomaOriginal": "pt",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "sucesso",
+        "necessário",
+        "viver",
+        "processo"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"⁠Para ter sucesso, é necessário viver o processo.\" — Caio Alliance | Metamensagem",
+      "descriptionSeo": "Mensagem de Caio Alliance sobre sucesso. Enfatiza que resultados duradouros vêm de viver o processo — etapas, rotina e aprendizado — e não apenas de mirar o r…",
+      "keywordsSeo": [
+        "frases de Caio Alliance",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "sucesso",
+        "inspiracao"
+      ],
+      "canonicalSlug": "para-ter-sucesso-e-necessario-viver-o-processo",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "sucesso",
+        "caio-alliance"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "⁠Para ter sucesso, é necessário viver o processo.",
     "autor_original": "Caio Alliance",
-    "categoria": "inspiracional",
+    "autor_slug": "caio-alliance",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao",
       "sucesso"
     ],
-    "explicacao": "Mensagem de Caio Alliance sobre sucesso. Enfatiza que resultados duradouros vêm de viver o processo — etapas, rotina e aprendizado — e não apenas de mirar o resultado final.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
-      "sucesso"
+      "sucesso",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

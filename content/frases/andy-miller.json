@@ -1,0 +1,116 @@
+[
+  {
+    "id": "f_csv_1e64fedd03",
+    "slug": "did-i-really-read-every-single-book-in-the-school-my-mother-maintains-i-did-ma",
+    "texto": "Did I really read every single book in the school? My mother maintains I did. Maybe I just told the teachers I had and they all believed me. Maybe this is where the lying about books really began. Where were the checks and balances? I blame the authorities.",
+    "autor": "Andy Miller",
+    "autorSlug": "andy-miller",
+    "explicacao": "Pergunta retórica de Andy Miller que provoca temas ligados a educacao. Ao questionar “Did I really read every single book in the school? My mother maintains I did. Maybe I just told t…”, o texto convida o leitor a revisar crenças sobre educacao, books, lying, com foco em lying e reading.",
+    "semantica": {
+      "categoriaPrincipal": "educacao",
+      "categorias": [
+        "educacao",
+        "books",
+        "lying",
+        "reading"
+      ],
+      "contextos": [
+        "lying",
+        "reading"
+      ],
+      "emocoes": [],
+      "temas": [
+        "educacao",
+        "books",
+        "lying",
+        "reading",
+        "really",
+        "maybe",
+        "where",
+        "every"
+      ],
+      "palavrasChave": [
+        "books",
+        "lying",
+        "reading",
+        "educacao"
+      ],
+      "tagsSeo": [
+        "educacao",
+        "books",
+        "lying",
+        "reading",
+        "andy-miller"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 51,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "educacao",
+        "books",
+        "lying",
+        "reading",
+        "really",
+        "maybe"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Did I really read every single book in the school? M…\" — Andy Miller | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Andy Miller que provoca temas ligados a educacao. Ao questionar “Did I really read every single book in the school? My mother maintains I…",
+      "keywordsSeo": [
+        "frases de Andy Miller",
+        "frases sobre educacao",
+        "frases educacao",
+        "frases books",
+        "frases lying",
+        "frases reading",
+        "books",
+        "lying",
+        "reading",
+        "educacao"
+      ],
+      "canonicalSlug": "did-i-really-read-every-single-book-in-the-school-my-mother-maintains-i-did-ma",
+      "relatedKeywords": [
+        "educacao",
+        "books",
+        "lying",
+        "reading",
+        "andy-miller"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Did I really read every single book in the school? My mother maintains I did. Maybe I just told the teachers I had and they all believed me. Maybe this is where the lying about books really began. Where were the checks and balances? I blame the authorities.",
+    "autor_original": "Andy Miller",
+    "autor_slug": "andy-miller",
+    "categoria": "educacao",
+    "contextos": [
+      "lying",
+      "reading"
+    ],
+    "palavras_chave": [
+      "books",
+      "lying",
+      "reading",
+      "educacao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

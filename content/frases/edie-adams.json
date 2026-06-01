@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_8a6d3fc949",
+    "slug": "you-aren-t-going-to-leave-me-alone-are-you",
+    "texto": "You aren't going to leave me alone are you?",
+    "autor": "Edie Adams",
+    "autorSlug": "edie-adams",
+    "explicacao": "Pergunta retórica de Edie Adams que provoca temas ligados a reflexao. Ao questionar “You aren't going to leave me alone are you?”, o texto convida o leitor a revisar crenças sobre reflexao, me, you, com foco em you e going.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "me",
+        "you",
+        "going"
+      ],
+      "contextos": [
+        "you",
+        "going"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "me",
+        "you",
+        "going",
+        "leave",
+        "alone"
+      ],
+      "palavrasChave": [
+        "me",
+        "you",
+        "going",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "me",
+        "you",
+        "going",
+        "edie-adams"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "me",
+        "you",
+        "going",
+        "leave",
+        "alone"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"You aren't going to leave me alone are you?\" — Edie Adams | Metamensagem",
+      "descriptionSeo": "Pergunta retórica de Edie Adams que provoca temas ligados a reflexao. Ao questionar “You aren't going to leave me alone are you?”, o texto convida o leitor a…",
+      "keywordsSeo": [
+        "frases de Edie Adams",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases me",
+        "frases you",
+        "frases going",
+        "me",
+        "you",
+        "going",
+        "reflexao"
+      ],
+      "canonicalSlug": "you-aren-t-going-to-leave-me-alone-are-you",
+      "relatedKeywords": [
+        "reflexao",
+        "me",
+        "you",
+        "going",
+        "edie-adams"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "You aren't going to leave me alone are you?",
+    "autor_original": "Edie Adams",
+    "autor_slug": "edie-adams",
+    "categoria": "reflexao",
+    "contextos": [
+      "you",
+      "going"
+    ],
+    "palavras_chave": [
+      "me",
+      "you",
+      "going",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,115 @@
+[
+  {
+    "id": "f_csv_41cd68ea65",
+    "slug": "secrets-my-mother-told-me-once-are-just-stories-turned-inside-out",
+    "texto": "Secrets, my mother told me once, are just stories turned inside out.",
+    "autor": "Janet McNally",
+    "autorSlug": "janet-mcnally",
+    "explicacao": "Citação de Janet McNally sobre temas ligados a familia. “Secrets, my mother told me once, are just stories turned inside out.” articula familia, secrets, stories em registro de familia, com relevância para contextos como stories e ya.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "secrets",
+        "stories",
+        "ya"
+      ],
+      "contextos": [
+        "stories",
+        "ya"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "secrets",
+        "stories",
+        "ya",
+        "mother",
+        "turned",
+        "inside"
+      ],
+      "palavrasChave": [
+        "secrets",
+        "stories",
+        "ya",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "secrets",
+        "stories",
+        "ya",
+        "janet-mcnally"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "secrets",
+        "stories",
+        "ya",
+        "mother",
+        "turned"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Secrets, my mother told me once, are just stories tu…\" — Janet McNally | Metamensagem",
+      "descriptionSeo": "Citação de Janet McNally sobre temas ligados a familia. “Secrets, my mother told me once, are just stories turned inside out.” articula familia, secrets, stor…",
+      "keywordsSeo": [
+        "frases de Janet McNally",
+        "frases sobre familia",
+        "frases familia",
+        "frases secrets",
+        "frases stories",
+        "frases ya",
+        "secrets",
+        "stories",
+        "ya",
+        "familia"
+      ],
+      "canonicalSlug": "secrets-my-mother-told-me-once-are-just-stories-turned-inside-out",
+      "relatedKeywords": [
+        "familia",
+        "secrets",
+        "stories",
+        "ya",
+        "janet-mcnally"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Secrets, my mother told me once, are just stories turned inside out.",
+    "autor_original": "Janet McNally",
+    "autor_slug": "janet-mcnally",
+    "categoria": "familia",
+    "contextos": [
+      "stories",
+      "ya"
+    ],
+    "palavras_chave": [
+      "secrets",
+      "stories",
+      "ya",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

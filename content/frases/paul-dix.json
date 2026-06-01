@@ -1,0 +1,582 @@
+[
+  {
+    "id": "f_csv_1a92dc12ea",
+    "slug": "many-programmers-would-prefer-to-mock-in-their-client-library-specs-but-doing-s",
+    "texto": "Many programmers would prefer to mock in their client library specs, but doing so could result in the service and client passing all specs with hidden failures.",
+    "autor": "Paul Dix",
+    "autorSlug": "paul-dix",
+    "explicacao": "Citação de Paul Dix sobre temas ligados a reflexao. “Many programmers would prefer to mock in their client library specs, but doing so could result in…” articula reflexao, kindlehighlight, client em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "kindlehighlight"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "kindlehighlight",
+        "client",
+        "specs",
+        "programmers",
+        "would",
+        "prefer"
+      ],
+      "palavrasChave": [
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "kindlehighlight",
+        "paul-dix"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 40,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "kindlehighlight",
+        "client",
+        "specs",
+        "programmers",
+        "would"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Many programmers would prefer to mock in their clien…\" — Paul Dix | Metamensagem",
+      "descriptionSeo": "Citação de Paul Dix sobre temas ligados a reflexao. “Many programmers would prefer to mock in their client library specs, but doing so could result in…” artic…",
+      "keywordsSeo": [
+        "frases de Paul Dix",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases kindlehighlight",
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "canonicalSlug": "many-programmers-would-prefer-to-mock-in-their-client-library-specs-but-doing-s",
+      "relatedKeywords": [
+        "reflexao",
+        "kindlehighlight",
+        "paul-dix"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Many programmers would prefer to mock in their client library specs, but doing so could result in the service and client passing all specs with hidden failures.",
+    "autor_original": "Paul Dix",
+    "autor_slug": "paul-dix",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "kindlehighlight",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_832af5d2d4",
+    "slug": "for-invalid-user-name-and-password-combinations-the-service-should-return-a-400",
+    "texto": "For invalid user name and password combinations, the service should return a 400 HTTP status code, which means that the server received a “bad request.” The service could also use the 401 (“unauthorized”) response code, but that code specifies that authentication credentials need to be in the request header, which is not quite what is required.",
+    "autor": "Paul Dix",
+    "autorSlug": "paul-dix",
+    "explicacao": "Orientação direta de Paul Dix sobre temas ligados a reflexao. A afirmação “For invalid user name and password combinations, the service should return a 400 HTTP status code…” funciona como lembrete prático ligado a reflexao, kindlehighlight, service, útil em momentos de reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "kindlehighlight"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "kindlehighlight",
+        "service",
+        "which",
+        "request",
+        "invalid",
+        "password"
+      ],
+      "palavrasChave": [
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "kindlehighlight",
+        "paul-dix"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 58,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "kindlehighlight",
+        "service",
+        "which",
+        "request",
+        "invalid"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"For invalid user name and password combinations, the…\" — Paul Dix | Metamensagem",
+      "descriptionSeo": "Orientação direta de Paul Dix sobre temas ligados a reflexao. A afirmação “For invalid user name and password combinations, the service should return a 400 HT…",
+      "keywordsSeo": [
+        "frases de Paul Dix",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases kindlehighlight",
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "canonicalSlug": "for-invalid-user-name-and-password-combinations-the-service-should-return-a-400",
+      "relatedKeywords": [
+        "reflexao",
+        "kindlehighlight",
+        "paul-dix"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "For invalid user name and password combinations, the service should return a 400 HTTP status code, which means that the server received a “bad request.” The service could also use the 401 (“unauthorized”) response code, but that code specifies that authentication credentials need to be in the request header, which is not quite what is required.",
+    "autor_original": "Paul Dix",
+    "autor_slug": "paul-dix",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "kindlehighlight",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_8569670bf3",
+    "slug": "you-create-a-file-called-user-rb-in-the-models-directory",
+    "texto": "You create a file called user.rb in the /models directory:",
+    "autor": "Paul Dix",
+    "autorSlug": "paul-dix",
+    "explicacao": "Citação de Paul Dix sobre temas ligados a reflexao. “You create a file called user.rb in the /models directory:” articula reflexao, kindlehighlight, create em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "kindlehighlight"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "kindlehighlight",
+        "create",
+        "called",
+        "models",
+        "directory"
+      ],
+      "palavrasChave": [
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "kindlehighlight",
+        "paul-dix"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "kindlehighlight",
+        "create",
+        "called",
+        "models",
+        "directory"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"You create a file called user.rb in the /models dire…\" — Paul Dix | Metamensagem",
+      "descriptionSeo": "Citação de Paul Dix sobre temas ligados a reflexao. “You create a file called user.rb in the /models directory:” articula reflexao, kindlehighlight, create em…",
+      "keywordsSeo": [
+        "frases de Paul Dix",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases kindlehighlight",
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "canonicalSlug": "you-create-a-file-called-user-rb-in-the-models-directory",
+      "relatedKeywords": [
+        "reflexao",
+        "kindlehighlight",
+        "paul-dix"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "You create a file called user.rb in the /models directory:",
+    "autor_original": "Paul Dix",
+    "autor_slug": "paul-dix",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "kindlehighlight",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_97f6c5648f",
+    "slug": "for-the-service-in-spec-service-spec-rb-you-add-another-describe-block",
+    "texto": "for the service in spec/service_spec.rb, you add another describe block:",
+    "autor": "Paul Dix",
+    "autorSlug": "paul-dix",
+    "explicacao": "Citação de Paul Dix sobre temas ligados a reflexao. “for the service in spec/service_spec.rb, you add another describe block:” articula reflexao, kindlehighlight, service em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "kindlehighlight"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "kindlehighlight",
+        "service",
+        "another",
+        "describe",
+        "block"
+      ],
+      "palavrasChave": [
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "kindlehighlight",
+        "paul-dix"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "kindlehighlight",
+        "service",
+        "another",
+        "describe",
+        "block"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"for the service in spec/service_spec.rb, you add ano…\" — Paul Dix | Metamensagem",
+      "descriptionSeo": "Citação de Paul Dix sobre temas ligados a reflexao. “for the service in spec/service_spec.rb, you add another describe block:” articula reflexao, kindlehighli…",
+      "keywordsSeo": [
+        "frases de Paul Dix",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases kindlehighlight",
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "canonicalSlug": "for-the-service-in-spec-service-spec-rb-you-add-another-describe-block",
+      "relatedKeywords": [
+        "reflexao",
+        "kindlehighlight",
+        "paul-dix"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "for the service in spec/service_spec.rb, you add another describe block:",
+    "autor_original": "Paul Dix",
+    "autor_slug": "paul-dix",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "kindlehighlight",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_99413eccf9",
+    "slug": "services-isolated-on-business-logic-can-share-data-sources-with-other-systems",
+    "texto": "Services isolated on business logic can share data sources with other systems.",
+    "autor": "Paul Dix",
+    "autorSlug": "paul-dix",
+    "explicacao": "Citação de Paul Dix sobre temas ligados a reflexao. “Services isolated on business logic can share data sources with other systems.” articula reflexao, kindlehighlight, services em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "kindlehighlight"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "kindlehighlight",
+        "services",
+        "isolated",
+        "business",
+        "logic",
+        "share"
+      ],
+      "palavrasChave": [
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "kindlehighlight",
+        "paul-dix"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 31,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "kindlehighlight",
+        "services",
+        "isolated",
+        "business",
+        "logic"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Services isolated on business logic can share data s…\" — Paul Dix | Metamensagem",
+      "descriptionSeo": "Citação de Paul Dix sobre temas ligados a reflexao. “Services isolated on business logic can share data sources with other systems.” articula reflexao, kindle…",
+      "keywordsSeo": [
+        "frases de Paul Dix",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases kindlehighlight",
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "canonicalSlug": "services-isolated-on-business-logic-can-share-data-sources-with-other-systems",
+      "relatedKeywords": [
+        "reflexao",
+        "kindlehighlight",
+        "paul-dix"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Services isolated on business logic can share data sources with other systems.",
+    "autor_original": "Paul Dix",
+    "autor_slug": "paul-dix",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "kindlehighlight",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  },
+  {
+    "id": "f_csv_b3fa390a07",
+    "slug": "however-for-the-purposes-of-migrating-existing-rails-applications-to-services",
+    "texto": "However, for the purposes of migrating existing Rails applications to services, the shared database approach may be necessary in the early stages.",
+    "autor": "Paul Dix",
+    "autorSlug": "paul-dix",
+    "explicacao": "Citação de Paul Dix sobre temas ligados a reflexao. “However, for the purposes of migrating existing Rails applications to services, the shared databa…” articula reflexao, kindlehighlight, however em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "kindlehighlight"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "kindlehighlight",
+        "however",
+        "purposes",
+        "migrating",
+        "existing",
+        "rails"
+      ],
+      "palavrasChave": [
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "kindlehighlight",
+        "paul-dix"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 38,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "kindlehighlight",
+        "however",
+        "purposes",
+        "migrating",
+        "existing"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"However, for the purposes of migrating existing Rail…\" — Paul Dix | Metamensagem",
+      "descriptionSeo": "Citação de Paul Dix sobre temas ligados a reflexao. “However, for the purposes of migrating existing Rails applications to services, the shared databa…” artic…",
+      "keywordsSeo": [
+        "frases de Paul Dix",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases kindlehighlight",
+        "kindlehighlight",
+        "reflexao"
+      ],
+      "canonicalSlug": "however-for-the-purposes-of-migrating-existing-rails-applications-to-services",
+      "relatedKeywords": [
+        "reflexao",
+        "kindlehighlight",
+        "paul-dix"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "However, for the purposes of migrating existing Rails applications to services, the shared database approach may be necessary in the early stages.",
+    "autor_original": "Paul Dix",
+    "autor_slug": "paul-dix",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "kindlehighlight",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "f_csv_ddccaf7e75",
+    "slug": "depression-is-like-war-you-either-win-or-you-die-trying-there-s-no-in-between",
+    "texto": "Depression is like war. You either win or you die trying. There's no in between.",
+    "autor": "Kota",
+    "autorSlug": "kota",
+    "explicacao": "Metáfora atribuída a Kota: compara elementos do cotidiano para falar de esforço, persistência e resultados. O trecho “Depression is like war. You either win or you die trying. There's no in between.” usa imagem concreta para lembrar que sucesso, depression, war pedem movimento e interpretação pessoal, em tom de war.",
+    "semantica": {
+      "categoriaPrincipal": "sucesso",
+      "categorias": [
+        "sucesso",
+        "depression",
+        "war"
+      ],
+      "contextos": [
+        "war"
+      ],
+      "emocoes": [],
+      "temas": [
+        "sucesso",
+        "depression",
+        "war",
+        "either",
+        "trying",
+        "there",
+        "between"
+      ],
+      "palavrasChave": [
+        "depression",
+        "war",
+        "sucesso"
+      ],
+      "tagsSeo": [
+        "sucesso",
+        "depression",
+        "war",
+        "kota"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "sucesso",
+        "depression",
+        "war",
+        "either",
+        "trying",
+        "there"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Depression is like war. You either win or you die tr…\" — Kota | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a Kota: compara elementos do cotidiano para falar de esforço, persistência e resultados. O trecho “Depression is like war. You either win o…",
+      "keywordsSeo": [
+        "frases de Kota",
+        "frases sobre sucesso",
+        "frases sucesso",
+        "frases depression",
+        "frases war",
+        "depression",
+        "war",
+        "sucesso"
+      ],
+      "canonicalSlug": "depression-is-like-war-you-either-win-or-you-die-trying-there-s-no-in-between",
+      "relatedKeywords": [
+        "sucesso",
+        "depression",
+        "war",
+        "kota"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Depression is like war. You either win or you die trying. There's no in between.",
+    "autor_original": "Kota",
+    "autor_slug": "kota",
+    "categoria": "sucesso",
+    "contextos": [
+      "war"
+    ],
+    "palavras_chave": [
+      "depression",
+      "war",
+      "sucesso"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

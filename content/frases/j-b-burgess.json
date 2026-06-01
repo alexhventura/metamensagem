@@ -1,0 +1,104 @@
+[
+  {
+    "id": "f_csv_0ce7935073",
+    "slug": "the-drink-you-like-the-best-should-be-the-drink-you-drink-the-most",
+    "texto": "The drink you like the best should be the drink you drink the most.",
+    "autor": "J.B. Burgess",
+    "autorSlug": "j-b-burgess",
+    "explicacao": "Metáfora atribuída a J.B. Burgess: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “The drink you like the best should be the drink you drink the most.” usa imagem concreta para lembrar que reflexao, alcohol, drinking pedem movimento e interpretação pessoal, em tom de drinking.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "alcohol",
+        "drinking"
+      ],
+      "contextos": [
+        "drinking"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "alcohol",
+        "drinking",
+        "drink",
+        "should"
+      ],
+      "palavrasChave": [
+        "alcohol",
+        "drinking",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "alcohol",
+        "drinking",
+        "j-b-burgess"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "alcohol",
+        "drinking",
+        "drink",
+        "should",
+        "reflexao"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"The drink you like the best should be the drink you …\" — J.B. Burgess | Metamensagem",
+      "descriptionSeo": "Metáfora atribuída a J.B. Burgess: compara elementos do cotidiano para falar de temas ligados a reflexao. O trecho “The drink you like the best should be the…",
+      "keywordsSeo": [
+        "frases de J.B. Burgess",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases alcohol",
+        "frases drinking",
+        "alcohol",
+        "drinking",
+        "reflexao"
+      ],
+      "canonicalSlug": "the-drink-you-like-the-best-should-be-the-drink-you-drink-the-most",
+      "relatedKeywords": [
+        "reflexao",
+        "alcohol",
+        "drinking",
+        "j-b-burgess"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "The drink you like the best should be the drink you drink the most.",
+    "autor_original": "J.B. Burgess",
+    "autor_slug": "j-b-burgess",
+    "categoria": "reflexao",
+    "contextos": [
+      "drinking"
+    ],
+    "palavras_chave": [
+      "alcohol",
+      "drinking",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "id": "f_csv_4a8e2dc2e7",
+    "slug": "worrying-gets-you-nowhere",
+    "texto": "worrying gets you nowhere",
+    "autor": "Trinity",
+    "autorSlug": "trinity",
+    "explicacao": "Citação de Trinity sobre temas ligados a reflexao. “worrying gets you nowhere” articula reflexao, worry, worrying em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "worry"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [
+        "ansiedade"
+      ],
+      "temas": [
+        "reflexao",
+        "worry",
+        "worrying",
+        "nowhere"
+      ],
+      "palavrasChave": [
+        "worry",
+        "reflexao",
+        "ansiedade"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "worry",
+        "ansiedade",
+        "trinity"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "worry",
+        "worrying",
+        "nowhere",
+        "reflexao",
+        "worry"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"worrying gets you nowhere\" — Trinity | Metamensagem",
+      "descriptionSeo": "Citação de Trinity sobre temas ligados a reflexao. “worrying gets you nowhere” articula reflexao, worry, worrying em registro de reflexao, com relevância para…",
+      "keywordsSeo": [
+        "frases de Trinity",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases worry",
+        "worry",
+        "reflexao",
+        "ansiedade"
+      ],
+      "canonicalSlug": "worrying-gets-you-nowhere",
+      "relatedKeywords": [
+        "ansiedade",
+        "reflexao",
+        "worry",
+        "trinity"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "worrying gets you nowhere",
+    "autor_original": "Trinity",
+    "autor_slug": "trinity",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "worry",
+      "reflexao",
+      "ansiedade"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

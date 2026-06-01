@@ -2,27 +2,114 @@
   {
     "id": "f_sd4vvtma8",
     "slug": "momento-de-reflexao-incentivo-dado-decisao-tomada-com-otim",
+    "texto": "Momento de reflexão: Incentivo dado, decisão tomada com otimismo e motivação, mas nunca esqueça dê dar valor a tudo, até mesmo às pequenas vitórias.",
+    "autor": "Cassia Guimarães",
+    "autorSlug": "cassia-guimaraes",
+    "explicacao": "Reflexão de Cassia Guimarães sobre motivação cotidiana. Combina otimismo na decisão com gratidão pelas pequenas vitórias, lembrando que progresso também se mede em gestos modestos.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "inspiracional",
+        "reflexao"
+      ],
+      "contextos": [
+        "inspiracao",
+        "motivacao",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "momento",
+        "reflexão",
+        "incentivo",
+        "decisão",
+        "tomada"
+      ],
+      "palavrasChave": [
+        "inspiracional",
+        "motivacao",
+        "reflexao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "inspiracao",
+        "cassia-guimaraes"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 40,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "momento",
+        "reflexão",
+        "incentivo"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Momento de reflexão: Incentivo dado, decisão tomada …\" — Cassia Guimarães | Metamensagem",
+      "descriptionSeo": "Reflexão de Cassia Guimarães sobre motivação cotidiana. Combina otimismo na decisão com gratidão pelas pequenas vitórias, lembrando que progresso também se me…",
+      "keywordsSeo": [
+        "frases de Cassia Guimarães",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases inspiracional",
+        "frases inspiracao",
+        "inspiracional",
+        "motivacao",
+        "reflexao",
+        "inspiracao"
+      ],
+      "canonicalSlug": "momento-de-reflexao-incentivo-dado-decisao-tomada-com-otim",
+      "relatedKeywords": [
+        "motivacao",
+        "inspiracional",
+        "reflexao",
+        "cassia-guimaraes"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "Momento de reflexão: Incentivo dado, decisão tomada com otimismo e motivação, mas nunca esqueça dê dar valor a tudo, até mesmo às pequenas vitórias.",
     "autor_original": "Cassia Guimarães",
-    "categoria": "inspiracional",
+    "autor_slug": "cassia-guimaraes",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "motivacao",
       "reflexao"
     ],
-    "explicacao": "Reflexão de Cassia Guimarães sobre motivação cotidiana. Combina otimismo na decisão com gratidão pelas pequenas vitórias, lembrando que progresso também se mede em gestos modestos.",
     "palavras_chave": [
       "inspiracional",
       "motivacao",
-      "reflexao"
+      "reflexao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "f_csv_dc1a90664a",
+    "slug": "a-building-is-a-string-of-events-belonging-together",
+    "texto": "A building is a string of events belonging together.",
+    "autor": "Chris Fawcett",
+    "autorSlug": "chris-fawcett",
+    "explicacao": "Citação de Chris Fawcett sobre temas ligados a reflexao. “A building is a string of events belonging together.” articula reflexao, architects, architecture em registro de reflexao, com relevância para contextos como architecture.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "architects",
+        "architecture"
+      ],
+      "contextos": [
+        "architecture"
+      ],
+      "emocoes": [
+        "saudade"
+      ],
+      "temas": [
+        "reflexao",
+        "architects",
+        "architecture",
+        "building",
+        "string",
+        "events",
+        "belonging",
+        "together"
+      ],
+      "palavrasChave": [
+        "architects",
+        "architecture",
+        "reflexao",
+        "saudade"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "architects",
+        "architecture",
+        "saudade",
+        "chris-fawcett"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "architects",
+        "architecture",
+        "building",
+        "string",
+        "events"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A building is a string of events belonging together.\" — Chris Fawcett | Metamensagem",
+      "descriptionSeo": "Citação de Chris Fawcett sobre temas ligados a reflexao. “A building is a string of events belonging together.” articula reflexao, architects, architecture em…",
+      "keywordsSeo": [
+        "frases de Chris Fawcett",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases architects",
+        "frases architecture",
+        "architects",
+        "architecture",
+        "reflexao",
+        "saudade"
+      ],
+      "canonicalSlug": "a-building-is-a-string-of-events-belonging-together",
+      "relatedKeywords": [
+        "saudade",
+        "reflexao",
+        "architects",
+        "architecture",
+        "chris-fawcett"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A building is a string of events belonging together.",
+    "autor_original": "Chris Fawcett",
+    "autor_slug": "chris-fawcett",
+    "categoria": "reflexao",
+    "contextos": [
+      "architecture"
+    ],
+    "palavras_chave": [
+      "architects",
+      "architecture",
+      "reflexao",
+      "saudade"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

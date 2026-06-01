@@ -1,0 +1,111 @@
+[
+  {
+    "id": "f_csv_ab1a529b18",
+    "slug": "friendship-is-like-flowers",
+    "texto": "Friendship is like flowers",
+    "autor": "beautiful but delicate.",
+    "autorSlug": "beautiful-but-delicate",
+    "explicacao": "Citação de beautiful but delicate. sobre temas ligados a amizade. “Friendship is like flowers” articula amizade, matshona-dhliwayo, reflexao em registro de amizade, com relevância para contextos como termino e reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "amizade",
+      "categorias": [
+        "amizade",
+        "matshona-dhliwayo",
+        "reflexao"
+      ],
+      "contextos": [
+        "termino",
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "amizade",
+        "matshona-dhliwayo",
+        "reflexao",
+        "friendship",
+        "flowers"
+      ],
+      "palavrasChave": [
+        "matshona-dhliwayo",
+        "reflexao",
+        "amizade",
+        "termino"
+      ],
+      "tagsSeo": [
+        "amizade",
+        "matshona-dhliwayo",
+        "reflexao",
+        "termino",
+        "beautiful-but-delicate"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "amizade",
+        "matshona-dhliwayo",
+        "reflexao",
+        "friendship",
+        "flowers",
+        "amizade"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Friendship is like flowers\" — beautiful but delicate. | Metamensagem",
+      "descriptionSeo": "Citação de beautiful but delicate. sobre temas ligados a amizade. “Friendship is like flowers” articula amizade, matshona-dhliwayo, reflexao em registro de am…",
+      "keywordsSeo": [
+        "frases de beautiful but delicate.",
+        "frases sobre amizade",
+        "frases amizade",
+        "frases matshona dhliwayo",
+        "frases termino",
+        "frases reflexao",
+        "matshona-dhliwayo",
+        "reflexao",
+        "amizade",
+        "termino"
+      ],
+      "canonicalSlug": "friendship-is-like-flowers",
+      "relatedKeywords": [
+        "amizade",
+        "matshona-dhliwayo",
+        "reflexao",
+        "beautiful-but-delicate"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Friendship is like flowers",
+    "autor_original": "beautiful but delicate.",
+    "autor_slug": "beautiful-but-delicate",
+    "categoria": "amizade",
+    "contextos": [
+      "termino",
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "matshona-dhliwayo",
+      "reflexao",
+      "amizade",
+      "termino"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

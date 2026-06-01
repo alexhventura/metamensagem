@@ -1,0 +1,123 @@
+[
+  {
+    "id": "f_csv_6423fcac50",
+    "slug": "a-favorite-film-of-mine-is-office-space-and-i-love-the-hangover-that-is-a-r",
+    "texto": "A favorite film of mine is 'Office Space' and I love 'The Hangover.' That is a really good comedy from character in that film, and that is true of 'Office Space' too.",
+    "autor": "Seth Gordon",
+    "autorSlug": "seth-gordon",
+    "explicacao": "Citação de Seth Gordon sobre vínculos afetivos e cuidado mútuo. “A favorite film of mine is 'Office Space' and I love 'The Hangover.' That is a really good comedy…” articula trabalho, love, good em registro de trabalho, com relevância para contextos como trabalho e good.",
+    "semantica": {
+      "categoriaPrincipal": "trabalho",
+      "categorias": [
+        "trabalho",
+        "love",
+        "good",
+        "character"
+      ],
+      "contextos": [
+        "trabalho",
+        "good",
+        "character"
+      ],
+      "emocoes": [
+        "amor"
+      ],
+      "temas": [
+        "trabalho",
+        "love",
+        "good",
+        "character",
+        "office",
+        "space",
+        "favorite",
+        "hangover"
+      ],
+      "palavrasChave": [
+        "love",
+        "good",
+        "character",
+        "trabalho",
+        "amor"
+      ],
+      "tagsSeo": [
+        "trabalho",
+        "love",
+        "good",
+        "character",
+        "amor",
+        "seth-gordon"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 42,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "trabalho",
+        "love",
+        "good",
+        "character",
+        "office",
+        "space"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"A favorite film of mine is 'Office Space' and I love…\" — Seth Gordon | Metamensagem",
+      "descriptionSeo": "Citação de Seth Gordon sobre vínculos afetivos e cuidado mútuo. “A favorite film of mine is 'Office Space' and I love 'The Hangover.' That is a really good co…",
+      "keywordsSeo": [
+        "frases de Seth Gordon",
+        "frases sobre trabalho",
+        "frases trabalho",
+        "frases love",
+        "frases good",
+        "love",
+        "good",
+        "character",
+        "trabalho"
+      ],
+      "canonicalSlug": "a-favorite-film-of-mine-is-office-space-and-i-love-the-hangover-that-is-a-r",
+      "relatedKeywords": [
+        "amor",
+        "trabalho",
+        "love",
+        "good",
+        "character",
+        "seth-gordon"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "A favorite film of mine is 'Office Space' and I love 'The Hangover.' That is a really good comedy from character in that film, and that is true of 'Office Space' too.",
+    "autor_original": "Seth Gordon",
+    "autor_slug": "seth-gordon",
+    "categoria": "trabalho",
+    "contextos": [
+      "trabalho",
+      "good",
+      "character"
+    ],
+    "palavras_chave": [
+      "love",
+      "good",
+      "character",
+      "trabalho",
+      "amor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

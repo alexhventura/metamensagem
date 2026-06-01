@@ -2,31 +2,130 @@
   {
     "id": "f_7vqt5pc4k",
     "slug": "o-leao-dentro-de-mim-reconhece-o-leao-dentro-de-voce",
+    "texto": "O leão dentro de mim, reconhece o leão dentro de você.",
+    "autor": "Motivação, luta, guerra,transformação,força, fé, determinação,foco, leão",
+    "autorSlug": "motivacao-luta-guerra-transformacao-forca-fe-determinacao-foco-leao",
+    "explicacao": "Frase anônima do arquivo temático sobre força e “leão interior”: reconhecer a mesma coragem no outro. Metáfora de irmandade entre pessoas resilientes. Popular em posts de motivação e espiritualidade de luta.",
+    "semantica": {
+      "categoriaPrincipal": "motivacao",
+      "categorias": [
+        "motivacao",
+        "coragem",
+        "determinacao",
+        "fe",
+        "inspiracional"
+      ],
+      "contextos": [
+        "inspiracao",
+        "determinacao",
+        "fe",
+        "inspiracional",
+        "motivacao"
+      ],
+      "emocoes": [
+        "coragem",
+        "determinacao"
+      ],
+      "temas": [
+        "motivacao",
+        "coragem",
+        "determinacao",
+        "fe",
+        "dentro",
+        "reconhece"
+      ],
+      "palavrasChave": [
+        "coragem",
+        "determinacao",
+        "fe",
+        "inspiracional",
+        "motivacao",
+        "inspiracao"
+      ],
+      "tagsSeo": [
+        "motivacao",
+        "coragem",
+        "determinacao",
+        "fe",
+        "inspiracional",
+        "inspiracao",
+        "motivacao-luta-guerra-transformacao-forca-fe-determinacao-foco-leao"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 35,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "motivacao",
+        "coragem",
+        "determinacao",
+        "fe",
+        "dentro",
+        "reconhece"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"O leão dentro de mim, reconhece o leão dentro de você.\" — Motivação, luta, guerra,transformação,força, fé, determinação,foco, leão | Metamensagem",
+      "descriptionSeo": "Frase anônima do arquivo temático sobre força e “leão interior”: reconhecer a mesma coragem no outro. Metáfora de irmandade entre pessoas resilientes. Popular…",
+      "keywordsSeo": [
+        "frases de Motivação, luta, guerra,transformação,força, fé, determinação,foco, leão",
+        "frases sobre motivacao",
+        "frases motivacao",
+        "frases coragem",
+        "frases inspiracao",
+        "frases determinacao",
+        "coragem",
+        "determinacao",
+        "fe",
+        "inspiracional"
+      ],
+      "canonicalSlug": "o-leao-dentro-de-mim-reconhece-o-leao-dentro-de-voce",
+      "relatedKeywords": [
+        "coragem",
+        "determinacao",
+        "motivacao",
+        "fe",
+        "inspiracional",
+        "motivacao-luta-guerra-transformacao-forca-fe-determinacao-foco-leao"
+      ],
+      "searchIntent": "informacional"
+    },
     "frase_original": "O leão dentro de mim, reconhece o leão dentro de você.",
     "autor_original": "Motivação, luta, guerra,transformação,força, fé, determinação,foco, leão",
-    "categoria": "coragem",
+    "autor_slug": "motivacao-luta-guerra-transformacao-forca-fe-determinacao-foco-leao",
+    "categoria": "motivacao",
     "contextos": [
+      "inspiracao",
       "determinacao",
       "fe",
       "inspiracional",
       "motivacao"
     ],
-    "explicacao": "Frase anônima do arquivo temático sobre força e “leão interior”: reconhecer a mesma coragem no outro. Metáfora de irmandade entre pessoas resilientes. Popular em posts de motivação e espiritualidade de luta.",
     "palavras_chave": [
       "coragem",
       "determinacao",
       "fe",
       "inspiracional",
-      "motivacao"
+      "motivacao",
+      "inspiracao"
     ],
+    "ano_ou_data": null,
     "autor_tipo": null,
     "nacionalidade": null,
     "nascimento_falecimento": null,
-    "ano_ou_data": null,
+    "fontes": null,
     "informacoes": {
-      "ultima_atualizacao": "2026-05-28",
-      "confiabilidade": null,
-      "explicacao_gerada_por_ia": true
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "importado",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
     }
   }
 ]

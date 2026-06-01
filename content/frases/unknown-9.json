@@ -1,0 +1,113 @@
+[
+  {
+    "id": "f_csv_2fbb8855ea",
+    "slug": "some-people-are-wise-and-some-are-otherwise",
+    "texto": "Some People Are Wise, And Some Are Otherwise.",
+    "autor": "Unknown 9",
+    "autorSlug": "unknown-9",
+    "explicacao": "Citação de Unknown 9 sobre temas ligados a sabedoria. “Some People Are Wise, And Some Are Otherwise.” articula sabedoria, morals, people em registro de sabedoria, com relevância para contextos como people e sabedoria.",
+    "semantica": {
+      "categoriaPrincipal": "sabedoria",
+      "categorias": [
+        "sabedoria",
+        "morals",
+        "people",
+        "wise"
+      ],
+      "contextos": [
+        "people",
+        "sabedoria",
+        "wise"
+      ],
+      "emocoes": [],
+      "temas": [
+        "sabedoria",
+        "morals",
+        "people",
+        "otherwise"
+      ],
+      "palavrasChave": [
+        "morals",
+        "people",
+        "sabedoria",
+        "wise"
+      ],
+      "tagsSeo": [
+        "sabedoria",
+        "morals",
+        "people",
+        "wise",
+        "unknown-9"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "sabedoria",
+        "morals",
+        "people",
+        "otherwise",
+        "sabedoria",
+        "morals"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Some People Are Wise, And Some Are Otherwise.\" — Unknown 9 | Metamensagem",
+      "descriptionSeo": "Citação de Unknown 9 sobre temas ligados a sabedoria. “Some People Are Wise, And Some Are Otherwise.” articula sabedoria, morals, people em registro de sabedo…",
+      "keywordsSeo": [
+        "frases de Unknown 9",
+        "frases sobre sabedoria",
+        "frases sabedoria",
+        "frases morals",
+        "frases people",
+        "morals",
+        "people",
+        "sabedoria",
+        "wise"
+      ],
+      "canonicalSlug": "some-people-are-wise-and-some-are-otherwise",
+      "relatedKeywords": [
+        "sabedoria",
+        "morals",
+        "people",
+        "wise",
+        "unknown-9"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Some People Are Wise, And Some Are Otherwise.",
+    "autor_original": "Unknown 9",
+    "autor_slug": "unknown-9",
+    "categoria": "sabedoria",
+    "contextos": [
+      "people",
+      "sabedoria",
+      "wise"
+    ],
+    "palavras_chave": [
+      "morals",
+      "people",
+      "sabedoria",
+      "wise"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

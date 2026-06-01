@@ -1,0 +1,115 @@
+[
+  {
+    "id": "f_csv_1472ee13a7",
+    "slug": "some-are-professors-and-others-are-possessors",
+    "texto": "Some are professors and others are possessors.",
+    "autor": "Lawrence Kennedy",
+    "autorSlug": "lawrence-kennedy",
+    "explicacao": "Citação de Lawrence Kennedy sobre temas ligados a fe. “Some are professors and others are possessors.” articula fe, faith, kingdom em registro de fe, com relevância para contextos como kingdom e overcoming.",
+    "semantica": {
+      "categoriaPrincipal": "fe",
+      "categorias": [
+        "fe",
+        "faith",
+        "kingdom",
+        "overcoming"
+      ],
+      "contextos": [
+        "kingdom",
+        "overcoming"
+      ],
+      "emocoes": [],
+      "temas": [
+        "fe",
+        "faith",
+        "kingdom",
+        "overcoming",
+        "professors",
+        "others",
+        "possessors"
+      ],
+      "palavrasChave": [
+        "faith",
+        "kingdom",
+        "overcoming",
+        "fe"
+      ],
+      "tagsSeo": [
+        "fe",
+        "faith",
+        "kingdom",
+        "overcoming",
+        "lawrence-kennedy"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 30,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "fe",
+        "faith",
+        "kingdom",
+        "overcoming",
+        "professors",
+        "others"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Some are professors and others are possessors.\" — Lawrence Kennedy | Metamensagem",
+      "descriptionSeo": "Citação de Lawrence Kennedy sobre temas ligados a fe. “Some are professors and others are possessors.” articula fe, faith, kingdom em registro de fe, com rele…",
+      "keywordsSeo": [
+        "frases de Lawrence Kennedy",
+        "frases sobre fe",
+        "frases fe",
+        "frases faith",
+        "frases kingdom",
+        "frases overcoming",
+        "faith",
+        "kingdom",
+        "overcoming",
+        "fe"
+      ],
+      "canonicalSlug": "some-are-professors-and-others-are-possessors",
+      "relatedKeywords": [
+        "fe",
+        "faith",
+        "kingdom",
+        "overcoming",
+        "lawrence-kennedy"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Some are professors and others are possessors.",
+    "autor_original": "Lawrence Kennedy",
+    "autor_slug": "lawrence-kennedy",
+    "categoria": "fe",
+    "contextos": [
+      "kingdom",
+      "overcoming"
+    ],
+    "palavras_chave": [
+      "faith",
+      "kingdom",
+      "overcoming",
+      "fe"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

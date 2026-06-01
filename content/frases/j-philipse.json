@@ -1,0 +1,124 @@
+[
+  {
+    "id": "f_csv_256c79b802",
+    "slug": "intellegence-is-a-disease",
+    "texto": "Intellegence is a disease",
+    "autor": "J. Philipse",
+    "autorSlug": "j-philipse",
+    "explicacao": "Citação de J. Philipse sobre temas ligados a saude mental. “Intellegence is a disease” articula saude-mental, depressed, disease em registro de saude mental, com relevância para contextos como disease e intellegence.",
+    "semantica": {
+      "categoriaPrincipal": "saude-mental",
+      "categorias": [
+        "saude-mental",
+        "depressed",
+        "disease",
+        "intellegence",
+        "mental-illness"
+      ],
+      "contextos": [
+        "disease",
+        "intellegence",
+        "mental-illness",
+        "phylosiphical"
+      ],
+      "emocoes": [],
+      "temas": [
+        "saude-mental",
+        "depressed",
+        "disease",
+        "intellegence"
+      ],
+      "palavrasChave": [
+        "depressed",
+        "disease",
+        "intellegence",
+        "mental-illness",
+        "phylosiphical",
+        "saude-mental"
+      ],
+      "tagsSeo": [
+        "saude-mental",
+        "depressed",
+        "disease",
+        "intellegence",
+        "mental-illness",
+        "phylosiphical",
+        "j-philipse"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "saude-mental",
+        "depressed",
+        "disease",
+        "intellegence",
+        "saude-mental",
+        "depressed"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Intellegence is a disease\" — J. Philipse | Metamensagem",
+      "descriptionSeo": "Citação de J. Philipse sobre temas ligados a saude mental. “Intellegence is a disease” articula saude-mental, depressed, disease em registro de saude mental,…",
+      "keywordsSeo": [
+        "frases de J. Philipse",
+        "frases sobre saude mental",
+        "frases saude mental",
+        "frases depressed",
+        "frases disease",
+        "frases intellegence",
+        "depressed",
+        "disease",
+        "intellegence",
+        "mental-illness"
+      ],
+      "canonicalSlug": "intellegence-is-a-disease",
+      "relatedKeywords": [
+        "saude-mental",
+        "depressed",
+        "disease",
+        "intellegence",
+        "mental-illness",
+        "j-philipse"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Intellegence is a disease",
+    "autor_original": "J. Philipse",
+    "autor_slug": "j-philipse",
+    "categoria": "saude-mental",
+    "contextos": [
+      "disease",
+      "intellegence",
+      "mental-illness",
+      "phylosiphical"
+    ],
+    "palavras_chave": [
+      "depressed",
+      "disease",
+      "intellegence",
+      "mental-illness",
+      "phylosiphical",
+      "saude-mental"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

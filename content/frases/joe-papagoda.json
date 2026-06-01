@@ -1,0 +1,123 @@
+[
+  {
+    "id": "f_csv_1a5f54f982",
+    "slug": "art-is-unpredictable",
+    "texto": "Art is unpredictable.",
+    "autor": "Joe Papagoda",
+    "autorSlug": "joe-papagoda",
+    "explicacao": "Citação de Joe Papagoda sobre temas ligados a familia. “Art is unpredictable.” articula familia, art, artist-quotes em registro de familia, com relevância para contextos como artist-quotes e joe-papagoda.",
+    "semantica": {
+      "categoriaPrincipal": "familia",
+      "categorias": [
+        "familia",
+        "art",
+        "artist-quotes",
+        "joe-papagoda",
+        "painting"
+      ],
+      "contextos": [
+        "artist-quotes",
+        "joe-papagoda",
+        "painting",
+        "photography"
+      ],
+      "emocoes": [],
+      "temas": [
+        "familia",
+        "art",
+        "artist-quotes",
+        "joe-papagoda",
+        "unpredictable"
+      ],
+      "palavrasChave": [
+        "art",
+        "artist-quotes",
+        "joe-papagoda",
+        "painting",
+        "photography",
+        "familia"
+      ],
+      "tagsSeo": [
+        "familia",
+        "art",
+        "artist-quotes",
+        "joe-papagoda",
+        "painting",
+        "photography"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 32,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "familia",
+        "art",
+        "artist-quotes",
+        "joe-papagoda",
+        "unpredictable",
+        "familia"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Art is unpredictable.\" — Joe Papagoda | Metamensagem",
+      "descriptionSeo": "Citação de Joe Papagoda sobre temas ligados a familia. “Art is unpredictable.” articula familia, art, artist-quotes em registro de familia, com relevância par…",
+      "keywordsSeo": [
+        "frases de Joe Papagoda",
+        "frases sobre familia",
+        "frases familia",
+        "frases art",
+        "frases artist quotes",
+        "frases joe papagoda",
+        "art",
+        "artist-quotes",
+        "joe-papagoda",
+        "painting"
+      ],
+      "canonicalSlug": "art-is-unpredictable",
+      "relatedKeywords": [
+        "familia",
+        "art",
+        "artist-quotes",
+        "joe-papagoda",
+        "painting"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Art is unpredictable.",
+    "autor_original": "Joe Papagoda",
+    "autor_slug": "joe-papagoda",
+    "categoria": "familia",
+    "contextos": [
+      "artist-quotes",
+      "joe-papagoda",
+      "painting",
+      "photography"
+    ],
+    "palavras_chave": [
+      "art",
+      "artist-quotes",
+      "joe-papagoda",
+      "painting",
+      "photography",
+      "familia"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

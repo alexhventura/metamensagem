@@ -1,0 +1,98 @@
+[
+  {
+    "id": "f_csv_d343dd398c",
+    "slug": "weird-is-just-a-side-effect-of-being-awesome",
+    "texto": "Weird is just a side-effect of being awesome!",
+    "autor": "Jean Gilbert",
+    "autorSlug": "jean-gilbert",
+    "explicacao": "Citação de Jean Gilbert sobre temas ligados a reflexao. “Weird is just a side-effect of being awesome!” articula reflexao, humorous, weird em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "humorous"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "humorous",
+        "weird",
+        "effect",
+        "being",
+        "awesome"
+      ],
+      "palavrasChave": [
+        "humorous",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "humorous",
+        "jean-gilbert"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 28,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "humorous",
+        "weird",
+        "effect",
+        "being",
+        "awesome"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Weird is just a side-effect of being awesome!\" — Jean Gilbert | Metamensagem",
+      "descriptionSeo": "Citação de Jean Gilbert sobre temas ligados a reflexao. “Weird is just a side-effect of being awesome!” articula reflexao, humorous, weird em registro de refl…",
+      "keywordsSeo": [
+        "frases de Jean Gilbert",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases humorous",
+        "humorous",
+        "reflexao"
+      ],
+      "canonicalSlug": "weird-is-just-a-side-effect-of-being-awesome",
+      "relatedKeywords": [
+        "reflexao",
+        "humorous",
+        "jean-gilbert"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Weird is just a side-effect of being awesome!",
+    "autor_original": "Jean Gilbert",
+    "autor_slug": "jean-gilbert",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "humorous",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

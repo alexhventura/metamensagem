@@ -1,0 +1,96 @@
+[
+  {
+    "id": "f_csv_5056d93e4b",
+    "slug": "some-blind-faithfully",
+    "texto": "Some blind faithfully",
+    "autor": "some see.",
+    "autorSlug": "some-see",
+    "explicacao": "Citação de some see. sobre temas ligados a reflexao. “Some blind faithfully” articula reflexao, t-f-hodge, blind em registro de reflexao, com relevância para contextos como reflexao.",
+    "semantica": {
+      "categoriaPrincipal": "reflexao",
+      "categorias": [
+        "reflexao",
+        "t-f-hodge"
+      ],
+      "contextos": [
+        "reflexao"
+      ],
+      "emocoes": [],
+      "temas": [
+        "reflexao",
+        "t-f-hodge",
+        "blind",
+        "faithfully"
+      ],
+      "palavrasChave": [
+        "t-f-hodge",
+        "reflexao"
+      ],
+      "tagsSeo": [
+        "reflexao",
+        "t-f-hodge",
+        "some-see"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "reflexao",
+        "t-f-hodge",
+        "blind",
+        "faithfully",
+        "reflexao",
+        "t-f-hodge"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Some blind faithfully\" — some see. | Metamensagem",
+      "descriptionSeo": "Citação de some see. sobre temas ligados a reflexao. “Some blind faithfully” articula reflexao, t-f-hodge, blind em registro de reflexao, com relevância para…",
+      "keywordsSeo": [
+        "frases de some see.",
+        "frases sobre reflexao",
+        "frases reflexao",
+        "frases t f hodge",
+        "t-f-hodge",
+        "reflexao"
+      ],
+      "canonicalSlug": "some-blind-faithfully",
+      "relatedKeywords": [
+        "reflexao",
+        "t-f-hodge",
+        "some-see"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Some blind faithfully",
+    "autor_original": "some see.",
+    "autor_slug": "some-see",
+    "categoria": "reflexao",
+    "contextos": [
+      "reflexao"
+    ],
+    "palavras_chave": [
+      "t-f-hodge",
+      "reflexao"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

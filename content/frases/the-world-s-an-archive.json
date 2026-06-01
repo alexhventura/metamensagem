@@ -1,0 +1,105 @@
+[
+  {
+    "id": "f_csv_07d766215c",
+    "slug": "everyone-today-has-a-story",
+    "texto": "Everyone today has a story",
+    "autor": "the world’s an archive.",
+    "autorSlug": "the-world-s-an-archive",
+    "explicacao": "Citação de the world’s an archive. sobre temas ligados a tempo. “Everyone today has a story” articula tempo, anne-rice, the-wolf-gift em registro de tempo, com relevância para contextos como the-wolf-gift.",
+    "semantica": {
+      "categoriaPrincipal": "tempo",
+      "categorias": [
+        "tempo",
+        "anne-rice",
+        "the-wolf-gift"
+      ],
+      "contextos": [
+        "the-wolf-gift"
+      ],
+      "emocoes": [],
+      "temas": [
+        "tempo",
+        "anne-rice",
+        "the-wolf-gift",
+        "everyone",
+        "today",
+        "story"
+      ],
+      "palavrasChave": [
+        "anne-rice",
+        "the-wolf-gift",
+        "tempo"
+      ],
+      "tagsSeo": [
+        "tempo",
+        "anne-rice",
+        "the-wolf-gift",
+        "the-world-s-an-archive"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 26,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "tempo",
+        "anne-rice",
+        "the-wolf-gift",
+        "everyone",
+        "today",
+        "story"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Everyone today has a story\" — the world’s an archive. | Metamensagem",
+      "descriptionSeo": "Citação de the world’s an archive. sobre temas ligados a tempo. “Everyone today has a story” articula tempo, anne-rice, the-wolf-gift em registro de tempo, co…",
+      "keywordsSeo": [
+        "frases de the world’s an archive.",
+        "frases sobre tempo",
+        "frases tempo",
+        "frases anne rice",
+        "frases the wolf gift",
+        "anne-rice",
+        "the-wolf-gift",
+        "tempo"
+      ],
+      "canonicalSlug": "everyone-today-has-a-story",
+      "relatedKeywords": [
+        "tempo",
+        "anne-rice",
+        "the-wolf-gift",
+        "the-world-s-an-archive"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Everyone today has a story",
+    "autor_original": "the world’s an archive.",
+    "autor_slug": "the-world-s-an-archive",
+    "categoria": "tempo",
+    "contextos": [
+      "the-wolf-gift"
+    ],
+    "palavras_chave": [
+      "anne-rice",
+      "the-wolf-gift",
+      "tempo"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

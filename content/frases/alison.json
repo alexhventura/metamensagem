@@ -1,0 +1,105 @@
+[
+  {
+    "id": "f_csv_d626bd030c",
+    "slug": "its-batteries-i-just-know-it",
+    "texto": "Its Batteries! I just know it!",
+    "autor": "Alison",
+    "autorSlug": "alison",
+    "explicacao": "Citação de Alison sobre temas ligados a humor. “Its Batteries! I just know it!” articula humor, cute, funny em registro de humor, com relevância para contextos como funny e humor.",
+    "semantica": {
+      "categoriaPrincipal": "humor",
+      "categorias": [
+        "humor",
+        "cute",
+        "funny"
+      ],
+      "contextos": [
+        "funny",
+        "humor"
+      ],
+      "emocoes": [],
+      "temas": [
+        "humor",
+        "cute",
+        "funny",
+        "batteries"
+      ],
+      "palavrasChave": [
+        "cute",
+        "funny",
+        "humor"
+      ],
+      "tagsSeo": [
+        "humor",
+        "cute",
+        "funny",
+        "alison"
+      ],
+      "idiomaOriginal": "en",
+      "ano": null,
+      "periodoHistorico": null,
+      "nacionalidadeAutor": null,
+      "nascimentoAutor": null,
+      "falecimentoAutor": null,
+      "tipoAutor": null,
+      "popularidade": 29,
+      "fonte": null,
+      "ultimaAtualizacao": "2026-06-01",
+      "frasesRelacionadas": [
+        "humor",
+        "cute",
+        "funny",
+        "batteries",
+        "humor",
+        "cute"
+      ],
+      "biografiaAutorCurta": null
+    },
+    "seo": {
+      "titleSeo": "\"Its Batteries! I just know it!\" — Alison | Metamensagem",
+      "descriptionSeo": "Citação de Alison sobre temas ligados a humor. “Its Batteries! I just know it!” articula humor, cute, funny em registro de humor, com relevância para contexto…",
+      "keywordsSeo": [
+        "frases de Alison",
+        "frases sobre humor",
+        "frases humor",
+        "frases cute",
+        "frases funny",
+        "cute",
+        "funny",
+        "humor"
+      ],
+      "canonicalSlug": "its-batteries-i-just-know-it",
+      "relatedKeywords": [
+        "humor",
+        "cute",
+        "funny",
+        "alison"
+      ],
+      "searchIntent": "informacional"
+    },
+    "frase_original": "Its Batteries! I just know it!",
+    "autor_original": "Alison",
+    "autor_slug": "alison",
+    "categoria": "humor",
+    "contextos": [
+      "funny",
+      "humor"
+    ],
+    "palavras_chave": [
+      "cute",
+      "funny",
+      "humor"
+    ],
+    "ano_ou_data": null,
+    "autor_tipo": null,
+    "nacionalidade": null,
+    "nascimento_falecimento": null,
+    "fontes": null,
+    "informacoes": {
+      "ultima_atualizacao": "2026-06-01",
+      "confiabilidade": "alta",
+      "curadoria_ia": false,
+      "enriquecimento_fase2": true
+    }
+  }
+]

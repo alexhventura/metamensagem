@@ -3,6 +3,7 @@
  */
 
 import type { ItemConteudo } from '../types/content';
+import { CATALOG_FRASES_LIST_CAP } from './catalogLimits';
 import { sanitizeContentBanco } from './safeContent';
 import { buildTagRegistry } from './tagsSeo';
 import { primeFrasesCms, fraseToListItem } from './frasesModel';
@@ -22,8 +23,18 @@ export interface CatalogLoadResult {
   tags: string[];
 }
 
+function schedulePrimeFrasesCms(cms: Parameters<typeof primeFrasesCms>[0]): void {
+  const run = () => primeFrasesCms(cms);
+  if (typeof requestIdleCallback === 'function') {
+    requestIdleCallback(run, { timeout: 4000 });
+  } else {
+    setTimeout(run, 0);
+  }
+}
+
 function frasesRawToCms(frasesRaw: unknown[]) {
-  const frasesFeed = sanitizeContentBanco(frasesRaw);
+  const capped = Array.isArray(frasesRaw) ? frasesRaw.slice(0, CATALOG_FRASES_LIST_CAP) : [];
+  const frasesFeed = sanitizeContentBanco(capped);
   if (!frasesFeed.length) return [];
   const cms = frasesFeed.map((f) => ({
     id: String(f.id),
@@ -41,7 +52,7 @@ function frasesRawToCms(frasesRaw: unknown[]) {
     nacionalidade: null,
     nascimento_falecimento: null,
   }));
-  primeFrasesCms(cms);
+  schedulePrimeFrasesCms(cms);
   return frasesFeed as ItemConteudo[];
 }
 
@@ -93,18 +104,14 @@ export async function loadFullCatalog(): Promise<CatalogLoadResult> {
   return mergeCatalog(data[0], data[1]);
 }
 
-export function scheduleCatalogPrefetch(onReady: (result: CatalogLoadResult) => void): void {
-  const run = () => {
-    loadFullCatalog()
-      .then(onReady)
-      .catch((e) => console.warn('Prefetch catálogo:', e));
-  };
+let fullCatalogPromise: Promise<CatalogLoadResult> | null = null;
 
-  if (typeof requestIdleCallback === 'function') {
-    requestIdleCallback(run, { timeout: 8000 });
-  } else {
-    setTimeout(run, 1200);
+/** Uma única carga do catálogo completo (feed-sample + metáforas). */
+export function ensureFullCatalogLoaded(): Promise<CatalogLoadResult> {
+  if (!fullCatalogPromise) {
+    fullCatalogPromise = loadFullCatalog();
   }
+  return fullCatalogPromise;
 }
 
 /** Legado: frases-cms só para rotas /frases quando feed/shards falham. */

@@ -399,7 +399,7 @@ export default function FraseDetalheView({
                         : [frase.categoria, ...frase.contextos],
                       categoria: frase.categoria,
                       slug: frase.slug,
-                      locale,
+                      locale: contentLocale,
                     })
                   }
                   className={cardImageBtnClass('purple')}

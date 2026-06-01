@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useRef, useMemo, lazy, Suspense } from 'react';
+﻿import React, { useState, useEffect, useRef, useMemo, useCallback, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Link, useParams, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -35,7 +35,8 @@ const ImageGeneratorModal = lazy(() => import('./components/image-generator'));
 import { quoteFromItem } from './components/image-generator/utils/quoteFromItem';
 import GoogleAdSense from './components/GoogleAdSense';
 import AdSlot from './components/AdSlot';
-import { loadHomeBootstrap, scheduleCatalogPrefetch } from './lib/homeData';
+import { loadHomeBootstrap, ensureFullCatalogLoaded, type CatalogLoadResult } from './lib/homeData';
+import { HOME_FRASE_POOL_SIZE, pathNeedsFullCatalog, sampleShuffled } from './lib/catalogLimits';
 import { CardTranslateMenu } from './components/CardTranslateMenu';
 import { type CardContentDisplay } from './lib/translation';
 import { useTranslatedViewMeta } from './lib/useTranslatedViewMeta';
@@ -99,15 +100,6 @@ export default function App() {
   const [tagsBootstrap, setTagsBootstrap] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const shuffleArray = (array: any[]) => {
-    const newArr = [...array];
-    for (let i = newArr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
-    }
-    return newArr;
-  };
-  
   const mostrarToast = (mensagem: string, tipo: 'sucesso' | 'info' | 'erro' = 'sucesso') => {
     setToast({ mensagem, tipo });
     setTimeout(() => setToast(null), 3000);
@@ -125,26 +117,45 @@ export default function App() {
         const boot = await loadHomeBootstrap();
         if (cancelled) return;
         setBancoTotal(boot.items);
-        setBancoRandom(shuffleArray(boot.items.filter((i) => i.tipo === 'frase')));
+        setBancoRandom(
+          sampleShuffled(
+            boot.items.filter((i) => i.tipo === 'frase'),
+            HOME_FRASE_POOL_SIZE
+          )
+        );
         setTagsBootstrap(boot.tags);
       } catch (e) {
         console.error('Falha ao carregar home-bootstrap', e);
       } finally {
         if (!cancelled) setLoading(false);
       }
-      scheduleCatalogPrefetch((full) => {
-        if (cancelled) return;
-        setBancoTotal(full.items);
-        setBancoRandom(shuffleArray(full.items.filter((i) => i.tipo === 'frase')));
-        setTagsBootstrap(full.tags);
-      });
     })();
     return () => {
       cancelled = true;
     };
   }, []);
 
-  const tagRegistry = useMemo(() => buildTagRegistry(bancoTotal), [bancoTotal]);
+  const applyFullCatalog = useCallback((full: CatalogLoadResult) => {
+    setBancoTotal(full.items);
+    setBancoRandom(
+      sampleShuffled(
+        full.items.filter((i) => i.tipo === 'frase'),
+        HOME_FRASE_POOL_SIZE
+      )
+    );
+    setTagsBootstrap(full.tags);
+  }, []);
+
+  const requestFullCatalog = useCallback(() => {
+    ensureFullCatalogLoaded()
+      .then(applyFullCatalog)
+      .catch((e) => console.warn('Catálogo:', e));
+  }, [applyFullCatalog]);
+
+  const tagRegistry = useMemo(
+    () => (bancoTotal.length ? buildTagRegistry(bancoTotal) : []),
+    [bancoTotal]
+  );
 
   const tagsUnicas = useMemo(() => {
     const fromRegistry = tagRegistry.map((r) => r.tag);
@@ -153,6 +164,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <CatalogRouteSync applyCatalog={applyFullCatalog} />
       <UiLocaleSync />
       {/* Layout raiz (equiv. app/layout.tsx): script global AdSense Auto Ads */}
       <GoogleAdSense />
@@ -250,7 +262,18 @@ export default function App() {
               }
             >
               <Routes>
-                <Route path="/" element={<HomeView tema={tema} toast={mostrarToast} banco={bancoTotal} bancoRandom={bancoRandom} />} />
+                <Route
+                  path="/"
+                  element={
+                    <HomeView
+                      tema={tema}
+                      toast={mostrarToast}
+                      banco={bancoTotal}
+                      bancoRandom={bancoRandom}
+                      onRequestCatalog={requestFullCatalog}
+                    />
+                  }
+                />
                 <Route path="/frases" element={<FrasesView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
                 <Route path="/frases/:slug" element={<FraseDetalheView tema={tema} toast={mostrarToast} />} />
                 {SEO_LOCALES.map((lang) => (
@@ -406,6 +429,30 @@ function MudarMetaSEO({
 }
 
 /** Logo + Metamensagem: na home = F5; noutras rotas = recarrega indo para /. */
+/** Carrega feed-sample só em rotas que precisam (evita parse de ~1,5 MB na home durante Lighthouse). */
+function CatalogRouteSync({
+  applyCatalog,
+}: {
+  applyCatalog: (full: CatalogLoadResult) => void;
+}) {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!pathNeedsFullCatalog(location.pathname)) return;
+    let cancelled = false;
+    ensureFullCatalogLoaded()
+      .then((full) => {
+        if (!cancelled) applyCatalog(full);
+      })
+      .catch((e) => console.warn('Catálogo (rota):', e));
+    return () => {
+      cancelled = true;
+    };
+  }, [location.pathname, applyCatalog]);
+
+  return null;
+}
+
 function HeaderBrandButton() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -444,10 +491,26 @@ function HeaderBrandButton() {
 // ===================================================
 // VISÒO: HOME (CONSUMO DE INDEX)
 // ===================================================
-function HomeView({ tema, toast, banco, bancoRandom }: { tema: string; toast: any; banco: ItemConteudo[]; bancoRandom: ItemConteudo[] }) {
+function HomeView({
+  tema,
+  toast,
+  banco,
+  bancoRandom,
+  onRequestCatalog,
+}: {
+  tema: string;
+  toast: any;
+  banco: ItemConteudo[];
+  bancoRandom: ItemConteudo[];
+  onRequestCatalog?: () => void;
+}) {
   const { t } = useTranslation();
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(10);
+
+  useEffect(() => {
+    if (busca.trim()) onRequestCatalog?.();
+  }, [busca, onRequestCatalog]);
   const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
   const bancoFrases = useMemo(() => banco.filter((i) => i.tipo === 'frase'), [banco]);
   const bancoRandomFrases = useMemo(
@@ -644,10 +707,14 @@ function ColecaoContador({
 // ===================================================
 // VISÒO: LISTA DE FRASES
 // ===================================================
+const LIST_PAGE_INITIAL = 24;
+const LIST_PAGE_STEP = 16;
+
 function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: ItemConteudo[] }) {
   const { t } = useTranslation();
   const [totalAcervo, setTotalAcervo] = useState(0);
   const [busca, setBusca] = useState('');
+  const [itensVisiveis, setItensVisiveis] = useState(LIST_PAGE_INITIAL);
 
   useEffect(() => {
     let cancelled = false;
@@ -660,27 +727,30 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
   }, []);
   const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
   const baseFrases = useMemo(() => {
-    const list = banco.filter(i => i.tipo === 'frase');
-    const newArr = [...list];
-    for (let i = newArr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
-    }
-    return newArr;
+    const list = banco.filter((i) => i.tipo === 'frase');
+    return sampleShuffled(list, list.length);
   }, [banco]);
 
   const frases = useMemo(() => {
     if (!busca.trim()) return baseFrases;
-      return searchBancoSemantico(baseFrases, busca);
-    }, [busca, baseFrases]);
+    return searchBancoSemantico(baseFrases, busca);
+  }, [busca, baseFrases]);
+
+  useEffect(() => {
+    setItensVisiveis(LIST_PAGE_INITIAL);
+  }, [busca]);
 
   const tags = useMemo(() => {
     return Array.from(new Set(baseFrases.flatMap(f => f.tags || []))).sort().slice(0, 10);
   }, [baseFrases]);
 
   const itensFrases = useMemo(
-    () => flattenFeedWithAds(frases, (content) => ({ tipoItem: 'conteudo', content })),
-    [frases]
+    () =>
+      flattenFeedWithAds(frases.slice(0, itensVisiveis), (content) => ({
+        tipoItem: 'conteudo',
+        content,
+      })),
+    [frases, itensVisiveis]
   );
 
   return (
@@ -713,7 +783,10 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
             type="text" 
             placeholder={t('frases.search_placeholder')}
             value={busca}
-            onChange={e => setBusca(e.target.value)}
+            onChange={(e) => {
+              setBusca(e.target.value);
+              setItensVisiveis(LIST_PAGE_INITIAL);
+            }}
             className={`w-full py-4 pl-14 pr-6 rounded-2xl border-2 font-medium outline-none transition-all ${
               tema === 'light' ? 'bg-white border-zinc-100 text-black focus:border-[#A855F7]' : 'bg-zinc-900 border-zinc-800 text-white focus:border-[#A855F7]'
             }`}
@@ -747,6 +820,16 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
           );
         })}
       </div>
+
+      {frases.length > itensVisiveis && (
+        <button
+          type="button"
+          onClick={() => setItensVisiveis((p) => p + LIST_PAGE_STEP)}
+          className="w-full mt-10 py-5 bg-transparent border-2 border-dashed border-zinc-800 rounded-[2rem] text-xs font-black uppercase tracking-widest text-zinc-500 hover:text-white hover:border-[#A855F7] hover:bg-[#A855F7]/5 transition-all"
+        >
+          {t('home.explore_more')}
+        </button>
+      )}
       
       <SocialHub tema={tema} />
 
@@ -769,6 +852,7 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
 function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco: ItemConteudo[] }) {
   const { t } = useTranslation();
   const [busca, setBusca] = useState('');
+  const [itensVisiveis, setItensVisiveis] = useState(LIST_PAGE_INITIAL);
   const baseMetaforas = useMemo(() => filtrarMetaforasDoBanco(banco), [banco]);
 
   const metaforas = useMemo(() => {
@@ -776,13 +860,21 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
     return searchBancoSemantico(baseMetaforas, busca);
   }, [busca, baseMetaforas]);
 
+  useEffect(() => {
+    setItensVisiveis(LIST_PAGE_INITIAL);
+  }, [busca]);
+
   const tags = useMemo(() => {
     return Array.from(new Set(baseMetaforas.flatMap(m => m.tags || []))).sort().slice(0, 10);
   }, [baseMetaforas]);
 
   const itensMetaforas = useMemo(
-    () => flattenFeedWithAds(metaforas, (content) => ({ tipoItem: 'conteudo', content })),
-    [metaforas]
+    () =>
+      flattenFeedWithAds(metaforas.slice(0, itensVisiveis), (content) => ({
+        tipoItem: 'conteudo',
+        content,
+      })),
+    [metaforas, itensVisiveis]
   );
 
   return (
@@ -815,7 +907,10 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
             type="text" 
             placeholder={t('metaforas.search_placeholder')}
             value={busca}
-            onChange={e => setBusca(e.target.value)}
+            onChange={(e) => {
+              setBusca(e.target.value);
+              setItensVisiveis(LIST_PAGE_INITIAL);
+            }}
             className={`w-full py-4 pl-14 pr-6 rounded-2xl border-2 font-medium outline-none transition-all ${
               tema === 'light' ? 'bg-white border-zinc-100 text-black focus:border-[#A855F7]' : 'bg-zinc-900 border-zinc-800 text-white focus:border-[#A855F7]'
             }`}
@@ -847,9 +942,19 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
             />
           );
         })}
-     </div>
+      </div>
 
-     <SocialHub tema={tema} />
+      {metaforas.length > itensVisiveis && (
+        <button
+          type="button"
+          onClick={() => setItensVisiveis((p) => p + LIST_PAGE_STEP)}
+          className="w-full mt-10 py-5 bg-transparent border-2 border-dashed border-zinc-800 rounded-[2rem] text-xs font-black uppercase tracking-widest text-zinc-500 hover:text-white hover:border-[#A855F7] hover:bg-[#A855F7]/5 transition-all"
+        >
+          {t('home.explore_more')}
+        </button>
+      )}
+
+      <SocialHub tema={tema} />
     </motion.div>
   );
 }

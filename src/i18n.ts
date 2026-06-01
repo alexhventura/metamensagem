@@ -1,7 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { de, hi, it, ja } from './i18n/extraLocales';
-import { resolveUiLocale } from './lib/uiLocale';
+import { matchSupportedUiLocale, resolveUiLocale } from './lib/uiLocale';
 
 const resources = {
   pt: {
@@ -300,8 +300,17 @@ const resources = {
   hi,
 };
 
+declare global {
+  interface Window {
+    __MM_UI_LOCALE__?: string;
+  }
+}
+
 const initialUiLocale =
-  typeof window !== 'undefined' ? resolveUiLocale(window.location.pathname) : 'en';
+  typeof window !== 'undefined'
+    ? (matchSupportedUiLocale(window.__MM_UI_LOCALE__) ??
+        resolveUiLocale(window.location.pathname))
+    : 'en';
 
 i18n.use(initReactI18next).init({
   resources,

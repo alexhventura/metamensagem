@@ -12,3 +12,5 @@ coverage/
 public/frases-cms.json
 public/frases-index.json
 content/frases/frases.json
+
+.vercel

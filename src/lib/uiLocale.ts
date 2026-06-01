@@ -32,8 +32,6 @@ export function resolveUiLocale(pathname: string = '/'): UiLocale {
   if (typeof localStorage !== 'undefined') {
     const stored = matchSupportedUiLocale(localStorage.getItem(LANG_STORAGE_KEY));
     if (stored) return stored;
-    const legacy = matchSupportedUiLocale(localStorage.getItem('i18nextLng'));
-    if (legacy) return legacy;
   }
 
   const fromNav = matchSupportedUiLocale(normalizeNavigatorLocale());

@@ -31,9 +31,9 @@ export function loadAdSenseWhenIdle(): void {
     injectScript().catch(() => {});
   };
   if (typeof requestIdleCallback === 'function') {
-    requestIdleCallback(run, { timeout: 5000 });
+    requestIdleCallback(run, { timeout: 12000 });
   } else {
-    setTimeout(run, 2500);
+    setTimeout(run, 4000);
   }
 }
 

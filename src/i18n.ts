@@ -2,17 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { de, hi, it, ja } from './i18n/extraLocales';
-import { resolveUiLocale, uiLocaleFromPathname } from './lib/uiLocale';
-
-const pathLocaleDetector = {
-  name: 'path',
-  lookup() {
-    if (typeof window === 'undefined') return undefined;
-    return uiLocaleFromPathname(window.location.pathname) ?? undefined;
-  },
-};
-
-LanguageDetector.addDetector(pathLocaleDetector);
+import { resolveUiLocale } from './lib/uiLocale';
 
 const resources = {
   pt: {
@@ -328,7 +318,7 @@ i18n
       escapeValue: false,
     },
     detection: {
-      order: ['path', 'localStorage', 'navigator'],
+      order: ['localStorage', 'navigator'],
       lookupLocalStorage: 'lang',
       caches: ['localStorage'],
     },

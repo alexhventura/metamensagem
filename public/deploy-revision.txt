@@ -1,2 +1,2 @@
-deploy-revision=2026-06-01T18:00:00Z
-features=utf8-ui-locale,manifest-total-frases
+deploy-revision=2026-06-01T18:15:00Z
+features=utf8-ui-locale,manifest-total-frases,i18n-detector-fix

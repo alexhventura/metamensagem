@@ -12,7 +12,13 @@ import { findCollection, findSkin } from './skins/data';
 import type { ImageFormat, ImageGeneratorQuote } from './types';
 import { recommendSkinForQuote } from './utils/recommendSkin';
 import { canShareImageFiles } from './utils/shareLinks';
-import { captureElementAsBlob, copyBlobToClipboard, downloadBlob, shareImageFile } from './exportImage';
+import {
+  captureElementAsBlob,
+  copyBlobToClipboard,
+  requestFileSaveHandle,
+  saveBlobToDisk,
+  shareImageFile,
+} from './exportImage';
 import { ensureImageExportFonts } from './utils/imageFonts';
 import { allocateImageSerial, previewSerialForQuote } from './utils/serialGenerator';
 import { recordImageGeneration } from './utils/imageMetadata';
@@ -109,6 +115,20 @@ export default function ImageGeneratorModal({
       const node = exportRef.current;
       if (!node) return;
       setBusy(mime === 'image/png' ? 'png' : 'jpeg');
+
+      const ext = mime === 'image/png' ? 'png' : 'jpg';
+      const provisionalName = `metamensagem-${previewSerial}.${ext}`;
+      let fileHandle: Awaited<ReturnType<typeof requestFileSaveHandle>> = null;
+
+      try {
+        fileHandle = await requestFileSaveHandle(provisionalName, mime);
+      } catch (e) {
+        if (e instanceof Error && e.name === 'AbortError') {
+          setBusy(null);
+          return;
+        }
+      }
+
       try {
         const serial = allocateImageSerial();
         flushSync(() => setExportSerial(serial));
@@ -119,9 +139,8 @@ export default function ImageGeneratorModal({
 
         const blob = await captureElementAsBlob(node, mime, fontSample);
         registerExport(serial);
-        const ext = mime === 'image/png' ? 'png' : 'jpg';
         const filename = `metamensagem-${serial}.${ext}`;
-        downloadBlob(blob, filename);
+        await saveBlobToDisk(blob, filename, fileHandle);
         toast('Imagem baixada!', 'sucesso');
       } catch (e) {
         const msg =
@@ -133,7 +152,7 @@ export default function ImageGeneratorModal({
         setBusy(null);
       }
     },
-    [fontSample, formatCfg.width, formatCfg.height, registerExport, toast]
+    [fontSample, formatCfg.width, formatCfg.height, previewSerial, registerExport, toast]
   );
 
   const handleCopy = useCallback(async () => {
@@ -350,8 +369,13 @@ export default function ImageGeneratorModal({
           </div>
 
           <div
-            className="fixed left-0 top-0 -z-10 opacity-0 overflow-hidden pointer-events-none"
-            style={{ width: formatCfg.width, height: formatCfg.height }}
+            className="fixed left-0 top-0 overflow-hidden pointer-events-none"
+            style={{
+              width: formatCfg.width,
+              height: formatCfg.height,
+              transform: 'translateX(-120vw)',
+              visibility: 'hidden',
+            }}
             aria-hidden
           >
             <ImageRenderer ref={exportRef} {...rendererBase} serial={exportSerial} />

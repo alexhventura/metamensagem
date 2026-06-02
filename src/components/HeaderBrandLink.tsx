@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 /** True when pathname is the app home route (`/`). */
 export function isHomePath(pathname: string): boolean {
@@ -9,6 +9,7 @@ export function isHomePath(pathname: string): boolean {
 /** Site-wide logo + title — always navigates to `/` (home). */
 export default function HeaderBrandLink() {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const isHome = isHomePath(pathname);
 
   return (
@@ -18,9 +19,13 @@ export default function HeaderBrandLink() {
         if (isHome) {
           e.preventDefault();
           window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
         }
+        e.preventDefault();
+        navigate('/', { replace: false });
+        window.scrollTo({ top: 0, behavior: 'auto' });
       }}
-      className="flex items-center gap-2.5 group min-w-0 cursor-pointer no-underline"
+      className="flex items-center gap-2.5 group min-w-0 flex-shrink-0 cursor-pointer no-underline"
       aria-label="Metamensagem, pagina inicial"
     >
       <img

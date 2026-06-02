@@ -41,7 +41,7 @@
       "destination": "/api/og/frase?id=:id"
     },
     {
-      "source": "/((?!api/|imagem/).*)",
+      "source": "/((?!api/|imagem/|assets/|brand/|frases-v2/|seo-graph/|.*\\.[a-zA-Z0-9]+$).*)",
       "destination": "/index.html"
     }
   ],

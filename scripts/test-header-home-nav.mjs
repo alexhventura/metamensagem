@@ -46,6 +46,8 @@ console.log('\n2) HeaderBrandLink source');
 const brandSrc = readFileSync('src/components/HeaderBrandLink.tsx', 'utf8');
 if (!/to=["']\/["']/.test(brandSrc)) fail('HeaderBrandLink must use Link to="/"');
 else pass('Link to="/" present');
+if (!/navigate\s*\(\s*['"]\/['"]/.test(brandSrc)) fail('HeaderBrandLink must navigate("/") on click');
+else pass('navigate("/") on brand click');
 if (/history\.back\s*\(/.test(brandSrc)) fail('HeaderBrandLink must not call history.back()');
 else pass('no history.back()');
 if (/<button[\s>]/.test(brandSrc)) fail('HeaderBrandLink should not use <button> for navigation');

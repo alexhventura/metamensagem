@@ -25,16 +25,19 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
 ) {
   const layout = useMemo(() => {
     const plan = computeImageLayout(texto, autor, format.width, format.height);
-    if (!plan.fullTextVerified && import.meta.env.DEV) {
-      console.warn('[ImageRenderer] integridade do texto não validada', {
+    if (!plan.quoteFits && import.meta.env.DEV) {
+      console.warn('[ImageRenderer] frase excede QUOTE_ZONE', {
         chars: texto.length,
         lines: plan.lines.length,
+        blockH: plan.quoteBlockHeight,
+        zoneH: plan.zones.quoteZoneHeight,
       });
     }
     return plan;
   }, [texto, autor, format.width, format.height]);
 
   const fontFamily = useMemo(() => imageFontFamilyFor(texto, autor), [texto, autor]);
+  const { zones } = layout;
 
   const footerPx = useMemo(
     () => computeFooterFontSize(format.height, skin.name, serial),
@@ -43,15 +46,12 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
 
   const skinFooterPx = useMemo(
     () =>
-      computeFooterSkinFontSize(
-        footerPx,
-        skin.name,
-        Math.floor(format.width * 0.36)
-      ),
+      computeFooterSkinFontSize(footerPx, skin.name, Math.floor(format.width * 0.36)),
     [footerPx, skin.name, format.width]
   );
 
   const skinLabel = skin.name;
+  const authorTrim = autor?.trim() ?? '';
 
   return (
     <div
@@ -69,7 +69,9 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
       data-mm-locale={quoteMeta?.locale ?? 'pt'}
       data-mm-serial={serial}
       data-mm-long-quote={layout.longQuoteMode ? '1' : '0'}
+      data-mm-quote-fits={layout.quoteFits ? '1' : '0'}
       data-mm-text-integrity={validateFullText(texto, layout.lines) ? 'ok' : 'fail'}
+      data-mm-author-expected={authorTrim}
     >
       <div
         className="absolute inset-0 pointer-events-none"
@@ -86,9 +88,10 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         }}
       />
 
+      {/* HEADER_ZONE — fixo */}
       <header
         className="absolute left-0 right-0 top-0 z-10 flex items-start justify-center pointer-events-none"
-        style={{ height: layout.safe.headerHeight }}
+        style={{ height: zones.headerHeight }}
       >
         <img
           src="/brand/logo.svg"
@@ -106,26 +109,25 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         />
       </header>
 
-      <main
-        className="absolute z-20 flex flex-col items-center justify-center text-center box-border"
+      {/* QUOTE_ZONE — só a frase */}
+      <section
+        className="absolute z-20 flex items-center justify-center text-center box-border pointer-events-none"
         style={{
-          top: layout.safe.quoteTop,
-          left: layout.safe.padX,
-          right: layout.safe.padX,
-          height: layout.safe.quoteHeight,
-          maxHeight: layout.safe.quoteHeight,
-          paddingBottom: layout.authorBottomGap,
+          top: zones.quoteZoneTop,
+          left: zones.padX,
+          right: zones.padX,
+          height: zones.quoteZoneHeight,
+          maxHeight: zones.quoteZoneHeight,
           overflow: 'hidden',
         }}
+        aria-label="Citação"
       >
         <blockquote
-          className={`font-bold tracking-tight min-h-0 ${skin.textClass}`}
+          className={`font-bold tracking-tight m-0 min-h-0 w-full ${skin.textClass}`}
           style={{
             fontSize: layout.quotePx,
-            lineHeight: layout.lineHeight / layout.quotePx,
-            margin: 0,
+            lineHeight: layout.lineHeightRatio,
             maxWidth: '100%',
-            width: '100%',
             fontWeight: 700,
             textShadow: '0 1px 24px rgba(0,0,0,0.12)',
           }}
@@ -138,27 +140,41 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
             </span>
           ))}
         </blockquote>
-        {autor?.trim() ? (
+      </section>
+
+      {/* AUTHOR_ZONE — posição fixa */}
+      {authorTrim ? (
+        <section
+          data-mm-author-zone
+          className={`absolute left-0 right-0 z-[22] flex items-center justify-center text-center pointer-events-none ${skin.accentClass}`}
+          style={{
+            top: zones.authorZoneTop,
+            height: zones.authorZoneHeight,
+            paddingLeft: zones.padX,
+            paddingRight: zones.padX,
+          }}
+          aria-label="Autor"
+        >
           <p
-            className={`font-medium tracking-wide shrink-0 ${skin.accentClass}`}
+            className="font-medium tracking-wide m-0 w-full"
             style={{
               fontSize: layout.authorPx,
-              marginTop: layout.gapQuoteAuthor,
-              marginBottom: 0,
+              lineHeight: 1.2,
               maxWidth: '100%',
-              lineHeight: 1.22,
               opacity: 0.92,
             }}
           >
-            — {autor}
+            — {authorTrim}
           </p>
-        ) : null}
-      </main>
+        </section>
+      ) : null}
 
+      {/* FOOTER_ZONE — fixo */}
       <footer
-        className={`absolute bottom-0 left-0 right-0 z-30 grid items-end ${skin.accentClass}`}
+        className={`absolute left-0 right-0 z-30 grid items-end ${skin.accentClass}`}
         style={{
-          height: layout.safe.footerHeight,
+          top: zones.footerTop,
+          height: zones.footerHeight,
           paddingLeft: layout.padX,
           paddingRight: layout.padX,
           paddingBottom: layout.padBottom,

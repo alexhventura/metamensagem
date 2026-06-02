@@ -122,8 +122,12 @@ export default function ImageGeneratorModal({
         const ext = mime === 'image/png' ? 'png' : 'jpg';
         downloadBlob(blob, `metamensagem-${serial}.${ext}`);
         toast('Imagem baixada!', 'sucesso');
-      } catch {
-        toast('Não foi possível gerar a imagem.', 'erro');
+      } catch (e) {
+        const msg =
+          e instanceof Error && e.message.includes('zona')
+            ? e.message
+            : 'Não foi possível gerar a imagem.';
+        toast(msg, 'erro');
       } finally {
         setBusy(null);
       }

@@ -83,59 +83,72 @@ export default async function handler(
   const skin = frase.categoria || 'premium';
   const author = frase.autor.trim();
 
+  const { zones } = layout;
+
   const image = new ImageResponse(
     (
       <div
         style={{
           width: '100%',
           height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          padding: 48,
-          paddingBottom: 52,
+          position: 'relative',
           background: 'linear-gradient(145deg, #1a0a2e 0%, #4c1d95 45%, #312e81 100%)',
           color: '#fafafa',
           fontFamily: 'system-ui, sans-serif',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <div
-            style={{
-              width: 48,
-              height: 48,
-              borderRadius: 12,
-              background: 'rgba(255,255,255,0.15)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: 22,
-              fontWeight: 900,
-            }}
-          >
-            M
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            height: zones.headerHeight,
+            display: 'flex',
+            alignItems: 'flex-start',
+            justifyContent: 'center',
+            paddingTop: layout.padTop,
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+            <div
+              style={{
+                width: 48,
+                height: 48,
+                borderRadius: 12,
+                background: 'rgba(255,255,255,0.15)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: 22,
+                fontWeight: 900,
+              }}
+            >
+              M
+            </div>
+            <span style={{ fontSize: 28, fontWeight: 800, letterSpacing: -1 }}>Metamensagem</span>
           </div>
-          <span style={{ fontSize: 28, fontWeight: 800, letterSpacing: -1 }}>Metamensagem</span>
         </div>
 
         <div
           style={{
+            position: 'absolute',
+            top: zones.quoteZoneTop,
+            left: zones.padX,
+            right: zones.padX,
+            height: zones.quoteZoneHeight,
             display: 'flex',
-            flexDirection: 'column',
-            gap: 16,
-            flex: 1,
+            alignItems: 'center',
             justifyContent: 'center',
-            paddingBottom: layout.authorBottomGap,
-            maxHeight: layout.safe.quoteHeight,
+            textAlign: 'center',
           }}
         >
           <div
             style={{
               fontSize: layout.quotePx,
               fontWeight: 800,
-              lineHeight: layout.lineHeight / layout.quotePx,
+              lineHeight: layout.lineHeightRatio,
               margin: 0,
-              textAlign: 'center',
             }}
           >
             {layout.lines.map((line, i) => (
@@ -146,7 +159,21 @@ export default async function handler(
               </div>
             ))}
           </div>
-          {author ? (
+        </div>
+
+        {author ? (
+          <div
+            style={{
+              position: 'absolute',
+              top: zones.authorZoneTop,
+              left: zones.padX,
+              right: zones.padX,
+              height: zones.authorZoneHeight,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
             <p
               style={{
                 fontSize: layout.authorPx,
@@ -157,17 +184,23 @@ export default async function handler(
             >
               — {author}
             </p>
-          ) : null}
-        </div>
+          </div>
+        ) : null}
 
         <div
           style={{
+            position: 'absolute',
+            top: zones.footerTop,
+            left: zones.padX,
+            right: zones.padX,
+            height: zones.footerHeight,
             display: 'flex',
             justifyContent: 'space-between',
+            alignItems: 'flex-end',
             fontSize: layout.footerPx,
             opacity: 0.75,
             borderTop: '1px solid rgba(255,255,255,0.2)',
-            paddingTop: 16,
+            paddingBottom: layout.padBottom,
           }}
         >
           <span>metamensagem.com · {skin}</span>

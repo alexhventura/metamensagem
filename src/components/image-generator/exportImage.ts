@@ -1,7 +1,11 @@
 /** Exportação client-side (modern-screenshot — sem leitura de cssRules cross-origin). */
 
 import { ensureCaptureFontsReady } from './utils/imageFonts';
-import { assertExportTextIntegrity } from './utils/textLayout';
+import {
+  assertExportTextIntegrity,
+  assertLayoutReady,
+  computeImageLayout,
+} from './utils/textLayout';
 
 export type CaptureFontSample = { text: string; autor: string };
 
@@ -11,6 +15,10 @@ export async function captureElementAsBlob(
   fontSample?: CaptureFontSample
 ): Promise<Blob> {
   const { text, autor } = fontSample ?? { text: '', autor: '' };
+  const w = node.offsetWidth || parseInt(node.style.width || '1080', 10);
+  const h = node.offsetHeight || parseInt(node.style.height || '1080', 10);
+  const plan = computeImageLayout(text, autor, w, h);
+  assertLayoutReady(plan);
   await ensureCaptureFontsReady(text, autor);
   assertExportTextIntegrity(node, text);
 
@@ -39,8 +47,14 @@ export function downloadBlob(blob: Blob, filename: string) {
   const a = document.createElement('a');
   a.href = url;
   a.download = filename;
+  a.rel = 'noopener';
+  a.style.display = 'none';
+  document.body.appendChild(a);
   a.click();
-  URL.revokeObjectURL(url);
+  window.setTimeout(() => {
+    a.remove();
+    URL.revokeObjectURL(url);
+  }, 200);
 }
 
 export async function copyBlobToClipboard(blob: Blob): Promise<boolean> {

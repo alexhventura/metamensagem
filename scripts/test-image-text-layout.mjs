@@ -54,15 +54,14 @@ for (const key of FORMAT_ORDER) {
   const ok = validateFullText(DEMO_QUOTE, plan.lines);
   const joined = normalizeQuoteText(plan.lines.join(' '));
   const orig = normalizeQuoteText(DEMO_QUOTE);
-  const fits =
-    plan.lines.length * plan.lineHeight +
-      (AUTHOR ? plan.gapQuoteAuthor + plan.authorPx * 1.28 : 0) <=
-    plan.safe.quoteHeight - plan.authorBottomGap;
+  const fits = plan.quoteFits && plan.quoteBlockHeight <= plan.zones.quoteZoneHeight;
 
   assert(ok, `${key}: validateFullText`);
   assert(!hasEllipsis(plan.lines), `${key}: ellipsis nas linhas`);
   assert(joined === orig, `${key}: texto diferente (${joined.length} vs ${orig.length})`);
   assert(plan.fullTextVerified, `${key}: fullTextVerified`);
+  assert(fits, `${key}: quoteFits na QUOTE_ZONE`);
+  assert(plan.quoteFits, `${key}: quoteFits flag`);
 
   rows.push({
     formato: label,
@@ -71,7 +70,8 @@ for (const key of FORMAT_ORDER) {
     linhas: plan.lines.length,
     fontePx: plan.quotePx,
     longMode: plan.longQuoteMode,
-    gapAutor: plan.authorBottomGap,
+    quoteFits: plan.quoteFits,
+    zoneH: plan.zones.quoteZoneHeight,
   });
 }
 console.table(rows);

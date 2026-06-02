@@ -1,13 +1,11 @@
 /**
  * POST /api/translation-demand — agrega demanda (sem PII) para fila global.
- * Persistência: Vercel Blob (BLOB_READ_WRITE_TOKEN).
  */
-export const config = { runtime: 'edge' };
-
 import {
   mergeDemandSnapshots,
   type TranslationDemandSnapshot,
 } from './_translationDemand.js';
+import { sendJson } from './_http.js';
 
 const BLOB_PATH = 'translation-demand/snapshot.json';
 
@@ -58,34 +56,57 @@ async function saveSnapshot(snapshot: TranslationDemandSnapshot): Promise<{ pers
   return { persisted: false, via: 'none' };
 }
 
-export default async function handler(req: Request): Promise<Response> {
+async function readJsonBody(req: { body?: unknown; on?: (event: string, cb: (chunk: Buffer) => void) => void }): Promise<unknown> {
+  if (req.body != null && typeof req.body === 'object') return req.body;
+  if (req.body != null && typeof req.body === 'string') return JSON.parse(req.body);
+  if (!req.on) return {};
+  const chunks: Buffer[] = [];
+  await new Promise<void>((resolve, reject) => {
+    req.on!('data', (c) => chunks.push(c));
+    req.on!('end', () => resolve());
+    req.on!('error', reject);
+  });
+  const raw = Buffer.concat(chunks).toString('utf8');
+  return raw ? JSON.parse(raw) : {};
+}
+
+export default async function handler(req: { method?: string; body?: unknown; on?: (event: string, cb: (chunk: Buffer) => void) => void }, res: {
+  writeHead: (code: number, headers?: Record<string, string>) => void;
+  end: (body?: string) => void;
+}): Promise<void> {
   if (req.method === 'GET') {
     const snapshot = await loadSnapshot();
-    return Response.json(
+    sendJson(
+      res,
+      200,
       {
         ok: true,
         updatedAt: snapshot.updatedAt,
         phraseCount: Object.keys(snapshot.queue).length,
         queue: snapshot.queue,
       },
-      { headers: { 'Cache-Control': 'private, max-age=60' } }
+      { 'Cache-Control': 'private, max-age=60' }
     );
+    return;
   }
 
   if (req.method !== 'POST') {
-    return Response.json({ error: 'Method not allowed' }, { status: 405 });
+    sendJson(res, 405, { error: 'Method not allowed' });
+    return;
   }
 
   let body: Partial<TranslationDemandSnapshot>;
   try {
-    body = (await req.json()) as Partial<TranslationDemandSnapshot>;
+    body = (await readJsonBody(req)) as Partial<TranslationDemandSnapshot>;
   } catch {
-    return Response.json({ error: 'Invalid JSON' }, { status: 400 });
+    sendJson(res, 400, { error: 'Invalid JSON' });
+    return;
   }
 
   const incomingQueue = body.queue ?? (body as { counts?: TranslationDemandSnapshot['queue'] }).counts;
   if (!incomingQueue || typeof incomingQueue !== 'object') {
-    return Response.json({ error: 'queue required' }, { status: 400 });
+    sendJson(res, 400, { error: 'queue required' });
+    return;
   }
 
   const current = await loadSnapshot();
@@ -96,7 +117,7 @@ export default async function handler(req: Request): Promise<Response> {
 
   const save = await saveSnapshot(merged);
 
-  return Response.json({
+  sendJson(res, 200, {
     ok: true,
     persisted: save.persisted,
     storage: save.via,

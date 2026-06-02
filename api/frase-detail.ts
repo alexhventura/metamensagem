@@ -1,14 +1,12 @@
 /**
  * GET /api/frase-detail?slug=... — uma frase (shards via CDN).
  */
-export const config = { runtime: 'edge' };
-
 import {
   findFraseInList,
-  requestUrl,
   shardsToProbe,
   type FraseDetailRecord,
 } from './_shared.js';
+import { requestUrl, sendJson } from './_http.js';
 
 const CACHE = 'public, max-age=31536000, immutable';
 
@@ -33,27 +31,30 @@ async function loadFraseFromShards(
   return null;
 }
 
-export default async function handler(req: Request): Promise<Response> {
+export default async function handler(req: { method?: string; url?: string; headers?: unknown }, res: {
+  writeHead: (code: number, headers?: Record<string, string>) => void;
+  end: (body?: string) => void;
+}): Promise<void> {
   if (req.method !== 'GET') {
-    return Response.json({ error: 'Method not allowed' }, { status: 405 });
+    sendJson(res, 405, { error: 'Method not allowed' });
+    return;
   }
 
   const url = requestUrl(req);
   const slug = decodeURIComponent(url.searchParams.get('slug') ?? '').toLowerCase().trim();
   if (!slug) {
-    return Response.json({ error: 'slug required', found: false }, { status: 400 });
+    sendJson(res, 400, { error: 'slug required', found: false });
+    return;
   }
 
   try {
     const frase = await loadFraseFromShards(slug, url.origin);
     if (!frase) {
-      return Response.json({ slug, found: false, message: 'Frase não encontrada' }, { status: 404 });
+      sendJson(res, 404, { slug, found: false, message: 'Frase não encontrada' });
+      return;
     }
-    return Response.json(frase, { headers: { 'Cache-Control': CACHE } });
+    sendJson(res, 200, frase, { 'Cache-Control': CACHE });
   } catch {
-    return Response.json(
-      { slug, found: false, message: 'Frase não encontrada' },
-      { status: 404 }
-    );
+    sendJson(res, 404, { slug, found: false, message: 'Frase não encontrada' });
   }
 }

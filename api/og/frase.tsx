@@ -1,6 +1,6 @@
 import { ImageResponse } from '@vercel/og';
 import { computeImageLayout } from '../../src/components/image-generator/utils/textLayout';
-import { requestUrl } from '../_shared.js';
+import { requestUrl } from '../_http.js';
 
 function previewSerialForQuote(quoteId: string): string {
   const year = new Date().getFullYear();
@@ -53,22 +53,29 @@ async function resolveOgFrase(
 }
 
 export const config = {
-  runtime: 'edge',
+  runtime: 'nodejs',
 };
 
-export default async function handler(req: Request) {
+export default async function handler(
+  req: { url?: string; headers?: unknown },
+  res: { writeHead: (code: number, headers?: Record<string, string>) => void; end: (body?: Buffer | string) => void }
+) {
   const url = requestUrl(req);
   const parts = url.pathname.split('/').filter(Boolean);
   const fromPath = parts[parts.length - 1];
   const id = url.searchParams.get('id') || fromPath;
 
   if (!id || id === 'frase') {
-    return new Response('id required', { status: 400 });
+    res.writeHead(400, { 'Content-Type': 'text/plain' });
+    res.end('id required');
+    return;
   }
 
   const frase = await resolveOgFrase(id, url.origin);
   if (!frase) {
-    return new Response('Frase não encontrada', { status: 404 });
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    res.end('Frase não encontrada');
+    return;
   }
 
   const serial = previewSerialForQuote(frase.id);
@@ -76,7 +83,7 @@ export default async function handler(req: Request) {
   const skin = frase.categoria || 'premium';
   const author = frase.autor.trim();
 
-  return new ImageResponse(
+  const image = new ImageResponse(
     (
       <div
         style={{
@@ -173,4 +180,9 @@ export default async function handler(req: Request) {
       height: 630,
     }
   );
+
+  const buffer = Buffer.from(await image.arrayBuffer());
+  const contentType = image.headers.get('content-type') || 'image/png';
+  res.writeHead(200, { 'Content-Type': contentType, 'Cache-Control': 'public, max-age=86400' });
+  res.end(buffer);
 }

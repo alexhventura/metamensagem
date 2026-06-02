@@ -1,20 +1,23 @@
 /**
  * Proxy MyMemory no servidor — cota separada do IP do visitante + MYMEMORY_EMAIL no Vercel.
  */
-export const config = { runtime: 'edge' };
+import { requestUrl, sendJson, sendText } from './_http.js';
 
-import { requestUrl } from './_shared.js';
-
-export default async function handler(req: Request): Promise<Response> {
+export default async function handler(req: { method?: string; url?: string; headers?: unknown }, res: {
+  writeHead: (code: number, headers?: Record<string, string>) => void;
+  end: (body?: string) => void;
+}): Promise<void> {
   if (req.method !== 'GET') {
-    return Response.json({ error: 'Method not allowed' }, { status: 405 });
+    sendJson(res, 405, { error: 'Method not allowed' });
+    return;
   }
 
   const url = requestUrl(req);
   const q = url.searchParams.get('q');
   const langpair = url.searchParams.get('langpair');
   if (!q?.trim() || !langpair?.trim()) {
-    return Response.json({ error: 'q and langpair are required' }, { status: 400 });
+    sendJson(res, 400, { error: 'q and langpair are required' });
+    return;
   }
 
   let upstreamUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${encodeURIComponent(langpair)}`;
@@ -26,33 +29,25 @@ export default async function handler(req: Request): Promise<Response> {
     const body = await upstream.text();
 
     if (!upstream.ok) {
-      return Response.json(
+      sendJson(
+        res,
+        200,
         { unavailable: true, responseStatus: upstream.status },
-        {
-          status: 200,
-          headers: {
-            'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300',
-          },
-        }
+        { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300' }
       );
+      return;
     }
 
-    return new Response(body, {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800',
-      },
+    sendText(res, 200, body, {
+      'Content-Type': 'application/json; charset=utf-8',
+      'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800',
     });
   } catch {
-    return Response.json(
+    sendJson(
+      res,
+      200,
       { unavailable: true, responseStatus: 503 },
-      {
-        status: 200,
-        headers: {
-          'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300',
-        },
-      }
+      { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300' }
     );
   }
 }

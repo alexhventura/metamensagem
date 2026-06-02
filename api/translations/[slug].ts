@@ -1,15 +1,18 @@
 /**
  * GET /api/translations/:slug?locale=en — traduções via CDN.
  */
-export const config = { runtime: 'edge' };
-
 import { isSeoLocale, requestUrl, shardForSlug } from '../_shared.js';
+import { sendJson } from '../_http.js';
 
 type SeoLocale = 'pt' | 'en' | 'es' | 'fr' | 'de' | 'it' | 'ja' | 'hi';
 
-export default async function handler(req: Request): Promise<Response> {
+export default async function handler(req: { method?: string; url?: string; headers?: unknown }, res: {
+  writeHead: (code: number, headers?: Record<string, string>) => void;
+  end: (body?: string) => void;
+}): Promise<void> {
   if (req.method !== 'GET') {
-    return Response.json({ error: 'Method not allowed' }, { status: 405 });
+    sendJson(res, 405, { error: 'Method not allowed' });
+    return;
   }
 
   const url = requestUrl(req);
@@ -18,35 +21,37 @@ export default async function handler(req: Request): Promise<Response> {
   const locale = url.searchParams.get('locale');
 
   if (!slug) {
-    return Response.json({ error: 'slug required' }, { status: 400 });
+    sendJson(res, 400, { error: 'slug required' });
+    return;
   }
   if (!locale || !isSeoLocale(locale)) {
-    return Response.json({ error: 'locale query required (pt|en|es|...)' }, { status: 400 });
+    sendJson(res, 400, { error: 'locale query required (pt|en|es|...)' });
+    return;
   }
 
   const shard = shardForSlug(slug);
 
   try {
-    const res = await fetch(`${url.origin}/frases-v2/translations/shard-${shard}.json`, {
+    const resFetch = await fetch(`${url.origin}/frases-v2/translations/shard-${shard}.json`, {
       headers: { Accept: 'application/json' },
     });
-    if (!res.ok) {
-      return Response.json({ slug, locale, found: false }, { status: 404 });
+    if (!resFetch.ok) {
+      sendJson(res, 404, { slug, locale, found: false });
+      return;
     }
-    const data = (await res.json()) as Record<string, Partial<Record<SeoLocale, { text: string }>>>;
+    const data = (await resFetch.json()) as Record<string, Partial<Record<SeoLocale, { text: string }>>>;
     const hit = data[slug]?.[locale as SeoLocale];
     if (!hit?.text) {
-      return Response.json({ slug, locale, found: false }, { status: 404 });
+      sendJson(res, 404, { slug, locale, found: false });
+      return;
     }
-    return Response.json(
+    sendJson(
+      res,
+      200,
       { slug, locale, found: true, text: hit.text },
-      {
-        headers: {
-          'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800',
-        },
-      }
+      { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' }
     );
   } catch {
-    return Response.json({ slug, locale, found: false }, { status: 404 });
+    sendJson(res, 404, { slug, locale, found: false });
   }
 }

@@ -3,9 +3,11 @@
  */
 import {
   findFraseInList,
+  normalizeFraseDetailRecord,
+  resolveCanonicalSlugFromIndex,
   shardsToProbe,
   type FraseDetailRecord,
-} from './_shared.js';
+} from '../lib/frases/detailLookup.js';
 import { requestUrl, sendJson } from './_http.js';
 
 const CACHE = 'public, max-age=31536000, immutable';
@@ -48,12 +50,23 @@ export default async function handler(req: { method?: string; url?: string; head
   }
 
   try {
-    const frase = await loadFraseFromShards(slug, url.origin);
+    const assetBase = url.origin;
+    const fetchJson = async (path: string) => {
+      const res = await fetch(`${assetBase}${path}`, { headers: { Accept: 'application/json' } });
+      if (!res.ok) throw new Error(String(res.status));
+      return res.json();
+    };
+
+    const resolved = (await resolveCanonicalSlugFromIndex(slug, fetchJson)) ?? slug;
+    let frase = await loadFraseFromShards(resolved, assetBase);
+    if (!frase && resolved !== slug) {
+      frase = await loadFraseFromShards(slug, assetBase);
+    }
     if (!frase) {
       sendJson(res, 404, { slug, found: false, message: 'Frase não encontrada' });
       return;
     }
-    sendJson(res, 200, frase, { 'Cache-Control': CACHE });
+    sendJson(res, 200, normalizeFraseDetailRecord(frase), { 'Cache-Control': CACHE });
   } catch {
     sendJson(res, 404, { slug, found: false, message: 'Frase não encontrada' });
   }

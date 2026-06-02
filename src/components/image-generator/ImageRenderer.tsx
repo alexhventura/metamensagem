@@ -4,6 +4,7 @@ import type { SkinConfig } from './types';
 import { imageFontFamilyFor } from './utils/imageFonts';
 import {
   computeFooterFontSize,
+  computeFooterSerialFontSize,
   computeFooterSkinFontSize,
   computeImageLayout,
   validateFullText,
@@ -44,10 +45,17 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
     [format.height, skin.name, serial]
   );
 
+  const colSidePx = Math.floor(format.width * 0.28);
+  const colCenterPx = Math.floor(format.width * 0.44);
+
   const skinFooterPx = useMemo(
-    () =>
-      computeFooterSkinFontSize(footerPx, skin.name, Math.floor(format.width * 0.42)),
-    [footerPx, skin.name, format.width]
+    () => computeFooterSkinFontSize(footerPx, skin.name, colCenterPx),
+    [footerPx, skin.name, colCenterPx]
+  );
+
+  const serialFooterPx = useMemo(
+    () => computeFooterSerialFontSize(footerPx, serial, colSidePx),
+    [footerPx, serial, colSidePx]
   );
 
   const skinLabel = skin.name;
@@ -184,24 +192,28 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           fontFamily: 'Arial, Helvetica, sans-serif',
           fontWeight: 700,
           letterSpacing: '0.02em',
-          opacity: 0.92,
-          borderTop: '1px solid rgba(255,255,255,0.06)',
-          background: 'linear-gradient(to top, rgba(0,0,0,0.18) 0%, transparent 100%)',
-          gridTemplateColumns: 'minmax(0,1fr) minmax(0,1.5fr) minmax(0,1fr)',
-          gap: 8,
+          opacity: 1,
+          textShadow: '0 1px 4px rgba(0,0,0,0.75), 0 0 12px rgba(0,0,0,0.35)',
+          borderTop: '1px solid rgba(255,255,255,0.12)',
+          background: 'linear-gradient(to top, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.08) 55%, transparent 100%)',
+          gridTemplateColumns: 'minmax(0,1fr) minmax(0,1.55fr) minmax(0,1fr)',
+          gap: 10,
           alignItems: 'end',
         }}
       >
-        <span className="lowercase leading-tight text-left whitespace-nowrap">
+        <span className="lowercase leading-none text-left whitespace-nowrap">
           metamensagem.com
         </span>
         <span
-          className="leading-tight text-center whitespace-nowrap"
+          className="leading-none text-center whitespace-nowrap font-black"
           style={{ fontSize: skinFooterPx }}
         >
           {skinLabel}
         </span>
-        <span className="tabular-nums leading-tight text-right whitespace-nowrap">
+        <span
+          className="tabular-nums leading-none text-right whitespace-nowrap"
+          style={{ fontSize: serialFooterPx }}
+        >
           {serial}
         </span>
       </footer>

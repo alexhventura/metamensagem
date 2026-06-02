@@ -22,6 +22,7 @@ import { ensureImageExportFonts } from './utils/imageFonts';
 import { allocateImageSerial, previewSerialForQuote } from './utils/serialGenerator';
 import { recordImageGeneration } from './utils/imageMetadata';
 import { useAppUiReset } from '../../hooks/useAppUiReset';
+import { useImagePreviewScale } from './useImagePreviewScale';
 
 async function waitNextPaint(): Promise<void> {
   await new Promise<void>((r) => requestAnimationFrame(() => requestAnimationFrame(() => r())));
@@ -85,11 +86,7 @@ export default function ImageGeneratorModal({
     collectionId === recommendation.collectionId &&
     skinId === recommendation.skinId;
 
-  const previewScale = useMemo(() => {
-    const maxW = 380;
-    const maxH = 420;
-    return Math.min(1, maxW / formatCfg.width, maxH / formatCfg.height);
-  }, [formatCfg]);
+  const previewScale = useImagePreviewScale(formatCfg.width, formatCfg.height, open);
 
   const handleCollectionChange = (id: string) => {
     setCollectionId(id);
@@ -228,7 +225,7 @@ export default function ImageGeneratorModal({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-[250] flex items-center justify-center p-4 md:p-6"
+        className="fixed inset-0 z-[250] flex items-end sm:items-center justify-center p-0 sm:p-4 md:p-6"
         role="dialog"
         aria-modal="true"
         aria-labelledby="image-gen-title"
@@ -244,12 +241,12 @@ export default function ImageGeneratorModal({
           initial={{ opacity: 0, y: 24, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 16, scale: 0.98 }}
-          className={`relative w-full max-w-5xl max-h-[92vh] overflow-hidden rounded-[2rem] border shadow-2xl flex flex-col ${
+          className={`relative w-full max-w-5xl max-h-[100dvh] sm:max-h-[92vh] overflow-hidden rounded-t-[1.75rem] sm:rounded-[2rem] border shadow-2xl flex flex-col ${
             tema === 'light' ? 'bg-white border-zinc-200' : 'bg-[#0a0a0a] border-zinc-800'
           }`}
         >
           <header
-            className={`flex items-center justify-between px-6 py-4 border-b shrink-0 ${
+            className={`flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b shrink-0 ${
               tema === 'light' ? 'border-zinc-100' : 'border-zinc-900'
             }`}
           >
@@ -278,8 +275,57 @@ export default function ImageGeneratorModal({
           </header>
 
           <div className="flex flex-col lg:flex-row flex-1 min-h-0 overflow-hidden">
+            {/* Preview + ações — topo no celular/tablet */}
+            <div className="order-1 lg:order-2 flex flex-col flex-1 min-h-0 max-h-[46vh] sm:max-h-[48vh] md:max-h-[50vh] lg:max-h-none">
+              <div className="relative flex-1 flex flex-col items-center justify-center px-3 py-3 sm:p-4 overflow-auto shrink-0 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.08),transparent_70%)]">
+                {isOnRecommendation && (
+                  <div
+                    className={`absolute top-2 sm:top-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-bold shadow-lg ${
+                      tema === 'light'
+                        ? 'bg-amber-50 text-amber-900 border border-amber-200/80'
+                        : 'bg-amber-500/15 text-amber-100 border border-amber-400/30'
+                    }`}
+                  >
+                    <Star size={12} className="fill-amber-400 text-amber-400 shrink-0" />
+                    Recomendado para esta frase
+                  </div>
+                )}
+
+                <div
+                  className="relative shrink-0"
+                  style={{
+                    width: formatCfg.width * previewScale,
+                    height: formatCfg.height * previewScale,
+                  }}
+                >
+                  <div
+                    style={{
+                      transform: `scale(${previewScale})`,
+                      transformOrigin: 'top left',
+                      width: formatCfg.width,
+                      height: formatCfg.height,
+                    }}
+                  >
+                    <ImageRenderer {...rendererBase} serial={exportSerial} />
+                  </div>
+                </div>
+              </div>
+
+              <ShareActionBar
+                tema={tema}
+                quote={quote}
+                busy={busy}
+                supportsFileShare={supportsFileShare}
+                onMobileShare={() => void handleMobileShare()}
+                onDownloadPng={() => void runExport('image/png')}
+                onDownloadJpg={() => void runExport('image/jpeg')}
+                onCopy={() => void handleCopy()}
+              />
+            </div>
+
+            {/* Controles — abaixo da imagem no celular/tablet */}
             <aside
-              className={`lg:w-[42%] p-5 overflow-y-auto border-b lg:border-b-0 lg:border-r space-y-5 ${
+              className={`order-2 lg:order-1 lg:w-[42%] flex-1 min-h-0 p-4 sm:p-5 overflow-y-auto overscroll-contain border-t lg:border-t-0 lg:border-r space-y-5 ${
                 tema === 'light' ? 'border-zinc-100 bg-zinc-50/50' : 'border-zinc-900 bg-zinc-950/50'
               }`}
             >
@@ -318,53 +364,14 @@ export default function ImageGeneratorModal({
                 />
               </section>
             </aside>
+          </div>
 
-            <div className="flex-1 flex flex-col min-h-[280px] lg:min-h-0">
-              <div className="relative flex-1 flex flex-col items-center justify-center p-4 overflow-auto bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.08),transparent_70%)]">
-                {isOnRecommendation && (
-                  <div
-                    className={`absolute top-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-bold shadow-lg ${
-                      tema === 'light'
-                        ? 'bg-amber-50 text-amber-900 border border-amber-200/80'
-                        : 'bg-amber-500/15 text-amber-100 border border-amber-400/30'
-                    }`}
-                  >
-                    <Star size={12} className="fill-amber-400 text-amber-400 shrink-0" />
-                    Recomendado para esta frase
-                  </div>
-                )}
-
-                <div
-                  className="relative"
-                  style={{
-                    width: formatCfg.width * previewScale,
-                    height: formatCfg.height * previewScale,
-                  }}
-                >
-                  <div
-                    style={{
-                      transform: `scale(${previewScale})`,
-                      transformOrigin: 'top left',
-                      width: formatCfg.width,
-                      height: formatCfg.height,
-                    }}
-                  >
-                    <ImageRenderer ref={exportRef} {...rendererBase} serial={exportSerial} />
-                  </div>
-                </div>
-              </div>
-
-              <ShareActionBar
-                tema={tema}
-                quote={quote}
-                busy={busy}
-                supportsFileShare={supportsFileShare}
-                onMobileShare={() => void handleMobileShare()}
-                onDownloadPng={() => void runExport('image/png')}
-                onDownloadJpg={() => void runExport('image/jpeg')}
-                onCopy={() => void handleCopy()}
-              />
-            </div>
+          {/* Exportação 1:1 fora da árvore escalada (evita rodapé/texto minúsculo no PNG) */}
+          <div
+            className="pointer-events-none fixed top-0 -left-[200vw] w-0 h-0 overflow-visible"
+            aria-hidden
+          >
+            <ImageRenderer ref={exportRef} {...rendererBase} serial={exportSerial} />
           </div>
 
         </motion.div>

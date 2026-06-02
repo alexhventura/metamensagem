@@ -271,7 +271,7 @@ export default function TagCategoriaView({
         <ImageGeneratorModal
           open
           quote={imageQuote}
-          onClose={() => setImageQuote(null)}
+          onClose={closeImageModal}
           toast={toast}
           tema={tema}
         />

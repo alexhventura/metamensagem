@@ -71,9 +71,7 @@ export async function captureElementAsBlob(
   await ensureCaptureFontsReady(text, autor);
 
   await waitForLayoutStable(node);
-  if (node.getAttribute('data-mm-quote-fits') === '0') {
-    assertQuoteBlockFits(node);
-  }
+  assertQuoteBlockFits(node);
   assertExportTextIntegrity(node, text);
 
   const blob = await renderNodeToBlob(node, mime);

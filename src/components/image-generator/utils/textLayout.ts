@@ -16,6 +16,10 @@ const LINE_HEIGHT_STEPS = [1.55, 1.45, 1.38, 1.32, 1.26, 1.2, 1.14, 1.08, 1.04];
 const LINE_HEIGHT_STEPS_LONG = [1.38, 1.32, 1.26, 1.2, 1.14, 1.1, 1.06, 1.03, 1.0];
 const LINE_HEIGHT_STEPS_EXTREME = [1.28, 1.22, 1.16, 1.12, 1.08, 1.05, 1.02, 1.0];
 
+/** Menor fonte da citação — usada no encaixe forçado para textos longos. */
+export const ABSOLUTE_MIN_QUOTE_PX = 4;
+const FORCE_FIT_LH_RATIOS = [1.0, 0.98, 0.95, 0.92, 0.9, 0.88];
+
 export type ImageLayoutPlan = {
   zones: LayoutZones;
   lines: string[];
@@ -182,6 +186,60 @@ function toLegacySafe(zones: LayoutZones) {
   };
 }
 
+type QuoteLayoutCandidate = {
+  lines: string[];
+  quotePx: number;
+  lineHeight: number;
+  lineHeightRatio: number;
+  quoteBlockHeight: number;
+  quotePaddingTop: number;
+  blockFitsZone: boolean;
+};
+
+function findFittingQuoteLayout(
+  clean: string,
+  zones: LayoutZones,
+  usable: number,
+  fontMax: number
+): QuoteLayoutCandidate {
+  for (const lhRatio of FORCE_FIT_LH_RATIOS) {
+    for (let quotePx = fontMax; quotePx >= ABSOLUTE_MIN_QUOTE_PX; quotePx -= 1) {
+      const lines = wrapQuoteFull(clean, zones.quoteWidth, quotePx);
+      if (!validateFullText(clean, lines)) continue;
+
+      const lineHeight = quotePx * lhRatio;
+      const quoteBlockHeight = estimateRenderedBlockHeight(lines.length, quotePx, lineHeight);
+      if (quoteBlockHeight <= usable) {
+        return {
+          lines,
+          quotePx,
+          lineHeight,
+          lineHeightRatio: lhRatio,
+          quoteBlockHeight,
+          quotePaddingTop: Math.max(0, Math.floor((usable - quoteBlockHeight) / 2)),
+          blockFitsZone: true,
+        };
+      }
+    }
+  }
+
+  const quotePx = ABSOLUTE_MIN_QUOTE_PX;
+  const lhRatio = 0.88;
+  const lines = wrapQuoteFull(clean, zones.quoteWidth, quotePx);
+  const lineHeight = quotePx * lhRatio;
+  const quoteBlockHeight = estimateRenderedBlockHeight(lines.length, quotePx, lineHeight);
+
+  return {
+    lines,
+    quotePx,
+    lineHeight,
+    lineHeightRatio: lhRatio,
+    quoteBlockHeight,
+    quotePaddingTop: 0,
+    blockFitsZone: quoteBlockHeight <= usable,
+  };
+}
+
 function buildPlan(
   zones: LayoutZones,
   opts: {
@@ -198,11 +256,13 @@ function buildPlan(
     originalText: string;
     footerPx: number;
     usable: number;
+    forceFit?: boolean;
   }
 ): ImageLayoutPlan {
   const fullTextVerified = validateFullText(opts.originalText, opts.lines);
   const fits =
-    opts.quoteFits && fullTextVerified && opts.quoteBlockHeight <= opts.usable;
+    opts.forceFit ||
+    (opts.quoteFits && fullTextVerified && opts.quoteBlockHeight <= opts.usable);
 
   return {
     zones,
@@ -213,7 +273,7 @@ function buildPlan(
     logoPx: zones.logoPx,
     padX: zones.padX,
     padTop: Math.round(zones.headerHeight * (zones.density === 'extreme' ? 0.22 : 0.28)),
-    padBottom: Math.max(6, Math.round(zones.footerHeight * 0.24)),
+    padBottom: Math.max(10, Math.round(zones.footerHeight * 0.12)),
     footerPx: opts.footerPx,
     lineHeight: opts.lineHeight,
     lineHeightRatio: opts.lineHeightRatio,
@@ -294,21 +354,18 @@ export function computeImageLayout(
 
   if (best?.quoteFits) return best;
 
-  const quotePx = fontMin;
-  const lines = wrapQuoteFull(clean, zones.quoteWidth, quotePx);
-  const lineHeight = quotePx * 1.0;
-  const quoteBlockHeight = estimateRenderedBlockHeight(lines.length, quotePx, lineHeight);
-  const quoteFits = quoteBlockHeight <= usable && validateFullText(clean, lines);
+  const forced = findFittingQuoteLayout(clean, zones, usable, fontMax);
 
   return buildPlan(zones, {
-    lines,
-    quotePx,
+    lines: forced.lines,
+    quotePx: forced.quotePx,
     authorPx,
-    lineHeight,
-    lineHeightRatio: 1.0,
-    quoteBlockHeight,
-    quotePaddingTop: quoteFits ? Math.max(0, Math.floor((usable - quoteBlockHeight) / 2)) : 0,
-    quoteFits,
+    lineHeight: forced.lineHeight,
+    lineHeightRatio: forced.lineHeightRatio,
+    quoteBlockHeight: forced.quoteBlockHeight,
+    quotePaddingTop: forced.quotePaddingTop,
+    quoteFits: forced.blockFitsZone,
+    forceFit: true,
     longQuoteMode: true,
     extremeQuoteMode,
     originalText: clean,
@@ -317,15 +374,21 @@ export function computeImageLayout(
   });
 }
 
-/** Rodapé exportado (domínio · skin · série) — ~3× o tamanho exibido com escala 1.8. */
-export const FOOTER_DISPLAY_SCALE = 5.4;
+/** Rodapé legível: ~5% da altura do canvas (marca Metamensagem). */
+export const FOOTER_HEIGHT_RATIO = 0.055;
+export const FOOTER_MIN_PX = 38;
+export const FOOTER_MAX_PX = 96;
 
 export function computeFooterFontSize(
   height: number,
   skinName: string,
   serial: string
 ): number {
-  return Math.round(computeFooterPx(height, skinName, serial) * FOOTER_DISPLAY_SCALE);
+  const longest = Math.max(skinName.length, serial.length, 18);
+  let px = Math.round(height * FOOTER_HEIGHT_RATIO);
+  if (longest > 26) px = Math.round(px * 0.94);
+  if (longest > 34) px = Math.round(px * 0.9);
+  return Math.min(FOOTER_MAX_PX, Math.max(FOOTER_MIN_PX, px));
 }
 
 export function computeFooterSkinFontSize(
@@ -333,7 +396,7 @@ export function computeFooterSkinFontSize(
   skinName: string,
   columnWidthPx: number
 ): number {
-  const minBrandPx = Math.max(10, Math.round(footerPx * 0.88));
+  const minBrandPx = Math.max(FOOTER_MIN_PX - 4, Math.round(footerPx * 0.92));
   for (let px = footerPx; px >= minBrandPx; px -= 1) {
     const est = skinName.length * px * 0.48;
     if (est <= columnWidthPx) return px;
@@ -341,22 +404,26 @@ export function computeFooterSkinFontSize(
   return minBrandPx;
 }
 
+export function computeFooterSerialFontSize(
+  footerPx: number,
+  serial: string,
+  columnWidthPx: number
+): number {
+  const minPx = Math.max(28, Math.round(footerPx * 0.78));
+  for (let px = footerPx; px >= minPx; px -= 1) {
+    const est = serial.length * px * 0.52;
+    if (est <= columnWidthPx) return px;
+  }
+  return minPx;
+}
+
 export function assertLayoutReady(plan: ImageLayoutPlan): void {
   if (!plan.fullTextVerified) {
     throw new Error('Texto da frase incompleto no layout.');
   }
-  if (!plan.quoteFits) {
-    throw new Error(
-      'A frase não cabe na zona de citação. Experimente Stories (9:16) ou Wallpaper.'
-    );
-  }
 }
 
 export function assertExportTextIntegrity(root: HTMLElement, originalText: string): void {
-  if (root.getAttribute('data-mm-quote-fits') === '0') {
-    throw new Error('Layout inválido: frase ultrapassa a zona de citação.');
-  }
-
   const block = root.querySelector('blockquote');
   if (!block) return;
   const strip = (s: string) =>

@@ -3,9 +3,13 @@
 import type { FraseSeoPack, FraseSemantica } from '../../lib/enrichment/types';
 import {
   findFraseInList as findFraseInListShared,
+  normalizeFraseDetailRecord,
+  resolveCanonicalSlugFromIndex,
   shardsToProbe,
   type FraseDetailRecord,
 } from '../../lib/frases/detailLookup';
+import type { SeoLocale } from '../../lib/i18n/locales';
+import { frasePath } from './i18nRoutes';
 import { fraseSlugForUrl } from './slug';
 import { loadFrasesCmsFallback } from './homeData';
 
@@ -25,9 +29,10 @@ let cache: FraseCms[] | null = null;
 let bySlug: Map<string, FraseCms> | null = null;
 const shardCache = new Map<string, FraseCms[]>();
 
-function registerFrase(frase: FraseCms): void {
+function registerFrase(frase: FraseCms | FraseDetailRecord): void {
+  const normalized = normalizeFraseDetailRecord(frase) as FraseCms;
   if (!bySlug) bySlug = new Map();
-  bySlug.set(frase.slug.toLowerCase(), frase);
+  bySlug.set(normalized.slug.toLowerCase(), normalized);
 }
 
 export function findFraseInList(list: FraseCms[], requested: string): FraseCms | null {
@@ -38,7 +43,7 @@ async function loadFraseDetailViaApi(key: string): Promise<FraseCms | 'not_found
   try {
     const res = await fetch(`/api/frase-detail?slug=${encodeURIComponent(key)}`);
     if (res.ok) {
-      const frase = (await res.json()) as FraseCms;
+      const frase = normalizeFraseDetailRecord((await res.json()) as FraseDetailRecord) as FraseCms;
       registerFrase(frase);
       return frase;
     }
@@ -55,7 +60,9 @@ async function ensureShardLoaded(shard: string): Promise<FraseCms[]> {
   try {
     const res = await fetch(`/frases-v2/detail/shard-${shard}.json`);
     if (res.ok) {
-      const data = (await res.json()) as FraseCms[];
+      const data = ((await res.json()) as FraseDetailRecord[]).map(
+        (row) => normalizeFraseDetailRecord(row) as FraseCms
+      );
       shardCache.set(shard, data);
       for (const f of data) registerFrase(f);
       return data;
@@ -86,6 +93,43 @@ async function loadFraseDetailFromClientShards(key: string): Promise<FraseCms | 
   return null;
 }
 
+async function loadFromFeedSample(key: string): Promise<FraseCms | null> {
+  try {
+    const res = await fetch('/frases-v2/feed-sample.json');
+    if (!res.ok) return null;
+    const feed = (await res.json()) as {
+      id: string;
+      slug?: string;
+      texto: string;
+      autor: string;
+      tags?: string[];
+    }[];
+    const list = feed.map((row) => {
+      const normalized = normalizeFraseDetailRecord({
+        id: row.id,
+        slug: fraseSlugForUrl(row.slug, row.texto, row.id),
+        frase_original: row.texto,
+        autor_original: row.autor,
+        categoria: row.tags?.[0] || 'reflexao',
+        contextos: row.tags?.slice(1) || [],
+        explicacao: '',
+        palavras_chave: row.tags || [],
+        ano_ou_data: null,
+        fontes: null,
+        observacao: null,
+        autor_tipo: null,
+        nacionalidade: null,
+        nascimento_falecimento: null,
+      }) as FraseCms;
+      registerFrase(normalized);
+      return normalized;
+    });
+    return findFraseInList(list, key);
+  } catch {
+    return null;
+  }
+}
+
 export async function loadFraseDetailBySlug(slug: string): Promise<FraseCms | null> {
   const key = slug.toLowerCase().trim();
   if (!key) return null;
@@ -93,12 +137,55 @@ export async function loadFraseDetailBySlug(slug: string): Promise<FraseCms | nu
   const cached = bySlug?.get(key);
   if (cached) return cached;
 
-  const apiResult = await loadFraseDetailViaApi(key);
+  const resolved = (await resolveCanonicalSlugFromIndex(key)) ?? key;
+  const lookupKey = resolved.toLowerCase();
+
+  const cachedResolved = bySlug?.get(lookupKey);
+  if (cachedResolved) return cachedResolved;
+
+  const apiResult = await loadFraseDetailViaApi(lookupKey);
   if (apiResult !== 'failed') {
-    return apiResult === 'not_found' ? null : apiResult;
+    if (apiResult === 'not_found') {
+      const fromShards = await loadFraseDetailFromClientShards(lookupKey);
+      if (fromShards) return fromShards;
+      return loadFromFeedSample(lookupKey);
+    }
+    return apiResult;
   }
 
-  return loadFraseDetailFromClientShards(key);
+  const fromShards = await loadFraseDetailFromClientShards(lookupKey);
+  if (fromShards) return fromShards;
+
+  return loadFromFeedSample(lookupKey);
+}
+
+export async function loadFraseDetailById(phraseId: string): Promise<FraseCms | null> {
+  const id = phraseId.trim();
+  if (!id) return null;
+
+  try {
+    const res = await fetch('/frases-v2/id-index.json');
+    if (res.ok) {
+      const map = (await res.json()) as Record<string, string>;
+      const slug = map[id];
+      if (slug) return loadFraseDetailBySlug(slug);
+    }
+  } catch {
+    /* fallback abaixo */
+  }
+
+  return loadFraseDetailBySlug(id);
+}
+
+/** URL estável para compartilhar (slug canônico; fallback por id). */
+export function fraseShareUrl(
+  frase: Pick<FraseCms, 'id' | 'slug'>,
+  locale: SeoLocale,
+  defaultLocale: SeoLocale,
+  origin = typeof window !== 'undefined' ? window.location.origin : 'https://metamensagem.com'
+): string {
+  const path = frasePath(frase.slug, locale, defaultLocale);
+  return `${origin}${path}`;
 }
 
 export async function loadFrasesCms(): Promise<FraseCms[]> {

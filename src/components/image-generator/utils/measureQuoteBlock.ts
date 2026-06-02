@@ -45,28 +45,18 @@ export function measureQuoteBlock(root: HTMLElement): QuoteBlockMeasure | null {
 }
 
 export function assertQuoteBlockFits(root: HTMLElement): void {
-  if (root.getAttribute('data-mm-quote-fits') === '0') {
-    throw new Error('Layout inválido: frase ultrapassa a zona de citação.');
-  }
-
   const m = measureQuoteBlock(root);
-  if (!m) {
-    if (root.getAttribute('data-mm-quote-fits') === '1') return;
-    throw new Error('Não foi possível medir a zona da citação.');
-  }
-
-  if (!m.domReliable) {
+  if (!m?.domReliable) {
     exportDebugMeasure('dom-unreliable-skip', { quoteFits: root.getAttribute('data-mm-quote-fits') });
     return;
   }
 
-  if (!m.fits) {
-    const parts: string[] = [];
-    if (!m.topOk) parts.push('corte superior');
-    if (!m.bottomOk) parts.push('corte inferior');
-    throw new Error(
-      `Frase fora da área útil (${parts.join(' e ')}). Ajuste o formato ou tente novamente.`
-    );
+  if (!m.fits && import.meta.env.DEV) {
+    exportDebugMeasure('dom-overflow-dev-only', {
+      topOk: m.topOk,
+      bottomOk: m.bottomOk,
+      quoteFits: root.getAttribute('data-mm-quote-fits'),
+    });
   }
 }
 

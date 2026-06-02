@@ -72,6 +72,7 @@ import { sanitizeContentBanco } from './lib/safeContent';
 import { pruneInvalidTranslationCache } from './lib/translation';
 const TagCategoriaView = lazy(() => import('./views/TagCategoria'));
 const FraseDetalheView = lazy(() => import('./views/FraseDetalhe'));
+const FraseRedirectById = lazy(() => import('./views/FraseRedirectById'));
 import {
   buildFeedWithAds,
   FEED_INITIAL_VISIBLE,
@@ -310,6 +311,7 @@ export default function App() {
                     />
                   }
                 />
+                <Route path="/f/:id" element={<FraseRedirectById />} />
                 <Route path="/frases/:slug" element={<FraseDetalheView tema={tema} toast={mostrarToast} />} />
                 {SEO_LOCALES.map((lang) => (
                   <Route
@@ -630,7 +632,7 @@ function HomeView({
           <ImageGeneratorModal
             open
             quote={imageQuote}
-            onClose={() => setImageQuote(null)}
+            onClose={closeImageModal}
             toast={toast}
             tema={tema}
           />
@@ -649,6 +651,7 @@ function ColecaoContador({
   buscaAtiva,
   singular,
   plural,
+  volumeKey = 'frases.volume_static',
 }: {
   tema: string;
   mode?: 'volume' | 'numeric';
@@ -657,6 +660,7 @@ function ColecaoContador({
   buscaAtiva?: boolean;
   singular?: string;
   plural?: string;
+  volumeKey?: string;
 }) {
   const { t, i18n } = useTranslation();
   const locale = i18n.language?.startsWith('pt') ? 'pt-BR' : i18n.language || 'en';
@@ -664,10 +668,11 @@ function ColecaoContador({
 
   let displayText: string;
   if (mode === 'volume') {
+    const volumeLabel = t(volumeKey);
     displayText =
       buscaAtiva && visiveis !== undefined
-        ? `${fmt(visiveis)} · ${t('frases.volume_static')}`
-        : t('frases.volume_static');
+        ? `${fmt(visiveis)} · ${volumeLabel}`
+        : volumeLabel;
   } else {
     const rotulo = total === 1 ? singular : plural;
     displayText =
@@ -834,7 +839,7 @@ function FrasesView({
         <ImageGeneratorModal
           open
           quote={imageQuote}
-          onClose={() => setImageQuote(null)}
+          onClose={closeImageModal}
           toast={toast}
           tema={tema}
         />
@@ -893,11 +898,10 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
         </h2>
         <ColecaoContador
           tema={tema}
-          total={baseMetaforas.length}
+          mode="volume"
+          volumeKey="metaforas.volume_static"
           visiveis={metaforas.length}
           buscaAtiva={!!busca.trim()}
-          singular="metáfora"
-          plural="metáforas"
         />
         <div className="relative max-w-xl mx-auto">
           <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />

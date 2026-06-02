@@ -46,7 +46,8 @@ const resources = {
         "collection_title": "Arquivo de Metáforas",
         "page_title": "Índice de Metáforas Terapêuticas",
         "page_description": "Contos e narrativas profundas focadas em psicologia aplicada, insights inconscientes e reprogramação de atitudes.",
-        "search_placeholder": "Encontrar metáfora..."
+        "search_placeholder": "Encontrar metáfora...",
+        "volume_static": "mais de mil metáforas"
       },
       "banner": {
         "title": "Receba novas frases e metáforas todos os dias",
@@ -141,7 +142,8 @@ const resources = {
         "collection_title": "Metaphor Archive",
         "page_title": "Therapeutic Metaphors Index",
         "page_description": "Deep stories focused on applied psychology and attitude change.",
-        "search_placeholder": "Find a metaphor..."
+        "search_placeholder": "Find a metaphor...",
+        "volume_static": "more than a thousand metaphors"
       },
       "banner": {
         "title": "Receive new quotes and metaphors every day",

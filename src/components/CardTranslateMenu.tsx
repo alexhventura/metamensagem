@@ -80,12 +80,23 @@ export function CardTranslateMenu({
     setContingencyTarget(null);
     setSuccessLang(null);
     onDisplayChange({
-      ...source,
+      texto: source.texto,
+      titulo: source.titulo,
+      resumo: source.resumo,
+      autor: source.autor,
+      explicacao: source.explicacao,
       isTranslated: false,
       translationFailed: false,
       translationContingency: false,
     });
-  }, [source, onDisplayChange]);
+  }, [
+    source.texto,
+    source.titulo,
+    source.resumo,
+    source.autor,
+    source.explicacao,
+    onDisplayChange,
+  ]);
 
   const runTranslation = useCallback(
     async (target: CardLang, retry = false) => {
@@ -204,7 +215,7 @@ export function CardTranslateMenu({
 
   useEffect(() => {
     resetOriginal();
-  }, [source.texto, source.titulo, source.resumo, source.autor, source.explicacao, resetOriginal]);
+  }, [source.texto, source.titulo, source.resumo, source.autor, source.explicacao]);
 
   useEffect(() => {
     if (!successLang) return;

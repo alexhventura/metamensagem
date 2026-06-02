@@ -18,7 +18,7 @@ export function useUiLocaleSync(): void {
       void i18n.changeLanguage(next);
     }
     persistUiLocale(next);
-  }, [pathname, i18n]);
+  }, [pathname, i18n.language]);
 }
 
 /** Renderizar dentro de `<BrowserRouter>`. */

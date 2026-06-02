@@ -5,10 +5,12 @@
 import { FORMATS, FORMAT_ORDER } from '../src/components/image-generator/formats.ts';
 import {
   computeImageLayout,
+  computeFooterFontSize,
   validateFullText,
   normalizeQuoteText,
   wrapQuoteFull,
   estimateRenderedBlockHeight,
+  FOOTER_MIN_PX,
   LONG_QUOTE_CHAR_THRESHOLD,
   EXTREME_QUOTE_CHAR_THRESHOLD,
 } from '../src/components/image-generator/utils/textLayout.ts';
@@ -97,6 +99,31 @@ for (const key of ['feed', 'story', 'facebook', 'wallpaper_mobile']) {
   });
 }
 console.table(rows);
+
+console.log('\n4) Textos longos sempre permitem exportação (quoteFits)');
+const huge = buildQuote(800);
+for (const key of FORMAT_ORDER) {
+  const { width, height, label } = FORMATS[key];
+  const plan = computeImageLayout(huge, AUTHOR, width, height);
+  if (!plan.quoteFits || !plan.fullTextVerified) {
+    failed += 1;
+    console.error(`  FAIL: ${label} quoteFits=${plan.quoteFits} px=${plan.quotePx}`);
+  } else {
+    passed += 1;
+  }
+}
+if (failed === 0) console.log('  OK: todos os formatos com 800 chars');
+
+console.log('\n5) Rodapé legível (marca)');
+const storyFooter = computeFooterFontSize(1920, 'Metamensagem Oficial', 'MMM-2026-00000001');
+const feedFooter = computeFooterFontSize(1080, 'Galáxia', 'MMM-2026-00000005');
+if (storyFooter < FOOTER_MIN_PX || feedFooter < FOOTER_MIN_PX) {
+  failed += 1;
+  console.error(`  FAIL: footer px story=${storyFooter} feed=${feedFooter} (min ${FOOTER_MIN_PX})`);
+} else {
+  passed += 1;
+  console.log(`  OK: footer px story=${storyFooter} feed=${feedFooter}`);
+}
 
 console.log(`\n=== Resultado: ${passed} ok, ${failed} falhas ===`);
 if (failed > 0) process.exit(1);

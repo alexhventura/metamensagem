@@ -23,10 +23,12 @@ import { type CardContentDisplay } from '../lib/translation';
 import {
   getFraseCmsBySlugSync,
   loadFraseDetailBySlug,
+  fraseShareUrl,
   fraseToListItem,
   fraseCmsFromListItem,
   type FraseCms,
 } from '../lib/frasesModel';
+import { fraseTextoOf, fraseAutorOf } from '../../lib/frases/detailLookup';
 import { formatTagForDisplay } from '../lib/tagDisplay';
 import { sanitizeTextForTranslation } from '../lib/textSanitize';
 import type { ItemConteudo } from '../types/content';
@@ -160,17 +162,22 @@ export default function FraseDetalheView({
 
   const [i18nMeta, setI18nMeta] = useState<Awaited<ReturnType<typeof loadFraseI18nMeta>>>(null);
   const [frase, setFrase] = useState<FraseCms | null>(() => {
-    if (preloadedFrase) return preloadedFrase;
-    return slug ? getFraseCmsBySlugSync(slug) ?? null : null;
+    const initial = preloadedFrase ?? (slug ? getFraseCmsBySlugSync(slug) ?? null : null);
+    return initial;
   });
   const [loading, setLoading] = useState(() => !preloadedFrase && !frase && !!slug);
   const [loadError, setLoadError] = useState(false);
   const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
   const closeImageModal = useCallback(() => setImageQuote(null), []);
   useAppUiReset(closeImageModal);
-  const [display, setDisplay] = useState<CardContentDisplay>({
-    texto: '',
-    isTranslated: false,
+  const [display, setDisplay] = useState<CardContentDisplay>(() => {
+    const initial = preloadedFrase ?? (slug ? getFraseCmsBySlugSync(slug) : null);
+    if (!initial) return { texto: '', isTranslated: false };
+    return {
+      texto: fraseTextoOf(initial),
+      autor: fraseAutorOf(initial),
+      isTranslated: false,
+    };
   });
   const [translating, setTranslating] = useState(false);
   const [translationContingency, setTranslationContingency] = useState(false);
@@ -194,6 +201,11 @@ export default function FraseDetalheView({
         if (cancel) return;
         if (fromDetail) {
           setFrase(fromDetail);
+          setDisplay({
+            texto: fromDetail.frase_original,
+            autor: fromDetail.autor_original,
+            isTranslated: false,
+          });
           trackPhraseEvent(fromDetail.slug, 'view', {
             phrase_id: fromDetail.id,
             category: fromDetail.categoria,
@@ -215,8 +227,16 @@ export default function FraseDetalheView({
           return;
         }
         const sync = getFraseCmsBySlugSync(slug);
-        setFrase(sync ?? preloadedFrase ?? null);
-        if (!sync && !preloadedFrase) setLoadError(true);
+        const resolved = sync ?? preloadedFrase ?? null;
+        setFrase(resolved);
+        if (resolved) {
+          setDisplay({
+            texto: resolved.frase_original,
+            autor: resolved.autor_original,
+            isTranslated: false,
+          });
+        }
+        if (!resolved) setLoadError(true);
       } catch (err) {
         console.error('[FraseDetalhe] load failed', err);
         if (!cancel) {
@@ -316,8 +336,15 @@ export default function FraseDetalheView({
   const listItem = useMemo(() => (frase ? fraseToListItem(frase) : null), [frase]);
 
   const translateSource = useMemo(
-    () => (frase ? { texto: frase.frase_original } : { texto: '' }),
-    [frase]
+    () =>
+      frase
+        ? {
+            texto: frase.frase_original,
+            autor: frase.autor_original,
+            explicacao: frase.explicacao ?? undefined,
+          }
+        : { texto: '' },
+    [frase?.frase_original, frase?.autor_original, frase?.explicacao]
   );
 
   const canonical = frase ? fraseCanonicalUrl(frase.slug, contentLocale, defaultLocale) : '';
@@ -331,8 +358,10 @@ export default function FraseDetalheView({
     ? fraseHreflangAlternates(frase.slug, defaultLocale, availableLangs)
     : [];
   const pageHtmlLang = htmlLangAttribute(contentLocale);
-  const quoteText = display.texto || frase?.frase_original || '';
-  const authorLine = display.autor || frase?.autor_original || '';
+  const quoteText =
+    display.texto || (frase ? fraseTextoOf(frase) : '') || '';
+  const authorLine =
+    display.autor || (frase ? fraseAutorOf(frase) : '') || '';
   useTranslatedViewMeta(display.isTranslated);
 
   const handleCopy = () => {
@@ -353,7 +382,7 @@ export default function FraseDetalheView({
       category: frase.categoria,
       locale: contentLocale,
     });
-    const shareUrl = canonical;
+    const shareUrl = fraseShareUrl(frase, contentLocale, defaultLocale);
     const payload = {
       title: frase.autor_original,
       text: `${quoteText} — ${authorLine}`,
@@ -367,7 +396,7 @@ export default function FraseDetalheView({
     } catch (err) {
       if ((err as Error).name === 'AbortError') return;
     }
-    await navigator.clipboard.writeText(shareUrl);
+    await navigator.clipboard.writeText(`${payload.text}\n${shareUrl}`);
     toast(t('common.link_copied'));
   };
 
@@ -536,15 +565,7 @@ export default function FraseDetalheView({
                   accent="purple"
                   contentId={frase.id}
                   sourceLang={defaultLocale}
-                  source={
-                    frase
-                      ? {
-                          texto: frase.frase_original,
-                          autor: frase.autor_original,
-                          explicacao: frase.explicacao ?? undefined,
-                        }
-                      : translateSource
-                  }
+                  source={translateSource}
                   onDisplayChange={setDisplay}
                   onLoadingChange={setTranslating}
                   tooltipLabel={t('common.translate')}
@@ -637,7 +658,7 @@ export default function FraseDetalheView({
           <ImageGeneratorModal
             open
             quote={imageQuote}
-            onClose={() => setImageQuote(null)}
+            onClose={closeImageModal}
             toast={toast}
             tema={tema}
           />

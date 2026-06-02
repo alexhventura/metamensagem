@@ -91,6 +91,7 @@ import { tagsForDisplay } from './lib/tagDisplay';
 import BackNavButton from './components/BackNavButton';
 import HeaderBrandLink from './components/HeaderBrandLink';
 import { useAppUiReset } from './hooks/useAppUiReset';
+import { dispatchAppUiReset } from './lib/appUiReset';
 
 interface ModalProps {
   item: ItemConteudo;
@@ -245,13 +246,22 @@ export default function App() {
         </div>
 
         {/* SUBHEADER DE NAVEGA�!ÒO REFOR�!ADA */}
-        <div className="py-4 border-b sticky top-20 z-30 backdrop-blur-md mm-subheader-bar border-purple-900/20">
+        <div className="py-4 border-b sticky top-20 z-[255] backdrop-blur-md mm-subheader-bar border-purple-900/20">
           <div className="max-w-5xl mx-auto px-4 flex justify-center gap-12 md:gap-20">
-            <Link to="/frases" aria-label={t('nav.access_quotes')} className={`text-[11px] font-black uppercase tracking-[0.4em] transition-transform flex items-center gap-2.5 ${tema === 'light' ? 'text-purple-600' : 'text-purple-400'} hover:scale-105 active:scale-95`}>
+            <Link
+              to="/frases"
+              aria-label={t('nav.access_quotes')}
+              onClick={() => dispatchAppUiReset()}
+              className={`text-[11px] font-black uppercase tracking-[0.4em] transition-transform flex items-center gap-2.5 ${tema === 'light' ? 'text-purple-600' : 'text-purple-400'} hover:scale-105 active:scale-95`}
+            >
               <div className="w-1 h-1 bg-purple-500 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.5)]"></div>
               {t('nav.access_quotes', t('nav.quotes'))}
             </Link>
-            <Link to="/metaforas" className={`text-[11px] font-black uppercase tracking-[0.4em] transition-all flex items-center gap-2.5 ${tema === 'light' ? 'text-purple-600' : 'text-purple-400'} hover:scale-105 active:scale-95`}>
+            <Link
+              to="/metaforas"
+              onClick={() => dispatchAppUiReset()}
+              className={`text-[11px] font-black uppercase tracking-[0.4em] transition-all flex items-center gap-2.5 ${tema === 'light' ? 'text-purple-600' : 'text-purple-400'} hover:scale-105 active:scale-95`}
+            >
               <div className="w-1 h-1 bg-purple-500 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.5)]"></div>
               {t('nav.metaforas')}
             </Link>

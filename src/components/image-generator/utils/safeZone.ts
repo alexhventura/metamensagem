@@ -26,9 +26,9 @@ const DENSITY_RATIOS: Record<
   ZoneDensity,
   { header: number; footer: number; author: number; gap: number; logoScale: number }
 > = {
-  normal: { header: 0.111, footer: 0.074, author: 0.083, gap: 0.022, logoScale: 1 },
-  long: { header: 0.1, footer: 0.068, author: 0.076, gap: 0.018, logoScale: 0.92 },
-  extreme: { header: 0.082, footer: 0.058, author: 0.065, gap: 0.012, logoScale: 0.78 },
+  normal: { header: 0.111, footer: 0.088, author: 0.083, gap: 0.022, logoScale: 1 },
+  long: { header: 0.1, footer: 0.082, author: 0.076, gap: 0.018, logoScale: 0.92 },
+  extreme: { header: 0.082, footer: 0.072, author: 0.065, gap: 0.012, logoScale: 0.78 },
 };
 
 export function computeLayoutZones(

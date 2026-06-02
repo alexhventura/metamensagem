@@ -46,7 +46,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
 
   const skinFooterPx = useMemo(
     () =>
-      computeFooterSkinFontSize(footerPx, skin.name, Math.floor(format.width * 0.36)),
+      computeFooterSkinFontSize(footerPx, skin.name, Math.floor(format.width * 0.42)),
     [footerPx, skin.name, format.width]
   );
 
@@ -184,10 +184,10 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           fontFamily: 'Arial, Helvetica, sans-serif',
           fontWeight: 700,
           letterSpacing: '0.02em',
-          opacity: 0.78,
+          opacity: 0.92,
           borderTop: '1px solid rgba(255,255,255,0.06)',
           background: 'linear-gradient(to top, rgba(0,0,0,0.18) 0%, transparent 100%)',
-          gridTemplateColumns: 'minmax(0,1fr) minmax(0,1.2fr) minmax(0,1fr)',
+          gridTemplateColumns: 'minmax(0,1fr) minmax(0,1.5fr) minmax(0,1fr)',
           gap: 8,
           alignItems: 'end',
         }}

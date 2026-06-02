@@ -317,8 +317,8 @@ export function computeImageLayout(
   });
 }
 
-/** Rodapé exportado (domínio · skin · série) — ~80% maior que o tamanho base de layout. */
-export const FOOTER_DISPLAY_SCALE = 1.8;
+/** Rodapé exportado (domínio · skin · série) — ~3× o tamanho exibido com escala 1.8. */
+export const FOOTER_DISPLAY_SCALE = 5.4;
 
 export function computeFooterFontSize(
   height: number,
@@ -333,11 +333,12 @@ export function computeFooterSkinFontSize(
   skinName: string,
   columnWidthPx: number
 ): number {
-  for (let px = footerPx; px >= 6; px -= 1) {
+  const minBrandPx = Math.max(10, Math.round(footerPx * 0.88));
+  for (let px = footerPx; px >= minBrandPx; px -= 1) {
     const est = skinName.length * px * 0.48;
     if (est <= columnWidthPx) return px;
   }
-  return 6;
+  return minBrandPx;
 }
 
 export function assertLayoutReady(plan: ImageLayoutPlan): void {

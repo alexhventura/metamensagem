@@ -30,7 +30,7 @@ export const de = {
     },
     home: {
       search_placeholder: 'Welches Gefühl oder Thema suchen Sie heute?',
-      explore_more: 'Mehr Weisheit entdecken (+10)',
+      explore_more: '12 weitere anzeigen',
       sharing_wisdom: 'Edge-Weisheit wird synchronisiert...',
     },
     banner: {
@@ -96,7 +96,7 @@ export const it = {
     },
     home: {
       search_placeholder: 'Quale sentimento o tema cerchi oggi?',
-      explore_more: 'Esplora più saggezza (+10)',
+      explore_more: 'Mostra altri 12',
       sharing_wisdom: 'Sincronizzazione saggezza Edge...',
     },
     banner: {
@@ -161,7 +161,7 @@ export const ja = {
     },
     home: {
       search_placeholder: '今日はどんな気持ちやテーマを探しますか？',
-      explore_more: 'もっと知恵を探す (+10)',
+      explore_more: 'さらに12件表示',
       sharing_wisdom: 'エッジの知恵を同期中...',
     },
     banner: {
@@ -226,7 +226,7 @@ export const hi = {
     },
     home: {
       search_placeholder: 'आज आप कौन सी भावना या विषय खोज रहे हैं?',
-      explore_more: 'और ज्ञान खोजें (+10)',
+      explore_more: '12 और दिखाएँ',
       sharing_wisdom: 'एज ज्ञान सिंक हो रहा है...',
     },
     banner: {

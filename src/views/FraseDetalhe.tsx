@@ -1,9 +1,9 @@
-import React, { useEffect, useMemo, useState, lazy, Suspense } from 'react';
+import React, { useEffect, useMemo, useRef, useState, lazy, Suspense } from 'react';
 const ImageGeneratorModal = lazy(() => import('../components/image-generator'));
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import BackNavButton from '../components/BackNavButton';
 import TranslationContingencyNotice from '../components/TranslationContingencyNotice';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useInView, useReducedMotion } from 'framer-motion';
 import { Copy, Share2, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import CardTooltip from '../components/CardTooltip';
@@ -146,6 +146,9 @@ export default function FraseDetalheView({
   const navigate = useNavigate();
   const routeInfo = useMemo(() => parseFraseRoute(location.pathname), [location.pathname]);
   const { t, i18n } = useTranslation();
+  const reduceMotion = useReducedMotion();
+  const quoteRef = useRef<HTMLQuoteElement>(null);
+  const quoteInView = useInView(quoteRef, { once: true, amount: 0.2 });
 
   const preloadedFrase = useMemo(() => {
     const state = location.state as { item?: ItemConteudo; frase?: FraseCms } | null;
@@ -174,26 +177,30 @@ export default function FraseDetalheView({
     let cancel = false;
     setLoadError(false);
     if (!preloadedFrase) setLoading(true);
+
+    const i18nTimer = window.setTimeout(() => {
+      if (cancel) return;
+      void loadFraseI18nMeta(slug).then((meta) => {
+        if (!cancel && meta) setI18nMeta(meta);
+      });
+    }, 3000);
+
     (async () => {
       try {
-        const [fromShard, meta] = await Promise.all([
-          loadFraseDetailBySlug(slug),
-          loadFraseI18nMeta(slug),
-        ]);
+        const fromDetail = await loadFraseDetailBySlug(slug);
         if (cancel) return;
-        if (meta) setI18nMeta(meta);
-        if (fromShard) {
-          setFrase(fromShard);
-          trackPhraseEvent(fromShard.slug, 'view', {
-            phrase_id: fromShard.id,
-            category: fromShard.categoria,
+        if (fromDetail) {
+          setFrase(fromDetail);
+          trackPhraseEvent(fromDetail.slug, 'view', {
+            phrase_id: fromDetail.id,
+            category: fromDetail.categoria,
             locale: routeInfo?.prefixLocale ?? undefined,
           });
-          const canonical = fromShard.slug.toLowerCase();
+          const canonical = fromDetail.slug.toLowerCase();
           if (slug && canonical !== slug.toLowerCase()) {
             const def = seoLocaleFromLanguageOriginal(
-              fromShard.semantica?.languageOriginal ||
-                fromShard.semantica?.idiomaOriginal
+              fromDetail.semantica?.languageOriginal ||
+                fromDetail.semantica?.idiomaOriginal
             );
             const prefix = routeInfo?.prefixLocale ?? null;
             navigate(frasePath(canonical, prefix ?? def, def), {
@@ -217,10 +224,12 @@ export default function FraseDetalheView({
         if (!cancel) setLoading(false);
       }
     })();
+
     return () => {
       cancel = true;
+      window.clearTimeout(i18nTimer);
     };
-  }, [slug, preloadedFrase]);
+  }, [slug, preloadedFrase, navigate, location.state, routeInfo?.prefixLocale]);
 
   const defaultLocale: SeoLocale = useMemo(
     () =>
@@ -256,35 +265,50 @@ export default function FraseDetalheView({
 
     showOriginal();
     setTranslationContingency(false);
-    setTranslating(true);
-    void getOrCreatePhraseTranslation(frase.slug, frase.frase_original, contentLocale, {
-      contentId: frase.id,
-      category: frase.categoria,
-    })
-      .then((result) => {
-        if (cancel) return;
-        setTranslationContingency(false);
-        setDisplay({
-          texto: result.text,
-          autor: frase.autor_original,
-          isTranslated: result.locale !== defaultLocale && result.mode !== 'contingency',
-          targetLang: contentLocale,
+
+    const translateDelayMs = loading ? 2000 : 1500;
+    const translateTimer = window.setTimeout(() => {
+      if (cancel) return;
+      setTranslating(true);
+      void getOrCreatePhraseTranslation(frase.slug, frase.frase_original, contentLocale, {
+        contentId: frase.id,
+        category: frase.categoria,
+      })
+        .then((result) => {
+          if (cancel) return;
+          setTranslationContingency(false);
+          setDisplay({
+            texto: result.text,
+            autor: frase.autor_original,
+            isTranslated: result.locale !== defaultLocale && result.mode !== 'contingency',
+            targetLang: contentLocale,
+          });
+        })
+        .catch((err) => {
+          if (!cancel) {
+            showOriginal();
+            setTranslationContingency(err instanceof TranslationContingencyError);
+          }
+        })
+        .finally(() => {
+          if (!cancel) setTranslating(false);
         });
-      })
-      .catch((err) => {
-        if (!cancel) {
-          showOriginal();
-          setTranslationContingency(err instanceof TranslationContingencyError);
-        }
-      })
-      .finally(() => {
-        if (!cancel) setTranslating(false);
-      });
+    }, translateDelayMs);
 
     return () => {
       cancel = true;
+      window.clearTimeout(translateTimer);
     };
-  }, [frase?.id, frase?.frase_original, frase?.autor_original, contentLocale, defaultLocale]);
+  }, [
+    frase?.id,
+    frase?.slug,
+    frase?.frase_original,
+    frase?.autor_original,
+    frase?.categoria,
+    contentLocale,
+    defaultLocale,
+    loading,
+  ]);
 
   const listItem = useMemo(() => (frase ? fraseToListItem(frase) : null), [frase]);
 
@@ -384,12 +408,22 @@ export default function FraseDetalheView({
     !!frase.informacoes?.ultima_atualizacao ||
     !!frase.informacoes?.confiabilidade;
 
+  const pageShellClass = 'max-w-3xl w-full mx-auto px-4 py-10 flex-1';
+  const quoteClassName = `text-3xl md:text-4xl font-black leading-[1.15] tracking-tight mb-5 transition-opacity ${
+    translating ? 'opacity-55' : 'opacity-100'
+  } ${tema === 'light' ? 'text-black' : 'text-white'}`;
+
+  const PageShell = reduceMotion ? 'div' : motion.div;
+  const pageMotionProps = reduceMotion
+    ? { className: pageShellClass }
+    : {
+        initial: { opacity: 0, y: 12 },
+        animate: { opacity: 1, y: 0 },
+        className: pageShellClass,
+      };
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="max-w-3xl w-full mx-auto px-4 py-10 flex-1"
-    >
+    <PageShell {...pageMotionProps}>
       <MudarMetaSEO
         title={seoPack.title}
         description={seoPack.description}
@@ -423,20 +457,25 @@ export default function FraseDetalheView({
               </span>
             </div>
 
-            <AnimatePresence mode="wait">
-              <motion.blockquote
-                key={quoteText + String(display.isTranslated)}
-                initial={{ opacity: 0, y: 6 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className={`text-3xl md:text-4xl font-black leading-[1.15] tracking-tight mb-5 transition-opacity ${
-                  translating ? 'opacity-55' : 'opacity-100'
-                } ${tema === 'light' ? 'text-black' : 'text-white'}`}
-              >
+            {reduceMotion ? (
+              <blockquote ref={quoteRef} className={quoteClassName}>
                 &ldquo;{sanitizeTextForTranslation(quoteText)}&rdquo;
-              </motion.blockquote>
-            </AnimatePresence>
+              </blockquote>
+            ) : (
+              <AnimatePresence mode="wait">
+                <motion.blockquote
+                  ref={quoteRef}
+                  key={quoteText + String(display.isTranslated)}
+                  initial={quoteInView ? false : { opacity: 0, y: 6 }}
+                  animate={quoteInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 6 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className={quoteClassName}
+                >
+                  &ldquo;{sanitizeTextForTranslation(quoteText)}&rdquo;
+                </motion.blockquote>
+              </AnimatePresence>
+            )}
 
             <p
               className={`text-sm font-bold tracking-wide mb-6 ${
@@ -471,8 +510,9 @@ export default function FraseDetalheView({
                   type="button"
                   onClick={handleCopy}
                   className={`${CARD_ACTION_BTN} ${neutralAction}`}
+                  aria-label={t('common.copy')}
                 >
-                  <Copy size={18} />
+                  <Copy size={18} aria-hidden />
                 </button>
               </CardTooltip>
 
@@ -481,8 +521,9 @@ export default function FraseDetalheView({
                   type="button"
                   onClick={() => void handleShare()}
                   className={`${CARD_ACTION_BTN} ${neutralAction}`}
+                  aria-label={t('common.share')}
                 >
-                  <Share2 size={18} />
+                  <Share2 size={18} aria-hidden />
                 </button>
               </CardTooltip>
 
@@ -599,6 +640,6 @@ export default function FraseDetalheView({
           />
         </Suspense>
       )}
-    </motion.div>
+    </PageShell>
   );
 }

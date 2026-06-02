@@ -1,15 +1,10 @@
 import { ImageResponse } from '@vercel/og';
 import { findFraseForOg, previewSerialForQuote } from '../../lib/server/findFraseForOg';
+import { computeImageLayout } from '../../src/components/image-generator/utils/textLayout';
 
 export const config = {
   runtime: 'nodejs',
 };
-
-function truncate(text: string, max: number): string {
-  const t = text.replace(/\s+/g, ' ').trim();
-  if (t.length <= max) return t;
-  return `${t.slice(0, max - 1).trim()}…`;
-}
 
 export default async function handler(req: Request) {
   const url = new URL(req.url);
@@ -27,9 +22,9 @@ export default async function handler(req: Request) {
   }
 
   const serial = previewSerialForQuote(frase.id);
-  const quote = truncate(frase.texto, 220);
-  const autor = truncate(frase.autor, 80);
+  const layout = computeImageLayout(frase.texto, frase.autor, 1200, 630);
   const skin = frase.categoria || 'premium';
+  const author = frase.autor.trim();
 
   return new ImageResponse(
     (
@@ -40,7 +35,8 @@ export default async function handler(req: Request) {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          padding: 56,
+          padding: 48,
+          paddingBottom: 52,
           background: 'linear-gradient(145deg, #1a0a2e 0%, #4c1d95 45%, #312e81 100%)',
           color: '#fafafa',
           fontFamily: 'system-ui, sans-serif',
@@ -65,28 +61,56 @@ export default async function handler(req: Request) {
           <span style={{ fontSize: 28, fontWeight: 800, letterSpacing: -1 }}>Metamensagem</span>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 20, flex: 1, justifyContent: 'center' }}>
-          <p
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 16,
+            flex: 1,
+            justifyContent: 'center',
+            paddingBottom: layout.authorBottomGap,
+            maxHeight: layout.safe.quoteHeight,
+          }}
+        >
+          <div
             style={{
-              fontSize: quote.length > 120 ? 36 : 42,
+              fontSize: layout.quotePx,
               fontWeight: 800,
-              lineHeight: 1.2,
+              lineHeight: layout.lineHeight / layout.quotePx,
               margin: 0,
+              textAlign: 'center',
             }}
           >
-            &ldquo;{quote}&rdquo;
-          </p>
-          <p style={{ fontSize: 26, opacity: 0.85, margin: 0 }}>— {autor}</p>
+            {layout.lines.map((line, i) => (
+              <div key={i} style={{ display: 'block' }}>
+                {i === 0 ? '“' : ''}
+                {line}
+                {i === layout.lines.length - 1 ? '”' : ''}
+              </div>
+            ))}
+          </div>
+          {author ? (
+            <p
+              style={{
+                fontSize: layout.authorPx,
+                opacity: 0.85,
+                margin: 0,
+                textAlign: 'center',
+              }}
+            >
+              — {author}
+            </p>
+          ) : null}
         </div>
 
         <div
           style={{
             display: 'flex',
             justifyContent: 'space-between',
-            fontSize: 18,
+            fontSize: layout.footerPx,
             opacity: 0.75,
             borderTop: '1px solid rgba(255,255,255,0.2)',
-            paddingTop: 20,
+            paddingTop: 16,
           }}
         >
           <span>metamensagem.com · {skin}</span>

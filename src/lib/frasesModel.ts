@@ -1,8 +1,12 @@
 /** Tipos e helpers de frases (CMS + fase 2 semântica). */
 
 import type { FraseSeoPack, FraseSemantica } from '../../lib/enrichment/types';
-import { shardForSlug } from '../../lib/utils/shardForSlug';
-import { fraseSlugForUrl, slugifyFraseTexto } from './slug';
+import {
+  findFraseInList as findFraseInListShared,
+  shardsToProbe,
+  type FraseDetailRecord,
+} from '../../lib/frases/detailLookup';
+import { fraseSlugForUrl } from './slug';
 import { loadFrasesCmsFallback } from './homeData';
 
 export interface FraseInformacoes {
@@ -12,23 +16,7 @@ export interface FraseInformacoes {
   curadoria_ia?: boolean;
 }
 
-export interface FraseCms {
-  id: string;
-  slug: string;
-  frase_original: string;
-  autor_original: string;
-  autor_slug?: string;
-  categoria: string;
-  contextos: string[];
-  explicacao: string;
-  palavras_chave: string[];
-  ano_ou_data: string | null;
-  fontes: string | null;
-  observacao: string | null;
-  autor_tipo: string | null;
-  nacionalidade: string | null;
-  nascimento_falecimento: string | null;
-  informacoes?: FraseInformacoes;
+export interface FraseCms extends FraseDetailRecord {
   semantica?: FraseSemantica;
   seo?: FraseSeoPack;
 }
@@ -42,44 +30,23 @@ function registerFrase(frase: FraseCms): void {
   bySlug.set(frase.slug.toLowerCase(), frase);
 }
 
-/** Resolve slug longo de link compartilhado → slug canônico do acervo. */
 export function findFraseInList(list: FraseCms[], requested: string): FraseCms | null {
-  const key = requested.toLowerCase().trim();
-  if (!key) return null;
-
-  const exact = list.find((f) => f.slug.toLowerCase() === key);
-  if (exact) return exact;
-
-  const prefix = list.find(
-    (f) =>
-      key.startsWith(f.slug.toLowerCase()) ||
-      f.slug.toLowerCase().startsWith(key.slice(0, Math.min(key.length, f.slug.length)))
-  );
-  if (prefix) return prefix;
-
-  const pseudoFromUrl = slugifyFraseTexto(key.replace(/-/g, ' '));
-  const byPseudo = list.find((f) => f.slug.toLowerCase() === pseudoFromUrl);
-  if (byPseudo) return byPseudo;
-
-  const byCanonicalText = list.find((f) => slugifyFraseTexto(f.frase_original) === key);
-  if (byCanonicalText) return byCanonicalText;
-
-  const byCanonicalMatch = list.find((f) => {
-    const canonical = slugifyFraseTexto(f.frase_original);
-    return key.startsWith(canonical) || canonical === pseudoFromUrl;
-  });
-  return byCanonicalMatch ?? null;
+  return findFraseInListShared(list, requested);
 }
 
-function shardsToProbe(requested: string): string[] {
-  const key = requested.toLowerCase();
-  const ids = new Set<string>([shardForSlug(key)]);
-  const pseudo = slugifyFraseTexto(key.replace(/-/g, ' '));
-  ids.add(shardForSlug(pseudo));
-  if (key.length > 80) {
-    ids.add(shardForSlug(key.slice(0, 80)));
+async function loadFraseDetailViaApi(key: string): Promise<FraseCms | 'not_found' | 'failed'> {
+  try {
+    const res = await fetch(`/api/frase-detail?slug=${encodeURIComponent(key)}`);
+    if (res.ok) {
+      const frase = (await res.json()) as FraseCms;
+      registerFrase(frase);
+      return frase;
+    }
+    if (res.status === 404) return 'not_found';
+  } catch (err) {
+    console.warn('[frasesModel] API frase-detail failed', err);
   }
-  return [...ids];
+  return 'failed';
 }
 
 async function ensureShardLoaded(shard: string): Promise<FraseCms[]> {
@@ -101,13 +68,7 @@ async function ensureShardLoaded(shard: string): Promise<FraseCms[]> {
   return [];
 }
 
-export async function loadFraseDetailBySlug(slug: string): Promise<FraseCms | null> {
-  const key = slug.toLowerCase().trim();
-  if (!key) return null;
-
-  const cached = bySlug?.get(key);
-  if (cached) return cached;
-
+async function loadFraseDetailFromClientShards(key: string): Promise<FraseCms | null> {
   for (const shardId of shardsToProbe(key)) {
     const list = await ensureShardLoaded(shardId);
     const found = findFraseInList(list, key);
@@ -123,6 +84,21 @@ export async function loadFraseDetailBySlug(slug: string): Promise<FraseCms | nu
   }
 
   return null;
+}
+
+export async function loadFraseDetailBySlug(slug: string): Promise<FraseCms | null> {
+  const key = slug.toLowerCase().trim();
+  if (!key) return null;
+
+  const cached = bySlug?.get(key);
+  if (cached) return cached;
+
+  const apiResult = await loadFraseDetailViaApi(key);
+  if (apiResult !== 'failed') {
+    return apiResult === 'not_found' ? null : apiResult;
+  }
+
+  return loadFraseDetailFromClientShards(key);
 }
 
 export async function loadFrasesCms(): Promise<FraseCms[]> {

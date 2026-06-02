@@ -16,8 +16,8 @@ export type SafeZoneMetrics = {
 };
 
 /** Proporções Soft Premium (editorial). */
-const HEADER_RATIO = 0.11;
-const FOOTER_RATIO = 0.075;
+const HEADER_RATIO = 0.1;
+const FOOTER_RATIO = 0.082;
 const SIDE_RATIO = 0.08;
 const LOGO_MAX_RATIO = 0.085;
 

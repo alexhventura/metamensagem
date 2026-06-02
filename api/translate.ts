@@ -17,14 +17,38 @@ export default async function handler(req: Request): Promise<Response> {
   const email = process.env.MYMEMORY_EMAIL?.trim();
   if (email) upstreamUrl += `&de=${encodeURIComponent(email)}`;
 
-  const upstream = await fetch(upstreamUrl);
-  const body = await upstream.text();
+  try {
+    const upstream = await fetch(upstreamUrl);
+    const body = await upstream.text();
 
-  return new Response(body, {
-    status: upstream.status,
-    headers: {
-      'Content-Type': 'application/json; charset=utf-8',
-      'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800',
-    },
-  });
+    if (!upstream.ok) {
+      return Response.json(
+        { unavailable: true, responseStatus: upstream.status },
+        {
+          status: 200,
+          headers: {
+            'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300',
+          },
+        }
+      );
+    }
+
+    return new Response(body, {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800',
+      },
+    });
+  } catch {
+    return Response.json(
+      { unavailable: true, responseStatus: 503 },
+      {
+        status: 200,
+        headers: {
+          'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300',
+        },
+      }
+    );
+  }
 }

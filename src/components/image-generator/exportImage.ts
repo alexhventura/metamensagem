@@ -1,6 +1,7 @@
 /** Exportação client-side (modern-screenshot — sem leitura de cssRules cross-origin). */
 
 import { ensureCaptureFontsReady } from './utils/imageFonts';
+import { assertExportTextIntegrity } from './utils/textLayout';
 
 export type CaptureFontSample = { text: string; autor: string };
 
@@ -11,6 +12,7 @@ export async function captureElementAsBlob(
 ): Promise<Blob> {
   const { text, autor } = fontSample ?? { text: '', autor: '' };
   await ensureCaptureFontsReady(text, autor);
+  assertExportTextIntegrity(node, text);
 
   const { domToBlob } = await import('modern-screenshot');
   const blob = await domToBlob(node, {

@@ -65,6 +65,24 @@
       ]
     },
     {
+      "source": "/frases-v2/feed-sample.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/frases-v2/index/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
       "source": "/frases-v2/manifest.json",
       "headers": [
         {

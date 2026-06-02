@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { observeAdSlot } from '../lib/adsenseLazy';
 
-type Placement =
+export type AdPlacement =
   | 'home-in-feed'
   | 'frases-in-feed'
   | 'metaforas-in-feed'
@@ -11,7 +11,7 @@ type Placement =
 /**
  * Placeholder com dimensões fixas (CLS) + lazy AdSense via IntersectionObserver.
  */
-export default function AdSlot({ tema, placement }: { tema: string; placement: Placement }) {
+export default function AdSlot({ tema, placement }: { tema: string; placement: AdPlacement }) {
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {

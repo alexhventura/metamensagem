@@ -42,7 +42,15 @@ import { type CardContentDisplay } from './lib/translation';
 import { useTranslatedViewMeta } from './lib/useTranslatedViewMeta';
 import { sanitizeTextForTranslation } from './lib/textSanitize';
 
-import SocialHub from './components/SocialHub';
+const SocialHub = lazy(() => import('./components/SocialHub'));
+
+function DeferredSocialHub({ tema }: { tema: string }) {
+  return (
+    <Suspense fallback={null}>
+      <SocialHub tema={tema} />
+    </Suspense>
+  );
+}
 import {
   carregarMetaforaDetalhe,
   encontrarMetaforaNoBanco,
@@ -65,8 +73,13 @@ import { sanitizeContentBanco } from './lib/safeContent';
 import { pruneInvalidTranslationCache } from './lib/translation';
 const TagCategoriaView = lazy(() => import('./views/TagCategoria'));
 const FraseDetalheView = lazy(() => import('./views/FraseDetalhe'));
-import { GRID_CONTENT } from './lib/contentGrid';
-import { flattenFeedWithAds } from './lib/feedWithAds';
+import {
+  buildFeedWithAds,
+  FEED_INITIAL_VISIBLE,
+  FEED_LOAD_MORE_STEP,
+} from './lib/feedWithAds';
+import FeedGridWithAds from './components/FeedGridWithAds';
+import FeedLoadMoreButton from './components/FeedLoadMoreButton';
 import { normalizarParaSlug } from './lib/slug';
 import type { ItemConteudo } from './types/content';
 import ContentCard from './components/ContentCard';
@@ -228,7 +241,7 @@ export default function App() {
 
         {/* HUB SOCIAL (UNIVERSAL) */}
         <div className="border-b border-purple-500/5">
-          <SocialHub tema={tema} />
+          <DeferredSocialHub tema={tema} />
         </div>
 
         {/* SUBHEADER DE NAVEGA�!ÒO REFOR�!ADA */}
@@ -518,7 +531,7 @@ function HomeView({
 }) {
   const { t } = useTranslation();
   const [busca, setBusca] = useState('');
-  const [itensVisiveis, setItensVisiveis] = useState(10);
+  const [itensVisiveis, setItensVisiveis] = useState(FEED_INITIAL_VISIBLE);
 
   useEffect(() => {
     if (busca.trim()) onRequestCatalog?.();
@@ -540,7 +553,7 @@ function HomeView({
 
   const itensHome = useMemo(
     () =>
-      flattenFeedWithAds(resultadosFiltrados.slice(0, itensVisiveis), (content) => ({
+      buildFeedWithAds(resultadosFiltrados, itensVisiveis, (content) => ({
         tipoItem: 'conteudo',
         content,
       })),
@@ -586,7 +599,7 @@ function HomeView({
             value={busca}
             onChange={(e) => {
               setBusca(e.target.value);
-              setItensVisiveis(10);
+              setItensVisiveis(FEED_INITIAL_VISIBLE);
             }}
             className={`w-full py-5 pl-14 pr-6 rounded-[2rem] border-2 font-medium outline-none transition-all shadow-xl ${
               tema === 'light'
@@ -613,49 +626,28 @@ function HomeView({
         </div>
       </section>
 
-      <div className={GRID_CONTENT}>
-        <AnimatePresence mode="popLayout">
-          {itensHome.map((itemObj) => {
-            if (itemObj.tipoItem === 'anuncio') {
-              return (
-                <motion.div 
-                  key={itemObj.id}
-                  layout
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="col-span-full h-full"
-                >
-                  <AdSlot tema={tema} placement="home-in-feed" />
-                </motion.div>
-              );
+      <FeedGridWithAds
+        rows={itensHome}
+        tema={tema}
+        placement="home-in-feed"
+        animated
+        renderCard={(item) => (
+          <ContentCard
+            item={item}
+            tema={tema}
+            toast={toast}
+            onGenerateImage={
+              item.tipo === 'frase' ? (quote) => setImageQuote(quote) : undefined
             }
-
-            const item = itemObj.content;
-            return (
-              <ContentCard
-                key={item.id}
-                item={item}
-                tema={tema}
-                toast={toast}
-                onGenerateImage={
-                  item.tipo === 'frase' ? (quote) => setImageQuote(quote) : undefined
-                }
-              />
-            );
-          })}
-        </AnimatePresence>
-      </div>
+          />
+        )}
+      />
 
       {resultadosFiltrados.length > itensVisiveis && (
-        <button 
-          onClick={() => setItensVisiveis(p => p + 10)} 
-          className="w-full mt-10 py-5 bg-transparent border-2 border-dashed border-zinc-800 rounded-[2rem] text-xs font-black uppercase tracking-widest text-zinc-500 hover:text-white hover:border-[#A855F7] hover:bg-[#A855F7]/5 transition-all"
-        >
-          {t('home.explore_more')}
-        </button>
+        <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
       )}
 
-      <SocialHub tema={tema} />
+      <DeferredSocialHub tema={tema} />
 
       {imageQuote && (
         <Suspense fallback={null}>
@@ -727,9 +719,6 @@ function ColecaoContador({
 // ===================================================
 // VISÒO: LISTA DE FRASES
 // ===================================================
-const LIST_PAGE_INITIAL = 24;
-const LIST_PAGE_STEP = 16;
-
 function FrasesView({
   tema,
   toast,
@@ -745,7 +734,7 @@ function FrasesView({
 }) {
   const { t } = useTranslation();
   const [busca, setBusca] = useState('');
-  const [itensVisiveis, setItensVisiveis] = useState(LIST_PAGE_INITIAL);
+  const [itensVisiveis, setItensVisiveis] = useState(FEED_INITIAL_VISIBLE);
   const [catalogLoading, setCatalogLoading] = useState(false);
 
   useEffect(() => {
@@ -772,7 +761,7 @@ function FrasesView({
   }, [busca, baseFrases]);
 
   useEffect(() => {
-    setItensVisiveis(LIST_PAGE_INITIAL);
+    setItensVisiveis(FEED_INITIAL_VISIBLE);
   }, [busca]);
 
   const tags = useMemo(
@@ -782,7 +771,7 @@ function FrasesView({
 
   const itensFrases = useMemo(
     () =>
-      flattenFeedWithAds(frases.slice(0, itensVisiveis), (content) => ({
+      buildFeedWithAds(frases, itensVisiveis, (content) => ({
         tipoItem: 'conteudo',
         content,
       })),
@@ -815,7 +804,7 @@ function FrasesView({
             value={busca}
             onChange={(e) => {
               setBusca(e.target.value);
-              setItensVisiveis(LIST_PAGE_INITIAL);
+              setItensVisiveis(FEED_INITIAL_VISIBLE);
             }}
             className={`w-full py-4 pl-14 pr-6 rounded-2xl border-2 font-medium outline-none transition-all ${
               tema === 'light' ? 'bg-white border-zinc-100 text-black focus:border-[#A855F7]' : 'bg-zinc-900 border-zinc-800 text-white focus:border-[#A855F7]'
@@ -841,42 +830,27 @@ function FrasesView({
           <div className="w-10 h-10 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
         </div>
       ) : (
-      <div className={GRID_CONTENT}>
-        {itensFrases.map((itemObj, index) => {
-          if (itemObj.tipoItem === 'anuncio') {
-            return (
-              <div key={itemObj.id} className="col-span-full">
-                <AdSlot tema={tema} placement="frases-in-feed" />
-              </div>
-            );
-          }
-
-          return (
-            <div key={itemObj.content.id} className={index >= LIST_PAGE_INITIAL ? 'mm-card-lazy' : undefined}>
-              <ContentCard
-                item={itemObj.content}
-                tema={tema}
-                toast={toast}
-                onGenerateImage={(quote) => setImageQuote(quote)}
-                lazyBelowFold={index >= LIST_PAGE_INITIAL}
-              />
-            </div>
-          );
-        })}
-      </div>
+      <FeedGridWithAds
+        rows={itensFrases}
+        tema={tema}
+        placement="frases-in-feed"
+        renderCard={(item, index) => (
+          <ContentCard
+            item={item}
+            tema={tema}
+            toast={toast}
+            onGenerateImage={(quote) => setImageQuote(quote)}
+            lazyBelowFold={index >= FEED_INITIAL_VISIBLE}
+          />
+        )}
+      />
       )}
 
       {frases.length > itensVisiveis && (
-        <button
-          type="button"
-          onClick={() => setItensVisiveis((p) => p + LIST_PAGE_STEP)}
-          className="w-full mt-10 py-5 bg-transparent border-2 border-dashed border-zinc-800 rounded-[2rem] text-xs font-black uppercase tracking-widest text-zinc-500 hover:text-white hover:border-[#A855F7] hover:bg-[#A855F7]/5 transition-all"
-        >
-          {t('home.explore_more')}
-        </button>
+        <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
       )}
       
-      <SocialHub tema={tema} />
+      <DeferredSocialHub tema={tema} />
 
       {imageQuote && (
         <ImageGeneratorModal
@@ -897,7 +871,7 @@ function FrasesView({
 function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco: ItemConteudo[] }) {
   const { t } = useTranslation();
   const [busca, setBusca] = useState('');
-  const [itensVisiveis, setItensVisiveis] = useState(LIST_PAGE_INITIAL);
+  const [itensVisiveis, setItensVisiveis] = useState(FEED_INITIAL_VISIBLE);
   const baseMetaforas = useMemo(() => filtrarMetaforasDoBanco(banco), [banco]);
 
   const metaforas = useMemo(() => {
@@ -906,7 +880,7 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
   }, [busca, baseMetaforas]);
 
   useEffect(() => {
-    setItensVisiveis(LIST_PAGE_INITIAL);
+    setItensVisiveis(FEED_INITIAL_VISIBLE);
   }, [busca]);
 
   const tags = useMemo(
@@ -916,7 +890,7 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
 
   const itensMetaforas = useMemo(
     () =>
-      flattenFeedWithAds(metaforas.slice(0, itensVisiveis), (content) => ({
+      buildFeedWithAds(metaforas, itensVisiveis, (content) => ({
         tipoItem: 'conteudo',
         content,
       })),
@@ -955,7 +929,7 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
             value={busca}
             onChange={(e) => {
               setBusca(e.target.value);
-              setItensVisiveis(LIST_PAGE_INITIAL);
+              setItensVisiveis(FEED_INITIAL_VISIBLE);
             }}
             className={`w-full py-4 pl-14 pr-6 rounded-2xl border-2 font-medium outline-none transition-all ${
               tema === 'light' ? 'bg-white border-zinc-100 text-black focus:border-[#A855F7]' : 'bg-zinc-900 border-zinc-800 text-white focus:border-[#A855F7]'
@@ -969,38 +943,25 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
         </div>
       </div>
 
-      <div className={GRID_CONTENT}>
-        {itensMetaforas.map((itemObj) => {
-          if (itemObj.tipoItem === 'anuncio') {
-            return (
-              <div key={itemObj.id} className="col-span-full">
-                <AdSlot tema={tema} placement="metaforas-in-feed" />
-              </div>
-            );
-          }
-
-          return (
-            <ContentCard
-              key={itemObj.content.id}
-              item={itemObj.content}
-              tema={tema}
-              toast={toast}
-            />
-          );
-        })}
-      </div>
+      <FeedGridWithAds
+        rows={itensMetaforas}
+        tema={tema}
+        placement="metaforas-in-feed"
+        renderCard={(item, index) => (
+          <ContentCard
+            item={item}
+            tema={tema}
+            toast={toast}
+            lazyBelowFold={index >= FEED_INITIAL_VISIBLE}
+          />
+        )}
+      />
 
       {metaforas.length > itensVisiveis && (
-        <button
-          type="button"
-          onClick={() => setItensVisiveis((p) => p + LIST_PAGE_STEP)}
-          className="w-full mt-10 py-5 bg-transparent border-2 border-dashed border-zinc-800 rounded-[2rem] text-xs font-black uppercase tracking-widest text-zinc-500 hover:text-white hover:border-[#A855F7] hover:bg-[#A855F7]/5 transition-all"
-        >
-          {t('home.explore_more')}
-        </button>
+        <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
       )}
 
-      <SocialHub tema={tema} />
+      <DeferredSocialHub tema={tema} />
     </motion.div>
   );
 }
@@ -1218,7 +1179,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
         </div>
       </div>
 
-       <SocialHub tema={tema} />
+       <DeferredSocialHub tema={tema} />
 
       {/* NAVEGA�!ÒO ENTRE METAFORAS */}
       <div className="mt-12 flex flex-col sm:flex-row justify-between gap-4">

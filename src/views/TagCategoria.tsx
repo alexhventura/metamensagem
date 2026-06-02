@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useMemo, useState } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Search } from 'lucide-react';
 import { searchBancoSemantico } from '../lib/semanticSearch';
 import {
@@ -21,8 +21,13 @@ import {
   getSemanticRelatedTags,
   relatedTagLabels,
 } from '../lib/tagSemantics';
-import { GRID_CONTENT } from '../lib/contentGrid';
-import { flattenFeedWithAds } from '../lib/feedWithAds';
+import {
+  buildFeedWithAds,
+  FEED_INITIAL_VISIBLE,
+  FEED_LOAD_MORE_STEP,
+} from '../lib/feedWithAds';
+import FeedGridWithAds from '../components/FeedGridWithAds';
+import FeedLoadMoreButton from '../components/FeedLoadMoreButton';
 import type { ItemConteudo } from '../types/content';
 import ContentCard from '../components/ContentCard';
 
@@ -54,7 +59,7 @@ export default function TagCategoriaView({
 }: TagCategoriaProps) {
   const { tagSlug: tagSlugParam } = useParams<{ tagSlug: string }>();
   const [busca, setBusca] = useState('');
-  const [itensVisiveis, setItensVisiveis] = useState(24);
+  const [itensVisiveis, setItensVisiveis] = useState(FEED_INITIAL_VISIBLE);
   const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
 
   const resolvedSlug = useMemo(
@@ -114,7 +119,7 @@ export default function TagCategoriaView({
 
   const itensGrid = useMemo(
     () =>
-      flattenFeedWithAds(itensFiltrados.slice(0, itensVisiveis), (content) => ({
+      buildFeedWithAds(itensFiltrados, itensVisiveis, (content) => ({
         tipoItem: 'conteudo',
         content,
       })),
@@ -161,7 +166,7 @@ export default function TagCategoriaView({
             value={busca}
             onChange={(e) => {
               setBusca(e.target.value);
-              setItensVisiveis(24);
+              setItensVisiveis(FEED_INITIAL_VISIBLE);
             }}
             className={`w-full py-4 pl-14 pr-6 rounded-[2rem] border-2 font-medium outline-none transition-all shadow-lg ${
               tema === 'light'
@@ -214,63 +219,42 @@ export default function TagCategoriaView({
         </nav>
       )}
 
-      <div className={GRID_CONTENT}>
-        <AnimatePresence mode="popLayout">
-          {itensGrid.length === 0 ? (
-            <div
-              className={`col-span-full text-center py-16 px-4 text-sm space-y-4 ${
-                tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'
-              }`}
-            >
-              <p>
-                {busca.trim()
-                  ? 'Nenhum resultado para esta busca nesta categoria.'
-                  : `Ainda não há mensagens publicadas para «${displayTag}», mas você pode explorar temas relacionados acima.`}
-              </p>
-              <Link to="/" className="text-[#A855F7] font-bold hover:underline inline-block">
-                Voltar ao início
-              </Link>
-            </div>
-          ) : (
-            itensGrid.map((itemObj) => {
-              if (itemObj.tipoItem === 'anuncio') {
-                return (
-                  <motion.div
-                    key={itemObj.id}
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="col-span-full"
-                  >
-                    <AdBanner tema={tema} placement="tag-in-feed" />
-                  </motion.div>
-                );
+      {itensGrid.length === 0 ? (
+        <div
+          className={`text-center py-16 px-4 text-sm space-y-4 ${
+            tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'
+          }`}
+        >
+          <p>
+            {busca.trim()
+              ? 'Nenhum resultado para esta busca nesta categoria.'
+              : `Ainda não há mensagens publicadas para «${displayTag}», mas você pode explorar temas relacionados acima.`}
+          </p>
+          <Link to="/" className="text-[#A855F7] font-bold hover:underline inline-block">
+            Voltar ao início
+          </Link>
+        </div>
+      ) : (
+        <FeedGridWithAds
+          rows={itensGrid}
+          tema={tema}
+          placement="tag-in-feed"
+          animated
+          renderCard={(item) => (
+            <ContentCard
+              item={item}
+              tema={tema}
+              toast={toast}
+              onGenerateImage={
+                item.tipo === 'frase' ? (quote) => setImageQuote(quote) : undefined
               }
-              const item = itemObj.content!;
-              return (
-                <ContentCard
-                  key={item.id}
-                  item={item}
-                  tema={tema}
-                  toast={toast}
-                  onGenerateImage={
-                    item.tipo === 'frase' ? (quote) => setImageQuote(quote) : undefined
-                  }
-                />
-              );
-            })
+            />
           )}
-        </AnimatePresence>
-      </div>
+        />
+      )}
 
       {itensFiltrados.length > itensVisiveis && (
-        <button
-          type="button"
-          onClick={() => setItensVisiveis((p) => p + 16)}
-          className="w-full mt-10 py-5 bg-transparent border-2 border-dashed border-zinc-800 rounded-[2rem] text-xs font-black uppercase tracking-widest text-zinc-500 hover:text-white hover:border-[#A855F7] hover:bg-[#A855F7]/5 transition-all"
-        >
-          Carregar mais mensagens
-        </button>
+        <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
       )}
 
       <p className="text-center mt-8 text-[10px] font-mono uppercase tracking-widest opacity-40">

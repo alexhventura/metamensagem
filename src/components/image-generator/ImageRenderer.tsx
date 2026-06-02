@@ -2,7 +2,12 @@ import { forwardRef, useMemo } from 'react';
 import type { FormatConfig, ImageGeneratorQuote } from './types';
 import type { SkinConfig } from './types';
 import { imageFontFamilyFor } from './utils/imageFonts';
-import { computeImageLayout } from './utils/textLayout';
+import {
+  computeFooterFontSize,
+  computeFooterSkinFontSize,
+  computeImageLayout,
+  validateFullText,
+} from './utils/textLayout';
 
 export interface ImageRendererProps {
   texto: string;
@@ -18,14 +23,35 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
   { texto, autor, format, skin, collectionName, serial, quoteMeta },
   ref
 ) {
-  const layout = useMemo(
-    () => computeImageLayout(texto, autor, format.width, format.height),
-    [texto, autor, format.width, format.height]
-  );
+  const layout = useMemo(() => {
+    const plan = computeImageLayout(texto, autor, format.width, format.height);
+    if (!plan.fullTextVerified && import.meta.env.DEV) {
+      console.warn('[ImageRenderer] integridade do texto não validada', {
+        chars: texto.length,
+        lines: plan.lines.length,
+      });
+    }
+    return plan;
+  }, [texto, autor, format.width, format.height]);
 
   const fontFamily = useMemo(() => imageFontFamilyFor(texto, autor), [texto, autor]);
 
-  const skinLabel = skin.name.length > 18 ? `${skin.name.slice(0, 16)}…` : skin.name;
+  const footerPx = useMemo(
+    () => computeFooterFontSize(format.height, skin.name, serial),
+    [format.height, skin.name, serial]
+  );
+
+  const skinFooterPx = useMemo(
+    () =>
+      computeFooterSkinFontSize(
+        footerPx,
+        skin.name,
+        Math.floor(format.width * 0.36)
+      ),
+    [footerPx, skin.name, format.width]
+  );
+
+  const skinLabel = skin.name;
 
   return (
     <div
@@ -42,8 +68,9 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
       data-mm-skin={skin.id}
       data-mm-locale={quoteMeta?.locale ?? 'pt'}
       data-mm-serial={serial}
+      data-mm-long-quote={layout.longQuoteMode ? '1' : '0'}
+      data-mm-text-integrity={validateFullText(texto, layout.lines) ? 'ok' : 'fail'}
     >
-      {/* Vinheta suave — Soft Premium */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -59,7 +86,6 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         }}
       />
 
-      {/* Logo — marca d'água discreta */}
       <header
         className="absolute left-0 right-0 top-0 z-10 flex items-start justify-center pointer-events-none"
         style={{ height: layout.safe.headerHeight }}
@@ -80,31 +106,32 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         />
       </header>
 
-      {/* Safe zone — somente frase + autor */}
       <main
-        className="absolute z-20 flex flex-col items-center justify-center text-center"
+        className="absolute z-20 flex flex-col items-center justify-center text-center box-border"
         style={{
           top: layout.safe.quoteTop,
           left: layout.safe.padX,
           right: layout.safe.padX,
           height: layout.safe.quoteHeight,
           maxHeight: layout.safe.quoteHeight,
+          paddingBottom: layout.authorBottomGap,
           overflow: 'hidden',
         }}
       >
         <blockquote
-          className={`font-bold tracking-tight ${skin.textClass}`}
+          className={`font-bold tracking-tight min-h-0 ${skin.textClass}`}
           style={{
             fontSize: layout.quotePx,
             lineHeight: layout.lineHeight / layout.quotePx,
             margin: 0,
             maxWidth: '100%',
+            width: '100%',
             fontWeight: 700,
             textShadow: '0 1px 24px rgba(0,0,0,0.12)',
           }}
         >
           {layout.lines.map((line, i) => (
-            <span key={i} className="block">
+            <span key={i} className="block break-words">
               {i === 0 ? '“' : ''}
               {line}
               {i === layout.lines.length - 1 ? '”' : ''}
@@ -119,7 +146,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
               marginTop: layout.gapQuoteAuthor,
               marginBottom: 0,
               maxWidth: '100%',
-              lineHeight: 1.2,
+              lineHeight: 1.22,
               opacity: 0.92,
             }}
           >
@@ -128,29 +155,33 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         ) : null}
       </main>
 
-      {/* Rodapé institucional — colado à margem inferior */}
       <footer
-        className={`absolute bottom-0 left-0 right-0 z-30 flex items-end justify-between gap-3 ${skin.accentClass}`}
+        className={`absolute bottom-0 left-0 right-0 z-30 grid items-end ${skin.accentClass}`}
         style={{
           height: layout.safe.footerHeight,
           paddingLeft: layout.padX,
           paddingRight: layout.padX,
           paddingBottom: layout.padBottom,
-          fontSize: layout.footerPx,
-          letterSpacing: '0.03em',
-          opacity: 0.72,
+          fontSize: footerPx,
+          letterSpacing: '0.02em',
+          opacity: 0.78,
           borderTop: '1px solid rgba(255,255,255,0.06)',
           background: 'linear-gradient(to top, rgba(0,0,0,0.18) 0%, transparent 100%)',
+          gridTemplateColumns: 'minmax(0,1fr) minmax(0,1.2fr) minmax(0,1fr)',
+          gap: 8,
+          alignItems: 'end',
         }}
       >
-        <span className="font-medium lowercase leading-none truncate min-w-0">metamensagem.com</span>
+        <span className="font-medium lowercase leading-tight text-left whitespace-nowrap">
+          metamensagem.com
+        </span>
         <span
-          className="font-medium leading-none truncate text-center opacity-90 flex-1 px-2"
-          style={{ maxWidth: '40%' }}
+          className="font-medium leading-tight text-center whitespace-nowrap"
+          style={{ fontSize: skinFooterPx }}
         >
           {skinLabel}
         </span>
-        <span className="font-semibold tabular-nums leading-none shrink-0 whitespace-nowrap">
+        <span className="font-semibold tabular-nums leading-tight text-right whitespace-nowrap">
           {serial}
         </span>
       </footer>

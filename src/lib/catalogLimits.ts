@@ -8,13 +8,9 @@ export const HOME_FRASE_POOL_SIZE = 96;
 
 const TAG_PATH_RE = /^\/mensagens-de-/;
 
-const FRASE_DETAIL_RE = /^\/frases\/[^/]+/;
-const FRASE_DETAIL_LOCALE_RE = /^\/(en|es|fr|de|it|ja|hi)\/frases\/[^/]+/;
-
 export function pathNeedsFullCatalog(pathname: string): boolean {
   const p = pathname.replace(/\/$/, '') || '/';
   if (p === '/frases' || p === '/metaforas') return true;
-  if (FRASE_DETAIL_RE.test(p) || FRASE_DETAIL_LOCALE_RE.test(p)) return true;
   return TAG_PATH_RE.test(p);
 }
 

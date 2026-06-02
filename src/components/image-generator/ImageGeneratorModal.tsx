@@ -262,14 +262,21 @@ export default function ImageGeneratorModal({
                 <ImageFormatSelector value={format} onChange={setFormat} tema={tema} />
               </section>
               <section>
-                <h3 className="text-[10px] font-black uppercase tracking-[0.35em] text-[#A855F7] mb-3">
-                  Coleção
+                <h3 className="text-[10px] font-black uppercase tracking-[0.35em] text-[#A855F7] mb-1">
+                  Coleção & skin
                 </h3>
+                <p
+                  className={`text-[10px] mb-3 leading-snug ${
+                    tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'
+                  }`}
+                >
+                  Escolha o estilo visual. O texto da frase é sempre exibido por completo.
+                </p>
                 <CollectionSelector value={collectionId} onChange={handleCollectionChange} tema={tema} />
               </section>
               <section>
                 <h3 className="text-[10px] font-black uppercase tracking-[0.35em] text-[#A855F7] mb-3">
-                  Skin
+                  Variação
                 </h3>
                 <SkinSelector
                   collectionId={collectionId}

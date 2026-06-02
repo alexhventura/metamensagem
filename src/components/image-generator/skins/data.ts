@@ -280,6 +280,18 @@ const LEGACY_COLLECTIONS: CollectionConfig[] = [
 /** Premium primeiro; legado mantido para variedade. */
 export const COLLECTIONS: CollectionConfig[] = [...SEMANTIC_COLLECTIONS, ...LEGACY_COLLECTIONS];
 
+/** Grupos para o seletor do modal (emoção vs clássicos). */
+export const COLLECTION_GROUPS: { title: string; collectionIds: string[] }[] = [
+  {
+    title: 'Emoção & intenção',
+    collectionIds: SEMANTIC_COLLECTIONS.map((c) => c.id),
+  },
+  {
+    title: 'Estilos clássicos',
+    collectionIds: LEGACY_COLLECTIONS.map((c) => c.id),
+  },
+];
+
 export const DEFAULT_COLLECTION_ID = 'motivacao';
 export const DEFAULT_SKIN_ID = 'aurora';
 

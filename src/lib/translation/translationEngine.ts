@@ -326,6 +326,10 @@ async function fetchMyMemory(
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
   const data = await res.json();
+  if (data?.unavailable === true) {
+    markTranslationApiUnavailable('unavailable');
+    throw new Error('Tradução indisponível');
+  }
   if (data?.quotaFinished) {
     markTranslationApiUnavailable('quotaFinished');
     throw new Error('Cota diária de tradução esgotada');

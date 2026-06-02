@@ -29,7 +29,7 @@ const resources = {
       },
       "home": {
         "search_placeholder": "Qual sentimento ou tema busca hoje?",
-        "explore_more": "Explorar mais Sabedoria (+10)",
+        "explore_more": "Mostrar mais 12",
         "sharing_wisdom": "Sincronizando Sabedoria Edge..."
       },
       "frases": {
@@ -124,7 +124,7 @@ const resources = {
       },
       "home": {
         "search_placeholder": "What feeling or theme are you looking for today?",
-        "explore_more": "Explore more Wisdom (+10)",
+        "explore_more": "Show 12 more",
         "sharing_wisdom": "Synchronizing Edge Wisdom..."
       },
       "frases": {
@@ -206,7 +206,7 @@ const resources = {
       },
       "home": {
         "search_placeholder": "¿Qué sentimiento o tema buscas hoy?",
-        "explore_more": "Explorar más Sabiduría (+10)",
+        "explore_more": "Mostrar 12 más",
         "sharing_wisdom": "Sincronizando Sabiduría Edge..."
       },
       "banner": {
@@ -272,7 +272,7 @@ const resources = {
       },
       "home": {
         "search_placeholder": "Quel sentiment ou thème cherchez-vous aujourd'hui ?",
-        "explore_more": "Explorer plus de Sagesse (+10)",
+        "explore_more": "Afficher 12 de plus",
         "sharing_wisdom": "Synchronisation de la Sagesse Edge..."
       },
       "banner": {

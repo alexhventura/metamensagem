@@ -2,17 +2,13 @@
  * POST /api/translation-demand — agrega demanda (sem PII) para fila global.
  * Persistência: Vercel Blob (BLOB_READ_WRITE_TOKEN) ou data/ em dev local.
  */
-export const config = {
-  runtime: 'nodejs',
-};
-
 import { readFile, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   mergeDemandSnapshots,
   type TranslationDemandSnapshot,
-} from '../lib/server/mergeTranslationDemand';
+} from './_translationDemand';
 
 const BLOB_PATH = 'translation-demand/snapshot.json';
 const LOCAL_PATH = join(process.cwd(), 'data', 'translation-queue-snapshot.json');

@@ -1,12 +1,14 @@
 /**
  * Proxy MyMemory no servidor — cota separada do IP do visitante + MYMEMORY_EMAIL no Vercel.
  */
+import { requestUrl } from './_shared';
+
 export default async function handler(req: Request): Promise<Response> {
   if (req.method !== 'GET') {
     return Response.json({ error: 'Method not allowed' }, { status: 405 });
   }
 
-  const url = new URL(req.url);
+  const url = requestUrl(req);
   const q = url.searchParams.get('q');
   const langpair = url.searchParams.get('langpair');
   if (!q?.trim() || !langpair?.trim()) {

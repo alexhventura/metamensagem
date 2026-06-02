@@ -1,13 +1,14 @@
 import { ImageResponse } from '@vercel/og';
 import { findFraseForOg, previewSerialForQuote } from '../../lib/server/findFraseForOg';
 import { computeImageLayout } from '../../src/components/image-generator/utils/textLayout';
+import { requestUrl } from '../_shared';
 
 export const config = {
   runtime: 'nodejs',
 };
 
 export default async function handler(req: Request) {
-  const url = new URL(req.url);
+  const url = requestUrl(req);
   const parts = url.pathname.split('/').filter(Boolean);
   const fromPath = parts[parts.length - 1];
   const id = url.searchParams.get('id') || fromPath;

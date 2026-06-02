@@ -1,11 +1,12 @@
 /**
- * GET /api/frase-detail?slug=... — uma frase (lê shards via CDN; sem fs no serverless).
+ * GET /api/frase-detail?slug=... — uma frase (shards via CDN).
  */
 import {
   findFraseInList,
+  requestUrl,
   shardsToProbe,
   type FraseDetailRecord,
-} from '../lib/frases/detailLookup';
+} from './_shared';
 
 const CACHE = 'public, max-age=31536000, immutable';
 
@@ -35,7 +36,7 @@ export default async function handler(req: Request): Promise<Response> {
     return Response.json({ error: 'Method not allowed' }, { status: 405 });
   }
 
-  const url = new URL(req.url);
+  const url = requestUrl(req);
   const slug = decodeURIComponent(url.searchParams.get('slug') ?? '').toLowerCase().trim();
   if (!slug) {
     return Response.json({ error: 'slug required', found: false }, { status: 400 });

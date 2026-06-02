@@ -137,12 +137,6 @@
       ]
     }
   ],
-  "functions": {
-    "api/frase-detail.ts": {
-      "maxDuration": 30,
-      "memory": 1024
-    }
-  },
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",

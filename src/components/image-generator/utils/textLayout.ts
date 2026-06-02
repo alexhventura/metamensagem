@@ -1,10 +1,20 @@
-/** Layout por zonas — frase só em QUOTE_ZONE; autor/rodapé fixos; sem truncar. */
-import { computeLayoutZones, type LayoutZones } from './safeZone';
+/** Layout por zonas — medição conservadora; LONG/EXTREME; sem truncar. */
+import { computeLayoutZones, type LayoutZones, type ZoneDensity } from './safeZone';
 
-export const LONG_QUOTE_CHAR_THRESHOLD = 100;
+export const LONG_QUOTE_CHAR_THRESHOLD = 150;
+export const EXTREME_QUOTE_CHAR_THRESHOLD = 300;
+export const LONG_QUOTE_MIN_LINES = 5;
 
-const LINE_HEIGHT_STEPS = [1.6, 1.5, 1.4, 1.3, 1.22, 1.12, 1.05];
-const LINE_HEIGHT_STEPS_LONG = [1.45, 1.35, 1.28, 1.2, 1.12, 1.06, 1.02];
+/** Margem interna da QUOTE_ZONE (topo + base). */
+const QUOTE_ZONE_INNER_PAD = 10;
+/** Slack por linha (ascendentes/descendentes reais vs. métrica teórica). */
+const LINE_METRICS_EXTRA_RATIO = 0.14;
+/** Espaço extra para aspas tipográficas. */
+const QUOTE_MARKS_EXTRA_RATIO = 0.12;
+
+const LINE_HEIGHT_STEPS = [1.55, 1.45, 1.38, 1.32, 1.26, 1.2, 1.14, 1.08, 1.04];
+const LINE_HEIGHT_STEPS_LONG = [1.38, 1.32, 1.26, 1.2, 1.14, 1.1, 1.06, 1.03, 1.0];
+const LINE_HEIGHT_STEPS_EXTREME = [1.28, 1.22, 1.16, 1.12, 1.08, 1.05, 1.02, 1.0];
 
 export type ImageLayoutPlan = {
   zones: LayoutZones;
@@ -19,10 +29,11 @@ export type ImageLayoutPlan = {
   lineHeight: number;
   lineHeightRatio: number;
   quoteBlockHeight: number;
+  quotePaddingTop: number;
   quoteFits: boolean;
   longQuoteMode: boolean;
+  extremeQuoteMode: boolean;
   fullTextVerified: boolean;
-  /** @deprecated compat */
   safe: LayoutZones & { quoteTop: number; quoteBottom: number; quoteHeight: number };
   gapQuoteAuthor: number;
   authorBottomGap: number;
@@ -90,6 +101,30 @@ export function wrapQuoteFull(text: string, quoteWidthPx: number, fontPx: number
   return lines.length ? lines : [clean];
 }
 
+function resolveDensity(text: string, quoteWidth: number, fontProbe: number): ZoneDensity {
+  if (text.length >= EXTREME_QUOTE_CHAR_THRESHOLD) return 'extreme';
+  const probeLines = wrapQuoteFull(text, quoteWidth, fontProbe).length;
+  if (text.length >= LONG_QUOTE_CHAR_THRESHOLD || probeLines >= LONG_QUOTE_MIN_LINES) {
+    return 'long';
+  }
+  return 'normal';
+}
+
+function usableQuoteHeight(zoneHeight: number): number {
+  return Math.max(32, zoneHeight - QUOTE_ZONE_INNER_PAD * 2);
+}
+
+/** Altura renderizada estimada (maior que lines × lineHeight puro). */
+export function estimateRenderedBlockHeight(
+  lineCount: number,
+  quotePx: number,
+  lineHeightPx: number
+): number {
+  const perLine = lineHeightPx + quotePx * LINE_METRICS_EXTRA_RATIO;
+  const marks = quotePx * QUOTE_MARKS_EXTRA_RATIO;
+  return lineCount * perLine + marks;
+}
+
 function computeFooterPx(height: number, skinName: string, serial: string): number {
   const longest = Math.max(skinName.length, serial.length, 18);
   let px = Math.max(8, Math.min(12, Math.round(height * 0.0105)));
@@ -100,8 +135,9 @@ function computeFooterPx(height: number, skinName: string, serial: string): numb
 
 function computeAuthorPx(autor: string, zones: LayoutZones): number {
   if (!autor.trim() || zones.authorZoneHeight <= 0) return 0;
-  const maxPx = Math.round(zones.authorZoneHeight * 0.42);
-  const minPx = 9;
+  const cap = zones.density === 'extreme' ? 0.38 : 0.42;
+  const maxPx = Math.round(zones.authorZoneHeight * cap);
+  const minPx = zones.density === 'extreme' ? 8 : 9;
   const maxWidth = zones.quoteWidth;
   for (let px = maxPx; px >= minPx; px -= 1) {
     const est = (autor.length + 3) * px * 0.48;
@@ -110,19 +146,31 @@ function computeAuthorPx(autor: string, zones: LayoutZones): number {
   return minPx;
 }
 
-function fontBounds(zones: LayoutZones, longMode: boolean, charCount: number) {
+function fontBounds(zones: LayoutZones, density: ZoneDensity, charCount: number) {
+  const usable = usableQuoteHeight(zones.quoteZoneHeight);
   const aspect = zones.width / zones.height;
   const isWide = aspect >= 1.15;
   const isUltraTall = zones.height > zones.width * 1.55;
 
-  let fontMax = zones.quoteZoneHeight * (isWide ? 0.22 : isUltraTall ? 0.14 : 0.18);
-  if (longMode) fontMax *= 0.9;
+  let fontMax = usable * (isWide ? 0.2 : isUltraTall ? 0.13 : 0.17);
+  if (density === 'long') fontMax *= 0.92;
+  if (density === 'extreme') fontMax *= 0.86;
   if (charCount > 200) fontMax *= 0.9;
   if (charCount > 320) fontMax *= 0.86;
-  if (charCount > 450) fontMax *= 0.84;
+  if (charCount > 450) fontMax *= 0.82;
 
-  const fontMin = Math.max(7, Math.round(zones.quoteZoneHeight * (longMode ? 0.048 : 0.058)));
-  return { fontMax: Math.round(fontMax), fontMin };
+  const fontMin =
+    density === 'extreme'
+      ? Math.max(6, Math.round(usable * 0.042))
+      : Math.max(7, Math.round(usable * (density === 'long' ? 0.048 : 0.055)));
+
+  return { fontMax: Math.round(fontMax), fontMin, usable };
+}
+
+function lhStepsFor(density: ZoneDensity): number[] {
+  if (density === 'extreme') return LINE_HEIGHT_STEPS_EXTREME;
+  if (density === 'long') return LINE_HEIGHT_STEPS_LONG;
+  return LINE_HEIGHT_STEPS;
 }
 
 function toLegacySafe(zones: LayoutZones) {
@@ -143,14 +191,19 @@ function buildPlan(
     lineHeight: number;
     lineHeightRatio: number;
     quoteBlockHeight: number;
+    quotePaddingTop: number;
     quoteFits: boolean;
     longQuoteMode: boolean;
+    extremeQuoteMode: boolean;
     originalText: string;
     footerPx: number;
-    hasAuthor: boolean;
+    usable: number;
   }
 ): ImageLayoutPlan {
   const fullTextVerified = validateFullText(opts.originalText, opts.lines);
+  const fits =
+    opts.quoteFits && fullTextVerified && opts.quoteBlockHeight <= opts.usable;
+
   return {
     zones,
     safe: toLegacySafe(zones),
@@ -159,23 +212,22 @@ function buildPlan(
     authorPx: opts.authorPx,
     logoPx: zones.logoPx,
     padX: zones.padX,
-    padTop: Math.round(zones.headerHeight * 0.28),
-    padBottom: Math.max(8, Math.round(zones.footerHeight * 0.26)),
+    padTop: Math.round(zones.headerHeight * (zones.density === 'extreme' ? 0.22 : 0.28)),
+    padBottom: Math.max(6, Math.round(zones.footerHeight * 0.24)),
     footerPx: opts.footerPx,
     lineHeight: opts.lineHeight,
     lineHeightRatio: opts.lineHeightRatio,
     quoteBlockHeight: opts.quoteBlockHeight,
-    quoteFits: opts.quoteFits && fullTextVerified,
+    quotePaddingTop: opts.quotePaddingTop,
+    quoteFits: fits,
     longQuoteMode: opts.longQuoteMode,
+    extremeQuoteMode: opts.extremeQuoteMode,
     fullTextVerified,
     gapQuoteAuthor: 0,
     authorBottomGap: 0,
   };
 }
 
-/**
- * Mede e ajusta até quoteFits === true (fonte → line-height → mais linhas implícito no wrap).
- */
 export function computeImageLayout(
   texto: string,
   autor: string,
@@ -184,23 +236,31 @@ export function computeImageLayout(
 ): ImageLayoutPlan {
   const clean = normalizeQuoteText(texto);
   const hasAuthor = Boolean(autor?.trim());
-  const zones = computeLayoutZones(width, height, hasAuthor);
-  const longQuoteMode = clean.length >= LONG_QUOTE_CHAR_THRESHOLD;
+
+  const fontProbe = Math.round(height * 0.04);
+  const density = resolveDensity(clean, width * 0.84, fontProbe);
+  const longQuoteMode = density !== 'normal';
+  const extremeQuoteMode = density === 'extreme';
+
+  const zones = computeLayoutZones(width, height, hasAuthor, density);
   const authorPx = computeAuthorPx(autor, zones);
   const footerPx = computeFooterPx(height, 'Coleção', 'MMM-2026-00000001');
-  const { fontMax, fontMin } = fontBounds(zones, longQuoteMode, clean.length);
-  const lhSteps = longQuoteMode ? LINE_HEIGHT_STEPS_LONG : LINE_HEIGHT_STEPS;
+  const { fontMax, fontMin, usable } = fontBounds(zones, density, clean.length);
+  const lhSteps = lhStepsFor(density);
 
   let best: ImageLayoutPlan | null = null;
 
   for (const lhRatio of lhSteps) {
-    for (let quotePx = fontMax; quotePx >= fontMin; quotePx -= quotePx > 40 ? 2 : 1) {
+    for (let quotePx = fontMax; quotePx >= fontMin; quotePx -= quotePx > 36 ? 2 : 1) {
       const lines = wrapQuoteFull(clean, zones.quoteWidth, quotePx);
       if (!validateFullText(clean, lines)) continue;
 
       const lineHeight = quotePx * lhRatio;
-      const quoteBlockHeight = lines.length * lineHeight;
-      const quoteFits = quoteBlockHeight <= zones.quoteZoneHeight;
+      const quoteBlockHeight = estimateRenderedBlockHeight(lines.length, quotePx, lineHeight);
+      const quoteFits = quoteBlockHeight <= usable;
+      const quotePaddingTop = quoteFits
+        ? Math.max(0, Math.floor((usable - quoteBlockHeight) / 2))
+        : 0;
 
       const candidate = buildPlan(zones, {
         lines,
@@ -209,14 +269,16 @@ export function computeImageLayout(
         lineHeight,
         lineHeightRatio: lhRatio,
         quoteBlockHeight,
+        quotePaddingTop,
         quoteFits,
         longQuoteMode,
+        extremeQuoteMode,
         originalText: clean,
         footerPx,
-        hasAuthor,
+        usable,
       });
 
-      if (quoteFits && candidate.fullTextVerified) {
+      if (candidate.quoteFits) {
         return candidate;
       }
 
@@ -230,28 +292,28 @@ export function computeImageLayout(
     }
   }
 
-  if (best?.quoteFits && best.fullTextVerified) {
-    return best;
-  }
+  if (best?.quoteFits) return best;
 
   const quotePx = fontMin;
   const lines = wrapQuoteFull(clean, zones.quoteWidth, quotePx);
-  const lineHeight = quotePx * 1.02;
-  const quoteBlockHeight = lines.length * lineHeight;
-  const quoteFits = quoteBlockHeight <= zones.quoteZoneHeight && validateFullText(clean, lines);
+  const lineHeight = quotePx * 1.0;
+  const quoteBlockHeight = estimateRenderedBlockHeight(lines.length, quotePx, lineHeight);
+  const quoteFits = quoteBlockHeight <= usable && validateFullText(clean, lines);
 
   return buildPlan(zones, {
     lines,
     quotePx,
     authorPx,
     lineHeight,
-    lineHeightRatio: 1.02,
+    lineHeightRatio: 1.0,
     quoteBlockHeight,
+    quotePaddingTop: quoteFits ? Math.max(0, Math.floor((usable - quoteBlockHeight) / 2)) : 0,
     quoteFits,
     longQuoteMode: true,
+    extremeQuoteMode,
     originalText: clean,
     footerPx,
-    hasAuthor,
+    usable,
   });
 }
 
@@ -281,13 +343,16 @@ export function assertLayoutReady(plan: ImageLayoutPlan): void {
   }
   if (!plan.quoteFits) {
     throw new Error(
-      'A frase não cabe na zona de citação. Tente um formato mais alto ou reduza o texto.'
+      'A frase não cabe na zona de citação. Experimente Stories (9:16) ou Wallpaper.'
     );
   }
 }
 
 export function assertExportTextIntegrity(root: HTMLElement, originalText: string): void {
-  assertLayoutReadyFromDom(root);
+  if (root.getAttribute('data-mm-quote-fits') === '0') {
+    throw new Error('Layout inválido: frase ultrapassa a zona de citação.');
+  }
+
   const block = root.querySelector('blockquote');
   if (!block) return;
   const strip = (s: string) => normalizeQuoteText(s).replace(/[""\s]/g, '');
@@ -298,6 +363,7 @@ export function assertExportTextIntegrity(root: HTMLElement, originalText: strin
       `Texto incompleto na imagem (${rendered.length}/${expected.length} caracteres).`
     );
   }
+
   const authorEl = root.querySelector('[data-mm-author-zone]');
   const expectedAuthor = root.getAttribute('data-mm-author-expected');
   if (expectedAuthor && authorEl) {
@@ -306,11 +372,5 @@ export function assertExportTextIntegrity(root: HTMLElement, originalText: strin
     if (ea && ra !== ea) {
       throw new Error('Autor incompleto ou ausente na imagem.');
     }
-  }
-}
-
-function assertLayoutReadyFromDom(root: HTMLElement): void {
-  if (root.getAttribute('data-mm-quote-fits') === '0') {
-    throw new Error('Layout inválido: frase ultrapassa a zona de citação.');
   }
 }

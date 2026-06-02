@@ -1,6 +1,7 @@
-/** Exportação client-side (modern-screenshot — sem leitura de cssRules cross-origin). */
+/** Exportação client-side + download com gesto do usuário preservado quando possível. */
 
 import { ensureCaptureFontsReady } from './utils/imageFonts';
+import { assertQuoteBlockFits } from './utils/measureQuoteBlock';
 import {
   assertExportTextIntegrity,
   assertLayoutReady,
@@ -15,11 +16,15 @@ export async function captureElementAsBlob(
   fontSample?: CaptureFontSample
 ): Promise<Blob> {
   const { text, autor } = fontSample ?? { text: '', autor: '' };
-  const w = node.offsetWidth || parseInt(node.style.width || '1080', 10);
-  const h = node.offsetHeight || parseInt(node.style.height || '1080', 10);
+  const w = node.offsetWidth || Number(node.getAttribute('data-mm-width')) || 1080;
+  const h = node.offsetHeight || Number(node.getAttribute('data-mm-height')) || 1080;
+
   const plan = computeImageLayout(text, autor, w, h);
   assertLayoutReady(plan);
   await ensureCaptureFontsReady(text, autor);
+
+  await waitForLayoutStable(node);
+  assertQuoteBlockFits(node);
   assertExportTextIntegrity(node, text);
 
   const { domToBlob } = await import('modern-screenshot');
@@ -38,23 +43,54 @@ export async function captureElementAsBlob(
     },
   });
 
-  if (!blob) throw new Error('Falha ao gerar imagem');
+  if (!blob || blob.size < 64) {
+    throw new Error('Falha ao gerar imagem');
+  }
   return blob;
 }
 
-export function downloadBlob(blob: Blob, filename: string) {
+async function waitForLayoutStable(node: HTMLElement): Promise<void> {
+  if ('fonts' in document) {
+    await document.fonts.ready;
+  }
+  await new Promise<void>((r) => requestAnimationFrame(() => requestAnimationFrame(() => r())));
+  void node.offsetHeight;
+}
+
+/**
+ * Dispara download no disco do usuário.
+ * Usa msSaveOrOpenBlob (legacy) ou âncora com download + clique sintético.
+ */
+export function downloadBlob(blob: Blob, filename: string): void {
+  const nav = window.navigator as Navigator & {
+    msSaveOrOpenBlob?: (b: Blob, name: string) => boolean;
+  };
+
+  if (typeof nav.msSaveOrOpenBlob === 'function') {
+    nav.msSaveOrOpenBlob(blob, filename);
+    return;
+  }
+
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
   a.download = filename;
   a.rel = 'noopener';
-  a.style.display = 'none';
+  a.setAttribute('download', filename);
+  a.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0;pointer-events:none;';
   document.body.appendChild(a);
-  a.click();
+
+  try {
+    a.click();
+  } catch {
+    const ev = new MouseEvent('click', { bubbles: true, cancelable: true, view: window });
+    a.dispatchEvent(ev);
+  }
+
   window.setTimeout(() => {
     a.remove();
     URL.revokeObjectURL(url);
-  }, 200);
+  }, 1500);
 }
 
 export async function copyBlobToClipboard(blob: Blob): Promise<boolean> {
@@ -64,7 +100,6 @@ export async function copyBlobToClipboard(blob: Blob): Promise<boolean> {
   return true;
 }
 
-/** Compartilha arquivo de imagem (Instagram, WhatsApp, etc.) via Web Share API. */
 export async function shareImageFile(
   blob: Blob,
   { title, text }: { title: string; text?: string }
@@ -87,7 +122,6 @@ export async function shareImageFile(
   }
 }
 
-/** @deprecated Use shareImageFile */
 export async function shareBlob(blob: Blob, title: string, text: string): Promise<boolean> {
   return shareImageFile(blob, { title, text });
 }

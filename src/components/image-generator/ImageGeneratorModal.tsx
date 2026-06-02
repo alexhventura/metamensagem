@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { flushSync } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Sparkles, Star } from 'lucide-react';
 import ImageRenderer from './ImageRenderer';
@@ -103,28 +104,28 @@ export default function ImageGeneratorModal({
     [quote.id, quote.categoria, quote.locale, collectionId, skinId, skin.name, format]
   );
 
-  const prepareExportCapture = useCallback(async () => {
-    const serial = allocateImageSerial();
-    setExportSerial(serial);
-    await waitNextPaint();
-    return serial;
-  }, []);
-
   const runExport = useCallback(
     async (mime: 'image/png' | 'image/jpeg') => {
       const node = exportRef.current;
       if (!node) return;
       setBusy(mime === 'image/png' ? 'png' : 'jpeg');
       try {
-        const serial = await prepareExportCapture();
+        const serial = allocateImageSerial();
+        flushSync(() => setExportSerial(serial));
+        node.setAttribute('data-mm-width', String(formatCfg.width));
+        node.setAttribute('data-mm-height', String(formatCfg.height));
+        await waitNextPaint();
+        await waitNextPaint();
+
         const blob = await captureElementAsBlob(node, mime, fontSample);
         registerExport(serial);
         const ext = mime === 'image/png' ? 'png' : 'jpg';
-        downloadBlob(blob, `metamensagem-${serial}.${ext}`);
+        const filename = `metamensagem-${serial}.${ext}`;
+        downloadBlob(blob, filename);
         toast('Imagem baixada!', 'sucesso');
       } catch (e) {
         const msg =
-          e instanceof Error && e.message.includes('zona')
+          e instanceof Error
             ? e.message
             : 'Não foi possível gerar a imagem.';
         toast(msg, 'erro');
@@ -132,7 +133,7 @@ export default function ImageGeneratorModal({
         setBusy(null);
       }
     },
-    [fontSample, prepareExportCapture, registerExport, toast]
+    [fontSample, formatCfg.width, formatCfg.height, registerExport, toast]
   );
 
   const handleCopy = useCallback(async () => {
@@ -140,7 +141,10 @@ export default function ImageGeneratorModal({
     if (!node) return;
     setBusy('copy');
     try {
-      const serial = await prepareExportCapture();
+      const serial = allocateImageSerial();
+      flushSync(() => setExportSerial(serial));
+      await waitNextPaint();
+      await waitNextPaint();
       const blob = await captureElementAsBlob(node, 'image/png', fontSample);
       registerExport(serial);
       const ok = await copyBlobToClipboard(blob);
@@ -153,14 +157,17 @@ export default function ImageGeneratorModal({
     } finally {
       setBusy(null);
     }
-  }, [fontSample, prepareExportCapture, registerExport, toast]);
+  }, [fontSample, registerExport, toast]);
 
   const handleMobileShare = useCallback(async () => {
     const node = exportRef.current;
     if (!node) return;
     setBusy('mobile');
     try {
-      const serial = await prepareExportCapture();
+      const serial = allocateImageSerial();
+      flushSync(() => setExportSerial(serial));
+      await waitNextPaint();
+      await waitNextPaint();
       const blob = await captureElementAsBlob(node, 'image/png', fontSample);
       registerExport(serial);
       const ok = await shareImageFile(blob, {
@@ -175,7 +182,7 @@ export default function ImageGeneratorModal({
     } finally {
       setBusy(null);
     }
-  }, [fontSample, prepareExportCapture, quote.texto, registerExport, toast]);
+  }, [fontSample, quote.texto, registerExport, toast]);
 
   useEffect(() => {
     if (open) setExportSerial(previewSerial);
@@ -342,7 +349,11 @@ export default function ImageGeneratorModal({
             </div>
           </div>
 
-          <div className="fixed -left-[20000px] top-0 pointer-events-none" aria-hidden>
+          <div
+            className="fixed left-0 top-0 -z-10 opacity-0 overflow-hidden pointer-events-none"
+            style={{ width: formatCfg.width, height: formatCfg.height }}
+            aria-hidden
+          >
             <ImageRenderer ref={exportRef} {...rendererBase} serial={exportSerial} />
           </div>
         </motion.div>

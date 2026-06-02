@@ -147,7 +147,7 @@ export default async function handler(
             style={{
               fontSize: layout.quotePx,
               fontWeight: 800,
-              lineHeight: layout.lineHeightRatio,
+              lineHeight: `${layout.lineHeight}px`,
               margin: 0,
             }}
           >

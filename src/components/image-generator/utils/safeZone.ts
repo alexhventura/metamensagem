@@ -1,7 +1,7 @@
 /**
- * Quatro regiões fixas: HEADER → QUOTE (dinâmica) → AUTHOR → FOOTER.
- * A frase só existe em QUOTE_ZONE; autor e rodapé nunca são empurrados.
+ * Quatro regiões fixas: HEADER → QUOTE → AUTHOR → FOOTER.
  */
+export type ZoneDensity = 'normal' | 'long' | 'extreme';
 
 export type LayoutZones = {
   width: number;
@@ -16,35 +16,45 @@ export type LayoutZones = {
   authorZoneHeight: number;
   footerTop: number;
   footerHeight: number;
+  density: ZoneDensity;
 };
 
 const SIDE_RATIO = 0.08;
-const HEADER_RATIO = 0.111;
-const FOOTER_RATIO = 0.074;
-const AUTHOR_ZONE_RATIO = 0.083;
-const ZONE_GAP_RATIO = 0.022;
 const LOGO_MAX_RATIO = 0.085;
+
+const DENSITY_RATIOS: Record<
+  ZoneDensity,
+  { header: number; footer: number; author: number; gap: number; logoScale: number }
+> = {
+  normal: { header: 0.111, footer: 0.074, author: 0.083, gap: 0.022, logoScale: 1 },
+  long: { header: 0.1, footer: 0.068, author: 0.076, gap: 0.018, logoScale: 0.92 },
+  extreme: { header: 0.082, footer: 0.058, author: 0.065, gap: 0.012, logoScale: 0.78 },
+};
 
 export function computeLayoutZones(
   width: number,
   height: number,
-  hasAuthor: boolean
+  hasAuthor: boolean,
+  density: ZoneDensity = 'normal'
 ): LayoutZones {
+  const r = DENSITY_RATIOS[density];
   const padX = Math.round(width * SIDE_RATIO);
-  const headerHeight = Math.round(height * HEADER_RATIO);
-  const footerHeight = Math.round(height * FOOTER_RATIO);
+  const headerHeight = Math.round(height * r.header);
+  const footerHeight = Math.round(height * r.footer);
   const footerTop = height - footerHeight;
   const authorZoneHeight = hasAuthor
-    ? Math.round(Math.max(72, height * AUTHOR_ZONE_RATIO))
+    ? Math.round(Math.max(64, height * r.author))
     : 0;
-  const zoneGap = Math.round(Math.max(12, height * ZONE_GAP_RATIO));
+  const zoneGap = Math.round(Math.max(10, height * r.gap));
 
   const authorZoneTop = footerTop - authorZoneHeight;
   const quoteZoneTop = headerHeight + zoneGap;
   const quoteZoneBottom = authorZoneTop - zoneGap;
-  const quoteZoneHeight = Math.max(Math.round(height * 0.2), quoteZoneBottom - quoteZoneTop);
+  const quoteZoneHeight = Math.max(Math.round(height * 0.18), quoteZoneBottom - quoteZoneTop);
 
-  const logoPx = Math.round(Math.min(width * LOGO_MAX_RATIO, headerHeight * 0.55, 88));
+  const logoPx = Math.round(
+    Math.min(width * LOGO_MAX_RATIO, headerHeight * 0.55, 88) * r.logoScale
+  );
 
   return {
     width,
@@ -59,10 +69,11 @@ export function computeLayoutZones(
     authorZoneHeight,
     footerTop,
     footerHeight,
+    density,
   };
 }
 
-/** @deprecated Use computeLayoutZones */
+/** @deprecated */
 export type SafeZoneMetrics = LayoutZones & {
   quoteTop: number;
   quoteBottom: number;

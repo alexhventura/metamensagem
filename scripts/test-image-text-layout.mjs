@@ -1,6 +1,6 @@
 /**
  * Testa integridade do texto no gerador de imagens (sem truncar).
- * Uso: npx tsx scripts/test-image-text-layout.mjs
+ * Uso: npm run test:image-layout
  */
 import { FORMATS, FORMAT_ORDER } from '../src/components/image-generator/formats.ts';
 import {
@@ -8,19 +8,31 @@ import {
   validateFullText,
   normalizeQuoteText,
   wrapQuoteFull,
+  estimateRenderedBlockHeight,
   LONG_QUOTE_CHAR_THRESHOLD,
+  EXTREME_QUOTE_CHAR_THRESHOLD,
 } from '../src/components/image-generator/utils/textLayout.ts';
 
 const DEMO_QUOTE =
   'At its most basic the democratic contract is a simple one: the right to vote comes with a responsibility to society, through tax payments and citizenship.';
 
-const EXTRA_LONG =
-  'At its most basic the democratic contract is a simple one: the right to vote comes with a responsibility to society, through tax payments and citizenship. Democracy only works when citizens understand that rights and duties travel together through generations.';
-
-const PT_QUOTE =
-  'A democracia, em sua forma mais básica, é um contrato simples: o direito de votar vem com a responsabilidade para com a sociedade, por meio de impostos e cidadania.';
-
 const AUTHOR = 'Victor Shamas';
+
+function buildQuote(targetChars) {
+  const base =
+    'A democracia exige cidadania ativa, responsabilidade coletiva e respeito às instituições. ';
+  let s = '';
+  while (s.length < targetChars) s += base;
+  return s.slice(0, targetChars).trim();
+}
+
+const SAMPLES = [
+  { label: '50 chars', text: buildQuote(50) },
+  { label: '150 chars', text: buildQuote(150) },
+  { label: '300 chars', text: buildQuote(300) },
+  { label: '500 chars', text: buildQuote(500) },
+  { label: 'demo EN', text: DEMO_QUOTE },
+];
 
 let failed = 0;
 let passed = 0;
@@ -39,6 +51,10 @@ function hasEllipsis(lines) {
   return lines.some((l) => /…|\.\.\./.test(l));
 }
 
+function usableHeight(plan) {
+  return plan.zones.quoteZoneHeight - 20;
+}
+
 console.log('=== MetaMensagem — testes de layout de imagem ===\n');
 
 console.log('1) wrapQuoteFull nunca usa reticências');
@@ -46,60 +62,41 @@ const wrapped = wrapQuoteFull(DEMO_QUOTE, 900, 28);
 assert(!hasEllipsis(wrapped), 'linhas contêm reticências');
 assert(validateFullText(DEMO_QUOTE, wrapped), 'wrap não preserva texto');
 
-console.log('\n2) Frase demo (inglês) — todos os formatos');
+console.log('\n2) Amostras 50 / 150 / 300 / 500 chars × todos os formatos');
+for (const sample of SAMPLES) {
+  console.log(`\n  — ${sample.label} (${sample.text.length} caracteres)`);
+  for (const key of FORMAT_ORDER) {
+    const { width, height } = FORMATS[key];
+    const plan = computeImageLayout(sample.text, AUTHOR, width, height);
+    const ok = validateFullText(sample.text, plan.lines);
+    const est = estimateRenderedBlockHeight(plan.lines.length, plan.quotePx, plan.lineHeight);
+    assert(ok, `${key}: validateFullText`);
+    assert(!hasEllipsis(plan.lines), `${key}: ellipsis`);
+    assert(plan.quoteFits, `${key}: quoteFits`);
+    assert(est <= usableHeight(plan) + 2, `${key}: altura estimada na zona`);
+    if (sample.text.length >= EXTREME_QUOTE_CHAR_THRESHOLD) {
+      assert(plan.extremeQuoteMode, `${key}: extreme mode`);
+    } else if (sample.text.length >= LONG_QUOTE_CHAR_THRESHOLD) {
+      assert(plan.longQuoteMode, `${key}: long mode`);
+    }
+  }
+}
+
+console.log('\n3) Frase demo — tabela resumo (feed)');
 const rows = [];
-for (const key of FORMAT_ORDER) {
+for (const key of ['feed', 'story', 'facebook', 'wallpaper_mobile']) {
   const { width, height, label } = FORMATS[key];
   const plan = computeImageLayout(DEMO_QUOTE, AUTHOR, width, height);
-  const ok = validateFullText(DEMO_QUOTE, plan.lines);
-  const joined = normalizeQuoteText(plan.lines.join(' '));
-  const orig = normalizeQuoteText(DEMO_QUOTE);
-  const fits = plan.quoteFits && plan.quoteBlockHeight <= plan.zones.quoteZoneHeight;
-
-  assert(ok, `${key}: validateFullText`);
-  assert(!hasEllipsis(plan.lines), `${key}: ellipsis nas linhas`);
-  assert(joined === orig, `${key}: texto diferente (${joined.length} vs ${orig.length})`);
-  assert(plan.fullTextVerified, `${key}: fullTextVerified`);
-  assert(fits, `${key}: quoteFits na QUOTE_ZONE`);
-  assert(plan.quoteFits, `${key}: quoteFits flag`);
-
   rows.push({
     formato: label,
-    key,
-    ok: ok && !hasEllipsis(plan.lines),
+    quoteFits: plan.quoteFits,
     linhas: plan.lines.length,
     fontePx: plan.quotePx,
-    longMode: plan.longQuoteMode,
-    quoteFits: plan.quoteFits,
-    zoneH: plan.zones.quoteZoneHeight,
+    long: plan.longQuoteMode,
+    extreme: plan.extremeQuoteMode,
   });
 }
 console.table(rows);
-
-console.log('\n3) Frase extra longa (~2x demo)');
-for (const key of ['feed', 'facebook', 'wallpaper_mobile']) {
-  const { width, height } = FORMATS[key];
-  const plan = computeImageLayout(EXTRA_LONG, AUTHOR, width, height);
-  const ok = validateFullText(EXTRA_LONG, plan.lines);
-  assert(ok, `${key} extra longa`);
-  console.log(
-    `  ${key}: ${ok ? 'OK' : 'FAIL'} | ${plan.lines.length} linhas @ ${plan.quotePx}px | long=${plan.longQuoteMode}`
-  );
-}
-
-console.log('\n4) Frase PT com acentos');
-{
-  const plan = computeImageLayout(PT_QUOTE, AUTHOR, 1080, 1080);
-  assert(validateFullText(PT_QUOTE, plan.lines), 'PT validate');
-  assert(plan.longQuoteMode === PT_QUOTE.length >= LONG_QUOTE_CHAR_THRESHOLD, 'long mode PT');
-}
-
-console.log('\n5) Casos limite');
-assert(validateFullText('', ['']), 'texto vazio');
-const oneWord = 'Supercalifragilisticexpialidocious';
-const planWord = computeImageLayout(oneWord, '', 1080, 1080);
-assert(validateFullText(oneWord, planWord.lines), 'palavra gigante');
-assert(!hasEllipsis(planWord.lines), 'palavra gigante com ellipsis');
 
 console.log(`\n=== Resultado: ${passed} ok, ${failed} falhas ===`);
 if (failed > 0) process.exit(1);

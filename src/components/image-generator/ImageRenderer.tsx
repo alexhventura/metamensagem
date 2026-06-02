@@ -28,9 +28,9 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
     if (!plan.quoteFits && import.meta.env.DEV) {
       console.warn('[ImageRenderer] frase excede QUOTE_ZONE', {
         chars: texto.length,
-        lines: plan.lines.length,
         blockH: plan.quoteBlockHeight,
-        zoneH: plan.zones.quoteZoneHeight,
+        usable: plan.zones.quoteZoneHeight,
+        extreme: plan.extremeQuoteMode,
       });
     }
     return plan;
@@ -69,6 +69,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
       data-mm-locale={quoteMeta?.locale ?? 'pt'}
       data-mm-serial={serial}
       data-mm-long-quote={layout.longQuoteMode ? '1' : '0'}
+      data-mm-extreme-quote={layout.extremeQuoteMode ? '1' : '0'}
       data-mm-quote-fits={layout.quoteFits ? '1' : '0'}
       data-mm-text-integrity={validateFullText(texto, layout.lines) ? 'ok' : 'fail'}
       data-mm-author-expected={authorTrim}
@@ -88,7 +89,6 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         }}
       />
 
-      {/* HEADER_ZONE — fixo */}
       <header
         className="absolute left-0 right-0 top-0 z-10 flex items-start justify-center pointer-events-none"
         style={{ height: zones.headerHeight }}
@@ -109,9 +109,9 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         />
       </header>
 
-      {/* QUOTE_ZONE — só a frase */}
       <section
-        className="absolute z-20 flex items-center justify-center text-center box-border pointer-events-none"
+        data-mm-quote-zone
+        className="absolute z-20 box-border pointer-events-none flex flex-col"
         style={{
           top: zones.quoteZoneTop,
           left: zones.padX,
@@ -119,14 +119,18 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           height: zones.quoteZoneHeight,
           maxHeight: zones.quoteZoneHeight,
           overflow: 'hidden',
+          paddingTop: layout.quotePaddingTop,
+          paddingBottom: 0,
+          justifyContent: 'flex-start',
+          alignItems: 'center',
         }}
         aria-label="Citação"
       >
         <blockquote
-          className={`font-bold tracking-tight m-0 min-h-0 w-full ${skin.textClass}`}
+          className={`font-bold tracking-tight m-0 w-full text-center shrink-0 ${skin.textClass}`}
           style={{
             fontSize: layout.quotePx,
-            lineHeight: layout.lineHeightRatio,
+            lineHeight: `${layout.lineHeight}px`,
             maxWidth: '100%',
             fontWeight: 700,
             textShadow: '0 1px 24px rgba(0,0,0,0.12)',
@@ -142,7 +146,6 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         </blockquote>
       </section>
 
-      {/* AUTHOR_ZONE — posição fixa */}
       {authorTrim ? (
         <section
           data-mm-author-zone
@@ -159,7 +162,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
             className="font-medium tracking-wide m-0 w-full"
             style={{
               fontSize: layout.authorPx,
-              lineHeight: 1.2,
+              lineHeight: `${Math.round(layout.authorPx * 1.2)}px`,
               maxWidth: '100%',
               opacity: 0.92,
             }}
@@ -169,7 +172,6 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         </section>
       ) : null}
 
-      {/* FOOTER_ZONE — fixo */}
       <footer
         className={`absolute left-0 right-0 z-30 grid items-end ${skin.accentClass}`}
         style={{

@@ -1,6 +1,8 @@
 /**
  * GET /api/translations/:slug?locale=en — traduções via CDN.
  */
+export const config = { runtime: 'edge' };
+
 import { isSeoLocale, requestUrl, shardForSlug } from '../_shared.js';
 
 type SeoLocale = 'pt' | 'en' | 'es' | 'fr' | 'de' | 'it' | 'ja' | 'hi';

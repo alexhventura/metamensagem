@@ -1,10 +1,59 @@
 import { ImageResponse } from '@vercel/og';
-import { findFraseForOg, previewSerialForQuote } from '../../lib/server/findFraseForOg';
 import { computeImageLayout } from '../../src/components/image-generator/utils/textLayout';
 import { requestUrl } from '../_shared.js';
 
+function previewSerialForQuote(quoteId: string): string {
+  const year = new Date().getFullYear();
+  let hash = 0;
+  const str = `${quoteId}-${year}`;
+  for (let i = 0; i < str.length; i++) hash = (hash * 31 + str.charCodeAt(i)) | 0;
+  const seq = (Math.abs(hash) % 99_999_999) + 1;
+  return `MMM-${year}-${String(seq).padStart(8, '0')}`;
+}
+
+async function resolveOgFrase(
+  idOrSlug: string,
+  origin: string
+): Promise<{ id: string; slug: string; texto: string; autor: string; categoria?: string } | null> {
+  const key = decodeURIComponent(idOrSlug).trim();
+  if (!key) return null;
+
+  let slug = key;
+  if (key.startsWith('f_')) {
+    try {
+      const idx = await fetch(`${origin}/frases-v2/id-index.json`);
+      if (idx.ok) {
+        const map = (await idx.json()) as Record<string, string>;
+        slug = map[key] || key;
+      }
+    } catch {
+      /* id-index opcional */
+    }
+  }
+
+  const res = await fetch(`${origin}/api/frase-detail?slug=${encodeURIComponent(slug)}`);
+  if (!res.ok) return null;
+
+  const f = (await res.json()) as {
+    id: string;
+    slug: string;
+    frase_original: string;
+    autor_original: string;
+    categoria?: string;
+  };
+  const texto = (f.frase_original || '').trim();
+  if (!texto) return null;
+  return {
+    id: f.id,
+    slug: f.slug,
+    texto,
+    autor: (f.autor_original || 'Anônimo').trim(),
+    categoria: f.categoria,
+  };
+}
+
 export const config = {
-  runtime: 'nodejs',
+  runtime: 'edge',
 };
 
 export default async function handler(req: Request) {
@@ -17,7 +66,7 @@ export default async function handler(req: Request) {
     return new Response('id required', { status: 400 });
   }
 
-  const frase = await findFraseForOg(id);
+  const frase = await resolveOgFrase(id, url.origin);
   if (!frase) {
     return new Response('Frase não encontrada', { status: 404 });
   }

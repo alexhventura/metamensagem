@@ -1,21 +1,19 @@
 /**
  * POST /api/translation-demand — agrega demanda (sem PII) para fila global.
- * Persistência: Vercel Blob (BLOB_READ_WRITE_TOKEN) ou data/ em dev local.
+ * Persistência: Vercel Blob (BLOB_READ_WRITE_TOKEN).
  */
-import { readFile, writeFile } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
-import { join } from 'node:path';
+export const config = { runtime: 'edge' };
+
 import {
   mergeDemandSnapshots,
   type TranslationDemandSnapshot,
 } from './_translationDemand.js';
 
 const BLOB_PATH = 'translation-demand/snapshot.json';
-const LOCAL_PATH = join(process.cwd(), 'data', 'translation-queue-snapshot.json');
 
 async function loadFromBlob(token: string): Promise<TranslationDemandSnapshot | null> {
   try {
-    const { list, get } = await import('@vercel/blob');
+    const { list } = await import('@vercel/blob');
     const listed = await list({ prefix: 'translation-demand/', token });
     const hit = listed.blobs.find((b) => b.pathname === BLOB_PATH);
     if (!hit?.url) return null;
@@ -42,44 +40,13 @@ async function saveToBlob(snapshot: TranslationDemandSnapshot, token: string): P
   }
 }
 
-async function loadLocal(): Promise<TranslationDemandSnapshot> {
-  const fallback: TranslationDemandSnapshot = { queue: {}, meta: {} };
-  const queuePath = join(process.cwd(), 'data', 'translation-queue.json');
-  if (existsSync(LOCAL_PATH)) {
-    const raw = await readFile(LOCAL_PATH, 'utf8');
-    const parsed = JSON.parse(raw) as TranslationDemandSnapshot;
-    const legacy = parsed as TranslationDemandSnapshot & {
-      counts?: TranslationDemandSnapshot['queue'];
-    };
-    return {
-      queue: legacy.queue || legacy.counts || fallback.queue,
-      meta: legacy.meta || fallback.meta,
-      updatedAt: legacy.updatedAt,
-    };
-  }
-  if (existsSync(queuePath)) {
-    const queue = JSON.parse(await readFile(queuePath, 'utf8'));
-    return { queue, meta: {}, updatedAt: undefined };
-  }
-  return fallback;
-}
-
-async function saveLocal(snapshot: TranslationDemandSnapshot): Promise<void> {
-  await writeFile(LOCAL_PATH, JSON.stringify(snapshot, null, 2), 'utf8');
-  await writeFile(
-    join(process.cwd(), 'data', 'translation-queue.json'),
-    JSON.stringify(snapshot.queue, null, 2),
-    'utf8'
-  );
-}
-
 async function loadSnapshot(): Promise<TranslationDemandSnapshot> {
   const token = process.env.BLOB_READ_WRITE_TOKEN?.trim();
   if (token) {
     const fromBlob = await loadFromBlob(token);
     if (fromBlob) return fromBlob;
   }
-  return loadLocal();
+  return { queue: {}, meta: {} };
 }
 
 async function saveSnapshot(snapshot: TranslationDemandSnapshot): Promise<{ persisted: boolean; via: string }> {
@@ -87,10 +54,6 @@ async function saveSnapshot(snapshot: TranslationDemandSnapshot): Promise<{ pers
   if (token) {
     const ok = await saveToBlob(snapshot, token);
     if (ok) return { persisted: true, via: 'blob' };
-  }
-  if (!process.env.VERCEL) {
-    await saveLocal(snapshot);
-    return { persisted: true, via: 'local' };
   }
   return { persisted: false, via: 'none' };
 }

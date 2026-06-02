@@ -1,6 +1,8 @@
 /**
  * Proxy MyMemory no servidor — cota separada do IP do visitante + MYMEMORY_EMAIL no Vercel.
  */
+export const config = { runtime: 'edge' };
+
 import { requestUrl } from './_shared.js';
 
 export default async function handler(req: Request): Promise<Response> {

@@ -1,6 +1,8 @@
 /**
  * GET /api/frase-detail?slug=... — uma frase (shards via CDN).
  */
+export const config = { runtime: 'edge' };
+
 import {
   findFraseInList,
   requestUrl,

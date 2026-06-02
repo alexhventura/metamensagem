@@ -1,6 +1,10 @@
 /**
  * GET /api/frase-detail?slug=... — uma frase do acervo (sem baixar shard inteiro no cliente).
  */
+export const config = {
+  runtime: 'nodejs',
+};
+
 import {
   fraseDetailCacheHeaders,
   readFraseDetailFromShards,

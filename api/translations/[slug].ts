@@ -1,6 +1,10 @@
 /**
  * GET /api/translations/:slug?locale=en — lê shard estático de traduções (CDN).
  */
+export const config = {
+  runtime: 'nodejs',
+};
+
 import { shardForSlug } from '../../lib/utils/shardForSlug';
 import { isSeoLocale, type SeoLocale } from '../../lib/i18n/locales';
 import { readFile } from 'node:fs/promises';

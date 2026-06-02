@@ -2,6 +2,10 @@
  * POST /api/translation-demand — agrega demanda (sem PII) para fila global.
  * Persistência: Vercel Blob (BLOB_READ_WRITE_TOKEN) ou data/ em dev local.
  */
+export const config = {
+  runtime: 'nodejs',
+};
+
 import { readFile, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';

@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo, useRef, useState, lazy, Suspense } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState, lazy, Suspense } from 'react';
+import { useAppUiReset } from '../hooks/useAppUiReset';
 const ImageGeneratorModal = lazy(() => import('../components/image-generator'));
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import BackNavButton from '../components/BackNavButton';
@@ -165,6 +166,8 @@ export default function FraseDetalheView({
   const [loading, setLoading] = useState(() => !preloadedFrase && !frase && !!slug);
   const [loadError, setLoadError] = useState(false);
   const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
+  const closeImageModal = useCallback(() => setImageQuote(null), []);
+  useAppUiReset(closeImageModal);
   const [display, setDisplay] = useState<CardContentDisplay>({
     texto: '',
     isTranslated: false,

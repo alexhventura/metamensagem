@@ -33,7 +33,6 @@ import {
 
 const ImageGeneratorModal = lazy(() => import('./components/image-generator'));
 import { quoteFromItem } from './components/image-generator/utils/quoteFromItem';
-import GoogleAdSense from './components/GoogleAdSense';
 import AdSlot from './components/AdSlot';
 import { loadHomeBootstrap, ensureFullCatalogLoaded, type CatalogLoadResult } from './lib/homeData';
 import { HOME_FRASE_POOL_SIZE, pathNeedsFullCatalog, sampleShuffled } from './lib/catalogLimits';
@@ -91,6 +90,7 @@ import AnalyticsRouteSync from './components/AnalyticsRouteSync';
 import { tagsForDisplay } from './lib/tagDisplay';
 import BackNavButton from './components/BackNavButton';
 import HeaderBrandLink from './components/HeaderBrandLink';
+import { useAppUiReset } from './hooks/useAppUiReset';
 
 interface ModalProps {
   item: ItemConteudo;
@@ -186,7 +186,6 @@ export default function App() {
       <UiLocaleSync />
       <AnalyticsRouteSync />
       {/* Layout raiz (equiv. app/layout.tsx): script global AdSense Auto Ads */}
-      <GoogleAdSense />
       <div className="min-h-screen mm-app-shell flex flex-col font-sans">
         {/* TOAST SYSTEM PREMIUM */}
         <AnimatePresence>
@@ -218,7 +217,7 @@ export default function App() {
         />
 
         {/* HEADER FIXO */}
-        <header className="sticky top-0 z-40 border-b select-none backdrop-blur-md mm-header-bar">
+        <header className="sticky top-0 z-[260] border-b select-none backdrop-blur-md mm-header-bar">
           <div className="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
               <HeaderBrandLink />
 
@@ -260,7 +259,7 @@ export default function App() {
         </div>
 
         {/* ROTAS DA APLICA�!ÒO */}
-        <main className="flex-1 flex flex-col">
+        <main id="main-content" className="flex-1 flex flex-col" tabIndex={-1}>
           {loading ? (
             <div className="flex-1 flex items-center justify-center" role="status" aria-live="polite">
               <div className="text-center">
@@ -502,6 +501,8 @@ function HomeView({
     if (busca.trim()) onRequestCatalog?.();
   }, [busca, onRequestCatalog]);
   const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
+  const closeImageModal = useCallback(() => setImageQuote(null), []);
+  useAppUiReset(closeImageModal);
   const bancoFrases = useMemo(() => banco.filter((i) => i.tipo === 'frase'), [banco]);
   const bancoRandomFrases = useMemo(
     () => bancoRandom.filter((i) => i.tipo === 'frase'),
@@ -595,8 +596,7 @@ function HomeView({
         rows={itensHome}
         tema={tema}
         placement="home-in-feed"
-        animated
-        renderCard={(item) => (
+        renderCard={(item, index) => (
           <ContentCard
             item={item}
             tema={tema}
@@ -604,6 +604,7 @@ function HomeView({
             onGenerateImage={
               item.tipo === 'frase' ? (quote) => setImageQuote(quote) : undefined
             }
+            lazyBelowFold={index >= 3}
           />
         )}
       />
@@ -715,6 +716,8 @@ function FrasesView({
   }, [catalogReady]);
 
   const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
+  const closeImageModal = useCallback(() => setImageQuote(null), []);
+  useAppUiReset(closeImageModal);
   const baseFrases = useMemo(() => {
     const list = banco.filter((i) => i.tipo === 'frase');
     return sampleShuffled(list, list.length);

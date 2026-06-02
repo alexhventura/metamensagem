@@ -143,13 +143,9 @@ export default function ContentCard({
 
   const linkState = isFrase ? { item } : undefined;
 
-  return (
-    <motion.div
-      layout={!lazyBelowFold}
-      initial={lazyBelowFold ? false : { opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      className={`p-[1px] rounded-[2.5rem] ${cardBorderGradient(accent)} h-full`}
-    >
+  const shellClass = `p-[1px] rounded-[2.5rem] ${cardBorderGradient(accent)} h-full`;
+
+  const cardInner = (
       <div
         className={`p-8 rounded-[2.5rem] flex flex-col justify-between transition-all group relative overflow-hidden h-full ${
           tema === 'light'
@@ -160,7 +156,11 @@ export default function ContentCard({
         <div className="relative z-10 flex-1 flex flex-col">
           <div className="flex items-center gap-2 mb-6">
             <span className={`w-1.5 h-1.5 rounded-full ${cardAccentDotClass(accent)}`} />
-            <span className="text-[10px] uppercase font-black tracking-widest text-zinc-500">
+            <span
+              className={`text-[10px] uppercase font-black tracking-widest ${
+                tema === 'light' ? 'text-zinc-600' : 'text-zinc-400'
+              }`}
+            >
               {item.tipo}
             </span>
           </div>
@@ -269,6 +269,7 @@ export default function ContentCard({
             <button
               type="button"
               onClick={() => void handleShare()}
+              aria-label={t('common.share')}
               className={`${CARD_ACTION_BTN} ${neutralAction}`}
             >
               <Share2 size={18} />
@@ -319,6 +320,20 @@ export default function ContentCard({
           }`}
         />
       </div>
+  );
+
+  if (lazyBelowFold) {
+    return <div className={shellClass}>{cardInner}</div>;
+  }
+
+  return (
+    <motion.div
+      layout
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      className={shellClass}
+    >
+      {cardInner}
     </motion.div>
   );
 }

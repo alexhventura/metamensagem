@@ -3,7 +3,8 @@
 export const FEED_CARDS_PER_AD_BREAK = 6;
 /** Uma “página” do feed: 2 linhas × 3 colunas × 2 blocos = 12 cards + 2 anúncios. */
 export const FEED_PAGE_SIZE = 12;
-export const FEED_INITIAL_VISIBLE = FEED_PAGE_SIZE;
+/** Primeira pintura: só 6 cards (1 bloco 3×2); “carregar mais” adiciona 12 por vez. */
+export const FEED_INITIAL_VISIBLE = FEED_CARDS_PER_AD_BREAK;
 export const FEED_LOAD_MORE_STEP = FEED_PAGE_SIZE;
 
 export type FeedRow<T> =

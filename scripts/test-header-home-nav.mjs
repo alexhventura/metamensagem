@@ -51,6 +51,14 @@ if (/preventDefault\(\)[\s\S]*navigate\s*\(/.test(brandSrc)) {
 } else pass('no preventDefault+navigate on internal routes');
 if (brandSrc.includes('pointer-events-none')) pass('full logo block clickable via Link');
 else fail('logo/text should use pointer-events-none on children');
+if (!brandSrc.includes('dispatchAppUiReset')) {
+  fail('HeaderBrandLink must dispatchAppUiReset on click (fecha modal ao ir para home)');
+} else pass('dispatchAppUiReset on logo click');
+
+const resetSrc = readFileSync('src/lib/appUiReset.ts', 'utf8');
+if (!resetSrc.includes("MM_RESET_UI_EVENT = 'mm-reset-ui'")) {
+  fail('appUiReset must define MM_RESET_UI_EVENT');
+} else pass('appUiReset event defined');
 
 console.log('\n3) Single site-wide header in App.tsx');
 const appSrc = readFileSync('src/App.tsx', 'utf8');

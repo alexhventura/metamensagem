@@ -30,6 +30,34 @@ test.describe('MetaMensagem — bugs críticos', () => {
     await expect(page).toHaveURL(new RegExp(`${BASE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/?$`));
   });
 
+  test('logo MetaMensagem fecha modal de imagem na Home', async ({ page }) => {
+    await page.goto(`${BASE}/`, { waitUntil: 'networkidle' });
+    const genBtn = page.getByRole('button', { name: /Gerar|Generate Image/i }).first();
+    await expect(genBtn).toBeVisible({ timeout: 30_000 });
+    await genBtn.click();
+    const dialog = page.getByRole('dialog');
+    await expect(dialog).toBeVisible({ timeout: 15_000 });
+    await page.getByRole('link', { name: /Metamensagem.*pagina inicial/i }).click();
+    await expect(page).toHaveURL(new RegExp(`${BASE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/?$`));
+    await expect(dialog).toBeHidden({ timeout: 5_000 });
+  });
+
+  test('logo MetaMensagem fecha modal de imagem no detalhe da frase', async ({ page }) => {
+    await page.goto(`${BASE}/frases`, { waitUntil: 'networkidle' });
+    const firstCard = page.locator('a[href^="/frases/"]').first();
+    await expect(firstCard).toBeVisible({ timeout: 30_000 });
+    await firstCard.click();
+    await page.waitForURL(/\/frases\//);
+    const genBtn = page.getByRole('button', { name: /Gerar|Generate Image/i }).first();
+    await expect(genBtn).toBeVisible({ timeout: 30_000 });
+    await genBtn.click();
+    const dialog = page.getByRole('dialog');
+    await expect(dialog).toBeVisible({ timeout: 15_000 });
+    await page.getByRole('link', { name: /Metamensagem.*pagina inicial/i }).click();
+    await expect(page).toHaveURL(new RegExp(`${BASE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/?$`));
+    await expect(dialog).toBeHidden({ timeout: 5_000 });
+  });
+
   test('logo MetaMensagem volta para Home a partir de detalhe de frase', async ({ page }) => {
     await page.goto(`${BASE}/frases`, { waitUntil: 'networkidle' });
     const firstCard = page.locator('a[href^="/frases/"]').first();

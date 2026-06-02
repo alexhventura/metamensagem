@@ -21,6 +21,7 @@ import {
 import { ensureImageExportFonts } from './utils/imageFonts';
 import { allocateImageSerial, previewSerialForQuote } from './utils/serialGenerator';
 import { recordImageGeneration } from './utils/imageMetadata';
+import { useAppUiReset } from '../../hooks/useAppUiReset';
 
 async function waitNextPaint(): Promise<void> {
   await new Promise<void>((r) => requestAnimationFrame(() => requestAnimationFrame(() => r())));
@@ -56,6 +57,12 @@ export default function ImageGeneratorModal({
     () => ({ text: quote.texto, autor: quote.autor }),
     [quote.texto, quote.autor]
   );
+
+  const handleClose = useCallback(() => {
+    onClose();
+  }, [onClose]);
+
+  useAppUiReset(handleClose);
 
   useEffect(() => {
     if (!open) return;
@@ -229,7 +236,7 @@ export default function ImageGeneratorModal({
         <button
           type="button"
           className="absolute inset-0 bg-black/75 backdrop-blur-sm"
-          onClick={onClose}
+          onClick={handleClose}
           aria-label="Fechar"
         />
 
@@ -261,7 +268,7 @@ export default function ImageGeneratorModal({
             </div>
             <button
               type="button"
-              onClick={onClose}
+              onClick={handleClose}
               className={`p-2.5 rounded-xl border transition-colors ${
                 tema === 'light' ? 'border-zinc-200 hover:bg-zinc-100' : 'border-zinc-800 hover:bg-zinc-900'
               }`}

@@ -181,6 +181,8 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           paddingRight: layout.padX,
           paddingBottom: layout.padBottom,
           fontSize: footerPx,
+          fontFamily: 'Arial, Helvetica, sans-serif',
+          fontWeight: 700,
           letterSpacing: '0.02em',
           opacity: 0.78,
           borderTop: '1px solid rgba(255,255,255,0.06)',
@@ -190,16 +192,16 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           alignItems: 'end',
         }}
       >
-        <span className="font-medium lowercase leading-tight text-left whitespace-nowrap">
+        <span className="lowercase leading-tight text-left whitespace-nowrap">
           metamensagem.com
         </span>
         <span
-          className="font-medium leading-tight text-center whitespace-nowrap"
+          className="leading-tight text-center whitespace-nowrap"
           style={{ fontSize: skinFooterPx }}
         >
           {skinLabel}
         </span>
-        <span className="font-semibold tabular-nums leading-tight text-right whitespace-nowrap">
+        <span className="tabular-nums leading-tight text-right whitespace-nowrap">
           {serial}
         </span>
       </footer>

@@ -1,4 +1,5 @@
-import React, { lazy, Suspense, useMemo, useState } from 'react';
+import React, { lazy, Suspense, useCallback, useMemo, useState } from 'react';
+import { useAppUiReset } from '../hooks/useAppUiReset';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Search } from 'lucide-react';
@@ -61,6 +62,8 @@ export default function TagCategoriaView({
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(FEED_INITIAL_VISIBLE);
   const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
+  const closeImageModal = useCallback(() => setImageQuote(null), []);
+  useAppUiReset(closeImageModal);
 
   const resolvedSlug = useMemo(
     () => extractSlugFromTagUrlSegment(tagSlugParam),

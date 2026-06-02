@@ -44,6 +44,40 @@ html[data-theme="dark"] {
   contain-intrinsic-size: 320px 420px;
 }
 
+.mm-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: #a855f7;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.mm-skip-link:focus-visible {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+:focus-visible {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+}
+
+.mm-prerender-shell {
+  pointer-events: none;
+}
+
 /* JetBrains Mono — só após paint (loading / mono UI) */
 html.mm-fonts-mono-ready {
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;

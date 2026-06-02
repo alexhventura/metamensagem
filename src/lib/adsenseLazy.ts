@@ -26,15 +26,9 @@ function injectScript(): Promise<void> {
   return loadPromise;
 }
 
+/** Apenas slots visíveis disparam o script — sem carga global no primeiro paint. */
 export function loadAdSenseWhenIdle(): void {
-  const run = () => {
-    injectScript().catch(() => {});
-  };
-  if (typeof requestIdleCallback === 'function') {
-    requestIdleCallback(run, { timeout: 12000 });
-  } else {
-    setTimeout(run, 4000);
-  }
+  /* intencionalmente vazio: use observeAdSlot */
 }
 
 export function observeAdSlot(el: HTMLElement): () => void {
@@ -53,7 +47,7 @@ export function observeAdSlot(el: HTMLElement): () => void {
             }
           }
         },
-        { rootMargin: '200px 0px', threshold: 0.01 }
+        { rootMargin: '0px 0px 120px 0px', threshold: 0.05 }
       );
     }
     observer.observe(el);

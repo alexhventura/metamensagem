@@ -11,7 +11,7 @@ export default function FeedGridWithAds<T extends { id: string }>({
   tema,
   placement,
   renderCard,
-  lazyAfterIndex = FEED_INITIAL_VISIBLE,
+  lazyAfterIndex = 3,
   animated = false,
 }: {
   rows: FeedRow<T>[];

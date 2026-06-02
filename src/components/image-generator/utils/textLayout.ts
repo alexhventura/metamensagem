@@ -317,12 +317,15 @@ export function computeImageLayout(
   });
 }
 
+/** Rodapé exportado (domínio · skin · série) — ~80% maior que o tamanho base de layout. */
+export const FOOTER_DISPLAY_SCALE = 1.8;
+
 export function computeFooterFontSize(
   height: number,
   skinName: string,
   serial: string
 ): number {
-  return computeFooterPx(height, skinName, serial);
+  return Math.round(computeFooterPx(height, skinName, serial) * FOOTER_DISPLAY_SCALE);
 }
 
 export function computeFooterSkinFontSize(

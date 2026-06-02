@@ -1,7 +1,7 @@
 /**
  * GET /api/translations/:slug?locale=en — traduções via CDN.
  */
-import { isSeoLocale, requestUrl, shardForSlug } from '../_shared';
+import { isSeoLocale, requestUrl, shardForSlug } from '../_shared.js';
 
 type SeoLocale = 'pt' | 'en' | 'es' | 'fr' | 'de' | 'it' | 'ja' | 'hi';
 

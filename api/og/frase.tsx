@@ -1,7 +1,7 @@
 import { ImageResponse } from '@vercel/og';
 import { findFraseForOg, previewSerialForQuote } from '../../lib/server/findFraseForOg';
 import { computeImageLayout } from '../../src/components/image-generator/utils/textLayout';
-import { requestUrl } from '../_shared';
+import { requestUrl } from '../_shared.js';
 
 export const config = {
   runtime: 'nodejs',

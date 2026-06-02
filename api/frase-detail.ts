@@ -6,7 +6,7 @@ import {
   requestUrl,
   shardsToProbe,
   type FraseDetailRecord,
-} from './_shared';
+} from './_shared.js';
 
 const CACHE = 'public, max-age=31536000, immutable';
 

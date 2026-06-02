@@ -1,7 +1,7 @@
 /**
  * Proxy MyMemory no servidor — cota separada do IP do visitante + MYMEMORY_EMAIL no Vercel.
  */
-import { requestUrl } from './_shared';
+import { requestUrl } from './_shared.js';
 
 export default async function handler(req: Request): Promise<Response> {
   if (req.method !== 'GET') {

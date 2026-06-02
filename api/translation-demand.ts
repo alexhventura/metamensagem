@@ -8,7 +8,7 @@ import { join } from 'node:path';
 import {
   mergeDemandSnapshots,
   type TranslationDemandSnapshot,
-} from './_translationDemand';
+} from './_translationDemand.js';
 
 const BLOB_PATH = 'translation-demand/snapshot.json';
 const LOCAL_PATH = join(process.cwd(), 'data', 'translation-queue-snapshot.json');

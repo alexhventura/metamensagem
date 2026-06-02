@@ -1,12 +1,7 @@
 /** Leitura de shards no servidor (Node) — não importar no cliente. */
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import {
-  findFraseInList,
-  fraseDetailCacheHeaders,
-  shardsToProbe,
-  type FraseDetailRecord,
-} from './detailLookup';
+import { findFraseInList, shardsToProbe, type FraseDetailRecord } from './detailLookup';
 
 const IMMUTABLE_CACHE = 'public, max-age=31536000, immutable';
 

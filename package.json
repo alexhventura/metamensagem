@@ -46,6 +46,7 @@
     "translation-report": "node scripts/translation-report.mjs",
     "build-translations": "node scripts/build-translations.mjs",
     "test:image-layout": "tsx scripts/test-image-text-layout.mjs",
+    "test:header-home-nav": "tsx scripts/test-header-home-nav.mjs",
     "translations:weekly": "npm run translations:pull-demand && npm run translation-report && npm run build-translations && node scripts/merge-translation-queue.mjs data/translation-batch-built.json",
     "content:build": "npm run content:sync && node prepare-data.cjs",
     "next:dev": "next dev -p 3001",

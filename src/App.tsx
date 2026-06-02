@@ -1,5 +1,5 @@
 ﻿import React, { useState, useEffect, useRef, useMemo, useCallback, lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route, Link, useParams, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, useParams, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 const Terms = lazy(() => import('./views/Terms'));
@@ -90,6 +90,7 @@ import { UiLocaleSync } from './hooks/useUiLocaleSync';
 import AnalyticsRouteSync from './components/AnalyticsRouteSync';
 import { tagsForDisplay } from './lib/tagDisplay';
 import BackNavButton from './components/BackNavButton';
+import HeaderBrandLink from './components/HeaderBrandLink';
 
 interface ModalProps {
   item: ItemConteudo;
@@ -219,7 +220,7 @@ export default function App() {
         {/* HEADER FIXO */}
         <header className="sticky top-0 z-40 border-b select-none backdrop-blur-md mm-header-bar">
           <div className="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
-              <HeaderBrandButton />
+              <HeaderBrandLink />
 
             <nav className="hidden md:flex items-center gap-8 text-sm font-bold text-zinc-400">
             </nav>
@@ -453,7 +454,6 @@ function MudarMetaSEO({
   return null;
 }
 
-/** Logo + Metamensagem: na home = F5; noutras rotas = recarrega indo para /. */
 /** Carrega feed-sample só em rotas que precisam (evita parse de ~1,5 MB na home durante Lighthouse). */
 function CatalogRouteSync({
   applyCatalog,
@@ -476,41 +476,6 @@ function CatalogRouteSync({
   }, [location.pathname, applyCatalog]);
 
   return null;
-}
-
-function HeaderBrandButton() {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    const path = location.pathname.replace(/\/$/, '') || '/';
-    if (path === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      return;
-    }
-    navigate('/');
-  };
-
-  return (
-    <button
-      type="button"
-      onClick={handleClick}
-      className="flex items-center gap-2.5 group min-w-0 cursor-pointer bg-transparent border-0 p-0 text-left"
-      aria-label="Metamensagem, pagina inicial"
-    >
-      <img
-        src="/brand/logo.svg"
-        alt=""
-        width={40}
-        height={40}
-        className="h-9 w-9 md:h-10 md:w-10 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105 pointer-events-none"
-        decoding="async"
-      />
-      <span className="text-xl md:text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[#A855F7] to-[#6366f1] tracking-tighter truncate pointer-events-none">
-        Metamensagem
-      </span>
-    </button>
-  );
 }
 
 // ===================================================

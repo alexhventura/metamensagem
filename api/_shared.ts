@@ -1,12 +1,35 @@
 /** Utilitários compartilhados das rotas /api (dentro de api/ para o bundle Vercel). */
 
-export function requestUrl(req: Request): URL {
-  const raw = req.url;
+type ApiRequest = {
+  url?: string;
+  headers?: Headers | Record<string, string | string[] | undefined>;
+};
+
+function headerValue(
+  headers: ApiRequest['headers'],
+  name: string
+): string | null {
+  if (!headers) return null;
+  if (typeof (headers as Headers).get === 'function') {
+    return (headers as Headers).get(name);
+  }
+  const record = headers as Record<string, string | string[] | undefined>;
+  const raw = record[name] ?? record[name.toLowerCase()];
+  if (Array.isArray(raw)) return raw[0] ?? null;
+  return raw ?? null;
+}
+
+/** Web Request ou IncomingMessage do runtime Node da Vercel. */
+export function requestUrl(req: ApiRequest): URL {
+  const raw = req.url ?? '/';
   if (raw.startsWith('http://') || raw.startsWith('https://')) {
     return new URL(raw);
   }
-  const host = req.headers.get('x-forwarded-host') ?? req.headers.get('host') ?? 'metamensagem.com';
-  const proto = req.headers.get('x-forwarded-proto') ?? 'https';
+  const host =
+    headerValue(req.headers, 'x-forwarded-host') ??
+    headerValue(req.headers, 'host') ??
+    'metamensagem.com';
+  const proto = headerValue(req.headers, 'x-forwarded-proto') ?? 'https';
   return new URL(raw, `${proto}://${host}`);
 }
 

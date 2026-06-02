@@ -37,7 +37,7 @@
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ],
@@ -84,6 +84,15 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=86400, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/frases-v2/translations/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
         }
       ]
     },

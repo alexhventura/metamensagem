@@ -17,6 +17,8 @@ export interface CardContentSource {
 export interface CardContentDisplay extends CardContentSource {
   isTranslated: boolean;
   translationFailed?: boolean;
+  /** Tradução oficial indisponível; API em contingência — ver aviso amigável. */
+  translationContingency?: boolean;
   targetLang?: CardLang;
 }
 
@@ -31,6 +33,8 @@ export interface TranslateContentOptions {
   contentId?: string;
   force?: boolean;
   skipCache?: boolean;
+  /** Idioma do texto original (ex.: locale da página /en). Evita detecção errada. */
+  sourceLang?: CardLang;
 }
 
 export class TranslationFailedError extends Error {
@@ -42,3 +46,17 @@ export class TranslationFailedError extends Error {
     this.name = 'TranslationFailedError';
   }
 }
+
+/** API indisponível; use tradução persistida ou aviso de contingência. */
+export class TranslationContingencyError extends Error {
+  constructor(
+    message: string,
+    public readonly target: CardLang,
+    public readonly hadOfficialTranslation: boolean
+  ) {
+    super(message);
+    this.name = 'TranslationContingencyError';
+  }
+}
+
+export type PhraseTranslationMode = 'live' | 'cached' | 'contingency';

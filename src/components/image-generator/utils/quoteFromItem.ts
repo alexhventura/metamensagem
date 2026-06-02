@@ -1,4 +1,4 @@
-import { normalizarParaSlug } from '../../../lib/slug';
+import { fraseSlugForUrl } from '../../../lib/slug';
 import type { ItemConteudo } from '../../../types/content';
 import type { ImageGeneratorQuote } from '../types';
 
@@ -12,9 +12,7 @@ export function quoteFromItem(
   item: ItemConteudo,
   overrides?: QuoteFromItemOverrides
 ): ImageGeneratorQuote {
-  const slug =
-    item.slug ??
-    (normalizarParaSlug(`${item.texto.slice(0, 80)} ${item.autor}`.trim()) || item.id);
+  const slug = fraseSlugForUrl(item.slug, item.texto, item.id);
 
   return {
     id: item.id,

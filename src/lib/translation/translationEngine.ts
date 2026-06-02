@@ -21,7 +21,17 @@ import type {
   TranslateContentOptions,
   TranslateOptions,
 } from './types';
-import { TranslationFailedError as TranslationFailedErrorClass } from './types';
+import {
+  isLiveTranslationEnabled,
+  isQuotaOrAvailabilityError,
+  markTranslationApiUnavailable,
+  clearTranslationApiCooldown,
+} from './translationQuota';
+import { trackTranslationEvent } from '../analytics/translationAnalytics';
+import {
+  TranslationContingencyError as TranslationContingencyErrorClass,
+  TranslationFailedError as TranslationFailedErrorClass,
+} from './types';
 import { resolveTranslatedAuthor, shouldTranslateAuthor } from './authorPolicy';
 
 export { shouldTranslateAuthor, resolveTranslatedAuthor } from './authorPolicy';
@@ -43,10 +53,25 @@ export { sanitizeTextForTranslation, stripOuterQuotes } from '../textSanitize';
 
 /** Motor de tradução (MyMemory) — import dinâmico apenas sob demanda. */
 
-const API = 'https://api.mymemory.translated.net/get';
-const MAX_CHUNK = 90;
+const API_DIRECT = 'https://api.mymemory.translated.net/get';
+const API_PROXY = '/api/translate';
+/** MyMemory free tier ~500 bytes/request — chunks maiores = menos 429. */
+const MAX_CHUNK = 480;
 const FETCH_TIMEOUT_MS = 14_000;
+const CHUNK_DELAY_MS = 140;
+const BETWEEN_ATTEMPT_MS = 160;
 const HEURISTIC_LANGS: CardLang[] = ['pt', 'en', 'es'];
+const RATE_LIMIT_RETRIES = 3;
+const RATE_LIMIT_BACKOFF_MS = [800, 1600, 3200];
+
+const IT_HINT =
+  /\b(il|lo|la|i|gli|le|un|una|che|non|per|con|come|sono|essere|questo|questa|tuo|tua|nostro|vostro|anche|più|piu|molto|tutto|tutti|fare|fatto|solo|solo|ancora|già|gia|dove|quando|perché|perche|amore|vita|mondo)\b/i;
+
+const FR_HINT =
+  /\b(le|la|les|un|une|des|que|qui|pour|avec|dans|sur|est|sont|pas|plus|tout|tous|cette|cet|comme|mais|très|tres|vie|amour|monde|être|etre|nous|vous|ils|elles)\b/i;
+
+const DE_HINT =
+  /\b(der|die|das|den|dem|des|ein|eine|und|ist|sind|nicht|mit|für|fur|von|zu|auf|als|auch|nur|noch|wie|wir|sie|ihr|sein|haben|werden|kann|muss|leben|liebe|welt|wenn|dass)\b/i;
 
 const ES_HINT =
   /\b(el|la|los|las|un|una|de|del|al|que|en|es|son|por|para|con|como|cuando|donde|muy|más|mas|este|esta|sus|hay|fue|ser|tan|también|tambien|vivimos|vivamos|lleguemos|arrepienta|incluso|enterrador|morir|vida|amor|mundo|sabiduría|sabiduria)\b/gi;
@@ -62,7 +87,10 @@ const PT_STOP =
 const ES_STOP =
   /\b(el|la|los|las|que|por|para|con|vida|amor|más|mas|una|uno|del|al|son|está|esta|están|como|pero|todo|toda|todos|todas|muy|sin|sobre|entre|cuando|donde|porque|ser|hay|han|fue|era|sus|ese|esa|esto|estos|también|tambien|está|estan|mundo|sabiduría|sabiduria|conocimiento|compartir|respuesta|amor)\b/i;
 
-export { TranslationFailedErrorClass as TranslationFailedError };
+export {
+  TranslationFailedErrorClass as TranslationFailedError,
+  TranslationContingencyErrorClass as TranslationContingencyError,
+};
 
 function langPair(from: CardLang, to: CardLang): string {
   return `${toMyMemoryLang(from)}|${toMyMemoryLang(to)}`;
@@ -125,11 +153,37 @@ function isLikelySpanish(translated: string, original: string): boolean {
   return false;
 }
 
+function hasJapaneseScript(text: string): boolean {
+  return /[\u3040-\u30ff\u4e00-\u9faf]/.test(text);
+}
+
+function hasDevanagariScript(text: string): boolean {
+  return /[\u0900-\u097F]/.test(text);
+}
+
+function isMyMemoryQuotaOrError(text: string): boolean {
+  return /MYMEMORY\s+WARNING|QUOTA\s+FINISHED|INVALID\s+LANGUAGE\s+PAIR/i.test(text);
+}
+
 function matchesTargetLanguage(
   translated: string,
   to: CardLang,
   original?: string
 ): boolean {
+  if (isMyMemoryQuotaOrError(translated)) return false;
+
+  if (to === 'ja') return hasJapaneseScript(translated);
+  if (to === 'hi') return hasDevanagariScript(translated);
+  if (to === 'it') {
+    return (
+      IT_HINT.test(translated) ||
+      /[àèéìòù]/i.test(translated) ||
+      (!looksEnglish(translated) && !looksPortuguese(translated) && translated.length >= 4)
+    );
+  }
+  if (to === 'fr') return FR_HINT.test(translated) || /[àâçéèêëîïôùûü]/i.test(translated);
+  if (to === 'de') return DE_HINT.test(translated) || /[äöüß]/i.test(translated);
+
   if (to === 'es') {
     if (original && isLikelySpanish(translated, original)) return true;
     if (looksSpanish(translated)) return true;
@@ -154,6 +208,9 @@ function isValidTranslation(
   if (!trans) return false;
   if (isSameish(orig, trans)) return false;
   if (from === to) return false;
+  if (isMyMemoryQuotaOrError(trans)) return false;
+
+  if (!matchesTargetLanguage(trans, to, orig)) return false;
 
   if (!HEURISTIC_LANGS.includes(to)) {
     return trans.length >= 1;
@@ -166,8 +223,6 @@ function isValidTranslation(
   if (detTrans === from && from !== to && to === 'es' && countSpanishHints(trans) < 2) {
     return false;
   }
-
-  if (!matchesTargetLanguage(trans, to, orig)) return false;
 
   if (to === 'es' && from === 'en' && looksEnglish(trans) && !looksSpanish(trans) && countSpanishHints(trans) < 2) {
     return false;
@@ -202,6 +257,21 @@ function joinTranslatedChunks(parts: string[]): string {
   return joined.charAt(0).toUpperCase() + joined.slice(1);
 }
 
+async function fetchMyMemoryOnce(url: string): Promise<Response> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+  try {
+    return await fetch(url, { signal: controller.signal });
+  } catch (e) {
+    if (e instanceof Error && e.name === 'AbortError') {
+      throw new Error('Tempo esgotado na tradução');
+    }
+    throw e;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 async function fetchMyMemory(
   text: string,
   from: CardLang,
@@ -211,25 +281,56 @@ async function fetchMyMemory(
   const pair = langPair(from, to);
   const payload = textForTranslationApi(text);
   if (!payload) throw new Error('Texto vazio após sanitização');
-  const url = `${API}?q=${encodeURIComponent(payload)}&langpair=${pair}`;
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+  const contact =
+    typeof import.meta !== 'undefined' &&
+    import.meta.env &&
+    typeof import.meta.env.VITE_MYMEMORY_EMAIL === 'string'
+      ? import.meta.env.VITE_MYMEMORY_EMAIL.trim()
+      : '';
 
-  let res: Response;
-  try {
-    res = await fetch(url, { signal: controller.signal });
-  } catch (e) {
-    if (e instanceof Error && e.name === 'AbortError') {
-      throw new Error('Tempo esgotado na tradução');
+  const buildUrl = (base: string) => {
+    let u = `${base}?q=${encodeURIComponent(payload)}&langpair=${pair}`;
+    if (contact && base === API_DIRECT) u += `&de=${encodeURIComponent(contact)}`;
+    return u;
+  };
+
+  const endpoints =
+    typeof window !== 'undefined'
+      ? [API_PROXY, API_DIRECT]
+      : [API_DIRECT];
+
+  let res: Response | null = null;
+  let lastRateError: Error | null = null;
+  let lastUrl = buildUrl(endpoints[0]);
+
+  outer: for (const base of endpoints) {
+    lastUrl = buildUrl(base);
+    for (let attempt = 0; attempt <= RATE_LIMIT_RETRIES; attempt++) {
+      res = await fetchMyMemoryOnce(lastUrl);
+      if (res.status === 404 && base === API_PROXY) {
+        continue outer;
+      }
+      if (res.status !== 429) break outer;
+      lastRateError = new Error('Limite da API de tradução (aguarde e tente de novo)');
+      const wait = RATE_LIMIT_BACKOFF_MS[attempt];
+      if (wait == null) break outer;
+      await new Promise((r) => setTimeout(r, wait));
     }
-    throw e;
-  } finally {
-    clearTimeout(timer);
   }
 
+  if (!res) throw lastRateError || new Error('Falha na tradução');
+  if (res.status === 429) {
+    markTranslationApiUnavailable('HTTP 429');
+    throw lastRateError || new Error('HTTP 429');
+  }
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
   const data = await res.json();
+  if (data?.quotaFinished) {
+    markTranslationApiUnavailable('quotaFinished');
+    throw new Error('Cota diária de tradução esgotada');
+  }
+
   const status = data?.responseStatus;
   if (status && status !== 200 && status !== '200') {
     throw new Error(data?.responseDetails || `API status ${status}`);
@@ -238,11 +339,11 @@ async function fetchMyMemory(
   const origRef = originalFull || text;
   const candidates: string[] = [];
   const primary = sanitizeTextForTranslation(data?.responseData?.translatedText);
-  if (primary) candidates.push(primary);
+  if (primary && !isMyMemoryQuotaOrError(primary)) candidates.push(primary);
 
   for (const m of data?.matches || []) {
     const c = sanitizeTextForTranslation(m?.translation);
-    if (c && !candidates.includes(c)) candidates.push(c);
+    if (c && !isMyMemoryQuotaOrError(c) && !candidates.includes(c)) candidates.push(c);
   }
 
   for (const cand of candidates) {
@@ -251,7 +352,7 @@ async function fetchMyMemory(
     if (to === 'es' && isLikelySpanish(cand, origRef)) return cand;
   }
 
-  if (primary && !isSameish(text, primary)) return primary;
+  if (primary && !isSameish(text, primary) && !isMyMemoryQuotaOrError(primary)) return primary;
   throw new Error('Tradução vazia ou igual ao original');
 }
 
@@ -313,7 +414,7 @@ async function translateOnce(
   const out: string[] = [];
   for (const chunk of chunks) {
     out.push(await fetchMyMemory(chunk, from, to, text));
-    await new Promise((r) => setTimeout(r, 110));
+    await new Promise((r) => setTimeout(r, CHUNK_DELAY_MS));
   }
   const joined = joinTranslatedChunks(out);
   if (!isValidTranslation(text, joined, from, to) && to === 'es' && !isLikelySpanish(joined, text)) {
@@ -322,17 +423,21 @@ async function translateOnce(
   return joined;
 }
 
+/** Poucas origens — evita dezenas de chamadas e HTTP 429 no MyMemory. */
 function sourceAttemptOrder(preferred: CardLang, target: CardLang): CardLang[] {
-  const pivotFirst: CardLang[] = ['en', 'pt', 'es', 'fr', 'de', 'it'];
-  if (target === 'es') {
-    return [...new Set<CardLang>([...pivotFirst, preferred, ...ALL_LANGS])].filter((l) => l !== 'es');
-  }
-  if (target === 'ja' || target === 'hi') {
-    return [...new Set<CardLang>(['en', 'pt', preferred, ...pivotFirst, ...ALL_LANGS])].filter(
-      (l) => l !== target
-    );
-  }
-  return [...new Set<CardLang>([preferred, ...pivotFirst, ...ALL_LANGS])].filter((l) => l !== target);
+  const order: CardLang[] = [];
+  if (preferred !== target) order.push(preferred);
+  if (!order.includes('en') && target !== 'en') order.push('en');
+  if (target === 'es' && !order.includes('pt')) order.push('pt');
+  if (target === 'es' && !order.includes('en')) order.push('en');
+  return order;
+}
+
+function pivotLanguages(from: CardLang, target: CardLang): CardLang[] {
+  const pivots: CardLang[] = [];
+  if (from !== 'en' && target !== 'en') pivots.push('en');
+  if (target === 'es' && from !== 'pt' && from !== 'es') pivots.push('pt');
+  return pivots;
 }
 
 async function translateViaPivot(
@@ -340,14 +445,13 @@ async function translateViaPivot(
   from: CardLang,
   to: CardLang
 ): Promise<string> {
-  const pivots = ALL_LANGS.filter((l) => l !== from && l !== to);
   let lastError: Error | null = null;
 
-  for (const pivot of pivots) {
+  for (const pivot of pivotLanguages(from, to)) {
     try {
-      const mid = await translateOnce(text, from, pivot, true);
+      const mid = await translateOnce(text, from, pivot, pivot !== 'en');
       if (!isValidTranslation(text, mid, from, pivot)) continue;
-      await new Promise((r) => setTimeout(r, 120));
+      await new Promise((r) => setTimeout(r, BETWEEN_ATTEMPT_MS));
       const final = await translateOnce(mid, pivot, to, false);
       if (isValidTranslation(text, final, from, to)) return final;
       lastError = new Error('Pivot não validou destino');
@@ -368,9 +472,10 @@ async function translateWithRetries(
 
   let lastError: Error | null = null;
 
-  for (const from of sources) {
+  attemptLoop: for (const from of sources) {
     if (from === target) continue;
-    for (const forceLower of [false, true]) {
+    const tryLower = from === 'en' || from === preferredFrom;
+    for (const forceLower of tryLower ? [false, true] : [false]) {
       try {
         const translated = await translateOnce(text, from, target, forceLower);
         if (isValidTranslation(text, translated, from, target)) {
@@ -379,8 +484,11 @@ async function translateWithRetries(
         lastError = new Error('Tradução direta não validou');
       } catch (e) {
         lastError = e instanceof Error ? e : new Error(String(e));
+        if (lastError.message.includes('429') || /cota|quota|Limite da API/i.test(lastError.message)) {
+          break attemptLoop;
+        }
       }
-      await new Promise((r) => setTimeout(r, 120));
+      await new Promise((r) => setTimeout(r, BETWEEN_ATTEMPT_MS));
     }
   }
 
@@ -400,6 +508,14 @@ export async function translateCardText(
   sourceLang?: CardLang,
   options?: TranslateOptions
 ): Promise<string> {
+  if (!options?.force && !isLiveTranslationEnabled()) {
+    throw new TranslationContingencyErrorClass(
+      'Modo de contingência ativo',
+      target,
+      false
+    );
+  }
+
   const trimmed = sanitizeTextForTranslation(text);
   if (!trimmed) return safeText(text);
 
@@ -434,7 +550,29 @@ export async function translateCardText(
     if (hit) removeCacheEntry(key);
   }
 
-  const { text: translated, from: usedFrom } = await translateWithRetries(trimmed, target, from);
+  let translated: string;
+  let usedFrom: CardLang;
+  try {
+    const result = await translateWithRetries(trimmed, target, from);
+    translated = result.text;
+    usedFrom = result.from;
+    clearTranslationApiCooldown();
+  } catch (e) {
+    if (isQuotaOrAvailabilityError(e)) {
+      markTranslationApiUnavailable(e instanceof Error ? e.message : 'quota');
+      trackTranslationEvent('translation_fallback', {
+        phrase_id: options?.contentId,
+        locale: target,
+        mode: 'contingency',
+      });
+      throw new TranslationContingencyErrorClass(
+        'Tradução em tempo real indisponível',
+        target,
+        false
+      );
+    }
+    throw e;
+  }
 
   if (
     !isValidTranslation(trimmed, translated, usedFrom, target) &&
@@ -454,7 +592,27 @@ export async function translateCardText(
   };
   writeTranslationCache(store);
 
+  trackTranslationEvent('translation_success', {
+    phrase_id: options?.contentId,
+    locale: target,
+    mode: 'live',
+  });
+
   return translated;
+}
+
+async function translateOptionalField(
+  value: string | undefined,
+  target: CardLang,
+  options: TranslateContentOptions | undefined,
+  fieldSuffix: string
+): Promise<string | undefined> {
+  if (!value?.trim()) return undefined;
+  try {
+    return await translateField(value, target, options, fieldSuffix);
+  } catch {
+    return undefined;
+  }
 }
 
 async function translateField(
@@ -499,7 +657,9 @@ export async function translateCardContent(
     return { ...source, isTranslated: false };
   }
 
-  const textoDet = detectCardLanguageWithConfidence(textoRaw);
+  const textoDet = options?.sourceLang
+    ? { lang: options.sourceLang, confidence: 1 }
+    : detectCardLanguageWithConfidence(textoRaw);
   if (
     !options?.force &&
     textoDet.lang === target &&
@@ -510,8 +670,8 @@ export async function translateCardContent(
   }
 
   const texto = await translateField(textoRaw, target, options, 'texto');
-  const titulo = await translateField(source.titulo, target, options, 'titulo');
-  const resumo = await translateField(source.resumo, target, options, 'resumo');
+  const titulo = await translateOptionalField(source.titulo, target, options, 'titulo');
+  const resumo = await translateOptionalField(source.resumo, target, options, 'resumo');
 
   if (
     !texto ||
@@ -526,7 +686,7 @@ export async function translateCardContent(
   if (source.autor && shouldTranslateAuthor(source.autor)) {
     autor = await translateField(source.autor, target, options, 'autor');
   }
-  const explicacao = await translateField(source.explicacao, target, options, 'explicacao');
+  const explicacao = await translateOptionalField(source.explicacao, target, options, 'explicacao');
 
   return {
     texto,
@@ -555,6 +715,21 @@ export function pruneInvalidTranslationCache(): void {
       countSpanishHints(entry.text) < 2 &&
       !looksSpanish(entry.text)
     ) {
+      delete store[key];
+      changed = true;
+      continue;
+    }
+    if (entry.language === 'ja' && !hasJapaneseScript(entry.text)) {
+      delete store[key];
+      changed = true;
+      continue;
+    }
+    if (entry.language === 'hi' && !hasDevanagariScript(entry.text)) {
+      delete store[key];
+      changed = true;
+      continue;
+    }
+    if (isMyMemoryQuotaOrError(entry.text)) {
       delete store[key];
       changed = true;
     }

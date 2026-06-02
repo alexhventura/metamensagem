@@ -473,14 +473,6 @@ function HeaderBrandButton() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
-    try {
-      if (window.history.length > 1) {
-        window.history.back();
-        return;
-      }
-    } catch {
-      /* ignore */
-    }
     navigate('/');
   };
 
@@ -489,7 +481,7 @@ function HeaderBrandButton() {
       type="button"
       onClick={handleClick}
       className="flex items-center gap-2.5 group min-w-0 cursor-pointer bg-transparent border-0 p-0 text-left"
-      aria-label="Metamensagem � atualizar página"
+      aria-label="Metamensagem, pagina inicial"
     >
       <img
         src="/brand/logo.svg"

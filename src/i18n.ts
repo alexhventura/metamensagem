@@ -73,7 +73,10 @@ const resources = {
         "unavailable": "Tradução indisponível",
         "success": "✓ Traduzido para {{lang}}",
         "original": "Ver original",
-        "retry": "Tentar novamente"
+        "retry": "Tentar novamente",
+        "contingency_title": "Tradução oficial em preparação",
+        "contingency_body": "Esta frase ainda não possui tradução oficial para o idioma selecionado. Sua solicitação foi registrada e ajudará a priorizar futuras traduções do MetaMensagem. Caso deseje visualizar esta página imediatamente, você pode utilizar a tradução integrada do seu navegador.",
+        "contingency_short": "Solicitação registrada"
       },
       "editor": {
         "title": "Gerar Post Premium",
@@ -165,7 +168,10 @@ const resources = {
         "unavailable": "Translation unavailable",
         "success": "✓ Translated to {{lang}}",
         "original": "View original",
-        "retry": "Try again"
+        "retry": "Try again",
+        "contingency_title": "Official translation in progress",
+        "contingency_body": "This quote does not yet have an official translation for the selected language. Your request has been recorded and will help prioritize future MetaMensagem translations. To view this page right away, you can use your browser's built-in translation.",
+        "contingency_short": "Request recorded"
       },
       "editor": {
         "title": "Generate Premium Post",
@@ -228,7 +234,10 @@ const resources = {
         "unavailable": "Traducción no disponible",
         "success": "✓ Traducido al {{lang}}",
         "original": "Ver original",
-        "retry": "Intentar de nuevo"
+        "retry": "Intentar de nuevo",
+        "contingency_title": "Traducción oficial en preparación",
+        "contingency_body": "Esta frase aún no tiene traducción oficial para el idioma seleccionado. Tu solicitud quedó registrada y ayudará a priorizar futuras traducciones de MetaMensagem. Si deseas ver esta página de inmediato, puedes usar la traducción integrada de tu navegador.",
+        "contingency_short": "Solicitud registrada"
       },
       "editor": {
         "title": "Generar Post Premium",
@@ -291,7 +300,10 @@ const resources = {
         "unavailable": "Traduction indisponible",
         "success": "✓ Traduit en {{lang}}",
         "original": "Voir l'original",
-        "retry": "Réessayer"
+        "retry": "Réessayer",
+        "contingency_title": "Traduction officielle en préparation",
+        "contingency_body": "Cette citation n'a pas encore de traduction officielle pour la langue sélectionnée. Votre demande a été enregistrée et aidera à prioriser les prochaines traductions MetaMensagem. Pour voir cette page tout de suite, vous pouvez utiliser la traduction intégrée de votre navigateur.",
+        "contingency_short": "Demande enregistrée"
       },
       "editor": {
         "title": "Générer un Post Premium",

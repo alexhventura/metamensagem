@@ -52,10 +52,10 @@ export const FORMATS: Record<ImageFormat, FormatConfig> = {
   },
   wallpaper_mobile: {
     label: 'Wallpaper Mobile',
-    shortLabel: '9:19',
-    width: 1080,
-    height: 2340,
-    aspectRatio: '9 / 19',
+    shortLabel: '9:16+',
+    width: 1440,
+    height: 2560,
+    aspectRatio: '9 / 16',
   },
   wallpaper_desktop: {
     label: 'Wallpaper Desktop',
@@ -66,16 +66,21 @@ export const FORMATS: Record<ImageFormat, FormatConfig> = {
   },
 };
 
-export const FORMAT_ORDER: ImageFormat[] = [
+/** Formatos premium destacados (mesma safe zone). */
+export const PREMIUM_FORMAT_ORDER: ImageFormat[] = [
   'feed',
-  'portrait',
   'story',
+  'portrait',
+  'wallpaper_desktop',
+  'wallpaper_mobile',
+];
+
+export const FORMAT_ORDER: ImageFormat[] = [
+  ...PREMIUM_FORMAT_ORDER,
   'pinterest',
   'twitter',
   'linkedin',
   'facebook',
-  'wallpaper_mobile',
-  'wallpaper_desktop',
 ];
 
 export const DEFAULT_FORMAT: ImageFormat = 'feed';

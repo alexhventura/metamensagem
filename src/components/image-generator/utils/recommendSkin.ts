@@ -4,39 +4,34 @@ import { DEFAULT_COLLECTION_ID, DEFAULT_SKIN_ID } from '../skins/data';
 export interface SkinRecommendation {
   collectionId: string;
   skinId: string;
-  /** Recomendação contextual (não é o default oficial). */
   matched: boolean;
 }
 
 const LOVE = [
   'amor', 'amar', 'amado', 'amada', 'paixao', 'paixão', 'coracao', 'coração', 'romance', 'romantico',
-  'romântico', 'relacionamento', 'casal', 'namoro', 'casamento', 'carinho', 'beijo', 'seducao', 'sedução',
-  'love', 'heart', 'valentine', 'crush', 'boyfriend', 'girlfriend',
-];
-
-const MONEY = [
-  'dinheiro', 'riqueza', 'rico', 'rica', 'prosperidade', 'prosperar', 'sucesso', 'fortuna', 'milionario',
-  'milionário', 'negocio', 'negócio', 'investimento', 'lucro', 'emprego', 'carreira', 'salario', 'salário',
-  'wealth', 'money', 'rich', 'millionaire', 'profit', 'business',
+  'romântico', 'relacionamento', 'casal', 'namoro', 'casamento', 'carinho', 'beijo',
+  'love', 'heart', 'valentine',
 ];
 
 const MOTIVATION = [
-  'motivacao', 'motivação', 'motivacional', 'lideranca', 'liderança', 'lider', 'líder', 'coragem', 'foco',
-  'disciplina', 'vencer', 'vitoria', 'vitória', 'conquistar', 'superacao', 'superação', 'persistencia',
-  'persistência', 'forca', 'força', 'determinacao', 'determinação', 'ambicao', 'ambição', 'goal', 'success',
-  'leader', 'leadership', 'win', 'champion',
+  'motivacao', 'motivação', 'motivacional', 'lideranca', 'liderança', 'coragem', 'foco',
+  'disciplina', 'vencer', 'vitoria', 'vitória', 'conquistar', 'persistencia', 'persistência',
+  'forca', 'força', 'determinacao', 'determinação', 'goal', 'success', 'win', 'champion',
 ];
 
 const PHILOSOPHY = [
-  'filosofia', 'filosofico', 'filosófico', 'reflexao', 'reflexão', 'existencia', 'existência', 'existencial',
-  'sabedoria', 'verdade', 'pensamento', 'pensar', 'sentido', 'vida', 'morte', 'tempo', 'destino', 'stoic',
-  'estoico', 'epicteto', 'seneca', 'socrates', 'platao', 'platão', 'nietzsche', 'philosophy', 'wisdom',
+  'filosofia', 'filosofico', 'filosófico', 'reflexao', 'reflexão', 'existencia', 'existência',
+  'sabedoria', 'verdade', 'pensamento', 'sentido', 'stoic', 'estoico', 'philosophy', 'wisdom',
 ];
 
-const SPIRITUAL = [
-  'espiritual', 'espiritualidade', 'paz', 'meditacao', 'meditação', 'alma', 'deus', 'fe', 'fé', 'oracao',
-  'oração', 'gratidao', 'gratidão', 'zen', 'nirvana', 'chakra', 'mantra', 'silencio', 'silêncio', 'interior',
-  'spiritual', 'peace', 'meditation', 'soul', 'prayer', 'faith', 'buddha', 'yoga',
+const METAPHOR = [
+  'metafora', 'metáfora', 'metaforas', 'metáforas', 'simbolo', 'símbolo', 'simbolico', 'simbólico',
+  'metaphor', 'symbol', 'allegory',
+];
+
+const OVERCOME = [
+  'superacao', 'superação', 'superar', 'resiliencia', 'resiliência', 'lutar', 'luta', 'vencer',
+  'vencedor', 'overcome', 'resilience', 'strength', 'rise',
 ];
 
 function normalizeToken(s: string): string {
@@ -71,19 +66,19 @@ export function recommendSkinForQuote(quote: ImageGeneratorQuote): SkinRecommend
   const haystack = buildHaystack(quote);
 
   if (matchesAny(haystack, LOVE)) {
-    return { collectionId: 'paises', skinId: 'parisienne', matched: true };
-  }
-  if (matchesAny(haystack, MONEY)) {
-    return { collectionId: 'fortuna', skinId: 'ouro', matched: true };
+    return { collectionId: 'amor', skinId: 'rosa-suave', matched: true };
   }
   if (matchesAny(haystack, MOTIVATION)) {
-    return { collectionId: 'lendario', skinId: 'premium', matched: true };
+    return { collectionId: 'motivacao', skinId: 'aurora', matched: true };
   }
   if (matchesAny(haystack, PHILOSOPHY)) {
-    return { collectionId: 'filosofia', skinId: 'estoico', matched: true };
+    return { collectionId: 'reflexao', skinId: 'neutro', matched: true };
   }
-  if (matchesAny(haystack, SPIRITUAL)) {
-    return { collectionId: 'paises', skinId: 'maharaja', matched: true };
+  if (matchesAny(haystack, METAPHOR)) {
+    return { collectionId: 'metaforas', skinId: 'atelie', matched: true };
+  }
+  if (matchesAny(haystack, OVERCOME)) {
+    return { collectionId: 'superacao', skinId: 'ascensao', matched: true };
   }
 
   return {

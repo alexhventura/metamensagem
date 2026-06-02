@@ -64,7 +64,7 @@ export default function ShareActionBar({
           ) : (
             <Smartphone size={20} />
           )}
-          Compartilhar no celular
+          Compartilhar
         </button>
       ) : (
         <p className={`text-[10px] text-center font-medium ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'}`}>

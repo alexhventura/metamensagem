@@ -31,7 +31,7 @@ export function matchSupportedUiLocale(code: string | null | undefined): UiLocal
   return (UI_LOCALES as readonly string[]).includes(base) ? (base as UiLocale) : null;
 }
 
-/** Prioridade: URL → localStorage.lang → navegador → en. */
+/** Prioridade: URL → localStorage.lang → navegador → pt. */
 export function resolveUiLocale(pathname: string = '/'): UiLocale {
   const fromPath = uiLocaleFromPathname(pathname);
   if (fromPath) return fromPath;
@@ -44,7 +44,7 @@ export function resolveUiLocale(pathname: string = '/'): UiLocale {
   const fromNav = navigatorUiLocale();
   if (fromNav) return fromNav;
 
-  return 'en';
+  return 'pt';
 }
 
 export function persistUiLocale(locale: UiLocale): void {

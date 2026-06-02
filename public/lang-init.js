@@ -1,6 +1,6 @@
 /**
  * Executado no <head> antes do React — resolve idioma da UI (não do conteúdo).
- * Prioridade: prefixo URL → localStorage.lang → navigator → en.
+ * Prioridade: prefixo URL → localStorage.lang → navigator → pt.
  */
 (function () {
   var UI_LOCALES = ['pt', 'en', 'es', 'fr', 'de', 'it', 'ja', 'hi'];
@@ -42,7 +42,7 @@
       var nav = matchSupported(langs[i]);
       if (nav) return nav;
     }
-    return 'en';
+    return 'pt';
   }
 
   try {
@@ -50,7 +50,7 @@
     window.__MM_UI_LOCALE__ = locale;
     document.documentElement.lang = HTML_LANG[locale] || locale;
   } catch (e) {
-    window.__MM_UI_LOCALE__ = 'en';
-    document.documentElement.lang = 'en';
+    window.__MM_UI_LOCALE__ = 'pt';
+    document.documentElement.lang = 'pt-BR';
   }
 })();

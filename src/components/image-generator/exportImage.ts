@@ -1,6 +1,6 @@
-/** Exportação client-side (html-to-image — carregado sob demanda). */
+/** Exportação client-side (modern-screenshot — sem leitura de cssRules cross-origin). */
 
-import { ensureImageExportFonts } from './utils/imageFonts';
+import { ensureCaptureFontsReady } from './utils/imageFonts';
 
 export type CaptureFontSample = { text: string; autor: string };
 
@@ -9,16 +9,25 @@ export async function captureElementAsBlob(
   mime: 'image/png' | 'image/jpeg',
   fontSample?: CaptureFontSample
 ): Promise<Blob> {
-  if (fontSample) {
-    await ensureImageExportFonts(fontSample.text, fontSample.autor);
-  }
-  const { toBlob } = await import('html-to-image');
-  const blob = await toBlob(node, {
-    pixelRatio: 2,
-    cacheBust: true,
+  const { text, autor } = fontSample ?? { text: '', autor: '' };
+  await ensureCaptureFontsReady(text, autor);
+
+  const { domToBlob } = await import('modern-screenshot');
+  const blob = await domToBlob(node, {
+    scale: 2,
     type: mime,
     quality: mime === 'image/jpeg' ? 0.92 : undefined,
+    filter: (el) => {
+      if (el instanceof HTMLLinkElement && el.rel === 'stylesheet') {
+        const href = el.href || '';
+        if (href.includes('fonts.googleapis.com') || href.includes('fonts.gstatic.com')) {
+          return false;
+        }
+      }
+      return true;
+    },
   });
+
   if (!blob) throw new Error('Falha ao gerar imagem');
   return blob;
 }

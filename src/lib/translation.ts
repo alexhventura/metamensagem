@@ -26,5 +26,12 @@ export {
   pruneInvalidTranslationCache,
 } from './translation/index';
 
+export { getOrCreatePhraseTranslation, SOURCE_CONTENT_LOCALE } from './translation/phraseTranslationService';
+export {
+  getPersistedPhraseTranslation,
+  persistPhraseTranslation,
+  readTranslationQueue,
+} from './translation/persistentStore';
+
 export { sanitizeTextForTranslation, stripOuterQuotes } from './textSanitize';
 

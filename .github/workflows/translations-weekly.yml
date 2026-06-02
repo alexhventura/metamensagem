@@ -1,0 +1,49 @@
+name: Weekly translations
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-translations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Pull translation demand from Blob
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+        run: npm run translations:pull-demand
+        continue-on-error: true
+
+      - name: Report and build batch
+        run: |
+          npm run translation-report
+          npm run build-translations -- --limit=80
+        continue-on-error: true
+
+      - name: Merge into translation shards
+        run: |
+          if [ -f data/translation-batch-built.json ]; then
+            npm run translations:merge -- data/translation-batch-built.json
+          fi
+        continue-on-error: true
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/translation-queue.json data/translation-report.json public/frases-v2/translations || true
+          git diff --staged --quiet || git commit -m "chore: weekly translation batch and demand sync"
+          git push

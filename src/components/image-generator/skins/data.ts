@@ -1,6 +1,7 @@
 import type { CollectionConfig } from '../types';
+import { SEMANTIC_COLLECTIONS } from './semanticCollections';
 
-export const COLLECTIONS: CollectionConfig[] = [
+const LEGACY_COLLECTIONS: CollectionConfig[] = [
   {
     id: 'elementos',
     name: 'Elementos',
@@ -276,8 +277,11 @@ export const COLLECTIONS: CollectionConfig[] = [
   },
 ];
 
-export const DEFAULT_COLLECTION_ID = 'lendario';
-export const DEFAULT_SKIN_ID = 'metamensagem';
+/** Premium primeiro; legado mantido para variedade. */
+export const COLLECTIONS: CollectionConfig[] = [...SEMANTIC_COLLECTIONS, ...LEGACY_COLLECTIONS];
+
+export const DEFAULT_COLLECTION_ID = 'motivacao';
+export const DEFAULT_SKIN_ID = 'aurora';
 
 export function findSkin(collectionId: string, skinId: string) {
   const col = COLLECTIONS.find((c) => c.id === collectionId);

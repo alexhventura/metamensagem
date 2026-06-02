@@ -34,7 +34,8 @@ export default defineConfig(() => {
             if (id.includes('framer-motion') || id.includes('motion/')) return 'vendor-motion';
             if (id.includes('lucide-react')) return 'vendor-icons';
             if (id.includes('i18next') || id.includes('react-i18next')) return 'vendor-i18n';
-            if (id.includes('modern-screenshot') || id.includes('html2canvas') || id.includes('html-to-image')) return 'vendor-screenshot';
+            if (id.includes('modern-screenshot') || id.includes('html2canvas') || id.includes('html-to-image'))
+              return 'vendor-screenshot';
             if (id.includes('/translation/translationEngine')) return 'vendor-translate';
             // react core + react-dom + router no mesmo chunk (evita React undefined em createContext)
             if (
@@ -52,6 +53,13 @@ export default defineConfig(() => {
     server: {
       hmr: process.env.DISABLE_HMR !== 'true',
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
+      proxy: {
+        '/api/translate': {
+          target: 'https://api.mymemory.translated.net',
+          changeOrigin: true,
+          rewrite: () => '/get',
+        },
+      },
     },
   };
 });

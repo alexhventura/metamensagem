@@ -2,6 +2,7 @@
 
 import type { FraseSeoPack, FraseSemantica } from '../../lib/enrichment/types';
 import { shardForSlug } from '../../lib/utils/shardForSlug';
+import { fraseSlugForUrl, slugifyFraseTexto } from './slug';
 import { loadFrasesCmsFallback } from './homeData';
 
 export interface FraseInformacoes {
@@ -36,36 +37,92 @@ let cache: FraseCms[] | null = null;
 let bySlug: Map<string, FraseCms> | null = null;
 const shardCache = new Map<string, FraseCms[]>();
 
+function registerFrase(frase: FraseCms): void {
+  if (!bySlug) bySlug = new Map();
+  bySlug.set(frase.slug.toLowerCase(), frase);
+}
+
+/** Resolve slug longo de link compartilhado → slug canônico do acervo. */
+export function findFraseInList(list: FraseCms[], requested: string): FraseCms | null {
+  const key = requested.toLowerCase().trim();
+  if (!key) return null;
+
+  const exact = list.find((f) => f.slug.toLowerCase() === key);
+  if (exact) return exact;
+
+  const prefix = list.find(
+    (f) =>
+      key.startsWith(f.slug.toLowerCase()) ||
+      f.slug.toLowerCase().startsWith(key.slice(0, Math.min(key.length, f.slug.length)))
+  );
+  if (prefix) return prefix;
+
+  const pseudoFromUrl = slugifyFraseTexto(key.replace(/-/g, ' '));
+  const byPseudo = list.find((f) => f.slug.toLowerCase() === pseudoFromUrl);
+  if (byPseudo) return byPseudo;
+
+  const byCanonicalText = list.find((f) => slugifyFraseTexto(f.frase_original) === key);
+  if (byCanonicalText) return byCanonicalText;
+
+  const byCanonicalMatch = list.find((f) => {
+    const canonical = slugifyFraseTexto(f.frase_original);
+    return key.startsWith(canonical) || canonical === pseudoFromUrl;
+  });
+  return byCanonicalMatch ?? null;
+}
+
+function shardsToProbe(requested: string): string[] {
+  const key = requested.toLowerCase();
+  const ids = new Set<string>([shardForSlug(key)]);
+  const pseudo = slugifyFraseTexto(key.replace(/-/g, ' '));
+  ids.add(shardForSlug(pseudo));
+  if (key.length > 80) {
+    ids.add(shardForSlug(key.slice(0, 80)));
+  }
+  return [...ids];
+}
+
+async function ensureShardLoaded(shard: string): Promise<FraseCms[]> {
+  if (shardCache.has(shard)) return shardCache.get(shard)!;
+
+  try {
+    const res = await fetch(`/frases-v2/detail/shard-${shard}.json`);
+    if (res.ok) {
+      const data = (await res.json()) as FraseCms[];
+      shardCache.set(shard, data);
+      for (const f of data) registerFrase(f);
+      return data;
+    }
+    shardCache.set(shard, []);
+  } catch (err) {
+    console.warn('[frasesModel] shard fetch failed', shard, err);
+    shardCache.set(shard, []);
+  }
+  return [];
+}
+
 export async function loadFraseDetailBySlug(slug: string): Promise<FraseCms | null> {
-  const key = slug.toLowerCase();
+  const key = slug.toLowerCase().trim();
+  if (!key) return null;
+
   const cached = bySlug?.get(key);
   if (cached) return cached;
 
-  const shard = shardForSlug(key);
-  if (!shardCache.has(shard)) {
-    try {
-      const res = await fetch(`/frases-v2/detail/shard-${shard}.json`);
-      if (res.ok) {
-        const data = (await res.json()) as FraseCms[];
-        shardCache.set(shard, data);
-        for (const f of data) {
-          if (!bySlug) bySlug = new Map();
-          bySlug.set(f.slug.toLowerCase(), f);
-        }
-      } else {
-        shardCache.set(shard, []);
-      }
-    } catch (err) {
-      console.warn('[frasesModel] shard fetch failed', shard, err);
-      shardCache.set(shard, []);
+  for (const shardId of shardsToProbe(key)) {
+    const list = await ensureShardLoaded(shardId);
+    const found = findFraseInList(list, key);
+    if (found) {
+      registerFrase(found);
+      return found;
     }
   }
 
-  const found = shardCache.get(shard)?.find((f) => f.slug.toLowerCase() === key);
-  if (found) return found;
+  if (bySlug) {
+    const fromIndex = findFraseInList([...bySlug.values()], key);
+    if (fromIndex) return fromIndex;
+  }
 
-  const sync = bySlug?.get(key);
-  return sync ?? null;
+  return null;
 }
 
 export async function loadFrasesCms(): Promise<FraseCms[]> {
@@ -76,10 +133,16 @@ export async function loadFrasesCms(): Promise<FraseCms[]> {
     if (manifestRes.ok) {
       const feedRes = await fetch('/frases-v2/feed-sample.json');
       if (feedRes.ok) {
-        const feed = (await feedRes.json()) as { slug: string; texto: string; autor: string; tags: string[]; id: string }[];
+        const feed = (await feedRes.json()) as {
+          slug: string;
+          texto: string;
+          autor: string;
+          tags: string[];
+          id: string;
+        }[];
         cache = feed.map((f) => ({
           id: f.id,
-          slug: f.slug,
+          slug: fraseSlugForUrl(f.slug, f.texto, f.id),
           frase_original: f.texto,
           autor_original: f.autor,
           categoria: f.tags[0] || 'reflexao',
@@ -105,7 +168,7 @@ export async function loadFrasesCms(): Promise<FraseCms[]> {
   if (!items.length) return [];
   cache = items.map((f) => ({
     id: f.id,
-    slug: f.slug || f.id,
+    slug: fraseSlugForUrl(f.slug, f.texto, f.id),
     frase_original: f.texto,
     autor_original: f.autor,
     categoria: f.tags?.[0] || 'reflexao',
@@ -124,7 +187,13 @@ export async function loadFrasesCms(): Promise<FraseCms[]> {
 }
 
 export function getFraseCmsBySlugSync(slug: string): FraseCms | undefined {
-  return bySlug?.get(slug.toLowerCase());
+  const key = slug.toLowerCase().trim();
+  const direct = bySlug?.get(key);
+  if (direct) return direct;
+  if (bySlug) {
+    return findFraseInList([...bySlug.values()], key) ?? undefined;
+  }
+  return undefined;
 }
 
 export function primeFrasesCms(frases: FraseCms[]): void {
@@ -140,7 +209,7 @@ export function fraseCmsFromListItem(item: {
   autor: string;
   tags?: string[];
 }): FraseCms {
-  const slug = (item.slug || item.id).toLowerCase();
+  const slug = fraseSlugForUrl(item.slug, item.texto, item.id);
   const tags = item.tags || [];
   return {
     id: item.id,

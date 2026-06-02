@@ -22,6 +22,20 @@ export interface FormatConfig {
 
 export type SkinEngagementBadge = 'popular' | 'new' | 'exclusive';
 
+export type SemanticCategory =
+  | 'motivacao'
+  | 'amor'
+  | 'reflexao'
+  | 'metaforas'
+  | 'superacao';
+
+export interface SkinPalette {
+  primary: string;
+  secondary: string;
+  accent: string;
+  contrast: string;
+}
+
 export interface SkinConfig {
   id: string;
   name: string;
@@ -30,6 +44,9 @@ export interface SkinConfig {
   accentClass: string;
   borderClass?: string;
   cardStyle?: CSSProperties;
+  /** Categoria emocional premium (paletas fixas). */
+  category?: SemanticCategory;
+  palette?: SkinPalette;
   /** Badge estático de engajamento (Fase 7A). */
   engagement?: SkinEngagementBadge;
 }

@@ -59,3 +59,17 @@ export async function ensureImageExportFonts(text: string, autor: string): Promi
   }
   await document.fonts?.ready;
 }
+
+/** Aguarda Inter/mono (e CJK/HI se necessário) antes do html-to-image com skipFonts. */
+export async function ensureCaptureFontsReady(text: string, autor: string): Promise<void> {
+  await ensureImageExportFonts(text, autor);
+  if (document.fonts?.load) {
+    await Promise.allSettled([
+      document.fonts.load('400 24px Inter'),
+      document.fonts.load('600 24px Inter'),
+      document.fonts.load('400 14px "JetBrains Mono"'),
+      document.fonts.load('500 14px "JetBrains Mono"'),
+    ]);
+  }
+  await document.fonts?.ready;
+}

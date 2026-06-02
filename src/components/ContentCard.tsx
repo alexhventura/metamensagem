@@ -11,7 +11,7 @@ import { type CardContentDisplay } from '../lib/translation';
 import { pathFromTag } from '../lib/tagsSeo';
 import { frasePath, seoLocaleFromLanguageOriginal } from '../lib/i18nRoutes';
 import { detectLanguageOriginal } from '../../lib/i18n/detectLanguage';
-import { normalizarParaSlug } from '../lib/slug';
+import { fraseSlugForUrl, normalizarParaSlug } from '../lib/slug';
 import {
   CARD_ACTION_BTN,
   cardAccentDotClass,
@@ -70,7 +70,7 @@ export default function ContentCard({
 
   const detailPath = isFrase
     ? (() => {
-        const slug = item.slug || normalizarParaSlug(item.texto);
+        const slug = fraseSlugForUrl(item.slug, item.texto, item.id);
         const def = seoLocaleFromLanguageOriginal(detectLanguageOriginal(item.texto));
         return frasePath(slug, def, def);
       })()
@@ -262,6 +262,7 @@ export default function ContentCard({
               tema={tema}
               accent={accent}
               contentId={item.id}
+              sourceLang={seoLocaleFromLanguageOriginal(detectLanguageOriginal(item.texto))}
               source={translateSource}
               onDisplayChange={setDisplay}
               onLoadingChange={setTranslating}

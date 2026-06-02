@@ -28,10 +28,10 @@ export function localeFromPathPrefix(segment: string | undefined): SeoLocale | n
   return isSeoLocale(segment) ? segment : null;
 }
 
-/** Idioma original da frase (shard) → locale SEO; fallback EN (acervo majoritário). */
+/** Idioma original da frase (shard) → locale SEO; fallback PT (idioma-fonte da plataforma). */
 export function seoLocaleFromLanguageOriginal(value: string | undefined | null): SeoLocale {
   if (value && isSeoLocale(value)) return value;
-  return 'en';
+  return 'pt';
 }
 
 /** Valor BCP 47 para `<html lang>` e meta. */

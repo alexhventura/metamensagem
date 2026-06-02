@@ -1,9 +1,8 @@
 import { forwardRef, useMemo } from 'react';
-import type { FormatConfig } from './types';
+import type { FormatConfig, ImageGeneratorQuote } from './types';
 import type { SkinConfig } from './types';
-import { generateCardSerial } from './utils/serialGenerator';
 import { imageFontFamilyFor } from './utils/imageFonts';
-import { quoteFontSize, wrapQuote } from './utils/textLayout';
+import { computeImageLayout } from './utils/textLayout';
 
 export interface ImageRendererProps {
   texto: string;
@@ -11,70 +10,98 @@ export interface ImageRendererProps {
   format: FormatConfig;
   skin: SkinConfig;
   collectionName: string;
+  serial: string;
+  quoteMeta?: Pick<ImageGeneratorQuote, 'id' | 'categoria' | 'locale'>;
 }
 
 const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function ImageRenderer(
-  { texto, autor, format, skin, collectionName },
+  { texto, autor, format, skin, collectionName, serial, quoteMeta },
   ref
 ) {
-  const serial = useMemo(() => generateCardSerial(texto, autor), [texto, autor]);
+  const layout = useMemo(
+    () => computeImageLayout(texto, autor, format.width, format.height),
+    [texto, autor, format.width, format.height]
+  );
 
-  const layout = useMemo(() => {
-    const isWide = format.width > format.height;
-    const isTall = format.height > format.width * 1.4;
-    const maxChars = isWide ? 42 : isTall ? 28 : 32;
-    const maxLines = isTall ? 14 : isWide ? 5 : 8;
-    const lines = wrapQuote(texto, maxChars, maxLines);
-    const fontSize = quoteFontSize(texto.length, format.height);
-    return { lines, fontSize };
-  }, [texto, format]);
-
-  const padding = Math.round(format.width * 0.08);
   const fontFamily = useMemo(() => imageFontFamilyFor(texto, autor), [texto, autor]);
+
+  const skinLabel = skin.name.length > 18 ? `${skin.name.slice(0, 16)}…` : skin.name;
 
   return (
     <div
       ref={ref}
-      className={`relative flex flex-col overflow-hidden ${skin.bgClass} ${skin.borderClass ?? 'border-white/10'}`}
+      className={`mm-image-export relative overflow-hidden ${skin.bgClass} ${skin.borderClass ?? 'border-white/10'}`}
       style={{
         width: format.width,
         height: format.height,
         fontFamily,
         ...skin.cardStyle,
       }}
+      data-mm-phrase-id={quoteMeta?.id}
+      data-mm-category={quoteMeta?.categoria ?? skin.category ?? collectionName}
+      data-mm-skin={skin.id}
+      data-mm-locale={quoteMeta?.locale ?? 'pt'}
+      data-mm-serial={serial}
     >
+      {/* Vinheta suave — Soft Premium */}
       <div
-        className="absolute inset-0 opacity-[0.07] pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse 90% 80% at 50% 45%, transparent 0%, rgba(0,0,0,0.12) 100%)',
+        }}
+      />
+      <div
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage: 'radial-gradient(circle at 20% 20%, white 1px, transparent 1px)',
-          backgroundSize: '24px 24px',
+          backgroundSize: '28px 28px',
         }}
       />
 
+      {/* Logo — marca d'água discreta */}
       <header
-        className="relative z-10 flex flex-col items-center justify-center shrink-0"
-        style={{ paddingTop: padding, paddingBottom: padding * 0.4 }}
+        className="absolute left-0 right-0 top-0 z-10 flex items-start justify-center pointer-events-none"
+        style={{ height: layout.safe.headerHeight }}
       >
         <img
           src="/brand/logo.svg"
           alt=""
-          width={Math.round(format.width * 0.12)}
-          height={Math.round(format.width * 0.12)}
+          width={layout.logoPx}
+          height={layout.logoPx}
           crossOrigin="anonymous"
-          className="mb-3 drop-shadow-lg"
+          className="opacity-[0.42]"
+          style={{
+            width: layout.logoPx,
+            height: layout.logoPx,
+            marginTop: layout.padTop,
+            filter: 'drop-shadow(0 1px 8px rgba(0,0,0,0.15))',
+          }}
         />
-        <span className={`text-[10px] font-black uppercase tracking-[0.45em] ${skin.accentClass}`}>
-          Metamensagem
-        </span>
       </header>
 
+      {/* Safe zone — somente frase + autor */}
       <main
-        className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-[8%]"
-        style={{ minHeight: 0 }}
+        className="absolute z-20 flex flex-col items-center justify-center text-center"
+        style={{
+          top: layout.safe.quoteTop,
+          left: layout.safe.padX,
+          right: layout.safe.padX,
+          height: layout.safe.quoteHeight,
+          maxHeight: layout.safe.quoteHeight,
+          overflow: 'hidden',
+        }}
       >
         <blockquote
-          className={`font-black leading-[1.12] tracking-tight ${skin.textClass}`}
-          style={{ fontSize: layout.fontSize, textWrap: 'balance' as const }}
+          className={`font-bold tracking-tight ${skin.textClass}`}
+          style={{
+            fontSize: layout.quotePx,
+            lineHeight: layout.lineHeight / layout.quotePx,
+            margin: 0,
+            maxWidth: '100%',
+            fontWeight: 700,
+            textShadow: '0 1px 24px rgba(0,0,0,0.12)',
+          }}
         >
           {layout.lines.map((line, i) => (
             <span key={i} className="block">
@@ -84,30 +111,47 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
             </span>
           ))}
         </blockquote>
-        <p
-          className={`mt-6 font-semibold tracking-wide ${skin.accentClass}`}
-          style={{ fontSize: Math.max(14, layout.fontSize * 0.38) }}
-        >
-          — {autor}
-        </p>
+        {autor?.trim() ? (
+          <p
+            className={`font-medium tracking-wide shrink-0 ${skin.accentClass}`}
+            style={{
+              fontSize: layout.authorPx,
+              marginTop: layout.gapQuoteAuthor,
+              marginBottom: 0,
+              maxWidth: '100%',
+              lineHeight: 1.2,
+              opacity: 0.92,
+            }}
+          >
+            — {autor}
+          </p>
+        ) : null}
       </main>
 
+      {/* Rodapé institucional — colado à margem inferior */}
       <footer
-        className={`relative z-10 flex items-end justify-between gap-3 shrink-0 border-t border-white/10 ${skin.accentClass}`}
+        className={`absolute bottom-0 left-0 right-0 z-30 flex items-end justify-between gap-3 ${skin.accentClass}`}
         style={{
-          padding,
-          paddingTop: padding * 0.65,
-          fontSize: Math.max(10, format.width * 0.016),
-          letterSpacing: '0.06em',
+          height: layout.safe.footerHeight,
+          paddingLeft: layout.padX,
+          paddingRight: layout.padX,
+          paddingBottom: layout.padBottom,
+          fontSize: layout.footerPx,
+          letterSpacing: '0.03em',
+          opacity: 0.72,
+          borderTop: '1px solid rgba(255,255,255,0.06)',
+          background: 'linear-gradient(to top, rgba(0,0,0,0.18) 0%, transparent 100%)',
         }}
       >
-        <span className="font-medium opacity-85 truncate min-w-0 text-left leading-tight">
-          <span className="lowercase">metamensagem.com</span>
-          <span className="opacity-60 mx-1">•</span>
-          <span className="uppercase tracking-wider text-[0.92em]">Coleção {collectionName}</span>
+        <span className="font-medium lowercase leading-none truncate min-w-0">metamensagem.com</span>
+        <span
+          className="font-medium leading-none truncate text-center opacity-90 flex-1 px-2"
+          style={{ maxWidth: '40%' }}
+        >
+          {skinLabel}
         </span>
-        <span className="font-semibold opacity-90 tabular-nums text-right shrink-0 leading-tight whitespace-nowrap">
-          {skin.name} #{serial}
+        <span className="font-semibold tabular-nums leading-none shrink-0 whitespace-nowrap">
+          {serial}
         </span>
       </footer>
     </div>

@@ -13,6 +13,12 @@ import { recommendSkinForQuote } from './utils/recommendSkin';
 import { canShareImageFiles } from './utils/shareLinks';
 import { captureElementAsBlob, copyBlobToClipboard, downloadBlob, shareImageFile } from './exportImage';
 import { ensureImageExportFonts } from './utils/imageFonts';
+import { allocateImageSerial, previewSerialForQuote } from './utils/serialGenerator';
+import { recordImageGeneration } from './utils/imageMetadata';
+
+async function waitNextPaint(): Promise<void> {
+  await new Promise<void>((r) => requestAnimationFrame(() => requestAnimationFrame(() => r())));
+}
 
 export interface ImageGeneratorModalProps {
   open: boolean;
@@ -36,6 +42,8 @@ export default function ImageGeneratorModal({
   const [collectionId, setCollectionId] = useState(recommendation.collectionId);
   const [skinId, setSkinId] = useState(recommendation.skinId);
   const [busy, setBusy] = useState<ShareBusy>(null);
+  const previewSerial = useMemo(() => previewSerialForQuote(quote.id), [quote.id]);
+  const [exportSerial, setExportSerial] = useState(previewSerial);
 
   const supportsFileShare = useMemo(() => canShareImageFiles(), []);
   const fontSample = useMemo(
@@ -78,15 +86,41 @@ export default function ImageGeneratorModal({
     }
   };
 
+  const registerExport = useCallback(
+    (serial: string) => {
+      recordImageGeneration({
+        phraseId: quote.id,
+        category: quote.categoria,
+        collectionId,
+        skinId,
+        skinName: skin.name,
+        locale: quote.locale,
+        format,
+        serial,
+        generatedAt: new Date().toISOString(),
+      });
+    },
+    [quote.id, quote.categoria, quote.locale, collectionId, skinId, skin.name, format]
+  );
+
+  const prepareExportCapture = useCallback(async () => {
+    const serial = allocateImageSerial();
+    setExportSerial(serial);
+    await waitNextPaint();
+    return serial;
+  }, []);
+
   const runExport = useCallback(
     async (mime: 'image/png' | 'image/jpeg') => {
       const node = exportRef.current;
       if (!node) return;
       setBusy(mime === 'image/png' ? 'png' : 'jpeg');
       try {
+        const serial = await prepareExportCapture();
         const blob = await captureElementAsBlob(node, mime, fontSample);
+        registerExport(serial);
         const ext = mime === 'image/png' ? 'png' : 'jpg';
-        downloadBlob(blob, `metamensagem-${quote.id.slice(0, 12)}.${ext}`);
+        downloadBlob(blob, `metamensagem-${serial}.${ext}`);
         toast('Imagem baixada!', 'sucesso');
       } catch {
         toast('Não foi possível gerar a imagem.', 'erro');
@@ -94,7 +128,7 @@ export default function ImageGeneratorModal({
         setBusy(null);
       }
     },
-    [quote.id, toast, fontSample]
+    [fontSample, prepareExportCapture, registerExport, toast]
   );
 
   const handleCopy = useCallback(async () => {
@@ -102,7 +136,9 @@ export default function ImageGeneratorModal({
     if (!node) return;
     setBusy('copy');
     try {
+      const serial = await prepareExportCapture();
       const blob = await captureElementAsBlob(node, 'image/png', fontSample);
+      registerExport(serial);
       const ok = await copyBlobToClipboard(blob);
       toast(
         ok ? 'Copiado para a área de transferência!' : 'Seu navegador não suporta copiar imagem.',
@@ -113,14 +149,16 @@ export default function ImageGeneratorModal({
     } finally {
       setBusy(null);
     }
-  }, [toast, fontSample]);
+  }, [fontSample, prepareExportCapture, registerExport, toast]);
 
   const handleMobileShare = useCallback(async () => {
     const node = exportRef.current;
     if (!node) return;
     setBusy('mobile');
     try {
+      const serial = await prepareExportCapture();
       const blob = await captureElementAsBlob(node, 'image/png', fontSample);
+      registerExport(serial);
       const ok = await shareImageFile(blob, {
         title: 'Metamensagem',
         text: quote.texto.slice(0, 120),
@@ -133,16 +171,27 @@ export default function ImageGeneratorModal({
     } finally {
       setBusy(null);
     }
-  }, [quote.texto, toast, fontSample]);
+  }, [fontSample, prepareExportCapture, quote.texto, registerExport, toast]);
+
+  useEffect(() => {
+    if (open) setExportSerial(previewSerial);
+  }, [open, previewSerial]);
 
   if (!open) return null;
 
-  const rendererProps = {
+  const quoteMeta = {
+    id: quote.id,
+    categoria: quote.categoria,
+    locale: quote.locale,
+  };
+
+  const rendererBase = {
     texto: quote.texto,
     autor: quote.autor,
     format: formatCfg,
     skin,
     collectionName: collection.name,
+    quoteMeta,
   };
 
   return (
@@ -264,7 +313,7 @@ export default function ImageGeneratorModal({
                       height: formatCfg.height,
                     }}
                   >
-                    <ImageRenderer {...rendererProps} />
+                    <ImageRenderer {...rendererBase} serial={previewSerial} />
                   </div>
                 </div>
               </div>
@@ -283,7 +332,7 @@ export default function ImageGeneratorModal({
           </div>
 
           <div className="fixed -left-[20000px] top-0 pointer-events-none" aria-hidden>
-            <ImageRenderer ref={exportRef} {...rendererProps} />
+            <ImageRenderer ref={exportRef} {...rendererBase} serial={exportSerial} />
           </div>
         </motion.div>
       </motion.div>

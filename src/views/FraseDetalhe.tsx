@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState, lazy, Suspense } from 'react';
 const ImageGeneratorModal = lazy(() => import('../components/image-generator'));
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import BackNavButton from '../components/BackNavButton';
+import TranslationContingencyNotice from '../components/TranslationContingencyNotice';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Copy, Share2, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -32,6 +33,7 @@ import { pathFromTag } from '../lib/tagsSeo';
 import {
   fraseCanonicalUrl,
   fraseHreflangAlternates,
+  frasePath,
   htmlLangAttribute,
   parseFraseRoute,
   resolveFraseContentLocale,
@@ -40,10 +42,12 @@ import {
 import { availableLanguagesFromMeta, loadFraseI18nMeta } from '../lib/globalSeoClient';
 import { pickTitleDescription } from '../../lib/seo/i18nTemplates';
 import { useTranslatedViewMeta } from '../lib/useTranslatedViewMeta';
-import { SEO_LOCALES } from '../lib/i18nRoutes';
 import { applyHreflangLinks } from '../lib/seoHreflang';
 import type { SeoLocale } from '../../lib/i18n/locales';
-import type { ItemConteudo } from '../types/content';
+import { SOURCE_CONTENT_LOCALE } from '../../lib/i18n/platform';
+import { getOrCreatePhraseTranslation } from '../lib/translation/phraseTranslationService';
+import { TranslationContingencyError } from '../lib/translation/types';
+import { trackPhraseEvent } from '../lib/analytics/phrasePopularity';
 
 function MudarMetaSEO({
   title,
@@ -119,6 +123,7 @@ export default function FraseDetalheView({
 }) {
   const { slug } = useParams<{ slug: string }>();
   const location = useLocation();
+  const navigate = useNavigate();
   const routeInfo = useMemo(() => parseFraseRoute(location.pathname), [location.pathname]);
   const { t, i18n } = useTranslation();
 
@@ -142,6 +147,7 @@ export default function FraseDetalheView({
     isTranslated: false,
   });
   const [translating, setTranslating] = useState(false);
+  const [translationContingency, setTranslationContingency] = useState(false);
 
   useEffect(() => {
     if (!slug) return;
@@ -158,6 +164,19 @@ export default function FraseDetalheView({
         if (meta) setI18nMeta(meta);
         if (fromShard) {
           setFrase(fromShard);
+          trackPhraseEvent(fromShard.slug, 'view');
+          const canonical = fromShard.slug.toLowerCase();
+          if (slug && canonical !== slug.toLowerCase()) {
+            const def = seoLocaleFromLanguageOriginal(
+              fromShard.semantica?.languageOriginal ||
+                fromShard.semantica?.idiomaOriginal
+            );
+            const prefix = routeInfo?.prefixLocale ?? null;
+            navigate(frasePath(canonical, prefix ?? def, def), {
+              replace: true,
+              state: location.state,
+            });
+          }
           setLoading(false);
           return;
         }
@@ -196,8 +215,52 @@ export default function FraseDetalheView({
 
   useEffect(() => {
     if (!frase) return;
-    setDisplay({ texto: frase.frase_original, isTranslated: false });
-  }, [frase?.id, frase?.frase_original]);
+    let cancel = false;
+
+    const showOriginal = () => {
+      setDisplay({
+        texto: frase.frase_original,
+        autor: frase.autor_original,
+        isTranslated: false,
+      });
+    };
+
+    if (contentLocale === defaultLocale || contentLocale === SOURCE_CONTENT_LOCALE) {
+      showOriginal();
+      return;
+    }
+
+    showOriginal();
+    setTranslationContingency(false);
+    setTranslating(true);
+    void getOrCreatePhraseTranslation(frase.slug, frase.frase_original, contentLocale, {
+      contentId: frase.id,
+      category: frase.categoria,
+    })
+      .then((result) => {
+        if (cancel) return;
+        setTranslationContingency(false);
+        setDisplay({
+          texto: result.text,
+          autor: frase.autor_original,
+          isTranslated: result.locale !== defaultLocale && result.mode !== 'contingency',
+          targetLang: contentLocale,
+        });
+      })
+      .catch((err) => {
+        if (!cancel) {
+          showOriginal();
+          setTranslationContingency(err instanceof TranslationContingencyError);
+        }
+      })
+      .finally(() => {
+        if (!cancel) setTranslating(false);
+      });
+
+    return () => {
+      cancel = true;
+    };
+  }, [frase?.id, frase?.frase_original, frase?.autor_original, contentLocale, defaultLocale]);
 
   const listItem = useMemo(() => (frase ? fraseToListItem(frase) : null), [frase]);
 
@@ -223,12 +286,14 @@ export default function FraseDetalheView({
 
   const handleCopy = () => {
     if (!frase) return;
+    trackPhraseEvent(frase.slug, 'copy');
     navigator.clipboard.writeText(`${quoteText} — ${authorLine}`);
     toast(t('common.copied'));
   };
 
   const handleShare = async () => {
     if (!frase) return;
+    trackPhraseEvent(frase.slug, 'share');
     const shareUrl = canonical;
     const payload = {
       title: frase.autor_original,
@@ -348,6 +413,10 @@ export default function FraseDetalheView({
               — {authorLine}
             </p>
 
+            {translationContingency && (
+              <TranslationContingencyNotice tema={tema} className="mb-6" />
+            )}
+
             <div className="flex flex-wrap gap-1.5 mb-8">
               {[frase.categoria, ...frase.contextos]
                 .map((c) => formatTagForDisplay(c))
@@ -389,6 +458,7 @@ export default function FraseDetalheView({
                   tema={tema}
                   accent="purple"
                   contentId={frase.id}
+                  sourceLang={defaultLocale}
                   source={
                     frase
                       ? {

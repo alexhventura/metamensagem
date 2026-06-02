@@ -1,7 +1,8 @@
 # Reduz upload; runtime usa public/ + dist do vite build
 content/
 data/
-scripts/
+scripts/*
+!scripts/build-frase-id-index.mjs
 *.md
 .git
 node_modules/.cache

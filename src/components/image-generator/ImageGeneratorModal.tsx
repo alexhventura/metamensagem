@@ -15,8 +15,7 @@ import { canShareImageFiles } from './utils/shareLinks';
 import {
   captureElementAsBlob,
   copyBlobToClipboard,
-  requestFileSaveHandle,
-  saveBlobToDisk,
+  downloadBlob,
   shareImageFile,
 } from './exportImage';
 import { ensureImageExportFonts } from './utils/imageFonts';
@@ -117,17 +116,6 @@ export default function ImageGeneratorModal({
       setBusy(mime === 'image/png' ? 'png' : 'jpeg');
 
       const ext = mime === 'image/png' ? 'png' : 'jpg';
-      const provisionalName = `metamensagem-${previewSerial}.${ext}`;
-      let fileHandle: Awaited<ReturnType<typeof requestFileSaveHandle>> = null;
-
-      try {
-        fileHandle = await requestFileSaveHandle(provisionalName, mime);
-      } catch (e) {
-        if (e instanceof Error && e.name === 'AbortError') {
-          setBusy(null);
-          return;
-        }
-      }
 
       try {
         const serial = allocateImageSerial();
@@ -140,19 +128,22 @@ export default function ImageGeneratorModal({
         const blob = await captureElementAsBlob(node, mime, fontSample);
         registerExport(serial);
         const filename = `metamensagem-${serial}.${ext}`;
-        await saveBlobToDisk(blob, filename, fileHandle);
+        downloadBlob(blob, filename);
         toast('Imagem baixada!', 'sucesso');
       } catch (e) {
         const msg =
           e instanceof Error
             ? e.message
             : 'Não foi possível gerar a imagem.';
+        if (typeof window !== 'undefined') {
+          (window as Window & { __mmLastExportError?: string }).__mmLastExportError = msg;
+        }
         toast(msg, 'erro');
       } finally {
         setBusy(null);
       }
     },
-    [fontSample, formatCfg.width, formatCfg.height, previewSerial, registerExport, toast]
+    [fontSample, formatCfg.width, formatCfg.height, registerExport, toast]
   );
 
   const handleCopy = useCallback(async () => {
@@ -337,6 +328,7 @@ export default function ImageGeneratorModal({
                 )}
 
                 <div
+                  className="relative"
                   style={{
                     width: formatCfg.width * previewScale,
                     height: formatCfg.height * previewScale,
@@ -350,7 +342,7 @@ export default function ImageGeneratorModal({
                       height: formatCfg.height,
                     }}
                   >
-                    <ImageRenderer {...rendererBase} serial={previewSerial} />
+                    <ImageRenderer ref={exportRef} {...rendererBase} serial={exportSerial} />
                   </div>
                 </div>
               </div>
@@ -368,18 +360,6 @@ export default function ImageGeneratorModal({
             </div>
           </div>
 
-          <div
-            className="fixed left-0 top-0 overflow-hidden pointer-events-none"
-            style={{
-              width: formatCfg.width,
-              height: formatCfg.height,
-              transform: 'translateX(-120vw)',
-              visibility: 'hidden',
-            }}
-            aria-hidden
-          >
-            <ImageRenderer ref={exportRef} {...rendererBase} serial={exportSerial} />
-          </div>
         </motion.div>
       </motion.div>
     </AnimatePresence>

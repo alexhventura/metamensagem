@@ -6,6 +6,7 @@ import { readFileSync } from 'node:fs';
 
 const exportSrc = readFileSync('src/components/image-generator/exportImage.ts', 'utf8');
 const modalSrc = readFileSync('src/components/image-generator/ImageGeneratorModal.tsx', 'utf8');
+const measureSrc = readFileSync('src/components/image-generator/utils/measureQuoteBlock.ts', 'utf8');
 
 let failed = 0;
 
@@ -25,32 +26,38 @@ else ok('createObjectURL');
 if (!exportSrc.includes('revokeObjectURL')) fail('missing URL.revokeObjectURL');
 else ok('revokeObjectURL');
 
-if (!/a\.download\s*=/.test(exportSrc)) fail('missing anchor download attribute');
+if (!/anchor\.download\s*=/.test(exportSrc)) fail('missing anchor download attribute');
 else ok('anchor download attribute');
 
-if (!exportSrc.includes('domToBlob')) fail('missing domToBlob capture');
-else ok('domToBlob capture');
+if (!exportSrc.includes('appendChild(anchor)')) fail('missing appendChild before click');
+else ok('appendChild before click');
 
-if (!exportSrc.includes('requestFileSaveHandle')) fail('missing showSaveFilePicker path');
-else ok('showSaveFilePicker (requestFileSaveHandle)');
+if (!exportSrc.includes('removeChild(anchor)')) fail('missing removeChild after click');
+else ok('removeChild after click');
 
-if (!exportSrc.includes('saveBlobToDisk')) fail('missing saveBlobToDisk');
-else ok('saveBlobToDisk');
+if (!exportSrc.includes('domToBlob')) fail('missing modern-screenshot domToBlob');
+else ok('modern-screenshot domToBlob');
 
-if (!exportSrc.includes('exportDebug')) fail('missing export debug logs');
-else ok('export debug logging');
+if (!exportSrc.includes('saveAs')) fail('missing file-saver saveAs');
+else ok('file-saver saveAs');
 
-if (!modalSrc.includes('requestFileSaveHandle')) fail('modal must request save handle on click');
-else ok('modal requests save handle before capture');
+if (!exportSrc.includes('html-to-image')) fail('missing html-to-image fallback');
+else ok('html-to-image fallback');
 
-if (!modalSrc.includes('saveBlobToDisk')) fail('modal must call saveBlobToDisk');
-else ok('modal calls saveBlobToDisk');
+if (!exportSrc.includes('saveAs')) fail('missing saveAs from file-saver');
+else ok('file-saver primary path');
+
+if (!modalSrc.includes('downloadBlob')) fail('modal must call downloadBlob after capture');
+else ok('modal calls downloadBlob');
 
 if (/window\.open\s*\([^)]*blob/i.test(exportSrc)) fail('must not window.open blob URL');
 else ok('no window.open for blob');
 
-if (modalSrc.includes('-z-10')) fail('export node must not use -z-10 (breaks capture)');
-else ok('export node not at -z-10');
+if (modalSrc.includes('visibility:') && modalSrc.includes('hidden')) fail('export node must not use visibility:hidden');
+else ok('export node without visibility:hidden');
+
+if (!measureSrc.includes('domReliable')) fail('measureQuoteBlock must skip unreliable hidden DOM rects');
+else ok('domReliable guard in measureQuoteBlock');
 
 console.log(`\n${failed === 0 ? 'All checks passed.' : `Failed: ${failed}`}`);
 if (failed > 0) process.exit(1);

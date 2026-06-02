@@ -195,7 +195,7 @@ export default function App() {
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.9 }}
-              className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[200] pointer-events-none"
+              className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[300] pointer-events-none"
             >
               <div className={`px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 backdrop-blur-xl border border-white/10 ${
                 toast.tipo === 'sucesso' ? 'bg-emerald-500/90 text-white' : 

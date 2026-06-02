@@ -38,7 +38,7 @@ const checks = [
   {
     file: 'src/components/HeaderBrandLink.tsx',
     label: 'Logo Home',
-    test: (s) => /to=["']\/["']/.test(s) && /navigate\s*\(\s*['"]\/['"]/.test(s),
+    test: (s) => /to=["']\/["']/.test(s),
   },
   {
     file: 'src/App.tsx',

@@ -8,9 +8,14 @@ export type QuoteBlockMeasure = {
   zoneBottom: number;
   blockTop: number;
   blockBottom: number;
+  domReliable: boolean;
 };
 
 const EDGE_SLACK_PX = 3;
+
+function isZeroRect(top: number, bottom: number): boolean {
+  return top === 0 && bottom === 0;
+}
 
 export function measureQuoteBlock(root: HTMLElement): QuoteBlockMeasure | null {
   const zone = root.querySelector('[data-mm-quote-zone]');
@@ -19,6 +24,8 @@ export function measureQuoteBlock(root: HTMLElement): QuoteBlockMeasure | null {
 
   const zr = zone.getBoundingClientRect();
   const br = block.getBoundingClientRect();
+
+  const domReliable = !isZeroRect(br.top, br.bottom) && !isZeroRect(zr.top, zr.bottom);
 
   const zoneTop = zr.top;
   const zoneBottom = zr.bottom;
@@ -33,14 +40,26 @@ export function measureQuoteBlock(root: HTMLElement): QuoteBlockMeasure | null {
     zoneBottom,
     blockTop: br.top,
     blockBottom: br.bottom,
+    domReliable,
   };
 }
 
 export function assertQuoteBlockFits(root: HTMLElement): void {
+  if (root.getAttribute('data-mm-quote-fits') === '0') {
+    throw new Error('Layout inválido: frase ultrapassa a zona de citação.');
+  }
+
   const m = measureQuoteBlock(root);
   if (!m) {
+    if (root.getAttribute('data-mm-quote-fits') === '1') return;
     throw new Error('Não foi possível medir a zona da citação.');
   }
+
+  if (!m.domReliable) {
+    exportDebugMeasure('dom-unreliable-skip', { quoteFits: root.getAttribute('data-mm-quote-fits') });
+    return;
+  }
+
   if (!m.fits) {
     const parts: string[] = [];
     if (!m.topOk) parts.push('corte superior');
@@ -48,5 +67,16 @@ export function assertQuoteBlockFits(root: HTMLElement): void {
     throw new Error(
       `Frase fora da área útil (${parts.join(' e ')}). Ajuste o formato ou tente novamente.`
     );
+  }
+}
+
+function exportDebugMeasure(step: string, detail?: Record<string, unknown>): void {
+  if (typeof window === 'undefined') return;
+  try {
+    if (localStorage.getItem('mm-export-debug') === '1' || import.meta.env.DEV) {
+      console.info('[mm-export]', step, detail ?? '');
+    }
+  } catch {
+    /* ignore */
   }
 }

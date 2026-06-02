@@ -1,5 +1,6 @@
-/** Exportação client-side + download com gesto do usuário preservado quando possível. */
+/** Exportação client-side + download (modern-screenshot → Blob → âncora / file-saver). */
 
+import { saveAs } from 'file-saver';
 import { ensureCaptureFontsReady } from './utils/imageFonts';
 import { assertQuoteBlockFits } from './utils/measureQuoteBlock';
 import {
@@ -9,6 +10,34 @@ import {
 } from './utils/textLayout';
 
 export type CaptureFontSample = { text: string; autor: string };
+
+export type FileSaveHandle = FileSystemFileHandle;
+
+/** Fallback quando o gesto do usuário expirou após captura assíncrona (Chrome). */
+export async function requestFileSaveHandle(
+  filename: string,
+  mime: 'image/png' | 'image/jpeg'
+): Promise<FileSaveHandle | null> {
+  const picker = (window as Window & { showSaveFilePicker?: typeof showSaveFilePicker })
+    .showSaveFilePicker;
+  if (typeof picker !== 'function') return null;
+  const ext = mime === 'image/png' ? '.png' : '.jpg';
+  try {
+    return await picker({
+      suggestedName: filename.endsWith(ext) ? filename : `${filename}${ext}`,
+      types: [{ description: mime === 'image/png' ? 'PNG' : 'JPEG', accept: { [mime]: [ext] } }],
+    });
+  } catch (e) {
+    if (e instanceof Error && e.name === 'AbortError') throw e;
+    return null;
+  }
+}
+
+export async function writeBlobToFileHandle(handle: FileSaveHandle, blob: Blob): Promise<void> {
+  const writable = await handle.createWritable();
+  await writable.write(blob);
+  await writable.close();
+}
 
 const DEBUG_KEY = 'mm-export-debug';
 
@@ -24,55 +53,6 @@ export function isExportDebugEnabled(): boolean {
 export function exportDebug(step: string, detail?: Record<string, unknown>): void {
   if (!isExportDebugEnabled()) return;
   console.info('[mm-export]', step, detail ?? '');
-}
-
-export type FileSaveHandle = FileSystemFileHandle;
-
-/** Chamar no clique do usuário (antes de awaits longos) para preservar o gesto. */
-export async function requestFileSaveHandle(
-  filename: string,
-  mime: 'image/png' | 'image/jpeg'
-): Promise<FileSaveHandle | null> {
-  const picker = (window as Window & { showSaveFilePicker?: typeof showSaveFilePicker })
-    .showSaveFilePicker;
-  if (typeof picker !== 'function') {
-    exportDebug('save-picker-unavailable');
-    return null;
-  }
-
-  const ext = mime === 'image/png' ? '.png' : '.jpg';
-  try {
-    const handle = await picker({
-      suggestedName: filename.endsWith(ext) ? filename : `${filename}${ext}`,
-      types: [
-        {
-          description: mime === 'image/png' ? 'PNG' : 'JPEG',
-          accept: { [mime]: [ext] },
-        },
-      ],
-    });
-    exportDebug('save-picker-granted', { filename });
-    return handle;
-  } catch (e) {
-    const name = e instanceof Error ? e.name : '';
-    if (name === 'AbortError') {
-      exportDebug('save-picker-aborted');
-      throw e;
-    }
-    exportDebug('save-picker-failed', { name });
-    return null;
-  }
-}
-
-export async function writeBlobToFileHandle(
-  handle: FileSaveHandle,
-  blob: Blob
-): Promise<void> {
-  exportDebug('write-handle-start', { size: blob.size, type: blob.type });
-  const writable = await handle.createWritable();
-  await writable.write(blob);
-  await writable.close();
-  exportDebug('write-handle-done');
 }
 
 export async function captureElementAsBlob(
@@ -91,31 +71,83 @@ export async function captureElementAsBlob(
   await ensureCaptureFontsReady(text, autor);
 
   await waitForLayoutStable(node);
-  assertQuoteBlockFits(node);
+  if (node.getAttribute('data-mm-quote-fits') === '0') {
+    assertQuoteBlockFits(node);
+  }
   assertExportTextIntegrity(node, text);
 
-  const { domToBlob } = await import('modern-screenshot');
-  exportDebug('dom-to-blob');
-  const blob = await domToBlob(node, {
-    scale: 2,
-    type: mime,
-    quality: mime === 'image/jpeg' ? 0.92 : undefined,
-    filter: (el) => {
-      if (el instanceof HTMLLinkElement && el.rel === 'stylesheet') {
-        const href = el.href || '';
-        if (href.includes('fonts.googleapis.com') || href.includes('fonts.gstatic.com')) {
-          return false;
-        }
-      }
-      return true;
-    },
-  });
-
+  const blob = await renderNodeToBlob(node, mime);
   if (!blob || blob.size < 64) {
     exportDebug('blob-invalid', { size: blob?.size });
     throw new Error('Falha ao gerar imagem');
   }
   exportDebug('capture-done', { size: blob.size, type: blob.type });
+
+  if (typeof window !== 'undefined') {
+    (window as Window & { __mmLastExport?: { size: number; type: string; at: number } }).__mmLastExport =
+      { size: blob.size, type: blob.type, at: Date.now() };
+  }
+
+  return blob;
+}
+
+const CAPTURE_TIMEOUT_MS = 45_000;
+
+async function renderNodeToBlob(
+  node: HTMLElement,
+  mime: 'image/png' | 'image/jpeg'
+): Promise<Blob> {
+  const withTimeout = <T>(p: Promise<T>, label: string): Promise<T> =>
+    Promise.race([
+      p,
+      new Promise<T>((_, reject) =>
+        window.setTimeout(
+          () => reject(new Error(`Tempo esgotado ao gerar ${label}`)),
+          CAPTURE_TIMEOUT_MS
+        )
+      ),
+    ]);
+
+  const { toBlob } = await import('html-to-image');
+  try {
+    exportDebug('dom-to-blob-html-to-image');
+    const blob = await withTimeout(
+      toBlob(node, {
+        cacheBust: true,
+        pixelRatio: 2,
+        type: mime,
+        quality: mime === 'image/jpeg' ? 0.92 : undefined,
+        skipFonts: true,
+      }),
+      'PNG/JPG (html-to-image)'
+    );
+    if (blob && blob.size >= 64) return blob;
+  } catch (e) {
+    exportDebug('html-to-image-failed', {
+      message: e instanceof Error ? e.message : String(e),
+    });
+  }
+
+  const { domToBlob } = await import('modern-screenshot');
+  exportDebug('dom-to-blob-modern-screenshot');
+  const blob = await withTimeout(
+    domToBlob(node, {
+      scale: 2,
+      type: mime,
+      quality: mime === 'image/jpeg' ? 0.92 : undefined,
+      filter: (el) => {
+        if (el instanceof HTMLLinkElement && el.rel === 'stylesheet') {
+          const href = el.href || '';
+          if (href.includes('fonts.googleapis.com') || href.includes('fonts.gstatic.com')) {
+            return false;
+          }
+        }
+        return true;
+      },
+    }),
+    'PNG/JPG (modern-screenshot)'
+  );
+  if (!blob) throw new Error('Falha ao rasterizar imagem');
   return blob;
 }
 
@@ -128,61 +160,90 @@ async function waitForLayoutStable(node: HTMLElement): Promise<void> {
 }
 
 /**
- * Salva blob no disco: File System Access API (gesto preservado) ou âncora download.
- */
-export async function saveBlobToDisk(
-  blob: Blob,
-  filename: string,
-  fileHandle?: FileSaveHandle | null
-): Promise<void> {
-  if (fileHandle) {
-    await writeBlobToFileHandle(fileHandle, blob);
-    return;
-  }
-  downloadBlob(blob, filename);
-}
-
-/**
- * Dispara download no disco do usuário (fallback quando não há File System Access).
+ * Download: Blob → object URL → âncora → clique → remover → revogar (+ file-saver / iframe).
  */
 export function downloadBlob(blob: Blob, filename: string): void {
-  exportDebug('download-anchor-start', { filename, size: blob.size, type: blob.type });
+  exportDebug('download-start', { filename, size: blob.size, type: blob.type });
+
+  const safeName = filename.replace(/[^\w.\-]+/g, '_');
+  const typedBlob =
+    blob.type === '' ? new Blob([blob], { type: guessMimeFromFilename(safeName) }) : blob;
 
   const nav = window.navigator as Navigator & {
     msSaveOrOpenBlob?: (b: Blob, name: string) => boolean;
   };
-
   if (typeof nav.msSaveOrOpenBlob === 'function') {
-    const ok = nav.msSaveOrOpenBlob(blob, filename);
+    const ok = nav.msSaveOrOpenBlob(typedBlob, safeName);
     exportDebug('download-msSaveOrOpenBlob', { ok });
-    return;
+    if (ok) return;
   }
 
-  const url = URL.createObjectURL(blob);
-  exportDebug('download-object-url', { urlPrefix: url.slice(0, 32) });
+  try {
+    saveAs(typedBlob, safeName);
+    exportDebug('download-file-saver');
+    return;
+  } catch (err) {
+    exportDebug('download-file-saver-failed', {
+      message: err instanceof Error ? err.message : String(err),
+    });
+  }
 
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-  a.rel = 'noopener';
-  a.setAttribute('download', filename);
-  a.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;opacity:0.01;';
-  document.body.appendChild(a);
+  const url = URL.createObjectURL(typedBlob);
+  exportDebug('download-object-url-created');
+
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.download = safeName;
+  anchor.rel = 'noopener';
+  anchor.setAttribute('download', safeName);
+  document.body.appendChild(anchor);
 
   try {
-    a.click();
+    anchor.click();
     exportDebug('download-anchor-clicked');
-  } catch {
-    const ev = new MouseEvent('click', { bubbles: true, cancelable: true, view: window });
-    a.dispatchEvent(ev);
-    exportDebug('download-anchor-dispatched');
+  } catch (err) {
+    exportDebug('download-anchor-click-failed', {
+      message: err instanceof Error ? err.message : String(err),
+    });
+    anchor.dispatchEvent(
+      new MouseEvent('click', { bubbles: true, cancelable: true, view: window })
+    );
+  }
+
+  document.body.removeChild(anchor);
+
+  try {
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(iframe);
+    const doc = iframe.contentDocument ?? iframe.contentWindow?.document;
+    if (doc) {
+      const inner = doc.createElement('a');
+      inner.href = url;
+      inner.download = safeName;
+      doc.body.appendChild(inner);
+      inner.click();
+      exportDebug('download-iframe-anchor-clicked');
+    }
+    window.setTimeout(() => iframe.remove(), 2000);
+  } catch (err) {
+    exportDebug('download-iframe-failed', {
+      message: err instanceof Error ? err.message : String(err),
+    });
   }
 
   window.setTimeout(() => {
-    a.remove();
     URL.revokeObjectURL(url);
     exportDebug('download-object-url-revoked');
   }, 60_000);
+}
+
+function guessMimeFromFilename(filename: string): string {
+  if (filename.toLowerCase().endsWith('.jpg') || filename.toLowerCase().endsWith('.jpeg')) {
+    return 'image/jpeg';
+  }
+  return 'image/png';
 }
 
 export async function copyBlobToClipboard(blob: Blob): Promise<boolean> {

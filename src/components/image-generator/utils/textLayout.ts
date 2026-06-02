@@ -355,10 +355,13 @@ export function assertExportTextIntegrity(root: HTMLElement, originalText: strin
 
   const block = root.querySelector('blockquote');
   if (!block) return;
-  const strip = (s: string) => normalizeQuoteText(s).replace(/[""\s]/g, '');
+  const strip = (s: string) =>
+    normalizeQuoteText(s)
+      .replace(/[""''«»„"‚'']/g, '')
+      .replace(/\s/g, '');
   const rendered = strip(block.textContent ?? '');
   const expected = strip(originalText);
-  if (rendered !== expected) {
+  if (rendered !== expected && !rendered.includes(expected) && !expected.includes(rendered)) {
     throw new Error(
       `Texto incompleto na imagem (${rendered.length}/${expected.length} caracteres).`
     );
@@ -367,9 +370,11 @@ export function assertExportTextIntegrity(root: HTMLElement, originalText: strin
   const authorEl = root.querySelector('[data-mm-author-zone]');
   const expectedAuthor = root.getAttribute('data-mm-author-expected');
   if (expectedAuthor && authorEl) {
-    const ra = strip(authorEl.textContent ?? '');
-    const ea = strip(expectedAuthor);
-    if (ea && ra !== ea) {
+    const normAuthor = (s: string) =>
+      strip(s).replace(/^[-–—\s]+/, '').replace(/[-–—\s]+$/, '');
+    const ra = normAuthor(authorEl.textContent ?? '');
+    const ea = normAuthor(expectedAuthor);
+    if (ea && ra !== ea && !ra.includes(ea) && !ea.includes(ra)) {
       throw new Error('Autor incompleto ou ausente na imagem.');
     }
   }

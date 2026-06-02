@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 /** True when pathname is the app home route (`/`). */
 export function isHomePath(pathname: string): boolean {
@@ -6,26 +6,23 @@ export function isHomePath(pathname: string): boolean {
   return path === '/';
 }
 
-/** Site-wide logo + title — always navigates to `/` (home). */
+/**
+ * Logo + título — sempre navega para `/`.
+ * Em rotas internas o React Router trata o clique (sem preventDefault).
+ */
 export default function HeaderBrandLink() {
   const { pathname } = useLocation();
-  const navigate = useNavigate();
   const isHome = isHomePath(pathname);
 
   return (
     <Link
       to="/"
       onClick={(e) => {
-        if (isHome) {
-          e.preventDefault();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          return;
-        }
+        if (!isHome) return;
         e.preventDefault();
-        navigate('/', { replace: false });
-        window.scrollTo({ top: 0, behavior: 'auto' });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }}
-      className="flex items-center gap-2.5 group min-w-0 flex-shrink-0 cursor-pointer no-underline"
+      className="flex items-center gap-2.5 group min-w-0 flex-shrink-0 cursor-pointer no-underline relative z-[45]"
       aria-label="Metamensagem, pagina inicial"
     >
       <img

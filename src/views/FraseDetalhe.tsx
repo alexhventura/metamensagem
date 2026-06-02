@@ -1,8 +1,9 @@
 import React, { useEffect, useMemo, useState, lazy, Suspense } from 'react';
 const ImageGeneratorModal = lazy(() => import('../components/image-generator'));
 import { Link, useLocation, useParams } from 'react-router-dom';
+import BackNavButton from '../components/BackNavButton';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, Copy, Share2, Sparkles } from 'lucide-react';
+import { Copy, Share2, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import CardTooltip from '../components/CardTooltip';
 import { CardTranslateMenu } from '../components/CardTranslateMenu';
@@ -21,8 +22,12 @@ import {
   getFraseCmsBySlugSync,
   loadFraseDetailBySlug,
   fraseToListItem,
+  fraseCmsFromListItem,
   type FraseCms,
 } from '../lib/frasesModel';
+import { formatTagForDisplay } from '../lib/tagDisplay';
+import { sanitizeTextForTranslation } from '../lib/textSanitize';
+import type { ItemConteudo } from '../types/content';
 import { pathFromTag } from '../lib/tagsSeo';
 import {
   fraseCanonicalUrl,
@@ -116,11 +121,21 @@ export default function FraseDetalheView({
   const location = useLocation();
   const routeInfo = useMemo(() => parseFraseRoute(location.pathname), [location.pathname]);
   const { t, i18n } = useTranslation();
+
+  const preloadedFrase = useMemo(() => {
+    const state = location.state as { item?: ItemConteudo; frase?: FraseCms } | null;
+    if (state?.frase) return state.frase;
+    if (state?.item?.tipo === 'frase') return fraseCmsFromListItem(state.item);
+    return null;
+  }, [location.state]);
+
   const [i18nMeta, setI18nMeta] = useState<Awaited<ReturnType<typeof loadFraseI18nMeta>>>(null);
-  const [frase, setFrase] = useState<FraseCms | null>(() =>
-    slug ? getFraseCmsBySlugSync(slug) ?? null : null
-  );
-  const [loading, setLoading] = useState(!frase);
+  const [frase, setFrase] = useState<FraseCms | null>(() => {
+    if (preloadedFrase) return preloadedFrase;
+    return slug ? getFraseCmsBySlugSync(slug) ?? null : null;
+  });
+  const [loading, setLoading] = useState(() => !preloadedFrase && !frase && !!slug);
+  const [loadError, setLoadError] = useState(false);
   const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
   const [display, setDisplay] = useState<CardContentDisplay>({
     texto: '',
@@ -131,26 +146,38 @@ export default function FraseDetalheView({
   useEffect(() => {
     if (!slug) return;
     let cancel = false;
+    setLoadError(false);
+    if (!preloadedFrase) setLoading(true);
     (async () => {
-      const [fromShard, meta] = await Promise.all([
-        loadFraseDetailBySlug(slug),
-        loadFraseI18nMeta(slug),
-      ]);
-      if (cancel) return;
-      if (meta) setI18nMeta(meta);
-      if (fromShard) {
-        setFrase(fromShard);
-        setLoading(false);
-        return;
+      try {
+        const [fromShard, meta] = await Promise.all([
+          loadFraseDetailBySlug(slug),
+          loadFraseI18nMeta(slug),
+        ]);
+        if (cancel) return;
+        if (meta) setI18nMeta(meta);
+        if (fromShard) {
+          setFrase(fromShard);
+          setLoading(false);
+          return;
+        }
+        const sync = getFraseCmsBySlugSync(slug);
+        setFrase(sync ?? preloadedFrase ?? null);
+        if (!sync && !preloadedFrase) setLoadError(true);
+      } catch (err) {
+        console.error('[FraseDetalhe] load failed', err);
+        if (!cancel) {
+          setFrase(preloadedFrase ?? getFraseCmsBySlugSync(slug) ?? null);
+          setLoadError(!preloadedFrase && !getFraseCmsBySlugSync(slug));
+        }
+      } finally {
+        if (!cancel) setLoading(false);
       }
-      const sync = getFraseCmsBySlugSync(slug);
-      setFrase(sync ?? null);
-      setLoading(false);
     })();
     return () => {
       cancel = true;
     };
-  }, [slug]);
+  }, [slug, preloadedFrase]);
 
   const defaultLocale: SeoLocale = useMemo(
     () =>
@@ -230,11 +257,11 @@ export default function FraseDetalheView({
 
   if (!frase || !listItem) {
     return (
-      <div className="p-20 text-center text-red-400">
-        Frase não encontrada.{' '}
-        <Link to="/frases" className="text-purple-400 underline">
-          Voltar às frases
-        </Link>
+      <div className="p-20 text-center text-red-400" role="alert">
+        {loadError ? t('frases.not_found', 'Frase não encontrada.') : t('home.sharing_wisdom')}
+        <div className="mt-4">
+          <BackNavButton label={t('nav.back_quotes', 'Voltar às frases')} fallbackPath="/frases" />
+        </div>
       </div>
     );
   }
@@ -282,12 +309,7 @@ export default function FraseDetalheView({
         ))}
       </nav>
 
-      <Link
-        to="/frases"
-        className="text-[10px] uppercase font-black text-[#A855F7] tracking-[0.2em] mb-6 inline-flex items-center gap-2 hover:gap-3 transition-all"
-      >
-        <ChevronLeft size={14} /> {t('nav.frases', 'Frases')}
-      </Link>
+      <BackNavButton label={t('nav.back_quotes', 'Voltar às frases')} fallbackPath="/frases" />
 
       <article className={`p-[1px] rounded-[2.5rem] ${cardBorderGradient('purple')} shadow-xl`}>
         <div
@@ -314,7 +336,7 @@ export default function FraseDetalheView({
                   translating ? 'opacity-55' : 'opacity-100'
                 } ${tema === 'light' ? 'text-black' : 'text-white'}`}
               >
-                &ldquo;{quoteText}&rdquo;
+                &ldquo;{sanitizeTextForTranslation(quoteText)}&rdquo;
               </motion.blockquote>
             </AnimatePresence>
 
@@ -327,21 +349,18 @@ export default function FraseDetalheView({
             </p>
 
             <div className="flex flex-wrap gap-1.5 mb-8">
-              <Link
-                to={pathFromTag(frase.categoria)}
-                className={`text-[9px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass('purple')}`}
-              >
-                #{frase.categoria.toUpperCase()}
-              </Link>
-              {frase.contextos.map((c) => (
-                <Link
-                  key={c}
-                  to={pathFromTag(c)}
-                  className={`text-[9px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass('purple')}`}
-                >
-                  #{c.toUpperCase()}
-                </Link>
-              ))}
+              {[frase.categoria, ...frase.contextos]
+                .map((c) => formatTagForDisplay(c))
+                .filter((c): c is string => Boolean(c))
+                .map((label) => (
+                  <Link
+                    key={label}
+                    to={pathFromTag(label)}
+                    className={`text-[9px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass('purple')}`}
+                  >
+                    #{label}
+                  </Link>
+                ))}
             </div>
 
             <div className="flex justify-end items-end gap-2 pt-6 border-t border-zinc-500/10 min-h-[3.375rem]">

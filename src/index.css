@@ -6,6 +6,44 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
+/* Tema instantâneo via custom properties (sem re-render pesado no toggle) */
+html[data-theme="light"] {
+  --mm-bg: #f8f9fa;
+  --mm-fg: #18181b;
+  --mm-header-bg: rgba(255, 255, 255, 0.8);
+  --mm-header-border: #e4e4e7;
+  --mm-subheader-bg: rgba(250, 245, 255, 0.8);
+}
+
+html[data-theme="dark"] {
+  --mm-bg: #000000;
+  --mm-fg: #ffffff;
+  --mm-header-bg: rgba(0, 0, 0, 0.8);
+  --mm-header-border: #18181b;
+  --mm-subheader-bg: rgba(5, 5, 5, 0.9);
+}
+
+.mm-app-shell {
+  background-color: var(--mm-bg, #000);
+  color: var(--mm-fg, #fff);
+}
+
+.mm-header-bar {
+  background-color: var(--mm-header-bg);
+  border-color: var(--mm-header-border);
+  color: var(--mm-fg);
+}
+
+.mm-subheader-bar {
+  background-color: var(--mm-subheader-bg);
+}
+
+/* Cards abaixo da dobra — menos custo de layout inicial */
+.mm-card-lazy {
+  content-visibility: auto;
+  contain-intrinsic-size: 320px 420px;
+}
+
 /* JetBrains Mono — só após paint (loading / mono UI) */
 html.mm-fonts-mono-ready {
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;

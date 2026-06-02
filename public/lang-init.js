@@ -35,10 +35,13 @@
       var stored = matchSupported(localStorage.getItem(LANG_KEY));
       if (stored) return stored;
     } catch (e) {}
-    var nav = matchSupported(
-      (navigator.language || (navigator.languages && navigator.languages[0]) || '')
+    var langs = [navigator.language].concat(
+      navigator.languages ? Array.prototype.slice.call(navigator.languages) : []
     );
-    if (nav) return nav;
+    for (var i = 0; i < langs.length; i++) {
+      var nav = matchSupported(langs[i]);
+      if (nav) return nav;
+    }
     return 'en';
   }
 

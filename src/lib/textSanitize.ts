@@ -10,6 +10,35 @@ const INVISIBLE_CHARS =
 const CURLY_SINGLE = /[\u2018\u2019\u201A\u201B\u2032\u2035`´‛‚]/g;
 const CURLY_DOUBLE = /[\u201C\u201D\u201E\u201F\u2033\u2036\u00AB\u00BB\u2039\u203A]/g;
 
+/** Reparos comuns de double-encoding UTF-8 → Windows-1252. */
+const MOJIBAKE_REPAIRS: [RegExp, string][] = [
+  [/Â©/g, '©'],
+  [/â€"/g, '—'],
+  [/â€"/g, '–'],
+  [/â€™/g, "'"],
+  [/â€œ/g, '"'],
+  [/â€\u009d/g, '"'],
+  [/Ã§/g, 'ç'],
+  [/Ã£/g, 'ã'],
+  [/Ã¡/g, 'á'],
+  [/Ã©/g, 'é'],
+  [/Ã­/g, 'í'],
+  [/Ã³/g, 'ó'],
+  [/Ãº/g, 'ú'],
+  [/Ãµ/g, 'õ'],
+  [/Ãª/g, 'ê'],
+  [/Ã´/g, 'ô'],
+  [/Ã /g, 'à'],
+];
+
+export function repairUtf8Mojibake(text: string): string {
+  let t = text;
+  for (const [re, rep] of MOJIBAKE_REPAIRS) {
+    t = t.replace(re, rep);
+  }
+  return t;
+}
+
 function coerceString(value: unknown): string {
   if (value == null) return '';
   if (typeof value === 'string') return value;
@@ -39,6 +68,7 @@ export function sanitizeTextForTranslation(text: unknown): string {
   if (!t) return '';
 
   t = t.normalize('NFC');
+  t = repairUtf8Mojibake(t);
   t = t.replace(INVISIBLE_CHARS, '');
   t = t.replace(CURLY_SINGLE, "'");
   t = t.replace(CURLY_DOUBLE, '"');

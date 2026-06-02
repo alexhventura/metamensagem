@@ -16,6 +16,10 @@ const resources = {
       "nav": {
         "home": "Início",
         "quotes": "Frases",
+        "access_quotes": "Acessar frases",
+        "back": "Voltar",
+        "back_quotes": "Voltar às frases",
+        "frases": "Frases",
         "metaforas": "Metáforas",
         "about": "Sobre",
         "contact": "Contato",
@@ -34,7 +38,9 @@ const resources = {
         "page_description": "Explore milhares de insights e citações curtas catalogadas para status, redes sociais e reflexão.",
         "search_placeholder": "Buscar frase ou autor...",
         "count_available": "{{count}} {{label}} disponíveis",
-        "count_filtered": "{{visible}} de {{count}} {{label}} disponíveis"
+        "count_filtered": "{{visible}} de {{count}} {{label}} disponíveis",
+        "volume_static": "mais de 450 mil",
+        "not_found": "Frase não encontrada."
       },
       "metaforas": {
         "collection_title": "Arquivo de Metáforas",
@@ -103,6 +109,10 @@ const resources = {
       "nav": {
         "home": "Home",
         "quotes": "Quotes",
+        "access_quotes": "Browse quotes",
+        "back": "Back",
+        "back_quotes": "Back to quotes",
+        "frases": "Quotes",
         "metaforas": "Metaphors",
         "about": "About",
         "contact": "Contact",
@@ -120,7 +130,9 @@ const resources = {
         "page_description": "Explore thousands of short insights and quotes for social media and reflection.",
         "search_placeholder": "Search quote or author...",
         "count_available": "{{count}} {{label}} available",
-        "count_filtered": "{{visible}} of {{count}} {{label}} available"
+        "count_filtered": "{{visible}} of {{count}} {{label}} available",
+        "volume_static": "more than 450 thousand",
+        "not_found": "Quote not found."
       },
       "metaforas": {
         "collection_title": "Metaphor Archive",

@@ -39,7 +39,7 @@ const shardCache = new Map<string, FraseCms[]>();
 export async function loadFraseDetailBySlug(slug: string): Promise<FraseCms | null> {
   const key = slug.toLowerCase();
   const cached = bySlug?.get(key);
-  if (cached?.semantica) return cached;
+  if (cached) return cached;
 
   const shard = shardForSlug(key);
   if (!shardCache.has(shard)) {
@@ -52,13 +52,20 @@ export async function loadFraseDetailBySlug(slug: string): Promise<FraseCms | nu
           if (!bySlug) bySlug = new Map();
           bySlug.set(f.slug.toLowerCase(), f);
         }
+      } else {
+        shardCache.set(shard, []);
       }
-    } catch {
-      return null;
+    } catch (err) {
+      console.warn('[frasesModel] shard fetch failed', shard, err);
+      shardCache.set(shard, []);
     }
   }
 
-  return shardCache.get(shard)?.find((f) => f.slug.toLowerCase() === key) ?? null;
+  const found = shardCache.get(shard)?.find((f) => f.slug.toLowerCase() === key);
+  if (found) return found;
+
+  const sync = bySlug?.get(key);
+  return sync ?? null;
 }
 
 export async function loadFrasesCms(): Promise<FraseCms[]> {
@@ -86,7 +93,7 @@ export async function loadFrasesCms(): Promise<FraseCms[]> {
           nacionalidade: null,
           nascimento_falecimento: null,
         }));
-        bySlug = new Map(cache.map((f) => [f.slug, f]));
+        bySlug = new Map(cache.map((f) => [f.slug.toLowerCase(), f]));
         return cache;
       }
     }
@@ -112,7 +119,7 @@ export async function loadFrasesCms(): Promise<FraseCms[]> {
     nacionalidade: null,
     nascimento_falecimento: null,
   }));
-  bySlug = new Map(cache.map((f) => [f.slug, f]));
+  bySlug = new Map(cache.map((f) => [f.slug.toLowerCase(), f]));
   return cache;
 }
 
@@ -122,7 +129,35 @@ export function getFraseCmsBySlugSync(slug: string): FraseCms | undefined {
 
 export function primeFrasesCms(frases: FraseCms[]): void {
   cache = frases;
-  bySlug = new Map(frases.map((f) => [f.slug, f]));
+  bySlug = new Map(frases.map((f) => [f.slug.toLowerCase(), f]));
+}
+
+/** Converte item de card/lista em FraseCms mínimo (navegação com state). */
+export function fraseCmsFromListItem(item: {
+  id: string;
+  slug?: string;
+  texto: string;
+  autor: string;
+  tags?: string[];
+}): FraseCms {
+  const slug = (item.slug || item.id).toLowerCase();
+  const tags = item.tags || [];
+  return {
+    id: item.id,
+    slug,
+    frase_original: item.texto,
+    autor_original: item.autor || 'Anônimo',
+    categoria: tags[0] || 'reflexao',
+    contextos: tags.slice(1),
+    explicacao: '',
+    palavras_chave: tags,
+    ano_ou_data: null,
+    fontes: null,
+    observacao: null,
+    autor_tipo: null,
+    nacionalidade: null,
+    nascimento_falecimento: null,
+  };
 }
 
 export function fraseToListItem(f: FraseCms) {

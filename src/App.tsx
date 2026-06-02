@@ -74,7 +74,8 @@ import CardTooltip from './components/CardTooltip';
 import { CARD_ACTION_BTN, cardNeutralActionClass } from './lib/cardTheme';
 import { useTheme } from './context/ThemeContext';
 import { UiLocaleSync } from './hooks/useUiLocaleSync';
-import { fetchTotalFrasesCount } from './lib/catalogStats';
+import { tagsForDisplay } from './lib/tagDisplay';
+import BackNavButton from './components/BackNavButton';
 
 interface ModalProps {
   item: ItemConteudo;
@@ -99,6 +100,7 @@ export default function App() {
   const [bancoRandom, setBancoRandom] = useState<ItemConteudo[]>([]);
   const [tagsBootstrap, setTagsBootstrap] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
+  const [catalogReady, setCatalogReady] = useState(false);
 
   const mostrarToast = (mensagem: string, tipo: 'sucesso' | 'info' | 'erro' = 'sucesso') => {
     setToast({ mensagem, tipo });
@@ -144,6 +146,7 @@ export default function App() {
       )
     );
     setTagsBootstrap(full.tags);
+    setCatalogReady(true);
   }, []);
 
   const requestFullCatalog = useCallback(() => {
@@ -168,9 +171,7 @@ export default function App() {
       <UiLocaleSync />
       {/* Layout raiz (equiv. app/layout.tsx): script global AdSense Auto Ads */}
       <GoogleAdSense />
-      <div className={`min-h-screen transition-colors duration-500 flex flex-col font-sans ${
-        tema === 'light' ? 'bg-[#F8F9FA] text-zinc-900' : 'bg-black text-white'
-      }`}>
+      <div className="min-h-screen mm-app-shell flex flex-col font-sans">
         {/* TOAST SYSTEM PREMIUM */}
         <AnimatePresence>
           {toast && (
@@ -201,9 +202,7 @@ export default function App() {
         />
 
         {/* HEADER FIXO */}
-        <header className={`sticky top-0 z-40 border-b select-none backdrop-blur-md ${
-          tema === 'light' ? 'bg-white/80 border-zinc-200 text-black' : 'bg-black/80 border-zinc-900 text-white'
-        }`}>
+        <header className="sticky top-0 z-40 border-b select-none backdrop-blur-md mm-header-bar">
           <div className="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
               <HeaderBrandButton />
 
@@ -211,9 +210,11 @@ export default function App() {
             </nav>
 
             <div className="flex items-center gap-2 md:gap-4">
-              <button 
-                onClick={toggleTema} 
-                className={`p-2.5 rounded-2xl border transition-all hover:scale-110 ${
+              <button
+                type="button"
+                onClick={toggleTema}
+                aria-label={tema === 'light' ? 'Ativar modo escuro' : 'Ativar modo claro'}
+                className={`p-2.5 rounded-2xl border transition-transform hover:scale-110 ${
                   tema === 'light' ? 'bg-white border-purple-200 text-[#FACC15]' : 'bg-zinc-900 border-purple-500/30 text-[#60A5FA]'
                 }`}
               >
@@ -229,13 +230,11 @@ export default function App() {
         </div>
 
         {/* SUBHEADER DE NAVEGA�!ÒO REFOR�!ADA */}
-        <div className={`py-4 border-b sticky top-20 z-30 backdrop-blur-md transition-colors ${
-          tema === 'light' ? 'bg-purple-50/80 border-purple-100/50' : 'bg-[#050505]/90 border-purple-900/20'
-        }`}>
+        <div className="py-4 border-b sticky top-20 z-30 backdrop-blur-md mm-subheader-bar border-purple-900/20">
           <div className="max-w-5xl mx-auto px-4 flex justify-center gap-12 md:gap-20">
-            <Link to="/frases" className={`text-[11px] font-black uppercase tracking-[0.4em] transition-all flex items-center gap-2.5 ${tema === 'light' ? 'text-purple-600' : 'text-purple-400'} hover:scale-105 active:scale-95`}>
+            <Link to="/frases" aria-label={t('nav.access_quotes')} className={`text-[11px] font-black uppercase tracking-[0.4em] transition-transform flex items-center gap-2.5 ${tema === 'light' ? 'text-purple-600' : 'text-purple-400'} hover:scale-105 active:scale-95`}>
               <div className="w-1 h-1 bg-purple-500 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.5)]"></div>
-              {t('nav.quotes')}
+              {t('nav.access_quotes', t('nav.quotes'))}
             </Link>
             <Link to="/metaforas" className={`text-[11px] font-black uppercase tracking-[0.4em] transition-all flex items-center gap-2.5 ${tema === 'light' ? 'text-purple-600' : 'text-purple-400'} hover:scale-105 active:scale-95`}>
               <div className="w-1 h-1 bg-purple-500 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.5)]"></div>
@@ -245,12 +244,12 @@ export default function App() {
         </div>
 
         {/* ROTAS DA APLICA�!ÒO */}
-        <div className="flex-1 flex flex-col">
+        <main className="flex-1 flex flex-col">
           {loading ? (
-            <div className="flex-1 flex items-center justify-center">
+            <div className="flex-1 flex items-center justify-center" role="status" aria-live="polite">
               <div className="text-center">
-                <div className="w-12 h-12 border-4 border-[#A855F7] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                <p className="font-mono text-[10px] uppercase tracking-widest opacity-40">Sincronizando Sabedoria Edge...</p>
+                <div className="w-12 h-12 border-4 border-[#A855F7] border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+                <p className="font-mono text-[10px] uppercase tracking-widest opacity-40">{t('home.sharing_wisdom')}</p>
               </div>
             </div>
           ) : (
@@ -274,7 +273,18 @@ export default function App() {
                     />
                   }
                 />
-                <Route path="/frases" element={<FrasesView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
+                <Route
+                  path="/frases"
+                  element={
+                    <FrasesView
+                      tema={tema}
+                      toast={mostrarToast}
+                      banco={bancoTotal}
+                      catalogReady={catalogReady}
+                      onRequestCatalog={requestFullCatalog}
+                    />
+                  }
+                />
                 <Route path="/frases/:slug" element={<FraseDetalheView tema={tema} toast={mostrarToast} />} />
                 {SEO_LOCALES.map((lang) => (
                   <Route
@@ -306,7 +316,7 @@ export default function App() {
               </Routes>
             </Suspense>
           )}
-        </div>
+        </main>
 
         {/* FOOTER */}
         <footer className={`py-8 text-center text-xs border-t mt-auto ${tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-500' : 'bg-zinc-950 border-zinc-900 text-zinc-600'}`}>
@@ -316,7 +326,7 @@ export default function App() {
             <Link to="/termos">{t('nav.terms')}</Link>
             <Link to="/cookies">{t('nav.cookies')}</Link>
           </div>
-          <p>Â© 2025 Metamensagem.com. Todos os direitos reservados.</p>
+          <p>© 2025 Metamensagem.com. Todos os direitos reservados.</p>
         </footer>
       </div>
     </BrowserRouter>
@@ -460,10 +470,18 @@ function HeaderBrandButton() {
   const handleClick = () => {
     const path = location.pathname.replace(/\/$/, '') || '/';
     if (path === '/') {
-      window.location.reload();
-    } else {
-      navigate('/');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
     }
+    try {
+      if (window.history.length > 1) {
+        window.history.back();
+        return;
+      }
+    } catch {
+      /* ignore */
+    }
+    navigate('/');
   };
 
   return (
@@ -518,10 +536,7 @@ function HomeView({
     [bancoRandom]
   );
   const tagsFrases = useMemo(
-    () =>
-      Array.from(new Set(bancoFrases.flatMap((f) => f.tags || [])))
-        .sort()
-        .slice(0, 12),
+    () => tagsForDisplay(bancoFrases.flatMap((f) => f.tags || []), 12),
     [bancoFrases]
   );
   const resultadosFiltrados = useMemo(() => {
@@ -666,31 +681,42 @@ function HomeView({
 /** Contador discreto abaixo do título (coleção / filtro ativo). */
 function ColecaoContador({
   tema,
-  total,
+  mode = 'numeric',
+  total = 0,
   visiveis,
   buscaAtiva,
   singular,
   plural,
 }: {
   tema: string;
-  total: number;
+  mode?: 'volume' | 'numeric';
+  total?: number;
   visiveis?: number;
   buscaAtiva?: boolean;
-  singular: string;
-  plural: string;
+  singular?: string;
+  plural?: string;
 }) {
   const { t, i18n } = useTranslation();
-  const rotulo = total === 1 ? singular : plural;
   const locale = i18n.language?.startsWith('pt') ? 'pt-BR' : i18n.language || 'en';
   const fmt = (n: number) => n.toLocaleString(locale);
-  const texto =
-    buscaAtiva && visiveis !== undefined && visiveis !== total
-      ? t('frases.count_filtered', {
-          visible: fmt(visiveis),
-          count: fmt(total),
-          label: rotulo,
-        })
-      : t('frases.count_available', { count: fmt(total), label: rotulo });
+
+  let displayText: string;
+  if (mode === 'volume') {
+    displayText =
+      buscaAtiva && visiveis !== undefined
+        ? `${fmt(visiveis)} · ${t('frases.volume_static')}`
+        : t('frases.volume_static');
+  } else {
+    const rotulo = total === 1 ? singular : plural;
+    displayText =
+      buscaAtiva && visiveis !== undefined && visiveis !== total
+        ? t('frases.count_filtered', {
+            visible: fmt(visiveis),
+            count: fmt(total),
+            label: rotulo ?? '',
+          })
+        : t('frases.count_available', { count: fmt(total), label: rotulo ?? '' });
+  }
 
   return (
     <p
@@ -699,7 +725,7 @@ function ColecaoContador({
       }`}
       aria-live="polite"
     >
-      {texto}
+      {displayText}
     </p>
   );
 }
@@ -710,21 +736,36 @@ function ColecaoContador({
 const LIST_PAGE_INITIAL = 24;
 const LIST_PAGE_STEP = 16;
 
-function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: ItemConteudo[] }) {
+function FrasesView({
+  tema,
+  toast,
+  banco,
+  catalogReady,
+  onRequestCatalog,
+}: {
+  tema: string;
+  toast: (msg: string, tipo?: 'sucesso' | 'info' | 'erro') => void;
+  banco: ItemConteudo[];
+  catalogReady: boolean;
+  onRequestCatalog?: () => void;
+}) {
   const { t } = useTranslation();
-  const [totalAcervo, setTotalAcervo] = useState(0);
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(LIST_PAGE_INITIAL);
+  const [catalogLoading, setCatalogLoading] = useState(false);
 
   useEffect(() => {
-    let cancelled = false;
-    fetchTotalFrasesCount().then((n) => {
-      if (!cancelled) setTotalAcervo(n);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+    onRequestCatalog?.();
+  }, [onRequestCatalog]);
+
+  useEffect(() => {
+    if (catalogReady) {
+      setCatalogLoading(false);
+      return;
+    }
+    setCatalogLoading(true);
+  }, [catalogReady]);
+
   const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
   const baseFrases = useMemo(() => {
     const list = banco.filter((i) => i.tipo === 'frase');
@@ -740,9 +781,10 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
     setItensVisiveis(LIST_PAGE_INITIAL);
   }, [busca]);
 
-  const tags = useMemo(() => {
-    return Array.from(new Set(baseFrases.flatMap(f => f.tags || []))).sort().slice(0, 10);
-  }, [baseFrases]);
+  const tags = useMemo(
+    () => tagsForDisplay(baseFrases.flatMap((f) => f.tags || []), 10),
+    [baseFrases]
+  );
 
   const itensFrases = useMemo(
     () =>
@@ -754,11 +796,7 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
   );
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="max-w-7xl w-full mx-auto px-4 py-8 flex-1"
-    >
+    <div className="max-w-7xl w-full mx-auto px-4 py-8 flex-1">
       <MudarMetaSEO
         title={t('frases.page_title')}
         description={t('frases.page_description')}
@@ -766,16 +804,14 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
       />
       
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-black mb-2 uppercase tracking-widest text-[#A855F7] flex items-center justify-center gap-3">
-          <Quote /> {t('frases.collection_title')}
-        </h2>
+        <h1 className="text-3xl font-black mb-2 uppercase tracking-widest text-[#A855F7] flex items-center justify-center gap-3">
+          <Quote aria-hidden /> {t('frases.collection_title')}
+        </h1>
         <ColecaoContador
           tema={tema}
-          total={totalAcervo > 0 ? totalAcervo : baseFrases.length}
+          mode="volume"
           visiveis={frases.length}
           buscaAtiva={!!busca.trim()}
-          singular="frase"
-          plural="frases"
         />
         <div className="relative max-w-xl mx-auto">
           <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />
@@ -793,14 +829,26 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
           />
         </div>
         <div className="flex flex-wrap justify-center gap-2 mt-4">
-          {tags.map(tag => (
-            <button key={tag} onClick={() => setBusca(tag)} className={`px-3 py-1 rounded-full text-[10px] font-bold border transition-all ${busca === tag ? 'bg-purple-600 border-purple-600 text-white' : 'bg-zinc-500/5 text-zinc-500 border-zinc-500/10 hover:border-zinc-500/30'}`}>#{tag}</button>
+          {tags.map((tag) => (
+            <button
+              key={tag}
+              type="button"
+              onClick={() => setBusca(tag)}
+              className={`px-3 py-1 rounded-full text-[10px] font-bold border transition-colors ${busca === tag ? 'bg-purple-600 border-purple-600 text-white' : 'bg-zinc-500/5 text-zinc-500 border-zinc-500/10 hover:border-zinc-500/30'}`}
+            >
+              #{tag}
+            </button>
           ))}
         </div>
       </div>
 
+      {catalogLoading && baseFrases.length === 0 ? (
+        <div className="flex justify-center py-16" role="status" aria-live="polite">
+          <div className="w-10 h-10 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
+        </div>
+      ) : (
       <div className={GRID_CONTENT}>
-        {itensFrases.map((itemObj) => {
+        {itensFrases.map((itemObj, index) => {
           if (itemObj.tipoItem === 'anuncio') {
             return (
               <div key={itemObj.id} className="col-span-full">
@@ -810,16 +858,19 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
           }
 
           return (
-            <ContentCard
-              key={itemObj.content.id}
-              item={itemObj.content}
-              tema={tema}
-              toast={toast}
-              onGenerateImage={(quote) => setImageQuote(quote)}
-            />
+            <div key={itemObj.content.id} className={index >= LIST_PAGE_INITIAL ? 'mm-card-lazy' : undefined}>
+              <ContentCard
+                item={itemObj.content}
+                tema={tema}
+                toast={toast}
+                onGenerateImage={(quote) => setImageQuote(quote)}
+                lazyBelowFold={index >= LIST_PAGE_INITIAL}
+              />
+            </div>
           );
         })}
       </div>
+      )}
 
       {frases.length > itensVisiveis && (
         <button
@@ -842,7 +893,7 @@ function FrasesView({ tema, toast, banco }: { tema: string; toast: any; banco: I
           tema={tema}
         />
       )}
-    </motion.div>
+    </div>
   );
 }
 
@@ -864,9 +915,10 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
     setItensVisiveis(LIST_PAGE_INITIAL);
   }, [busca]);
 
-  const tags = useMemo(() => {
-    return Array.from(new Set(baseMetaforas.flatMap(m => m.tags || []))).sort().slice(0, 10);
-  }, [baseMetaforas]);
+  const tags = useMemo(
+    () => tagsForDisplay(baseMetaforas.flatMap((m) => m.tags || []), 10),
+    [baseMetaforas]
+  );
 
   const itensMetaforas = useMemo(
     () =>
@@ -1082,9 +1134,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       
       <div className={`mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b pb-10 ${tema === 'light' ? 'border-zinc-200' : 'border-zinc-800'}`}>
         <div className="flex-1">
-          <Link to="/metaforas" className="text-[10px] uppercase font-black text-[#A855F7] tracking-[0.2em] mb-4 flex items-center gap-2 hover:gap-3 transition-all">
-            <ChevronRight size={12} className="rotate-180" /> Metáfora Terapêutica
-          </Link>
+          <BackNavButton label="Metáfora Terapêutica" fallbackPath="/metaforas" className="text-[10px] uppercase font-black text-[#A855F7] tracking-[0.2em] mb-4 inline-flex items-center gap-2 hover:gap-3 transition-[gap] bg-transparent border-0 p-0 cursor-pointer" />
           <AnimatePresence mode="wait">
             <motion.h1
               key={(display.titulo ?? item.titulo) + String(display.isTranslated)}
@@ -1139,7 +1189,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
               onClick={() => {
                 const titulo = display.titulo ?? item.titulo;
                 const texto = display.texto || item.texto;
-                navigator.clipboard.writeText(`${titulo}\n\n${texto}\nâ€” ${item.autor}`);
+                navigator.clipboard.writeText(`${titulo}\n\n${texto}\n— ${item.autor}`);
                 toast(t('common.copied'));
               }}
               className={`${CARD_ACTION_BTN} ${cardNeutralActionClass(tema)}`}

@@ -53,9 +53,28 @@ export function resolveTheme(): Theme {
   return getSystemTheme();
 }
 
+function applyThemeCssVars(theme: Theme): void {
+  if (typeof document === 'undefined') return;
+  const root = document.documentElement;
+  if (theme === 'light') {
+    root.style.setProperty('--mm-bg', '#F8F9FA');
+    root.style.setProperty('--mm-fg', '#18181b');
+    root.style.setProperty('--mm-header-bg', 'rgba(255,255,255,0.8)');
+    root.style.setProperty('--mm-header-border', '#e4e4e7');
+    root.style.setProperty('--mm-subheader-bg', 'rgba(250,245,255,0.8)');
+  } else {
+    root.style.setProperty('--mm-bg', '#000000');
+    root.style.setProperty('--mm-fg', '#ffffff');
+    root.style.setProperty('--mm-header-bg', 'rgba(0,0,0,0.8)');
+    root.style.setProperty('--mm-header-border', '#18181b');
+    root.style.setProperty('--mm-subheader-bg', 'rgba(5,5,5,0.9)');
+  }
+}
+
 export function applyTheme(theme: Theme): void {
   if (typeof document !== 'undefined') {
     document.documentElement.setAttribute('data-theme', theme);
+    applyThemeCssVars(theme);
   }
   try {
     localStorage.setItem(THEME_STORAGE_KEY, theme);
@@ -71,6 +90,7 @@ export function initThemeOnLoad(): Theme {
   const theme = stored ?? getSystemTheme();
   if (typeof document !== 'undefined') {
     document.documentElement.setAttribute('data-theme', theme);
+    applyThemeCssVars(theme);
   }
   if (stored) {
     try {

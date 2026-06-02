@@ -12,10 +12,17 @@ export function uiLocaleFromPathname(pathname: string): UiLocale | null {
   return seg;
 }
 
-function normalizeNavigatorLocale(): string {
-  if (typeof navigator === 'undefined') return '';
-  const raw = navigator.language || (navigator.languages?.[0] ?? '');
-  return raw.toLowerCase().split('-')[0];
+function navigatorUiLocale(): UiLocale | null {
+  if (typeof navigator === 'undefined') return null;
+  const candidates = [
+    navigator.language,
+    ...(navigator.languages ?? []),
+  ].filter(Boolean) as string[];
+  for (const raw of candidates) {
+    const matched = matchSupportedUiLocale(raw);
+    if (matched) return matched;
+  }
+  return null;
 }
 
 export function matchSupportedUiLocale(code: string | null | undefined): UiLocale | null {
@@ -34,7 +41,7 @@ export function resolveUiLocale(pathname: string = '/'): UiLocale {
     if (stored) return stored;
   }
 
-  const fromNav = matchSupportedUiLocale(normalizeNavigatorLocale());
+  const fromNav = navigatorUiLocale();
   if (fromNav) return fromNav;
 
   return 'en';

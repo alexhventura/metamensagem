@@ -26,26 +26,30 @@ import {
 import type { ItemConteudo } from '../types/content';
 import { quoteFromItem } from './image-generator/utils/quoteFromItem';
 import type { ImageGeneratorQuote } from './image-generator/types';
+import { formatTagForDisplay } from '../lib/tagDisplay';
+import { sanitizeTextForTranslation } from '../lib/textSanitize';
 
 export default function ContentCard({
   item,
   tema,
   onGenerateImage,
   toast,
+  lazyBelowFold = false,
 }: {
   item: ItemConteudo;
   tema: string;
   onGenerateImage?: (quote: ImageGeneratorQuote) => void;
   toast: (msg: string) => void;
+  lazyBelowFold?: boolean;
 }) {
   const { t } = useTranslation();
   const isFrase = item.tipo === 'frase';
   const accent = cardAccentForTipo(item.tipo);
 
   const [display, setDisplay] = useState<CardContentDisplay>(() => ({
-    texto: item.texto,
-    titulo: item.titulo,
-    resumo: item.resumo,
+    texto: sanitizeTextForTranslation(item.texto),
+    titulo: item.titulo ? sanitizeTextForTranslation(item.titulo) : item.titulo,
+    resumo: item.resumo ? sanitizeTextForTranslation(item.resumo) : item.resumo,
     isTranslated: false,
   }));
   const [translating, setTranslating] = useState(false);
@@ -109,10 +113,21 @@ export default function ContentCard({
 
   const neutralAction = cardNeutralActionClass(tema);
 
+  const displayTags = useMemo(
+    () =>
+      (item.tags || [])
+        .map((tag) => formatTagForDisplay(tag))
+        .filter((t): t is string => Boolean(t))
+        .slice(0, 3),
+    [item.tags]
+  );
+
+  const linkState = isFrase ? { item } : undefined;
+
   return (
     <motion.div
-      layout
-      initial={{ opacity: 0, scale: 0.95 }}
+      layout={!lazyBelowFold}
+      initial={lazyBelowFold ? false : { opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       className={`p-[1px] rounded-[2.5rem] ${cardBorderGradient(accent)} h-full`}
     >
@@ -155,6 +170,7 @@ export default function ContentCard({
                 >
                   <Link
                     to={detailPath}
+                    state={linkState}
                     className={cardTitleLinkClass(tema, accent, 'frase')}
                   >
                     &ldquo;{bodyText}&rdquo;
@@ -189,6 +205,7 @@ export default function ContentCard({
             <div className="mb-4">
               <Link
                 to={detailPath}
+                state={linkState}
                 className={`inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl transition-all ${cardReadMoreBtnClass(tema, accent)}`}
               >
                 <BookOpen size={14} />
@@ -198,13 +215,13 @@ export default function ContentCard({
           </div>
 
           <div className="flex flex-wrap gap-1.5 mt-auto">
-            {item.tags?.slice(0, 3).map((tag) => (
+            {displayTags.map((tag) => (
               <Link
                 key={tag}
                 to={pathFromTag(tag)}
                 className={`text-[9px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass(accent)}`}
               >
-                #{tag.toUpperCase()}
+                #{tag}
               </Link>
             ))}
           </div>
@@ -222,6 +239,7 @@ export default function ContentCard({
             <button
               type="button"
               onClick={handleCopy}
+              aria-label={t('common.copy')}
               className={`${CARD_ACTION_BTN} ${neutralAction}`}
             >
               <Copy size={18} />

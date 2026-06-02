@@ -1,14 +1,34 @@
 /**
- * GET /api/frase-detail?slug=... — uma frase do acervo (sem baixar shard inteiro no cliente).
+ * GET /api/frase-detail?slug=... — uma frase (lê shards via CDN; sem fs no serverless).
  */
-export const config = {
-  runtime: 'nodejs',
-};
-
 import {
-  fraseDetailCacheHeaders,
-  readFraseDetailFromShards,
-} from '../lib/frases/detailLookupServer';
+  findFraseInList,
+  shardsToProbe,
+  type FraseDetailRecord,
+} from '../lib/frases/detailLookup';
+
+const CACHE = 'public, max-age=31536000, immutable';
+
+async function loadFraseFromShards(
+  slug: string,
+  assetBase: string
+): Promise<FraseDetailRecord | null> {
+  const base = assetBase.replace(/\/$/, '');
+  for (const shardId of shardsToProbe(slug)) {
+    try {
+      const res = await fetch(`${base}/frases-v2/detail/shard-${shardId}.json`, {
+        headers: { Accept: 'application/json' },
+      });
+      if (!res.ok) continue;
+      const list = (await res.json()) as FraseDetailRecord[];
+      const found = findFraseInList(list, slug);
+      if (found) return found;
+    } catch {
+      /* próximo shard */
+    }
+  }
+  return null;
+}
 
 export default async function handler(req: Request): Promise<Response> {
   if (req.method !== 'GET') {
@@ -22,11 +42,11 @@ export default async function handler(req: Request): Promise<Response> {
   }
 
   try {
-    const frase = await readFraseDetailFromShards(slug);
+    const frase = await loadFraseFromShards(slug, url.origin);
     if (!frase) {
       return Response.json({ slug, found: false, message: 'Frase não encontrada' }, { status: 404 });
     }
-    return Response.json(frase, { headers: fraseDetailCacheHeaders() });
+    return Response.json(frase, { headers: { 'Cache-Control': CACHE } });
   } catch {
     return Response.json(
       { slug, found: false, message: 'Frase não encontrada' },

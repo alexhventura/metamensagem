@@ -37,7 +37,11 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!api/).*)",
+      "source": "/imagem/:id",
+      "destination": "/api/og/frase?id=:id"
+    },
+    {
+      "source": "/((?!api/|imagem/).*)",
       "destination": "/index.html"
     }
   ],

@@ -4,9 +4,11 @@ import './index.css';
 import { initThemeOnLoad } from './lib/theme';
 import { ThemeProvider } from './context/ThemeContext';
 import { initLcpObserver } from './lib/perf/lcpObserver';
+import { initAnalytics } from './lib/analytics';
 
 initThemeOnLoad();
 initLcpObserver();
+initAnalytics();
 
 import './i18n';
 

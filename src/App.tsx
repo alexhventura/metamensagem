@@ -74,6 +74,7 @@ import CardTooltip from './components/CardTooltip';
 import { CARD_ACTION_BTN, cardNeutralActionClass } from './lib/cardTheme';
 import { useTheme } from './context/ThemeContext';
 import { UiLocaleSync } from './hooks/useUiLocaleSync';
+import AnalyticsRouteSync from './components/AnalyticsRouteSync';
 import { tagsForDisplay } from './lib/tagDisplay';
 import BackNavButton from './components/BackNavButton';
 
@@ -169,6 +170,7 @@ export default function App() {
     <BrowserRouter>
       <CatalogRouteSync applyCatalog={applyFullCatalog} />
       <UiLocaleSync />
+      <AnalyticsRouteSync />
       {/* Layout raiz (equiv. app/layout.tsx): script global AdSense Auto Ads */}
       <GoogleAdSense />
       <div className="min-h-screen mm-app-shell flex flex-col font-sans">

@@ -17,6 +17,18 @@ export type ImageGenerationMeta = {
 };
 
 export function recordImageGeneration(meta: ImageGenerationMeta): void {
+  void import('../../../lib/analytics/imageAnalytics').then(({ trackImageGenerate }) => {
+    trackImageGenerate({
+      phrase_id: meta.phraseId,
+      category: meta.category,
+      locale: meta.locale,
+      format: meta.format,
+      skin_id: meta.skinId,
+      collection_id: meta.collectionId,
+      serial: meta.serial,
+    });
+  });
+
   if (typeof localStorage === 'undefined') return;
   try {
     const raw = localStorage.getItem(LOG_KEY);

@@ -5,6 +5,7 @@
  */
 import fs from 'fs';
 import path from 'path';
+import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'url';
 import { absoluteUrl } from './lib/site-url.mjs';
 
@@ -115,3 +116,12 @@ ${sitemapRefs.map((loc) => `  <sitemap><loc>${escapeXml(loc)}</loc></sitemap>`).
 </sitemapindex>`;
 fs.writeFileSync(path.join(PUBLIC, 'sitemap-index.xml'), index);
 console.log('✅ sitemap-index.xml (principal + idiomas)');
+
+const idx = spawnSync(process.execPath, [path.join(ROOT, 'scripts/submit-indexnow.mjs')], {
+  cwd: ROOT,
+  stdio: 'inherit',
+  env: process.env,
+});
+if (idx.status !== 0 && process.env.INDEXNOW_KEY) {
+  process.exit(idx.status ?? 1);
+}

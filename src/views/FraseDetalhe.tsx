@@ -43,6 +43,7 @@ import { availableLanguagesFromMeta, loadFraseI18nMeta } from '../lib/globalSeoC
 import { pickTitleDescription } from '../../lib/seo/i18nTemplates';
 import { useTranslatedViewMeta } from '../lib/useTranslatedViewMeta';
 import { applyHreflangLinks } from '../lib/seoHreflang';
+import { ogImageUrlForPhrase } from '../lib/seo/ogImageUrl';
 import type { SeoLocale } from '../../lib/i18n/locales';
 import { SOURCE_CONTENT_LOCALE } from '../../lib/i18n/platform';
 import { getOrCreatePhraseTranslation } from '../lib/translation/phraseTranslationService';
@@ -55,12 +56,14 @@ function MudarMetaSEO({
   canonical,
   hreflangLinks,
   htmlLang,
+  ogImage,
 }: {
   title: string;
   description: string;
   canonical: string;
   hreflangLinks: { hreflang: string; href: string }[];
   htmlLang: string;
+  ogImage?: string;
 }) {
   useEffect(() => {
     const prevLang = document.documentElement.lang;
@@ -75,11 +78,28 @@ function MudarMetaSEO({
       document.head.appendChild(link);
     }
     link.href = canonical;
+
+    const upsertMeta = (attr: 'name' | 'property', key: string, content: string) => {
+      let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement | null;
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+      }
+      el.content = content;
+    };
+
+    if (ogImage) {
+      upsertMeta('property', 'og:image', ogImage);
+      upsertMeta('name', 'twitter:image', ogImage);
+      upsertMeta('name', 'twitter:card', 'summary_large_image');
+    }
+
     applyHreflangLinks(hreflangLinks);
     return () => {
       document.documentElement.lang = prevLang;
     };
-  }, [title, description, canonical, hreflangLinks, htmlLang]);
+  }, [title, description, canonical, hreflangLinks, htmlLang, ogImage]);
 
   return null;
 }
@@ -164,7 +184,11 @@ export default function FraseDetalheView({
         if (meta) setI18nMeta(meta);
         if (fromShard) {
           setFrase(fromShard);
-          trackPhraseEvent(fromShard.slug, 'view');
+          trackPhraseEvent(fromShard.slug, 'view', {
+            phrase_id: fromShard.id,
+            category: fromShard.categoria,
+            locale: routeInfo?.prefixLocale ?? undefined,
+          });
           const canonical = fromShard.slug.toLowerCase();
           if (slug && canonical !== slug.toLowerCase()) {
             const def = seoLocaleFromLanguageOriginal(
@@ -286,14 +310,22 @@ export default function FraseDetalheView({
 
   const handleCopy = () => {
     if (!frase) return;
-    trackPhraseEvent(frase.slug, 'copy');
+    trackPhraseEvent(frase.slug, 'copy', {
+      phrase_id: frase.id,
+      category: frase.categoria,
+      locale: contentLocale,
+    });
     navigator.clipboard.writeText(`${quoteText} — ${authorLine}`);
     toast(t('common.copied'));
   };
 
   const handleShare = async () => {
     if (!frase) return;
-    trackPhraseEvent(frase.slug, 'share');
+    trackPhraseEvent(frase.slug, 'share', {
+      phrase_id: frase.id,
+      category: frase.categoria,
+      locale: contentLocale,
+    });
     const shareUrl = canonical;
     const payload = {
       title: frase.autor_original,
@@ -364,6 +396,7 @@ export default function FraseDetalheView({
         canonical={canonical}
         hreflangLinks={hreflangLinks}
         htmlLang={pageHtmlLang}
+        ogImage={ogImageUrlForPhrase(frase.id)}
       />
 
       <nav className="sr-only" aria-label="Idiomas">

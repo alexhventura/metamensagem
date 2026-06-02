@@ -25,6 +25,7 @@ import {
 } from '../lib/cardTheme';
 import type { ItemConteudo } from '../types/content';
 import { quoteFromItem } from './image-generator/utils/quoteFromItem';
+import { trackPhraseEvent } from '../lib/analytics/phrasePopularity';
 import type { ImageGeneratorQuote } from './image-generator/types';
 import { formatTagForDisplay } from '../lib/tagDisplay';
 import { sanitizeTextForTranslation } from '../lib/textSanitize';
@@ -87,6 +88,12 @@ export default function ContentCard({
       ? `${texto} — ${item.autor}`
       : `${titulo}\n\n${texto}\n— ${item.autor}`;
     navigator.clipboard.writeText(textToCopy);
+    if (isFrase) {
+      trackPhraseEvent(item.slug || item.id, 'copy', {
+        phrase_id: item.id,
+        category: item.tags?.[0],
+      });
+    }
     toast(t('common.copied'));
   };
 
@@ -101,6 +108,12 @@ export default function ContentCard({
     try {
       if (navigator.share) {
         await navigator.share(sharePayload);
+        if (isFrase) {
+          trackPhraseEvent(item.slug || item.id, 'share', {
+            phrase_id: item.id,
+            category: item.tags?.[0],
+          });
+        }
         return;
       }
     } catch (err) {
@@ -108,6 +121,12 @@ export default function ContentCard({
     }
 
     await navigator.clipboard.writeText(shareUrl);
+    if (isFrase) {
+      trackPhraseEvent(item.slug || item.id, 'share', {
+        phrase_id: item.id,
+        category: item.tags?.[0],
+      });
+    }
     toast(t('common.link_copied'));
   };
 

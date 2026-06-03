@@ -1,5 +1,5 @@
 import { ImageResponse } from '@vercel/og';
-import { computeImageLayout, truncateFooterLabel } from '../../src/components/image-generator/utils/textLayout';
+import { computeImageLayout, formatFooterCategory, formatFooterMetaLine, truncateFooterLabel } from '../../src/components/image-generator/utils/textLayout';
 import { requestUrl, type ApiRequest, type ApiResponse } from '../_http.js';
 
 function previewSerialForQuote(quoteId: string): string {
@@ -77,9 +77,9 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
 
   const serial = previewSerialForQuote(frase.id);
   const layout = computeImageLayout(frase.texto, frase.autor, 1200, 630);
-  const skin = frase.categoria || 'premium';
+  const categoryLabel = formatFooterCategory(frase.categoria);
+  const metaLine = formatFooterMetaLine(categoryLabel, truncateFooterLabel(serial, 28));
   const author = frase.autor.trim();
-  const serialDisplay = truncateFooterLabel(serial, 22);
 
   const { zones } = layout;
 
@@ -147,6 +147,8 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
               fontWeight: 800,
               lineHeight: `${layout.lineHeight}px`,
               margin: 0,
+              maxWidth: '70%',
+              textShadow: '0 2px 12px rgba(0,0,0,0.25)',
             }}
           >
             {layout.lines.map((line, i) => (
@@ -201,65 +203,42 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
+            alignItems: 'center',
             gap: 6,
             lineHeight: 1.35,
-            borderTop: '1px solid rgba(255,255,255,0.12)',
+            borderTop: '1px solid rgba(255,255,255,0.14)',
             paddingBottom: layout.padBottom,
             overflow: 'hidden',
+            textAlign: 'center',
           }}
         >
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              width: '100%',
-              gap: 16,
-            }}
-          >
-            <span
-              style={{
-                fontSize: layout.footerPx,
-                fontWeight: 500,
-                letterSpacing: '0.6px',
-                opacity: 0.72,
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap',
-                maxWidth: '55%',
-              }}
-            >
-              metamensagem.com
-            </span>
-            <span
-              style={{
-                fontSize: layout.footerPx,
-                fontWeight: 500,
-                letterSpacing: '0.6px',
-                opacity: 0.72,
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap',
-                maxWidth: '40%',
-                textAlign: 'center',
-              }}
-            >
-              {skin}
-            </span>
-          </div>
           <span
             style={{
-              fontSize: layout.footerSerialPx,
-              fontWeight: 400,
-              letterSpacing: '0.45px',
-              opacity: 0.6,
-              textAlign: 'right',
+              fontSize: layout.footerPx,
+              fontWeight: 500,
+              letterSpacing: '0.6px',
+              opacity: 0.78,
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
+              maxWidth: '100%',
             }}
           >
-            {serialDisplay}
+            metamensagem.com
+          </span>
+          <span
+            style={{
+              fontSize: layout.footerSerialPx,
+              fontWeight: 500,
+              letterSpacing: '0.45px',
+              opacity: 0.68,
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap',
+              maxWidth: '100%',
+            }}
+          >
+            {metaLine}
           </span>
         </div>
       </div>

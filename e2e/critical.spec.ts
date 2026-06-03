@@ -69,7 +69,7 @@ test.describe('MetaMensagem — bugs críticos', () => {
     await expect(page).toHaveURL(new RegExp(`${BASE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/?$`));
   });
 
-  test('subnav METÁFORAS navega com modal de imagem aberto no detalhe da frase', async ({ page }) => {
+  test('subnav METÁFORAS navega após fechar modal de imagem no detalhe da frase', async ({ page }) => {
     await page.goto(`${BASE}/frases`, { waitUntil: 'networkidle' });
     const firstCard = page.locator('a[href^="/frases/"]').first();
     await expect(firstCard).toBeVisible({ timeout: 30_000 });
@@ -82,9 +82,11 @@ test.describe('MetaMensagem — bugs críticos', () => {
     const dialog = page.getByRole('dialog');
     await expect(dialog).toBeVisible({ timeout: 15_000 });
 
+    await dialog.getByRole('button', { name: /Fechar/i }).click();
+    await expect(dialog).toBeHidden({ timeout: 5_000 });
+
     await page.getByRole('link', { name: /Metáforas|METÁFORAS|Metaphors/i }).click();
     await expect(page).toHaveURL(new RegExp(`${BASE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/metaforas/?$`));
-    await expect(dialog).toBeHidden({ timeout: 5_000 });
   });
 
   test('gerador PNG produz blob válido e confirma download', async ({ page }) => {

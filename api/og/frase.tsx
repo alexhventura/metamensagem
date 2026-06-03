@@ -1,5 +1,4 @@
 import { ImageResponse } from '@vercel/og';
-import { computeImageLayout, formatFooterCategory, formatFooterMetaLine, truncateFooterLabel } from './textLayout.js';
 import { requestUrl } from '../_shared.js';
 
 function previewSerialForQuote(quoteId: string): string {
@@ -72,12 +71,9 @@ export default async function handler(req: Request): Promise<Response> {
   }
 
   const serial = previewSerialForQuote(frase.id);
-  const layout = computeImageLayout(frase.texto, frase.autor, 1200, 630);
-  const categoryLabel = formatFooterCategory(frase.categoria);
-  const metaLine = formatFooterMetaLine(categoryLabel, truncateFooterLabel(serial, 28));
   const author = frase.autor.trim();
-
-  const { zones } = layout;
+  const quotePx = frase.texto.length > 150 ? 36 : frase.texto.length > 80 ? 44 : 52;
+  const categoryLabel = (frase.categoria || 'Frase').replace(/-/g, ' ').slice(0, 23);
 
   return new ImageResponse(
     (
@@ -85,157 +81,62 @@ export default async function handler(req: Request): Promise<Response> {
         style={{
           width: '100%',
           height: '100%',
-          position: 'relative',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          padding: 48,
           background: 'linear-gradient(145deg, #1a0a2e 0%, #4c1d95 45%, #312e81 100%)',
           color: '#fafafa',
           fontFamily: 'system-ui, sans-serif',
         }}
       >
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            height: zones.headerHeight,
-            display: 'flex',
-            alignItems: 'flex-start',
-            justifyContent: 'center',
-            paddingTop: layout.padTop,
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-            <div
-              style={{
-                width: 48,
-                height: 48,
-                borderRadius: 12,
-                background: 'rgba(255,255,255,0.15)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: 22,
-                fontWeight: 900,
-              }}
-            >
-              M
-            </div>
-            <span style={{ fontSize: 28, fontWeight: 800, letterSpacing: -1 }}>Metamensagem</span>
-          </div>
-        </div>
-
-        <div
-          style={{
-            position: 'absolute',
-            top: zones.quoteZoneTop,
-            left: zones.padX,
-            right: zones.padX,
-            height: zones.quoteZoneHeight,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            textAlign: 'center',
-          }}
-        >
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
           <div
             style={{
-              fontSize: layout.quotePx,
-              fontWeight: 800,
-              lineHeight: `${layout.lineHeight}px`,
-              margin: 0,
-              maxWidth: '70%',
-              textShadow: '0 2px 12px rgba(0,0,0,0.25)',
-            }}
-          >
-            {layout.lines.map((line, i) => (
-              <div key={i} style={{ display: 'block' }}>
-                {i === 0 ? '“' : ''}
-                {line}
-                {i === layout.lines.length - 1 ? '”' : ''}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {author ? (
-          <div
-            style={{
-              position: 'absolute',
-              top: zones.authorZoneTop,
-              left: zones.padX,
-              right: zones.padX,
-              height: zones.authorZoneHeight,
+              width: 48,
+              height: 48,
+              borderRadius: 12,
+              background: 'rgba(255,255,255,0.15)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
+              fontSize: 22,
+              fontWeight: 900,
             }}
           >
-            <p
-              style={{
-                fontSize: layout.authorPx,
-                opacity: 0.85,
-                margin: 0,
-                textAlign: 'center',
-                maxWidth: '70%',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              — {author}
-            </p>
+            M
           </div>
-        ) : null}
-
+          <span style={{ fontSize: 28, fontWeight: 800 }}>Metamensagem</span>
+        </div>
         <div
           style={{
-            position: 'absolute',
-            top: zones.footerTop,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '80%',
-            maxWidth: '80%',
-            height: zones.footerHeight,
+            flex: 1,
             display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
             alignItems: 'center',
-            gap: 6,
-            lineHeight: 1.35,
-            borderTop: '1px solid rgba(255,255,255,0.14)',
-            paddingBottom: layout.padBottom,
-            overflow: 'hidden',
+            justifyContent: 'center',
             textAlign: 'center',
+            fontSize: quotePx,
+            fontWeight: 800,
+            lineHeight: 1.35,
+            padding: '0 8%',
           }}
         >
-          <span
-            style={{
-              fontSize: layout.footerPx,
-              fontWeight: 500,
-              letterSpacing: '0.6px',
-              opacity: 0.78,
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-              whiteSpace: 'nowrap',
-              maxWidth: '100%',
-            }}
-          >
-            metamensagem.com
-          </span>
-          <span
-            style={{
-              fontSize: layout.footerSerialPx,
-              fontWeight: 500,
-              letterSpacing: '0.45px',
-              opacity: 0.68,
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-              whiteSpace: 'nowrap',
-              maxWidth: '100%',
-            }}
-          >
-            {metaLine}
-          </span>
+          “{frase.texto}”
+        </div>
+        {author ? (
+          <p style={{ textAlign: 'center', fontSize: 28, opacity: 0.85, margin: 0 }}>— {author}</p>
+        ) : null}
+        <div
+          style={{
+            borderTop: '1px solid rgba(255,255,255,0.14)',
+            paddingTop: 16,
+            textAlign: 'center',
+            fontSize: 18,
+            opacity: 0.75,
+          }}
+        >
+          <div>metamensagem.com</div>
+          <div style={{ fontSize: 15, marginTop: 6 }}>{categoryLabel} ◈ {serial.slice(-20)}</div>
         </div>
       </div>
     ),

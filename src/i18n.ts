@@ -78,8 +78,9 @@ const resources = {
         "contingency_title": "Tradução oficial em preparação",
         "contingency_body": "Esta frase ainda não possui tradução oficial para o idioma selecionado. Sua solicitação foi registrada e ajudará a priorizar futuras traduções do MetaMensagem. Caso deseje visualizar esta página imediatamente, você pode utilizar a tradução integrada do seu navegador.",
         "contingency_short": "Solicitação registrada",
-        "pending_title": "Tradução ainda não disponível.",
-        "pending_body": "Esta frase foi adicionada à fila de tradução e ficará disponível em breve."
+        "pending_short": "Pedido registrado — em breve",
+        "pending_title": "Esta frase ainda não possui tradução disponível.",
+        "pending_body": "Seu pedido foi registrado e a tradução será preparada automaticamente. Volte em alguns minutos ou tente novamente mais tarde."
       },
       "editor": {
         "title": "Gerar Post Premium",

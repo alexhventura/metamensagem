@@ -420,8 +420,16 @@ export default function FraseDetalheView({
         .catch((err) => {
           if (!cancel) {
             showOriginal();
-            setTranslationContingency(err instanceof TranslationContingencyError);
-            setTranslationPending(err instanceof TranslationPendingError);
+            if (err instanceof TranslationPendingError) {
+              setTranslationContingency(false);
+              setTranslationPending(true);
+            } else if (err instanceof TranslationContingencyError) {
+              setTranslationContingency(true);
+              setTranslationPending(false);
+            } else {
+              setTranslationContingency(false);
+              setTranslationPending(true);
+            }
           }
         })
         .finally(() => {
@@ -722,6 +730,8 @@ export default function FraseDetalheView({
                   tema={tema}
                   accent="purple"
                   contentId={frase.id}
+                  slug={frase.slug}
+                  category={frase.categoria}
                   sourceLang={defaultLocale}
                   source={translateSource}
                   onDisplayChange={setDisplay}

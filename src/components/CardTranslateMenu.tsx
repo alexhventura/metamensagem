@@ -12,7 +12,10 @@ import {
 import {
   TranslationContingencyError,
   TranslationFailedError,
+  TranslationPendingError,
 } from '../lib/translation/types';
+import type { SeoLocale } from '../lib/i18n/locales';
+import { isFraseIdFormat, getOrCreatePhraseTranslation } from '../lib/translation/phraseTranslationService';
 import { CARD_ACTION_BTN, type CardAccent } from '../lib/cardTheme';
 
 function translateBtnClass(tema: string, accent: CardAccent): string {
@@ -37,6 +40,9 @@ function translateRetryClass(accent: CardAccent): string {
 type CardTranslateMenuProps = {
   tema: string;
   contentId?: string;
+  /** Slug canônico da frase (cache + API global). */
+  slug?: string;
+  category?: string;
   /** Idioma original do conteúdo (melhora detecção e reduz falhas). */
   sourceLang?: SeoLocale;
   source: CardContentSource;
@@ -51,6 +57,8 @@ type CardTranslateMenuProps = {
 export function CardTranslateMenu({
   tema,
   contentId,
+  slug,
+  category,
   sourceLang,
   source,
   onDisplayChange,
@@ -66,6 +74,7 @@ export function CardTranslateMenu({
   const [activeLang, setActiveLang] = useState<CardLang | 'original'>('original');
   const [failedTarget, setFailedTarget] = useState<CardLang | null>(null);
   const [contingencyTarget, setContingencyTarget] = useState<CardLang | null>(null);
+  const [pendingTarget, setPendingTarget] = useState<CardLang | null>(null);
   const [successLang, setSuccessLang] = useState<CardLang | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -78,6 +87,7 @@ export function CardTranslateMenu({
     setActiveLang('original');
     setFailedTarget(null);
     setContingencyTarget(null);
+    setPendingTarget(null);
     setSuccessLang(null);
     onDisplayChange({
       texto: source.texto,
@@ -88,6 +98,7 @@ export function CardTranslateMenu({
       isTranslated: false,
       translationFailed: false,
       translationContingency: false,
+      translationPending: false,
     });
   }, [
     source.texto,
@@ -104,10 +115,11 @@ export function CardTranslateMenu({
       onLoadingChange?.(true);
       setFailedTarget(null);
       setContingencyTarget(null);
+      setPendingTarget(null);
       setSuccessLang(null);
       setActiveLang(target);
+      const slugKey = slug?.trim() || contentId || 'card';
       try {
-        const slugKey = contentId || 'card';
         if (contentId && !retry) {
           const { getPersistedPhraseTranslation } = await import(
             '../lib/translation/persistentStore'
@@ -125,12 +137,33 @@ export function CardTranslateMenu({
               isTranslated: true,
               translationFailed: false,
               translationContingency: false,
+              translationPending: false,
               targetLang: target,
             });
             setSuccessLang(target);
             setFailedTarget(null);
             return;
           }
+        }
+
+        if (contentId && isFraseIdFormat(contentId)) {
+          const result = await getOrCreatePhraseTranslation(
+            slugKey,
+            source.texto,
+            target as SeoLocale,
+            { contentId, category, force: retry }
+          );
+          onDisplayChange({
+            ...source,
+            texto: result.text,
+            isTranslated: true,
+            translationFailed: false,
+            translationContingency: false,
+            translationPending: false,
+            targetLang: target,
+          });
+          setSuccessLang(target);
+          return;
         }
 
         const { isLiveTranslationEnabled } = await import('../lib/translation/translationQuota');
@@ -156,20 +189,37 @@ export function CardTranslateMenu({
             contentId
           );
         }
-        onDisplayChange({ ...translated, translationContingency: false });
+        onDisplayChange({ ...translated, translationContingency: false, translationPending: false });
         setSuccessLang(target);
         setFailedTarget(null);
       } catch (err) {
+        if (err instanceof TranslationPendingError) {
+          setPendingTarget(err.target ?? target);
+          setFailedTarget(null);
+          setContingencyTarget(null);
+          setSuccessLang(null);
+          onDisplayChange({
+            ...source,
+            isTranslated: false,
+            translationFailed: false,
+            translationContingency: false,
+            translationPending: true,
+            targetLang: err.target ?? target,
+          });
+          return;
+        }
         if (err instanceof TranslationContingencyError) {
           if (contentId) {
             const { recordTranslationDemand } = await import('../lib/translation/translationDemand');
             recordTranslationDemand({
               phraseId: contentId,
-              slug: contentId,
+              slug: slugKey,
               locale: err.target,
+              category,
             });
           }
           setContingencyTarget(err.target);
+          setPendingTarget(null);
           setFailedTarget(null);
           setSuccessLang(null);
           onDisplayChange({
@@ -177,6 +227,7 @@ export function CardTranslateMenu({
             isTranslated: false,
             translationFailed: false,
             translationContingency: true,
+            translationPending: false,
             targetLang: err.target,
           });
           return;
@@ -184,12 +235,14 @@ export function CardTranslateMenu({
         const lang = err instanceof TranslationFailedError ? err.target : target;
         setFailedTarget(lang);
         setContingencyTarget(null);
+        setPendingTarget(null);
         setSuccessLang(null);
         onDisplayChange({
           ...source,
           isTranslated: false,
           translationFailed: true,
           translationContingency: false,
+          translationPending: false,
           targetLang: lang,
         });
       } finally {
@@ -198,7 +251,7 @@ export function CardTranslateMenu({
         setOpen(false);
       }
     },
-    [source, contentId, sourceLang, onDisplayChange, onLoadingChange]
+    [source, contentId, slug, category, sourceLang, onDisplayChange, onLoadingChange, detection.lang]
   );
 
   const selectLang = useCallback(
@@ -253,7 +306,9 @@ export function CardTranslateMenu({
   const btnClass = translateBtnClass(tema, accent);
   const statusMessage = loading
     ? t('translate_menu.translating', 'Traduzindo...')
-    : contingencyTarget
+    : pendingTarget
+      ? t('translate_menu.pending_short', 'Pedido registrado — em breve')
+      : contingencyTarget
       ? t('translate_menu.contingency_short', 'Solicitação registrada')
       : failedTarget
       ? t('translate_menu.unavailable', 'Tradução indisponível')
@@ -272,7 +327,10 @@ export function CardTranslateMenu({
         aria-live="polite"
       >
         <AnimatePresence>
-          {(statusMessage || (failedTarget && !loading) || (contingencyTarget && !loading)) && (
+          {(statusMessage ||
+            (failedTarget && !loading) ||
+            (contingencyTarget && !loading) ||
+            (pendingTarget && !loading)) && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -290,7 +348,7 @@ export function CardTranslateMenu({
                   className={`text-[8px] leading-snug font-medium flex items-center justify-center gap-1 ${
                     successLang
                       ? 'text-emerald-600 dark:text-emerald-400'
-                      : failedTarget || contingencyTarget
+                      : failedTarget || contingencyTarget || pendingTarget
                         ? tema === 'light'
                           ? 'text-amber-700'
                           : 'text-amber-300'

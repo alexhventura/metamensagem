@@ -32,10 +32,55 @@ function resolveSourceLang(text: string): CardLang {
   return SOURCE_CONTENT_LOCALE;
 }
 
+export function isFraseIdFormat(value: string | undefined | null): boolean {
+  const v = String(value ?? '').trim();
+  if (!v) return false;
+  return /^f_/i.test(v) || (v.length >= 12 && /^[a-z0-9_-]+$/i.test(v));
+}
+
 function isLikelyFraseId(value: string, slug: string): boolean {
   const v = value.trim();
-  if (!v || v === slug) return false;
-  return v.length >= 8 || /^f_/i.test(v);
+  if (!v) return false;
+  if (isFraseIdFormat(v)) return true;
+  if (v === slug) return false;
+  return v.length >= 8;
+}
+
+function resolveFraseId(contentId: string | undefined, slug: string): string | undefined {
+  const id = contentId?.trim();
+  if (id && isFraseIdFormat(id)) return id;
+  const candidate = (id || slug).trim();
+  if (isLikelyFraseId(candidate, slug)) return candidate;
+  return undefined;
+}
+
+async function registerTranslationRequest(fraseId: string, locale: SeoLocale): Promise<void> {
+  try {
+    await fetch('/api/translation-request', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ frase_id: fraseId, locale }),
+    });
+  } catch {
+    /* offline */
+  }
+}
+
+function logTranslationFailure(
+  step: string,
+  input: { fraseId?: string; slug: string; locale: SeoLocale },
+  err: unknown,
+  httpStatus?: number
+): void {
+  if (!import.meta.env.DEV) return;
+  console.warn('[phraseTranslation]', {
+    step,
+    frase_id: input.fraseId,
+    slug: input.slug,
+    locale: input.locale,
+    http_status: httpStatus,
+    error_message: err instanceof Error ? err.message : String(err),
+  });
 }
 
 async function fetchGlobalPhraseTranslation(input: {
@@ -65,6 +110,18 @@ async function fetchGlobalPhraseTranslation(input: {
     error?: string;
   };
 
+  if (import.meta.env.DEV) {
+    console.info('[phraseTranslation] api', {
+      frase_id: input.fraseId,
+      slug: input.slug,
+      locale: input.targetLocale,
+      http_status: res.status,
+      status: payload.status,
+      from_cache: payload.from_cache,
+      provider: payload.from_cache ? 'supabase' : res.ok && payload.text ? 'mymemory' : undefined,
+    });
+  }
+
   if (payload.status === 'pending') {
     throw new TranslationPendingError(
       payload.message ||
@@ -74,6 +131,7 @@ async function fetchGlobalPhraseTranslation(input: {
   }
 
   if (!res.ok) {
+    logTranslationFailure('api_error', input, payload.error || res.status, res.status);
     throw new Error(payload.error || `HTTP ${res.status}`);
   }
 
@@ -106,8 +164,8 @@ export async function getOrCreatePhraseTranslation(
   options?: PhraseTranslationOptions
 ): Promise<PhraseTranslationResult> {
   const trimmed = sourceText.trim();
+  const fraseId = resolveFraseId(options?.contentId, slug);
   const phraseId = options?.contentId ?? slug;
-  const fraseId = isLikelyFraseId(phraseId, slug) ? phraseId : undefined;
 
   if (!trimmed) {
     return {
@@ -230,6 +288,7 @@ export async function getOrCreatePhraseTranslation(
     if (err instanceof TranslationPendingError) {
       recordTranslationHit(false);
       queueFraseMetricIncrement('translation_requests', slug, fraseId);
+      if (fraseId) void registerTranslationRequest(fraseId, targetLocale);
       trackTranslationEvent('translation_fallback', {
         phrase_id: phraseId,
         slug,
@@ -240,15 +299,14 @@ export async function getOrCreatePhraseTranslation(
     }
     if (isQuotaOrAvailabilityError(err)) {
       recordTranslationHit(false);
-      markTranslationApiUnavailable(
-        err instanceof Error ? err.message : 'quota'
-      );
+      markTranslationApiUnavailable(err instanceof Error ? err.message : 'quota');
       recordTranslationDemand({
         phraseId,
         slug,
         locale: targetLocale,
         category: options?.category,
       });
+      if (fraseId) void registerTranslationRequest(fraseId, targetLocale);
       trackTranslationEvent('translation_fallback', {
         phrase_id: phraseId,
         slug,
@@ -261,8 +319,30 @@ export async function getOrCreatePhraseTranslation(
         false
       );
     }
+    if (fraseId) {
+      logTranslationFailure('fallback_pending', { fraseId, slug, locale: targetLocale }, err);
+      recordTranslationHit(false);
+      recordTranslationDemand({
+        phraseId,
+        slug,
+        locale: targetLocale,
+        category: options?.category,
+      });
+      void registerTranslationRequest(fraseId, targetLocale);
+      queueFraseMetricIncrement('translation_requests', slug, fraseId);
+      trackTranslationEvent('translation_fallback', {
+        phrase_id: phraseId,
+        slug,
+        locale: targetLocale,
+        mode: 'pending',
+      });
+      throw new TranslationPendingError(
+        'Esta frase ainda não possui tradução disponível. Seu pedido foi registrado e a tradução será preparada automaticamente.',
+        seoToCard(targetLocale)
+      );
+    }
     throw err;
   }
 }
 
-export { SOURCE_CONTENT_LOCALE };
+export { SOURCE_CONTENT_LOCALE, isFraseIdFormat };

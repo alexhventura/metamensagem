@@ -96,6 +96,13 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
 
     const message = err instanceof Error ? err.message : 'Tradução indisponível';
     const quota = /quota|cota|429/i.test(message);
+    console.error('[phrase-translation]', {
+      frase_id: fraseId,
+      locale,
+      http_status: quota ? 429 : 503,
+      provider: 'mymemory',
+      error_message: message,
+    });
     sendJson(
       res,
       quota ? 429 : 503,

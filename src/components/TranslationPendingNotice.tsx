@@ -25,7 +25,7 @@ export default function TranslationPendingNotice({
       <p className="opacity-90 text-[13px]">
         {t(
           'translate_menu.pending_body',
-          'Esta frase foi adicionada à fila de tradução e ficará disponível em breve.'
+          'Seu pedido foi registrado e a tradução será preparada automaticamente. Volte em alguns minutos ou tente novamente mais tarde.'
         )}
       </p>
     </div>

@@ -292,6 +292,8 @@ export default function ContentCard({
               tema={tema}
               accent={accent}
               contentId={item.id}
+              slug={item.slug}
+              category={item.tags?.[0]}
               sourceLang={seoLocaleFromLanguageOriginal(detectLanguageOriginal(item.texto))}
               source={translateSource}
               onDisplayChange={setDisplay}

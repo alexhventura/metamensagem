@@ -1,5 +1,4 @@
 import { ImageResponse } from '@vercel/og';
-import { requestUrl, type ApiRequest, type ApiResponse } from '../_http.js';
 
 function previewSerialForQuote(quoteId: string): string {
   const year = new Date().getFullYear();
@@ -55,11 +54,14 @@ export const config = {
   runtime: 'edge',
 };
 
-export default async function handler(req: ApiRequest): Promise<Response> {
-  const url = requestUrl(req);
+export default async function handler(request: Request): Promise<Response> {
+  const url = new URL(request.url);
   const parts = url.pathname.split('/').filter(Boolean);
   const fromPath = parts[parts.length - 1];
-  const id = url.searchParams.get('id') || fromPath;
+  const id =
+    url.searchParams.get('id') ||
+    url.searchParams.get('slug') ||
+    (fromPath !== 'frase' ? fromPath : null);
 
   if (!id || id === 'frase') {
     return new Response('id required', { status: 400 });

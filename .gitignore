@@ -16,11 +16,13 @@ coverage/
 *.env
 !.env.example
 
-# Ignora a pasta inteira de scripts para proteger ferramentas administrativas
+# Ignora a pasta inteira de scripts locais
 /scripts/*
 
-# Abre uma exceção EXCLUSIVA para o validador que a Vercel precisa rodar
+# Abre exceções exclusivas para os scripts que a Vercel precisa ler no build
 !/scripts/check-vercel-supabase-env.mjs
+!/scripts/build-frase-id-index.mjs
+!/scripts/inject-prerender-shell.mjs
 
 # Artefatos sensíveis gerados por scripts
 scripts/.import-credentials.json

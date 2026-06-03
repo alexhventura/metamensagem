@@ -22,6 +22,7 @@
 public/frases-v2/index/*.json  ──┐
 public/frases-v2/detail/*.json ──┼──► scripts/gerarIndiceBusca.js → frases_index
 frases_traducoes (8 locales)   ──┼──► scripts/backfillFraseSearchIndex.mjs → frase_search_index
+translation_requests / metrics ──┘    (modos popular | on-demand | combined — não full no free tier)
                                    └──► RPC mm_search_frases_index (democrática)
 ```
 
@@ -39,6 +40,17 @@ frases_traducoes (8 locales)   ──┼──► scripts/backfillFraseSearchInd
 - Busca cliente: `src/lib/supabase/fraseSearchLoader.ts`
 - Hooks: `api/fraseSearchIndexService.ts`, `api/phraseTranslationService.ts`
 
+## Estratégia de índice (free tier ~500 MB)
+
+| Modo | O quê |
+|------|--------|
+| `popular` (padrão npm backfill) | Top `--top=10000` por `frases_index.popularidade` |
+| `on-demand` | `translation_requests`, traduções recentes, `frase_metrics*`, `get_top_frases` |
+| `combined` | União popular + on-demand — **cron diário** |
+| `full` | Scan completo (~467k) — só com `--i-understand-storage-risk` e DB &lt; 500 MB |
+
+Hooks em tempo real: `refreshFraseSearchIndexAfterTranslation` após tradução API; backfill não reindexa 8 idiomas por frase — só línguas existentes (`buildSearchIndexRowsForPhrase`).
+
 ## Comandos (local)
 
 ```bash
@@ -49,13 +61,27 @@ npm run supabase:migrate
 npm run frases:index:gerar
 npm run frases:index:importar
 
-# 3. Backfill índice multilíngue
-npm run frases:search-index:backfill
-# amostra: node scripts/backfillFraseSearchIndex.mjs --limit=5000 --dry-run
-# shards CDN: node scripts/backfillFraseSearchIndex.mjs --source=shards
+# 3. Backfill índice multilíngue (seguro)
+npm run frases:search-index:backfill          # --mode=popular, top 10k
+npm run frases:search-index:refresh-demand    # cron: combined
+npm run frases:search-index:backfill:combined:dry
+
+# Auditoria tamanho / índices
+npm run supabase:audit-size
+npm run supabase:audit-indexes
+
+# Legado (perigoso no free tier):
+# node scripts/backfillFraseSearchIndex.mjs --mode=full --i-understand-storage-risk
 
 # 4. Verificar
 npm run supabase:check-db
+```
+
+### Cron sugerido (Vercel / GitHub Actions / crontab)
+
+```bash
+# Diário — mantém top 10k + frases com demanda
+npm run frases:search-index:refresh-demand
 ```
 
 Não altera layout nem design — só enriquece resultados de busca cross-language.

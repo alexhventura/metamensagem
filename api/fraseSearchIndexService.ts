@@ -1,5 +1,9 @@
 /**
  * Upsert em frase_search_index (service role) — hooks de tradução/import.
+ *
+ * Tradução via API: refreshFraseSearchIndexAfterTranslation (uma locale).
+ * Import/reindex pontual: refreshFraseSearchIndexFull (original + traduções oficiais).
+ * Backfill em massa: scripts/backfillFraseSearchIndex.mjs (--mode popular|combined; não full no free tier).
  */
 import { getServerSupabaseServiceRole } from './_supabaseServer.js';
 import {

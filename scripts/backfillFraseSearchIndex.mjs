@@ -1,13 +1,24 @@
 #!/usr/bin/env node
 /**
- * Backfill frase_search_index a partir de frases_index + frases + frases_traducoes
- * ou shards CDN (public/frases-v2).
+ * Backfill incremental de frase_search_index (apenas idiomas existentes por frase).
+ *
+ * ⚠️ NÃO rode backfill completo (--mode=full) enquanto o DB estiver ≥ ~500 MB.
+ *    frase_search_index ~1 KB/linha × ~467k frases ≈ +500 MB — estoura o free tier.
+ *    Use popular / on-demand / combined (padrão seguro).
+ *
+ * Modos:
+ *   --mode=popular     top N por frases_index.popularidade (padrão, --top=10000)
+ *   --mode=on-demand   fila translation_requests, traduções recentes, métricas, get_top_frases
+ *   --mode=combined    popular ∪ on-demand (recomendado para cron)
+ *   --mode=full        varre todas as frases_index (legado; exige confirmação explícita)
  *
  * Uso:
  *   npm run frases:search-index:backfill
  *   node scripts/backfillFraseSearchIndex.mjs --dry-run
- *   node scripts/backfillFraseSearchIndex.mjs --source=shards --batch-size=2000
- *   node scripts/backfillFraseSearchIndex.mjs --limit=5000 --offset=0
+ *   node scripts/backfillFraseSearchIndex.mjs --mode=combined --top=10000
+ *   node scripts/backfillFraseSearchIndex.mjs --mode=on-demand --limit=500
+ *   node scripts/backfillFraseSearchIndex.mjs --mode=full --i-understand-storage-risk
+ *   node scripts/backfillFraseSearchIndex.mjs --source=shards --mode=full --i-understand-storage-risk
  */
 
 import fs from 'fs';
@@ -28,17 +39,34 @@ const FRASES_V2 = path.join(ROOT, 'public', 'frases-v2');
 
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
+const skipDetail = args.includes('--skip-detail');
+const fullAck = args.includes('--i-understand-storage-risk');
+
+const modeArg = args.find((a) => a.startsWith('--mode='));
+const MODE = modeArg?.split('=')[1] || 'popular';
+
 const sourceArg = args.find((a) => a.startsWith('--source='));
 const SOURCE = sourceArg?.split('=')[1] || 'db';
+
 const batchSize =
   Number(args.find((a) => a.startsWith('--batch-size='))?.split('=')[1]) || 1500;
 const limit = Number(args.find((a) => a.startsWith('--limit='))?.split('=')[1]) || 0;
 const offset = Number(args.find((a) => a.startsWith('--offset='))?.split('=')[1]) || 0;
-const skipDetail = args.includes('--skip-detail');
+const topN = Number(args.find((a) => a.startsWith('--top='))?.split('=')[1]) || 10000;
+const demandDays =
+  Number(args.find((a) => a.startsWith('--demand-days='))?.split('=')[1]) || 90;
+const topFrasesLimit =
+  Number(args.find((a) => a.startsWith('--top-frases='))?.split('=')[1]) || 200;
+
+const VALID_MODES = new Set(['popular', 'on-demand', 'combined', 'full']);
+
+async function regclass(client, name) {
+  const { rows } = await client.query('select to_regclass($1)::text as reg', [`public.${name}`]);
+  return rows[0]?.reg === name;
+}
 
 async function assertTable(client, name) {
-  const { rows } = await client.query('select to_regclass($1)::text as reg', [`public.${name}`]);
-  if (rows[0]?.reg !== name) {
+  if (!(await regclass(client, name))) {
     console.error(`❌ Tabela public.${name} não existe. Rode: npm run supabase:migrate`);
     process.exit(1);
   }
@@ -93,7 +121,259 @@ async function loadTranslationsMap(client, fraseIds) {
   return map;
 }
 
-async function backfillFromDb(client, dbUrl) {
+async function fetchIndexRowsForIds(client, ids) {
+  if (!ids.length) return [];
+  const { rows } = await client.query(
+    `
+    select
+      fi.id,
+      fi.titulo,
+      c.slug as categoria_slug,
+      f.frase_original,
+      f.autor_original,
+      f.language_original,
+      f.contextos,
+      f.palavras_chave
+    from public.frases_index fi
+    left join public.frases f on f.id = fi.id
+    left join public.categorias c on c.id = fi.categoria_id
+    where fi.id = any($1::text[])
+    order by fi.popularidade desc, fi.id
+    `,
+    [ids]
+  );
+  return rows;
+}
+
+function buildFlatRows(indexRows, translationsMap) {
+  const flatRows = [];
+  for (const row of indexRows) {
+    const originalText = (row.frase_original || row.titulo || '').trim();
+    if (!originalText) continue;
+
+    const lang = SEO_LOCALES.includes(row.language_original) ? row.language_original : 'pt';
+    const tags = Array.isArray(row.contextos) ? row.contextos : [];
+
+    const built = buildSearchIndexRowsForPhrase({
+      fraseId: row.id,
+      languageOriginal: lang,
+      originalText,
+      autor: row.autor_original || undefined,
+      categoria: row.categoria_slug || undefined,
+      tags,
+      palavrasChave: Array.isArray(row.palavras_chave) ? row.palavras_chave : [],
+      translations: translationsMap.get(row.id) || [],
+    });
+    flatRows.push(...built);
+  }
+  return flatRows;
+}
+
+async function indexFraseIds(client, fraseIds, dbUrl) {
+  let processed = 0;
+  let upserted = 0;
+  let pg = client;
+
+  const reconnect = async () => {
+    try {
+      await pg.end();
+    } catch {
+      /* ignore */
+    }
+    pg = createPgClient(dbUrl);
+    await pg.connect();
+    return pg;
+  };
+
+  for (let i = 0; i < fraseIds.length; ) {
+    if (limit > 0 && processed >= limit) break;
+
+    const chunkSize =
+      limit > 0 ? Math.min(batchSize, limit - processed) : batchSize;
+    const slice = fraseIds.slice(i, i + chunkSize);
+    i += slice.length;
+    if (!slice.length) break;
+
+    let indexRows;
+    try {
+      indexRows = await fetchIndexRowsForIds(pg, slice);
+    } catch (err) {
+      console.warn(`   ⚠️ reconectando após erro na leitura:`, err.message);
+      pg = await reconnect();
+      i -= slice.length;
+      continue;
+    }
+
+    let translationsMap;
+    try {
+      translationsMap = await loadTranslationsMap(pg, slice);
+    } catch (err) {
+      console.warn(`   ⚠️ reconectando após erro nas traduções:`, err.message);
+      pg = await reconnect();
+      i -= slice.length;
+      continue;
+    }
+
+    const flatRows = buildFlatRows(indexRows, translationsMap);
+
+    if (!dryRun && flatRows.length) {
+      try {
+        await upsertBatch(pg, flatRows);
+      } catch (err) {
+        console.warn(`   ⚠️ reconectando após erro no upsert:`, err.message);
+        pg = await reconnect();
+        i -= slice.length;
+        continue;
+      }
+    }
+
+    processed += slice.length;
+    upserted += flatRows.length;
+    console.log(
+      `   … ${processed.toLocaleString('pt-BR')} / ${fraseIds.length.toLocaleString('pt-BR')} frases · ${upserted.toLocaleString('pt-BR')} linhas índice`
+    );
+  }
+
+  return { processed, upserted, client: pg };
+}
+
+async function resolvePopularIds(client) {
+  const { rows } = await client.query(
+    `
+    select id
+    from public.frases_index
+    order by popularidade desc, id
+    limit $1 offset $2
+    `,
+    [topN, offset]
+  );
+  return rows.map((r) => r.id);
+}
+
+async function resolveOnDemandIds(client) {
+  const ids = new Set();
+  let sources = 0;
+
+  if (await regclass(client, 'translation_requests')) {
+    const { rows } = await client.query(
+      `select distinct frase_id as id from public.translation_requests where frase_id is not null`
+    );
+    for (const r of rows) if (r.id) ids.add(r.id);
+    sources += 1;
+  }
+
+  if (await regclass(client, 'frases_traducoes')) {
+    const { rows } = await client.query(
+      `
+      select distinct frase_id as id
+      from public.frases_traducoes
+      where is_official = true
+        and frase_id is not null
+        and updated_at >= timezone('utc', now()) - ($1::int * interval '1 day')
+      `,
+      [demandDays]
+    );
+    for (const r of rows) if (r.id) ids.add(r.id);
+    sources += 1;
+  }
+
+  if (await regclass(client, 'frase_metrics')) {
+    const { rows } = await client.query(
+      `
+      select frase_id as id
+      from public.frase_metrics
+      where (views + search_hits + shares + translation_requests) > 0
+      `
+    );
+    for (const r of rows) if (r.id) ids.add(r.id);
+    sources += 1;
+  }
+
+  if (await regclass(client, 'frase_metrics_daily')) {
+    const { rows } = await client.query(
+      `
+      select distinct frase_id as id
+      from public.frase_metrics_daily
+      where metric_date >= (timezone('utc', now())::date - $1::int)
+        and (views + search_hits + shares + translation_requests) > 0
+      `,
+      [Math.min(demandDays, 90)]
+    );
+    for (const r of rows) if (r.id) ids.add(r.id);
+    sources += 1;
+  }
+
+  const { rows: fnRows } = await client.query(`
+    select exists (
+      select 1 from pg_proc pr
+      join pg_namespace n on n.oid = pr.pronamespace
+      where n.nspname = 'public' and pr.proname = 'get_top_frases'
+    ) as ok
+  `);
+  if (fnRows[0]?.ok) {
+    for (const periodo of ['semana', 'geral']) {
+      const { rows } = await client.query(
+        `select id from public.get_top_frases($1, $2)`,
+        [periodo, topFrasesLimit]
+      );
+      for (const r of rows) if (r.id) ids.add(r.id);
+    }
+    sources += 1;
+  }
+
+  if (!sources) {
+    console.warn('   ⚠️ Nenhuma fonte on-demand disponível (migrações em falta?)');
+    return [];
+  }
+
+  return [...ids].sort();
+}
+
+async function resolveTargetIds(client, mode) {
+  if (mode === 'popular') {
+    return resolvePopularIds(client);
+  }
+  if (mode === 'on-demand') {
+    return resolveOnDemandIds(client);
+  }
+  if (mode === 'combined') {
+    const [popular, demand] = await Promise.all([
+      resolvePopularIds(client),
+      resolveOnDemandIds(client),
+    ]);
+    const seen = new Set(popular);
+    const merged = [...popular];
+    for (const id of demand) {
+      if (!seen.has(id)) {
+        seen.add(id);
+        merged.push(id);
+      }
+    }
+    return merged;
+  }
+  return [];
+}
+
+function sliceIds(ids) {
+  let list = ids;
+  if (offset > 0) list = list.slice(offset);
+  if (limit > 0) list = list.slice(0, limit);
+  return list;
+}
+
+function warnFullBackfill() {
+  console.error(`
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  AVISO: --mode=full varre TODAS as frases_index (~467k linhas).              ║
+║  Projeção frase_search_index: ~500 MB adicionais — NÃO use no free tier      ║
+║  até o DB total ficar confortavelmente abaixo de 500 MB.                    ║
+║                                                                              ║
+║  Repita com --i-understand-storage-risk se realmente precisar do legado.     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+`);
+}
+
+async function backfillFromDbFull(client, dbUrl) {
   await assertTable(client, 'frases_index');
   await assertTable(client, 'frase_search_index');
 
@@ -101,7 +381,7 @@ async function backfillFromDb(client, dbUrl) {
     'select count(*)::int as n from public.frases_index'
   );
   const total = countRows[0]?.n || 0;
-  console.log(`📊 frases_index: ${total.toLocaleString('pt-BR')} frases`);
+  console.log(`📊 frases_index: ${total.toLocaleString('pt-BR')} frases (scan completo)`);
 
   let processed = 0;
   let upserted = 0;
@@ -163,26 +443,7 @@ async function backfillFromDb(client, dbUrl) {
       continue;
     }
 
-    const flatRows = [];
-    for (const row of indexRows) {
-      const originalText = (row.frase_original || row.titulo || '').trim();
-      if (!originalText) continue;
-
-      const lang = SEO_LOCALES.includes(row.language_original) ? row.language_original : 'pt';
-      const tags = Array.isArray(row.contextos) ? row.contextos : [];
-
-      const built = buildSearchIndexRowsForPhrase({
-        fraseId: row.id,
-        languageOriginal: lang,
-        originalText,
-        autor: row.autor_original || undefined,
-        categoria: row.categoria_slug || undefined,
-        tags,
-        palavrasChave: Array.isArray(row.palavras_chave) ? row.palavras_chave : [],
-        translations: translationsMap.get(row.id) || [],
-      });
-      flatRows.push(...built);
-    }
+    const flatRows = buildFlatRows(indexRows, translationsMap);
 
     if (!dryRun && flatRows.length) {
       try {
@@ -329,9 +590,34 @@ async function backfillFromShards(client) {
 }
 
 async function main() {
+  if (!VALID_MODES.has(MODE)) {
+    console.error(`❌ --mode inválido: ${MODE}. Use: popular | on-demand | combined | full`);
+    process.exit(1);
+  }
+
+  if (MODE === 'full' && !fullAck) {
+    warnFullBackfill();
+    process.exit(1);
+  }
+
+  if (SOURCE === 'shards' && MODE !== 'full') {
+    console.error('❌ --source=shards só é suportado com --mode=full');
+    process.exit(1);
+  }
+
   console.log('🔍 Backfill frase_search_index (multilíngue democrático)');
-  console.log(`   source=${SOURCE} batch=${batchSize} dry-run=${dryRun}`);
+  console.log(`   mode=${MODE} source=${SOURCE} batch=${batchSize} dry-run=${dryRun}`);
+  if (MODE === 'popular' || MODE === 'combined') console.log(`   top=${topN}`);
+  if (MODE === 'on-demand' || MODE === 'combined') {
+    console.log(`   demand-days=${demandDays} top-frases=${topFrasesLimit}`);
+  }
   if (limit) console.log(`   limit=${limit} offset=${offset}`);
+
+  if (MODE === 'full') {
+    console.warn(
+      '⚠️  FULL BACKFILL ativo — confirme que o DB está < 500 MB antes de gravar sem --dry-run.'
+    );
+  }
 
   const dbUrl = await resolveDatabaseUrl();
   if (!dbUrl) {
@@ -343,13 +629,37 @@ async function main() {
   await client.connect();
 
   try {
-    const result =
-      SOURCE === 'shards'
-        ? await backfillFromShards(client)
-        : await backfillFromDb(client, dbUrl);
+    let result;
+
+    if (SOURCE === 'shards') {
+      result = await backfillFromShards(client);
+    } else if (MODE === 'full') {
+      result = await backfillFromDbFull(client, dbUrl);
+    } else {
+      await assertTable(client, 'frases_index');
+      await assertTable(client, 'frase_search_index');
+
+      const rawIds = await resolveTargetIds(client, MODE);
+      const fraseIds = sliceIds(rawIds);
+      console.log(
+        `📋 Alvo: ${fraseIds.length.toLocaleString('pt-BR')} frases` +
+          (MODE === 'combined'
+            ? ` (top ${topN} popular + demanda, união ${rawIds.length.toLocaleString('pt-BR')})`
+            : '')
+      );
+
+      if (!fraseIds.length) {
+        console.log('   Nada a indexar.');
+        result = { processed: 0, upserted: 0, client };
+      } else {
+        result = await indexFraseIds(client, fraseIds, dbUrl);
+      }
+    }
 
     const activeClient = result.client ?? client;
-    const { rows } = await activeClient.query('select count(*)::int as n from public.frase_search_index');
+    const { rows } = await activeClient.query(
+      'select count(*)::int as n from public.frase_search_index'
+    );
     console.log(
       `\n✅ Concluído: ${result.processed.toLocaleString('pt-BR')} frases processadas, ` +
         `${result.upserted.toLocaleString('pt-BR')} linhas upsertadas` +

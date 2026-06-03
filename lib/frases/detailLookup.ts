@@ -68,7 +68,7 @@ export function normalizeFraseDetailRecord(raw: FraseDetailRecord): FraseDetailR
 
   return {
     ...raw,
-    slug: raw.slug.toLowerCase(),
+    slug: String(raw.slug ?? '').toLowerCase(),
     frase_original,
     autor_original,
     categoria: raw.categoria || sem?.categoriaPrincipal || 'reflexao',
@@ -94,19 +94,20 @@ export function pickBestSlugMatch<T extends { slug: string }>(
   if (!rows.length || !key) return null;
   const k = key.toLowerCase().trim();
 
-  const exact = rows.find((r) => r.slug.toLowerCase() === k);
+  const exact = rows.find((r) => String(r.slug ?? '').toLowerCase() === k);
   if (exact) return exact;
 
-  const slugStartsWithKey = rows.find((r) => r.slug.toLowerCase().startsWith(k));
+  const slugStartsWithKey = rows.find((r) => String(r.slug ?? '').toLowerCase().startsWith(k));
   if (slugStartsWithKey) return slugStartsWithKey;
 
-  const keyStartsWithSlug = rows.find((r) => k.startsWith(r.slug.toLowerCase()));
+  const keyStartsWithSlug = rows.find((r) => k.startsWith(String(r.slug ?? '').toLowerCase()));
   if (keyStartsWithSlug) return keyStartsWithSlug;
 
   let best: T | null = null;
   let bestCommon = 0;
   for (const r of rows) {
-    const s = r.slug.toLowerCase();
+    const s = String(r.slug ?? '').toLowerCase();
+    if (!s) continue;
     let common = 0;
     const limit = Math.min(k.length, s.length);
     while (common < limit && k[common] === s[common]) common += 1;
@@ -167,18 +168,17 @@ export function findFraseInList(
   const key = requested.toLowerCase().trim();
   if (!key) return null;
 
-  const exact = list.find((f) => f.slug.toLowerCase() === key);
+  const exact = list.find((f) => String(f.slug ?? '').toLowerCase() === key);
   if (exact) return normalizeFraseDetailRecord(exact);
 
-  const prefix = list.find(
-    (f) =>
-      key.startsWith(f.slug.toLowerCase()) ||
-      f.slug.toLowerCase().startsWith(key)
-  );
+  const prefix = list.find((f) => {
+    const s = String(f.slug ?? '').toLowerCase();
+    return key.startsWith(s) || s.startsWith(key);
+  });
   if (prefix) return normalizeFraseDetailRecord(prefix);
 
   const pseudoFromUrl = slugifyFraseTexto(key.replace(/-/g, ' '));
-  const byPseudo = list.find((f) => f.slug.toLowerCase() === pseudoFromUrl);
+  const byPseudo = list.find((f) => String(f.slug ?? '').toLowerCase() === pseudoFromUrl);
   if (byPseudo) return normalizeFraseDetailRecord(byPseudo);
 
   const byCanonicalText = list.find((f) => slugifyFraseTexto(fraseTextoOf(f)) === key);

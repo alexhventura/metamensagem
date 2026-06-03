@@ -199,6 +199,10 @@ export default function FraseDetalheView({
     return initial;
   });
   const [loading, setLoading] = useState(() => !preloadedFrase && !frase && !!slug);
+  /** Stub do card (sem explicacao) — fetch completo em andamento */
+  const [fetchingDetail, setFetchingDetail] = useState(
+    () => !!(preloadedFrase && !preloadedFrase.explicacao?.trim())
+  );
   /** true = 404 / não encontrada; false com loadFailed = erro de rede/servidor */
   const [notFound, setNotFound] = useState(false);
   const [loadFailed, setLoadFailed] = useState(false);
@@ -234,6 +238,7 @@ export default function FraseDetalheView({
       setLoading(true);
       setFrase(null);
       setDisplay({ texto: '', isTranslated: false });
+      setFetchingDetail(false);
     } else {
       setFrase(preloadedFrase);
       setDisplay({
@@ -242,6 +247,7 @@ export default function FraseDetalheView({
         isTranslated: false,
       });
       setLoading(false);
+      setFetchingDetail(!preloadedFrase.explicacao?.trim());
     }
 
     const i18nTimer = window.setTimeout(() => {
@@ -318,7 +324,10 @@ export default function FraseDetalheView({
           }
         }
       } finally {
-        if (!cancel) setLoading(false);
+        if (!cancel) {
+          setLoading(false);
+          setFetchingDetail(false);
+        }
       }
     })();
 
@@ -573,6 +582,7 @@ export default function FraseDetalheView({
   const neutralAction = cardNeutralActionClass(tema);
   const hasExtraInfo =
     !!frase.explicacao ||
+    fetchingDetail ||
     !!frase.ano_ou_data ||
     !!frase.nacionalidade ||
     !!frase.nascimento_falecimento ||
@@ -754,7 +764,7 @@ export default function FraseDetalheView({
                   : 'bg-zinc-950/40 border-zinc-800'
               }`}
             >
-              {frase.explicacao ? (
+              {frase.explicacao || fetchingDetail ? (
                 <section className="mb-6">
                   <h2
                     className={`text-[10px] font-black uppercase tracking-widest mb-2 ${
@@ -763,13 +773,40 @@ export default function FraseDetalheView({
                   >
                     Explicação
                   </h2>
-                  <p
-                    className={`text-base leading-relaxed ${
-                      tema === 'light' ? 'text-zinc-800' : 'text-zinc-400'
-                    }`}
-                  >
-                    {display.explicacao ?? frase.explicacao}
-                  </p>
+                  {frase.explicacao ? (
+                    <p
+                      className={`text-base leading-relaxed ${
+                        tema === 'light' ? 'text-zinc-800' : 'text-zinc-400'
+                      }`}
+                    >
+                      {display.explicacao ?? frase.explicacao}
+                    </p>
+                  ) : (
+                    <div className="space-y-2" aria-busy="true" aria-live="polite">
+                      <div
+                        className={`h-3 rounded animate-pulse ${
+                          tema === 'light' ? 'bg-purple-100' : 'bg-zinc-800'
+                        }`}
+                      />
+                      <div
+                        className={`h-3 w-5/6 rounded animate-pulse ${
+                          tema === 'light' ? 'bg-purple-100' : 'bg-zinc-800'
+                        }`}
+                      />
+                      <div
+                        className={`h-3 w-2/3 rounded animate-pulse ${
+                          tema === 'light' ? 'bg-purple-100' : 'bg-zinc-800'
+                        }`}
+                      />
+                      <p
+                        className={`text-xs pt-1 ${
+                          tema === 'light' ? 'text-zinc-500' : 'text-zinc-600'
+                        }`}
+                      >
+                        Analisando significado…
+                      </p>
+                    </div>
+                  )}
                 </section>
               ) : null}
 

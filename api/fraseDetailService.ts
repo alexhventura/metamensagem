@@ -6,7 +6,6 @@ import {
   shardsToProbe,
   type FraseDetailRecord,
 } from '../lib/frases/detailLookup.js';
-import { readFraseDetailFromShards } from '../lib/frases/detailLookupServer.js';
 import { getServerSupabase } from './_supabaseServer.js';
 
 const FRASE_SELECT =
@@ -34,7 +33,12 @@ async function fetchJsonWithTimeout(url: string, timeoutMs = FETCH_TIMEOUT_MS): 
       signal: controller.signal,
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return res.json();
+    const text = await res.text();
+    try {
+      return JSON.parse(text) as unknown;
+    } catch {
+      throw new Error('invalid JSON');
+    }
   } finally {
     clearTimeout(timer);
   }
@@ -195,7 +199,10 @@ async function loadFraseFromLegacyShards(
 }
 
 async function loadFraseFromFilesystem(slug: string): Promise<FraseDetailRecord | null> {
+  // Vercel: shards só via CDN (fetch). readFile puxaria ~1.2GB no bundle → FUNCTION_INVOCATION_FAILED.
+  if (process.env.VERCEL) return null;
   try {
+    const { readFraseDetailFromShards } = await import('../lib/frases/detailLookupServer.js');
     return await readFraseDetailFromShards(slug);
   } catch {
     return null;

@@ -15,11 +15,17 @@ export function sendJson(
   data: unknown,
   headers: Record<string, string> = {}
 ): void {
+  let body: string;
+  try {
+    body = JSON.stringify(data);
+  } catch {
+    body = JSON.stringify({ found: false, error: 'response serialization failed' });
+  }
   res.writeHead(status, {
     'Content-Type': 'application/json; charset=utf-8',
     ...headers,
   });
-  res.end(JSON.stringify(data));
+  res.end(body);
 }
 
 export function sendText(

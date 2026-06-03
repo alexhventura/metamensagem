@@ -35,7 +35,9 @@ export function queueFraseMetricIncrement(
   if (flushTimer) return;
   flushTimer = setTimeout(() => {
     flushTimer = null;
-    void flushFraseMetrics();
+    void flushFraseMetrics().catch(() => {
+      /* fire-and-forget — métricas nunca quebram a UI */
+    });
   }, 1200);
 }
 
@@ -54,14 +56,19 @@ async function flushFraseMetrics(): Promise<void> {
 
   for (const row of batch) {
     try {
-      await sb.rpc('mm_increment_frase_metric', {
+      const { error } = await sb.rpc('mm_increment_frase_metric', {
         p_metric: row.metric,
         p_delta: Math.min(row.delta, 20),
         p_frase_id: row.fraseId ?? null,
         p_slug: row.slug,
       });
+      if (error) {
+        const code = (error as { code?: string }).code;
+        if (code === '409' || code === '23505') continue;
+        continue;
+      }
     } catch {
-      /* offline / quota — métrica local permanece */
+      /* offline / quota / rede — métrica local permanece */
     }
   }
 }

@@ -226,9 +226,6 @@
     },
     "api/seo/frase.ts": {
       "excludeFiles": "public/frases-v2/detail/**"
-    },
-    "api/og/frase.tsx": {
-      "excludeFiles": "public/frases-v2/detail/**"
     }
   },
   "crons": [

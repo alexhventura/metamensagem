@@ -220,6 +220,17 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm ci",
+  "functions": {
+    "api/frase-detail.ts": {
+      "excludeFiles": "public/frases-v2/detail/**"
+    },
+    "api/seo/frase.ts": {
+      "excludeFiles": "public/frases-v2/detail/**"
+    },
+    "api/og/frase.tsx": {
+      "excludeFiles": "public/frases-v2/detail/**"
+    }
+  },
   "crons": [
     {
       "path": "/api/cron/process-translation-requests",

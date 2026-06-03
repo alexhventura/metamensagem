@@ -21,6 +21,8 @@
     "frases:index:gerar": "node scripts/gerarIndiceBusca.js",
     "frases:index:importar": "node scripts/importarIndiceSupabase.js",
     "frases:index:importar:dry": "node scripts/importarIndiceSupabase.js --dry-run",
+    "frases:search-index:backfill": "node scripts/backfillFraseSearchIndex.mjs",
+    "frases:search-index:backfill:dry": "node scripts/backfillFraseSearchIndex.mjs --dry-run",
     "frases:import:supabase": "node scripts/importarShards.js",
     "frases:import:supabase:dry": "node scripts/importarShards.js --dry-run",
     "seo:indexnow": "node scripts/submit-indexnow.mjs",

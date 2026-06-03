@@ -1,0 +1,132 @@
+{
+  "amor": {
+    "pt": ["amor", "amar", "carinho", "afeto", "paixão", "coração"],
+    "en": ["love", "loving", "affection", "heart", "passion", "cherish"],
+    "es": ["amor", "amar", "cariño", "afecto", "pasión", "corazón"],
+    "fr": ["amour", "aimer", "affection", "cœur", "passion"],
+    "de": ["liebe", "lieben", "zuneigung", "herz", "leidenschaft"],
+    "it": ["amore", "amare", "affetto", "cuore", "passione"],
+    "ja": ["愛", "恋", "愛する", "心"],
+    "hi": ["प्यार", "प्रेम", "मोहब्बत", "दिल"]
+  },
+  "motivacao": {
+    "pt": ["motivação", "motivar", "inspirar", "ânimo", "força"],
+    "en": ["motivation", "motivate", "inspire", "encourage", "drive"],
+    "es": ["motivación", "motivar", "inspirar", "ánimo", "fuerza"],
+    "fr": ["motivation", "motiver", "inspirer", "encouragement"],
+    "de": ["motivation", "motivieren", "inspirieren", "antrieb"],
+    "it": ["motivazione", "motivare", "ispirare", "incoraggiamento"],
+    "ja": ["やる気", "動機", "激励", "鼓舞"],
+    "hi": ["प्रेरणा", "प्रोत्साहन", "उत्साह"]
+  },
+  "superacao": {
+    "pt": ["superação", "superar", "resiliência", "vencer", "obstáculo"],
+    "en": ["overcoming", "overcome", "resilience", "perseverance", "obstacle"],
+    "es": ["superación", "superar", "resiliencia", "vencer", "obstáculo"],
+    "fr": ["dépassement", "surmonter", "résilience", "obstacle"],
+    "de": ["überwindung", "überwinden", "resilienz", "hindernis"],
+    "it": ["superamento", "superare", "resilienza", "ostacolo"],
+    "ja": ["克服", "乗り越える", "回復力"],
+    "hi": ["सफलता", "पार", "लचीलापन", "बाधा"]
+  },
+  "reflexao": {
+    "pt": ["reflexão", "refletir", "pensar", "contemplar", "meditar"],
+    "en": ["reflection", "reflect", "think", "contemplate", "meditate"],
+    "es": ["reflexión", "reflexionar", "pensar", "contemplar"],
+    "fr": ["réflexion", "réfléchir", "penser", "contempler"],
+    "de": ["reflexion", "nachdenken", "betrachten"],
+    "it": ["riflessione", "riflettere", "pensare", "contemplare"],
+    "ja": ["反省", "考える", "瞑想", "思索"],
+    "hi": ["चिंतन", "विचार", "मनन"]
+  },
+  "sucesso": {
+    "pt": ["sucesso", "vencer", "vitória", "conquistar", "realização"],
+    "en": ["success", "win", "victory", "achieve", "accomplishment"],
+    "es": ["éxito", "vencer", "victoria", "lograr"],
+    "fr": ["succès", "réussir", "victoire", "accomplir"],
+    "de": ["erfolg", "gewinnen", "sieg", "erreichen"],
+    "it": ["successo", "vincere", "vittoria", "realizzare"],
+    "ja": ["成功", "勝利", "達成"],
+    "hi": ["सफलता", "जीत", "विजय", "हासिल"]
+  },
+  "coragem": {
+    "pt": ["coragem", "corajoso", "ousadia", "bravura", "enfrentar"],
+    "en": ["courage", "brave", "bold", "bravery", "face fear"],
+    "es": ["coraje", "valiente", "audacia", "bravura"],
+    "fr": ["courage", "brave", "audace", "bravoure"],
+    "de": ["mut", "tapfer", "kühnheit", "bravour"],
+    "it": ["coraggio", "coraggioso", "audacia", "bravura"],
+    "ja": ["勇気", "勇敢", "度胸"],
+    "hi": ["साहस", "हिम्मत", "बहादुरी"]
+  },
+  "felicidade": {
+    "pt": ["felicidade", "feliz", "alegria", "contentamento"],
+    "en": ["happiness", "happy", "joy", "contentment"],
+    "es": ["felicidad", "feliz", "alegría", "contento"],
+    "fr": ["bonheur", "heureux", "joie", "contentement"],
+    "de": ["glück", "glücklich", "freude", "zufriedenheit"],
+    "it": ["felicità", "felice", "gioia", "contentezza"],
+    "ja": ["幸福", "幸せ", "喜び"],
+    "hi": ["खुशी", "आनंद", "प्रसन्नता"]
+  },
+  "sabedoria": {
+    "pt": ["sabedoria", "sábio", "conhecimento", "aprender", "prudência"],
+    "en": ["wisdom", "wise", "knowledge", "learn", "prudence"],
+    "es": ["sabiduría", "sabio", "conocimiento", "aprender"],
+    "fr": ["sagesse", "sage", "connaissance", "apprendre"],
+    "de": ["weisheit", "weise", "wissen", "lernen"],
+    "it": ["saggezza", "saggio", "conoscenza", "imparare"],
+    "ja": ["知恵", "賢い", "知識", "学ぶ"],
+    "hi": ["बुद्धिमत्ता", "ज्ञान", "सीखना", "बुद्धिमान"]
+  },
+  "foco": {
+    "pt": ["foco", "concentração", "atenção", "prioridade"],
+    "en": ["focus", "concentration", "attention", "priority"],
+    "es": ["enfoque", "concentración", "atención", "prioridad"],
+    "fr": ["concentration", "attention", "priorité", "focus"],
+    "de": ["fokus", "konzentration", "aufmerksamkeit"],
+    "it": ["focus", "concentrazione", "attenzione", "priorità"],
+    "ja": ["集中", "焦点", "注意"],
+    "hi": ["ध्यान", "फोकस", "एकाग्रता"]
+  },
+  "fe": {
+    "pt": ["fé", "crença", "esperança", "confiança"],
+    "en": ["faith", "belief", "hope", "trust"],
+    "es": ["fe", "creencia", "esperanza", "confianza"],
+    "fr": ["foi", "croyance", "espoir", "confiance"],
+    "de": ["glaube", "vertrauen", "hoffnung"],
+    "it": ["fede", "credenza", "speranza", "fiducia"],
+    "ja": ["信仰", "信頼", "希望"],
+    "hi": ["विश्वास", "आस्था", "उम्मीद"]
+  },
+  "sonhos": {
+    "pt": ["sonho", "sonhos", "sonhar", "aspiração", "ideal"],
+    "en": ["dream", "dreams", "aspiration", "ideal", "vision"],
+    "es": ["sueño", "sueños", "soñar", "aspiración"],
+    "fr": ["rêve", "rêves", "rêver", "aspiration"],
+    "de": ["traum", "träume", "träumen", "aspiration"],
+    "it": ["sogno", "sogni", "sognare", "aspirazione"],
+    "ja": ["夢", "夢見る", "理想"],
+    "hi": ["सपना", "सपने", "आकांक्षा"]
+  },
+  "estrategia": {
+    "pt": ["estratégia", "planejamento", "plano", "visão", "decisão", "objetivo"],
+    "en": ["strategy", "planning", "plan", "vision", "decision", "goal"],
+    "es": ["estrategia", "planificación", "plan", "visión", "objetivo"],
+    "fr": ["stratégie", "planification", "plan", "vision", "objectif"],
+    "de": ["strategie", "planung", "plan", "vision", "ziel"],
+    "it": ["strategia", "pianificazione", "piano", "visione", "obiettivo"],
+    "ja": ["戦略", "計画", "目標", "ビジョン"],
+    "hi": ["रणनीति", "योजना", "लक्ष्य", "दृष्टि"]
+  },
+  "persistencia": {
+    "pt": ["persistência", "persistir", "insistir", "constância"],
+    "en": ["persistence", "persist", "persevere", "consistency"],
+    "es": ["persistencia", "persistir", "insistir", "constancia"],
+    "fr": ["persévérance", "persister", "insister", "constance"],
+    "de": ["beharrlichkeit", "durchhalten", "beständigkeit"],
+    "it": ["persistenza", "persistere", "insistere", "costanza"],
+    "ja": ["粘り強さ", " perseverancia", "継続"],
+    "hi": ["दृढ़ता", "लगातार", "निरंतरता"]
+  }
+}

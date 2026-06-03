@@ -9,6 +9,7 @@ const ImageGeneratorModal = lazy(() => import('../components/image-generator'));
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import BackNavButton from '../components/BackNavButton';
 import TranslationContingencyNotice from '../components/TranslationContingencyNotice';
+import TranslationPendingNotice from '../components/TranslationPendingNotice';
 import { motion, AnimatePresence, useInView, useReducedMotion } from 'framer-motion';
 import { Copy, Share2, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -56,8 +57,9 @@ import { ogImageUrlForPhrase } from '../lib/seo/ogImageUrl';
 import type { SeoLocale } from '../../lib/i18n/locales';
 import { SOURCE_CONTENT_LOCALE } from '../../lib/i18n/platform';
 import { getOrCreatePhraseTranslation } from '../lib/translation/phraseTranslationService';
-import { TranslationContingencyError } from '../lib/translation/types';
+import { TranslationContingencyError, TranslationPendingError } from '../lib/translation/types';
 import { prefetchFraseDetail } from '../lib/prefetchFrase';
+import { trackPhraseEvent } from '../lib/analytics/phrasePopularity';
 
 function MudarMetaSEO({
   title,
@@ -214,6 +216,7 @@ export default function FraseDetalheView({
   });
   const [translating, setTranslating] = useState(false);
   const [translationContingency, setTranslationContingency] = useState(false);
+  const [translationPending, setTranslationPending] = useState(false);
   /** Locale para o qual o loader já trouxe texto em `frases_traducoes` (evita API legada). */
   const [loaderCachedLocale, setLoaderCachedLocale] = useState<SeoLocale | null>(null);
   const [relatedSlugs, setRelatedSlugs] = useState<
@@ -377,11 +380,13 @@ export default function FraseDetalheView({
 
     if (loaderCachedLocale === contentLocale) {
       setTranslationContingency(false);
+      setTranslationPending(false);
       return;
     }
 
     showOriginal();
     setTranslationContingency(false);
+    setTranslationPending(false);
 
     const translateDelayMs = loading ? 2000 : 1500;
     const translateTimer = window.setTimeout(() => {
@@ -394,6 +399,7 @@ export default function FraseDetalheView({
         .then((result) => {
           if (cancel) return;
           setTranslationContingency(false);
+          setTranslationPending(false);
           setDisplay({
             texto: result.text,
             autor: frase.autor_original,
@@ -406,6 +412,7 @@ export default function FraseDetalheView({
           if (!cancel) {
             showOriginal();
             setTranslationContingency(err instanceof TranslationContingencyError);
+            setTranslationPending(err instanceof TranslationPendingError);
           }
         })
         .finally(() => {
@@ -459,6 +466,43 @@ export default function FraseDetalheView({
   const authorLine =
     display.autor || (frase ? fraseAutorOf(frase) : '') || '';
   useTranslatedViewMeta(display.isTranslated);
+
+  const seoPack = useMemo(() => {
+    if (!frase?.frase_original?.trim()) {
+      return { title: t('frases.not_found', 'Frase não encontrada'), description: '' };
+    }
+    const descriptionFallback =
+      frase.explicacao ||
+      `Frase de ${frase.autor_original}${frase.ano_ou_data ? ` (${frase.ano_ou_data})` : ''}`;
+    return pickTitleDescription(i18nMeta, contentLocale, {
+      title: `${frase.frase_original.slice(0, 72)}${frase.frase_original.length > 72 ? '…' : ''} — ${frase.autor_original}`,
+      description: descriptionFallback,
+    });
+  }, [frase, i18nMeta, contentLocale, t]);
+
+  const quotationJsonLd = useMemo(
+    () => {
+      if (!frase?.frase_original?.trim()) return undefined;
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'Quotation',
+        text: frase.frase_original,
+        name: frase.frase_original.slice(0, 120),
+        author: {
+          '@type': 'Person',
+          name: frase.autor_original,
+        },
+        url: canonical,
+        inLanguage: pageHtmlLang.replace('_', '-'),
+        isPartOf: {
+          '@type': 'WebSite',
+          name: 'Metamensagem',
+          url: 'https://metamensagem.com',
+        },
+      };
+    },
+    [frase?.frase_original, frase?.autor_original, canonical, pageHtmlLang]
+  );
 
   const handleCopy = () => {
     if (!frase) return;
@@ -525,35 +569,6 @@ export default function FraseDetalheView({
       </div>
     );
   }
-
-  const descriptionFallback =
-    frase.explicacao ||
-    `Frase de ${frase.autor_original}${frase.ano_ou_data ? ` (${frase.ano_ou_data})` : ''}`;
-  const seoPack = pickTitleDescription(i18nMeta, contentLocale, {
-    title: `${frase.frase_original.slice(0, 72)}${frase.frase_original.length > 72 ? '…' : ''} — ${frase.autor_original}`,
-    description: descriptionFallback,
-  });
-
-  const quotationJsonLd = useMemo(
-    () => ({
-      '@context': 'https://schema.org',
-      '@type': 'Quotation',
-      text: frase.frase_original,
-      name: frase.frase_original.slice(0, 120),
-      author: {
-        '@type': 'Person',
-        name: frase.autor_original,
-      },
-      url: canonical,
-      inLanguage: pageHtmlLang.replace('_', '-'),
-      isPartOf: {
-        '@type': 'WebSite',
-        name: 'Metamensagem',
-        url: 'https://metamensagem.com',
-      },
-    }),
-    [frase.frase_original, frase.autor_original, canonical, pageHtmlLang]
-  );
 
   const neutralAction = cardNeutralActionClass(tema);
   const hasExtraInfo =
@@ -646,7 +661,11 @@ export default function FraseDetalheView({
               — {authorLine}
             </p>
 
-            {translationContingency && (
+            {translationPending && (
+              <TranslationPendingNotice tema={tema} className="mb-6" />
+            )}
+
+            {translationContingency && !translationPending && (
               <TranslationContingencyNotice tema={tema} className="mb-6" />
             )}
 

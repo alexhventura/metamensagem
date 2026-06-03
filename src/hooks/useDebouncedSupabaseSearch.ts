@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { searchFrases, searchFrasesByText } from '../lib/frasesModel';
 import { itemConteudoFromSearchHit } from '../lib/itemFromSearchHit';
 import { isSupabaseConfigured } from '../lib/supabaseClient';
+import { resolveUiLocale } from '../lib/uiLocale';
 import type { ItemConteudo } from '../types/content';
 
 export type SupabaseSearchFilters = {
@@ -20,6 +22,8 @@ type Options = {
  */
 export function useDebouncedSupabaseSearch(query: string, options: Options = {}) {
   const { debounceMs = 300, limit = 48, filters } = options;
+  const { pathname } = useLocation();
+  const locale = resolveUiLocale(pathname);
   const trimmed = query.trim();
   const [items, setItems] = useState<ItemConteudo[] | null>(null);
   const [loading, setLoading] = useState(false);
@@ -43,8 +47,8 @@ export function useDebouncedSupabaseSearch(query: string, options: Options = {})
     const timer = window.setTimeout(() => {
       const hasFilters = Boolean(filters?.categoriaSlug || filters?.tagSlugs?.length);
       const request = hasFilters
-        ? searchFrases(trimmed, filters, { limit })
-        : searchFrasesByText(trimmed, { limit });
+        ? searchFrases(trimmed, filters, { limit, locale })
+        : searchFrasesByText(trimmed, { limit, locale });
 
       void request
         .then((hits) => {
@@ -63,7 +67,7 @@ export function useDebouncedSupabaseSearch(query: string, options: Options = {})
       cancelled = true;
       window.clearTimeout(timer);
     };
-  }, [trimmed, debounceMs, limit, filters?.categoriaSlug, filters?.tagSlugs?.join('|')]);
+  }, [trimmed, debounceMs, limit, locale, filters?.categoriaSlug, filters?.tagSlugs?.join('|')]);
 
   return {
     items,

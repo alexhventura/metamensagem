@@ -199,21 +199,66 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
             maxWidth: '80%',
             height: zones.footerHeight,
             display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'flex-end',
-            fontSize: layout.footerPx,
-            fontWeight: 500,
-            lineHeight: 1.2,
-            opacity: 0.55,
-            borderTop: '1px solid rgba(255,255,255,0.08)',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            gap: 6,
+            lineHeight: 1.35,
+            borderTop: '1px solid rgba(255,255,255,0.12)',
             paddingBottom: layout.padBottom,
             overflow: 'hidden',
           }}
         >
-          <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '55%' }}>
-            metamensagem.com · {skin}
-          </span>
-          <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '40%' }}>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              width: '100%',
+              gap: 16,
+            }}
+          >
+            <span
+              style={{
+                fontSize: layout.footerPx,
+                fontWeight: 500,
+                letterSpacing: '0.6px',
+                opacity: 0.72,
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
+                maxWidth: '55%',
+              }}
+            >
+              metamensagem.com
+            </span>
+            <span
+              style={{
+                fontSize: layout.footerPx,
+                fontWeight: 500,
+                letterSpacing: '0.6px',
+                opacity: 0.72,
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
+                maxWidth: '40%',
+                textAlign: 'center',
+              }}
+            >
+              {skin}
+            </span>
+          </div>
+          <span
+            style={{
+              fontSize: layout.footerSerialPx,
+              fontWeight: 400,
+              letterSpacing: '0.45px',
+              opacity: 0.6,
+              textAlign: 'right',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap',
+            }}
+          >
             {serialDisplay}
           </span>
         </div>

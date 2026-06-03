@@ -5,6 +5,7 @@ import { imageFontFamilyFor } from './utils/imageFonts';
 import {
   computeImageLayout,
   maxFooterLabelChars,
+  resolveFooterFormatProfile,
   truncateFooterLabel,
   validateFullText,
 } from './utils/textLayout';
@@ -40,6 +41,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
   const { zones } = layout;
 
   const footerPx = layout.footerPx;
+  const isWideFooter = resolveFooterFormatProfile(format.width, format.height) === 'horizontal';
   const footerInnerWidth = Math.floor(format.width * 0.8);
   const colSidePx = Math.floor(footerInnerWidth * 0.28);
   const colCenterPx = Math.floor(footerInnerWidth * 0.44);
@@ -62,17 +64,17 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
   const metaFooterStyle = {
     fontSize: footerPx,
     fontWeight: 500 as const,
-    letterSpacing: '0.4px',
-    lineHeight: 1.2,
-    opacity: 0.65,
+    letterSpacing: '0.6px',
+    lineHeight: 1.35,
+    opacity: 0.72,
   };
 
   const serialFooterStyle = {
     fontSize: layout.footerSerialPx,
     fontWeight: 400 as const,
-    letterSpacing: '0.3px',
-    lineHeight: 1.2,
-    opacity: 0.55,
+    letterSpacing: '0.45px',
+    lineHeight: 1.35,
+    opacity: 0.6,
   };
 
   const authorTrim = autor?.trim() ?? '';
@@ -197,7 +199,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
       ) : null}
 
       <footer
-        className={`absolute left-0 right-0 z-30 flex items-end justify-center overflow-hidden pointer-events-none ${skin.accentClass}`}
+        className={`absolute left-0 right-0 z-30 flex items-center justify-center overflow-hidden pointer-events-none ${skin.accentClass}`}
         style={{
           top: zones.footerTop,
           height: zones.footerHeight,
@@ -208,25 +210,44 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         }}
         aria-label="Metadados"
       >
-        <div
-          className="grid w-full max-w-[80%] mx-auto overflow-hidden min-w-0"
-          style={{
-            gridTemplateColumns: 'minmax(0,1fr) minmax(0,1.2fr) minmax(0,1fr)',
-            gap: 10,
-            fontFamily: 'Arial, Helvetica, sans-serif',
-            alignItems: 'center',
-          }}
-        >
-          <span className="lowercase text-left truncate min-w-0" style={metaFooterStyle}>
-            {domainLabel}
-          </span>
-          <span className="text-center truncate min-w-0" style={metaFooterStyle}>
-            {skinLabelDisplay}
-          </span>
-          <span className="tabular-nums text-right truncate min-w-0" style={serialFooterStyle}>
-            {serialLabel}
-          </span>
-        </div>
+        {isWideFooter ? (
+          <div
+            className="flex w-full max-w-[80%] mx-auto flex-col gap-1.5 overflow-hidden min-w-0"
+            style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+          >
+            <div className="flex w-full items-center justify-between gap-4 min-w-0">
+              <span className="lowercase text-left truncate min-w-0" style={metaFooterStyle}>
+                {domainLabel}
+              </span>
+              <span className="text-center truncate min-w-0" style={metaFooterStyle}>
+                {skinLabelDisplay}
+              </span>
+            </div>
+            <span className="tabular-nums text-right truncate min-w-0" style={serialFooterStyle}>
+              {serialLabel}
+            </span>
+          </div>
+        ) : (
+          <div
+            className="grid w-full max-w-[80%] mx-auto overflow-hidden min-w-0"
+            style={{
+              gridTemplateColumns: 'minmax(0,1fr) minmax(0,1.2fr) minmax(0,1fr)',
+              gap: 14,
+              fontFamily: 'Arial, Helvetica, sans-serif',
+              alignItems: 'center',
+            }}
+          >
+            <span className="lowercase text-left truncate min-w-0" style={metaFooterStyle}>
+              {domainLabel}
+            </span>
+            <span className="text-center truncate min-w-0" style={metaFooterStyle}>
+              {skinLabelDisplay}
+            </span>
+            <span className="tabular-nums text-right truncate min-w-0" style={serialFooterStyle}>
+              {serialLabel}
+            </span>
+          </div>
+        )}
       </footer>
     </div>
   );

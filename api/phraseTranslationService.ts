@@ -5,6 +5,12 @@
 import { hashPhraseSourceText } from '../lib/translation/sourceHash.js';
 import { getServerSupabase, getServerSupabaseServiceRole } from './_supabaseServer.js';
 import { isSeoLocale } from './_shared.js';
+import {
+  enqueueTranslationRequest,
+  TranslationPendingError,
+} from './translationRequestService.js';
+
+export { TranslationPendingError } from './translationRequestService.js';
 
 const LANG_MAP: Record<string, string> = {
   pt: 'pt-BR',
@@ -83,6 +89,13 @@ export async function upsertPhraseTranslation(input: {
     console.error('[phrase-translation] upsert', input.fraseId, input.locale, error.message);
     return false;
   }
+
+  void import('./fraseSearchIndexService.js').then(({ refreshFraseSearchIndexAfterTranslation }) =>
+    refreshFraseSearchIndexAfterTranslation(input.fraseId, input.locale, input.translatedText).catch(
+      (err) => console.warn('[phrase-translation] search index', err?.message || err)
+    )
+  );
+
   return true;
 }
 
@@ -159,14 +172,19 @@ export async function resolvePhraseTranslation(input: {
     return { text: trimmed, fromCache: true, localeOrigem };
   }
 
-  const translated = await translateWithMyMemory(trimmed, localeOrigem, locale);
-  await upsertPhraseTranslation({
-    fraseId,
-    locale,
-    sourceText: trimmed,
-    translatedText: translated,
-    localeOrigem,
-  });
+  try {
+    const translated = await translateWithMyMemory(trimmed, localeOrigem, locale);
+    await upsertPhraseTranslation({
+      fraseId,
+      locale,
+      sourceText: trimmed,
+      translatedText: translated,
+      localeOrigem,
+    });
 
-  return { text: translated, fromCache: false, localeOrigem };
+    return { text: translated, fromCache: false, localeOrigem };
+  } catch {
+    await enqueueTranslationRequest(fraseId, locale);
+    throw new TranslationPendingError();
+  }
 }

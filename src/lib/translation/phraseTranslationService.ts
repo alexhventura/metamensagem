@@ -18,7 +18,7 @@ import {
   markTranslationApiUnavailable,
 } from './translationQuota';
 import type { CardLang, PhraseTranslationMode } from './types';
-import { TranslationContingencyError } from './types';
+import { TranslationContingencyError, TranslationPendingError } from './types';
 
 function seoToCard(lang: SeoLocale): CardLang {
   return lang;
@@ -58,8 +58,18 @@ async function fetchGlobalPhraseTranslation(input: {
     text?: string;
     from_cache?: boolean;
     locale_origem?: string;
+    status?: string;
+    message?: string;
     error?: string;
   };
+
+  if (payload.status === 'pending') {
+    throw new TranslationPendingError(
+      payload.message ||
+        'Esta tradução foi solicitada e será processada automaticamente.',
+      input.targetLocale
+    );
+  }
 
   if (!res.ok) {
     throw new Error(payload.error || `HTTP ${res.status}`);
@@ -209,6 +219,15 @@ export async function getOrCreatePhraseTranslation(
       mode: fromCache ? 'cached' : 'live',
     };
   } catch (err) {
+    if (err instanceof TranslationPendingError) {
+      trackTranslationEvent('translation_fallback', {
+        phrase_id: phraseId,
+        slug,
+        locale: targetLocale,
+        mode: 'pending',
+      });
+      throw err;
+    }
     if (isQuotaOrAvailabilityError(err)) {
       markTranslationApiUnavailable(
         err instanceof Error ? err.message : 'quota'

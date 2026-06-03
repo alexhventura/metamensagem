@@ -86,14 +86,41 @@ export function normalizeFraseDetailRecord(raw: FraseDetailRecord): FraseDetailR
 
 type IndexRow = { id: string; slug: string };
 
-function matchSlugInIndexRows(rows: IndexRow[], key: string): string | null {
-  const exact = rows.find((r) => r.slug.toLowerCase() === key);
-  if (exact) return exact.slug;
+/** Match exato, prefixo ou slug truncado no meio de token (ex.: …-a-ditc → …-a-ditch). */
+export function pickBestSlugMatch<T extends { slug: string }>(
+  rows: T[],
+  key: string
+): T | null {
+  if (!rows.length || !key) return null;
+  const k = key.toLowerCase().trim();
 
-  const prefix = rows.find(
-    (r) => r.slug.toLowerCase().startsWith(key) || key.startsWith(r.slug.toLowerCase())
-  );
-  return prefix?.slug ?? null;
+  const exact = rows.find((r) => r.slug.toLowerCase() === k);
+  if (exact) return exact;
+
+  const slugStartsWithKey = rows.find((r) => r.slug.toLowerCase().startsWith(k));
+  if (slugStartsWithKey) return slugStartsWithKey;
+
+  const keyStartsWithSlug = rows.find((r) => k.startsWith(r.slug.toLowerCase()));
+  if (keyStartsWithSlug) return keyStartsWithSlug;
+
+  let best: T | null = null;
+  let bestCommon = 0;
+  for (const r of rows) {
+    const s = r.slug.toLowerCase();
+    let common = 0;
+    const limit = Math.min(k.length, s.length);
+    while (common < limit && k[common] === s[common]) common += 1;
+    const minLen = Math.min(k.length, s.length);
+    if (common > bestCommon && common >= Math.max(20, minLen - 8)) {
+      bestCommon = common;
+      best = r;
+    }
+  }
+  return best;
+}
+
+function matchSlugInIndexRows(rows: IndexRow[], key: string): string | null {
+  return pickBestSlugMatch(rows, key)?.slug ?? null;
 }
 
 /** Resolve slug canônico via shard index (links compartilhados / prefixos). */

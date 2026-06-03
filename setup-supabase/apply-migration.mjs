@@ -33,6 +33,11 @@ const PREFLIGHT_CHECKS = {
     sql: `select to_regclass('public.frases_index')::text as reg`,
     expect: 'frases_index',
   },
+  '20260603110000_frase_search_index.sql': {
+    label: 'public.frase_search_index',
+    sql: `select to_regclass('public.frase_search_index')::text as reg`,
+    expect: 'frase_search_index',
+  },
 };
 
 const ALREADY_APPLIED_PATTERNS = [

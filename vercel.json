@@ -219,5 +219,11 @@
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "installCommand": "npm ci"
+  "installCommand": "npm ci",
+  "crons": [
+    {
+      "path": "/api/cron/process-translation-requests",
+      "schedule": "0 */6 * * *"
+    }
+  ]
 }

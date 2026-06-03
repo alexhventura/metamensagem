@@ -1,6 +1,7 @@
 import {
   findFraseInList,
   normalizeFraseDetailRecord,
+  pickBestSlugMatch,
   resolveCanonicalSlugFromIndex,
   shardsToProbe,
   type FraseDetailRecord,
@@ -16,16 +17,12 @@ const MAX_LEGACY_SHARD_PROBES = 2;
 
 type IndexHit = { slug: string; shard: string | null };
 
-function matchIndexSlug(rows: IndexHit[], key: string): IndexHit | null {
-  if (!rows.length) return null;
-  const exact = rows.find((r) => r.slug.toLowerCase() === key);
-  if (exact) return exact;
-
-  const prefix = rows.find(
-    (r) =>
-      r.slug.toLowerCase().startsWith(key) || key.startsWith(r.slug.toLowerCase())
-  );
-  return prefix ?? null;
+function slugProbeKeys(key: string): string[] {
+  const probes = new Set<string>([key]);
+  for (const len of [64, 48, 40, 32, 24]) {
+    if (key.length > len) probes.add(key.slice(0, len));
+  }
+  return [...probes];
 }
 
 async function fetchJsonWithTimeout(url: string, timeoutMs = FETCH_TIMEOUT_MS): Promise<unknown> {
@@ -43,28 +40,37 @@ async function fetchJsonWithTimeout(url: string, timeoutMs = FETCH_TIMEOUT_MS): 
   }
 }
 
-function mapFraseRow(row: Record<string, unknown>): FraseDetailRecord {
-  const sem = (row.semantica ?? {}) as { categoriaPrincipal?: string; contextos?: string[]; palavrasChave?: string[] };
-  return normalizeFraseDetailRecord({
-    id: String(row.id),
-    slug: String(row.slug),
-    frase_original: String(row.frase_original ?? ''),
-    autor_original: String(row.autor_original ?? 'Anônimo'),
-    autor_slug: row.autor_slug ? String(row.autor_slug) : undefined,
-    categoria: String(row.categoria ?? sem.categoriaPrincipal ?? 'reflexao'),
-    contextos: (row.contextos as string[] | null) ?? sem.contextos ?? [],
-    palavras_chave: (row.palavras_chave as string[] | null) ?? sem.palavrasChave ?? [],
-    explicacao: String(row.explicacao ?? ''),
-    ano_ou_data: (row.ano_ou_data as string | null) ?? null,
-    fontes: (row.fontes as string | null) ?? null,
-    observacao: (row.observacao as string | null) ?? null,
-    autor_tipo: (row.autor_tipo as string | null) ?? null,
-    nacionalidade: (row.nacionalidade as string | null) ?? null,
-    nascimento_falecimento: (row.nascimento_falecimento as string | null) ?? null,
-    informacoes: row.informacoes as FraseDetailRecord['informacoes'],
-    semantica: row.semantica as Record<string, unknown> | undefined,
-    seo: row.seo as Record<string, unknown> | undefined,
-  });
+function mapFraseRow(row: Record<string, unknown>): FraseDetailRecord | null {
+  try {
+    const sem = (row.semantica ?? {}) as {
+      categoriaPrincipal?: string;
+      contextos?: string[];
+      palavrasChave?: string[];
+    };
+    return normalizeFraseDetailRecord({
+      id: String(row.id ?? ''),
+      slug: String(row.slug ?? ''),
+      frase_original: String(row.frase_original ?? ''),
+      autor_original: String(row.autor_original ?? 'Anônimo'),
+      autor_slug: row.autor_slug ? String(row.autor_slug) : undefined,
+      categoria: String(row.categoria ?? sem.categoriaPrincipal ?? 'reflexao'),
+      contextos: (row.contextos as string[] | null) ?? sem.contextos ?? [],
+      palavras_chave: (row.palavras_chave as string[] | null) ?? sem.palavrasChave ?? [],
+      explicacao: String(row.explicacao ?? ''),
+      ano_ou_data: (row.ano_ou_data as string | null) ?? null,
+      fontes: (row.fontes as string | null) ?? null,
+      observacao: (row.observacao as string | null) ?? null,
+      autor_tipo: (row.autor_tipo as string | null) ?? null,
+      nacionalidade: (row.nacionalidade as string | null) ?? null,
+      nascimento_falecimento: (row.nascimento_falecimento as string | null) ?? null,
+      informacoes: row.informacoes as FraseDetailRecord['informacoes'],
+      semantica: row.semantica as Record<string, unknown> | undefined,
+      seo: row.seo as Record<string, unknown> | undefined,
+    });
+  } catch (err) {
+    console.error('[frase-detail:mapFraseRow]', err);
+    return null;
+  }
 }
 
 async function loadFraseFromSupabaseTable(slug: string): Promise<FraseDetailRecord | null> {
@@ -72,28 +78,48 @@ async function loadFraseFromSupabaseTable(slug: string): Promise<FraseDetailReco
   if (!sb) return null;
 
   const key = slug.toLowerCase().trim();
+  const candidates: Record<string, unknown>[] = [];
 
-  const { data: exact, error: exactErr } = await sb
-    .from('frases')
-    .select(FRASE_SELECT)
-    .eq('slug', key)
-    .maybeSingle();
+  try {
+    const { data: exact, error: exactErr } = await sb
+      .from('frases')
+      .select(FRASE_SELECT)
+      .eq('slug', key)
+      .maybeSingle();
 
-  if (!exactErr && exact) return mapFraseRow(exact as Record<string, unknown>);
+    if (!exactErr && exact) {
+      const mapped = mapFraseRow(exact as Record<string, unknown>);
+      if (mapped) return mapped;
+    }
 
-  const { data: prefixRows, error: prefixErr } = await sb
-    .from('frases')
-    .select(FRASE_SELECT)
-    .like('slug', `${key}%`)
-    .limit(8);
+    for (const probe of slugProbeKeys(key)) {
+      const { data: prefixRows, error: prefixErr } = await sb
+        .from('frases')
+        .select(FRASE_SELECT)
+        .like('slug', `${probe}%`)
+        .limit(12);
 
-  if (prefixErr || !prefixRows?.length) return null;
+      if (prefixErr || !prefixRows?.length) continue;
+      for (const row of prefixRows) {
+        const slugValue = String((row as Record<string, unknown>).slug ?? '');
+        if (!slugValue || candidates.some((c) => String(c.slug) === slugValue)) continue;
+        candidates.push(row as Record<string, unknown>);
+      }
+    }
 
-  const hit = prefixRows.find((r) => String(r.slug).toLowerCase().startsWith(key));
-  if (hit) return mapFraseRow(hit as Record<string, unknown>);
+    const hit = pickBestSlugMatch(
+      candidates.map((row) => ({ slug: String(row.slug ?? '') })),
+      key
+    );
+    if (hit) {
+      const row = candidates.find((r) => String(r.slug).toLowerCase() === hit.slug.toLowerCase());
+      if (row) return mapFraseRow(row);
+    }
+  } catch (err) {
+    console.error('[frase-detail:supabase-table]', key, err);
+  }
 
-  const reverse = prefixRows.find((r) => key.startsWith(String(r.slug).toLowerCase()));
-  return reverse ? mapFraseRow(reverse as Record<string, unknown>) : null;
+  return null;
 }
 
 async function resolveIndexHit(slug: string): Promise<IndexHit | null> {
@@ -101,36 +127,37 @@ async function resolveIndexHit(slug: string): Promise<IndexHit | null> {
   if (!sb) return null;
 
   const key = slug.toLowerCase().trim();
+  const rows: IndexHit[] = [];
 
-  const { data: exact } = await sb
-    .from('frases_index')
-    .select('slug,shard')
-    .eq('slug', key)
-    .maybeSingle();
-
-  if (exact?.slug) return exact as IndexHit;
-
-  const { data: prefixRows } = await sb
-    .from('frases_index')
-    .select('slug,shard')
-    .like('slug', `${key}%`)
-    .order('slug', { ascending: true })
-    .limit(12);
-
-  const prefixHit = matchIndexSlug((prefixRows ?? []) as IndexHit[], key);
-  if (prefixHit) return prefixHit;
-
-  if (key.length >= 24) {
-    const { data: fuzzyRows } = await sb
+  try {
+    const { data: exact } = await sb
       .from('frases_index')
       .select('slug,shard')
-      .like('slug', `${key.slice(0, 24)}%`)
-      .limit(16);
+      .eq('slug', key)
+      .maybeSingle();
 
-    return matchIndexSlug((fuzzyRows ?? []) as IndexHit[], key);
+    if (exact?.slug) return exact as IndexHit;
+
+    for (const probe of slugProbeKeys(key)) {
+      const { data: prefixRows } = await sb
+        .from('frases_index')
+        .select('slug,shard')
+        .like('slug', `${probe}%`)
+        .order('slug', { ascending: true })
+        .limit(16);
+
+      for (const row of prefixRows ?? []) {
+        const slugValue = String(row.slug ?? '').toLowerCase();
+        if (!slugValue || rows.some((r) => r.slug.toLowerCase() === slugValue)) continue;
+        rows.push(row as IndexHit);
+      }
+    }
+
+    return pickBestSlugMatch(rows, key);
+  } catch (err) {
+    console.error('[frase-detail:frases_index]', key, err);
+    return null;
   }
-
-  return null;
 }
 
 async function loadFraseFromDetailShard(
@@ -183,40 +210,46 @@ export async function resolveFraseDetailBySlug(
   const key = slug.toLowerCase().trim();
   if (!key) return null;
 
-  const fromTable = await loadFraseFromSupabaseTable(key);
-  if (fromTable) return fromTable;
+  try {
+    const fromTable = await loadFraseFromSupabaseTable(key);
+    if (fromTable) return fromTable;
 
-  const indexHit = await resolveIndexHit(key);
-  const canonicalSlug = indexHit?.slug.toLowerCase() ?? key;
+    const indexHit = await resolveIndexHit(key);
+    const canonicalSlug = indexHit?.slug.toLowerCase() ?? key;
 
-  if (indexHit && canonicalSlug !== key) {
-    const fromCanonical = await loadFraseFromSupabaseTable(canonicalSlug);
-    if (fromCanonical) return fromCanonical;
+    if (indexHit && canonicalSlug !== key) {
+      const fromCanonical = await loadFraseFromSupabaseTable(canonicalSlug);
+      if (fromCanonical) return fromCanonical;
+    }
+
+    if (indexHit?.shard) {
+      const fromShard = await loadFraseFromDetailShard(canonicalSlug, indexHit.shard, assetBase);
+      if (fromShard) return fromShard;
+    }
+
+    const fromFs = await loadFraseFromFilesystem(canonicalSlug);
+    if (fromFs) return fromFs;
+
+    const fetchJson = async (path: string) =>
+      fetchJsonWithTimeout(`${assetBase.replace(/\/$/, '')}${path}`);
+
+    const resolved =
+      (await resolveCanonicalSlugFromIndex(canonicalSlug, fetchJson)) ?? canonicalSlug;
+
+    const fromLegacy = await loadFraseFromLegacyShards(
+      resolved,
+      assetBase,
+      indexHit?.shard ?? null
+    );
+    if (fromLegacy) return fromLegacy;
+
+    if (resolved !== key) {
+      return loadFraseFromLegacyShards(key, assetBase, indexHit?.shard ?? null);
+    }
+
+    return null;
+  } catch (err) {
+    console.error('[frase-detail:resolve]', { slug: key, err });
+    return null;
   }
-
-  if (indexHit?.shard) {
-    const fromShard = await loadFraseFromDetailShard(canonicalSlug, indexHit.shard, assetBase);
-    if (fromShard) return fromShard;
-  }
-
-  const fromFs = await loadFraseFromFilesystem(canonicalSlug);
-  if (fromFs) return fromFs;
-
-  const fetchJson = async (path: string) => fetchJsonWithTimeout(`${assetBase.replace(/\/$/, '')}${path}`);
-
-  const resolved =
-    (await resolveCanonicalSlugFromIndex(canonicalSlug, fetchJson)) ?? canonicalSlug;
-
-  const fromLegacy = await loadFraseFromLegacyShards(
-    resolved,
-    assetBase,
-    indexHit?.shard ?? null
-  );
-  if (fromLegacy) return fromLegacy;
-
-  if (resolved !== key) {
-    return loadFraseFromLegacyShards(key, assetBase, indexHit?.shard ?? null);
-  }
-
-  return null;
 }

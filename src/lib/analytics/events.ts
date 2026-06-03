@@ -18,7 +18,7 @@ export type AnalyticsParams = {
   ui_language?: string;
   country?: string;
   category?: string;
-  mode?: 'live' | 'cached' | 'contingency';
+  mode?: 'live' | 'cached' | 'contingency' | 'pending';
   image_format?: string;
   skin_id?: string;
   collection_id?: string;

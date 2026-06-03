@@ -1,5 +1,5 @@
 /** Layout por zonas — medição conservadora; LONG/EXTREME; sem truncar. */
-import { computeLayoutZones, type LayoutZones, type ZoneDensity } from './safeZone';
+import { computeLayoutZones, type LayoutZones, type ZoneDensity, resolveFooterFormatProfile } from './safeZone';
 
 export const LONG_QUOTE_CHAR_THRESHOLD = 150;
 export const EXTREME_QUOTE_CHAR_THRESHOLD = 300;
@@ -130,12 +130,16 @@ export function estimateRenderedBlockHeight(
   return lineCount * perLine + marks;
 }
 
-function computeFooterPx(width: number): number {
-  return computeFooterFontSize(width);
+function computeFooterPx(width: number, height: number): number {
+  return computeFooterFontSize(width, height);
 }
 
-function computeFooterSerialPx(width: number): number {
-  return computeFooterSerialFontSize(width);
+function computeFooterSerialPx(width: number, height: number): number {
+  return computeFooterSerialFontSize(width, height);
+}
+
+function computeFooterPadBottom(zones: LayoutZones): number {
+  return Math.max(16, Math.round(zones.footerHeight * 0.2));
 }
 
 function computeAuthorPx(autor: string, zones: LayoutZones): number {
@@ -282,7 +286,7 @@ function buildPlan(
     logoPx: zones.logoPx,
     padX: zones.padX,
     padTop: Math.round(zones.headerHeight * (zones.density === 'extreme' ? 0.22 : 0.28)),
-    padBottom: Math.max(32, Math.round(40 * (zones.width / 1080))),
+    padBottom: computeFooterPadBottom(zones),
     footerPx: opts.footerPx,
     footerSerialPx: opts.footerSerialPx,
     lineHeight: opts.lineHeight,
@@ -314,8 +318,8 @@ export function computeImageLayout(
 
   const zones = computeLayoutZones(width, height, hasAuthor, density);
   const authorPx = computeAuthorPx(autor, zones);
-  const footerPx = computeFooterPx(width);
-  const footerSerialPx = computeFooterSerialPx(width);
+  const footerPx = computeFooterPx(width, height);
+  const footerSerialPx = computeFooterSerialPx(width, height);
   const { fontMax, fontMin, usable } = fontBounds(zones, density, clean.length);
   const lhSteps = lhStepsFor(density);
 
@@ -387,29 +391,51 @@ export function computeImageLayout(
   });
 }
 
-/** Metadados do rodapé Soft Premium — escala pela largura (1080 = referência). */
-export const FOOTER_META_AT_1080 = 18;
-export const FOOTER_SERIAL_AT_1080 = 16;
-export const FOOTER_META_MIN_PX = 16;
-export const FOOTER_META_MAX_PX = 22;
-export const FOOTER_SERIAL_MIN_PX = 14;
-export const FOOTER_SERIAL_MAX_PX = 20;
+/** Metadados do rodapé Soft Premium — responsivo por proporção do canvas. */
+export const FOOTER_META_MIN_PX = 18;
+export const FOOTER_META_MAX_PX = 26;
+export const FOOTER_SERIAL_MIN_PX = 16;
+export const FOOTER_SERIAL_MAX_PX = 22;
+
+const FOOTER_META_BY_PROFILE: Record<
+  ReturnType<typeof resolveFooterFormatProfile>,
+  number
+> = {
+  square: 18,
+  portrait: 20,
+  story: 22,
+  horizontal: 24,
+  default: 20,
+};
 
 /** @deprecated */
+export const FOOTER_META_AT_1080 = 18;
+/** @deprecated */
+export const FOOTER_SERIAL_AT_1080 = 16;
+/** @deprecated */
 export const FOOTER_METADATA_MIN_PX = FOOTER_META_MIN_PX;
+/** @deprecated */
 export const FOOTER_METADATA_MAX_PX = FOOTER_META_MAX_PX;
-export const FOOTER_METADATA_HEIGHT_RATIO = FOOTER_META_AT_1080 / 1080;
+export const FOOTER_METADATA_HEIGHT_RATIO = 0.08;
 export const FOOTER_HEIGHT_RATIO = FOOTER_METADATA_HEIGHT_RATIO;
+/** @deprecated */
 export const FOOTER_MIN_PX = FOOTER_META_MIN_PX;
+/** @deprecated */
 export const FOOTER_MAX_PX = FOOTER_META_MAX_PX;
 
-export function computeFooterFontSize(width: number): number {
-  const px = Math.round(FOOTER_META_AT_1080 * (width / 1080));
-  return Math.min(FOOTER_META_MAX_PX, Math.max(FOOTER_META_MIN_PX, px));
+export { resolveFooterFormatProfile } from './safeZone';
+
+export function computeFooterFontSize(width: number, height: number): number {
+  const profile = resolveFooterFormatProfile(width, height);
+  const target = FOOTER_META_BY_PROFILE[profile];
+  const shortest = Math.min(width, height);
+  const proportional = Math.round(shortest * 0.018);
+  return Math.min(FOOTER_META_MAX_PX, Math.max(FOOTER_META_MIN_PX, target, proportional));
 }
 
-export function computeFooterSerialFontSize(width: number): number {
-  const px = Math.round(FOOTER_SERIAL_AT_1080 * (width / 1080));
+export function computeFooterSerialFontSize(width: number, height: number): number {
+  const meta = computeFooterFontSize(width, height);
+  const px = Math.round(meta * 0.88);
   return Math.min(FOOTER_SERIAL_MAX_PX, Math.max(FOOTER_SERIAL_MIN_PX, px));
 }
 

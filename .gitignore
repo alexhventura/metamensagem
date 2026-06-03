@@ -22,6 +22,8 @@ coverage/
 /scripts/*
 !/scripts/gerarIndiceBusca.js
 !/scripts/importarIndiceSupabase.js
+!/scripts/backfillFraseSearchIndex.mjs
+!/scripts/importarShards.js
 
 # Payload gerado para import Supabase (centenas de MB)
 data/search-index/

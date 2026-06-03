@@ -31,13 +31,35 @@ const DENSITY_RATIOS: Record<
   extreme: { header: 0.08, author: 0.062, gap: 0.012, logoScale: 0.78 },
 };
 
-/** Rodapé reservado — ~88px @ 1080 (metadados 18px + margem 40px). */
-const FOOTER_HEIGHT_AT_1080 = 88;
+/** Rodapé reservado — 8–10% da altura (horizontal usa 10%). */
+const FOOTER_HEIGHT_RATIO_DEFAULT = 0.08;
+const FOOTER_HEIGHT_RATIO_HORIZONTAL = 0.1;
+const FOOTER_MIN_HEIGHT_PX = 72;
+const FOOTER_MIN_HEIGHT_HORIZONTAL_PX = 84;
 
-function footerHeightForCanvas(height: number, density: ZoneDensity): number {
-  let h = Math.max(52, Math.round(height * (FOOTER_HEIGHT_AT_1080 / 1080)));
+export type FooterFormatProfile = 'square' | 'portrait' | 'story' | 'horizontal' | 'default';
+
+export function resolveFooterFormatProfile(width: number, height: number): FooterFormatProfile {
+  const aspect = width / height;
+  if (aspect >= 1.35) return 'horizontal';
+  if (height >= width * 1.55) return 'story';
+  if (height >= width * 1.12) return 'portrait';
+  if (aspect >= 0.92 && aspect <= 1.08) return 'square';
+  return 'default';
+}
+
+function footerHeightForCanvas(
+  width: number,
+  height: number,
+  density: ZoneDensity
+): number {
+  const profile = resolveFooterFormatProfile(width, height);
+  const ratio =
+    profile === 'horizontal' ? FOOTER_HEIGHT_RATIO_HORIZONTAL : FOOTER_HEIGHT_RATIO_DEFAULT;
+  const minH = profile === 'horizontal' ? FOOTER_MIN_HEIGHT_HORIZONTAL_PX : FOOTER_MIN_HEIGHT_PX;
+  let h = Math.max(minH, Math.round(height * ratio));
   if (density === 'long') h = Math.round(h * 0.96);
-  if (density === 'extreme') h = Math.round(h * 0.92);
+  if (density === 'extreme') h = Math.round(h * 0.94);
   return h;
 }
 
@@ -50,7 +72,7 @@ export function computeLayoutZones(
   const r = DENSITY_RATIOS[density];
   const padX = Math.round(width * SIDE_RATIO);
   const headerHeight = Math.round(height * r.header);
-  const footerHeight = footerHeightForCanvas(height, density);
+  const footerHeight = footerHeightForCanvas(width, height, density);
   const footerTop = height - footerHeight;
   const authorZoneHeight = hasAuthor
     ? Math.round(Math.max(64, height * r.author))

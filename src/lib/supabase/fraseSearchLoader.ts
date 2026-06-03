@@ -1,5 +1,5 @@
 /**
- * Busca híbrida — índice leve no Supabase (frases_index).
+ * Busca híbrida multilíngue — índice leve no Supabase (frases_index + frase_search_index).
  * Retorna apenas metadados; detalhe permanece em loadFraseDetailBySlug + fallback shard.
  */
 
@@ -17,6 +17,8 @@ export type FraseSearchHit = {
 export type FraseSearchOptions = {
   limit?: number;
   offset?: number;
+  /** Locale do usuário — boost de ranking (opcional) */
+  locale?: string;
 };
 
 const DEFAULT_LIMIT = 24;
@@ -45,7 +47,34 @@ function clientOrNull() {
   }
 }
 
-/** Busca full-text (tsvector) — só metadados. */
+async function rpcSearch(
+  sb: ReturnType<typeof getSupabase>,
+  q: string,
+  options?: FraseSearchOptions & { categoriaId?: number | null; tagIds?: number[] | null }
+): Promise<FraseSearchHit[]> {
+  const limit = clampLimit(options?.limit);
+  const offset = Math.max(0, options?.offset ?? 0);
+
+  const { data, error } = await sb.rpc('mm_search_frases_index', {
+    p_query: q,
+    p_limit: limit,
+    p_offset: offset,
+    p_locale: options?.locale ?? null,
+    p_categoria_id: options?.categoriaId ?? null,
+    p_tag_ids: options?.tagIds?.length ? options.tagIds : null,
+  });
+
+  if (error) {
+    if (import.meta.env.DEV) {
+      console.warn('[supabase/fraseSearchLoader] mm_search_frases_index', error.message);
+    }
+    return [];
+  }
+
+  return mapRows(data as FraseSearchHit[] | null);
+}
+
+/** Busca democrática multilíngue (tsvector) — só metadados. */
 export async function searchFrasesIndexByText(
   query: string,
   options?: FraseSearchOptions
@@ -56,30 +85,7 @@ export async function searchFrasesIndexByText(
   const sb = clientOrNull();
   if (!sb) return [];
 
-  const limit = clampLimit(options?.limit);
-  const offset = Math.max(0, options?.offset ?? 0);
-
-  const { data, error } = await sb.rpc('mm_search_frases_index', {
-    p_query: q,
-    p_limit: limit,
-    p_offset: offset,
-  });
-
-  if (error) {
-    if (import.meta.env.DEV) {
-      console.warn('[supabase/fraseSearchLoader] mm_search_frases_index', error.message);
-    }
-    const fallback = await sb
-      .from('frases_index')
-      .select(FRASE_SEARCH_SELECT)
-      .textSearch('search_vector', q, { type: 'websearch', config: 'simple' })
-      .order('popularidade', { ascending: false })
-      .range(offset, offset + limit - 1);
-    if (fallback.error) return [];
-    return mapRows(fallback.data as FraseSearchHit[] | null);
-  }
-
-  return mapRows(data as FraseSearchHit[] | null);
+  return rpcSearch(sb, q, options);
 }
 
 async function resolveCategoriaId(categoriaSlug: string): Promise<number | null> {
@@ -158,7 +164,7 @@ export async function searchFrasesIndexByTags(
   return mapRows(data as FraseSearchHit[] | null);
 }
 
-/** Busca combinada (texto + filtros opcionais) — só metadados. */
+/** Busca combinada (texto + filtros opcionais) — democrática multilíngue. */
 export async function searchFrasesIndex(
   query: string,
   filters?: { categoriaSlug?: string; tagSlugs?: string[] },
@@ -169,35 +175,24 @@ export async function searchFrasesIndex(
   if (!sb) return [];
   if (!q && !filters?.categoriaSlug && !filters?.tagSlugs?.length) return [];
 
-  const limit = clampLimit(options?.limit);
-  const offset = Math.max(0, options?.offset ?? 0);
+  if (q) {
+    const categoriaId = filters?.categoriaSlug
+      ? await resolveCategoriaId(filters.categoriaSlug)
+      : null;
+    if (filters?.categoriaSlug && categoriaId == null) return [];
 
-  let qb = sb.from('frases_index').select(FRASE_SEARCH_SELECT);
+    const tagIds = filters?.tagSlugs?.length ? await resolveTagIds(filters.tagSlugs) : null;
+    if (filters?.tagSlugs?.length && !tagIds?.length) return [];
+
+    return rpcSearch(sb, q, {
+      ...options,
+      categoriaId,
+      tagIds,
+    });
+  }
 
   if (filters?.categoriaSlug) {
-    const categoriaId = await resolveCategoriaId(filters.categoriaSlug);
-    if (categoriaId == null) return [];
-    qb = qb.eq('categoria_id', categoriaId);
+    return searchFrasesIndexByCategoria(filters.categoriaSlug, options);
   }
-
-  if (filters?.tagSlugs?.length) {
-    const tagIds = await resolveTagIds(filters.tagSlugs);
-    if (!tagIds.length) return [];
-    qb = qb.overlaps('tags_ids', tagIds);
-  }
-
-  if (q) {
-    qb = qb.textSearch('search_vector', q, { type: 'websearch', config: 'simple' });
-  }
-
-  const { data, error } = await qb
-    .order('popularidade', { ascending: false })
-    .order('id')
-    .range(offset, offset + limit - 1);
-
-  if (error) {
-    if (import.meta.env.DEV) console.warn('[supabase/fraseSearchLoader] combined', error.message);
-    return [];
-  }
-  return mapRows(data as FraseSearchHit[] | null);
+  return searchFrasesIndexByTags(filters?.tagSlugs || [], options);
 }

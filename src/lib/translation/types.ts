@@ -19,6 +19,8 @@ export interface CardContentDisplay extends CardContentSource {
   translationFailed?: boolean;
   /** Tradução oficial indisponível; API em contingência — ver aviso amigável. */
   translationContingency?: boolean;
+  /** Tradução enfileirada em translation_requests. */
+  translationPending?: boolean;
   targetLang?: CardLang;
 }
 
@@ -59,4 +61,15 @@ export class TranslationContingencyError extends Error {
   }
 }
 
-export type PhraseTranslationMode = 'live' | 'cached' | 'contingency';
+/** Tradução enfileirada em translation_requests — será processada pelo cron. */
+export class TranslationPendingError extends Error {
+  constructor(
+    message = 'Esta tradução foi solicitada e será processada automaticamente.',
+    public readonly target?: CardLang
+  ) {
+    super(message);
+    this.name = 'TranslationPendingError';
+  }
+}
+
+export type PhraseTranslationMode = 'live' | 'cached' | 'contingency' | 'pending';

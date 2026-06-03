@@ -342,6 +342,45 @@ function buildDisplay(
   return base;
 }
 
+async function buildDetailFromFraseRow(
+  frase: FraseCms,
+  options?: LoadFraseDetailOptions
+): Promise<FraseDetailLoadResult> {
+  const defaultLocale = seoLocaleFromLanguageOriginal(
+    frase.semantica?.languageOriginal || frase.semantica?.idiomaOriginal || 'pt'
+  );
+  const contentLocale = resolveFraseContentLocale(options?.prefixLocale ?? null, defaultLocale);
+
+  let traducao: TraducaoRow | null = null;
+  if (contentLocale !== defaultLocale) {
+    traducao = await fetchCachedTranslation(frase.id, contentLocale, frase.frase_original);
+  }
+
+  return {
+    frase,
+    display: buildDisplay(frase, contentLocale, defaultLocale, traducao),
+  };
+}
+
+async function applyContentLocaleToDetail(
+  detail: FraseDetailLoadResult,
+  options?: LoadFraseDetailOptions
+): Promise<FraseDetailLoadResult> {
+  const { frase } = detail;
+  const defaultLocale = seoLocaleFromLanguageOriginal(
+    frase.semantica?.languageOriginal || frase.semantica?.idiomaOriginal || 'pt'
+  );
+  const contentLocale = resolveFraseContentLocale(options?.prefixLocale ?? null, defaultLocale);
+
+  if (contentLocale === defaultLocale) return detail;
+
+  const traducao = await fetchCachedTranslation(frase.id, contentLocale, frase.frase_original);
+  return {
+    frase,
+    display: buildDisplay(frase, contentLocale, defaultLocale, traducao),
+  };
+}
+
 export async function loadFraseDetailFromSupabase(
   slug: string,
   options?: LoadFraseDetailOptions
@@ -356,52 +395,46 @@ export async function loadFraseDetailFromSupabase(
   if (cached !== undefined) return cached;
 
   try {
+    const indexHit = await fetchIndexHitBySlug(key);
+    const canonical = indexHit?.slug.toLowerCase() ?? key;
+
+    if (indexHit?.shard) {
+      const fromApi = await loadFraseDetailFromApi(canonical);
+      if (fromApi) {
+        const bundle = await applyContentLocaleToDetail(fromApi, options);
+        setSlugCacheEntry(cacheKey, bundle);
+        return bundle;
+      }
+    }
+
     const rows = await fetchFraseRowsBySlug(key);
     let frase = resolveFraseFromRows(rows, key);
 
+    if (!frase && indexHit && canonical !== key) {
+      const canonicalRows = await fetchFraseRowsBySlug(canonical);
+      frase = resolveFraseFromRows(canonicalRows, canonical);
+    }
+
     if (!frase) {
-      const indexHit = await fetchIndexHitBySlug(key);
-      const canonical = indexHit?.slug.toLowerCase() ?? key;
-
-      if (indexHit && canonical !== key) {
-        const canonicalRows = await fetchFraseRowsBySlug(canonical);
-        frase = resolveFraseFromRows(canonicalRows, canonical);
+      const fromApi = await loadFraseDetailFromApi(canonical);
+      if (fromApi) {
+        const bundle = await applyContentLocaleToDetail(fromApi, options);
+        setSlugCacheEntry(cacheKey, bundle);
+        return bundle;
       }
-
-      if (!frase) {
-        const fromApi = await loadFraseDetailFromApi(canonical);
-        if (fromApi) {
-          setSlugCacheEntry(cacheKey, fromApi);
-          return fromApi;
+      if (canonical !== key) {
+        const fromApiOriginal = await loadFraseDetailFromApi(key);
+        if (fromApiOriginal) {
+          const bundle = await applyContentLocaleToDetail(fromApiOriginal, options);
+          setSlugCacheEntry(cacheKey, bundle);
+          return bundle;
         }
-        if (canonical !== key) {
-          const fromApiOriginal = await loadFraseDetailFromApi(key);
-          if (fromApiOriginal) {
-            setSlugCacheEntry(cacheKey, fromApiOriginal);
-            return fromApiOriginal;
-          }
-        }
-        setSlugCacheEntry(cacheKey, null);
-        return null;
       }
+      setSlugCacheEntry(cacheKey, null);
+      return null;
     }
 
-    const defaultLocale = seoLocaleFromLanguageOriginal(
-      frase.semantica?.languageOriginal ||
-        frase.semantica?.idiomaOriginal ||
-        'pt'
-    );
-    const contentLocale = resolveFraseContentLocale(options?.prefixLocale ?? null, defaultLocale);
-
-    let traducao: TraducaoRow | null = null;
-    if (contentLocale !== defaultLocale) {
-      traducao = await fetchCachedTranslation(frase.id, contentLocale, frase.frase_original);
-    }
-
-    const result: FraseDetailLoadResult = {
-      frase,
-      display: buildDisplay(frase, contentLocale, defaultLocale, traducao),
-    };
+    const result = await buildDetailFromFraseRow(frase, options);
     setSlugCacheEntry(cacheKey, result);
     return result;
   } catch (err) {

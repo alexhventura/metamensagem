@@ -5,7 +5,11 @@
 import { sendJson, type ApiResponse } from './_http.js';
 import type { ApiRequest } from './_shared.js';
 import { isSeoLocale } from './_shared.js';
-import { resolvePhraseTranslation } from './phraseTranslationService.js';
+import {
+  resolvePhraseTranslation,
+  TranslationPendingError,
+} from './phraseTranslationService.js';
+import { PENDING_MESSAGE } from './translationRequestService.js';
 
 const CACHE_HIT = 'public, max-age=86400, stale-while-revalidate=604800';
 const CACHE_MISS = 'public, max-age=60';
@@ -74,6 +78,22 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
       { 'Cache-Control': result.fromCache ? CACHE_HIT : CACHE_MISS }
     );
   } catch (err) {
+    if (err instanceof TranslationPendingError) {
+      sendJson(
+        res,
+        200,
+        {
+          frase_id: fraseId,
+          locale,
+          found: false,
+          status: 'pending',
+          message: err.message || PENDING_MESSAGE,
+        },
+        { 'Cache-Control': CACHE_MISS }
+      );
+      return;
+    }
+
     const message = err instanceof Error ? err.message : 'Tradução indisponível';
     const quota = /quota|cota|429/i.test(message);
     sendJson(

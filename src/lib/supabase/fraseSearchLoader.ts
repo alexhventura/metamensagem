@@ -6,17 +6,22 @@
 import { getSupabase, isSupabaseConfigured } from '../supabaseClient';
 
 /** Colunas expostas ao browser — sem textos longos */
-export const FRASE_SEARCH_SELECT = 'id,slug,titulo' as const;
+export const FRASE_SEARCH_SELECT = 'id,slug,titulo,popularidade' as const;
 
 export type FraseSearchHit = {
   id: string;
   slug: string;
   titulo: string;
+  popularidade?: number;
 };
 
 export type FraseSearchOptions = {
   limit?: number;
+  /** @deprecated Prefer afterId + afterPopularidade (keyset) */
   offset?: number;
+  /** Keyset: última linha da página anterior */
+  afterId?: string;
+  afterPopularidade?: number;
   /** Locale do usuário — boost de ranking (opcional) */
   locale?: string;
 };
@@ -29,13 +34,33 @@ function clampLimit(limit?: number): number {
   return Math.max(1, Math.min(n, MAX_LIMIT));
 }
 
-function mapRows(data: { id: string; slug: string; titulo: string }[] | null): FraseSearchHit[] {
+function mapRows(
+  data: { id: string; slug: string; titulo: string; popularidade?: number }[] | null
+): FraseSearchHit[] {
   if (!data?.length) return [];
   return data.map((row) => ({
     id: row.id,
     slug: row.slug.toLowerCase(),
     titulo: row.titulo,
+    popularidade: row.popularidade ?? 0,
   }));
+}
+
+function applyKeysetFilter<
+  T extends {
+    or: (filters: string) => T;
+    lt: (column: string, value: number) => T;
+    gt: (column: string, value: string) => T;
+  }
+>(query: T, options?: FraseSearchOptions): T {
+  const afterId = options?.afterId?.trim();
+  const afterPop = options?.afterPopularidade;
+  if (afterId && afterPop != null && Number.isFinite(afterPop)) {
+    return query.or(
+      `popularidade.lt.${afterPop},and(popularidade.eq.${afterPop},id.gt.${afterId})`
+    );
+  }
+  return query;
 }
 
 function clientOrNull() {
@@ -120,13 +145,21 @@ export async function searchFrasesIndexByCategoria(
   const limit = clampLimit(options?.limit);
   const offset = Math.max(0, options?.offset ?? 0);
 
-  const { data, error } = await sb
+  let query = sb
     .from('frases_index')
     .select(FRASE_SEARCH_SELECT)
     .eq('categoria_id', categoriaId)
     .order('popularidade', { ascending: false })
-    .order('id')
-    .range(offset, offset + limit - 1);
+    .order('id', { ascending: true });
+
+  if (options?.afterId && options.afterPopularidade != null) {
+    query = applyKeysetFilter(query, options);
+    query = query.limit(limit);
+  } else {
+    query = query.range(offset, offset + limit - 1);
+  }
+
+  const { data, error } = await query;
 
   if (error) {
     if (import.meta.env.DEV) console.warn('[supabase/fraseSearchLoader] categoria', error.message);
@@ -149,13 +182,21 @@ export async function searchFrasesIndexByTags(
   const limit = clampLimit(options?.limit);
   const offset = Math.max(0, options?.offset ?? 0);
 
-  const { data, error } = await sb
+  let query = sb
     .from('frases_index')
     .select(FRASE_SEARCH_SELECT)
     .overlaps('tags_ids', tagIds)
     .order('popularidade', { ascending: false })
-    .order('id')
-    .range(offset, offset + limit - 1);
+    .order('id', { ascending: true });
+
+  if (options?.afterId && options.afterPopularidade != null) {
+    query = applyKeysetFilter(query, options);
+    query = query.limit(limit);
+  } else {
+    query = query.range(offset, offset + limit - 1);
+  }
+
+  const { data, error } = await query;
 
   if (error) {
     if (import.meta.env.DEV) console.warn('[supabase/fraseSearchLoader] tags', error.message);

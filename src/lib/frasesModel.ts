@@ -26,6 +26,11 @@ import {
 } from './fraseDetailCache';
 import { isSupabaseConfigured } from './supabaseClient';
 import {
+  recordCacheHit,
+  recordFraseDetailLatency,
+  type CacheLayer,
+} from './observability/performanceMetrics';
+import {
   searchFrasesIndex,
   searchFrasesIndexByCategoria,
   searchFrasesIndexByTags,
@@ -221,7 +226,7 @@ export function fraseListItemFromSearchHit(hit: FraseSearchHit) {
   };
 }
 
-/** Carrega frase + display (com tradução em cache do Supabase quando aplicável). */
+/** Carrega frase + display (CDN-first; Supabase só como fallback). */
 export async function loadFraseDetailBySlug(
   slug: string,
   options?: LoadFraseDetailOptions
@@ -229,10 +234,16 @@ export async function loadFraseDetailBySlug(
   const key = slug.toLowerCase().trim();
   if (!key) return null;
 
+  const started = typeof performance !== 'undefined' ? performance.now() : 0;
+  const finish = (layer: CacheLayer, bundle: FraseDetailLoadResult): FraseDetailLoadResult => {
+    if (started) recordFraseDetailLatency(performance.now() - started, layer);
+    return bundle;
+  };
+
   const mem = bySlug?.get(key);
   if (mem) {
     const defaultLocale = mem.semantica?.languageOriginal || mem.semantica?.idiomaOriginal || 'pt';
-    return {
+    return finish('memory', {
       frase: mem,
       display: {
         texto: mem.frase_original,
@@ -240,35 +251,36 @@ export async function loadFraseDetailBySlug(
         explicacao: mem.explicacao || undefined,
         isTranslated: false,
       },
-    };
+    });
   }
 
   const cached = await getCachedFraseDetail(key);
   if (cached) {
     registerFrase(cached.frase);
-    return cached;
+    return finish('indexeddb', cached);
   }
 
-  let bundle: FraseDetailLoadResult | null = null;
+  let bundle = await loadFraseDetailBySlugLegacy(key);
+  if (bundle) {
+    void persistFraseDetail(bundle.frase.slug, bundle);
+    return finish('cdn', bundle);
+  }
 
   if (isSupabaseConfigured()) {
     bundle = await loadFraseDetailFromSupabase(key, options);
     if (bundle) {
       registerFrase(bundle.frase);
-    } else if (import.meta.env.DEV) {
-      console.warn('[frasesModel] Supabase sem resultado; fallback legado para slug:', key);
+      void persistFraseDetail(bundle.frase.slug, bundle);
+      return finish('supabase', bundle);
+    }
+    if (import.meta.env.DEV) {
+      console.warn('[frasesModel] Supabase sem resultado para slug:', key);
     }
   }
 
-  if (!bundle) {
-    bundle = await loadFraseDetailBySlugLegacy(key);
-  }
-
-  if (bundle) {
-    void persistFraseDetail(bundle.frase.slug, bundle);
-  }
-
-  return bundle;
+  if (started) recordFraseDetailLatency(performance.now() - started, 'miss');
+  else recordCacheHit('miss');
+  return null;
 }
 
 /** Shards + /api/frase-detail — usado se Supabase falhar ou não tiver a frase. */

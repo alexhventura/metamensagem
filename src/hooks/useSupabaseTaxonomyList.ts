@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import {
   searchFrasesByCategoria,
   searchFrasesByTags,
+  type FraseSearchHit,
 } from '../lib/frasesModel';
 import { itemConteudoFromSearchHit } from '../lib/itemFromSearchHit';
 import { isSupabaseConfigured } from '../lib/supabaseClient';
@@ -38,24 +39,40 @@ export const MAIN_CATEGORIA_SLUGS = new Set([
 
 const PAGE_SIZE = 48;
 
+type KeysetCursor = { id: string; popularidade: number };
+
+function cursorFromLastHit(hits: FraseSearchHit[]): KeysetCursor | null {
+  const last = hits[hits.length - 1];
+  if (!last?.id) return null;
+  return { id: last.id, popularidade: last.popularidade ?? 0 };
+}
+
 export function useSupabaseTaxonomyList(slug: string | null) {
   const [items, setItems] = useState<ItemConteudo[]>([]);
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(false);
   const [ready, setReady] = useState(false);
-  const [offset, setOffset] = useState(0);
+  const [cursor, setCursor] = useState<KeysetCursor | null>(null);
 
   const fetchPage = useCallback(
-    async (slugKey: string, nextOffset: number, append: boolean) => {
+    async (slugKey: string, nextCursor: KeysetCursor | null, append: boolean) => {
       const asCategoria = MAIN_CATEGORIA_SLUGS.has(slugKey);
+      const searchOpts = nextCursor
+        ? {
+            limit: PAGE_SIZE,
+            afterId: nextCursor.id,
+            afterPopularidade: nextCursor.popularidade,
+          }
+        : { limit: PAGE_SIZE };
+
       const hits = asCategoria
-        ? await searchFrasesByCategoria(slugKey, { limit: PAGE_SIZE, offset: nextOffset })
-        : await searchFrasesByTags([slugKey], { limit: PAGE_SIZE, offset: nextOffset });
+        ? await searchFrasesByCategoria(slugKey, searchOpts)
+        : await searchFrasesByTags([slugKey], searchOpts);
 
       const mapped = hits.map(itemConteudoFromSearchHit);
       setItems((prev) => (append ? [...prev, ...mapped] : mapped));
       setHasMore(hits.length >= PAGE_SIZE);
-      setOffset(nextOffset + hits.length);
+      setCursor(cursorFromLastHit(hits));
       return mapped.length;
     },
     []
@@ -66,16 +83,16 @@ export function useSupabaseTaxonomyList(slug: string | null) {
       setItems([]);
       setHasMore(false);
       setReady(true);
-      setOffset(0);
+      setCursor(null);
       return;
     }
 
     let cancelled = false;
     setLoading(true);
     setReady(false);
-    setOffset(0);
+    setCursor(null);
 
-    void fetchPage(slug, 0, false)
+    void fetchPage(slug, null, false)
       .then(() => {
         if (!cancelled) setReady(true);
       })
@@ -96,14 +113,14 @@ export function useSupabaseTaxonomyList(slug: string | null) {
   }, [slug, fetchPage]);
 
   const loadMore = useCallback(async () => {
-    if (!slug || !hasMore || loading) return;
+    if (!slug || !hasMore || loading || !cursor) return;
     setLoading(true);
     try {
-      await fetchPage(slug, offset, true);
+      await fetchPage(slug, cursor, true);
     } finally {
       setLoading(false);
     }
-  }, [slug, hasMore, loading, offset, fetchPage]);
+  }, [slug, hasMore, loading, cursor, fetchPage]);
 
   return {
     items,

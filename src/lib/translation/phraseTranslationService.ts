@@ -5,6 +5,7 @@
 import type { SeoLocale } from '../../../lib/i18n/locales';
 import { SOURCE_CONTENT_LOCALE } from '../../../lib/i18n/platform';
 import { trackTranslationEvent } from '../analytics/translationAnalytics';
+import { recordTranslationHit } from '../observability/performanceMetrics';
 import {
   getPersistedPhraseTranslation,
   persistPhraseTranslation,
@@ -130,6 +131,7 @@ export async function getOrCreatePhraseTranslation(
   if (!options?.force) {
     const hit = await getPersistedPhraseTranslation(slug, targetLocale, trimmed, fraseId);
     if (hit?.text) {
+      recordTranslationHit(true);
       trackTranslationEvent('translation_success', {
         phrase_id: phraseId,
         slug,
@@ -210,6 +212,7 @@ export async function getOrCreatePhraseTranslation(
       locale: targetLocale,
       mode: fromCache ? 'cached' : 'live',
     });
+    recordTranslationHit(true);
 
     return {
       text: translated,
@@ -220,6 +223,7 @@ export async function getOrCreatePhraseTranslation(
     };
   } catch (err) {
     if (err instanceof TranslationPendingError) {
+      recordTranslationHit(false);
       trackTranslationEvent('translation_fallback', {
         phrase_id: phraseId,
         slug,
@@ -229,6 +233,7 @@ export async function getOrCreatePhraseTranslation(
       throw err;
     }
     if (isQuotaOrAvailabilityError(err)) {
+      recordTranslationHit(false);
       markTranslationApiUnavailable(
         err instanceof Error ? err.message : 'quota'
       );

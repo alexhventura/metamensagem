@@ -43,7 +43,7 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
       slug_resolved: frase?.slug ?? null,
       frase_id: frase?.id ?? null,
       found: !!frase,
-      ms: Date.now() - started,
+      tempo_execucao: Date.now() - started,
     });
 
     if (!frase?.frase_original?.trim()) {

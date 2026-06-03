@@ -16,9 +16,10 @@ coverage/
 *.env
 !.env.example
 
-# Scripts locais com DATABASE_URL / service role (import admin — não versionar)
-/scripts/
-# Exceção: validação de env no build Vercel (sem credenciais)
+# Ignora a pasta inteira de scripts para proteger ferramentas administrativas
+/scripts/*
+
+# Abre uma exceção EXCLUSIVA para o validador que a Vercel precisa rodar
 !/scripts/check-vercel-supabase-env.mjs
 
 # Artefatos sensíveis gerados por scripts

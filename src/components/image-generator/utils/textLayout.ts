@@ -5,8 +5,20 @@ export const LONG_QUOTE_CHAR_THRESHOLD = 150;
 export const EXTREME_QUOTE_CHAR_THRESHOLD = 300;
 export const LONG_QUOTE_MIN_LINES = 5;
 
+/** Largura máxima do bloco de citação (centro editorial). */
+export const QUOTE_CONTENT_MAX_WIDTH_RATIO = 0.7;
+
 /** Margem interna da QUOTE_ZONE (topo + base). */
 const QUOTE_ZONE_INNER_PAD = 10;
+
+/** Boost de fonte para frases curtas (≤3 linhas). */
+const SHORT_QUOTE_FONT_BOOST = 1.08;
+const MEDIUM_QUOTE_FONT_SCALE = 0.94;
+const AUTHOR_SIZE_BOOST = 1.18;
+
+export function effectiveQuoteWidth(quoteWidthPx: number): number {
+  return Math.round(quoteWidthPx * QUOTE_CONTENT_MAX_WIDTH_RATIO);
+}
 /** Slack por linha (ascendentes/descendentes reais vs. métrica teórica). */
 const LINE_METRICS_EXTRA_RATIO = 0.14;
 /** Espaço extra para aspas tipográficas. */
@@ -154,9 +166,9 @@ function computeAuthorPx(autor: string, zones: LayoutZones): number {
   const maxWidth = zones.quoteWidth * 0.7;
   for (let px = maxPx; px >= minPx; px -= 1) {
     const est = (autor.length + 3) * px * 0.48;
-    if (est <= maxWidth) return px;
+    if (est <= maxWidth) return Math.min(zoneMax, Math.round(px * AUTHOR_SIZE_BOOST));
   }
-  return minPx;
+  return Math.min(zoneMax, Math.round(minPx * AUTHOR_SIZE_BOOST));
 }
 
 function fontBounds(zones: LayoutZones, density: ZoneDensity, charCount: number) {
@@ -214,9 +226,10 @@ function findFittingQuoteLayout(
   usable: number,
   fontMax: number
 ): QuoteLayoutCandidate {
+  const wrapWidth = effectiveQuoteWidth(zones.quoteWidth);
   for (const lhRatio of FORCE_FIT_LH_RATIOS) {
     for (let quotePx = fontMax; quotePx >= ABSOLUTE_MIN_QUOTE_PX; quotePx -= 1) {
-      const lines = wrapQuoteFull(clean, zones.quoteWidth, quotePx);
+      const lines = wrapQuoteFull(clean, wrapWidth, quotePx);
       if (!validateFullText(clean, lines)) continue;
 
       const lineHeight = quotePx * lhRatio;
@@ -237,7 +250,7 @@ function findFittingQuoteLayout(
 
   const quotePx = ABSOLUTE_MIN_QUOTE_PX;
   const lhRatio = 0.88;
-  const lines = wrapQuoteFull(clean, zones.quoteWidth, quotePx);
+  const lines = wrapQuoteFull(clean, wrapWidth, quotePx);
   const lineHeight = quotePx * lhRatio;
   const quoteBlockHeight = estimateRenderedBlockHeight(lines.length, quotePx, lineHeight);
 
@@ -250,6 +263,13 @@ function findFittingQuoteLayout(
     quotePaddingTop: 0,
     blockFitsZone: quoteBlockHeight <= usable,
   };
+}
+
+function shortQuoteFontScale(lineCount: number): number {
+  if (lineCount <= 3) return SHORT_QUOTE_FONT_BOOST;
+  if (lineCount <= 5) return 1;
+  if (lineCount <= 8) return MEDIUM_QUOTE_FONT_SCALE;
+  return 1;
 }
 
 function buildPlan(
@@ -320,14 +340,17 @@ export function computeImageLayout(
   const authorPx = computeAuthorPx(autor, zones);
   const footerPx = computeFooterPx(width, height);
   const footerSerialPx = computeFooterSerialPx(width, height);
-  const { fontMax, fontMin, usable } = fontBounds(zones, density, clean.length);
+  const wrapWidth = effectiveQuoteWidth(zones.quoteWidth);
+  const { fontMax: fontMaxBase, fontMin, usable } = fontBounds(zones, density, clean.length);
+  const probeLines = wrapQuoteFull(clean, wrapWidth, fontMaxBase).length;
+  const fontMax = Math.round(fontMaxBase * shortQuoteFontScale(probeLines));
   const lhSteps = lhStepsFor(density);
 
   let best: ImageLayoutPlan | null = null;
 
   for (const lhRatio of lhSteps) {
     for (let quotePx = fontMax; quotePx >= fontMin; quotePx -= quotePx > 36 ? 2 : 1) {
-      const lines = wrapQuoteFull(clean, zones.quoteWidth, quotePx);
+      const lines = wrapQuoteFull(clean, wrapWidth, quotePx);
       if (!validateFullText(clean, lines)) continue;
 
       const lineHeight = quotePx * lhRatio;
@@ -391,22 +414,39 @@ export function computeImageLayout(
   });
 }
 
-/** Metadados do rodapé Soft Premium — responsivo por proporção do canvas. */
-export const FOOTER_META_MIN_PX = 18;
-export const FOOTER_META_MAX_PX = 26;
-export const FOOTER_SERIAL_MIN_PX = 16;
-export const FOOTER_SERIAL_MAX_PX = 22;
+/** Metadados do rodapé Soft Premium Signature — responsivo por proporção do canvas. */
+export const FOOTER_META_MIN_PX = 20;
+export const FOOTER_META_MAX_PX = 28;
+export const FOOTER_SERIAL_MIN_PX = 18;
+export const FOOTER_SERIAL_MAX_PX = 24;
 
 const FOOTER_META_BY_PROFILE: Record<
   ReturnType<typeof resolveFooterFormatProfile>,
   number
 > = {
-  square: 18,
-  portrait: 20,
-  story: 22,
-  horizontal: 24,
-  default: 20,
+  square: 20,
+  portrait: 22,
+  story: 24,
+  horizontal: 26,
+  default: 22,
 };
+
+/** Categoria humanizada para rodapé V3 (Categoria ◈ Serial). */
+export function formatFooterCategory(raw?: string | null): string {
+  const s = (raw ?? '').trim();
+  if (!s) return 'Frase';
+  const human = s
+    .replace(/_/g, ' ')
+    .replace(/-/g, ' ')
+    .trim();
+  if (!human) return 'Frase';
+  return human.charAt(0).toUpperCase() + human.slice(1).toLowerCase().slice(0, 23);
+}
+
+/** Linha secundária do rodapé premium. */
+export function formatFooterMetaLine(category: string, serial: string): string {
+  return `${category} ◈ ${serial}`;
+}
 
 /** @deprecated */
 export const FOOTER_META_AT_1080 = 18;

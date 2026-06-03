@@ -15,12 +15,15 @@ Definida em `utils/safeZone.ts`:
 
 `computeImageLayout` reduz fonte e linhas até caber na safe zone.
 
-## Rodapé institucional
+## Rodapé institucional (Soft Premium Signature V3)
 
 ```
-metamensagem.com    {Skin}    MMM-2026-00001234
+metamensagem.com
+{Categoria} ◈ MMM-2026-00001234
 ```
 
+- Linha 1: domínio (lowercase)
+- Linha 2: categoria da frase + separador `◈` + serial
 - Serial de preview: estável por `quote.id`
 - Serial de exportação: `allocateImageSerial()` — único por download/compartilhar
 
@@ -53,3 +56,7 @@ Atributos `data-mm-*` no DOM do cartão para auditoria e export.
 ## Compartilhar
 
 Botão principal: **Compartilhar** (Web Share API quando disponível).
+
+## Evolução V3 (Soft Premium Signature)
+
+Especificação de implementação: [`IMAGE_ENGINE_V3_SOFT_PREMIUM_SIGNATURE.md`](./IMAGE_ENGINE_V3_SOFT_PREMIUM_SIGNATURE.md).

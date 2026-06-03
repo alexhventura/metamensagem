@@ -1,10 +1,14 @@
 import { forwardRef, useMemo } from 'react';
 import type { FormatConfig, ImageGeneratorQuote } from './types';
 import type { SkinConfig } from './types';
+import { decorativeOrbsForSkin, watermarkOpacityForSkin } from './utils/decorativeLayer';
 import { imageFontFamilyFor } from './utils/imageFonts';
 import {
   computeImageLayout,
+  formatFooterCategory,
+  formatFooterMetaLine,
   maxFooterLabelChars,
+  QUOTE_CONTENT_MAX_WIDTH_RATIO,
   resolveFooterFormatProfile,
   truncateFooterLabel,
   validateFullText,
@@ -39,42 +43,44 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
 
   const fontFamily = useMemo(() => imageFontFamilyFor(texto, autor), [texto, autor]);
   const { zones } = layout;
+  const formatProfile = resolveFooterFormatProfile(format.width, format.height);
 
   const footerPx = layout.footerPx;
-  const isWideFooter = resolveFooterFormatProfile(format.width, format.height) === 'horizontal';
   const footerInnerWidth = Math.floor(format.width * 0.8);
-  const colSidePx = Math.floor(footerInnerWidth * 0.28);
-  const colCenterPx = Math.floor(footerInnerWidth * 0.44);
-
   const footerDomain = 'metamensagem.com';
-  const skinLabel = skin.name;
+  const categoryLabel = formatFooterCategory(
+    quoteMeta?.categoria ?? skin.category ?? collectionName
+  );
+  const metaLineRaw = formatFooterMetaLine(categoryLabel, serial);
   const domainLabel = truncateFooterLabel(
     footerDomain,
-    maxFooterLabelChars(colSidePx, footerPx, 0.5)
+    maxFooterLabelChars(footerInnerWidth, footerPx, 0.5)
   );
-  const skinLabelDisplay = truncateFooterLabel(
-    skinLabel,
-    maxFooterLabelChars(colCenterPx, footerPx, 0.48)
+  const metaLineLabel = truncateFooterLabel(
+    metaLineRaw,
+    maxFooterLabelChars(footerInnerWidth, layout.footerSerialPx, 0.48)
   );
-  const serialLabel = truncateFooterLabel(
-    serial,
-    maxFooterLabelChars(colSidePx, layout.footerSerialPx, 0.52)
+
+  const decorativeOrbs = useMemo(
+    () => decorativeOrbsForSkin(skin, formatProfile),
+    [skin, formatProfile]
   );
+  const watermarkOpacity = watermarkOpacityForSkin(skin);
 
   const metaFooterStyle = {
     fontSize: footerPx,
     fontWeight: 500 as const,
     letterSpacing: '0.6px',
     lineHeight: 1.35,
-    opacity: 0.72,
+    opacity: 0.78,
   };
 
-  const serialFooterStyle = {
+  const metaLineStyle = {
     fontSize: layout.footerSerialPx,
-    fontWeight: 400 as const,
+    fontWeight: 500 as const,
     letterSpacing: '0.45px',
     lineHeight: 1.35,
-    opacity: 0.6,
+    opacity: 0.68,
   };
 
   const authorTrim = autor?.trim() ?? '';
@@ -99,6 +105,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
       data-mm-quote-fits={layout.quoteFits ? '1' : '0'}
       data-mm-text-integrity={validateFullText(texto, layout.lines) ? 'ok' : 'fail'}
       data-mm-author-expected={authorTrim}
+      data-mm-render-variant="soft-premium-signature-v3"
     >
       <div
         className="absolute inset-0 pointer-events-none"
@@ -107,13 +114,53 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
             'radial-gradient(ellipse 90% 80% at 50% 45%, transparent 0%, rgba(0,0,0,0.12) 100%)',
         }}
       />
+
+      {decorativeOrbs.map((orb, i) => (
+        <div
+          key={i}
+          className="absolute rounded-full pointer-events-none"
+          style={{
+            left: orb.left,
+            right: orb.right,
+            top: orb.top,
+            bottom: orb.bottom,
+            width: orb.size,
+            height: orb.size,
+            background: `rgba(${orb.color}, ${orb.opacity})`,
+            filter: `blur(${orb.blur}px)`,
+            zIndex: 1,
+          }}
+        />
+      ))}
+
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage: 'radial-gradient(circle at 20% 20%, white 1px, transparent 1px)',
           backgroundSize: '28px 28px',
+          zIndex: 2,
         }}
       />
+
+      <div
+        className="absolute inset-0 flex items-center justify-center pointer-events-none"
+        style={{ zIndex: 5 }}
+        aria-hidden
+      >
+        <img
+          src="/brand/logo.svg"
+          alt=""
+          crossOrigin="anonymous"
+          className="select-none"
+          style={{
+            width: layout.logoPx * 2.6,
+            height: layout.logoPx * 2.6,
+            opacity: watermarkOpacity,
+            transform: 'rotate(-18deg)',
+            filter: 'drop-shadow(0 2px 16px rgba(0,0,0,0.08))',
+          }}
+        />
+      </div>
 
       <header
         className="absolute left-0 right-0 top-0 z-10 flex items-start justify-center pointer-events-none"
@@ -125,7 +172,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           width={layout.logoPx}
           height={layout.logoPx}
           crossOrigin="anonymous"
-          className="opacity-[0.42]"
+          className="opacity-[0.38]"
           style={{
             width: layout.logoPx,
             height: layout.logoPx,
@@ -153,13 +200,14 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         aria-label="Citação"
       >
         <blockquote
-          className={`font-bold tracking-tight m-0 w-full text-center shrink-0 ${skin.textClass}`}
+          className={`font-bold m-0 mx-auto text-center shrink-0 ${skin.textClass}`}
           style={{
             fontSize: layout.quotePx,
             lineHeight: `${layout.lineHeight}px`,
-            maxWidth: '100%',
+            maxWidth: `${QUOTE_CONTENT_MAX_WIDTH_RATIO * 100}%`,
             fontWeight: 700,
-            textShadow: '0 1px 24px rgba(0,0,0,0.12)',
+            letterSpacing: layout.lines.length <= 3 ? '-0.02em' : '-0.01em',
+            textShadow: '0 2px 12px rgba(0,0,0,0.25)',
           }}
         >
           {layout.lines.map((line, i) => (
@@ -188,9 +236,10 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
             className="font-medium tracking-wide m-0 mx-auto truncate"
             style={{
               fontSize: layout.authorPx,
-              lineHeight: `${Math.round(layout.authorPx * 1.2)}px`,
+              lineHeight: `${Math.round(layout.authorPx * 1.22)}px`,
               maxWidth: '70%',
-              opacity: 0.92,
+              fontWeight: 500,
+              opacity: 0.94,
             }}
           >
             — {authorTrim}
@@ -206,48 +255,21 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           paddingLeft: layout.padX,
           paddingRight: layout.padX,
           paddingBottom: layout.padBottom,
-          borderTop: '1px solid rgba(255,255,255,0.12)',
+          borderTop: '1px solid rgba(255,255,255,0.14)',
         }}
         aria-label="Metadados"
       >
-        {isWideFooter ? (
-          <div
-            className="flex w-full max-w-[80%] mx-auto flex-col gap-1.5 overflow-hidden min-w-0"
-            style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
-          >
-            <div className="flex w-full items-center justify-between gap-4 min-w-0">
-              <span className="lowercase text-left truncate min-w-0" style={metaFooterStyle}>
-                {domainLabel}
-              </span>
-              <span className="text-center truncate min-w-0" style={metaFooterStyle}>
-                {skinLabelDisplay}
-              </span>
-            </div>
-            <span className="tabular-nums text-right truncate min-w-0" style={serialFooterStyle}>
-              {serialLabel}
-            </span>
-          </div>
-        ) : (
-          <div
-            className="grid w-full max-w-[80%] mx-auto overflow-hidden min-w-0"
-            style={{
-              gridTemplateColumns: 'minmax(0,1fr) minmax(0,1.2fr) minmax(0,1fr)',
-              gap: 14,
-              fontFamily: 'Arial, Helvetica, sans-serif',
-              alignItems: 'center',
-            }}
-          >
-            <span className="lowercase text-left truncate min-w-0" style={metaFooterStyle}>
-              {domainLabel}
-            </span>
-            <span className="text-center truncate min-w-0" style={metaFooterStyle}>
-              {skinLabelDisplay}
-            </span>
-            <span className="tabular-nums text-right truncate min-w-0" style={serialFooterStyle}>
-              {serialLabel}
-            </span>
-          </div>
-        )}
+        <div
+          className="flex w-full max-w-[80%] mx-auto flex-col items-center gap-1 overflow-hidden min-w-0 text-center"
+          style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+        >
+          <span className="lowercase truncate w-full min-w-0" style={metaFooterStyle}>
+            {domainLabel}
+          </span>
+          <span className="truncate w-full min-w-0 tabular-nums" style={metaLineStyle}>
+            {metaLineLabel}
+          </span>
+        </div>
       </footer>
     </div>
   );

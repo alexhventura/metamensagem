@@ -26,9 +26,16 @@ const DENSITY_RATIOS: Record<
   ZoneDensity,
   { header: number; author: number; gap: number; logoScale: number }
 > = {
-  normal: { header: 0.108, author: 0.08, gap: 0.022, logoScale: 1 },
-  long: { header: 0.098, author: 0.074, gap: 0.018, logoScale: 0.92 },
-  extreme: { header: 0.08, author: 0.062, gap: 0.012, logoScale: 0.78 },
+  normal: { header: 0.102, author: 0.082, gap: 0.025, logoScale: 1 },
+  long: { header: 0.094, author: 0.076, gap: 0.02, logoScale: 0.92 },
+  extreme: { header: 0.078, author: 0.064, gap: 0.014, logoScale: 0.78 },
+};
+
+/** Altura mínima da QUOTE_ZONE (% da canvas) — Soft Premium Signature V3. */
+const QUOTE_ZONE_MIN_RATIO: Record<ZoneDensity, number> = {
+  normal: 0.26,
+  long: 0.22,
+  extreme: 0.2,
 };
 
 /** Rodapé reservado — 8–10% da altura (horizontal usa 10%). */
@@ -82,7 +89,10 @@ export function computeLayoutZones(
   const authorZoneTop = footerTop - authorZoneHeight;
   const quoteZoneTop = headerHeight + zoneGap;
   const quoteZoneBottom = authorZoneTop - zoneGap;
-  const quoteZoneHeight = Math.max(Math.round(height * 0.18), quoteZoneBottom - quoteZoneTop);
+  const quoteZoneHeight = Math.max(
+    Math.round(height * QUOTE_ZONE_MIN_RATIO[density]),
+    quoteZoneBottom - quoteZoneTop
+  );
 
   const logoPx = Math.round(
     Math.min(width * LOGO_MAX_RATIO, headerHeight * 0.55, 88) * r.logoScale

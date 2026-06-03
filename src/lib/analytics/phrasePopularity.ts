@@ -4,6 +4,7 @@
 
 import { trackEvent } from './track';
 import type { AnalyticsEventName } from './events';
+import { queueFraseMetricIncrement } from './fraseMetricsSync';
 
 const STORAGE_KEY = 'mm-phrase-popularity-v1';
 const MAX_ENTRIES = 5000;
@@ -69,6 +70,12 @@ export function trackPhraseEvent(
   row[event] = (row[event] ?? 0) + 1;
   map[key] = row;
   writeScores(map);
+
+  if (event === 'view') {
+    queueFraseMetricIncrement('views', key, extra?.phrase_id);
+  } else if (event === 'share') {
+    queueFraseMetricIncrement('shares', key, extra?.phrase_id);
+  }
 
   trackEvent(GA4_MAP[event], {
     phrase_slug: key,

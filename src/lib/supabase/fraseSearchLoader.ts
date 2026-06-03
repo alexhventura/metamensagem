@@ -4,6 +4,7 @@
  */
 
 import { getSupabase, isSupabaseConfigured } from '../supabaseClient';
+import { expandSearchQuery } from '../../../lib/search/expandSearchQuery.mjs';
 
 /** Colunas expostas ao browser — sem textos longos */
 export const FRASE_SEARCH_SELECT = 'id,slug,titulo,popularidade' as const;
@@ -79,6 +80,7 @@ async function rpcSearch(
 ): Promise<FraseSearchHit[]> {
   const limit = clampLimit(options?.limit);
   const offset = Math.max(0, options?.offset ?? 0);
+  const semantic = expandSearchQuery(q, options?.locale ?? 'pt');
 
   const { data, error } = await sb.rpc('mm_search_frases_index', {
     p_query: q,
@@ -87,6 +89,7 @@ async function rpcSearch(
     p_locale: options?.locale ?? null,
     p_categoria_id: options?.categoriaId ?? null,
     p_tag_ids: options?.tagIds?.length ? options.tagIds : null,
+    p_semantic_terms: semantic.terms.length > 0 ? semantic.terms : null,
   });
 
   if (error) {

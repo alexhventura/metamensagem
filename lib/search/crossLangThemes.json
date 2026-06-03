@@ -1,13 +1,13 @@
 {
   "amor": {
-    "pt": ["amor", "amar", "carinho", "afeto", "paixão", "coração"],
-    "en": ["love", "loving", "affection", "heart", "passion", "cherish"],
-    "es": ["amor", "amar", "cariño", "afecto", "pasión", "corazón"],
-    "fr": ["amour", "aimer", "affection", "cœur", "passion"],
-    "de": ["liebe", "lieben", "zuneigung", "herz", "leidenschaft"],
-    "it": ["amore", "amare", "affetto", "cuore", "passione"],
-    "ja": ["愛", "恋", "愛する", "心"],
-    "hi": ["प्यार", "प्रेम", "मोहब्बत", "दिल"]
+    "pt": ["amor", "amar", "carinho", "afeto", "paixão", "coração", "romance", "relacionamento"],
+    "en": ["love", "loving", "affection", "heart", "passion", "cherish", "romance", "relationship"],
+    "es": ["amor", "amar", "cariño", "afecto", "pasión", "corazón", "romance", "relación"],
+    "fr": ["amour", "aimer", "affection", "cœur", "passion", "romance", "relation"],
+    "de": ["liebe", "lieben", "zuneigung", "herz", "leidenschaft", "romantik", "beziehung"],
+    "it": ["amore", "amare", "affetto", "cuore", "passione", "romanticismo", "relazione"],
+    "ja": ["愛", "恋", "愛する", "心", "ロマンス", "関係"],
+    "hi": ["प्यार", "प्रेम", "मोहब्बत", "दिल", "रोमांस", "रिश्ता"]
   },
   "motivacao": {
     "pt": ["motivação", "motivar", "inspirar", "ânimo", "força"],
@@ -20,14 +20,14 @@
     "hi": ["प्रेरणा", "प्रोत्साहन", "उत्साह"]
   },
   "superacao": {
-    "pt": ["superação", "superar", "resiliência", "vencer", "obstáculo"],
-    "en": ["overcoming", "overcome", "resilience", "perseverance", "obstacle"],
-    "es": ["superación", "superar", "resiliencia", "vencer", "obstáculo"],
-    "fr": ["dépassement", "surmonter", "résilience", "obstacle"],
-    "de": ["überwindung", "überwinden", "resilienz", "hindernis"],
-    "it": ["superamento", "superare", "resilienza", "ostacolo"],
-    "ja": ["克服", "乗り越える", "回復力"],
-    "hi": ["सफलता", "पार", "लचीलापन", "बाधा"]
+    "pt": ["superação", "superar", "resiliência", "vencer", "obstáculo", "força", "persistência", "coragem"],
+    "en": ["overcoming", "overcome", "resilience", "perseverance", "obstacle", "strength", "persistence", "courage"],
+    "es": ["superación", "superar", "resiliencia", "vencer", "obstáculo", "fuerza", "persistencia", "coraje"],
+    "fr": ["dépassement", "surmonter", "résilience", "obstacle", "force", "persévérance", "courage"],
+    "de": ["überwindung", "überwinden", "resilienz", "hindernis", "kraft", "beharrlichkeit", "mut"],
+    "it": ["superamento", "superare", "resilienza", "ostacolo", "forza", "persistenza", "coraggio"],
+    "ja": ["克服", "乗り越える", "回復力", "力", "忍耐", "勇気"],
+    "hi": ["सफलता", "पार", "लचीलापन", "बाधा", "शक्ति", "दृढ़ता", "साहस"]
   },
   "reflexao": {
     "pt": ["reflexão", "refletir", "pensar", "contemplar", "meditar"],
@@ -128,5 +128,15 @@
     "it": ["persistenza", "persistere", "insistere", "costanza"],
     "ja": ["粘り強さ", " perseverancia", "継続"],
     "hi": ["दृढ़ता", "लगातार", "निरंतरता"]
+  },
+  "_clusters": {
+    "superacao": ["superacao", "persistencia", "coragem", "motivacao", "sucesso", "foco"],
+    "amor": ["amor", "felicidade", "fe"],
+    "motivacao": ["motivacao", "superacao", "sucesso", "foco", "coragem"],
+    "coragem": ["coragem", "superacao", "motivacao", "persistencia"],
+    "persistencia": ["persistencia", "superacao", "motivacao", "foco"],
+    "sucesso": ["sucesso", "motivacao", "superacao", "estrategia"],
+    "reflexao": ["reflexao", "sabedoria", "fe"],
+    "sabedoria": ["sabedoria", "reflexao", "fe"]
   }
 }

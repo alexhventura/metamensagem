@@ -13,6 +13,8 @@ export type PerformanceCounters = {
   cache_miss: number;
   translation_hit: number;
   translation_miss: number;
+  translation_samples: number;
+  translation_latency_ms_sum: number;
   frase_detail_samples: number;
   frase_detail_latency_ms_sum: number;
   search_samples: number;
@@ -27,6 +29,8 @@ const counters: PerformanceCounters = {
   cache_miss: 0,
   translation_hit: 0,
   translation_miss: 0,
+  translation_samples: 0,
+  translation_latency_ms_sum: 0,
   frase_detail_samples: 0,
   frase_detail_latency_ms_sum: 0,
   search_samples: 0,
@@ -61,6 +65,12 @@ export function recordTranslationHit(hit: boolean): void {
   bump(hit ? 'translation_hit' : 'translation_miss');
 }
 
+export function recordTranslationLatency(ms: number, hit: boolean): void {
+  recordTranslationHit(hit);
+  bump('translation_latency_ms_sum', Math.max(0, Math.round(ms)));
+  bump('translation_samples');
+}
+
 export function recordFraseDetailLatency(ms: number, layer: CacheLayer): void {
   recordCacheHit(layer);
   bump('frase_detail_samples');
@@ -84,19 +94,27 @@ export function resetPerformanceCounters(): void {
 
 /** Snapshot para debug (DEV) ou fila analytics. */
 export function performanceSnapshot(): PerformanceCounters & {
-  frase_detail_latency_avg_ms: number | null;
+  detail_latency_avg_ms: number | null;
   search_latency_avg_ms: number | null;
+  translation_latency_avg_ms: number | null;
+  /** @deprecated */ frase_detail_latency_avg_ms?: number | null;
 } {
   const snap = getPerformanceCounters();
+  const detailAvg =
+    snap.frase_detail_samples > 0
+      ? Math.round(snap.frase_detail_latency_ms_sum / snap.frase_detail_samples)
+      : null;
   return {
     ...snap,
-    frase_detail_latency_avg_ms:
-      snap.frase_detail_samples > 0
-        ? Math.round(snap.frase_detail_latency_ms_sum / snap.frase_detail_samples)
-        : null,
+    detail_latency_avg_ms: detailAvg,
+    frase_detail_latency_avg_ms: detailAvg,
     search_latency_avg_ms:
       snap.search_samples > 0
         ? Math.round(snap.search_latency_ms_sum / snap.search_samples)
+        : null,
+    translation_latency_avg_ms:
+      snap.translation_samples > 0
+        ? Math.round(snap.translation_latency_ms_sum / snap.translation_samples)
         : null,
   };
 }

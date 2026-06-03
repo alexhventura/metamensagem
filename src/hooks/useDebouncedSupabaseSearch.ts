@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { searchFrases, searchFrasesByText } from '../lib/frasesModel';
 import { itemConteudoFromSearchHit } from '../lib/itemFromSearchHit';
 import { recordSearchLatency } from '../lib/observability/performanceMetrics';
+import { recordSearchHitsForResults } from '../lib/analytics/fraseMetricsSync';
 import { isSupabaseConfigured } from '../lib/supabaseClient';
 import { resolveUiLocale } from '../lib/uiLocale';
 import type { ItemConteudo } from '../types/content';
@@ -56,6 +57,7 @@ export function useDebouncedSupabaseSearch(query: string, options: Options = {})
         .then((hits) => {
           if (cancelled) return;
           recordSearchLatency(performance.now() - started);
+          recordSearchHitsForResults(hits);
           setItems(hits.map(itemConteudoFromSearchHit));
         })
         .catch(() => {

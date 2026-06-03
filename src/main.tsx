@@ -5,10 +5,12 @@ import { initThemeOnLoad } from './lib/theme';
 import { ThemeProvider } from './context/ThemeContext';
 import { initLcpObserver } from './lib/perf/lcpObserver';
 import { initAnalytics } from './lib/analytics';
+import { startPerformanceReporter } from './lib/observability/performanceReporter';
 
 initThemeOnLoad();
 initLcpObserver();
 initAnalytics();
+startPerformanceReporter();
 
 import './i18n';
 

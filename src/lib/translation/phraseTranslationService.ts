@@ -5,7 +5,8 @@
 import type { SeoLocale } from '../../../lib/i18n/locales';
 import { SOURCE_CONTENT_LOCALE } from '../../../lib/i18n/platform';
 import { trackTranslationEvent } from '../analytics/translationAnalytics';
-import { recordTranslationHit } from '../observability/performanceMetrics';
+import { recordTranslationHit, recordTranslationLatency } from '../observability/performanceMetrics';
+import { queueFraseMetricIncrement } from '../analytics/fraseMetricsSync';
 import {
   getPersistedPhraseTranslation,
   persistPhraseTranslation,
@@ -175,6 +176,8 @@ export async function getOrCreatePhraseTranslation(
     mode: 'live',
   });
 
+  const translateStarted = performance.now();
+
   try {
     let translated: string;
     let sourceLang: SeoLocale;
@@ -213,6 +216,7 @@ export async function getOrCreatePhraseTranslation(
       mode: fromCache ? 'cached' : 'live',
     });
     recordTranslationHit(true);
+    recordTranslationLatency(performance.now() - translateStarted, true);
 
     return {
       text: translated,
@@ -222,8 +226,10 @@ export async function getOrCreatePhraseTranslation(
       mode: fromCache ? 'cached' : 'live',
     };
   } catch (err) {
+    recordTranslationLatency(performance.now() - translateStarted, false);
     if (err instanceof TranslationPendingError) {
       recordTranslationHit(false);
+      queueFraseMetricIncrement('translation_requests', slug, fraseId);
       trackTranslationEvent('translation_fallback', {
         phrase_id: phraseId,
         slug,

@@ -24,12 +24,22 @@ const LOGO_MAX_RATIO = 0.085;
 
 const DENSITY_RATIOS: Record<
   ZoneDensity,
-  { header: number; footer: number; author: number; gap: number; logoScale: number }
+  { header: number; author: number; gap: number; logoScale: number }
 > = {
-  normal: { header: 0.108, footer: 0.102, author: 0.08, gap: 0.022, logoScale: 1 },
-  long: { header: 0.098, footer: 0.096, author: 0.074, gap: 0.018, logoScale: 0.92 },
-  extreme: { header: 0.08, footer: 0.088, author: 0.062, gap: 0.012, logoScale: 0.78 },
+  normal: { header: 0.108, author: 0.08, gap: 0.022, logoScale: 1 },
+  long: { header: 0.098, author: 0.074, gap: 0.018, logoScale: 0.92 },
+  extreme: { header: 0.08, author: 0.062, gap: 0.012, logoScale: 0.78 },
 };
+
+/** Rodapé reservado — 70px @ 1080; metadados nunca invadem citação/autor. */
+const FOOTER_HEIGHT_AT_1080 = 70;
+
+function footerHeightForCanvas(height: number, density: ZoneDensity): number {
+  let h = Math.max(52, Math.round(height * (FOOTER_HEIGHT_AT_1080 / 1080)));
+  if (density === 'long') h = Math.round(h * 0.96);
+  if (density === 'extreme') h = Math.round(h * 0.92);
+  return h;
+}
 
 export function computeLayoutZones(
   width: number,
@@ -40,7 +50,7 @@ export function computeLayoutZones(
   const r = DENSITY_RATIOS[density];
   const padX = Math.round(width * SIDE_RATIO);
   const headerHeight = Math.round(height * r.header);
-  const footerHeight = Math.round(height * r.footer);
+  const footerHeight = footerHeightForCanvas(height, density);
   const footerTop = height - footerHeight;
   const authorZoneHeight = hasAuthor
     ? Math.round(Math.max(64, height * r.author))

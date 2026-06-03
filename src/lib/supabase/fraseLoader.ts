@@ -179,7 +179,99 @@ async function fetchFraseRowsBySlug(slug: string): Promise<FraseRow[]> {
     return [];
   }
 
-  return (prefixRows ?? []) as FraseRow[];
+  const rows = (prefixRows ?? []) as FraseRow[];
+  if (rows.length) return rows;
+
+  if (key.length >= 20) {
+    const { data: fuzzyRows } = await supabase
+      .from('frases')
+      .select(FRASE_DETAIL_SELECT)
+      .like('slug', `${key.slice(0, 24)}%`)
+      .limit(12);
+    return (fuzzyRows ?? []) as FraseRow[];
+  }
+
+  return [];
+}
+
+type IndexHit = { slug: string; shard: string | null; titulo: string };
+
+function matchIndexHit(rows: IndexHit[], key: string): IndexHit | null {
+  if (!rows.length) return null;
+  const exact = rows.find((r) => r.slug.toLowerCase() === key);
+  if (exact) return exact;
+  return (
+    rows.find(
+      (r) =>
+        r.slug.toLowerCase().startsWith(key) || key.startsWith(r.slug.toLowerCase())
+    ) ?? null
+  );
+}
+
+async function fetchIndexHitBySlug(slug: string): Promise<IndexHit | null> {
+  const supabase = getSupabase();
+  const key = slug.toLowerCase().trim();
+  if (!key) return null;
+
+  const { data: exact } = await supabase
+    .from('frases_index')
+    .select('slug,shard,titulo')
+    .eq('slug', key)
+    .maybeSingle();
+
+  if (exact?.slug) return exact as IndexHit;
+
+  const { data: prefixRows } = await supabase
+    .from('frases_index')
+    .select('slug,shard,titulo')
+    .like('slug', `${key}%`)
+    .order('slug', { ascending: true })
+    .limit(12);
+
+  const prefixHit = matchIndexHit((prefixRows ?? []) as IndexHit[], key);
+  if (prefixHit) return prefixHit;
+
+  if (key.length >= 24) {
+    const { data: fuzzyRows } = await supabase
+      .from('frases_index')
+      .select('slug,shard,titulo')
+      .like('slug', `${key.slice(0, 24)}%`)
+      .limit(16);
+
+    return matchIndexHit((fuzzyRows ?? []) as IndexHit[], key);
+  }
+
+  return null;
+}
+
+/** Detalhe completo via /api (shard CDN + índice no servidor). */
+async function loadFraseDetailFromApi(slug: string): Promise<FraseDetailLoadResult | null> {
+  const key = slug.toLowerCase().trim();
+  if (!key) return null;
+
+  try {
+    const res = await fetch(`/api/frase-detail?slug=${encodeURIComponent(key)}`);
+    if (res.status === 404) return null;
+    if (!res.ok) return null;
+
+    const data = (await res.json()) as FraseDetailRecord & { found?: boolean };
+    if (data.found === false) return null;
+
+    const frase = normalizeFraseDetailRecord(data) as FraseCms;
+    if (!frase.frase_original?.trim()) return null;
+
+    return {
+      frase,
+      display: {
+        texto: frase.frase_original,
+        autor: frase.autor_original,
+        explicacao: frase.explicacao || undefined,
+        isTranslated: false,
+      },
+    };
+  } catch {
+    return null;
+  }
 }
 
 async function fetchFraseRowById(id: string): Promise<FraseRow | null> {
@@ -269,10 +361,33 @@ export async function loadFraseDetailFromSupabase(
 
   try {
     const rows = await fetchFraseRowsBySlug(key);
-    const frase = resolveFraseFromRows(rows, key);
+    let frase = resolveFraseFromRows(rows, key);
+
     if (!frase) {
-      setSlugCacheEntry(cacheKey, null);
-      return null;
+      const indexHit = await fetchIndexHitBySlug(key);
+      const canonical = indexHit?.slug.toLowerCase() ?? key;
+
+      if (indexHit && canonical !== key) {
+        const canonicalRows = await fetchFraseRowsBySlug(canonical);
+        frase = resolveFraseFromRows(canonicalRows, canonical);
+      }
+
+      if (!frase) {
+        const fromApi = await loadFraseDetailFromApi(canonical);
+        if (fromApi) {
+          setSlugCacheEntry(cacheKey, fromApi);
+          return fromApi;
+        }
+        if (canonical !== key) {
+          const fromApiOriginal = await loadFraseDetailFromApi(key);
+          if (fromApiOriginal) {
+            setSlugCacheEntry(cacheKey, fromApiOriginal);
+            return fromApiOriginal;
+          }
+        }
+        setSlugCacheEntry(cacheKey, null);
+        return null;
+      }
     }
 
     const defaultLocale = seoLocaleFromLanguageOriginal(

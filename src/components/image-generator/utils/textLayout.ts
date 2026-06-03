@@ -129,20 +129,19 @@ export function estimateRenderedBlockHeight(
   return lineCount * perLine + marks;
 }
 
-function computeFooterPx(height: number, skinName: string, serial: string): number {
-  const longest = Math.max(skinName.length, serial.length, 18);
-  let px = Math.max(8, Math.min(12, Math.round(height * 0.0105)));
-  if (longest > 22) px = Math.max(7, px - 1);
-  if (longest > 32) px = Math.max(7, px - 1);
-  return px;
+function computeFooterPx(height: number): number {
+  return computeFooterFontSize(height);
 }
 
 function computeAuthorPx(autor: string, zones: LayoutZones): number {
   if (!autor.trim() || zones.authorZoneHeight <= 0) return 0;
+  const heightCap = Math.round(zones.height * 0.026);
+  const heightMin = Math.max(18, Math.round(zones.height * 0.017));
   const cap = zones.density === 'extreme' ? 0.38 : 0.42;
-  const maxPx = Math.round(zones.authorZoneHeight * cap);
-  const minPx = zones.density === 'extreme' ? 8 : 9;
-  const maxWidth = zones.quoteWidth;
+  const zoneMax = Math.round(zones.authorZoneHeight * cap);
+  const maxPx = Math.min(zoneMax, heightCap);
+  const minPx = Math.max(heightMin, zones.density === 'extreme' ? 16 : 18);
+  const maxWidth = zones.quoteWidth * 0.7;
   for (let px = maxPx; px >= minPx; px -= 1) {
     const est = (autor.length + 3) * px * 0.48;
     if (est <= maxWidth) return px;
@@ -273,7 +272,7 @@ function buildPlan(
     logoPx: zones.logoPx,
     padX: zones.padX,
     padTop: Math.round(zones.headerHeight * (zones.density === 'extreme' ? 0.22 : 0.28)),
-    padBottom: Math.max(10, Math.round(zones.footerHeight * 0.12)),
+    padBottom: Math.max(24, Math.round(zones.footerHeight * 0.34)),
     footerPx: opts.footerPx,
     lineHeight: opts.lineHeight,
     lineHeightRatio: opts.lineHeightRatio,
@@ -304,7 +303,7 @@ export function computeImageLayout(
 
   const zones = computeLayoutZones(width, height, hasAuthor, density);
   const authorPx = computeAuthorPx(autor, zones);
-  const footerPx = computeFooterPx(height, 'Coleção', 'MMM-2026-00000001');
+  const footerPx = computeFooterPx(height);
   const { fontMax, fontMin, usable } = fontBounds(zones, density, clean.length);
   const lhSteps = lhStepsFor(density);
 
@@ -374,47 +373,53 @@ export function computeImageLayout(
   });
 }
 
-/** Rodapé legível: ~5% da altura do canvas (marca Metamensagem). */
-export const FOOTER_HEIGHT_RATIO = 0.055;
-export const FOOTER_MIN_PX = 38;
-export const FOOTER_MAX_PX = 96;
+/** Metadados do rodapé Soft Premium — ~12px @ 1080. */
+export const FOOTER_METADATA_MIN_PX = 10;
+export const FOOTER_METADATA_MAX_PX = 14;
+export const FOOTER_METADATA_HEIGHT_RATIO = 12 / 1080;
 
-export function computeFooterFontSize(
-  height: number,
-  skinName: string,
-  serial: string
-): number {
-  const longest = Math.max(skinName.length, serial.length, 18);
-  let px = Math.round(height * FOOTER_HEIGHT_RATIO);
-  if (longest > 26) px = Math.round(px * 0.94);
-  if (longest > 34) px = Math.round(px * 0.9);
-  return Math.min(FOOTER_MAX_PX, Math.max(FOOTER_MIN_PX, px));
+/** @deprecated Use FOOTER_METADATA_* — mantido para compatibilidade interna. */
+export const FOOTER_HEIGHT_RATIO = FOOTER_METADATA_HEIGHT_RATIO;
+export const FOOTER_MIN_PX = FOOTER_METADATA_MIN_PX;
+export const FOOTER_MAX_PX = FOOTER_METADATA_MAX_PX;
+
+export function computeFooterFontSize(height: number): number {
+  const px = Math.round(height * FOOTER_METADATA_HEIGHT_RATIO);
+  return Math.min(FOOTER_METADATA_MAX_PX, Math.max(FOOTER_METADATA_MIN_PX, px));
 }
 
+/** Trunca rótulo longo do rodapé (serial, skin) com reticências. */
+export function truncateFooterLabel(text: string, maxChars: number): string {
+  const trimmed = text.trim();
+  if (maxChars <= 0 || trimmed.length <= maxChars) return trimmed;
+  if (maxChars <= 3) return trimmed.slice(0, maxChars);
+  return `${trimmed.slice(0, maxChars - 3)}...`;
+}
+
+export function maxFooterLabelChars(
+  columnWidthPx: number,
+  fontPx: number,
+  charWidthRatio = 0.52
+): number {
+  return Math.max(4, Math.floor(columnWidthPx / Math.max(1, fontPx * charWidthRatio)));
+}
+
+/** @deprecated Shrink loop substituído por truncamento CSS + maxFooterLabelChars. */
 export function computeFooterSkinFontSize(
   footerPx: number,
-  skinName: string,
-  columnWidthPx: number
+  _skinName: string,
+  _columnWidthPx: number
 ): number {
-  const minBrandPx = Math.max(FOOTER_MIN_PX - 4, Math.round(footerPx * 0.92));
-  for (let px = footerPx; px >= minBrandPx; px -= 1) {
-    const est = skinName.length * px * 0.48;
-    if (est <= columnWidthPx) return px;
-  }
-  return minBrandPx;
+  return footerPx;
 }
 
+/** @deprecated Shrink loop substituído por truncamento CSS + maxFooterLabelChars. */
 export function computeFooterSerialFontSize(
   footerPx: number,
-  serial: string,
-  columnWidthPx: number
+  _serial: string,
+  _columnWidthPx: number
 ): number {
-  const minPx = Math.max(28, Math.round(footerPx * 0.78));
-  for (let px = footerPx; px >= minPx; px -= 1) {
-    const est = serial.length * px * 0.52;
-    if (est <= columnWidthPx) return px;
-  }
-  return minPx;
+  return footerPx;
 }
 
 export function assertLayoutReady(plan: ImageLayoutPlan): void {

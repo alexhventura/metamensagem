@@ -205,7 +205,20 @@ export default function FraseDetalheView({
     setNotFound(false);
     setLoadFailed(false);
     setLoaderCachedLocale(null);
-    if (!preloadedFrase) setLoading(true);
+
+    if (!preloadedFrase) {
+      setLoading(true);
+      setFrase(null);
+      setDisplay({ texto: '', isTranslated: false });
+    } else {
+      setFrase(preloadedFrase);
+      setDisplay({
+        texto: fraseTextoOf(preloadedFrase),
+        autor: fraseAutorOf(preloadedFrase),
+        isTranslated: false,
+      });
+      setLoading(false);
+    }
 
     const i18nTimer = window.setTimeout(() => {
       if (cancel) return;
@@ -222,6 +235,13 @@ export default function FraseDetalheView({
         if (cancel) return;
         if (bundle) {
           const { frase: loaded, display: loadedDisplay } = bundle;
+          const loadedText = fraseTextoOf(loaded).trim();
+          if (!loadedText) {
+            setFrase(null);
+            setNotFound(true);
+            setLoading(false);
+            return;
+          }
           setFrase(loaded);
           setDisplay(loadedDisplay);
           if (loadedDisplay.isTranslated && loadedDisplay.targetLang) {
@@ -446,14 +466,17 @@ export default function FraseDetalheView({
     );
   }
 
-  if (!frase || !listItem) {
+  if (!frase || !listItem || !quoteText.trim()) {
     const statusMessage = loadFailed
       ? t(
           'frases.load_failed',
           'Não foi possível carregar esta frase. Tente novamente em instantes.'
         )
-      : notFound
-        ? t('frases.not_found', 'Frase não encontrada.')
+      : notFound || !quoteText.trim()
+        ? t(
+            'frases.not_found',
+            'Frase não encontrada. O link compartilhado pode estar desatualizado.'
+          )
         : t('home.sharing_wisdom');
     return (
       <div className="p-20 text-center text-red-400" role="alert">

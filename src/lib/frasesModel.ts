@@ -67,12 +67,14 @@ export function findFraseInList(list: FraseCms[], requested: string): FraseCms |
 async function loadFraseDetailViaApi(key: string): Promise<FraseCms | 'not_found' | 'failed'> {
   try {
     const res = await fetch(`/api/frase-detail?slug=${encodeURIComponent(key)}`);
-    if (res.ok) {
-      const frase = normalizeFraseDetailRecord((await res.json()) as FraseDetailRecord) as FraseCms;
-      registerFrase(frase);
-      return frase;
-    }
     if (res.status === 404) return 'not_found';
+    if (!res.ok) return 'failed';
+    const data = (await res.json()) as FraseDetailRecord & { found?: boolean };
+    if (data.found === false) return 'not_found';
+    const frase = normalizeFraseDetailRecord(data) as FraseCms;
+    if (!frase.frase_original?.trim() && !frase.texto?.trim()) return 'not_found';
+    registerFrase(frase);
+    return frase;
   } catch (err) {
     console.warn('[frasesModel] API frase-detail failed', err);
   }
@@ -245,30 +247,42 @@ export async function loadFraseDetailBySlug(
 /** Shards + /api/frase-detail — usado se Supabase falhar ou não tiver a frase. */
 async function loadFraseDetailBySlugLegacy(slug: string): Promise<FraseDetailLoadResult | null> {
   const key = slug.toLowerCase().trim();
+
+  const toBundle = (frase: FraseCms): FraseDetailLoadResult => {
+    registerFrase(frase);
+    return {
+      frase,
+      display: {
+        texto: frase.frase_original,
+        autor: frase.autor_original,
+        explicacao: frase.explicacao || undefined,
+        isTranslated: false,
+      },
+    };
+  };
+
+  let apiResult = await loadFraseDetailViaApi(key);
+  if (apiResult !== 'failed' && apiResult !== 'not_found') {
+    return toBundle(apiResult);
+  }
+
   const resolved = (await resolveCanonicalSlugFromIndex(key)) ?? key;
   const lookupKey = resolved.toLowerCase();
 
-  const apiResult = await loadFraseDetailViaApi(lookupKey);
-  let frase: FraseCms | null = null;
-  if (apiResult !== 'failed' && apiResult !== 'not_found') {
-    frase = apiResult;
-  } else {
-    frase =
-      (await loadFraseDetailFromClientShards(lookupKey)) ??
-      (await loadFromFeedSample(lookupKey));
+  if (lookupKey !== key) {
+    apiResult = await loadFraseDetailViaApi(lookupKey);
+    if (apiResult !== 'failed' && apiResult !== 'not_found') {
+      return toBundle(apiResult);
+    }
   }
 
+  const frase =
+    (await loadFraseDetailFromClientShards(lookupKey)) ??
+    (await loadFromFeedSample(lookupKey));
+
+  if (!frase?.frase_original?.trim() && !frase?.texto?.trim()) return null;
   if (!frase) return null;
-  registerFrase(frase);
-  return {
-    frase,
-    display: {
-      texto: frase.frase_original,
-      autor: frase.autor_original,
-      explicacao: frase.explicacao || undefined,
-      isTranslated: false,
-    },
-  };
+  return toBundle(frase);
 }
 
 export async function loadFraseDetailById(phraseId: string): Promise<FraseCms | null> {
@@ -298,15 +312,14 @@ export async function loadFraseDetailById(phraseId: string): Promise<FraseCms | 
   return bundle?.frase ?? null;
 }
 
-/** URL estável para compartilhar (slug canônico; fallback por id). */
+/** URL estável para compartilhar — /f/:id redireciona ao slug canônico (resiliente a truncamento). */
 export function fraseShareUrl(
   frase: Pick<FraseCms, 'id' | 'slug'>,
-  locale: SeoLocale,
-  defaultLocale: SeoLocale,
+  _locale: SeoLocale,
+  _defaultLocale: SeoLocale,
   origin = typeof window !== 'undefined' ? window.location.origin : 'https://metamensagem.com'
 ): string {
-  const path = frasePath(frase.slug, locale, defaultLocale);
-  return `${origin}${path}`;
+  return `${origin}/f/${encodeURIComponent(frase.id)}`;
 }
 
 export async function loadFrasesCms(): Promise<FraseCms[]> {

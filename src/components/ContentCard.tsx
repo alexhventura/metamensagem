@@ -100,7 +100,9 @@ export default function ContentCard({
   const handleShare = async () => {
     const titulo = display.titulo ?? item.titulo;
     const text = isFrase ? display.texto : `${titulo}\n\n${display.texto}`;
-    const shareUrl = `${window.location.origin}${detailPath}`;
+    const shareUrl = isFrase
+      ? `${window.location.origin}/f/${encodeURIComponent(item.id)}`
+      : `${window.location.origin}${detailPath}`;
     const sharePayload = isFrase
       ? { title: item.autor, text: `${text} — ${item.autor}`, url: shareUrl }
       : { title: titulo, text, url: shareUrl };

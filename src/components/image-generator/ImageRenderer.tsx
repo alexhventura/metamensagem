@@ -3,10 +3,9 @@ import type { FormatConfig, ImageGeneratorQuote } from './types';
 import type { SkinConfig } from './types';
 import { imageFontFamilyFor } from './utils/imageFonts';
 import {
-  computeFooterFontSize,
-  computeFooterSerialFontSize,
-  computeFooterSkinFontSize,
   computeImageLayout,
+  maxFooterLabelChars,
+  truncateFooterLabel,
   validateFullText,
 } from './utils/textLayout';
 
@@ -40,25 +39,26 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
   const fontFamily = useMemo(() => imageFontFamilyFor(texto, autor), [texto, autor]);
   const { zones } = layout;
 
-  const footerPx = useMemo(
-    () => computeFooterFontSize(format.height, skin.name, serial),
-    [format.height, skin.name, serial]
-  );
+  const footerPx = layout.footerPx;
+  const footerInnerWidth = Math.floor(format.width * 0.8);
+  const colSidePx = Math.floor(footerInnerWidth * 0.28);
+  const colCenterPx = Math.floor(footerInnerWidth * 0.44);
 
-  const colSidePx = Math.floor(format.width * 0.28);
-  const colCenterPx = Math.floor(format.width * 0.44);
-
-  const skinFooterPx = useMemo(
-    () => computeFooterSkinFontSize(footerPx, skin.name, colCenterPx),
-    [footerPx, skin.name, colCenterPx]
-  );
-
-  const serialFooterPx = useMemo(
-    () => computeFooterSerialFontSize(footerPx, serial, colSidePx),
-    [footerPx, serial, colSidePx]
-  );
-
+  const footerDomain = 'metamensagem.com';
   const skinLabel = skin.name;
+  const domainLabel = truncateFooterLabel(
+    footerDomain,
+    maxFooterLabelChars(colSidePx, footerPx, 0.5)
+  );
+  const skinLabelDisplay = truncateFooterLabel(
+    skinLabel,
+    maxFooterLabelChars(colCenterPx, footerPx, 0.48)
+  );
+  const serialLabel = truncateFooterLabel(
+    serial,
+    maxFooterLabelChars(colSidePx, footerPx, 0.52)
+  );
+
   const authorTrim = autor?.trim() ?? '';
 
   return (
@@ -167,11 +167,11 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           aria-label="Autor"
         >
           <p
-            className="font-medium tracking-wide m-0 w-full"
+            className="font-medium tracking-wide m-0 mx-auto truncate"
             style={{
               fontSize: layout.authorPx,
               lineHeight: `${Math.round(layout.authorPx * 1.2)}px`,
-              maxWidth: '100%',
+              maxWidth: '70%',
               opacity: 0.92,
             }}
           >
@@ -181,41 +181,35 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
       ) : null}
 
       <footer
-        className={`absolute left-0 right-0 z-30 grid items-end ${skin.accentClass}`}
+        className={`absolute left-0 right-0 z-30 flex items-end justify-center overflow-hidden pointer-events-none ${skin.accentClass}`}
         style={{
           top: zones.footerTop,
           height: zones.footerHeight,
           paddingLeft: layout.padX,
           paddingRight: layout.padX,
           paddingBottom: layout.padBottom,
-          fontSize: footerPx,
-          fontFamily: 'Arial, Helvetica, sans-serif',
-          fontWeight: 700,
-          letterSpacing: '0.02em',
-          opacity: 1,
-          textShadow: '0 1px 4px rgba(0,0,0,0.75), 0 0 12px rgba(0,0,0,0.35)',
-          borderTop: '1px solid rgba(255,255,255,0.12)',
-          background: 'linear-gradient(to top, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.08) 55%, transparent 100%)',
-          gridTemplateColumns: 'minmax(0,1fr) minmax(0,1.55fr) minmax(0,1fr)',
-          gap: 10,
-          alignItems: 'end',
+          borderTop: '1px solid rgba(255,255,255,0.08)',
         }}
+        aria-label="Metadados"
       >
-        <span className="lowercase leading-none text-left whitespace-nowrap">
-          metamensagem.com
-        </span>
-        <span
-          className="leading-none text-center whitespace-nowrap font-black"
-          style={{ fontSize: skinFooterPx }}
+        <div
+          className="grid w-full max-w-[80%] mx-auto overflow-hidden min-w-0"
+          style={{
+            gridTemplateColumns: 'minmax(0,1fr) minmax(0,1.2fr) minmax(0,1fr)',
+            gap: 8,
+            fontSize: footerPx,
+            fontFamily: 'Arial, Helvetica, sans-serif',
+            fontWeight: 500,
+            letterSpacing: '0.02em',
+            lineHeight: 1.2,
+            opacity: 0.55,
+            alignItems: 'center',
+          }}
         >
-          {skinLabel}
-        </span>
-        <span
-          className="tabular-nums leading-none text-right whitespace-nowrap"
-          style={{ fontSize: serialFooterPx }}
-        >
-          {serial}
-        </span>
+          <span className="lowercase text-left truncate min-w-0">{domainLabel}</span>
+          <span className="text-center truncate min-w-0">{skinLabelDisplay}</span>
+          <span className="tabular-nums text-right truncate min-w-0">{serialLabel}</span>
+        </div>
       </footer>
     </div>
   );

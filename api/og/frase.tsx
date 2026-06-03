@@ -1,5 +1,5 @@
 import { ImageResponse } from '@vercel/og';
-import { computeImageLayout } from '../../src/components/image-generator/utils/textLayout';
+import { computeImageLayout, truncateFooterLabel } from '../../src/components/image-generator/utils/textLayout';
 import { requestUrl, type ApiRequest, type ApiResponse } from '../_http.js';
 
 function previewSerialForQuote(quoteId: string): string {
@@ -79,6 +79,7 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
   const layout = computeImageLayout(frase.texto, frase.autor, 1200, 630);
   const skin = frase.categoria || 'premium';
   const author = frase.autor.trim();
+  const serialDisplay = truncateFooterLabel(serial, 22);
 
   const { zones } = layout;
 
@@ -177,6 +178,10 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
                 opacity: 0.85,
                 margin: 0,
                 textAlign: 'center',
+                maxWidth: '70%',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
               }}
             >
               — {author}
@@ -188,20 +193,29 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
           style={{
             position: 'absolute',
             top: zones.footerTop,
-            left: zones.padX,
-            right: zones.padX,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: '80%',
+            maxWidth: '80%',
             height: zones.footerHeight,
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'flex-end',
             fontSize: layout.footerPx,
-            opacity: 0.75,
-            borderTop: '1px solid rgba(255,255,255,0.2)',
+            fontWeight: 500,
+            lineHeight: 1.2,
+            opacity: 0.55,
+            borderTop: '1px solid rgba(255,255,255,0.08)',
             paddingBottom: layout.padBottom,
+            overflow: 'hidden',
           }}
         >
-          <span>metamensagem.com · {skin}</span>
-          <span>{serial}</span>
+          <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '55%' }}>
+            metamensagem.com · {skin}
+          </span>
+          <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '40%' }}>
+            {serialDisplay}
+          </span>
         </div>
       </div>
     ),

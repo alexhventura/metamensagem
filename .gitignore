@@ -5,8 +5,23 @@ dist/
 coverage/
 .DS_Store
 *.log
-.env*
+
+# --- InfoSec: variáveis de ambiente (nunca commitar credenciais) ---
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+.env.*
+*.env
 !.env.example
+
+# Scripts locais com DATABASE_URL / service role (import admin — não versionar)
+/scripts/
+
+# Artefatos sensíveis gerados por scripts
+scripts/.import-credentials.json
+scripts/*-credentials.json
 
 # Monolitos gerados localmente (GitHub >100MB); site usa frases-v2/shards + feed-sample
 public/frases-cms.json

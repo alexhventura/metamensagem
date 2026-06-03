@@ -1,0 +1,18 @@
+# MetaMensagem — Supabase CLI
+# https://supabase.com/docs/guides/cli/config
+
+project_id = "zkugnthamuwsrvikymii"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "extensions"]
+extra_search_path = ["public", "extensions"]
+
+[db]
+port = 54322
+major_version = 15
+
+[studio]
+enabled = true
+port = 54323

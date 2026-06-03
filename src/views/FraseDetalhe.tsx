@@ -1,3 +1,8 @@
+/**
+ * InfoSec: esta view roda no navegador. Dados vêm de loadFraseDetailBySlug → Supabase anon + RLS.
+ * Proibido: DATABASE_URL, SUPABASE_SERVICE_ROLE_KEY ou qualquer secret sem prefixo VITE_.
+ * Permitido no cliente: apenas VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY (via supabaseClient).
+ */
 import React, { useCallback, useEffect, useMemo, useRef, useState, lazy, Suspense } from 'react';
 import { useAppUiReset } from '../hooks/useAppUiReset';
 const ImageGeneratorModal = lazy(() => import('../components/image-generator'));
@@ -166,7 +171,9 @@ export default function FraseDetalheView({
     return initial;
   });
   const [loading, setLoading] = useState(() => !preloadedFrase && !frase && !!slug);
-  const [loadError, setLoadError] = useState(false);
+  /** true = 404 / não encontrada; false com loadFailed = erro de rede/servidor */
+  const [notFound, setNotFound] = useState(false);
+  const [loadFailed, setLoadFailed] = useState(false);
   const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
   const closeImageModal = useCallback(() => setImageQuote(null), []);
   useAppUiReset(closeImageModal);
@@ -181,11 +188,15 @@ export default function FraseDetalheView({
   });
   const [translating, setTranslating] = useState(false);
   const [translationContingency, setTranslationContingency] = useState(false);
+  /** Locale para o qual o loader já trouxe texto em `frases_traducoes` (evita API legada). */
+  const [loaderCachedLocale, setLoaderCachedLocale] = useState<SeoLocale | null>(null);
 
   useEffect(() => {
     if (!slug) return;
     let cancel = false;
-    setLoadError(false);
+    setNotFound(false);
+    setLoadFailed(false);
+    setLoaderCachedLocale(null);
     if (!preloadedFrase) setLoading(true);
 
     const i18nTimer = window.setTimeout(() => {
@@ -197,25 +208,27 @@ export default function FraseDetalheView({
 
     (async () => {
       try {
-        const fromDetail = await loadFraseDetailBySlug(slug);
+        const bundle = await loadFraseDetailBySlug(slug, {
+          prefixLocale: routeInfo?.prefixLocale ?? null,
+        });
         if (cancel) return;
-        if (fromDetail) {
-          setFrase(fromDetail);
-          setDisplay({
-            texto: fromDetail.frase_original,
-            autor: fromDetail.autor_original,
-            isTranslated: false,
-          });
-          trackPhraseEvent(fromDetail.slug, 'view', {
-            phrase_id: fromDetail.id,
-            category: fromDetail.categoria,
+        if (bundle) {
+          const { frase: loaded, display: loadedDisplay } = bundle;
+          setFrase(loaded);
+          setDisplay(loadedDisplay);
+          if (loadedDisplay.isTranslated && loadedDisplay.targetLang) {
+            setLoaderCachedLocale(loadedDisplay.targetLang);
+          }
+          trackPhraseEvent(loaded.slug, 'view', {
+            phrase_id: loaded.id,
+            category: loaded.categoria,
             locale: routeInfo?.prefixLocale ?? undefined,
           });
-          const canonical = fromDetail.slug.toLowerCase();
+          const canonical = loaded.slug.toLowerCase();
           if (slug && canonical !== slug.toLowerCase()) {
             const def = seoLocaleFromLanguageOriginal(
-              fromDetail.semantica?.languageOriginal ||
-                fromDetail.semantica?.idiomaOriginal
+              loaded.semantica?.languageOriginal ||
+                loaded.semantica?.idiomaOriginal
             );
             const prefix = routeInfo?.prefixLocale ?? null;
             navigate(frasePath(canonical, prefix ?? def, def), {
@@ -236,12 +249,21 @@ export default function FraseDetalheView({
             isTranslated: false,
           });
         }
-        if (!resolved) setLoadError(true);
+        if (!resolved) setNotFound(true);
       } catch (err) {
-        console.error('[FraseDetalhe] load failed', err);
+        if (import.meta.env.DEV) {
+          console.warn('[FraseDetalhe] falha ao carregar (detalhes técnicos só em dev)', err);
+        }
         if (!cancel) {
-          setFrase(preloadedFrase ?? getFraseCmsBySlugSync(slug) ?? null);
-          setLoadError(!preloadedFrase && !getFraseCmsBySlugSync(slug));
+          const fallback = preloadedFrase ?? getFraseCmsBySlugSync(slug) ?? null;
+          setFrase(fallback);
+          if (fallback) {
+            setNotFound(false);
+            setLoadFailed(false);
+          } else {
+            setNotFound(false);
+            setLoadFailed(true);
+          }
         }
       } finally {
         if (!cancel) setLoading(false);
@@ -277,12 +299,18 @@ export default function FraseDetalheView({
       setDisplay({
         texto: frase.frase_original,
         autor: frase.autor_original,
+        explicacao: frase.explicacao || undefined,
         isTranslated: false,
       });
     };
 
     if (contentLocale === defaultLocale || contentLocale === SOURCE_CONTENT_LOCALE) {
       showOriginal();
+      return;
+    }
+
+    if (loaderCachedLocale === contentLocale) {
+      setTranslationContingency(false);
       return;
     }
 
@@ -303,6 +331,7 @@ export default function FraseDetalheView({
           setDisplay({
             texto: result.text,
             autor: frase.autor_original,
+            explicacao: frase.explicacao || undefined,
             isTranslated: result.locale !== defaultLocale && result.mode !== 'contingency',
             targetLang: contentLocale,
           });
@@ -331,6 +360,7 @@ export default function FraseDetalheView({
     contentLocale,
     defaultLocale,
     loading,
+    loaderCachedLocale,
   ]);
 
   const listItem = useMemo(() => (frase ? fraseToListItem(frase) : null), [frase]);
@@ -409,9 +439,17 @@ export default function FraseDetalheView({
   }
 
   if (!frase || !listItem) {
+    const statusMessage = loadFailed
+      ? t(
+          'frases.load_failed',
+          'Não foi possível carregar esta frase. Tente novamente em instantes.'
+        )
+      : notFound
+        ? t('frases.not_found', 'Frase não encontrada.')
+        : t('home.sharing_wisdom');
     return (
       <div className="p-20 text-center text-red-400" role="alert">
-        {loadError ? t('frases.not_found', 'Frase não encontrada.') : t('home.sharing_wisdom')}
+        <p>{statusMessage}</p>
         <div className="mt-4">
           <BackNavButton label={t('nav.back_quotes', 'Voltar às frases')} fallbackPath="/frases" />
         </div>

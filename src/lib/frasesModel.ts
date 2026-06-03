@@ -12,6 +12,15 @@ import type { SeoLocale } from '../../lib/i18n/locales';
 import { frasePath } from './i18nRoutes';
 import { fraseSlugForUrl } from './slug';
 import { loadFrasesCmsFallback } from './homeData';
+import {
+  loadFraseDetailFromSupabase,
+  loadFraseDetailFromSupabaseById,
+  type FraseDetailLoadResult,
+  type LoadFraseDetailOptions,
+} from './supabase/fraseLoader';
+import { isSupabaseConfigured } from './supabaseClient';
+
+export type { FraseDetailLoadResult, LoadFraseDetailOptions };
 
 export interface FraseInformacoes {
   ultima_atualizacao: string | null;
@@ -130,51 +139,100 @@ async function loadFromFeedSample(key: string): Promise<FraseCms | null> {
   }
 }
 
-export async function loadFraseDetailBySlug(slug: string): Promise<FraseCms | null> {
+function registerBundle(bundle: FraseDetailLoadResult): FraseCms {
+  registerFrase(bundle.frase);
+  return bundle.frase;
+}
+
+/** Carrega frase + display (com tradução em cache do Supabase quando aplicável). */
+export async function loadFraseDetailBySlug(
+  slug: string,
+  options?: LoadFraseDetailOptions
+): Promise<FraseDetailLoadResult | null> {
   const key = slug.toLowerCase().trim();
   if (!key) return null;
 
-  const cached = bySlug?.get(key);
-  if (cached) return cached;
+  const mem = bySlug?.get(key);
+  if (mem) {
+    const defaultLocale = mem.semantica?.languageOriginal || mem.semantica?.idiomaOriginal || 'pt';
+    const contentLocale = options?.prefixLocale ?? defaultLocale;
+    return {
+      frase: mem,
+      display: {
+        texto: mem.frase_original,
+        autor: mem.autor_original,
+        explicacao: mem.explicacao || undefined,
+        isTranslated: false,
+      },
+    };
+  }
 
+  if (isSupabaseConfigured()) {
+    const bundle = await loadFraseDetailFromSupabase(key, options);
+    if (bundle) {
+      registerFrase(bundle.frase);
+      return bundle;
+    }
+    return null;
+  }
+
+  return loadFraseDetailBySlugLegacy(key);
+}
+
+/** @deprecated Caminho legado — só quando Supabase não está configurado (dev local). */
+async function loadFraseDetailBySlugLegacy(slug: string): Promise<FraseDetailLoadResult | null> {
+  const key = slug.toLowerCase().trim();
   const resolved = (await resolveCanonicalSlugFromIndex(key)) ?? key;
   const lookupKey = resolved.toLowerCase();
 
-  const cachedResolved = bySlug?.get(lookupKey);
-  if (cachedResolved) return cachedResolved;
-
   const apiResult = await loadFraseDetailViaApi(lookupKey);
-  if (apiResult !== 'failed') {
-    if (apiResult === 'not_found') {
-      const fromShards = await loadFraseDetailFromClientShards(lookupKey);
-      if (fromShards) return fromShards;
-      return loadFromFeedSample(lookupKey);
-    }
-    return apiResult;
+  let frase: FraseCms | null = null;
+  if (apiResult !== 'failed' && apiResult !== 'not_found') {
+    frase = apiResult;
+  } else {
+    frase =
+      (await loadFraseDetailFromClientShards(lookupKey)) ??
+      (await loadFromFeedSample(lookupKey));
   }
 
-  const fromShards = await loadFraseDetailFromClientShards(lookupKey);
-  if (fromShards) return fromShards;
-
-  return loadFromFeedSample(lookupKey);
+  if (!frase) return null;
+  registerFrase(frase);
+  return {
+    frase,
+    display: {
+      texto: frase.frase_original,
+      autor: frase.autor_original,
+      explicacao: frase.explicacao || undefined,
+      isTranslated: false,
+    },
+  };
 }
 
 export async function loadFraseDetailById(phraseId: string): Promise<FraseCms | null> {
   const id = phraseId.trim();
   if (!id) return null;
 
+  if (isSupabaseConfigured()) {
+    const bundle = await loadFraseDetailFromSupabaseById(id);
+    if (bundle) return registerBundle(bundle);
+  }
+
   try {
     const res = await fetch('/frases-v2/id-index.json');
     if (res.ok) {
       const map = (await res.json()) as Record<string, string>;
       const slug = map[id];
-      if (slug) return loadFraseDetailBySlug(slug);
+      if (slug) {
+        const bundle = await loadFraseDetailBySlug(slug);
+        return bundle?.frase ?? null;
+      }
     }
   } catch {
-    /* fallback abaixo */
+    /* ignore */
   }
 
-  return loadFraseDetailBySlug(id);
+  const bundle = await loadFraseDetailBySlug(id);
+  return bundle?.frase ?? null;
 }
 
 /** URL estável para compartilhar (slug canônico; fallback por id). */

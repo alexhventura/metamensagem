@@ -13,6 +13,8 @@
     "test:lighthouse-guards": "node scripts/test-lighthouse-guards.mjs",
     "build:local": "node scripts/enrich-external-content.mjs && node prepare-data.cjs && node scripts/build-frase-id-index.mjs && node scripts/generate-sitemap.mjs && vite build",
     "frases:id-index": "node scripts/build-frase-id-index.mjs",
+    "frases:import:supabase": "node scripts/importarShards.js",
+    "frases:import:supabase:dry": "node scripts/importarShards.js --dry-run",
     "seo:indexnow": "node scripts/submit-indexnow.mjs",
     "frases:seo:all": "npm run frases:seo:phase6 && npm run frases:sitemap:intl",
     "content:sync": "node scripts/migrate-frases-to-content.mjs && node scripts/build-content-metadata.mjs",
@@ -64,6 +66,7 @@
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
+    "@supabase/supabase-js": "^2.107.0",
     "@tailwindcss/vite": "^4.1.14",
     "@vercel/blob": "^0.27.3",
     "@vercel/og": "^0.6.8",

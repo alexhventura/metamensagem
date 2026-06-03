@@ -3,8 +3,15 @@
  * Mensagem detalhada só em dev — nunca na UI.
  */
 
-/** Chaves públicas injetadas pela integração Vercel ↔ Supabase (anon + URL). */
-const ALLOWED_PUBLIC_SUPABASE_KEYS = new Set(['SUPABASE_URL', 'SUPABASE_ANON_KEY']);
+/** Chaves públicas permitidas (integração Vercel ↔ Supabase + Vite). */
+const ALLOWED_PUBLIC_SUPABASE_KEYS = new Set([
+  'SUPABASE_URL',
+  'SUPABASE_ANON_KEY',
+  'SUPABASE_PUBLISHABLE_KEY',
+  'NEXT_PUBLIC_SUPABASE_URL',
+  'NEXT_PUBLIC_SUPABASE_ANON_KEY',
+  'NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY',
+]);
 
 const EXPLICIT_DANGEROUS_KEYS = new Set([
   'VITE_SERVICE_ROLE',
@@ -14,9 +21,13 @@ const EXPLICIT_DANGEROUS_KEYS = new Set([
   'VITE_SUPABASE_DB_URL',
   'VITE_POSTGRES_URL',
   'VITE_DB_PASSWORD',
+  'NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY',
   'SERVICE_ROLE',
   'DATABASE_URL',
   'SUPABASE_SERVICE_ROLE_KEY',
+  'POSTGRES_URL',
+  'POSTGRES_PASSWORD',
+  'POSTGRES_PRISMA_URL',
 ]);
 
 const DANGEROUS_KEY_PATTERNS = [
@@ -39,6 +50,9 @@ function keyLooksDangerous(key: string): boolean {
   if (ALLOWED_PUBLIC_SUPABASE_KEYS.has(key)) return false;
   if (EXPLICIT_DANGEROUS_KEYS.has(key)) return true;
   if (key.startsWith('SUPABASE_') && !ALLOWED_PUBLIC_SUPABASE_KEYS.has(key)) return true;
+  if (key.startsWith('NEXT_PUBLIC_') && /service|secret|postgres|password|database/i.test(key)) {
+    return true;
+  }
   return DANGEROUS_KEY_PATTERNS.some((re) => re.test(key));
 }
 
@@ -65,12 +79,12 @@ export function assertSafeBrowserSupabaseEnv(): void {
   if (!leaked.length) return;
 
   const hint =
-    'Remova chaves admin do .env.local (use apenas VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY no frontend). ' +
-    'Service role e DATABASE_URL ficam só em scripts server-side, sem prefixo VITE_.';
+    'Remova secrets admin do ambiente de build. No browser use só URL + anon/publishable. ' +
+    'POSTGRES_* e SERVICE_ROLE ficam apenas no servidor/scripts locais.';
 
   if (import.meta.env.DEV) {
     console.error(
-      '[supabase] Bloqueado: variáveis sensíveis detectadas em import.meta.env:',
+      '[supabase] Bloqueado: variáveis sensíveis em import.meta.env:',
       leaked.join(', '),
       '—',
       hint

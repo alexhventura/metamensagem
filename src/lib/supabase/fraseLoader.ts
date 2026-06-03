@@ -7,9 +7,7 @@
  * - Nunca importar process.env nem DATABASE_URL / SERVICE_ROLE neste módulo.
  * - Queries com colunas explícitas (sem SELECT *) para reduzir egress.
  *
- * Variáveis (resolvidas em ../publicEnv.ts, usadas por getSupabase):
- *   import.meta.env.VITE_SUPABASE_URL || import.meta.env.SUPABASE_URL
- *   import.meta.env.VITE_SUPABASE_ANON_KEY || import.meta.env.SUPABASE_ANON_KEY
+ * Variáveis (resolvidas em ../publicEnv.ts): VITE_*, NEXT_PUBLIC_*, SUPABASE_* (integração Vercel).
  */
 
 import type { FraseSeoPack, FraseSemantica } from '../../../lib/enrichment/types';

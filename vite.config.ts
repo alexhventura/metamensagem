@@ -8,8 +8,8 @@ const analyze = process.env.ANALYZE === 'true';
 
 export default defineConfig(() => {
   return {
-    /** VITE_* manual + SUPABASE_* da integração oficial Vercel Marketplace (somente URL/anon). */
-    envPrefix: ['VITE_', 'SUPABASE_'],
+    /** VITE_* manual + variáveis injetadas pela integração Vercel ↔ Supabase (sem POSTGRES_*). */
+    envPrefix: ['VITE_', 'SUPABASE_', 'NEXT_PUBLIC_'],
     plugins: [
       react(),
       tailwindcss(),

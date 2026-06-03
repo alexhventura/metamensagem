@@ -173,13 +173,15 @@ export async function loadFraseDetailBySlug(
       registerFrase(bundle.frase);
       return bundle;
     }
-    return null;
+    if (import.meta.env.DEV) {
+      console.warn('[frasesModel] Supabase sem resultado; fallback legado para slug:', key);
+    }
   }
 
   return loadFraseDetailBySlugLegacy(key);
 }
 
-/** @deprecated Caminho legado — só quando Supabase não está configurado (dev local). */
+/** Shards + /api/frase-detail — usado se Supabase falhar ou não tiver a frase. */
 async function loadFraseDetailBySlugLegacy(slug: string): Promise<FraseDetailLoadResult | null> {
   const key = slug.toLowerCase().trim();
   const resolved = (await resolveCanonicalSlugFromIndex(key)) ?? key;

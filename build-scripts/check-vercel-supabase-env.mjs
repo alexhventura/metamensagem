@@ -1,10 +1,6 @@
 /**
  * Valida variáveis Supabase no build (Vercel / produção).
- * Evita deploy silencioso sem cliente configurado na Edge.
- *
- * Aceita:
- *   VITE_SUPABASE_URL + VITE_SUPABASE_ANON_KEY
- *   ou SUPABASE_URL + SUPABASE_ANON_KEY (integração Vercel ↔ Supabase)
+ * Compatível com integração Vercel Marketplace + GitHub deploy.
  */
 
 const isVercel = process.env.VERCEL === '1';
@@ -16,13 +12,36 @@ function pick(name) {
   return (process.env[name] || '').trim();
 }
 
-const url = pick('VITE_SUPABASE_URL') || pick('SUPABASE_URL');
-const anonKey = pick('VITE_SUPABASE_ANON_KEY') || pick('SUPABASE_ANON_KEY');
+function pickUrl() {
+  return (
+    pick('VITE_SUPABASE_URL') ||
+    pick('NEXT_PUBLIC_SUPABASE_URL') ||
+    pick('SUPABASE_URL') ||
+    ''
+  );
+}
+
+function pickAnonKey() {
+  return (
+    pick('VITE_SUPABASE_ANON_KEY') ||
+    pick('VITE_SUPABASE_PUBLISHABLE_KEY') ||
+    pick('NEXT_PUBLIC_SUPABASE_ANON_KEY') ||
+    pick('NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY') ||
+    pick('SUPABASE_ANON_KEY') ||
+    pick('SUPABASE_PUBLISHABLE_KEY') ||
+    ''
+  );
+}
+
+const url = pickUrl();
+const anonKey = pickAnonKey();
 const source = pick('VITE_SUPABASE_URL')
   ? 'VITE_*'
-  : pick('SUPABASE_URL')
-    ? 'SUPABASE_* (integração Vercel)'
-    : 'nenhuma';
+  : pick('NEXT_PUBLIC_SUPABASE_URL')
+    ? 'NEXT_PUBLIC_* (integração Vercel)'
+    : pick('SUPABASE_URL')
+      ? 'SUPABASE_* (integração Vercel)'
+      : 'nenhuma';
 
 if (url && anonKey) {
   if (isVercel) {
@@ -32,18 +51,19 @@ if (url && anonKey) {
 }
 
 const msg =
-  '[build] Supabase: VITE_SUPABASE_URL + VITE_SUPABASE_ANON_KEY (ou SUPABASE_URL + SUPABASE_ANON_KEY da integração Vercel) não encontradas.';
+  '[build] Supabase: defina URL + chave pública (anon ou publishable). ' +
+  'Integração Vercel injeta SUPABASE_* ou NEXT_PUBLIC_SUPABASE_*; manual: VITE_SUPABASE_*';
 
 if (isVercel && isProdBuild) {
   console.error(msg);
   console.error(
-    '[build] Configure no painel Vercel → Settings → Environment Variables ou instale a integração Supabase (Marketplace).'
+    '[build] Vercel → Settings → Integrations → Supabase (projeto zkugnthamuwsrvikymii) em Production + Preview.'
   );
   process.exit(1);
 }
 
 if (isProdBuild) {
-  console.warn(`${msg} O detalhe de frase usará fallback legado até configurar.`);
+  console.warn(`${msg} Detalhe de frase usará fallback legado até configurar.`);
 }
 
 process.exit(0);

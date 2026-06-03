@@ -16,13 +16,8 @@ coverage/
 *.env
 !.env.example
 
-# Ignora a pasta inteira de scripts locais
-/scripts/*
-
-# Abre exceções exclusivas para os scripts que a Vercel precisa ler no build
-!/scripts/check-vercel-supabase-env.mjs
-!/scripts/build-frase-id-index.mjs
-!/scripts/inject-prerender-shell.mjs
+# Scripts locais/admin (import com DATABASE_URL — nunca versionar)
+/scripts/
 
 # Artefatos sensíveis gerados por scripts
 scripts/.import-credentials.json

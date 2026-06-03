@@ -1,12 +1,10 @@
 /**
  * Proxy MyMemory no servidor — cota separada do IP do visitante + MYMEMORY_EMAIL no Vercel.
  */
-import { requestUrl, sendJson, sendText } from './_http.js';
+import { requestUrl, sendJson, sendText, type ApiResponse } from './_http.js';
+import type { ApiRequest } from './_shared.js';
 
-export default async function handler(req: { method?: string; url?: string; headers?: unknown }, res: {
-  writeHead: (code: number, headers?: Record<string, string>) => void;
-  end: (body?: string) => void;
-}): Promise<void> {
+export default async function handler(req: ApiRequest, res: ApiResponse): Promise<void> {
   if (req.method !== 'GET') {
     sendJson(res, 405, { error: 'Method not allowed' });
     return;

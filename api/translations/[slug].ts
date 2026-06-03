@@ -1,15 +1,12 @@
 /**
  * GET /api/translations/:slug?locale=en — traduções via CDN.
  */
-import { isSeoLocale, requestUrl, shardForSlug } from '../_shared.js';
-import { sendJson } from '../_http.js';
+import { isSeoLocale, requestUrl, shardForSlug, type ApiRequest } from '../_shared.js';
+import { sendJson, type ApiResponse } from '../_http.js';
 
 type SeoLocale = 'pt' | 'en' | 'es' | 'fr' | 'de' | 'it' | 'ja' | 'hi';
 
-export default async function handler(req: { method?: string; url?: string; headers?: unknown }, res: {
-  writeHead: (code: number, headers?: Record<string, string>) => void;
-  end: (body?: string) => void;
-}): Promise<void> {
+export default async function handler(req: ApiRequest, res: ApiResponse): Promise<void> {
   if (req.method !== 'GET') {
     sendJson(res, 405, { error: 'Method not allowed' });
     return;

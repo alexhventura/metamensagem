@@ -1,8 +1,11 @@
 /** Utilitários compartilhados das rotas /api (dentro de api/ para o bundle Vercel). */
 
-type ApiRequest = {
+export type ApiRequest = {
+  method?: string;
   url?: string;
   headers?: Headers | Record<string, string | string[] | undefined>;
+  body?: unknown;
+  on?: (event: string, cb: (chunk: Buffer) => void) => void;
 };
 
 function headerValue(

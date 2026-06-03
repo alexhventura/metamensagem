@@ -1,10 +1,16 @@
 /** Resposta JSON no runtime Node da Vercel (sem Web Response). */
-import { requestUrl } from './_shared.js';
+import { type ApiRequest, requestUrl } from './_shared.js';
 
 export { requestUrl };
+export type { ApiRequest };
+
+export type ApiResponse = {
+  writeHead: (code: number, headers?: Record<string, string>) => void;
+  end: (body?: string | Buffer) => void;
+};
 
 export function sendJson(
-  res: { writeHead: (code: number, headers?: Record<string, string>) => void; end: (body?: string) => void },
+  res: ApiResponse,
   status: number,
   data: unknown,
   headers: Record<string, string> = {}
@@ -17,7 +23,7 @@ export function sendJson(
 }
 
 export function sendText(
-  res: { writeHead: (code: number, headers?: Record<string, string>) => void; end: (body?: string) => void },
+  res: ApiResponse,
   status: number,
   body: string,
   headers: Record<string, string> = {}

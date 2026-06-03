@@ -76,16 +76,8 @@ function MudarMetaSEO({
   useEffect(() => {
     const prevLang = document.documentElement.lang;
     document.documentElement.lang = htmlLang;
-    document.title = title.includes('Metamensagem') ? title : `${title} | Metamensagem`;
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content', description);
-    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!link) {
-      link = document.createElement('link');
-      link.rel = 'canonical';
-      document.head.appendChild(link);
-    }
-    link.href = canonical;
+    const siteTitle = title.includes('Metamensagem') ? title : `${title} | Metamensagem`;
+    document.title = siteTitle;
 
     const upsertMeta = (attr: 'name' | 'property', key: string, content: string) => {
       let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement | null;
@@ -96,6 +88,22 @@ function MudarMetaSEO({
       }
       el.content = content;
     };
+
+    upsertMeta('name', 'description', description);
+    upsertMeta('property', 'og:title', siteTitle);
+    upsertMeta('property', 'og:description', description);
+    upsertMeta('property', 'og:type', 'article');
+    upsertMeta('property', 'og:url', canonical);
+    upsertMeta('name', 'twitter:title', siteTitle);
+    upsertMeta('name', 'twitter:description', description);
+
+    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'canonical';
+      document.head.appendChild(link);
+    }
+    link.href = canonical;
 
     if (ogImage) {
       upsertMeta('property', 'og:image', ogImage);

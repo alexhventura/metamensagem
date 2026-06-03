@@ -31,7 +31,21 @@ npm run supabase:migrate
 npm run supabase:bootstrap
 ```
 
-Alternativa (pede senha no terminal): `npm run supabase:config` → grava em `.env.scripts.local`
+**Pooler (recomendado no Windows):** após definir `POSTGRES_PASSWORD`:
+
+```bash
+npm run supabase:sync-db-url
+npm run supabase:migrate
+```
+
+Ou cole manualmente em `.env.scripts.local`:
+
+```env
+DATABASE_URL=postgresql://postgres.hnrulfjomufpxkitvfqg:SUA_SENHA_NOVA@aws-0-sa-east-1.pooler.supabase.com:5432/postgres
+```
+
+**Prompt de senha no PowerShell:** só em `npm run supabase:config`.  
+`migrate`, `bootstrap` e `sync-db-url` usam apenas `.env.scripts.local` (sem pedir senha de novo).
 
 ## Onde pegar a senha
 

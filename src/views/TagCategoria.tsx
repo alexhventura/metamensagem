@@ -1,5 +1,10 @@
 import React, { lazy, Suspense, useCallback, useMemo, useState } from 'react';
 import { useAppUiReset } from '../hooks/useAppUiReset';
+import { useDebouncedSupabaseSearch } from '../hooks/useDebouncedSupabaseSearch';
+import {
+  MAIN_CATEGORIA_SLUGS,
+  useSupabaseTaxonomyList,
+} from '../hooks/useSupabaseTaxonomyList';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Search } from 'lucide-react';
@@ -70,15 +75,40 @@ export default function TagCategoriaView({
     [tagSlugParam]
   );
 
+  const isCategoria = Boolean(resolvedSlug && MAIN_CATEGORIA_SLUGS.has(resolvedSlug));
+
+  const taxonomyFilters = useMemo(() => {
+    if (!resolvedSlug) return undefined;
+    return isCategoria
+      ? { categoriaSlug: resolvedSlug }
+      : { tagSlugs: [resolvedSlug] };
+  }, [resolvedSlug, isCategoria]);
+
+  const {
+    items: supabaseItems,
+    hasMore: supabaseHasMore,
+    ready: supabaseReady,
+    enabled: supabaseOn,
+    loadMore: loadMoreSupabase,
+  } = useSupabaseTaxonomyList(resolvedSlug);
+
+  const {
+    items: searchHits,
+    active: searchActive,
+    enabled: supabaseSearchOn,
+  } = useDebouncedSupabaseSearch(busca, { filters: taxonomyFilters, limit: 48 });
+
   const rankedItems = useMemo(() => {
     if (!resolvedSlug || banco.length === 0) return [];
     return filterAndRankBancoForTagPage(banco, resolvedSlug, registry);
   }, [banco, resolvedSlug, registry]);
 
-  const itensDaTag = useMemo(
-    () => rankedItems.map((r) => r.item),
-    [rankedItems]
-  );
+  const itensDaTag = useMemo(() => {
+    if (supabaseOn && supabaseReady && supabaseItems.length > 0) {
+      return supabaseItems;
+    }
+    return rankedItems.map((r) => r.item);
+  }, [supabaseOn, supabaseReady, supabaseItems, rankedItems]);
 
   const matchStats = useMemo(() => {
     const stats = { primary: 0, related: 0, keyword: 0 };
@@ -102,8 +132,9 @@ export default function TagCategoriaView({
 
   const itensFiltrados = useMemo(() => {
     if (!busca.trim()) return itensDaTag;
+    if (supabaseSearchOn && searchActive && searchHits !== null) return searchHits;
     return searchBancoSemantico(itensDaTag, busca);
-  }, [busca, itensDaTag]);
+  }, [busca, itensDaTag, supabaseSearchOn, searchActive, searchHits]);
 
   const displayTag = entry?.tag ?? resolvedSlug ?? '';
 
@@ -128,6 +159,29 @@ export default function TagCategoriaView({
       })),
     [itensFiltrados, itensVisiveis]
   );
+
+  const handleLoadMore = useCallback(() => {
+    if (
+      !busca.trim() &&
+      supabaseOn &&
+      supabaseHasMore &&
+      itensVisiveis >= supabaseItems.length - FEED_LOAD_MORE_STEP
+    ) {
+      void loadMoreSupabase();
+    }
+    setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP);
+  }, [
+    busca,
+    supabaseOn,
+    supabaseHasMore,
+    itensVisiveis,
+    supabaseItems.length,
+    loadMoreSupabase,
+  ]);
+
+  const showLoadMore =
+    itensFiltrados.length > itensVisiveis ||
+    (!busca.trim() && supabaseOn && supabaseHasMore && itensVisiveis >= itensFiltrados.length);
 
   if (!tagSlugParam || !isTagCategoryPath(tagSlugParam)) {
     return <Navigate to="/" replace />;
@@ -256,8 +310,8 @@ export default function TagCategoriaView({
         />
       )}
 
-      {itensFiltrados.length > itensVisiveis && (
-        <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
+      {showLoadMore && (
+        <FeedLoadMoreButton onClick={handleLoadMore} />
       )}
 
       <p className="text-center mt-8 text-[10px] font-mono uppercase tracking-widest opacity-40">

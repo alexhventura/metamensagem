@@ -67,6 +67,7 @@ import {
 } from './lib/seo';
 import { buildTagRegistry, pathFromTag } from './lib/tagsSeo';
 import { SEO_LOCALES } from './lib/i18nRoutes';
+import { useDebouncedSupabaseSearch } from './hooks/useDebouncedSupabaseSearch';
 import { searchBancoSemantico } from './lib/semanticSearch';
 import { sanitizeContentBanco } from './lib/safeContent';
 import { pruneInvalidTranslationCache } from './lib/translation';
@@ -524,10 +525,16 @@ function HomeView({
     () => tagsForDisplay(bancoFrases.flatMap((f) => f.tags || []), 12),
     [bancoFrases]
   );
+  const {
+    items: supabaseHits,
+    active: supabaseActive,
+    enabled: supabaseOn,
+  } = useDebouncedSupabaseSearch(busca);
   const resultadosFiltrados = useMemo(() => {
     if (!busca.trim()) return bancoRandomFrases;
+    if (supabaseOn && supabaseActive && supabaseHits !== null) return supabaseHits;
     return searchBancoSemantico(bancoFrases, busca);
-  }, [busca, bancoFrases, bancoRandomFrases]);
+  }, [busca, bancoFrases, bancoRandomFrases, supabaseOn, supabaseActive, supabaseHits]);
 
   const itensHome = useMemo(
     () =>
@@ -738,10 +745,17 @@ function FrasesView({
     return sampleShuffled(list, list.length);
   }, [banco]);
 
+  const {
+    items: supabaseHits,
+    active: supabaseActive,
+    enabled: supabaseOn,
+  } = useDebouncedSupabaseSearch(busca);
+
   const frases = useMemo(() => {
     if (!busca.trim()) return baseFrases;
+    if (supabaseOn && supabaseActive && supabaseHits !== null) return supabaseHits;
     return searchBancoSemantico(baseFrases, busca);
-  }, [busca, baseFrases]);
+  }, [busca, baseFrases, supabaseOn, supabaseActive, supabaseHits]);
 
   useEffect(() => {
     setItensVisiveis(FEED_INITIAL_VISIBLE);

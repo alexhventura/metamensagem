@@ -19,8 +19,24 @@ import {
   type LoadFraseDetailOptions,
 } from './supabase/fraseLoader';
 import { isSupabaseConfigured } from './supabaseClient';
+import {
+  searchFrasesIndex,
+  searchFrasesIndexByCategoria,
+  searchFrasesIndexByTags,
+  searchFrasesIndexByText,
+  type FraseSearchHit,
+  type FraseSearchOptions,
+} from './supabase/fraseSearchLoader';
 
 export type { FraseDetailLoadResult, LoadFraseDetailOptions };
+export type { FraseSearchHit, FraseSearchOptions };
+
+export {
+  searchFrasesIndex,
+  searchFrasesIndexByText,
+  searchFrasesIndexByCategoria,
+  searchFrasesIndexByTags,
+};
 
 export interface FraseInformacoes {
   ultima_atualizacao: string | null;
@@ -142,6 +158,51 @@ async function loadFromFeedSample(key: string): Promise<FraseCms | null> {
 function registerBundle(bundle: FraseDetailLoadResult): FraseCms {
   registerFrase(bundle.frase);
   return bundle.frase;
+}
+
+/**
+ * Busca no índice leve (Supabase). Retorna só id, slug, titulo.
+ * Detalhe: use loadFraseDetailBySlug(slug) — Supabase completo ou fallback shard invisível.
+ */
+export async function searchFrasesByText(
+  query: string,
+  options?: FraseSearchOptions
+): Promise<FraseSearchHit[]> {
+  return searchFrasesIndexByText(query, options);
+}
+
+export async function searchFrasesByCategoria(
+  categoriaSlug: string,
+  options?: FraseSearchOptions
+): Promise<FraseSearchHit[]> {
+  return searchFrasesIndexByCategoria(categoriaSlug, options);
+}
+
+export async function searchFrasesByTags(
+  tagSlugs: string[],
+  options?: FraseSearchOptions
+): Promise<FraseSearchHit[]> {
+  return searchFrasesIndexByTags(tagSlugs, options);
+}
+
+export async function searchFrases(
+  query: string,
+  filters?: { categoriaSlug?: string; tagSlugs?: string[] },
+  options?: FraseSearchOptions
+): Promise<FraseSearchHit[]> {
+  return searchFrasesIndex(query, filters, options);
+}
+
+/** Converte hit de busca em item de lista (UI existente) sem carregar detalhe. */
+export function fraseListItemFromSearchHit(hit: FraseSearchHit) {
+  return {
+    id: hit.id,
+    tipo: 'frase' as const,
+    texto: hit.titulo,
+    autor: '',
+    tags: [] as string[],
+    slug: hit.slug,
+  };
 }
 
 /** Carrega frase + display (com tradução em cache do Supabase quando aplicável). */

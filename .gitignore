@@ -19,7 +19,12 @@ coverage/
 !.env.scripts.example
 
 # Scripts locais/admin (import com DATABASE_URL — nunca versionar)
-/scripts/
+/scripts/*
+!/scripts/gerarIndiceBusca.js
+!/scripts/importarIndiceSupabase.js
+
+# Payload gerado para import Supabase (centenas de MB)
+data/search-index/
 
 # Artefatos sensíveis gerados por scripts
 scripts/.import-credentials.json

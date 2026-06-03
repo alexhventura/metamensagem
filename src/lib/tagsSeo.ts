@@ -196,7 +196,7 @@ export function tagPageTitle(tag: string): string {
 }
 
 export function tagSeoTitle(tag: string): string {
-  return tagPageTitle(tag);
+  return `Frases de ${tag} - ${SITE_NAME}`;
 }
 
 export function tagMetaDescription(

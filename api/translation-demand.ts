@@ -5,7 +5,8 @@ import {
   mergeDemandSnapshots,
   type TranslationDemandSnapshot,
 } from './_translationDemand.js';
-import { sendJson } from './_http.js';
+import { sendJson, type ApiResponse } from './_http.js';
+import type { ApiRequest } from './_shared.js';
 
 const BLOB_PATH = 'translation-demand/snapshot.json';
 
@@ -56,7 +57,7 @@ async function saveSnapshot(snapshot: TranslationDemandSnapshot): Promise<{ pers
   return { persisted: false, via: 'none' };
 }
 
-async function readJsonBody(req: { body?: unknown; on?: (event: string, cb: (chunk: Buffer) => void) => void }): Promise<unknown> {
+async function readJsonBody(req: ApiRequest): Promise<unknown> {
   if (req.body != null && typeof req.body === 'object') return req.body;
   if (req.body != null && typeof req.body === 'string') return JSON.parse(req.body);
   if (!req.on) return {};
@@ -70,10 +71,7 @@ async function readJsonBody(req: { body?: unknown; on?: (event: string, cb: (chu
   return raw ? JSON.parse(raw) : {};
 }
 
-export default async function handler(req: { method?: string; body?: unknown; on?: (event: string, cb: (chunk: Buffer) => void) => void }, res: {
-  writeHead: (code: number, headers?: Record<string, string>) => void;
-  end: (body?: string) => void;
-}): Promise<void> {
+export default async function handler(req: ApiRequest, res: ApiResponse): Promise<void> {
   if (req.method === 'GET') {
     const snapshot = await loadSnapshot();
     sendJson(

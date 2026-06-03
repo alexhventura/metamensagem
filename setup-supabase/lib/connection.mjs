@@ -40,6 +40,67 @@ export function buildDatabaseUrlWithPassword(baseUrl, plainPassword) {
   return `postgresql://${user}:${encoded}@${u.hostname}:${port}${pathname}`;
 }
 
+/** URI Supabase Session pooler (usuário postgres.PROJECT_REF). Projetos novos usam aws-1-*. */
+export function buildPoolerUrl(
+  plainPassword,
+  region = 'sa-east-1',
+  port = 5432,
+  awsPrefix = process.env.SUPABASE_POOLER_AWS?.trim() || 'aws-1'
+) {
+  const encoded = encodeURIComponent(plainPassword);
+  return `postgresql://postgres.${PROJECT_REF}:${encoded}@${awsPrefix}-${region}.pooler.supabase.com:${port}/postgres`;
+}
+
+const POOLER_REGIONS = ['sa-east-1', 'us-east-1', 'eu-west-1'];
+const POOLER_AWS_PREFIXES = ['aws-1', 'aws-0'];
+
+/** Candidatos de conexão (DATABASE_URL → direct → poolers). */
+export function listConnectionCandidates() {
+  const candidates = [];
+  const seen = new Set();
+  const add = (url, label) => {
+    if (!url || seen.has(url)) return;
+    seen.add(url);
+    candidates.push({ url, label });
+  };
+
+  const directUrl = process.env.DATABASE_URL?.trim();
+  if (directUrl && !databaseUrlNeedsPassword(directUrl)) {
+    add(directUrl, 'DATABASE_URL em .env.scripts.local');
+  }
+
+  const pwd = process.env.POSTGRES_PASSWORD?.trim();
+  if (pwd) {
+    add(
+      buildDatabaseUrlWithPassword(DEFAULT_DB_TEMPLATE, pwd),
+      'db.*.supabase.co:5432 + POSTGRES_PASSWORD'
+    );
+    for (const aws of POOLER_AWS_PREFIXES) {
+      for (const region of POOLER_REGIONS) {
+        add(buildPoolerUrl(pwd, region, 5432, aws), `pooler ${aws}-${region}:5432`);
+        add(buildPoolerUrl(pwd, region, 6543, aws), `pooler ${aws}-${region}:6543`);
+      }
+    }
+  }
+
+  return candidates;
+}
+
+function explainEnvPasswordLocation() {
+  const inScripts = Boolean(readEnvFile(ENV_SCRIPTS_PATH, 'POSTGRES_PASSWORD'));
+  const inVite = Boolean(readEnvFile(ENV_VITE_PATH, 'POSTGRES_PASSWORD'));
+  if (inVite && !inScripts) {
+    console.error(
+      '   ⚠️ POSTGRES_PASSWORD está em .env.local — mova para .env.scripts.local (Vite não deve ver senha do banco).'
+    );
+  } else if (inScripts) {
+    console.error('   POSTGRES_PASSWORD lida de .env.scripts.local (local correto).');
+  } else {
+    console.error('   Defina POSTGRES_PASSWORD ou DATABASE_URL em .env.scripts.local');
+  }
+  console.error('   .env.local = só VITE_SUPABASE_* (frontend).\n');
+}
+
 export function databaseUrlNeedsPassword(url) {
   if (!url) return true;
   return (
@@ -216,30 +277,50 @@ export function databaseUrlFromEnv() {
   return null;
 }
 
-export async function resolveDatabaseUrl({ forcePrompt = false } = {}) {
-  const fromEnv = databaseUrlFromEnv();
-  if (fromEnv && !forcePrompt) {
-    const probe = await testPgConnection(fromEnv);
-    if (probe.ok) {
-      console.log('🔐 Conexão Postgres OK');
-      return fromEnv;
+/**
+ * Resolve URL do Postgres usando só .env.scripts.local — sem prompt no terminal.
+ * Prompt interativo apenas em: npm run supabase:config
+ */
+export async function resolveDatabaseUrl({ allowPrompt = false } = {}) {
+  const candidates = listConnectionCandidates();
+
+  if (!candidates.length) {
+    explainEnvPasswordLocation();
+    console.error('❌ Sem POSTGRES_PASSWORD/DATABASE_URL em .env.scripts.local');
+    console.error('   Primeira vez: npm run supabase:config');
+    console.error('   Depois: npm run supabase:sync-db-url\n');
+    if (allowPrompt && process.stdin.isTTY) {
+      return setupSupabaseFromPasswordPrompt();
     }
-    console.warn('⚠️ Falha na conexão — será solicitada a senha.');
+    process.exit(1);
   }
 
-  const template = process.env.DATABASE_URL?.trim() || DEFAULT_DB_TEMPLATE;
-  let url = template;
-
-  if (!forcePrompt && !databaseUrlNeedsPassword(url)) {
+  const failures = [];
+  for (const { url, label } of candidates) {
     const probe = await testPgConnection(url);
     if (probe.ok) {
-      console.log('🔐 DATABASE_URL válida (.env.scripts.local)');
+      console.log(`🔐 Conexão Postgres OK (${label})`);
       return url;
     }
-    console.warn('⚠️ Conexão falhou — será solicitada a senha novamente.');
+    failures.push({ label, message: (probe.message || 'erro').slice(0, 160) });
   }
 
-  return setupSupabaseFromPasswordPrompt();
+  console.error('\n❌ Nenhum host Postgres respondeu com a senha do .env.scripts.local\n');
+  explainEnvPasswordLocation();
+  for (const f of failures.slice(0, 5)) {
+    console.error(`   • ${f.label}: ${f.message}`);
+  }
+  console.error(
+    `\n   Atualize a senha: https://supabase.com/dashboard/project/${PROJECT_REF}/settings/database`
+  );
+  console.error('   Depois: npm run supabase:sync-db-url');
+  console.error('   Ou cole a URI do Connect (Session pooler) em DATABASE_URL=\n');
+
+  if (allowPrompt && process.stdin.isTTY) {
+    return setupSupabaseFromPasswordPrompt();
+  }
+
+  process.exit(1);
 }
 
 export function createPgClient(connectionString) {

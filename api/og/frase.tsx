@@ -1,6 +1,6 @@
 import { ImageResponse } from '@vercel/og';
 import { computeImageLayout } from '../../src/components/image-generator/utils/textLayout';
-import { requestUrl } from '../_http.js';
+import { requestUrl, type ApiRequest, type ApiResponse } from '../_http.js';
 
 function previewSerialForQuote(quoteId: string): string {
   const year = new Date().getFullYear();
@@ -56,10 +56,7 @@ export const config = {
   runtime: 'nodejs',
 };
 
-export default async function handler(
-  req: { url?: string; headers?: unknown },
-  res: { writeHead: (code: number, headers?: Record<string, string>) => void; end: (body?: Buffer | string) => void }
-) {
+export default async function handler(req: ApiRequest, res: ApiResponse) {
   const url = requestUrl(req);
   const parts = url.pathname.split('/').filter(Boolean);
   const fromPath = parts[parts.length - 1];

@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-06-02T16:33:41.206Z",
+  "summary": {
+    "officialTranslations": 0,
+    "pendingRequests": 0,
+    "uniquePhrasesInQueue": 0
+  },
+  "availableByLocale": {
+    "pt": 0,
+    "en": 0,
+    "es": 0,
+    "fr": 0,
+    "de": 0,
+    "it": 0,
+    "ja": 0,
+    "hi": 0
+  },
+  "rankings": {
+    "languages": [
+      {
+        "locale": "pt",
+        "requests": 0
+      },
+      {
+        "locale": "en",
+        "requests": 0
+      },
+      {
+        "locale": "es",
+        "requests": 0
+      },
+      {
+        "locale": "fr",
+        "requests": 0
+      },
+      {
+        "locale": "de",
+        "requests": 0
+      },
+      {
+        "locale": "it",
+        "requests": 0
+      },
+      {
+        "locale": "ja",
+        "requests": 0
+      },
+      {
+        "locale": "hi",
+        "requests": 0
+      }
+    ],
+    "phrases": [],
+    "categories": [],
+    "countries": []
+  },
+  "pendingTop": []
+}

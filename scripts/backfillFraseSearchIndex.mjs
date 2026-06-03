@@ -93,7 +93,7 @@ async function loadTranslationsMap(client, fraseIds) {
   return map;
 }
 
-async function backfillFromDb(client) {
+async function backfillFromDb(client, dbUrl) {
   await assertTable(client, 'frases_index');
   await assertTable(client, 'frase_search_index');
 
@@ -106,14 +106,28 @@ async function backfillFromDb(client) {
   let processed = 0;
   let upserted = 0;
   let cursor = offset;
+  let pg = client;
+
+  const reconnect = async () => {
+    try {
+      await pg.end();
+    } catch {
+      /* ignore */
+    }
+    pg = createPgClient(dbUrl);
+    await pg.connect();
+    return pg;
+  };
 
   while (true) {
     if (limit > 0 && processed >= limit) break;
 
     const pageSize = limit > 0 ? Math.min(batchSize, limit - processed) : batchSize;
 
-    const { rows: indexRows } = await client.query(
-      `
+    let indexRows;
+    try {
+      ({ rows: indexRows } = await pg.query(
+        `
       select
         fi.id,
         fi.titulo,
@@ -129,13 +143,25 @@ async function backfillFromDb(client) {
       order by fi.id
       limit $1 offset $2
       `,
-      [pageSize, cursor]
-    );
+        [pageSize, cursor]
+      ));
+    } catch (err) {
+      console.warn(`   ⚠️ reconectando após erro na leitura (offset ${cursor}):`, err.message);
+      pg = await reconnect();
+      continue;
+    }
 
     if (!indexRows.length) break;
 
     const ids = indexRows.map((r) => r.id);
-    const translationsMap = await loadTranslationsMap(client, ids);
+    let translationsMap;
+    try {
+      translationsMap = await loadTranslationsMap(pg, ids);
+    } catch (err) {
+      console.warn(`   ⚠️ reconectando após erro nas traduções:`, err.message);
+      pg = await reconnect();
+      continue;
+    }
 
     const flatRows = [];
     for (const row of indexRows) {
@@ -159,7 +185,13 @@ async function backfillFromDb(client) {
     }
 
     if (!dryRun && flatRows.length) {
-      await upsertBatch(client, flatRows);
+      try {
+        await upsertBatch(pg, flatRows);
+      } catch (err) {
+        console.warn(`   ⚠️ reconectando após erro no upsert:`, err.message);
+        pg = await reconnect();
+        continue;
+      }
     }
 
     processed += indexRows.length;
@@ -173,7 +205,7 @@ async function backfillFromDb(client) {
     if (indexRows.length < pageSize) break;
   }
 
-  return { processed, upserted };
+  return { processed, upserted, client: pg };
 }
 
 function readJson(filePath) {
@@ -312,17 +344,22 @@ async function main() {
 
   try {
     const result =
-      SOURCE === 'shards' ? await backfillFromShards(client) : await backfillFromDb(client);
+      SOURCE === 'shards'
+        ? await backfillFromShards(client)
+        : await backfillFromDb(client, dbUrl);
 
-    const { rows } = await client.query('select count(*)::int as n from public.frase_search_index');
+    const activeClient = result.client ?? client;
+    const { rows } = await activeClient.query('select count(*)::int as n from public.frase_search_index');
     console.log(
       `\n✅ Concluído: ${result.processed.toLocaleString('pt-BR')} frases processadas, ` +
         `${result.upserted.toLocaleString('pt-BR')} linhas upsertadas` +
         (dryRun ? ' (dry-run — nada gravado)' : '')
     );
     console.log(`   frase_search_index total: ${rows[0]?.n?.toLocaleString('pt-BR') ?? 0}`);
-  } finally {
-    await client.end();
+    await activeClient.end();
+  } catch (err) {
+    await client.end().catch(() => {});
+    throw err;
   }
 }
 

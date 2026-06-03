@@ -12,6 +12,7 @@ import { pathFromTag } from '../lib/tagsSeo';
 import { frasePath, seoLocaleFromLanguageOriginal } from '../lib/i18nRoutes';
 import { detectLanguageOriginal } from '../../lib/i18n/detectLanguage';
 import { fraseSlugForUrl, normalizarParaSlug } from '../lib/slug';
+import { usePrefetchFrase } from '../hooks/usePrefetchFrase';
 import {
   CARD_ACTION_BTN,
   cardAccentDotClass,
@@ -76,6 +77,10 @@ export default function ContentCard({
         return frasePath(slug, def, def);
       })()
     : `/metafora/${item.id}/${normalizarParaSlug(item.titulo || '')}`;
+
+  const prefetchSlug = isFrase ? fraseSlugForUrl(item.slug, item.texto, item.id) : undefined;
+  const { ref: prefetchRef, onMouseEnter: prefetchOnEnter, onFocus: prefetchOnFocus } =
+    usePrefetchFrase(prefetchSlug);
 
   const buttonLabel = isFrase ? t('common.learn_more') : t('common.read_metaphor');
 
@@ -149,6 +154,7 @@ export default function ContentCard({
 
   const cardInner = (
       <div
+        ref={isFrase ? prefetchRef : undefined}
         className={`p-8 rounded-[2.5rem] flex flex-col justify-between transition-all group relative overflow-hidden h-full ${
           tema === 'light'
             ? 'bg-white shadow-[0_10px_30px_rgb(0,0,0,0.03)] hover:shadow-2xl'
@@ -192,6 +198,8 @@ export default function ContentCard({
                   <Link
                     to={detailPath}
                     state={linkState}
+                    onMouseEnter={prefetchOnEnter}
+                    onFocus={prefetchOnFocus}
                     className={cardTitleLinkClass(tema, accent, 'frase')}
                   >
                     &ldquo;{bodyText}&rdquo;

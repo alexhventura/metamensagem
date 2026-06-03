@@ -31,8 +31,8 @@ const DENSITY_RATIOS: Record<
   extreme: { header: 0.08, author: 0.062, gap: 0.012, logoScale: 0.78 },
 };
 
-/** Rodapé reservado — 70px @ 1080; metadados nunca invadem citação/autor. */
-const FOOTER_HEIGHT_AT_1080 = 70;
+/** Rodapé reservado — ~88px @ 1080 (metadados 18px + margem 40px). */
+const FOOTER_HEIGHT_AT_1080 = 88;
 
 function footerHeightForCanvas(height: number, density: ZoneDensity): number {
   let h = Math.max(52, Math.round(height * (FOOTER_HEIGHT_AT_1080 / 1080)));

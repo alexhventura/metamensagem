@@ -6,7 +6,8 @@ import { requestUrl, sendJson, type ApiResponse } from './_http.js';
 import type { ApiRequest } from './_shared.js';
 import { resolveFraseDetailBySlug } from './fraseDetailService.js';
 
-const CACHE = 'public, max-age=31536000, immutable';
+const CACHE_HIT = 'public, max-age=86400, stale-while-revalidate=604800';
+const CACHE_MISS = 'public, max-age=300';
 
 export default async function handler(req: ApiRequest, res: ApiResponse): Promise<void> {
   if (req.method !== 'GET') {
@@ -27,17 +28,17 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
     const frase = await resolveFraseDetailBySlug(slug, url.origin);
 
     if (!frase) {
-      sendJson(res, 404, { slug, found: false, message: 'Frase não encontrada' });
+      sendJson(res, 404, { slug, found: false, message: 'Frase não encontrada' }, { 'Cache-Control': CACHE_MISS });
       return;
     }
 
-    sendJson(res, 200, normalizeFraseDetailRecord(frase), { 'Cache-Control': CACHE });
+    sendJson(res, 200, normalizeFraseDetailRecord(frase), { 'Cache-Control': CACHE_HIT });
   } catch (err) {
     console.error('[frase-detail]', slug || '(sem slug)', err);
     sendJson(res, 404, {
       slug: slug || undefined,
       found: false,
       message: 'Frase não encontrada',
-    });
+    }, { 'Cache-Control': CACHE_MISS });
   }
 }

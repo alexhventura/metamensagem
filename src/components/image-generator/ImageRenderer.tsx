@@ -56,8 +56,24 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
   );
   const serialLabel = truncateFooterLabel(
     serial,
-    maxFooterLabelChars(colSidePx, footerPx, 0.52)
+    maxFooterLabelChars(colSidePx, layout.footerSerialPx, 0.52)
   );
+
+  const metaFooterStyle = {
+    fontSize: footerPx,
+    fontWeight: 500 as const,
+    letterSpacing: '0.4px',
+    lineHeight: 1.2,
+    opacity: 0.65,
+  };
+
+  const serialFooterStyle = {
+    fontSize: layout.footerSerialPx,
+    fontWeight: 400 as const,
+    letterSpacing: '0.3px',
+    lineHeight: 1.2,
+    opacity: 0.55,
+  };
 
   const authorTrim = autor?.trim() ?? '';
 
@@ -188,7 +204,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           paddingLeft: layout.padX,
           paddingRight: layout.padX,
           paddingBottom: layout.padBottom,
-          borderTop: '1px solid rgba(255,255,255,0.08)',
+          borderTop: '1px solid rgba(255,255,255,0.12)',
         }}
         aria-label="Metadados"
       >
@@ -196,19 +212,20 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           className="grid w-full max-w-[80%] mx-auto overflow-hidden min-w-0"
           style={{
             gridTemplateColumns: 'minmax(0,1fr) minmax(0,1.2fr) minmax(0,1fr)',
-            gap: 8,
-            fontSize: footerPx,
+            gap: 10,
             fontFamily: 'Arial, Helvetica, sans-serif',
-            fontWeight: 500,
-            letterSpacing: '0.02em',
-            lineHeight: 1.2,
-            opacity: 0.55,
             alignItems: 'center',
           }}
         >
-          <span className="lowercase text-left truncate min-w-0">{domainLabel}</span>
-          <span className="text-center truncate min-w-0">{skinLabelDisplay}</span>
-          <span className="tabular-nums text-right truncate min-w-0">{serialLabel}</span>
+          <span className="lowercase text-left truncate min-w-0" style={metaFooterStyle}>
+            {domainLabel}
+          </span>
+          <span className="text-center truncate min-w-0" style={metaFooterStyle}>
+            {skinLabelDisplay}
+          </span>
+          <span className="tabular-nums text-right truncate min-w-0" style={serialFooterStyle}>
+            {serialLabel}
+          </span>
         </div>
       </footer>
     </div>

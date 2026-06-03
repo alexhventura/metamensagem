@@ -31,6 +31,7 @@ import {
   fraseShareUrl,
   fraseToListItem,
   fraseCmsFromListItem,
+  searchFrasesByCategoria,
   type FraseCms,
 } from '../lib/frasesModel';
 import { fraseTextoOf, fraseAutorOf } from '../../lib/frases/detailLookup';
@@ -56,7 +57,7 @@ import type { SeoLocale } from '../../lib/i18n/locales';
 import { SOURCE_CONTENT_LOCALE } from '../../lib/i18n/platform';
 import { getOrCreatePhraseTranslation } from '../lib/translation/phraseTranslationService';
 import { TranslationContingencyError } from '../lib/translation/types';
-import { trackPhraseEvent } from '../lib/analytics/phrasePopularity';
+import { prefetchFraseDetail } from '../lib/prefetchFrase';
 
 function MudarMetaSEO({
   title,
@@ -65,6 +66,7 @@ function MudarMetaSEO({
   hreflangLinks,
   htmlLang,
   ogImage,
+  jsonLD,
 }: {
   title: string;
   description: string;
@@ -72,6 +74,7 @@ function MudarMetaSEO({
   hreflangLinks: { hreflang: string; href: string }[];
   htmlLang: string;
   ogImage?: string;
+  jsonLD?: object;
 }) {
   useEffect(() => {
     const prevLang = document.documentElement.lang;
@@ -112,10 +115,25 @@ function MudarMetaSEO({
     }
 
     applyHreflangLinks(hreflangLinks);
+
+    const idScript = 'jsonld-frase-detalhe';
+    let ld = document.getElementById(idScript);
+    if (jsonLD) {
+      if (!ld) {
+        ld = document.createElement('script');
+        ld.id = idScript;
+        ld.setAttribute('type', 'application/ld+json');
+        document.head.appendChild(ld);
+      }
+      ld.textContent = JSON.stringify(jsonLD);
+    } else if (ld) {
+      ld.remove();
+    }
+
     return () => {
       document.documentElement.lang = prevLang;
     };
-  }, [title, description, canonical, hreflangLinks, htmlLang, ogImage]);
+  }, [title, description, canonical, hreflangLinks, htmlLang, ogImage, jsonLD]);
 
   return null;
 }
@@ -198,6 +216,9 @@ export default function FraseDetalheView({
   const [translationContingency, setTranslationContingency] = useState(false);
   /** Locale para o qual o loader já trouxe texto em `frases_traducoes` (evita API legada). */
   const [loaderCachedLocale, setLoaderCachedLocale] = useState<SeoLocale | null>(null);
+  const [relatedSlugs, setRelatedSlugs] = useState<
+    { slug: string; titulo: string; id: string }[]
+  >([]);
 
   useEffect(() => {
     if (!slug) return;
@@ -303,6 +324,23 @@ export default function FraseDetalheView({
       window.clearTimeout(i18nTimer);
     };
   }, [slug, preloadedFrase, navigate, location.state, routeInfo?.prefixLocale]);
+
+  useEffect(() => {
+    if (!frase?.categoria) return;
+    let cancel = false;
+    void searchFrasesByCategoria(frase.categoria, { limit: 10 }).then((hits) => {
+      if (cancel) return;
+      setRelatedSlugs(
+        hits
+          .filter((h) => h.slug !== frase.slug.toLowerCase())
+          .slice(0, 8)
+          .map((h) => ({ slug: h.slug, titulo: h.titulo, id: h.id }))
+      );
+    });
+    return () => {
+      cancel = true;
+    };
+  }, [frase?.slug, frase?.categoria]);
 
   const defaultLocale: SeoLocale = useMemo(
     () =>
@@ -492,9 +530,30 @@ export default function FraseDetalheView({
     frase.explicacao ||
     `Frase de ${frase.autor_original}${frase.ano_ou_data ? ` (${frase.ano_ou_data})` : ''}`;
   const seoPack = pickTitleDescription(i18nMeta, contentLocale, {
-    title: frase.frase_original.slice(0, 70),
+    title: `${frase.frase_original.slice(0, 72)}${frase.frase_original.length > 72 ? '…' : ''} — ${frase.autor_original}`,
     description: descriptionFallback,
   });
+
+  const quotationJsonLd = useMemo(
+    () => ({
+      '@context': 'https://schema.org',
+      '@type': 'Quotation',
+      text: frase.frase_original,
+      name: frase.frase_original.slice(0, 120),
+      author: {
+        '@type': 'Person',
+        name: frase.autor_original,
+      },
+      url: canonical,
+      inLanguage: pageHtmlLang.replace('_', '-'),
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Metamensagem',
+        url: 'https://metamensagem.com',
+      },
+    }),
+    [frase.frase_original, frase.autor_original, canonical, pageHtmlLang]
+  );
 
   const neutralAction = cardNeutralActionClass(tema);
   const hasExtraInfo =
@@ -532,6 +591,7 @@ export default function FraseDetalheView({
         hreflangLinks={hreflangLinks}
         htmlLang={pageHtmlLang}
         ogImage={ogImageUrlForPhrase(frase.id)}
+        jsonLD={quotationJsonLd}
       />
 
       <nav className="sr-only" aria-label="Idiomas">
@@ -721,6 +781,37 @@ export default function FraseDetalheView({
           ) : null}
         </div>
       </article>
+
+      {relatedSlugs.length > 0 && (
+        <nav
+          className="mt-10"
+          aria-label={t('frases.related', 'Frases relacionadas')}
+        >
+          <h2
+            className={`text-[10px] font-black uppercase tracking-[0.35em] mb-4 ${
+              tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'
+            }`}
+          >
+            {t('frases.related', 'Frases relacionadas')}
+          </h2>
+          <ul className="space-y-2">
+            {relatedSlugs.map((rel) => (
+              <li key={rel.id}>
+                <Link
+                  to={frasePath(rel.slug, defaultLocale, defaultLocale)}
+                  onMouseEnter={() => prefetchFraseDetail(rel.slug)}
+                  onFocus={() => prefetchFraseDetail(rel.slug)}
+                  className={`block text-sm leading-snug transition-colors hover:text-[#A855F7] ${
+                    tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'
+                  }`}
+                >
+                  {rel.titulo}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
 
       {imageQuote && (
         <Suspense fallback={null}>

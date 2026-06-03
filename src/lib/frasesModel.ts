@@ -18,6 +18,12 @@ import {
   type FraseDetailLoadResult,
   type LoadFraseDetailOptions,
 } from './supabase/fraseLoader';
+import {
+  getCachedFraseDetail,
+  getCachedShard,
+  persistFraseDetail,
+  persistShard,
+} from './fraseDetailCache';
 import { isSupabaseConfigured } from './supabaseClient';
 import {
   searchFrasesIndex,
@@ -84,12 +90,20 @@ async function loadFraseDetailViaApi(key: string): Promise<FraseCms | 'not_found
 async function ensureShardLoaded(shard: string): Promise<FraseCms[]> {
   if (shardCache.has(shard)) return shardCache.get(shard)!;
 
+  const fromIdb = await getCachedShard(shard);
+  if (fromIdb?.length) {
+    const data = fromIdb.map((row) => normalizeFraseDetailRecord(row) as FraseCms);
+    shardCache.set(shard, data);
+    for (const f of data) registerFrase(f);
+    return data;
+  }
+
   try {
     const res = await fetch(`/frases-v2/detail/shard-${shard}.json`);
     if (res.ok) {
-      const data = ((await res.json()) as FraseDetailRecord[]).map(
-        (row) => normalizeFraseDetailRecord(row) as FraseCms
-      );
+      const raw = (await res.json()) as FraseDetailRecord[];
+      void persistShard(shard, raw);
+      const data = raw.map((row) => normalizeFraseDetailRecord(row) as FraseCms);
       shardCache.set(shard, data);
       for (const f of data) registerFrase(f);
       return data;
@@ -218,7 +232,6 @@ export async function loadFraseDetailBySlug(
   const mem = bySlug?.get(key);
   if (mem) {
     const defaultLocale = mem.semantica?.languageOriginal || mem.semantica?.idiomaOriginal || 'pt';
-    const contentLocale = options?.prefixLocale ?? defaultLocale;
     return {
       frase: mem,
       display: {
@@ -230,18 +243,32 @@ export async function loadFraseDetailBySlug(
     };
   }
 
+  const cached = await getCachedFraseDetail(key);
+  if (cached) {
+    registerFrase(cached.frase);
+    return cached;
+  }
+
+  let bundle: FraseDetailLoadResult | null = null;
+
   if (isSupabaseConfigured()) {
-    const bundle = await loadFraseDetailFromSupabase(key, options);
+    bundle = await loadFraseDetailFromSupabase(key, options);
     if (bundle) {
       registerFrase(bundle.frase);
-      return bundle;
-    }
-    if (import.meta.env.DEV) {
+    } else if (import.meta.env.DEV) {
       console.warn('[frasesModel] Supabase sem resultado; fallback legado para slug:', key);
     }
   }
 
-  return loadFraseDetailBySlugLegacy(key);
+  if (!bundle) {
+    bundle = await loadFraseDetailBySlugLegacy(key);
+  }
+
+  if (bundle) {
+    void persistFraseDetail(bundle.frase.slug, bundle);
+  }
+
+  return bundle;
 }
 
 /** Shards + /api/frase-detail — usado se Supabase falhar ou não tiver a frase. */
@@ -393,6 +420,17 @@ export function getFraseCmsBySlugSync(slug: string): FraseCms | undefined {
   return undefined;
 }
 
+export function fraseToListItem(f: FraseCms) {
+  return {
+    id: f.id,
+    tipo: 'frase' as const,
+    texto: f.frase_original,
+    autor: f.autor_original,
+    tags: f.palavras_chave?.length ? f.palavras_chave : [f.categoria, ...f.contextos],
+    slug: f.slug,
+  };
+}
+
 export function primeFrasesCms(frases: FraseCms[]): void {
   cache = frases;
   bySlug = new Map(frases.map((f) => [f.slug.toLowerCase(), f]));
@@ -423,16 +461,5 @@ export function fraseCmsFromListItem(item: {
     autor_tipo: null,
     nacionalidade: null,
     nascimento_falecimento: null,
-  };
-}
-
-export function fraseToListItem(f: FraseCms) {
-  return {
-    id: f.id,
-    tipo: 'frase' as const,
-    texto: f.frase_original,
-    autor: f.autor_original,
-    tags: f.palavras_chave?.length ? f.palavras_chave : [f.categoria, ...f.contextos],
-    slug: f.slug,
   };
 }

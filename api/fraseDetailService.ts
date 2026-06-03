@@ -5,7 +5,7 @@ import {
   resolveCanonicalSlugFromIndex,
   shardsToProbe,
   type FraseDetailRecord,
-} from '../lib/frases/detailLookup.js';
+} from './_fraseDetailLookup.js';
 import { getServerSupabase } from './_supabaseServer.js';
 
 const FRASE_SELECT =

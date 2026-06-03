@@ -1,7 +1,7 @@
 /**
  * GET /api/frase-detail?slug=... — detalhe da frase (Supabase + shard CDN).
  */
-import { normalizeFraseDetailRecord } from '../lib/frases/detailLookup.js';
+import { normalizeFraseDetailRecord } from './_fraseDetailLookup.js';
 import { requestUrl, sendJson, type ApiResponse } from './_http.js';
 import type { ApiRequest } from './_shared.js';
 import { resolveFraseDetailBySlug } from './fraseDetailService.js';

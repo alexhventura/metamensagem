@@ -1,6 +1,6 @@
 import { ImageResponse } from '@vercel/og';
 import { computeImageLayout, formatFooterCategory, formatFooterMetaLine, truncateFooterLabel } from './textLayout.js';
-import { requestUrl, type ApiRequest, type ApiResponse } from '../_http.js';
+import { requestUrl } from '../_shared.js';
 
 function previewSerialForQuote(quoteId: string): string {
   const year = new Date().getFullYear();
@@ -53,26 +53,22 @@ async function resolveOgFrase(
 }
 
 export const config = {
-  runtime: 'nodejs',
+  runtime: 'edge',
 };
 
-export default async function handler(req: ApiRequest, res: ApiResponse) {
+export default async function handler(req: Request): Promise<Response> {
   const url = requestUrl(req);
   const parts = url.pathname.split('/').filter(Boolean);
   const fromPath = parts[parts.length - 1];
   const id = url.searchParams.get('id') || fromPath;
 
   if (!id || id === 'frase') {
-    res.writeHead(400, { 'Content-Type': 'text/plain' });
-    res.end('id required');
-    return;
+    return new Response('id required', { status: 400 });
   }
 
   const frase = await resolveOgFrase(id, url.origin);
   if (!frase) {
-    res.writeHead(404, { 'Content-Type': 'text/plain' });
-    res.end('Frase não encontrada');
-    return;
+    return new Response('Frase não encontrada', { status: 404 });
   }
 
   const serial = previewSerialForQuote(frase.id);
@@ -83,7 +79,7 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
 
   const { zones } = layout;
 
-  const image = new ImageResponse(
+  return new ImageResponse(
     (
       <div
         style={{
@@ -246,11 +242,9 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
     {
       width: 1200,
       height: 630,
+      headers: {
+        'Cache-Control': 'public, max-age=86400',
+      },
     }
   );
-
-  const buffer = Buffer.from(await image.arrayBuffer());
-  const contentType = image.headers.get('content-type') || 'image/png';
-  res.writeHead(200, { 'Content-Type': contentType, 'Cache-Control': 'public, max-age=86400' });
-  res.end(buffer);
 }

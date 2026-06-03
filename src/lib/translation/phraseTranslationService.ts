@@ -345,4 +345,4 @@ export async function getOrCreatePhraseTranslation(
   }
 }
 
-export { SOURCE_CONTENT_LOCALE, isFraseIdFormat };
+export { SOURCE_CONTENT_LOCALE };

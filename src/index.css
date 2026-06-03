@@ -38,6 +38,58 @@ html[data-theme="dark"] {
   background-color: var(--mm-subheader-bg);
 }
 
+/* Chrome fixo da app — sempre abaixo de modais (max 100) */
+.mm-app-chrome {
+  z-index: 100;
+}
+
+.mm-app-subchrome {
+  z-index: 90;
+}
+
+/* Portal de modais — acima de todo chrome (backdrop-blur + sticky) */
+#mm-modal-root {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: none;
+  isolation: isolate;
+}
+
+.mm-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  isolation: isolate;
+  transform: translateZ(0);
+  pointer-events: auto;
+}
+
+.mm-modal-panel {
+  position: relative;
+  z-index: 10001;
+}
+
+body.mm-modal-open {
+  overflow: hidden;
+}
+
+/* Quebra sticky/backdrop enquanto modal aberto (Safari compositing) */
+body.mm-modal-open .mm-app-chrome,
+body.mm-modal-open .mm-app-subchrome {
+  z-index: 1 !important;
+}
+
+body.mm-modal-open .mm-app-chrome {
+  position: relative;
+  top: auto;
+}
+
+body.mm-modal-open .mm-app-subchrome {
+  position: relative;
+  top: auto;
+}
+
 /* Cards abaixo da dobra — menos custo de layout inicial */
 .mm-card-lazy {
   content-visibility: auto;

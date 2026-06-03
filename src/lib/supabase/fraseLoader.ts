@@ -99,13 +99,9 @@ type TraducaoRow = {
   locale: string;
 };
 
-/** Mesmo algoritmo de persistentStore — invalida cache se o original mudar. */
-export function hashPhraseSourceText(text: string): string {
-  let h = 0;
-  const s = text.trim();
-  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
-  return Math.abs(h).toString(36);
-}
+import { hashPhraseSourceText } from '../../../lib/translation/sourceHash';
+
+export { hashPhraseSourceText };
 
 function mergeSemantica(row: FraseRow): FraseSemantica | undefined {
   const raw = (row.semantica ?? {}) as FraseSemantica;

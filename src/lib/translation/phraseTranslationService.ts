@@ -30,6 +30,48 @@ function resolveSourceLang(text: string): CardLang {
   return SOURCE_CONTENT_LOCALE;
 }
 
+function isLikelyFraseId(value: string, slug: string): boolean {
+  const v = value.trim();
+  if (!v || v === slug) return false;
+  return v.length >= 8 || /^f_/i.test(v);
+}
+
+async function fetchGlobalPhraseTranslation(input: {
+  fraseId: string;
+  slug: string;
+  sourceText: string;
+  targetLocale: SeoLocale;
+  force?: boolean;
+}): Promise<{ text: string; fromCache: boolean; localeOrigem: SeoLocale }> {
+  const res = await fetch('/api/phrase-translation', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      frase_id: input.fraseId,
+      locale: input.targetLocale,
+      source_text: input.sourceText,
+      force: input.force === true,
+    }),
+  });
+
+  const payload = (await res.json().catch(() => ({}))) as {
+    text?: string;
+    from_cache?: boolean;
+    locale_origem?: string;
+    error?: string;
+  };
+
+  if (!res.ok) {
+    throw new Error(payload.error || `HTTP ${res.status}`);
+  }
+
+  const text = payload.text?.trim();
+  if (!text) throw new Error('Tradução vazia');
+
+  const localeOrigem = (payload.locale_origem as SeoLocale) || resolveSourceLang(input.sourceText);
+  return { text, fromCache: payload.from_cache === true, localeOrigem };
+}
+
 export type PhraseTranslationResult = {
   text: string;
   locale: SeoLocale;
@@ -53,6 +95,7 @@ export async function getOrCreatePhraseTranslation(
 ): Promise<PhraseTranslationResult> {
   const trimmed = sourceText.trim();
   const phraseId = options?.contentId ?? slug;
+  const fraseId = isLikelyFraseId(phraseId, slug) ? phraseId : undefined;
 
   if (!trimmed) {
     return {
@@ -75,7 +118,7 @@ export async function getOrCreatePhraseTranslation(
   }
 
   if (!options?.force) {
-    const hit = await getPersistedPhraseTranslation(slug, targetLocale, trimmed);
+    const hit = await getPersistedPhraseTranslation(slug, targetLocale, trimmed, fraseId);
     if (hit?.text) {
       trackTranslationEvent('translation_success', {
         phrase_id: phraseId,
@@ -121,31 +164,49 @@ export async function getOrCreatePhraseTranslation(
   });
 
   try {
-    const { translateCardText } = await import('./translationEngine');
-    const cardTarget = seoToCard(targetLocale);
-    const sourceLang = resolveSourceLang(trimmed);
-    const translated = await translateCardText(trimmed, cardTarget, sourceLang, {
-      contentId: phraseId,
-      force: options?.force,
-      skipCache: options?.force,
-    });
+    let translated: string;
+    let sourceLang: SeoLocale;
+    let fromCache = false;
 
-    clearTranslationApiCooldown();
-    await persistPhraseTranslation(slug, targetLocale, trimmed, translated, sourceLang);
+    if (fraseId) {
+      const global = await fetchGlobalPhraseTranslation({
+        fraseId,
+        slug,
+        sourceText: trimmed,
+        targetLocale,
+        force: options?.force,
+      });
+      translated = global.text;
+      sourceLang = global.localeOrigem;
+      fromCache = global.fromCache;
+      clearTranslationApiCooldown();
+    } else {
+      const { translateCardText } = await import('./translationEngine');
+      const cardTarget = seoToCard(targetLocale);
+      sourceLang = resolveSourceLang(trimmed);
+      translated = await translateCardText(trimmed, cardTarget, sourceLang, {
+        contentId: phraseId,
+        force: options?.force,
+        skipCache: options?.force,
+      });
+      clearTranslationApiCooldown();
+    }
+
+    await persistPhraseTranslation(slug, targetLocale, trimmed, translated, sourceLang, fraseId);
 
     trackTranslationEvent('translation_success', {
       phrase_id: phraseId,
       slug,
       locale: targetLocale,
-      mode: 'live',
+      mode: fromCache ? 'cached' : 'live',
     });
 
     return {
       text: translated,
       locale: targetLocale,
-      fromCache: false,
+      fromCache,
       from: sourceLang,
-      mode: 'live',
+      mode: fromCache ? 'cached' : 'live',
     };
   } catch (err) {
     if (isQuotaOrAvailabilityError(err)) {

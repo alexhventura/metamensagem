@@ -220,7 +220,7 @@ export default function App() {
         />
 
         {/* HEADER FIXO */}
-        <header className="sticky top-0 z-[100] border-b select-none backdrop-blur-md mm-header-bar">
+        <header className="sticky top-0 mm-app-chrome border-b select-none backdrop-blur-md mm-header-bar">
           <div className="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
               <HeaderBrandLink />
 
@@ -248,7 +248,7 @@ export default function App() {
         </div>
 
         {/* SUBHEADER DE NAVEGA�!ÒO REFOR�!ADA */}
-        <div className="py-4 border-b sticky top-20 z-[90] backdrop-blur-md mm-subheader-bar border-purple-900/20">
+        <div className="py-4 border-b sticky top-20 mm-app-subchrome backdrop-blur-md mm-subheader-bar border-purple-900/20">
           <div className="max-w-5xl mx-auto px-4 flex justify-center gap-12 md:gap-20">
             <Link
               to="/frases"

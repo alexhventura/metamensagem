@@ -28,6 +28,10 @@ async function waitNextPaint(): Promise<void> {
   await new Promise<void>((r) => requestAnimationFrame(() => requestAnimationFrame(() => r())));
 }
 
+function getModalRoot(): HTMLElement {
+  return document.getElementById('mm-modal-root') ?? document.body;
+}
+
 export interface ImageGeneratorModalProps {
   open: boolean;
   onClose: () => void;
@@ -69,6 +73,14 @@ export default function ImageGeneratorModal({
     if (!open) return;
     void ensureImageExportFonts(quote.texto, quote.autor);
   }, [open, quote.texto, quote.autor]);
+
+  useEffect(() => {
+    if (!open) return;
+    document.body.classList.add('mm-modal-open');
+    return () => {
+      document.body.classList.remove('mm-modal-open');
+    };
+  }, [open]);
 
   useEffect(() => {
     if (!open) return;
@@ -225,7 +237,7 @@ export default function ImageGeneratorModal({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-[10000] flex items-end sm:items-center justify-center p-0 sm:p-4 md:p-6"
+        className="mm-modal-overlay flex items-end sm:items-center justify-center p-0 sm:p-4 md:p-6"
         role="dialog"
         aria-modal="true"
         aria-labelledby="image-gen-title"
@@ -241,7 +253,7 @@ export default function ImageGeneratorModal({
           initial={{ opacity: 0, y: 24, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 16, scale: 0.98 }}
-          className={`relative z-[10001] w-full max-w-5xl max-h-[100dvh] sm:max-h-[92vh] overflow-hidden rounded-t-[1.75rem] sm:rounded-[2rem] border shadow-2xl flex flex-col ${
+          className={`mm-modal-panel w-full max-w-5xl max-h-[100dvh] sm:max-h-[92vh] overflow-hidden rounded-t-[1.75rem] sm:rounded-[2rem] border shadow-2xl flex flex-col ${
             tema === 'light' ? 'bg-white border-zinc-200' : 'bg-[#0a0a0a] border-zinc-800'
           }`}
         >
@@ -377,6 +389,6 @@ export default function ImageGeneratorModal({
         </motion.div>
       </motion.div>
     </AnimatePresence>,
-    document.body
+    getModalRoot()
   );
 }

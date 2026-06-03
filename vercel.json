@@ -189,6 +189,15 @@
       ]
     },
     {
+      "source": "/api/phrase-translation",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=60, stale-while-revalidate=300"
+        }
+      ]
+    },
+    {
       "source": "/api/frase-detail",
       "headers": [
         {

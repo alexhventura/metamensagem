@@ -112,7 +112,12 @@ export function CardTranslateMenu({
           const { getPersistedPhraseTranslation } = await import(
             '../lib/translation/persistentStore'
           );
-          const hit = await getPersistedPhraseTranslation(slugKey, target, source.texto);
+          const hit = await getPersistedPhraseTranslation(
+            slugKey,
+            target,
+            source.texto,
+            contentId
+          );
           if (hit?.text) {
             onDisplayChange({
               ...source,
@@ -142,7 +147,14 @@ export function CardTranslateMenu({
           sourceLang,
         });
         if (contentId && translated.texto && translated.isTranslated) {
-          await persistPhraseTranslation(slugKey, target, source.texto, translated.texto);
+          await persistPhraseTranslation(
+            slugKey,
+            target,
+            source.texto,
+            translated.texto,
+            detection.lang,
+            contentId
+          );
         }
         onDisplayChange({ ...translated, translationContingency: false });
         setSuccessLang(target);

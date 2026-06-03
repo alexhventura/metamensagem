@@ -198,17 +198,6 @@ async function loadFraseFromLegacyShards(
   return null;
 }
 
-async function loadFraseFromFilesystem(slug: string): Promise<FraseDetailRecord | null> {
-  // Vercel: shards só via CDN (fetch). readFile puxaria ~1.2GB no bundle → FUNCTION_INVOCATION_FAILED.
-  if (process.env.VERCEL) return null;
-  try {
-    const { readFraseDetailFromShards } = await import('../lib/frases/detailLookupServer.js');
-    return await readFraseDetailFromShards(slug);
-  } catch {
-    return null;
-  }
-}
-
 /** Resolve detalhe da frase por slug (Supabase → shard único → fallback legado). */
 export async function resolveFraseDetailBySlug(
   slug: string,
@@ -233,9 +222,6 @@ export async function resolveFraseDetailBySlug(
       const fromShard = await loadFraseFromDetailShard(canonicalSlug, indexHit.shard, assetBase);
       if (fromShard) return fromShard;
     }
-
-    const fromFs = await loadFraseFromFilesystem(canonicalSlug);
-    if (fromFs) return fromFs;
 
     const fetchJson = async (path: string) =>
       fetchJsonWithTimeout(`${assetBase.replace(/\/$/, '')}${path}`);

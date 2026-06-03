@@ -5,7 +5,7 @@
 ```bash
 npm install
 supabase login
-supabase link --project-ref zkugnthamuwsrvikymii
+supabase link --project-ref hnrulfjomufpxkitvfqg
 ```
 
 Copie `.env.example` → `.env.local` e preencha `VITE_SUPABASE_*`.

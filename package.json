@@ -15,6 +15,7 @@
     "frases:id-index": "node build-scripts/build-frase-id-index.mjs",
     "supabase:config": "node setup-supabase/configurar.mjs",
     "supabase:migrate": "node setup-supabase/apply-migration.mjs",
+    "supabase:bootstrap": "node setup-supabase/bootstrap.mjs",
     "frases:import:supabase": "node scripts/importarShards.js",
     "frases:import:supabase:dry": "node scripts/importarShards.js --dry-run",
     "seo:indexnow": "node scripts/submit-indexnow.mjs",

@@ -3,27 +3,32 @@
  * Senha via terminal; nunca commitar .env.local.
  */
 
-import fs from 'fs';
 import path from 'path';
 import readline from 'readline';
 import { fileURLToPath } from 'url';
-import dotenv from 'dotenv';
 import pg from 'pg';
+import {
+  ENV_SCRIPTS_PATH,
+  ENV_VITE_PATH,
+  loadProjectEnv,
+  readEnvFile,
+  upsertEnvFile,
+} from './loadEnv.mjs';
 
 const { Client } = pg;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const ROOT = path.join(__dirname, '..', '..');
-export const ENV_LOCAL_PATH = path.join(ROOT, '.env.local');
+export const ENV_LOCAL_PATH = ENV_VITE_PATH;
 
-export const DEFAULT_DB_TEMPLATE =
-  'postgresql://postgres@db.zkugnthamuwsrvikymii.supabase.co:5432/postgres';
+loadProjectEnv();
 
-export const PROJECT_REF = 'zkugnthamuwsrvikymii';
+export const PROJECT_REF =
+  process.env.SUPABASE_PROJECT_REF?.trim() || 'hnrulfjomufpxkitvfqg';
+
+export const DEFAULT_DB_TEMPLATE = `postgresql://postgres@db.${PROJECT_REF}.supabase.co:5432/postgres`;
+
 export const SUPABASE_API_URL = `https://${PROJECT_REF}.supabase.co`;
-
-dotenv.config({ path: ENV_LOCAL_PATH });
-dotenv.config();
 
 export function buildDatabaseUrlWithPassword(baseUrl, plainPassword) {
   const encoded = encodeURIComponent(plainPassword);
@@ -108,24 +113,22 @@ export async function testPgConnection(connectionString) {
 }
 
 export function saveDatabaseUrlToEnvLocal(connectionString) {
-  let content = fs.existsSync(ENV_LOCAL_PATH) ? fs.readFileSync(ENV_LOCAL_PATH, 'utf8') : '';
-  const escaped = connectionString.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
-  const line = `DATABASE_URL="${escaped}"`;
+  upsertEnvFile(ENV_SCRIPTS_PATH, { DATABASE_URL: connectionString });
+}
 
-  if (/^DATABASE_URL=/m.test(content)) {
-    content = content.replace(/^DATABASE_URL=.*$/m, line);
-  } else {
-    content = content.trimEnd() + (content.endsWith('\n') || !content ? '' : '\n') + line + '\n';
-  }
-
-  fs.writeFileSync(ENV_LOCAL_PATH, content.endsWith('\n') ? content : `${content}\n`, 'utf8');
+/** Persiste POSTGRES_PASSWORD + DATABASE_URL derivada (opcional após supabase:config). */
+export function savePostgresPasswordToEnvLocal(plainPassword, connectionString) {
+  upsertEnvFile(ENV_SCRIPTS_PATH, {
+    POSTGRES_PASSWORD: plainPassword,
+    DATABASE_URL: connectionString,
+    SUPABASE_PROJECT_REF: PROJECT_REF,
+  });
 }
 
 function readEnvLocalValue(key) {
-  if (!fs.existsSync(ENV_LOCAL_PATH)) return '';
-  const m = fs.readFileSync(ENV_LOCAL_PATH, 'utf8').match(new RegExp(`^${key}=(.+)$`, 'm'));
-  if (!m) return '';
-  return m[1].replace(/^["']|["']$/g, '').trim();
+  const scripts = readEnvFile(ENV_SCRIPTS_PATH, key);
+  if (scripts) return scripts;
+  return readEnvFile(ENV_VITE_PATH, key);
 }
 
 export function auditFrontendEnv() {
@@ -176,11 +179,12 @@ export async function setupSupabaseFromPasswordPrompt() {
     process.exit(1);
   }
 
-  saveDatabaseUrlToEnvLocal(url);
+  savePostgresPasswordToEnvLocal(password, url);
   process.env.DATABASE_URL = url;
+  process.env.POSTGRES_PASSWORD = password;
 
   console.log(`\n✅ Conectado (${test.info?.usr} @ ${test.info?.db})`);
-  console.log('✅ DATABASE_URL salva em .env.local (senha codificada com encodeURIComponent)\n');
+  console.log('✅ DATABASE_URL salva em .env.scripts.local (senha codificada com encodeURIComponent)\n');
 
   const audit = auditFrontendEnv();
   console.log('── Próximos passos ──');
@@ -192,7 +196,7 @@ export async function setupSupabaseFromPasswordPrompt() {
     console.log('  • VITE_SUPABASE_* já configurado no .env.local');
   }
   if (!audit.importOk) {
-    console.log('  • Para importar frases (opcional): SUPABASE_SERVICE_ROLE_KEY no .env.local');
+    console.log('  • Para importar frases (opcional): SUPABASE_SERVICE_ROLE_KEY em .env.scripts.local');
   }
   console.log('  • Importar shards: npm run frases:import:supabase:dry');
   console.log('');
@@ -229,7 +233,7 @@ export async function resolveDatabaseUrl({ forcePrompt = false } = {}) {
   if (!forcePrompt && !databaseUrlNeedsPassword(url)) {
     const probe = await testPgConnection(url);
     if (probe.ok) {
-      console.log('🔐 DATABASE_URL válida (.env.local)');
+      console.log('🔐 DATABASE_URL válida (.env.scripts.local)');
       return url;
     }
     console.warn('⚠️ Conexão falhou — será solicitada a senha novamente.');

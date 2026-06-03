@@ -3,14 +3,11 @@
  * Mensagem detalhada só em dev — nunca na UI.
  */
 
-/** Chaves públicas permitidas (integração Vercel ↔ Supabase + Vite). */
+/** Chaves públicas permitidas no bundle (somente VITE_*). */
 const ALLOWED_PUBLIC_SUPABASE_KEYS = new Set([
-  'SUPABASE_URL',
-  'SUPABASE_ANON_KEY',
-  'SUPABASE_PUBLISHABLE_KEY',
-  'NEXT_PUBLIC_SUPABASE_URL',
-  'NEXT_PUBLIC_SUPABASE_ANON_KEY',
-  'NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY',
+  'VITE_SUPABASE_URL',
+  'VITE_SUPABASE_ANON_KEY',
+  'VITE_SUPABASE_PUBLISHABLE_KEY',
 ]);
 
 const EXPLICIT_DANGEROUS_KEYS = new Set([
@@ -49,10 +46,8 @@ function isNonEmptyEnvValue(value: unknown): boolean {
 function keyLooksDangerous(key: string): boolean {
   if (ALLOWED_PUBLIC_SUPABASE_KEYS.has(key)) return false;
   if (EXPLICIT_DANGEROUS_KEYS.has(key)) return true;
-  if (key.startsWith('SUPABASE_') && !ALLOWED_PUBLIC_SUPABASE_KEYS.has(key)) return true;
-  if (key.startsWith('NEXT_PUBLIC_') && /service|secret|postgres|password|database/i.test(key)) {
-    return true;
-  }
+  if (key.startsWith('SUPABASE_')) return true;
+  if (key.startsWith('NEXT_PUBLIC_')) return true;
   return DANGEROUS_KEY_PATTERNS.some((re) => re.test(key));
 }
 

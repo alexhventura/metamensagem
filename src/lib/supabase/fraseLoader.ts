@@ -3,11 +3,11 @@
  * Substitui API / shards no detalhe da frase.
  *
  * InfoSec (browser):
- * - Credenciais via getSupabase() → publicEnv (VITE_* ou SUPABASE_* da integração Vercel).
+ * - Credenciais via getSupabase() → publicEnv (somente VITE_SUPABASE_*).
  * - Nunca importar process.env nem DATABASE_URL / SERVICE_ROLE neste módulo.
  * - Queries com colunas explícitas (sem SELECT *) para reduzir egress.
  *
- * Variáveis (resolvidas em ../publicEnv.ts): VITE_*, NEXT_PUBLIC_*, SUPABASE_* (integração Vercel).
+ * Variáveis (resolvidas em ../publicEnv.ts): VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY.
  */
 
 import type { FraseSeoPack, FraseSemantica } from '../../../lib/enrichment/types';

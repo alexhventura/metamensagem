@@ -8,8 +8,8 @@ const analyze = process.env.ANALYZE === 'true';
 
 export default defineConfig(() => {
   return {
-    /** VITE_* manual + variáveis injetadas pela integração Vercel ↔ Supabase (sem POSTGRES_*). */
-    envPrefix: ['VITE_', 'SUPABASE_', 'NEXT_PUBLIC_'],
+    /** Somente VITE_* no bundle — secrets admin em .env.scripts.local (fora do Vite). */
+    envPrefix: ['VITE_'],
     plugins: [
       react(),
       tailwindcss(),
@@ -39,7 +39,6 @@ export default defineConfig(() => {
             if (id.includes('modern-screenshot') || id.includes('html2canvas') || id.includes('html-to-image'))
               return 'vendor-screenshot';
             if (id.includes('/translation/translationEngine')) return 'vendor-translate';
-            // react core + react-dom + router no mesmo chunk (evita React undefined em createContext)
             if (
               /node_modules\/react\//.test(id) ||
               /node_modules\/react-dom\//.test(id) ||

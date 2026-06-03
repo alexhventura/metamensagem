@@ -8,7 +8,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import pg from 'pg';
-import dotenv from 'dotenv';
 import {
   databaseUrlFromEnv,
   resolveDatabaseUrl,
@@ -23,8 +22,6 @@ const MIGRATION = path.join(
   'migrations',
   '20260603000000_initial_frases_schema.sql'
 );
-
-dotenv.config({ path: path.join(ROOT, '.env.local') });
 
 async function main() {
   if (!fs.existsSync(MIGRATION)) {

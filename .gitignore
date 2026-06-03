@@ -9,12 +9,14 @@ coverage/
 # --- InfoSec: variáveis de ambiente (nunca commitar credenciais) ---
 .env
 .env.local
+.env.scripts.local
 .env.production
 .env.development
 .env.test
 .env.*
 *.env
 !.env.example
+!.env.scripts.example
 
 # Scripts locais/admin (import com DATABASE_URL — nunca versionar)
 /scripts/

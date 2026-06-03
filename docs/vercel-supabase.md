@@ -5,73 +5,60 @@
 ```text
 GitHub (push main) → Vercel Build → npm run build → deploy dist/
                               ↑
-         Integração Supabase injeta env vars (Production + Preview)
+         Environment Variables: somente VITE_SUPABASE_* (Production + Preview)
 ```
 
-Projeto Supabase: **zkugnthamuwsrvikymii**  
-URL API: `https://zkugnthamuwsrvikymii.supabase.co`
+Projeto Supabase: **hnrulfjomufpxkitvfqg**  
+URL API: `https://hnrulfjomufpxkitvfqg.supabase.co`
 
-## Integração Vercel ↔ Supabase
+## Vercel — variáveis obrigatórias
 
-1. [Vercel Dashboard](https://vercel.com) → projeto **metamensagem**
-2. **Integrations** → **Supabase** → projeto `zkugnthamuwsrvikymii`
-3. Ambientes: **Production** e **Preview**
+Defina **manualmente** (ou desative variáveis perigosas da integração):
 
-Variáveis típicas injetadas pela integração (o código aceita todas):
+| Variável | Valor |
+|----------|--------|
+| `VITE_SUPABASE_URL` | `https://hnrulfjomufpxkitvfqg.supabase.co` |
+| `VITE_SUPABASE_ANON_KEY` | chave **anon** ou **publishable** (Dashboard → API) |
 
-| Variável | Uso no MetaMensagem |
-|----------|---------------------|
-| `SUPABASE_URL` | URL do projeto (build + browser) |
-| `SUPABASE_ANON_KEY` ou `SUPABASE_PUBLISHABLE_KEY` | Chave pública RLS |
-| `NEXT_PUBLIC_SUPABASE_URL` | Mesmo (padrão Vercel/Next) |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Mesmo |
+**Remova** do deploy frontend (se a integração injetou):
 
-**Não** expor no frontend: `POSTGRES_*`, `SUPABASE_SERVICE_ROLE_KEY`, `DATABASE_URL`.
+- `NEXT_PUBLIC_*` (especialmente senha Postgres, service role, `DATABASE_URL`)
+- `SUPABASE_SERVICE_ROLE_KEY`, `POSTGRES_*`, `DATABASE_URL`
 
-Resolução no código: `src/lib/supabase/publicEnv.ts`  
-Validação no build: `build-scripts/check-vercel-supabase-env.mjs`
+O Vite **não** expõe `NEXT_PUBLIC_*` nem `SUPABASE_*` no bundle (`envPrefix: ['VITE_']`).
 
-## GitHub
-
-A integração Supabase na Vercel sincroniza secrets no deploy; **não** é necessário commitar `.env` no GitHub.
-
-Opcional: [Supabase GitHub Integration](https://supabase.com/dashboard) para branches de preview — independente do app Vite.
+Resolução no browser: `src/lib/supabase/publicEnv.ts`  
+Validação no build: `build-scripts/check-vercel-supabase-env.mjs` (exige `VITE_*`)
 
 ## Build na Vercel
 
 Log esperado:
 
 ```text
-[build] Supabase OK (production, origem: SUPABASE_* (integração Vercel))
+[build] Supabase OK (production, VITE_SUPABASE_*)
 ```
-
-Se o build falhar na checagem Supabase, reinstale a integração ou adicione manualmente `VITE_SUPABASE_URL` + `VITE_SUPABASE_ANON_KEY`.
 
 ## CSP (browser)
 
-`vercel.json` inclui `connect-src` para `https://zkugnthamuwsrvikymii.supabase.co` (REST) e `wss://` (Realtime).
+`vercel.json` inclui `connect-src` para `https://hnrulfjomufpxkitvfqg.supabase.co` (REST) e `wss://` (Realtime).
 
 ## Local
 
-```bash
-npm run supabase:config          # DATABASE_URL (import)
-vercel env pull .env.production.local --environment=production  # espelhar Vercel
-```
+| Arquivo | Conteúdo |
+|---------|----------|
+| `.env.local` | Só `VITE_SUPABASE_URL` + `VITE_SUPABASE_ANON_KEY` |
+| `.env.scripts.local` | `POSTGRES_PASSWORD`, `SUPABASE_SERVICE_ROLE_KEY`, etc. (copie de `.env.scripts.example`) |
 
-`.env.local`: `VITE_SUPABASE_*` para `npm run dev`.
+```bash
+npm run dev
+npm run supabase:config          # grava em .env.scripts.local
+npm run supabase:bootstrap
+```
 
 ## Checklist produção
 
-- [ ] Integração Supabase ativa na Vercel (Production + Preview)
+- [ ] Vercel: só `VITE_SUPABASE_URL` + `VITE_SUPABASE_ANON_KEY` (sem secrets admin)
 - [ ] Deploy com `[build] Supabase OK` nos logs
-- [ ] Migração SQL aplicada (`supabase db push` ou SQL Editor)
-- [ ] Dados em `public.frases` (`npm run frases:import:supabase` local)
-- [ ] Página `/frases/:slug` carrega frase (sem fallback API)
-- [ ] `DATABASE_URL` / service role **somente** local — nunca `VITE_*`
-
-## Cadastro manual (fallback)
-
-| Variável | Valor |
-|----------|--------|
-| `VITE_SUPABASE_URL` | `https://zkugnthamuwsrvikymii.supabase.co` |
-| `VITE_SUPABASE_ANON_KEY` | chave anon ou publishable (Dashboard → API) |
+- [ ] Migração SQL aplicada
+- [ ] Dados em `public.frases` (import já feito: 1838)
+- [ ] `/frases/:slug` carrega via Supabase

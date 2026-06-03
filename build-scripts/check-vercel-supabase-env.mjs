@@ -1,6 +1,5 @@
 /**
- * Valida variáveis Supabase no build (Vercel / produção).
- * Compatível com integração Vercel Marketplace + GitHub deploy.
+ * Valida Supabase no build — exige VITE_* (projeto Vite; sem NEXT_PUBLIC_/SUPABASE_*).
  */
 
 const isVercel = process.env.VERCEL === '1';
@@ -12,52 +11,24 @@ function pick(name) {
   return (process.env[name] || '').trim();
 }
 
-function pickUrl() {
-  return (
-    pick('VITE_SUPABASE_URL') ||
-    pick('NEXT_PUBLIC_SUPABASE_URL') ||
-    pick('SUPABASE_URL') ||
-    ''
-  );
-}
-
-function pickAnonKey() {
-  return (
-    pick('VITE_SUPABASE_ANON_KEY') ||
-    pick('VITE_SUPABASE_PUBLISHABLE_KEY') ||
-    pick('NEXT_PUBLIC_SUPABASE_ANON_KEY') ||
-    pick('NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY') ||
-    pick('SUPABASE_ANON_KEY') ||
-    pick('SUPABASE_PUBLISHABLE_KEY') ||
-    ''
-  );
-}
-
-const url = pickUrl();
-const anonKey = pickAnonKey();
-const source = pick('VITE_SUPABASE_URL')
-  ? 'VITE_*'
-  : pick('NEXT_PUBLIC_SUPABASE_URL')
-    ? 'NEXT_PUBLIC_* (integração Vercel)'
-    : pick('SUPABASE_URL')
-      ? 'SUPABASE_* (integração Vercel)'
-      : 'nenhuma';
+const url = pick('VITE_SUPABASE_URL');
+const anonKey = pick('VITE_SUPABASE_ANON_KEY') || pick('VITE_SUPABASE_PUBLISHABLE_KEY');
 
 if (url && anonKey) {
   if (isVercel) {
-    console.log(`[build] Supabase OK (${vercelEnv}, origem: ${source})`);
+    console.log(`[build] Supabase OK (${vercelEnv}, VITE_SUPABASE_*)`);
   }
   process.exit(0);
 }
 
 const msg =
-  '[build] Supabase: defina URL + chave pública (anon ou publishable). ' +
-  'Integração Vercel injeta SUPABASE_* ou NEXT_PUBLIC_SUPABASE_*; manual: VITE_SUPABASE_*';
+  '[build] Supabase: defina VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY (chave anon/publishable). ' +
+  'Na Vercel, remova variáveis NEXT_PUBLIC_* / POSTGRES_* / SERVICE_ROLE da integração — use só VITE_* no deploy.';
 
 if (isVercel && isProdBuild) {
   console.error(msg);
   console.error(
-    '[build] Vercel → Settings → Integrations → Supabase (projeto zkugnthamuwsrvikymii) em Production + Preview.'
+    '[build] Vercel → Settings → Environment Variables → projeto hnrulfjomufpxkitvfqg (Production + Preview).'
   );
   process.exit(1);
 }

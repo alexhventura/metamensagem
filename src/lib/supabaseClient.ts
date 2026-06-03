@@ -26,7 +26,7 @@ export function isSupabaseConfigured(): boolean {
 export function getSupabase(): SupabaseClient {
   if (!supabase) {
     throw new Error(
-      'Supabase não configurado. Defina VITE_SUPABASE_* (local) ou use a integração Vercel (SUPABASE_* / NEXT_PUBLIC_SUPABASE_*).'
+      'Supabase não configurado. Defina VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY (.env.local / Vercel).'
     );
   }
   return supabase;

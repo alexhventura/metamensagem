@@ -1,5 +1,5 @@
 import { ImageResponse } from '@vercel/og';
-import { computeImageLayout, formatFooterCategory, formatFooterMetaLine, truncateFooterLabel } from '../../src/components/image-generator/utils/textLayout';
+import { computeImageLayout, formatFooterCategory, formatFooterMetaLine, truncateFooterLabel } from './textLayout.js';
 import { requestUrl, type ApiRequest, type ApiResponse } from '../_http.js';
 
 function previewSerialForQuote(quoteId: string): string {

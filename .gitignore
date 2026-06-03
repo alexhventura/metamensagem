@@ -18,6 +18,8 @@ coverage/
 
 # Scripts locais com DATABASE_URL / service role (import admin — não versionar)
 /scripts/
+# Exceção: validação de env no build Vercel (sem credenciais)
+!/scripts/check-vercel-supabase-env.mjs
 
 # Artefatos sensíveis gerados por scripts
 scripts/.import-credentials.json

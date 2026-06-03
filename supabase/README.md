@@ -20,10 +20,14 @@ Copie `.env.example` → `.env.local` e preencha `VITE_SUPABASE_*`.
 
 | Variável | Onde | Uso |
 |----------|------|-----|
-| `VITE_SUPABASE_URL` | `.env.local` + Vercel | Client React (público) |
-| `VITE_SUPABASE_ANON_KEY` | `.env.local` + Vercel | Client React (público, RLS) |
+| `VITE_SUPABASE_URL` | `.env.local` + Vercel (manual) | Client React (público) |
+| `VITE_SUPABASE_ANON_KEY` | `.env.local` + Vercel (manual) | Client React (público, RLS) |
+| `SUPABASE_URL` | Vercel (integração Marketplace) | Mesmo que acima — fallback automático |
+| `SUPABASE_ANON_KEY` | Vercel (integração Marketplace) | Mesmo que acima — fallback automático |
 | `DATABASE_URL` | `.env.local` apenas | Scripts de import (sem `VITE_`) |
-| `SUPABASE_SERVICE_ROLE_KEY` | Vercel / CI apenas | Bypass RLS — nunca no frontend |
+| `SUPABASE_SERVICE_ROLE_KEY` | `.env.local` / CI — **não** no bundle | Bypass RLS — nunca no frontend |
+
+Guia completo Vercel: [docs/vercel-supabase.md](../docs/vercel-supabase.md)
 
 ## Client no app
 

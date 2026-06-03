@@ -8,6 +8,12 @@ This contains everything you need to run your app locally.
 
 View your app in AI Studio: https://ai.studio/apps/30e75f14-bbb0-4fda-8f6b-4566d121620c
 
+## Supabase + Vercel (produção)
+
+Deploy automático via GitHub → Vercel. Configure a [integração Supabase no Marketplace](https://vercel.com/integrations/supabase) ou variáveis `VITE_SUPABASE_*` no painel.
+
+Detalhes, checklist e `vercel env pull`: **[docs/vercel-supabase.md](docs/vercel-supabase.md)**.
+
 ## Run Locally
 
 **Prerequisites:**  Node.js

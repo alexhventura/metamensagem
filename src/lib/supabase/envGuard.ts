@@ -3,6 +3,9 @@
  * Mensagem detalhada só em dev — nunca na UI.
  */
 
+/** Chaves públicas injetadas pela integração Vercel ↔ Supabase (anon + URL). */
+const ALLOWED_PUBLIC_SUPABASE_KEYS = new Set(['SUPABASE_URL', 'SUPABASE_ANON_KEY']);
+
 const EXPLICIT_DANGEROUS_KEYS = new Set([
   'VITE_SERVICE_ROLE',
   'VITE_SERVICE_ROLE_KEY',
@@ -33,7 +36,9 @@ function isNonEmptyEnvValue(value: unknown): boolean {
 }
 
 function keyLooksDangerous(key: string): boolean {
+  if (ALLOWED_PUBLIC_SUPABASE_KEYS.has(key)) return false;
   if (EXPLICIT_DANGEROUS_KEYS.has(key)) return true;
+  if (key.startsWith('SUPABASE_') && !ALLOWED_PUBLIC_SUPABASE_KEYS.has(key)) return true;
   return DANGEROUS_KEY_PATTERNS.some((re) => re.test(key));
 }
 

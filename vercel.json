@@ -223,7 +223,7 @@
   "crons": [
     {
       "path": "/api/cron/process-translation-requests",
-      "schedule": "0 */6 * * *"
+      "schedule": "0 3 * * *"
     }
   ]
 }

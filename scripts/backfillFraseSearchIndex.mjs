@@ -46,23 +46,29 @@ async function assertTable(client, name) {
 
 async function upsertBatch(client, rows) {
   if (!rows.length) return;
-  const fraseIds = rows.map((r) => r.frase_id);
-  const languages = rows.map((r) => r.language);
-  const searchTexts = rows.map((r) => r.search_text);
-  const keywordsArr = rows.map((r) => r.keywords);
-
-  await client.query(
-    `
-    insert into public.frase_search_index (frase_id, language, search_text, keywords)
-    select * from unnest($1::text[], $2::text[], $3::text[], $4::text[][])
-    as t(frase_id, language, search_text, keywords)
-    on conflict (frase_id, language) do update set
-      search_text = excluded.search_text,
-      keywords = excluded.keywords,
-      updated_at = timezone('utc', now())
-    `,
-    [fraseIds, languages, searchTexts, keywordsArr]
-  );
+  const CHUNK = 200;
+  for (let i = 0; i < rows.length; i += CHUNK) {
+    const slice = rows.slice(i, i + CHUNK);
+    const values = [];
+    const params = [];
+    let p = 1;
+    for (const row of slice) {
+      values.push(`($${p}, $${p + 1}, $${p + 2}, $${p + 3}::text[])`);
+      params.push(row.frase_id, row.language, row.search_text, row.keywords);
+      p += 4;
+    }
+    await client.query(
+      `
+      insert into public.frase_search_index (frase_id, language, search_text, keywords)
+      values ${values.join(', ')}
+      on conflict (frase_id, language) do update set
+        search_text = excluded.search_text,
+        keywords = excluded.keywords,
+        updated_at = timezone('utc', now())
+      `,
+      params
+    );
+  }
 }
 
 async function loadTranslationsMap(client, fraseIds) {
@@ -295,7 +301,7 @@ async function main() {
   console.log(`   source=${SOURCE} batch=${batchSize} dry-run=${dryRun}`);
   if (limit) console.log(`   limit=${limit} offset=${offset}`);
 
-  const dbUrl = resolveDatabaseUrl();
+  const dbUrl = await resolveDatabaseUrl();
   if (!dbUrl) {
     console.error('❌ DATABASE_URL ausente (.env.local ou .env.scripts.local)');
     process.exit(1);

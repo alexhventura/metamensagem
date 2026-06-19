@@ -284,8 +284,10 @@ export default function ImageGeneratorModal({
   const previewBlock = (
     <div
       ref={previewRef}
-      className={`relative flex flex-col items-center justify-center px-3 py-2 sm:p-4 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.08),transparent_70%)] ${
-        isMobile ? 'mm-mobile-editor-preview' : 'flex-1 overflow-auto'
+      className={`relative flex flex-col items-center justify-center ${
+        isMobile
+          ? 'mm-mobile-editor-preview px-3 py-2 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.08),transparent_70%)]'
+          : 'mm-desktop-editor-preview'
       }`}
     >
       {isOnRecommendation && (
@@ -343,33 +345,23 @@ export default function ImageGeneratorModal({
 
   const desktopControls = (
     <aside
-      className={`lg:w-[42%] flex-1 min-h-0 p-4 sm:p-5 overflow-y-auto overscroll-contain border-t lg:border-t-0 lg:border-r space-y-5 ${
-        tema === 'light' ? 'border-zinc-100 bg-zinc-50/50' : 'border-zinc-900 bg-zinc-950/50'
+      className={`mm-desktop-editor-controls ${
+        tema === 'light' ? 'mm-desktop-editor-controls--light' : 'mm-desktop-editor-controls--dark'
       }`}
     >
-      <section>
-        <h3 className="text-[10px] font-black uppercase tracking-[0.35em] text-[#A855F7] mb-3">
-          Formato
-        </h3>
+      <section className="mm-desktop-editor-section">
+        <h3 className="mm-desktop-editor-label">Formato</h3>
         <ImageFormatSelector value={format} onChange={setFormat} tema={tema} />
       </section>
-      <section>
-        <h3 className="text-[10px] font-black uppercase tracking-[0.35em] text-[#A855F7] mb-1">
-          Coleção & skin
-        </h3>
-        <p
-          className={`text-[10px] mb-3 leading-snug ${
-            tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'
-          }`}
-        >
+      <section className="mm-desktop-editor-section">
+        <h3 className="mm-desktop-editor-label">Coleção & skin</h3>
+        <p className="mm-desktop-editor-hint">
           Escolha o estilo visual. O texto da frase é sempre exibido por completo.
         </p>
         <CollectionSelector value={collectionId} onChange={handleCollectionChange} tema={tema} />
       </section>
-      <section>
-        <h3 className="text-[10px] font-black uppercase tracking-[0.35em] text-[#A855F7] mb-3">
-          Variação
-        </h3>
+      <section className="mm-desktop-editor-section">
+        <h3 className="mm-desktop-editor-label">Variação</h3>
         <SkinSelector
           collectionId={collectionId}
           value={skinId}
@@ -408,7 +400,7 @@ export default function ImageGeneratorModal({
           exit={{ opacity: 0, y: 16, scale: 0.98 }}
           className={`mm-modal-panel w-full max-w-5xl max-h-[100dvh] sm:max-h-[92vh] overflow-hidden rounded-t-[1.75rem] sm:rounded-[2rem] border shadow-2xl flex flex-col ${
             tema === 'light' ? 'bg-white border-zinc-200' : 'bg-[#0a0a0a] border-zinc-800'
-          } ${isMobile ? 'mm-image-editor-mobile' : ''}`}
+          } ${isMobile ? 'mm-image-editor-mobile' : 'mm-image-editor-desktop'}`}
         >
           <header
             className={`flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b shrink-0 ${
@@ -455,21 +447,23 @@ export default function ImageGeneratorModal({
               />
             </div>
           ) : (
-            <div className="flex flex-col lg:flex-row flex-1 min-h-0 overflow-hidden">
-              <div className="order-1 lg:order-2 flex flex-col flex-1 min-h-0 lg:max-h-none max-h-[48vh]">
+            <div className="mm-image-editor-desktop-body">
+              {desktopControls}
+              <div className="mm-desktop-editor-preview-col">
                 {previewBlock}
-                <ShareActionBar
-                  tema={tema}
-                  quote={quote}
-                  busy={busy}
-                  supportsFileShare={supportsFileShare}
-                  onMobileShare={() => void handleMobileShare()}
-                  onDownloadPng={() => void runExport('image/png')}
-                  onDownloadJpg={() => void runExport('image/jpeg')}
-                  onCopy={() => void handleCopy()}
-                />
+                <div className="mm-desktop-editor-share">
+                  <ShareActionBar
+                    tema={tema}
+                    quote={quote}
+                    busy={busy}
+                    supportsFileShare={supportsFileShare}
+                    onMobileShare={() => void handleMobileShare()}
+                    onDownloadPng={() => void runExport('image/png')}
+                    onDownloadJpg={() => void runExport('image/jpeg')}
+                    onCopy={() => void handleCopy()}
+                  />
+                </div>
               </div>
-              <div className="order-2 lg:order-1 contents lg:block">{desktopControls}</div>
             </div>
           )}
         </motion.div>

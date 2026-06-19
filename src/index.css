@@ -316,3 +316,144 @@ html.mm-fonts-mono-ready {
   }
 }
 
+/* Editor desktop — layout 63% preview / 37% controles (≥1024px) */
+@media (min-width: 1024px) {
+  .mm-image-editor-desktop {
+    width: min(76rem, calc(100vw - 2.5rem));
+    max-width: min(76rem, calc(100vw - 2.5rem));
+    min-height: min(88vh, 52rem);
+    max-height: min(92vh, 54rem);
+  }
+
+  .mm-image-editor-desktop-body {
+    display: grid;
+    grid-template-columns: minmax(0, 37fr) minmax(0, 63fr);
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .mm-desktop-editor-controls {
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 1.125rem 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .mm-desktop-editor-controls--light {
+    background: linear-gradient(180deg, #fafafa 0%, #f4f4f5 100%);
+    border-right-color: rgba(0, 0, 0, 0.06);
+  }
+
+  .mm-desktop-editor-controls--dark {
+    background: linear-gradient(180deg, #0c0c0c 0%, #050505 100%);
+    border-right-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .mm-desktop-editor-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .mm-desktop-editor-label {
+    margin: 0;
+    font-size: 0.625rem;
+    font-weight: 900;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #a855f7;
+  }
+
+  .mm-desktop-editor-hint {
+    margin: 0 0 0.125rem;
+    font-size: 0.625rem;
+    line-height: 1.45;
+    color: #71717a;
+  }
+
+  .mm-desktop-editor-preview-col {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: radial-gradient(
+      ellipse 85% 70% at 50% 42%,
+      rgba(168, 85, 247, 0.1),
+      transparent 72%
+    );
+  }
+
+  .mm-desktop-editor-preview {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1.125rem 1.375rem;
+  }
+
+  .mm-desktop-editor-share {
+    flex-shrink: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(0, 0, 0, 0.18);
+  }
+
+  .mm-image-editor-desktop.mm-modal-panel.bg-white .mm-desktop-editor-share {
+    border-top-color: rgba(0, 0, 0, 0.06);
+    background: rgba(255, 255, 255, 0.72);
+  }
+
+  .mm-desktop-editor-share > div {
+    padding: 0.875rem 1.25rem !important;
+    gap: 0.625rem !important;
+  }
+
+  .mm-desktop-editor-share .flex.flex-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .mm-desktop-editor-share .flex.flex-wrap > button:last-child {
+    grid-column: span 1;
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 700px) {
+  .mm-image-editor-desktop {
+    min-height: min(90vh, 54rem);
+  }
+
+  .mm-desktop-editor-preview {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mm-image-editor-desktop {
+    width: min(80rem, calc(100vw - 3rem));
+    max-width: min(80rem, calc(100vw - 3rem));
+  }
+
+  .mm-desktop-editor-controls {
+    padding: 1.25rem 1.375rem 1.375rem;
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .mm-image-editor-desktop {
+    width: min(82rem, calc(100vw - 4rem));
+    max-width: min(82rem, calc(100vw - 4rem));
+  }
+}
+

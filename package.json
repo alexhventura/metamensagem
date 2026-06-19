@@ -79,6 +79,7 @@
     "test:page-translate-ux": "node scripts/test-page-translate-ux.mjs",
     "test:approval": "node scripts/test-approval-checklist.mjs",
     "test:e2e-critical": "playwright test e2e/critical.spec.ts",
+    "test:e2e-mobile": "playwright test e2e/mobile-translate.spec.ts --project=mobile-android --project=mobile-ios",
     "test:critical": "npm run test:header-home-nav && npm run test:export-download && npm run test:cta-wiring && npm run test:image-layout && npm run test:lighthouse-guards",
     "translations:weekly": "npm run translations:pull-demand && npm run translation-report && npm run build-translations && node scripts/merge-translation-queue.mjs data/translation-batch-built.json",
     "content:build": "npm run content:sync && node prepare-data.cjs",

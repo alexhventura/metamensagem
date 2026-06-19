@@ -16,7 +16,6 @@ export const PAGE_TRANSLATE_LANGUAGES: PageLanguageOption[] = [
   { code: 'fr', flag: '🇫🇷', native: 'Français', label: 'Français' },
   { code: 'de', flag: '🇩🇪', native: 'Deutsch', label: 'Deutsch' },
   { code: 'nl', flag: '🇳🇱', native: 'Nederlands', label: 'Nederlands' },
-  { code: 'pl', flag: '🇵🇱', native: 'Polski', label: 'Polski' },
   { code: 'ja', flag: '🇯🇵', native: '日本語', label: '日本語' },
   { code: 'zh', flag: '🇨🇳', native: '中文', label: '中文' },
 ];

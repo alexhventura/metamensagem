@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route, Link, useParams, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { isTranslatedViewActive } from './lib/translatedViewState';
 const Terms = lazy(() => import('./views/Terms'));
 const Privacy = lazy(() => import('./views/Privacy'));
 const Contact = lazy(() => import('./views/Contact'));
@@ -38,6 +39,7 @@ import { loadHomeBootstrap, ensureFullCatalogLoaded, type CatalogLoadResult } fr
 import { HOME_FRASE_POOL_SIZE, pathNeedsFullCatalog, sampleShuffled } from './lib/catalogLimits';
 import PageTranslateButton from './components/PageTranslateButton';
 import { usePageContentTranslate } from './hooks/usePageContentTranslate';
+import { useTranslatedLabels } from './hooks/useTranslatedLabels';
 import { sanitizeTextForTranslation } from './lib/textSanitize';
 
 const SocialHub = lazy(() => import('./components/SocialHub'));
@@ -382,72 +384,78 @@ function MudarMetaSEO({
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    const siteTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
-    const desc = description?.trim() || DEFAULT_DESCRIPTION;
-    const canon =
-      canonical ||
-      absoluteUrl(`${window.location.pathname}${window.location.search || ''}`);
-    const pageUrl = canon;
+    const apply = () => {
+      const siteTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+      const desc = description?.trim() || DEFAULT_DESCRIPTION;
+      const canon =
+        canonical ||
+        absoluteUrl(`${window.location.pathname}${window.location.search || ''}`);
+      const pageUrl = canon;
 
-    document.title = siteTitle;
+      document.title = siteTitle;
 
-    const updateMeta = (name: string, content: string, attr = 'name') => {
-      let meta = document.querySelector(`meta[${attr}="${name}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute(attr, name);
-        document.head.appendChild(meta);
+      const updateMeta = (name: string, content: string, attr = 'name') => {
+        let meta = document.querySelector(`meta[${attr}="${name}"]`);
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute(attr, name);
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
+      };
+
+      updateMeta('description', desc);
+      updateMeta('robots', isTranslatedViewActive() ? 'noindex, nofollow' : 'index, follow');
+
+      updateMeta('og:title', siteTitle, 'property');
+      updateMeta('og:description', desc, 'property');
+      updateMeta('og:type', ogType, 'property');
+      updateMeta('og:url', pageUrl, 'property');
+      updateMeta('og:image', OG_IMAGE, 'property');
+      updateMeta('og:site_name', SITE_NAME, 'property');
+      updateMeta(
+        'og:locale',
+        i18n.language === 'pt'
+          ? 'pt_BR'
+          : i18n.language === 'es'
+            ? 'es_ES'
+            : i18n.language === 'fr'
+              ? 'fr_FR'
+              : 'en_US',
+        'property'
+      );
+
+      updateMeta('twitter:card', 'summary_large_image');
+      updateMeta('twitter:title', siteTitle);
+      updateMeta('twitter:description', desc);
+      updateMeta('twitter:image', OG_IMAGE);
+
+      let link = document.querySelector('link[rel="canonical"]');
+      if (!link) {
+        link = document.createElement('link');
+        link.setAttribute('rel', 'canonical');
+        document.head.appendChild(link);
       }
-      meta.setAttribute('content', content);
+      link.setAttribute('href', canon);
+
+      document
+        .querySelectorAll('link[rel="alternate"][hreflang]')
+        .forEach((node) => node.remove());
+
+      const idScript = 'jsonld-dinamico';
+      let script = document.getElementById(idScript);
+      if (script) script.remove();
+      const payload = jsonLD ?? WEB_SITE_JSON_LD;
+      script = document.createElement('script');
+      script.id = idScript;
+      script.setAttribute('type', 'application/ld+json');
+      script.textContent = JSON.stringify(payload);
+      document.head.appendChild(script);
     };
 
-    updateMeta('description', desc);
-    updateMeta('robots', 'index, follow');
-
-    updateMeta('og:title', siteTitle, 'property');
-    updateMeta('og:description', desc, 'property');
-    updateMeta('og:type', ogType, 'property');
-    updateMeta('og:url', pageUrl, 'property');
-    updateMeta('og:image', OG_IMAGE, 'property');
-    updateMeta('og:site_name', SITE_NAME, 'property');
-    updateMeta(
-      'og:locale',
-      i18n.language === 'pt'
-        ? 'pt_BR'
-        : i18n.language === 'es'
-          ? 'es_ES'
-          : i18n.language === 'fr'
-            ? 'fr_FR'
-            : 'en_US',
-      'property'
-    );
-
-    updateMeta('twitter:card', 'summary_large_image');
-    updateMeta('twitter:title', siteTitle);
-    updateMeta('twitter:description', desc);
-    updateMeta('twitter:image', OG_IMAGE);
-
-    let link = document.querySelector('link[rel="canonical"]');
-    if (!link) {
-      link = document.createElement('link');
-      link.setAttribute('rel', 'canonical');
-      document.head.appendChild(link);
-    }
-    link.setAttribute('href', canon);
-
-    document
-      .querySelectorAll('link[rel="alternate"][hreflang]')
-      .forEach((node) => node.remove());
-
-    const idScript = 'jsonld-dinamico';
-    let script = document.getElementById(idScript);
-    if (script) script.remove();
-    const payload = jsonLD ?? WEB_SITE_JSON_LD;
-    script = document.createElement('script');
-    script.id = idScript;
-    script.setAttribute('type', 'application/ld+json');
-    script.textContent = JSON.stringify(payload);
-    document.head.appendChild(script);
+    apply();
+    window.addEventListener('mm-translated-view-change', apply);
+    return () => window.removeEventListener('mm-translated-view-change', apply);
   }, [title, description, jsonLD, canonical, ogType, i18n.language]);
 
   return null;
@@ -993,6 +1001,15 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
     };
   }, [id, banco]);
 
+  const navLabelPool = useMemo(
+    () =>
+      [navigation.prev?.titulo, navigation.next?.titulo].filter((x): x is string =>
+        Boolean(x)
+      ),
+    [navigation.prev?.titulo, navigation.next?.titulo]
+  );
+  const { labelFor: navLabelFor } = useTranslatedLabels(navLabelPool, `metafora-nav-${id ?? 'detail'}`);
+
   useEffect(() => {
     if (!id) return;
     let cancelado = false;
@@ -1180,7 +1197,9 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
               <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
                 {t('metaforas.prev', 'Anterior')}
               </span>
-              <span className="text-xs font-bold truncate block leading-tight">{navigation.prev.titulo}</span>
+              <span className="text-xs font-bold truncate block leading-tight">
+                {navLabelFor(navigation.prev.titulo)}
+              </span>
             </div>
           </Link>
         ) : <div className="flex-1 hidden sm:block" />}
@@ -1194,7 +1213,9 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
               <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
                 {t('metaforas.next', 'Próxima')}
               </span>
-              <span className="text-xs font-bold truncate block leading-tight">{navigation.next.titulo}</span>
+              <span className="text-xs font-bold truncate block leading-tight">
+                {navLabelFor(navigation.next.titulo)}
+              </span>
             </div>
             <ChevronRight size={16} className="text-purple-500 shrink-0" />
           </Link>

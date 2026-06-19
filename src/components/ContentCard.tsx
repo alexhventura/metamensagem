@@ -28,6 +28,7 @@ import type { ImageGeneratorQuote } from './image-generator/types';
 import { formatTagForDisplay } from '../lib/tagDisplay';
 import { sanitizeTextForTranslation } from '../lib/textSanitize';
 import { usePageContentTranslate } from '../hooks/usePageContentTranslate';
+import { useTranslatedLabels } from '../hooks/useTranslatedLabels';
 
 export default function ContentCard({
   item,
@@ -141,6 +142,8 @@ export default function ContentCard({
     [item.tags]
   );
 
+  const { labelFor: tagLabel } = useTranslatedLabels(displayTags, `card-tags-${item.id}`);
+
   const linkState = isFrase ? { item } : undefined;
 
   const shellClass = `p-[1px] rounded-[2.5rem] ${cardBorderGradient(accent)} h-full`;
@@ -241,7 +244,7 @@ export default function ContentCard({
                 to={pathFromTag(tag)}
                 className={`text-[10px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass(accent, tema)}`}
               >
-                #{tag}
+                #{tagLabel(tag)}
               </Link>
             ))}
           </div>

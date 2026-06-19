@@ -124,6 +124,7 @@ const resources = {
       "translate_page": {
         "button": "Traduzir página",
         "button_short": "Traduzir página",
+        "read_in_my_language": "Ler no Meu Idioma",
         "button_active": "Idioma: {{lang}}. Alterar tradução.",
         "modal_title": "Traduzir página",
         "modal_subtitle": "Escolha o idioma desejado.",
@@ -265,6 +266,7 @@ const resources = {
         "button": "Translate page",
         "read_in_pt": "Read in Portuguese",
         "button_short": "Translate page",
+        "read_in_my_language": "Read in My Language",
         "button_active": "Language: {{lang}}. Change translation.",
         "modal_title": "Translate page",
         "modal_subtitle": "Choose your language.",

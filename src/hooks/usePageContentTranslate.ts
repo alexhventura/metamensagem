@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import type { CardContentDisplay, CardContentSource } from '../lib/translation/types';
+import type { CardContentDisplay, CardContentSource, CardLang } from '../lib/translation/types';
 import { usePageTranslateOptional } from '../context/PageTranslateContext';
 
 /**
@@ -46,6 +46,27 @@ export function usePageContentTranslate(options: {
       setDisplay,
     });
   }, [ctx, options.id, ctx?.targetLang]);
+
+  const sourceReady = useRef(false);
+  useEffect(() => {
+    if (!ctx?.refreshContent || !ctx.targetLang) return;
+    if (!options.source.texto?.trim()) return;
+    if (!sourceReady.current) {
+      sourceReady.current = true;
+      return;
+    }
+    ctx.refreshContent(options.id);
+  }, [
+    ctx,
+    ctx?.targetLang,
+    ctx?.refreshContent,
+    options.id,
+    options.source.texto,
+    options.source.titulo,
+    options.source.resumo,
+    options.source.explicacao,
+    options.source.autor,
+  ]);
 
   return {
     display,

@@ -49,13 +49,19 @@ export default function PageTranslateButton({
 
   const isTranslating = ctx?.isTranslating ?? false;
   const activeLang = ctx?.targetLang ?? null;
+  const browserLang = ctx?.browserLang ?? null;
   const shortLabel = pageTranslateButtonShortLabel(activeLang);
   const ariaLabel = pageTranslateButtonAriaLabel(activeLang);
 
+  const showReadInMyLanguage =
+    !activeLang || activeLang === 'pt'
+      ? Boolean(browserLang && browserLang !== 'pt')
+      : false;
+
   const headerClass =
     tema === 'light'
-      ? 'hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-[11px] font-semibold tracking-tight border border-purple-200/80 bg-purple-50/80 text-purple-700 hover:bg-purple-100 transition-all'
-      : 'hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-[11px] font-semibold tracking-tight border border-purple-500/25 bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition-all';
+      ? 'inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-tight border border-purple-200/80 bg-purple-50/80 text-purple-700 hover:bg-purple-100 transition-all max-w-[11rem] sm:max-w-none'
+      : 'inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-tight border border-purple-500/25 bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition-all max-w-[11rem] sm:max-w-none';
 
   const baseClass =
     variant === 'header'
@@ -63,6 +69,14 @@ export default function PageTranslateButton({
       : variant === 'pill'
         ? `inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] ${translateBtnClass(tema, accent)}`
         : `${CARD_ACTION_BTN} ${buttonClassName ?? translateBtnClass(tema, accent)}`;
+
+  const labelText = isTranslating
+    ? t('translate_page.translating_short', 'Traduzindo…')
+    : variant === 'header'
+      ? showReadInMyLanguage
+        ? t('translate_page.read_in_my_language', 'Ler no Meu Idioma')
+        : t('translate_page.button_short', 'Traduzir página')
+      : shortLabel;
 
   return (
     <div className={`inline-flex flex-col items-end gap-1 ${className ?? ''}`}>
@@ -84,13 +98,10 @@ export default function PageTranslateButton({
         {variant === 'icon' ? (
           <Globe2 size={18} aria-hidden />
         ) : (
-          <span className="whitespace-nowrap">
-            {isTranslating
-              ? t('translate_page.translating_short', 'Traduzindo…')
-              : variant === 'header'
-                ? t('translate_page.button_short', 'Traduzir página')
-                : shortLabel}
-          </span>
+          <>
+            <Globe2 size={16} className="shrink-0" aria-hidden />
+            <span className="truncate">{labelText}</span>
+          </>
         )}
       </button>
     </div>

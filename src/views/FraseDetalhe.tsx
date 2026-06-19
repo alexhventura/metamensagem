@@ -13,6 +13,7 @@ import { Copy, Share2, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import CardTooltip from '../components/CardTooltip';
 import PageTranslateButton from '../components/PageTranslateButton';
+import { useTranslatedLabels } from '../hooks/useTranslatedLabels';
 
 import {
   CARD_ACTION_BTN,
@@ -531,6 +532,16 @@ export default function FraseDetalheView({
     8
   );
   const primaryTheme = normalizedThemes[0] ?? normalizedCategory;
+
+  const labelPool = useMemo(
+    () => [
+      ...normalizedThemes,
+      normalizedCategory,
+      ...relatedSlugs.map((r) => r.titulo),
+    ],
+    [normalizedThemes, normalizedCategory, relatedSlugs]
+  );
+  const { labelFor } = useTranslatedLabels(labelPool, `frase-labels-${frase?.slug ?? slug ?? 'detail'}`);
   const hasExtraInfo =
     !!originalLanguageName ||
     !!frase.explicacao ||
@@ -596,7 +607,7 @@ export default function FraseDetalheView({
         </Link>
         <span aria-hidden>&gt;</span>
         <Link to={pathFromTag(primaryTheme)} className="hover:text-[#A855F7]">
-          {primaryTheme}
+          {labelFor(primaryTheme)}
         </Link>
         <span aria-hidden>&gt;</span>
         <span className="max-w-[12rem] truncate">{authorLine}</span>
@@ -663,7 +674,7 @@ export default function FraseDetalheView({
                   to={pathFromTag(label)}
                   className={`text-[10px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass('purple', tema)}`}
                 >
-                  #{label}
+                  #{labelFor(label)}
                 </Link>
               ))}
             </div>
@@ -779,8 +790,8 @@ export default function FraseDetalheView({
                     : 'border-zinc-600/40 bg-zinc-800/35'
                 }`}
               >
-                <MetaRow label={t('frases.detail.main_theme')} value={primaryTheme} tema={tema} />
-                <MetaRow label={t('frases.detail.main_category')} value={normalizedCategory} tema={tema} />
+                <MetaRow label={t('frases.detail.main_theme')} value={labelFor(primaryTheme)} tema={tema} />
+                <MetaRow label={t('frases.detail.main_category')} value={labelFor(normalizedCategory)} tema={tema} />
                 <MetaRow label={t('frases.detail.original_language')} value={originalLanguageName} tema={tema} />
                 <MetaRow label={t('frases.detail.year')} value={frase.ano_ou_data} tema={tema} />
                 <MetaRow label={t('frases.detail.nationality')} value={frase.nacionalidade} tema={tema} />
@@ -826,7 +837,7 @@ export default function FraseDetalheView({
                     tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'
                   }`}
                 >
-                  {rel.titulo}
+                  {labelFor(rel.titulo)}
                 </Link>
               </li>
             ))}

@@ -54,16 +54,8 @@ function resolveFraseId(contentId: string | undefined, slug: string): string | u
   return undefined;
 }
 
-async function registerTranslationRequest(fraseId: string, locale: SeoLocale): Promise<void> {
-  try {
-    await fetch('/api/translation-request', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ frase_id: fraseId, locale }),
-    });
-  } catch {
-    /* offline */
-  }
+async function registerTranslationRequest(_fraseId: string, _locale: SeoLocale): Promise<void> {
+  /* CDN-only: /api/translation-request removido */
 }
 
 function logTranslationFailure(
@@ -90,56 +82,13 @@ async function fetchGlobalPhraseTranslation(input: {
   targetLocale: SeoLocale;
   force?: boolean;
 }): Promise<{ text: string; fromCache: boolean; localeOrigem: SeoLocale }> {
-  const res = await fetch('/api/phrase-translation', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      frase_id: input.fraseId,
-      locale: input.targetLocale,
-      source_text: input.sourceText,
-      force: input.force === true,
-    }),
+  const localeOrigem = resolveSourceLang(input.sourceText);
+  const { translateCardText } = await import('./translationEngine');
+  const text = await translateCardText(input.sourceText, localeOrigem, input.targetLocale, {
+    force: input.force,
   });
-
-  const payload = (await res.json().catch(() => ({}))) as {
-    text?: string;
-    from_cache?: boolean;
-    locale_origem?: string;
-    status?: string;
-    message?: string;
-    error?: string;
-  };
-
-  if (import.meta.env.DEV) {
-    console.info('[phraseTranslation] api', {
-      frase_id: input.fraseId,
-      slug: input.slug,
-      locale: input.targetLocale,
-      http_status: res.status,
-      status: payload.status,
-      from_cache: payload.from_cache,
-      provider: payload.from_cache ? 'supabase' : res.ok && payload.text ? 'mymemory' : undefined,
-    });
-  }
-
-  if (payload.status === 'pending') {
-    throw new TranslationPendingError(
-      payload.message ||
-        'Esta tradução foi solicitada e será processada automaticamente.',
-      input.targetLocale
-    );
-  }
-
-  if (!res.ok) {
-    logTranslationFailure('api_error', input, payload.error || res.status, res.status);
-    throw new Error(payload.error || `HTTP ${res.status}`);
-  }
-
-  const text = payload.text?.trim();
-  if (!text) throw new Error('Tradução vazia');
-
-  const localeOrigem = (payload.locale_origem as SeoLocale) || resolveSourceLang(input.sourceText);
-  return { text, fromCache: payload.from_cache === true, localeOrigem };
+  if (!text?.trim()) throw new Error('Tradução vazia');
+  return { text: text.trim(), fromCache: false, localeOrigem };
 }
 
 export type PhraseTranslationResult = {

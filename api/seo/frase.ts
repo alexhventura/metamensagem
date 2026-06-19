@@ -6,7 +6,7 @@
 const SITE_ORIGIN = 'https://metamensagem.com';
 import { requestUrl, sendText, type ApiRequest, type ApiResponse } from '../_http.js';
 import { getServerSupabase } from '../_supabaseServer.js';
-import { resolveFraseDetailBySlug } from '../fraseDetailService.js';
+import { resolveFraseDetailBySlug } from '../_fraseDetailService.js';
 
 const CACHE_HIT = 'public, max-age=86400, stale-while-revalidate=604800';
 const CACHE_MISS = 'public, max-age=300';

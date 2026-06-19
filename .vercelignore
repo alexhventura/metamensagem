@@ -5,3 +5,6 @@ scripts/
 *.md
 .git
 node_modules/.cache
+# Next.js legado — SPA Vite não usa; evita >12 serverless functions no Hobby
+src/app/
+next.config.ts

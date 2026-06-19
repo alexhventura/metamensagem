@@ -4,7 +4,6 @@ import { searchFrases, searchFrasesByText } from '../lib/frasesModel';
 import { itemConteudoFromSearchHit } from '../lib/itemFromSearchHit';
 import { recordSearchLatency } from '../lib/observability/performanceMetrics';
 import { recordSearchHitsForResults } from '../lib/analytics/fraseMetricsSync';
-import { isSupabaseConfigured } from '../lib/supabaseClient';
 import { resolveUiLocale } from '../lib/uiLocale';
 import type { ItemConteudo } from '../types/content';
 
@@ -20,7 +19,7 @@ type Options = {
 };
 
 /**
- * Busca textual no índice Supabase (debounce). Retorna null quando query vazia ou Supabase off.
+ * Busca textual no índice CDN (debounce). Retorna null quando query vazia.
  */
 export function useDebouncedSupabaseSearch(query: string, options: Options = {}) {
   const { debounceMs = 300, limit = 48, filters } = options;
@@ -32,12 +31,6 @@ export function useDebouncedSupabaseSearch(query: string, options: Options = {})
 
   useEffect(() => {
     if (!trimmed) {
-      setItems(null);
-      setLoading(false);
-      return;
-    }
-
-    if (!isSupabaseConfigured()) {
       setItems(null);
       setLoading(false);
       return;
@@ -78,6 +71,6 @@ export function useDebouncedSupabaseSearch(query: string, options: Options = {})
     items,
     loading,
     active: Boolean(trimmed),
-    enabled: isSupabaseConfigured(),
+    enabled: true,
   };
 }

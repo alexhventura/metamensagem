@@ -104,11 +104,17 @@ export default function TagCategoriaView({
   }, [banco, resolvedSlug, registry]);
 
   const itensDaTag = useMemo(() => {
-    if (supabaseOn && supabaseReady && supabaseItems.length > 0) {
+    if (supabaseReady && supabaseItems.length > 0) {
+      return supabaseItems;
+    }
+    if (supabaseReady && searchActive && searchHits !== null) {
+      return searchHits;
+    }
+    if (supabaseReady && !searchActive) {
       return supabaseItems;
     }
     return rankedItems.map((r) => r.item);
-  }, [supabaseOn, supabaseReady, supabaseItems, rankedItems]);
+  }, [supabaseReady, supabaseItems, searchActive, searchHits, rankedItems]);
 
   const matchStats = useMemo(() => {
     const stats = { primary: 0, related: 0, keyword: 0 };

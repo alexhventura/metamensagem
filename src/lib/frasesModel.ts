@@ -13,18 +13,11 @@ import { frasePath } from './i18nRoutes';
 import { fraseSlugForUrl } from './slug';
 import { loadFrasesCmsFallback } from './homeData';
 import {
-  loadFraseDetailFromSupabase,
-  loadFraseDetailFromSupabaseById,
-  type FraseDetailLoadResult,
-  type LoadFraseDetailOptions,
-} from './supabase/fraseLoader';
-import {
   getCachedFraseDetail,
   getCachedShard,
   persistFraseDetail,
   persistShard,
 } from './fraseDetailCache';
-import { isSupabaseConfigured } from './supabaseClient';
 import {
   recordCacheHit,
   recordFraseDetailLatency,
@@ -39,7 +32,20 @@ import {
   type FraseSearchOptions,
 } from './supabase/fraseSearchLoader';
 
-export type { FraseDetailLoadResult, LoadFraseDetailOptions };
+export type FraseDetailLoadResult = {
+  frase: FraseCms;
+  display: {
+    texto: string;
+    autor: string;
+    explicacao?: string;
+    isTranslated: boolean;
+  };
+};
+
+export type LoadFraseDetailOptions = {
+  locale?: string;
+};
+
 export type { FraseSearchHit, FraseSearchOptions };
 
 export {
@@ -176,14 +182,9 @@ async function loadFromFeedSample(key: string): Promise<FraseCms | null> {
   }
 }
 
-function registerBundle(bundle: FraseDetailLoadResult): FraseCms {
-  registerFrase(bundle.frase);
-  return bundle.frase;
-}
-
 /**
- * Busca no índice leve (Supabase). Retorna só id, slug, titulo.
- * Detalhe: use loadFraseDetailBySlug(slug) — Supabase completo ou fallback shard invisível.
+ * Busca no índice leve (CDN). Retorna só id, slug, titulo.
+ * Detalhe: use loadFraseDetailBySlug(slug) — shards CDN + id-index.
  */
 export async function searchFrasesByText(
   query: string,
@@ -226,7 +227,7 @@ export function fraseListItemFromSearchHit(hit: FraseSearchHit) {
   };
 }
 
-/** Carrega frase + display (CDN-first; Supabase só como fallback). */
+/** Carrega frase + display (CDN-only). */
 export async function loadFraseDetailBySlug(
   slug: string,
   options?: LoadFraseDetailOptions
@@ -266,24 +267,12 @@ export async function loadFraseDetailBySlug(
     return finish('cdn', bundle);
   }
 
-  if (isSupabaseConfigured()) {
-    bundle = await loadFraseDetailFromSupabase(key, options);
-    if (bundle) {
-      registerFrase(bundle.frase);
-      void persistFraseDetail(bundle.frase.slug, bundle);
-      return finish('supabase', bundle);
-    }
-    if (import.meta.env.DEV) {
-      console.warn('[frasesModel] Supabase sem resultado para slug:', key);
-    }
-  }
-
   if (started) recordFraseDetailLatency(performance.now() - started, 'miss');
   else recordCacheHit('miss');
   return null;
 }
 
-/** Shards + /api/frase-detail — usado se Supabase falhar ou não tiver a frase. */
+/** Shards + /api/frase-detail — resolução de detalhe via CDN. */
 async function loadFraseDetailBySlugLegacy(slug: string): Promise<FraseDetailLoadResult | null> {
   const key = slug.toLowerCase().trim();
 
@@ -327,11 +316,6 @@ async function loadFraseDetailBySlugLegacy(slug: string): Promise<FraseDetailLoa
 export async function loadFraseDetailById(phraseId: string): Promise<FraseCms | null> {
   const id = phraseId.trim();
   if (!id) return null;
-
-  if (isSupabaseConfigured()) {
-    const bundle = await loadFraseDetailFromSupabaseById(id);
-    if (bundle) return registerBundle(bundle);
-  }
 
   try {
     const res = await fetch('/frases-v2/id-index.json');

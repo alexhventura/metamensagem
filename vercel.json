@@ -41,6 +41,39 @@
       "destination": "/api/og/frase?id=:id"
     },
     {
+      "source": "/frases/:slug",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i)(bot|crawl|spider|slurp|mediapartners|facebookexternalhit|whatsapp|twitterbot|linkedinbot|pinterest|slackbot|telegrambot|discordbot|embedly|vkshare|w3c_validator|bingpreview|google-inspectiontool)"
+        }
+      ],
+      "destination": "/api/seo/frase?slug=:slug"
+    },
+    {
+      "source": "/f/:id",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i)(bot|crawl|spider|slurp|mediapartners|facebookexternalhit|whatsapp|twitterbot|linkedinbot|pinterest|slackbot|telegrambot|discordbot|embedly|vkshare|w3c_validator|bingpreview|google-inspectiontool)"
+        }
+      ],
+      "destination": "/api/seo/frase?id=:id"
+    },
+    {
+      "source": "/:lang(en|es|fr|de|it|ja|hi)/frases/:slug",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i)(bot|crawl|spider|slurp|mediapartners|facebookexternalhit|whatsapp|twitterbot|linkedinbot|pinterest|slackbot|telegrambot|discordbot|embedly|vkshare|w3c_validator|bingpreview|google-inspectiontool)"
+        }
+      ],
+      "destination": "/api/seo/frase?slug=:slug"
+    },
+    {
       "source": "/((?!api/|imagem/|assets/|brand/|frases-v2/|seo-graph/|.*\\.[a-zA-Z0-9]+$).*)",
       "destination": "/index.html"
     }

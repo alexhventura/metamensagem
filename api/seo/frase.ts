@@ -2,7 +2,6 @@
  * GET /api/seo/frase?slug=... | ?id=...
  * HTML mínimo com title, description, OG e JSON-LD para crawlers (WhatsApp, Google, etc.).
  */
-export const config = { runtime: 'nodejs' };
 
 const SITE_ORIGIN = 'https://metamensagem.com';
 import { requestUrl, sendText, type ApiRequest, type ApiResponse } from '../_http.js';

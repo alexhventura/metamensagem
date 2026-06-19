@@ -1,7 +1,6 @@
 /**
  * GET /api/frase-detail?slug=... — detalhe da frase (Supabase + shard CDN).
  */
-export const config = { runtime: 'nodejs' };
 
 import { normalizeFraseDetailRecord } from './_fraseDetailLookup.js';
 import { requestUrl, sendJson, type ApiResponse } from './_http.js';

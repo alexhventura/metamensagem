@@ -44,7 +44,7 @@ export const CARD_ACTION_BTN =
 export function cardNeutralActionClass(tema: string): string {
   return tema === 'light'
     ? 'bg-zinc-100 text-zinc-500 hover:bg-zinc-200'
-    : 'bg-zinc-900/50 text-zinc-400 hover:bg-zinc-900 border border-white/5';
+    : 'bg-zinc-800/60 text-zinc-300 hover:bg-zinc-800 border border-[rgba(212,196,168,0.16)]';
 }
 
 /** Texto da frase em listagens — destaque tipo headline. */

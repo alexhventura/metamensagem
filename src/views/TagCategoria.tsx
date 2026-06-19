@@ -220,7 +220,7 @@ export default function TagCategoriaView({
 
         <div className="relative max-w-2xl mx-auto">
           <Search
-            className="absolute left-6 top-1/2 -translate-y-1/2 text-zinc-500"
+            className={`absolute left-6 top-1/2 -translate-y-1/2 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}
             size={20}
           />
           <input
@@ -259,7 +259,7 @@ export default function TagCategoriaView({
         >
           <p
             className={`text-center text-[10px] font-black uppercase tracking-[0.35em] mb-4 ${
-              tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'
+              tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'
             }`}
           >
             Temas relacionados
@@ -285,7 +285,7 @@ export default function TagCategoriaView({
       {itensGrid.length === 0 ? (
         <div
           className={`text-center py-16 px-4 text-sm space-y-4 ${
-            tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'
+            tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'
           }`}
         >
           <p>

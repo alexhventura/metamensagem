@@ -40,8 +40,8 @@ function BackgroundThumb({
         </span>
       </span>
       <span
-        className={`text-[9px] font-bold text-center leading-tight max-w-[3.75rem] truncate ${
-          selected ? 'text-[#A855F7]' : 'text-zinc-500'
+        className={`text-[9px] font-bold text-center leading-tight max-w-[3.75rem] truncate mm-skin-label ${
+          selected ? 'text-[#A855F7] mm-skin-label--active' : ''
         }`}
       >
         {skin.name}

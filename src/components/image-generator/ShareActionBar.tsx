@@ -44,7 +44,7 @@ export default function ShareActionBar({
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
-  const border = tema === 'light' ? 'border-zinc-100' : 'border-zinc-900';
+  const border = tema === 'light' ? 'border-zinc-100' : 'border-zinc-700/80';
   const btnSecondary =
     tema === 'light'
       ? 'border-zinc-200 bg-white hover:border-[#A855F7] hover:text-[#A855F7]'
@@ -67,7 +67,7 @@ export default function ShareActionBar({
           Compartilhar
         </button>
       ) : (
-        <p className={`text-[10px] text-center font-medium ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'}`}>
+        <p className={`text-[10px] text-center font-medium ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
           Escolha uma rede ou baixe a imagem para compartilhar
         </p>
       )}

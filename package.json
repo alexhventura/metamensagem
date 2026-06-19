@@ -75,6 +75,7 @@
     "test:mobile-editor-ux": "node scripts/test-mobile-editor-ux.mjs",
     "test:desktop-editor-layout": "node build-scripts/test-desktop-editor-layout.mjs",
     "test:image-composition": "node build-scripts/test-image-composition.mjs",
+    "test:dark-mode": "node build-scripts/test-dark-mode-contrast.mjs",
     "test:approval": "node scripts/test-approval-checklist.mjs",
     "test:e2e-critical": "playwright test e2e/critical.spec.ts",
     "test:critical": "npm run test:header-home-nav && npm run test:export-download && npm run test:cta-wiring && npm run test:image-layout && npm run test:lighthouse-guards",

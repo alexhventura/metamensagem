@@ -41,14 +41,14 @@ function SkinSwatch({
         )}
       </span>
       <span
-        className={`text-[9px] font-bold text-center leading-tight max-w-[4.75rem] ${
-          selected ? 'text-[#A855F7]' : 'text-zinc-500'
+        className={`text-[9px] font-bold text-center leading-tight max-w-[4.75rem] mm-skin-label ${
+          selected ? 'text-[#A855F7] mm-skin-label--active' : ''
         }`}
       >
         {skin.name}
       </span>
       {skin.engagement && (
-        <span className="text-[7px] font-semibold text-zinc-500 -mt-1">
+        <span className="text-[7px] font-semibold mm-skin-engagement -mt-1">
           {ENGAGEMENT_LABEL[skin.engagement]}
         </span>
       )}

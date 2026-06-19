@@ -153,7 +153,7 @@ function MetaRow({
     >
       <dt
         className={`text-[10px] font-black uppercase tracking-widest mb-1 ${
-          tema === 'light' ? 'text-purple-600/80' : 'text-zinc-500'
+          tema === 'light' ? 'text-purple-600/80' : 'text-zinc-400'
         }`}
       >
         {label}
@@ -603,7 +603,7 @@ export default function FraseDetalheView({
       <nav
         aria-label="Breadcrumb"
         className={`mb-4 flex flex-wrap items-center gap-2 text-[10px] font-black uppercase tracking-[0.18em] ${
-          tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'
+          tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'
         }`}
       >
         <Link to="/" className="hover:text-[#A855F7]">
@@ -624,13 +624,13 @@ export default function FraseDetalheView({
       <article className={`p-[1px] rounded-[2.5rem] ${cardBorderGradient('purple')} shadow-xl`}>
         <div
           className={`rounded-[2.5rem] overflow-hidden ${
-            tema === 'light' ? 'bg-white' : 'bg-[#0a0a0a]'
+            tema === 'light' ? 'bg-white' : 'bg-[#141210]'
           }`}
         >
           <div className="p-8 md:p-10">
             <div className="flex items-center gap-2 mb-6">
               <span className={`w-1.5 h-1.5 rounded-full ${cardAccentDotClass('purple')}`} />
-              <span className="text-[10px] uppercase font-black tracking-widest text-zinc-500">
+              <span className={`text-[10px] uppercase font-black tracking-widest ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
                 frase
               </span>
             </div>
@@ -786,7 +786,7 @@ export default function FraseDetalheView({
                       />
                       <p
                         className={`text-xs pt-1 ${
-                          tema === 'light' ? 'text-zinc-500' : 'text-zinc-600'
+                          tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'
                         }`}
                       >
                         Analisando significado…
@@ -800,7 +800,7 @@ export default function FraseDetalheView({
                 className={`rounded-2xl border p-4 ${
                   tema === 'light'
                     ? 'border-purple-200/60 bg-white/60'
-                    : 'border-zinc-800/60 bg-zinc-900/30'
+                    : 'border-zinc-600/40 bg-zinc-800/35'
                 }`}
               >
                 <MetaRow label="Tema principal" value={primaryTheme} tema={tema} />
@@ -834,7 +834,7 @@ export default function FraseDetalheView({
         >
           <h2
             className={`text-[10px] font-black uppercase tracking-[0.35em] mb-4 ${
-              tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'
+              tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'
             }`}
           >
             {t('frases.related', 'Frases relacionadas')}

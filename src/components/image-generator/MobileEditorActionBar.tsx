@@ -19,14 +19,14 @@ export default function MobileEditorActionBar({
   const secondary =
     tema === 'light'
       ? 'text-zinc-600 bg-zinc-100 border-zinc-200'
-      : 'text-zinc-300 bg-zinc-900 border-zinc-800';
+      : 'text-zinc-300 bg-zinc-800/90 border-zinc-600';
 
   const downloading = busy === 'png' || busy === 'jpeg';
 
   return (
     <div
       className={`mm-editor-mobile-bar shrink-0 ${
-        tema === 'light' ? 'border-t border-zinc-100 bg-white/95' : 'border-t border-zinc-900 bg-[#0a0a0a]/95'
+        tema === 'light' ? 'border-t border-zinc-100 bg-white/95' : 'border-t border-zinc-700/80 bg-[#141210]/95'
       }`}
       role="toolbar"
       aria-label="Ações do editor"

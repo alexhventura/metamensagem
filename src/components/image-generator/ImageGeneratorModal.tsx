@@ -399,12 +399,12 @@ export default function ImageGeneratorModal({
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 16, scale: 0.98 }}
           className={`mm-modal-panel w-full max-w-5xl max-h-[100dvh] sm:max-h-[92vh] overflow-hidden rounded-t-[1.75rem] sm:rounded-[2rem] border shadow-2xl flex flex-col ${
-            tema === 'light' ? 'bg-white border-zinc-200' : 'bg-[#0a0a0a] border-zinc-800'
+            tema === 'light' ? 'bg-white border-zinc-200' : 'bg-[#141210] border-zinc-700'
           } ${isMobile ? 'mm-image-editor-mobile' : 'mm-image-editor-desktop'}`}
         >
           <header
             className={`flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b shrink-0 ${
-              tema === 'light' ? 'border-zinc-100' : 'border-zinc-900'
+              tema === 'light' ? 'border-zinc-100' : 'border-zinc-700/80'
             }`}
           >
             <div className="flex items-center gap-3 min-w-0">
@@ -415,7 +415,7 @@ export default function ImageGeneratorModal({
                 <h2 id="image-gen-title" className="text-lg font-black tracking-tight truncate">
                   Gerar imagem
                 </h2>
-                <p className={`text-xs truncate ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'}`}>
+                <p className={`text-xs truncate ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
                   {collection.emoji} {collection.name} · {skin.name} · {formatCfg.label}
                 </p>
               </div>
@@ -424,7 +424,7 @@ export default function ImageGeneratorModal({
               type="button"
               onClick={handleClose}
               className={`p-2.5 rounded-xl border transition-colors shrink-0 ${
-                tema === 'light' ? 'border-zinc-200 hover:bg-zinc-100' : 'border-zinc-800 hover:bg-zinc-900'
+                tema === 'light' ? 'border-zinc-200 hover:bg-zinc-100' : 'border-zinc-600 hover:bg-zinc-800/80'
               }`}
             >
               <X size={20} />

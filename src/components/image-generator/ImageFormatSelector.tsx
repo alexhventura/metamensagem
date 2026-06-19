@@ -31,7 +31,7 @@ export default function ImageFormatSelector({
             <span className={`block text-[11px] font-black uppercase tracking-wide ${active ? 'text-[#A855F7]' : ''}`}>
               {cfg.shortLabel}
             </span>
-            <span className={`block text-[10px] mt-0.5 truncate ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'}`}>
+            <span className={`block text-[10px] mt-0.5 truncate ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
               {cfg.label}
             </span>
           </button>

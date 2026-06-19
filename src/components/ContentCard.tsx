@@ -152,7 +152,7 @@ export default function ContentCard({
         className={`p-8 rounded-[2.5rem] flex flex-col justify-between transition-all group relative overflow-hidden h-full ${
           tema === 'light'
             ? 'bg-white shadow-[0_10px_30px_rgb(0,0,0,0.03)] hover:shadow-2xl'
-            : 'bg-[#0a0a0a] hover:bg-[#0d0d0d]'
+            : 'bg-[#141210] hover:bg-[#1a1816]'
         }`}
       >
         <div className="relative z-10 flex-1 flex flex-col">
@@ -247,7 +247,7 @@ export default function ContentCard({
             ))}
           </div>
 
-          <div className="flex items-center gap-3 mt-6 pt-6 border-t border-zinc-500/10">
+          <div className={`flex items-center gap-3 mt-6 pt-6 border-t ${tema === 'light' ? 'border-zinc-500/10' : 'border-zinc-600/35'}`}>
             <div className={`w-1.5 h-1.5 rounded-full ${cardAccentDotClass(accent)}`} />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 to-zinc-600 text-[10px] font-black tracking-widest uppercase truncate">
               {t('common.author')} {item.autor.toUpperCase()}

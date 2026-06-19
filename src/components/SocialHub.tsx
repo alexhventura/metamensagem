@@ -41,7 +41,7 @@ export default function SocialHub({ tema }: SocialHubProps) {
             aria-label={`Seguir no ${net.name}`}
             whileHover={{ y: -2 }}
             className={`transition-all duration-300 ${
-              tema === 'light' ? 'text-zinc-400' : 'text-zinc-600'
+              tema === 'light' ? 'text-zinc-400' : 'text-zinc-400'
             } ${net.color}`}
           >
             {net.icon}

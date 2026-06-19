@@ -176,7 +176,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           width={layout.logoPx}
           height={layout.logoPx}
           crossOrigin="anonymous"
-          className="opacity-[0.28]"
+          className="opacity-[0.32]"
           style={{
             width: layout.logoPx,
             height: layout.logoPx,

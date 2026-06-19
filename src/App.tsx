@@ -342,7 +342,7 @@ export default function App() {
         </main>
 
         {/* FOOTER */}
-        <footer className={`py-8 text-center text-xs border-t mt-auto ${tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-700' : 'bg-zinc-950 border-zinc-900 text-zinc-400'}`}>
+        <footer className={`py-8 text-center text-xs border-t mt-auto ${tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-700' : 'bg-zinc-950 border-zinc-700/70 text-zinc-300'}`}>
           <div className="flex justify-center flex-wrap gap-4 mb-3 font-semibold">
             <Link to="/sobre">{t('nav.about')}</Link>
             <Link to="/privacidade">{t('nav.privacy')}</Link>
@@ -564,7 +564,7 @@ function HomeView({
         </p>
 
         <div className="relative max-w-2xl mx-auto">
-          <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-zinc-500" size={20} />
+          <Search className={`absolute left-6 top-1/2 -translate-y-1/2 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`} size={20} />
           <input
             type="text"
             placeholder={t('home.search_placeholder')}
@@ -781,7 +781,7 @@ function FrasesView({
           buscaAtiva={!!busca.trim()}
         />
         <div className="relative max-w-xl mx-auto">
-          <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />
+          <Search className={`absolute left-6 top-1/2 -translate-y-1/2 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`} size={18} />
           <input 
             type="text" 
             placeholder={t('frases.search_placeholder')}
@@ -801,7 +801,13 @@ function FrasesView({
               key={tag}
               type="button"
               onClick={() => setBusca(tag)}
-              className={`px-3 py-1 rounded-full text-[10px] font-bold border transition-colors ${busca === tag ? 'bg-purple-600 border-purple-600 text-white' : 'bg-zinc-500/5 text-zinc-500 border-zinc-500/10 hover:border-zinc-500/30'}`}
+              className={`px-3 py-1 rounded-full text-[10px] font-bold border transition-colors ${
+                busca === tag
+                  ? 'bg-purple-600 border-purple-600 text-white'
+                  : tema === 'light'
+                    ? 'bg-zinc-500/5 text-zinc-500 border-zinc-500/10 hover:border-zinc-500/30'
+                    : 'bg-zinc-800/50 text-zinc-400 border-zinc-600/35 hover:border-purple-500/40'
+              }`}
             >
               #{tag}
             </button>
@@ -905,7 +911,7 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
           buscaAtiva={!!busca.trim()}
         />
         <div className="relative max-w-xl mx-auto">
-          <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />
+          <Search className={`absolute left-6 top-1/2 -translate-y-1/2 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`} size={18} />
           <input 
             type="text" 
             placeholder={t('metaforas.search_placeholder')}
@@ -921,7 +927,7 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
         </div>
         <div className="flex flex-wrap justify-center gap-2 mt-4">
           {tags.map(tag => (
-            <button key={tag} onClick={() => setBusca(tag)} className={`px-3 py-1 rounded-full text-[10px] font-bold border transition-all ${busca === tag ? 'bg-purple-600 border-purple-600 text-white' : 'bg-zinc-500/5 text-zinc-500 border-zinc-500/10 hover:border-zinc-500/30'}`}>#{tag}</button>
+            <button key={tag} onClick={() => setBusca(tag)} className={`px-3 py-1 rounded-full text-[10px] font-bold border transition-all ${busca === tag ? 'bg-purple-600 border-purple-600 text-white' : tema === 'light' ? 'bg-zinc-500/5 text-zinc-500 border-zinc-500/10 hover:border-zinc-500/30' : 'bg-zinc-800/50 text-zinc-400 border-zinc-600/35 hover:border-purple-500/40'}`}>#{tag}</button>
           ))}
         </div>
       </div>
@@ -1076,7 +1082,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
               {display.titulo ?? item.titulo}
             </motion.h1>
           </AnimatePresence>
-          <div className="flex items-center gap-4 text-xs font-bold text-zinc-500">
+          <div className={`flex items-center gap-4 text-xs font-bold ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
             <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><BookOpen size={14} /> ~{tempoLeitura} MIN DE REFLEXÒO</span>
             <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><Quote size={14} /> SABEDORIA SECULAR</span>
           </div>
@@ -1105,7 +1111,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
         </AnimatePresence>
       </article>
 
-       <div className={`mt-16 py-10 border-t flex flex-col items-center ${tema === 'light' ? 'border-zinc-200' : 'border-zinc-900'}`}>
+       <div className={`mt-16 py-10 border-t flex flex-col items-center ${tema === 'light' ? 'border-zinc-200' : 'border-zinc-700/70'}`}>
         <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#A855F7] to-transparent mb-8"></div>
         <div className="flex items-center gap-2 mb-2">
           <div className="w-1.5 h-1.5 rounded-full bg-[#EC4899]"></div>
@@ -1156,11 +1162,11 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
         {navigation.prev ? (
           <Link 
             to={`/metafora/${navigation.prev.id}/${normalizarParaSlug(navigation.prev.titulo || '')}`}
-            className={`flex-1 flex items-center gap-3 p-5 rounded-3xl border transition-all ${tema === 'light' ? 'bg-white border-zinc-100 hover:bg-zinc-50' : 'bg-zinc-900/50 border-white/5 hover:bg-zinc-900'}`}
+            className={`flex-1 flex items-center gap-3 p-5 rounded-3xl border transition-all ${tema === 'light' ? 'bg-white border-zinc-100 hover:bg-zinc-50' : 'bg-zinc-800/40 border-zinc-600/30 hover:bg-zinc-800/70'}`}
           >
             <ChevronLeft size={16} className="text-purple-500 shrink-0" />
             <div className="text-left overflow-hidden">
-              <span className="text-[8px] font-black text-zinc-500 uppercase block mb-1">Anterior</span>
+              <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>Anterior</span>
               <span className="text-xs font-bold truncate block leading-tight">{navigation.prev.titulo}</span>
             </div>
           </Link>
@@ -1169,10 +1175,10 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
         {navigation.next ? (
           <Link 
             to={`/metafora/${navigation.next.id}/${normalizarParaSlug(navigation.next.titulo || '')}`}
-            className={`flex-1 flex items-center justify-end gap-3 p-5 rounded-3xl border transition-all ${tema === 'light' ? 'bg-white border-zinc-100 hover:bg-zinc-50' : 'bg-zinc-900/50 border-white/5 hover:bg-zinc-900'}`}
+            className={`flex-1 flex items-center justify-end gap-3 p-5 rounded-3xl border transition-all ${tema === 'light' ? 'bg-white border-zinc-100 hover:bg-zinc-50' : 'bg-zinc-800/40 border-zinc-600/30 hover:bg-zinc-800/70'}`}
           >
             <div className="text-right overflow-hidden">
-              <span className="text-[8px] font-black text-zinc-500 uppercase block mb-1">Próxima</span>
+              <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>Próxima</span>
               <span className="text-xs font-bold truncate block leading-tight">{navigation.next.titulo}</span>
             </div>
             <ChevronRight size={16} className="text-purple-500 shrink-0" />

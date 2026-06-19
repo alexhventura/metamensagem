@@ -75,7 +75,7 @@ assert(orphanLines.length <= 1, `linhas órfãs=${orphanLines.length}`);
 
 console.log('\n1c) Rodapé compacto');
 assert(formatFooterSignature('MMM-2026-00048392').includes('metamensagem.com • MTA-'), 'footer signature');
-assert(formatSerialCompact('MMM-2026-00048392') === 'MTA-48392', 'serial compact');
+assert(formatSerialCompact('MMM-2026-00048392') === 'MTA-2026-48392', 'serial compact');
 
 console.log('\n2) Amostras 50 / 150 / 300 / 500 chars × todos os formatos');
 for (const sample of SAMPLES) {

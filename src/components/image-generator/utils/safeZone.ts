@@ -22,7 +22,7 @@ export type LayoutZones = {
 };
 
 const SIDE_RATIO = 0.09;
-const LOGO_MAX_RATIO = 0.062;
+const LOGO_MAX_RATIO = 0.078;
 
 export type FooterFormatProfile = 'square' | 'portrait' | 'story' | 'horizontal' | 'default';
 
@@ -30,11 +30,11 @@ const FORMAT_ZONE_BASE: Record<
   FooterFormatProfile,
   { header: number; footer: number; author: number; gap: number; logoScale: number }
 > = {
-  square: { header: 0.072, footer: 0.062, author: 0.074, gap: 0.018, logoScale: 0.84 },
-  portrait: { header: 0.066, footer: 0.056, author: 0.068, gap: 0.015, logoScale: 0.8 },
-  story: { header: 0.054, footer: 0.05, author: 0.06, gap: 0.012, logoScale: 0.76 },
-  horizontal: { header: 0.072, footer: 0.062, author: 0.074, gap: 0.018, logoScale: 0.84 },
-  default: { header: 0.066, footer: 0.056, author: 0.068, gap: 0.015, logoScale: 0.8 },
+  square: { header: 0.064, footer: 0.052, author: 0.068, gap: 0.012, logoScale: 0.88 },
+  portrait: { header: 0.058, footer: 0.048, author: 0.062, gap: 0.01, logoScale: 0.86 },
+  story: { header: 0.048, footer: 0.044, author: 0.056, gap: 0.008, logoScale: 0.84 },
+  horizontal: { header: 0.064, footer: 0.052, author: 0.068, gap: 0.012, logoScale: 0.88 },
+  default: { header: 0.058, footer: 0.048, author: 0.062, gap: 0.01, logoScale: 0.86 },
 };
 
 const DENSITY_SHRINK: Record<
@@ -94,7 +94,7 @@ export function computeLayoutZones(
   const quoteZoneHeight = naturalQuoteHeight;
 
   const logoPx = Math.round(
-    Math.min(width * LOGO_MAX_RATIO, headerHeight * 0.5, 72) * base.logoScale * shrink.logoScale
+    Math.min(width * LOGO_MAX_RATIO, headerHeight * 0.62, 84) * base.logoScale * shrink.logoScale
   );
 
   return {

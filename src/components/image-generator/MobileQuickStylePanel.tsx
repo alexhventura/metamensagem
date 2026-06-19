@@ -11,7 +11,7 @@ function SectionLabel({ children, tema }: { children: ReactNode; tema: string })
   return (
     <h3
       className={`text-[10px] font-black uppercase tracking-[0.32em] mb-2 ${
-        tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'
+        tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'
       }`}
     >
       {children}

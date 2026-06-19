@@ -15,7 +15,7 @@ export default function CollectionSelector({
         <div key={group.title}>
           <p
             className={`text-[9px] font-black uppercase tracking-[0.28em] mb-2 ${
-              tema === 'light' ? 'text-zinc-400' : 'text-zinc-500'
+              tema === 'light' ? 'text-zinc-400' : 'text-zinc-400'
             }`}
           >
             {group.title}

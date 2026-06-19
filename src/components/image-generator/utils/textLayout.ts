@@ -426,7 +426,7 @@ function buildPlan(
     authorPx: opts.authorPx,
     logoPx: zones.logoPx,
     padX: zones.padX,
-    padTop: Math.round(zones.headerHeight * (zones.density === 'extreme' ? 0.22 : 0.28)),
+    padTop: Math.round(zones.headerHeight * (zones.density === 'extreme' ? 0.16 : 0.2)),
     padBottom: computeFooterPadBottom(zones),
     footerPx: opts.footerPx,
     footerSerialPx: opts.footerSerialPx,
@@ -576,16 +576,19 @@ export function formatFooterCategory(raw?: string | null): string {
   return human.charAt(0).toUpperCase() + human.slice(1).toLowerCase().slice(0, 23);
 }
 
-/** Serial compacto para rodapé (ex.: MTA-48392). */
+/** Serial compacto para rodapé (ex.: MTA-2026-48392). */
 export function formatSerialCompact(serial: string): string {
   const parts = serial.split('-');
-  const seqRaw = parts.length >= 3 ? parts[parts.length - 1] : serial.replace(/\D/g, '');
-  const seq = parseInt(seqRaw, 10);
-  if (Number.isFinite(seq) && seq > 0) {
-    return `MTA-${seq % 100000}`;
+  if (parts.length >= 3 && parts[0] === 'MMM') {
+    const year = parts[1];
+    const seq = parseInt(parts[2], 10);
+    if (Number.isFinite(seq) && seq > 0) {
+      return `MTA-${year}-${String(seq % 100000).padStart(5, '0')}`;
+    }
   }
-  const digits = serial.replace(/\D/g, '').slice(-5) || '0';
-  return `MTA-${parseInt(digits, 10) || 0}`;
+  const digits = serial.replace(/\D/g, '');
+  const seq = parseInt(digits.slice(-5) || '0', 10);
+  return `MTA-${seq || 0}`;
 }
 
 /** Rodapé unificado: metamensagem.com • MTA-48392 */

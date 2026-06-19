@@ -51,7 +51,7 @@ async function resolveOgFrase(
 }
 
 export const config = {
-  runtime: 'nodejs',
+  runtime: 'edge',
 };
 
 export default async function handler(request: Request): Promise<Response> {

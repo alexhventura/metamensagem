@@ -254,9 +254,6 @@
   "outputDirectory": "dist",
   "installCommand": "npm ci",
   "functions": {
-    "api/og/frase.tsx": {
-      "runtime": "nodejs20.x"
-    },
     "api/frase-detail.ts": {
       "excludeFiles": "public/frases-v2/detail/**"
     },

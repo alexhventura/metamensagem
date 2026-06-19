@@ -1,5 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { observeAdSlot } from '../lib/adsenseLazy';
+import { adSlotHasContent, type AdSlotStatus } from '../lib/adSlotDetect';
 
 export type AdPlacement =
   | 'home-in-feed'
@@ -8,35 +9,81 @@ export type AdPlacement =
   | 'metafora-detail-footer'
   | 'tag-in-feed';
 
+const DETECT_INTERVAL_MS = 500;
+const DETECT_MAX_ATTEMPTS = 10;
+
 /**
- * Placeholder com dimensões fixas (CLS) + lazy AdSense via IntersectionObserver.
+ * Slot AdSense sem placeholder visual.
+ * Só ocupa espaço no layout quando um anúncio realmente carrega.
  */
-export default function AdSlot({ tema, placement }: { tema: string; placement: AdPlacement }) {
+export default function AdSlot({
+  tema,
+  placement,
+  onStatus,
+}: {
+  tema: string;
+  placement: AdPlacement;
+  onStatus?: (status: AdSlotStatus) => void;
+}) {
   const ref = useRef<HTMLElement>(null);
+  const [status, setStatus] = useState<AdSlotStatus>('detecting');
+
+  useEffect(() => {
+    onStatus?.(status);
+  }, [onStatus, status]);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    return observeAdSlot(el);
-  }, []);
+
+    let attempts = 0;
+    let cancelled = false;
+    const unobserve = observeAdSlot(el);
+
+    const finish = (next: AdSlotStatus) => {
+      if (cancelled) return;
+      setStatus(next);
+    };
+
+    const tick = () => {
+      if (cancelled || !ref.current) return;
+      attempts += 1;
+      if (adSlotHasContent(ref.current)) {
+        finish('visible');
+        return;
+      }
+      if (attempts >= DETECT_MAX_ATTEMPTS) {
+        finish('hidden');
+        return;
+      }
+      window.setTimeout(tick, DETECT_INTERVAL_MS);
+    };
+
+    window.setTimeout(tick, DETECT_INTERVAL_MS);
+
+    return () => {
+      cancelled = true;
+      unobserve();
+    };
+  }, [placement]);
+
+  if (status === 'hidden') return null;
+
+  const detecting = status === 'detecting';
 
   return (
     <aside
       ref={ref}
       data-mm-ad-zone="adsense-auto-ads"
       data-mm-ad-placement={placement}
-      aria-label="Área de publicidade"
-      className={`w-full min-h-[250px] py-10 px-6 rounded-[2.5rem] border-2 border-dashed flex flex-col items-center justify-center text-center transition-all ${
-        tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-400' : 'bg-zinc-950 border-zinc-900 text-zinc-700'
-      }`}
-      style={{ contain: 'layout' }}
-    >
-      <span className="text-[10px] font-mono tracking-[0.5em] uppercase mb-2 pointer-events-none select-none">
-        Espaço para Monetização
-      </span>
-      <p className="text-[9px] opacity-40 uppercase tracking-widest pointer-events-none select-none">
-        Publicidade Responsiva MM
-      </p>
-    </aside>
+      aria-label={detecting ? undefined : 'Publicidade'}
+      aria-hidden={detecting}
+      className={
+        detecting
+          ? 'absolute left-[-9999px] top-auto w-px h-px overflow-hidden opacity-0 pointer-events-none'
+          : `w-full py-4 ${tema === 'light' ? 'bg-transparent' : 'bg-transparent'}`
+      }
+      style={detecting ? undefined : { contain: 'layout' }}
+    />
   );
 }

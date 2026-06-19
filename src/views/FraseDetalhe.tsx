@@ -678,7 +678,7 @@ export default function FraseDetalheView({
                 <Link
                   key={label}
                   to={pathFromTag(label)}
-                  className={`text-[9px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass('purple')}`}
+                  className={`text-[10px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass('purple', tema)}`}
                 >
                   #{label}
                 </Link>

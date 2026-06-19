@@ -15,10 +15,15 @@ export function cardAccentDotClass(accent: CardAccent): string {
   return accent === 'pink' ? 'bg-[#EC4899]' : 'bg-[#A855F7]';
 }
 
-export function cardTagClass(accent: CardAccent): string {
+export function cardTagClass(accent: CardAccent, tema = 'dark'): string {
+  if (tema === 'light') {
+    return accent === 'pink'
+      ? 'bg-pink-100 text-pink-900 border-pink-300/70 hover:bg-pink-200/80'
+      : 'bg-purple-100 text-purple-900 border border-purple-300/70 hover:bg-purple-200/80';
+  }
   return accent === 'pink'
-    ? 'bg-pink-500/5 text-pink-400 border-pink-500/10 hover:bg-pink-500/15'
-    : 'bg-purple-500/5 text-purple-400 border border-purple-500/10 hover:bg-purple-500/15';
+    ? 'bg-pink-950/60 text-pink-50 border-pink-400/40 hover:bg-pink-500/20'
+    : 'bg-purple-950/60 text-purple-50 border border-purple-400/40 hover:bg-purple-500/20';
 }
 
 export function cardReadMoreBtnClass(tema: string, accent: CardAccent): string {

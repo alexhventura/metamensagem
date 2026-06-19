@@ -342,7 +342,7 @@ export default function App() {
         </main>
 
         {/* FOOTER */}
-        <footer className={`py-8 text-center text-xs border-t mt-auto ${tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-500' : 'bg-zinc-950 border-zinc-900 text-zinc-600'}`}>
+        <footer className={`py-8 text-center text-xs border-t mt-auto ${tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-700' : 'bg-zinc-950 border-zinc-900 text-zinc-400'}`}>
           <div className="flex justify-center flex-wrap gap-4 mb-3 font-semibold">
             <Link to="/sobre">{t('nav.about')}</Link>
             <Link to="/privacidade">{t('nav.privacy')}</Link>

@@ -20,7 +20,7 @@ import {
   downloadBlob,
   shareImageFile,
 } from './exportImage';
-import { ensureImageExportFonts, ensurePickerFontsLoaded } from './utils/imageFonts';
+import { ensureImageExportFonts, ensurePickerFontLoaded, ensurePickerFontsLoaded } from './utils/imageFonts';
 import { DEFAULT_IMAGE_FONT_ID, imageFontFamilyForChoice, type ImageFontId } from './fonts';
 import { DEFAULT_TEXT_COLOR, resolveTextColor, type TextColorChoice } from './colors';
 import { allocateImageSerial, previewSerialForQuote } from './utils/serialGenerator';
@@ -145,6 +145,11 @@ export default function ImageGeneratorModal({
   const handleBackgroundSelect = useCallback((colId: string, nextSkinId: string) => {
     setCollectionId(colId);
     setSkinId(nextSkinId);
+  }, []);
+
+  const handleFontChange = useCallback((nextFontId: ImageFontId) => {
+    setFontId(nextFontId);
+    void ensurePickerFontLoaded(nextFontId);
   }, []);
 
   const registerExport = useCallback(
@@ -322,7 +327,7 @@ export default function ImageGeneratorModal({
       textColor={textColor}
       onTextColorChange={setTextColor}
       fontId={fontId}
-      onFontChange={setFontId}
+      onFontChange={handleFontChange}
       fontSample={quote.texto}
       collectionId={collectionId}
       skinId={skinId}

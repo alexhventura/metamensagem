@@ -74,7 +74,9 @@ export default function ContentCard({
   const { ref: prefetchRef, onMouseEnter: prefetchOnEnter, onFocus: prefetchOnFocus } =
     usePrefetchFrase(prefetchSlug);
 
-  const buttonLabel = isFrase ? t('common.learn_more') : t('common.read_metaphor');
+  const buttonLabel = isFrase
+    ? t('common.learn_more_phrase', { author: item.autor })
+    : t('common.read_metaphor_title', { title: display.titulo ?? item.titulo ?? '' });
 
   const bodyText = isFrase ? display.texto : display.resumo || display.texto;
 
@@ -238,7 +240,7 @@ export default function ContentCard({
               <Link
                 key={tag}
                 to={pathFromTag(tag)}
-                className={`text-[9px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass(accent)}`}
+                className={`text-[10px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass(accent, tema)}`}
               >
                 #{tag}
               </Link>

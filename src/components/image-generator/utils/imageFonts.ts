@@ -1,6 +1,5 @@
 import {
   findImageFont,
-  IMAGE_FONT_OPTIONS,
   imageFontFamilyForChoice,
   type ImageFontId,
 } from '../fonts';
@@ -43,23 +42,33 @@ async function loadGoogleFontLink(linkId: string, families: string[]): Promise<v
   });
 }
 
-/** Pré-carrega fontes do seletor mobile (1 request). */
+/** Pré-carrega fontes do seletor mobile (somente a fonte ativa por padrão). */
 export async function ensurePickerFontsLoaded(fontId?: ImageFontId): Promise<void> {
-  const families = IMAGE_FONT_OPTIONS.map((f) => f.google);
-  await loadGoogleFontLink(PICKER_FONT_LINK_ID, families);
+  const active = fontId ? findImageFont(fontId) : findImageFont('inter');
+  await loadGoogleFontLink(PICKER_FONT_LINK_ID, [active.google]);
+
   if (document.fonts?.load) {
-    const loads = IMAGE_FONT_OPTIONS.flatMap((f) => [
-      document.fonts.load(`700 20px ${findImageFont(f.id).family.split(',')[0]}`),
-      document.fonts.load(`400 16px ${findImageFont(f.id).family.split(',')[0]}`),
+    const fam = active.family.split(',')[0];
+    await Promise.allSettled([
+      document.fonts.load(`700 20px ${fam}`),
+      document.fonts.load(`400 16px ${fam}`),
+      document.fonts.load(`700 24px ${fam}`),
     ]);
-    await Promise.allSettled(loads);
-    if (fontId) {
-      const fam = findImageFont(fontId).family.split(',')[0];
-      await Promise.allSettled([
-        document.fonts.load(`700 24px ${fam}`),
-        document.fonts.load(`400 16px ${fam}`),
-      ]);
-    }
+  }
+  await document.fonts?.ready;
+}
+
+/** Carrega uma fonte adicional ao selecionar no picker (lazy). */
+export async function ensurePickerFontLoaded(fontId: ImageFontId): Promise<void> {
+  const font = findImageFont(fontId);
+  await loadGoogleFontLink(`${PICKER_FONT_LINK_ID}-${fontId}`, [font.google]);
+  if (document.fonts?.load) {
+    const fam = font.family.split(',')[0];
+    await Promise.allSettled([
+      document.fonts.load(`700 20px ${fam}`),
+      document.fonts.load(`400 16px ${fam}`),
+      document.fonts.load(`700 24px ${fam}`),
+    ]);
   }
   await document.fonts?.ready;
 }

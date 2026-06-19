@@ -1023,12 +1023,20 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-20">
         <div className="w-10 h-10 border-2 border-purple-500 border-t-transparent rounded-full animate-spin mb-4"></div>
-        <p className="font-mono text-[10px] uppercase tracking-widest opacity-40">Extraindo Sabedoria do Fragmento...</p>
+        <p className="font-mono text-[10px] uppercase tracking-widest opacity-40">
+          {t('metaforas.loading', 'Extraindo Sabedoria do Fragmento...')}
+        </p>
       </div>
     );
   }
 
-  if (!item) return <div className="p-20 text-center text-red-500">Metáfora não localizada no fragmento de borda.</div>;
+  if (!item) {
+    return (
+      <div className="p-20 text-center text-red-500">
+        {t('metaforas.not_found', 'Metáfora não localizada no fragmento de borda.')}
+      </div>
+    );
+  }
 
   const palavras = item.texto ? item.texto.split(/\s+/).length : 0;
   const tempoLeitura = Math.ceil(palavras / 200);
@@ -1060,7 +1068,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       className="max-w-4xl w-full mx-auto px-4 py-12 flex-1"
     >
       <MudarMetaSEO
-        title={item.titulo || 'Metáfora terapêutica'}
+        title={item.titulo || t('metaforas.fallback_title', 'Metáfora terapêutica')}
         description={item.resumo || DEFAULT_DESCRIPTION}
         canonical={canonicalUrl}
         ogType="article"
@@ -1069,7 +1077,11 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       
       <div className={`mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b pb-10 ${tema === 'light' ? 'border-zinc-200' : 'border-zinc-800'}`}>
         <div className="flex-1">
-          <BackNavButton label="Metáfora Terapêutica" fallbackPath="/metaforas" className="text-[10px] uppercase font-black text-[#A855F7] tracking-[0.2em] mb-4 inline-flex items-center gap-2 hover:gap-3 transition-[gap] bg-transparent border-0 p-0 cursor-pointer" />
+          <BackNavButton
+            label={t('metaforas.therapeutic_title', 'Metáfora Terapêutica')}
+            fallbackPath="/metaforas"
+            className="text-[10px] uppercase font-black text-[#A855F7] tracking-[0.2em] mb-4 inline-flex items-center gap-2 hover:gap-3 transition-[gap] bg-transparent border-0 p-0 cursor-pointer"
+          />
           <AnimatePresence mode="wait">
             <motion.h1
               key={(display.titulo ?? item.titulo) + String(display.isTranslated)}
@@ -1083,8 +1095,12 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
             </motion.h1>
           </AnimatePresence>
           <div className={`flex items-center gap-4 text-xs font-bold ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
-            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><BookOpen size={14} /> ~{tempoLeitura} MIN DE REFLEXÒO</span>
-            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><Quote size={14} /> SABEDORIA SECULAR</span>
+            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}>
+              <BookOpen size={14} /> {t('metaforas.read_time', '~{{count}} MIN DE REFLEXÃO', { count: tempoLeitura })}
+            </span>
+            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}>
+              <Quote size={14} /> {t('metaforas.wisdom_badge', 'SABEDORIA SECULAR')}
+            </span>
           </div>
         </div>
         <div className={`flex gap-2 p-2 rounded-[1.5rem] border ${tema === 'light' ? 'bg-white border-zinc-100' : 'bg-zinc-900 border-white/5'}`}>
@@ -1161,7 +1177,9 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
           >
             <ChevronLeft size={16} className="text-purple-500 shrink-0" />
             <div className="text-left overflow-hidden">
-              <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>Anterior</span>
+              <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
+                {t('metaforas.prev', 'Anterior')}
+              </span>
               <span className="text-xs font-bold truncate block leading-tight">{navigation.prev.titulo}</span>
             </div>
           </Link>
@@ -1173,7 +1191,9 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
             className={`flex-1 flex items-center justify-end gap-3 p-5 rounded-3xl border transition-all ${tema === 'light' ? 'bg-white border-zinc-100 hover:bg-zinc-50' : 'bg-zinc-800/40 border-zinc-600/30 hover:bg-zinc-800/70'}`}
           >
             <div className="text-right overflow-hidden">
-              <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>Próxima</span>
+              <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
+                {t('metaforas.next', 'Próxima')}
+              </span>
               <span className="text-xs font-bold truncate block leading-tight">{navigation.next.titulo}</span>
             </div>
             <ChevronRight size={16} className="text-purple-500 shrink-0" />

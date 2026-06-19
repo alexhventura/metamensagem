@@ -1,6 +1,15 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import { de, hi, it, ja } from './i18n/extraLocales';
+import {
+  dePartial,
+  hiPartial,
+  itPartial,
+  jaPartial,
+  nlPartial,
+  plPartial,
+  zhPartial,
+} from './i18n/extraLocales';
+import { mergeWithEnglish } from './i18n/localeMerge';
 import { matchSupportedUiLocale, resolveUiLocale } from './lib/uiLocale';
 
 const resources = {
@@ -40,14 +49,42 @@ const resources = {
         "count_available": "{{count}} {{label}} disponíveis",
         "count_filtered": "{{visible}} de {{count}} {{label}} disponíveis",
         "volume_static": "mais de 450 mil",
-        "not_found": "Frase não encontrada."
+        "not_found": "Frase não encontrada.",
+        "related": "Frases relacionadas",
+        "load_failed": "Não foi possível carregar esta frase. Tente novamente em instantes.",
+        "label": "frase",
+        "explanation": "Explicação",
+        "analyzing": "Analisando significado…",
+        "original_language": "Idioma original: {{lang}}",
+        "detail": {
+          "main_theme": "Tema principal",
+          "main_category": "Categoria principal",
+          "original_language": "Idioma original",
+          "year": "Ano ou data",
+          "nationality": "Nacionalidade",
+          "birth_death": "Nascimento / falecimento",
+          "author_type": "Tipo de autor",
+          "sources": "Fontes",
+          "note": "Observação",
+          "keywords": "Palavras-chave",
+          "last_updated": "Última atualização",
+          "reliability": "Confiabilidade"
+        }
       },
       "metaforas": {
         "collection_title": "Arquivo de Metáforas",
         "page_title": "Índice de Metáforas Terapêuticas",
         "page_description": "Contos e narrativas profundas focadas em psicologia aplicada, insights inconscientes e reprogramação de atitudes.",
         "search_placeholder": "Encontrar metáfora...",
-        "volume_static": "mais de mil metáforas"
+        "volume_static": "mais de mil metáforas",
+        "therapeutic_title": "Metáfora Terapêutica",
+        "loading": "Extraindo Sabedoria do Fragmento...",
+        "not_found": "Metáfora não localizada no fragmento de borda.",
+        "read_time": "~{{count}} MIN DE REFLEXÃO",
+        "wisdom_badge": "SABEDORIA SECULAR",
+        "prev": "Anterior",
+        "next": "Próxima",
+        "fallback_title": "Metáfora terapêutica"
       },
       "banner": {
         "title": "Receba novas frases e metáforas todos os dias",
@@ -85,10 +122,10 @@ const resources = {
         "pending_body": "Seu pedido foi registrado e a tradução será preparada automaticamente. Volte em alguns minutos ou tente novamente mais tarde."
       },
       "translate_page": {
-        "button": "🌎 Traduzir página",
+        "button": "Traduzir página",
         "button_short": "Traduzir página",
         "button_active": "Idioma: {{lang}}. Alterar tradução.",
-        "modal_title": "🌎 Traduzir página",
+        "modal_title": "Traduzir página",
         "modal_subtitle": "Escolha o idioma desejado.",
         "modal_note": "A tradução será aplicada à página inteira.",
         "translating_page": "✓ Traduzindo página...",
@@ -153,14 +190,42 @@ const resources = {
         "count_available": "{{count}} {{label}} available",
         "count_filtered": "{{visible}} of {{count}} {{label}} available",
         "volume_static": "more than 450 thousand",
-        "not_found": "Quote not found."
+        "not_found": "Quote not found.",
+        "related": "Related quotes",
+        "load_failed": "Could not load this quote. Please try again shortly.",
+        "label": "quote",
+        "explanation": "Explanation",
+        "analyzing": "Analyzing meaning…",
+        "original_language": "Original language: {{lang}}",
+        "detail": {
+          "main_theme": "Main theme",
+          "main_category": "Main category",
+          "original_language": "Original language",
+          "year": "Year or date",
+          "nationality": "Nationality",
+          "birth_death": "Birth / death",
+          "author_type": "Author type",
+          "sources": "Sources",
+          "note": "Note",
+          "keywords": "Keywords",
+          "last_updated": "Last updated",
+          "reliability": "Reliability"
+        }
       },
       "metaforas": {
         "collection_title": "Metaphor Archive",
         "page_title": "Therapeutic Metaphors Index",
         "page_description": "Deep stories focused on applied psychology and attitude change.",
         "search_placeholder": "Find a metaphor...",
-        "volume_static": "more than a thousand metaphors"
+        "volume_static": "more than a thousand metaphors",
+        "therapeutic_title": "Therapeutic Metaphor",
+        "loading": "Extracting wisdom from fragment...",
+        "not_found": "Metaphor not found in edge fragment.",
+        "read_time": "~{{count}} MIN READ",
+        "wisdom_badge": "TIMELESS WISDOM",
+        "prev": "Previous",
+        "next": "Next",
+        "fallback_title": "Therapeutic metaphor"
       },
       "banner": {
         "title": "Receive new quotes and metaphors every day",
@@ -197,11 +262,11 @@ const resources = {
         "pending_body": "This quote has been added to the translation queue and will be available soon."
       },
       "translate_page": {
-        "button": "🌎 Translate page",
-        "read_in_pt": "🌎 Read in Portuguese",
+        "button": "Translate page",
+        "read_in_pt": "Read in Portuguese",
         "button_short": "Translate page",
         "button_active": "Language: {{lang}}. Change translation.",
-        "modal_title": "🌎 Translate page",
+        "modal_title": "Translate page",
         "modal_subtitle": "Choose your language.",
         "modal_note": "Translation applies to the entire page.",
         "translating_page": "✓ Translating page...",
@@ -278,9 +343,9 @@ const resources = {
         "contingency_short": "Solicitud registrada"
       },
       "translate_page": {
-        "button": "🌎 Traducir página",
-        "read_in_pt": "🌎 Leer en portugués",
-        "modal_title": "🌎 Traducir página",
+        "button": "Traducir página",
+        "read_in_pt": "Leer en portugués",
+        "modal_title": "Traducir página",
         "modal_subtitle": "Elige el idioma deseado.",
         "modal_note": "La traducción se aplicará a toda la página.",
         "translating_page": "✓ Traduciendo página...",
@@ -357,9 +422,9 @@ const resources = {
         "contingency_short": "Demande enregistrée"
       },
       "translate_page": {
-        "button": "🌎 Traduire la page",
-        "read_in_pt": "🌎 Lire en portugais",
-        "modal_title": "🌎 Traduire la page",
+        "button": "Traduire la page",
+        "read_in_pt": "Lire en portugais",
+        "modal_title": "Traduire la page",
         "modal_subtitle": "Choisissez la langue souhaitée.",
         "modal_note": "La traduction s'appliquera à toute la page.",
         "translating_page": "✓ Traduction de la page...",
@@ -380,11 +445,19 @@ const resources = {
       }
     }
   },
-  de,
-  it,
-  ja,
-  hi,
 };
+
+const enTranslation = resources.en.translation as Record<string, unknown>;
+
+Object.assign(resources, {
+  de: { translation: mergeWithEnglish(enTranslation, dePartial) },
+  it: { translation: mergeWithEnglish(enTranslation, itPartial) },
+  ja: { translation: mergeWithEnglish(enTranslation, jaPartial) },
+  hi: { translation: mergeWithEnglish(enTranslation, hiPartial) },
+  nl: { translation: mergeWithEnglish(enTranslation, nlPartial) },
+  pl: { translation: mergeWithEnglish(enTranslation, plPartial) },
+  zh: { translation: mergeWithEnglish(enTranslation, zhPartial) },
+});
 
 declare global {
   interface Window {
@@ -402,7 +475,7 @@ i18n.use(initReactI18next).init({
   resources,
   lng: initialUiLocale,
   fallbackLng: 'en',
-  supportedLngs: ['pt', 'en', 'es', 'fr', 'de', 'it', 'ja', 'hi'],
+  supportedLngs: ['pt', 'en', 'es', 'fr', 'de', 'it', 'ja', 'hi', 'nl', 'pl', 'zh'],
   nonExplicitSupportedLngs: true,
   load: 'languageOnly',
   interpolation: {

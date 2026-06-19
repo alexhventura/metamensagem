@@ -1,4 +1,5 @@
 import React from 'react';
+import { Globe2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { CARD_ACTION_BTN, type CardAccent } from '../lib/cardTheme';
 import { usePageTranslateOptional } from '../context/PageTranslateContext';
@@ -81,9 +82,7 @@ export default function PageTranslateButton({
         className={`mm-page-translate-trigger ${baseClass}`}
       >
         {variant === 'icon' ? (
-          <span className="text-base leading-none" aria-hidden>
-            🌎
-          </span>
+          <Globe2 size={18} aria-hidden />
         ) : (
           <span className="whitespace-nowrap">
             {isTranslating

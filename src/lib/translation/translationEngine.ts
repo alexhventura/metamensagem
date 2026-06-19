@@ -173,6 +173,7 @@ function matchesTargetLanguage(
   if (isMyMemoryQuotaOrError(translated)) return false;
 
   if (to === 'ja') return hasJapaneseScript(translated);
+  if (to === 'zh') return hasJapaneseScript(translated);
   if (to === 'hi') return hasDevanagariScript(translated);
   if (to === 'it') {
     return (

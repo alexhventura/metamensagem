@@ -134,7 +134,7 @@ export default function PageTranslateModal() {
                       tema === 'light' ? 'text-zinc-900' : 'text-zinc-50'
                     }`}
                   >
-                    {t('translate_page.modal_title', '🌎 Traduzir página')}
+                    {t('translate_page.modal_title', 'Traduzir página')}
                   </h2>
                 </div>
                 <p

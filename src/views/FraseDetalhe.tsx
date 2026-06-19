@@ -588,11 +588,11 @@ export default function FraseDetalheView({
         }`}
       >
         <Link to="/" className="hover:text-[#A855F7]">
-          Início
+          {t('nav.home')}
         </Link>
         <span aria-hidden>&gt;</span>
         <Link to="/frases" className="hover:text-[#A855F7]">
-          Frases
+          {t('nav.frases')}
         </Link>
         <span aria-hidden>&gt;</span>
         <Link to={pathFromTag(primaryTheme)} className="hover:text-[#A855F7]">
@@ -612,7 +612,7 @@ export default function FraseDetalheView({
             <div className="flex items-center gap-2 mb-6">
               <span className={`w-1.5 h-1.5 rounded-full ${cardAccentDotClass('purple')}`} />
               <span className={`text-[10px] uppercase font-black tracking-widest ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
-                frase
+              {t('frases.label', 'frase')}
               </span>
             </div>
 
@@ -651,7 +651,9 @@ export default function FraseDetalheView({
                   : 'bg-purple-500/10 text-purple-300 border border-purple-500/20'
               }`}
             >
-              Idioma original: {originalLanguageName}
+              {t('frases.original_language', 'Idioma original: {{lang}}', {
+                lang: originalLanguageName,
+              })}
             </p>
 
             <div className="flex flex-wrap gap-1.5 mb-8">
@@ -731,7 +733,7 @@ export default function FraseDetalheView({
                       tema === 'light' ? 'text-purple-700' : 'text-purple-400'
                     }`}
                   >
-                    Explicação
+                    {t('frases.explanation', 'Explicação')}
                   </h2>
                   {frase.explicacao ? (
                     <p
@@ -763,7 +765,7 @@ export default function FraseDetalheView({
                           tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'
                         }`}
                       >
-                        Analisando significado…
+                        {t('frases.analyzing', 'Analisando significado…')}
                       </p>
                     </div>
                   )}
@@ -777,23 +779,23 @@ export default function FraseDetalheView({
                     : 'border-zinc-600/40 bg-zinc-800/35'
                 }`}
               >
-                <MetaRow label="Tema principal" value={primaryTheme} tema={tema} />
-                <MetaRow label="Categoria principal" value={normalizedCategory} tema={tema} />
-                <MetaRow label="Idioma original" value={originalLanguageName} tema={tema} />
-                <MetaRow label="Ano ou data" value={frase.ano_ou_data} tema={tema} />
-                <MetaRow label="Nacionalidade" value={frase.nacionalidade} tema={tema} />
-                <MetaRow label="Nascimento / falecimento" value={frase.nascimento_falecimento} tema={tema} />
-                <MetaRow label="Tipo de autor" value={frase.autor_tipo} tema={tema} />
-                <MetaRow label="Fontes" value={frase.fontes} tema={tema} />
-                <MetaRow label="Observação" value={frase.observacao} tema={tema} />
+                <MetaRow label={t('frases.detail.main_theme')} value={primaryTheme} tema={tema} />
+                <MetaRow label={t('frases.detail.main_category')} value={normalizedCategory} tema={tema} />
+                <MetaRow label={t('frases.detail.original_language')} value={originalLanguageName} tema={tema} />
+                <MetaRow label={t('frases.detail.year')} value={frase.ano_ou_data} tema={tema} />
+                <MetaRow label={t('frases.detail.nationality')} value={frase.nacionalidade} tema={tema} />
+                <MetaRow label={t('frases.detail.birth_death')} value={frase.nascimento_falecimento} tema={tema} />
+                <MetaRow label={t('frases.detail.author_type')} value={frase.autor_tipo} tema={tema} />
+                <MetaRow label={t('frases.detail.sources')} value={frase.fontes} tema={tema} />
+                <MetaRow label={t('frases.detail.note')} value={frase.observacao} tema={tema} />
                 {frase.palavras_chave.length > 0 && (
-                  <MetaRow label="Palavras-chave" value={frase.palavras_chave.join(', ')} tema={tema} />
+                  <MetaRow label={t('frases.detail.keywords')} value={frase.palavras_chave.join(', ')} tema={tema} />
                 )}
                 {frase.informacoes?.ultima_atualizacao && (
-                  <MetaRow label="Última atualização" value={frase.informacoes.ultima_atualizacao} tema={tema} />
+                  <MetaRow label={t('frases.detail.last_updated')} value={frase.informacoes.ultima_atualizacao} tema={tema} />
                 )}
                 {frase.informacoes?.confiabilidade && (
-                  <MetaRow label="Confiabilidade" value={frase.informacoes.confiabilidade} tema={tema} />
+                  <MetaRow label={t('frases.detail.reliability')} value={frase.informacoes.confiabilidade} tema={tema} />
                 )}
               </dl>
             </div>

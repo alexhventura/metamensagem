@@ -8,9 +8,9 @@ export function shouldShowPageTranslate(): boolean {
 
 export function pageTranslateButtonShortLabel(activeTarget: CardLang | null): string {
   if (activeTarget) {
-    return `🌎 ${pageLanguageNativeName(activeTarget)}`;
+    return pageLanguageNativeName(activeTarget);
   }
-  return '🌎 Traduzir página';
+  return 'Traduzir página';
 }
 
 export function pageTranslateButtonAriaLabel(activeTarget: CardLang | null): string {

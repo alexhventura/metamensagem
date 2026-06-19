@@ -1,4 +1,4 @@
-import type { CollectionConfig } from '../types';
+import type { CollectionConfig, SkinConfig } from '../types';
 import { SEMANTIC_COLLECTIONS } from './semanticCollections';
 
 const LEGACY_COLLECTIONS: CollectionConfig[] = [
@@ -302,4 +302,14 @@ export function findSkin(collectionId: string, skinId: string) {
 
 export function findCollection(collectionId: string) {
   return COLLECTIONS.find((c) => c.id === collectionId) ?? COLLECTIONS[0];
+}
+
+export function listAllSkins(): { collectionId: string; collectionEmoji: string; skin: SkinConfig }[] {
+  return COLLECTIONS.flatMap((c) =>
+    c.skins.map((skin) => ({
+      collectionId: c.id,
+      collectionEmoji: c.emoji,
+      skin,
+    }))
+  );
 }

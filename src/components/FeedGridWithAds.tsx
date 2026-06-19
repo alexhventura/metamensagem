@@ -1,10 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import AdSlot from './AdSlot';
 import type { FeedRow } from '../lib/feedWithAds';
 import { FEED_INITIAL_VISIBLE } from '../lib/feedWithAds';
 import { GRID_CONTENT } from '../lib/contentGrid';
 import type { AdPlacement } from './AdSlot';
+import type { AdSlotStatus } from '../lib/adSlotDetect';
+
+function FeedAdRow({
+  id,
+  tema,
+  placement,
+  animated,
+}: {
+  id: string;
+  tema: string;
+  placement: AdPlacement;
+  animated?: boolean;
+}) {
+  const [status, setStatus] = useState<AdSlotStatus>('detecting');
+
+  if (status === 'hidden') return null;
+
+  const ad = <AdSlot tema={tema} placement={placement} onStatus={setStatus} />;
+
+  if (status === 'detecting') {
+    return <div className="col-span-full h-0 overflow-hidden">{ad}</div>;
+  }
+
+  if (animated) {
+    return (
+      <motion.div
+        key={id}
+        layout
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="col-span-full h-full"
+      >
+        {ad}
+      </motion.div>
+    );
+  }
+
+  return <div className="col-span-full">{ad}</div>;
+}
 
 export default function FeedGridWithAds<T extends { id: string }>({
   rows,
@@ -25,22 +64,14 @@ export default function FeedGridWithAds<T extends { id: string }>({
 
   const nodes = rows.map((itemObj) => {
     if (itemObj.tipoItem === 'anuncio') {
-      const ad = (
-        <div key={itemObj.id} className="col-span-full">
-          <AdSlot tema={tema} placement={placement} />
-        </div>
-      );
-      if (!animated) return ad;
       return (
-        <motion.div
+        <FeedAdRow
           key={itemObj.id}
-          layout
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="col-span-full h-full"
-        >
-          <AdSlot tema={tema} placement={placement} />
-        </motion.div>
+          id={itemObj.id}
+          tema={tema}
+          placement={placement}
+          animated={animated}
+        />
       );
     }
 

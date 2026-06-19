@@ -9,22 +9,34 @@ export function useImagePreviewScale(formatWidth: number, formatHeight: number, 
   useEffect(() => {
     if (!open) return;
 
+    let timer: number | undefined;
+
     const update = () => {
       const vw = window.innerWidth;
       const vh = window.innerHeight;
       const isDesktop = vw >= 1024;
-      const padX = isDesktop ? 80 : 32;
-      const maxW = isDesktop ? 440 : Math.max(240, vw - padX);
+      const padX = isDesktop ? 80 : 24;
+      const maxW = isDesktop ? 440 : Math.max(220, vw - padX);
+
+      const reservedVertical = isDesktop ? 160 : 220;
       const maxH = isDesktop
         ? Math.min(560, Math.round(vh * 0.52))
-        : Math.min(Math.round(vh * 0.4), 420);
+        : Math.max(180, Math.min(Math.round(vh * 0.34), vh - reservedVertical));
 
       setScale(Math.min(1, maxW / formatWidth, maxH / formatHeight));
     };
 
+    const debounced = () => {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(update, 100);
+    };
+
     update();
-    window.addEventListener('resize', update);
-    return () => window.removeEventListener('resize', update);
+    window.addEventListener('resize', debounced);
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener('resize', debounced);
+    };
   }, [open, formatWidth, formatHeight]);
 
   return scale;

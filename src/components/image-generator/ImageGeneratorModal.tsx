@@ -7,6 +7,8 @@ import ImageFormatSelector from './ImageFormatSelector';
 import CollectionSelector from './CollectionSelector';
 import SkinSelector from './SkinSelector';
 import ShareActionBar, { type ShareBusy } from './ShareActionBar';
+import MobileQuickStylePanel from './MobileQuickStylePanel';
+import MobileEditorActionBar from './MobileEditorActionBar';
 import { FORMATS, DEFAULT_FORMAT } from './formats';
 import { findCollection, findSkin } from './skins/data';
 import type { ImageFormat, ImageGeneratorQuote } from './types';
@@ -18,11 +20,15 @@ import {
   downloadBlob,
   shareImageFile,
 } from './exportImage';
-import { ensureImageExportFonts } from './utils/imageFonts';
+import { ensureImageExportFonts, ensurePickerFontLoaded, ensurePickerFontsLoaded } from './utils/imageFonts';
+import { DEFAULT_IMAGE_FONT_ID, imageFontFamilyForChoice, type ImageFontId } from './fonts';
+import { DEFAULT_TEXT_COLOR, resolveTextColor, type TextColorChoice } from './colors';
 import { allocateImageSerial, previewSerialForQuote } from './utils/serialGenerator';
 import { recordImageGeneration } from './utils/imageMetadata';
 import { useAppUiReset } from '../../hooks/useAppUiReset';
 import { useImagePreviewScale } from './useImagePreviewScale';
+import { usePreviewTouchGestures } from './usePreviewTouchGestures';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 async function waitNextPaint(): Promise<void> {
   await new Promise<void>((r) => requestAnimationFrame(() => requestAnimationFrame(() => r())));
@@ -48,20 +54,29 @@ export default function ImageGeneratorModal({
   toast,
 }: ImageGeneratorModalProps) {
   const exportRef = useRef<HTMLDivElement>(null);
+  const previewRef = useRef<HTMLDivElement>(null);
   const recommendation = useMemo(() => recommendSkinForQuote(quote), [quote]);
+  const isMobile = useMediaQuery('(max-width: 1023px)');
 
   const [format, setFormat] = useState<ImageFormat>(DEFAULT_FORMAT);
   const [collectionId, setCollectionId] = useState(recommendation.collectionId);
   const [skinId, setSkinId] = useState(recommendation.skinId);
   const [busy, setBusy] = useState<ShareBusy>(null);
+  const [fontId, setFontId] = useState<ImageFontId>(DEFAULT_IMAGE_FONT_ID);
+  const [textColor, setTextColor] = useState<TextColorChoice>(DEFAULT_TEXT_COLOR);
   const previewSerial = useMemo(() => previewSerialForQuote(quote.id), [quote.id]);
   const [exportSerial, setExportSerial] = useState(previewSerial);
 
   const supportsFileShare = useMemo(() => canShareImageFiles(), []);
   const fontSample = useMemo(
-    () => ({ text: quote.texto, autor: quote.autor }),
-    [quote.texto, quote.autor]
+    () => ({ text: quote.texto, autor: quote.autor, fontId }),
+    [quote.texto, quote.autor, fontId]
   );
+  const fontFamilyOverride = useMemo(
+    () => imageFontFamilyForChoice(fontId, quote.texto, quote.autor),
+    [fontId, quote.texto, quote.autor]
+  );
+  const textColorOverride = useMemo(() => resolveTextColor(textColor), [textColor]);
 
   const handleClose = useCallback(() => {
     onClose();
@@ -72,7 +87,8 @@ export default function ImageGeneratorModal({
   useEffect(() => {
     if (!open) return;
     void ensureImageExportFonts(quote.texto, quote.autor);
-  }, [open, quote.texto, quote.autor]);
+    if (isMobile) void ensurePickerFontsLoaded(fontId);
+  }, [open, quote.texto, quote.autor, isMobile, fontId]);
 
   useEffect(() => {
     if (!open) return;
@@ -87,6 +103,8 @@ export default function ImageGeneratorModal({
     setFormat(DEFAULT_FORMAT);
     setCollectionId(recommendation.collectionId);
     setSkinId(recommendation.skinId);
+    setFontId(DEFAULT_IMAGE_FONT_ID);
+    setTextColor(DEFAULT_TEXT_COLOR);
   }, [open, quote.id, recommendation.collectionId, recommendation.skinId]);
 
   const formatCfg = FORMATS[format];
@@ -99,6 +117,12 @@ export default function ImageGeneratorModal({
     skinId === recommendation.skinId;
 
   const previewScale = useImagePreviewScale(formatCfg.width, formatCfg.height, open);
+  const { userScale, userPan, reset: resetPreviewGestures } = usePreviewTouchGestures(
+    isMobile && open,
+    previewRef
+  );
+
+  const effectiveScale = previewScale * userScale;
 
   const handleCollectionChange = (id: string) => {
     setCollectionId(id);
@@ -107,6 +131,26 @@ export default function ImageGeneratorModal({
       setSkinId(col.skins[0].id);
     }
   };
+
+  const handleRestore = useCallback(() => {
+    setFormat(DEFAULT_FORMAT);
+    setCollectionId(recommendation.collectionId);
+    setSkinId(recommendation.skinId);
+    setFontId(DEFAULT_IMAGE_FONT_ID);
+    setTextColor(DEFAULT_TEXT_COLOR);
+    resetPreviewGestures();
+    toast('Configurações restauradas.', 'info');
+  }, [recommendation.collectionId, recommendation.skinId, resetPreviewGestures, toast]);
+
+  const handleBackgroundSelect = useCallback((colId: string, nextSkinId: string) => {
+    setCollectionId(colId);
+    setSkinId(nextSkinId);
+  }, []);
+
+  const handleFontChange = useCallback((nextFontId: ImageFontId) => {
+    setFontId(nextFontId);
+    void ensurePickerFontLoaded(nextFontId);
+  }, []);
 
   const registerExport = useCallback(
     (serial: string) => {
@@ -229,7 +273,112 @@ export default function ImageGeneratorModal({
     skin,
     collectionName: collection.name,
     quoteMeta,
+    fontFamilyOverride,
+    textColorOverride,
   };
+
+  const previewBlock = (
+    <div
+      ref={previewRef}
+      className={`relative flex flex-col items-center justify-center px-3 py-2 sm:p-4 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.08),transparent_70%)] ${
+        isMobile ? 'mm-mobile-editor-preview' : 'flex-1 overflow-auto'
+      }`}
+    >
+      {isOnRecommendation && (
+        <div
+          className={`absolute top-2 sm:top-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-bold shadow-lg ${
+            tema === 'light'
+              ? 'bg-amber-50 text-amber-900 border border-amber-200/80'
+              : 'bg-amber-500/15 text-amber-100 border border-amber-400/30'
+          }`}
+        >
+          <Star size={12} className="fill-amber-400 text-amber-400 shrink-0" />
+          Recomendado para esta frase
+        </div>
+      )}
+
+      <div
+        className="relative shrink-0 transition-transform duration-150 ease-out"
+        style={{
+          width: formatCfg.width * effectiveScale,
+          height: formatCfg.height * effectiveScale,
+          transform: isMobile ? `translate(${userPan.x}px, ${userPan.y}px)` : undefined,
+        }}
+      >
+        <div
+          style={{
+            transform: `scale(${effectiveScale})`,
+            transformOrigin: 'top left',
+            width: formatCfg.width,
+            height: formatCfg.height,
+          }}
+        >
+          <ImageRenderer {...rendererBase} serial={exportSerial} />
+        </div>
+      </div>
+    </div>
+  );
+
+  const mobileQuickPanel = (
+    <MobileQuickStylePanel
+      tema={tema}
+      format={format}
+      onFormatChange={setFormat}
+      textColor={textColor}
+      onTextColorChange={setTextColor}
+      fontId={fontId}
+      onFontChange={handleFontChange}
+      fontSample={quote.texto}
+      collectionId={collectionId}
+      skinId={skinId}
+      recommendedCollectionId={recommendation.matched ? recommendation.collectionId : undefined}
+      recommendedSkinId={recommendation.matched ? recommendation.skinId : undefined}
+      onBackgroundSelect={handleBackgroundSelect}
+    />
+  );
+
+  const desktopControls = (
+    <aside
+      className={`lg:w-[42%] flex-1 min-h-0 p-4 sm:p-5 overflow-y-auto overscroll-contain border-t lg:border-t-0 lg:border-r space-y-5 ${
+        tema === 'light' ? 'border-zinc-100 bg-zinc-50/50' : 'border-zinc-900 bg-zinc-950/50'
+      }`}
+    >
+      <section>
+        <h3 className="text-[10px] font-black uppercase tracking-[0.35em] text-[#A855F7] mb-3">
+          Formato
+        </h3>
+        <ImageFormatSelector value={format} onChange={setFormat} tema={tema} />
+      </section>
+      <section>
+        <h3 className="text-[10px] font-black uppercase tracking-[0.35em] text-[#A855F7] mb-1">
+          Coleção & skin
+        </h3>
+        <p
+          className={`text-[10px] mb-3 leading-snug ${
+            tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'
+          }`}
+        >
+          Escolha o estilo visual. O texto da frase é sempre exibido por completo.
+        </p>
+        <CollectionSelector value={collectionId} onChange={handleCollectionChange} tema={tema} />
+      </section>
+      <section>
+        <h3 className="text-[10px] font-black uppercase tracking-[0.35em] text-[#A855F7] mb-3">
+          Variação
+        </h3>
+        <SkinSelector
+          collectionId={collectionId}
+          value={skinId}
+          recommendedSkinId={
+            recommendation.matched && collectionId === recommendation.collectionId
+              ? recommendation.skinId
+              : undefined
+          }
+          onChange={setSkinId}
+        />
+      </section>
+    </aside>
+  );
 
   return createPortal(
     <AnimatePresence>
@@ -255,22 +404,22 @@ export default function ImageGeneratorModal({
           exit={{ opacity: 0, y: 16, scale: 0.98 }}
           className={`mm-modal-panel w-full max-w-5xl max-h-[100dvh] sm:max-h-[92vh] overflow-hidden rounded-t-[1.75rem] sm:rounded-[2rem] border shadow-2xl flex flex-col ${
             tema === 'light' ? 'bg-white border-zinc-200' : 'bg-[#0a0a0a] border-zinc-800'
-          }`}
+          } ${isMobile ? 'mm-image-editor-mobile' : ''}`}
         >
           <header
             className={`flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b shrink-0 ${
               tema === 'light' ? 'border-zinc-100' : 'border-zinc-900'
             }`}
           >
-            <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#A855F7]/20 text-[#A855F7]">
+            <div className="flex items-center gap-3 min-w-0">
+              <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#A855F7]/20 text-[#A855F7] shrink-0">
                 <Sparkles size={20} />
               </span>
-              <div>
-                <h2 id="image-gen-title" className="text-lg font-black tracking-tight">
+              <div className="min-w-0">
+                <h2 id="image-gen-title" className="text-lg font-black tracking-tight truncate">
                   Gerar imagem
                 </h2>
-                <p className={`text-xs ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'}`}>
+                <p className={`text-xs truncate ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'}`}>
                   {collection.emoji} {collection.name} · {skin.name} · {formatCfg.label}
                 </p>
               </div>
@@ -278,7 +427,7 @@ export default function ImageGeneratorModal({
             <button
               type="button"
               onClick={handleClose}
-              className={`p-2.5 rounded-xl border transition-colors ${
+              className={`p-2.5 rounded-xl border transition-colors shrink-0 ${
                 tema === 'light' ? 'border-zinc-200 hover:bg-zinc-100' : 'border-zinc-800 hover:bg-zinc-900'
               }`}
             >
@@ -286,106 +435,46 @@ export default function ImageGeneratorModal({
             </button>
           </header>
 
-          <div className="flex flex-col lg:flex-row flex-1 min-h-0 overflow-hidden">
-            {/* Preview + ações — topo no celular/tablet */}
-            <div className="order-1 lg:order-2 flex flex-col flex-1 min-h-0 max-h-[46vh] sm:max-h-[48vh] md:max-h-[50vh] lg:max-h-none">
-              <div className="relative flex-1 flex flex-col items-center justify-center px-3 py-3 sm:p-4 overflow-auto shrink-0 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.08),transparent_70%)]">
-                {isOnRecommendation && (
-                  <div
-                    className={`absolute top-2 sm:top-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-bold shadow-lg ${
-                      tema === 'light'
-                        ? 'bg-amber-50 text-amber-900 border border-amber-200/80'
-                        : 'bg-amber-500/15 text-amber-100 border border-amber-400/30'
-                    }`}
-                  >
-                    <Star size={12} className="fill-amber-400 text-amber-400 shrink-0" />
-                    Recomendado para esta frase
-                  </div>
-                )}
-
-                <div
-                  className="relative shrink-0"
-                  style={{
-                    width: formatCfg.width * previewScale,
-                    height: formatCfg.height * previewScale,
-                  }}
-                >
-                  <div
-                    style={{
-                      transform: `scale(${previewScale})`,
-                      transformOrigin: 'top left',
-                      width: formatCfg.width,
-                      height: formatCfg.height,
-                    }}
-                  >
-                    <ImageRenderer {...rendererBase} serial={exportSerial} />
-                  </div>
-                </div>
+          {isMobile ? (
+            <div className="mm-image-editor-mobile-shell flex flex-col flex-1 min-h-0 overflow-hidden">
+              {previewBlock}
+              <div className="mm-mobile-editor-controls flex-1 min-h-0 overflow-y-auto overscroll-contain px-4 py-3">
+                {mobileQuickPanel}
               </div>
-
-              <ShareActionBar
+              <MobileEditorActionBar
                 tema={tema}
-                quote={quote}
                 busy={busy}
-                supportsFileShare={supportsFileShare}
-                onMobileShare={() => void handleMobileShare()}
-                onDownloadPng={() => void runExport('image/png')}
-                onDownloadJpg={() => void runExport('image/jpeg')}
-                onCopy={() => void handleCopy()}
+                supportsShare={supportsFileShare}
+                onRestore={handleRestore}
+                onDownload={() => void runExport('image/png')}
+                onShare={() => void handleMobileShare()}
               />
             </div>
-
-            {/* Controles — abaixo da imagem no celular/tablet */}
-            <aside
-              className={`order-2 lg:order-1 lg:w-[42%] flex-1 min-h-0 p-4 sm:p-5 overflow-y-auto overscroll-contain border-t lg:border-t-0 lg:border-r space-y-5 ${
-                tema === 'light' ? 'border-zinc-100 bg-zinc-50/50' : 'border-zinc-900 bg-zinc-950/50'
-              }`}
-            >
-              <section>
-                <h3 className="text-[10px] font-black uppercase tracking-[0.35em] text-[#A855F7] mb-3">
-                  Formato
-                </h3>
-                <ImageFormatSelector value={format} onChange={setFormat} tema={tema} />
-              </section>
-              <section>
-                <h3 className="text-[10px] font-black uppercase tracking-[0.35em] text-[#A855F7] mb-1">
-                  Coleção & skin
-                </h3>
-                <p
-                  className={`text-[10px] mb-3 leading-snug ${
-                    tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'
-                  }`}
-                >
-                  Escolha o estilo visual. O texto da frase é sempre exibido por completo.
-                </p>
-                <CollectionSelector value={collectionId} onChange={handleCollectionChange} tema={tema} />
-              </section>
-              <section>
-                <h3 className="text-[10px] font-black uppercase tracking-[0.35em] text-[#A855F7] mb-3">
-                  Variação
-                </h3>
-                <SkinSelector
-                  collectionId={collectionId}
-                  value={skinId}
-                  recommendedSkinId={
-                    recommendation.matched && collectionId === recommendation.collectionId
-                      ? recommendation.skinId
-                      : undefined
-                  }
-                  onChange={setSkinId}
+          ) : (
+            <div className="flex flex-col lg:flex-row flex-1 min-h-0 overflow-hidden">
+              <div className="order-1 lg:order-2 flex flex-col flex-1 min-h-0 lg:max-h-none max-h-[48vh]">
+                {previewBlock}
+                <ShareActionBar
+                  tema={tema}
+                  quote={quote}
+                  busy={busy}
+                  supportsFileShare={supportsFileShare}
+                  onMobileShare={() => void handleMobileShare()}
+                  onDownloadPng={() => void runExport('image/png')}
+                  onDownloadJpg={() => void runExport('image/jpeg')}
+                  onCopy={() => void handleCopy()}
                 />
-              </section>
-            </aside>
-          </div>
+              </div>
+              <div className="order-2 lg:order-1 contents lg:block">{desktopControls}</div>
+            </div>
+          )}
 
-          {/* Exportação 1:1 fora da árvore escalada (evita rodapé/texto minúsculo no PNG) */}
           <div
             className="pointer-events-none fixed top-0 -left-[200vw] w-0 h-0 overflow-visible"
             aria-hidden
           >
             <ImageRenderer ref={exportRef} {...rendererBase} serial={exportSerial} />
           </div>
-
         </motion.div>
       </motion.div>
     </AnimatePresence>,

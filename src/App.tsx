@@ -36,8 +36,8 @@ import { quoteFromItem } from './components/image-generator/utils/quoteFromItem'
 import AdSlot from './components/AdSlot';
 import { loadHomeBootstrap, ensureFullCatalogLoaded, type CatalogLoadResult } from './lib/homeData';
 import { HOME_FRASE_POOL_SIZE, pathNeedsFullCatalog, sampleShuffled } from './lib/catalogLimits';
-import { CardTranslateMenu } from './components/CardTranslateMenu';
-import { type CardContentDisplay } from './lib/translation';
+import BrowserPageTranslateButton from './components/BrowserPageTranslateButton';
+import { type CardContentDisplay } from './lib/translation/types';
 import { useTranslatedViewMeta } from './lib/useTranslatedViewMeta';
 import { sanitizeTextForTranslation } from './lib/textSanitize';
 
@@ -70,7 +70,6 @@ import { SEO_LOCALES } from './lib/i18nRoutes';
 import { useDebouncedSupabaseSearch } from './hooks/useDebouncedSupabaseSearch';
 import { searchBancoSemantico } from './lib/semanticSearch';
 import { sanitizeContentBanco } from './lib/safeContent';
-import { pruneInvalidTranslationCache } from './lib/translation';
 const TagCategoriaView = lazy(() => import('./views/TagCategoria'));
 const FraseDetalheView = lazy(() => import('./views/FraseDetalhe'));
 const FraseRedirectById = lazy(() => import('./views/FraseRedirectById'));
@@ -124,10 +123,6 @@ export default function App() {
     setToast({ mensagem, tipo });
     setTimeout(() => setToast(null), 3000);
   };
-
-  useEffect(() => {
-    pruneInvalidTranslationCache();
-  }, []);
 
   // Home: bootstrap leve; catálogo completo em idle (O(1) inicial)
   useEffect(() => {
@@ -347,7 +342,7 @@ export default function App() {
         </main>
 
         {/* FOOTER */}
-        <footer className={`py-8 text-center text-xs border-t mt-auto ${tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-500' : 'bg-zinc-950 border-zinc-900 text-zinc-600'}`}>
+        <footer className={`py-8 text-center text-xs border-t mt-auto ${tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-700' : 'bg-zinc-950 border-zinc-900 text-zinc-400'}`}>
           <div className="flex justify-center flex-wrap gap-4 mb-3 font-semibold">
             <Link to="/sobre">{t('nav.about')}</Link>
             <Link to="/privacidade">{t('nav.privacy')}</Link>
@@ -440,17 +435,9 @@ function MudarMetaSEO({
     }
     link.setAttribute('href', canon);
 
-    const langs = ['pt', 'en', 'es', 'fr'];
-    langs.forEach((l) => {
-      let hreflang = document.querySelector(`link[hreflang="${l}"]`);
-      if (!hreflang) {
-        hreflang = document.createElement('link');
-        hreflang.setAttribute('rel', 'alternate');
-        hreflang.setAttribute('hreflang', l);
-        document.head.appendChild(hreflang);
-      }
-      hreflang.setAttribute('href', pageUrl);
-    });
+    document
+      .querySelectorAll('link[rel="alternate"][hreflang]')
+      .forEach((node) => node.remove());
 
     const idScript = 'jsonld-dinamico';
     let script = document.getElementById(idScript);
@@ -974,7 +961,6 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
     texto: '',
     isTranslated: false,
   });
-  const [translating, setTranslating] = useState(false);
   useTranslatedViewMeta(display.isTranslated);
 
   const navigation = useMemo(() => {
@@ -1026,14 +1012,6 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       isTranslated: false,
     });
   }, [item?.id, item?.texto, item?.titulo, item?.resumo]);
-
-  const translateSource = useMemo(
-    () =>
-      item
-        ? { texto: item.texto || '', titulo: item.titulo, resumo: item.resumo }
-        : { texto: '' },
-    [item]
-  );
 
   if (loading) {
     return (
@@ -1120,7 +1098,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className={translating ? 'opacity-55' : 'opacity-100'}
+            className="opacity-100"
           >
             {sanitizeTextForTranslation(display.texto) || item.texto}
           </motion.div>
@@ -1148,15 +1126,11 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
               <Copy size={18} />
             </button>
           </CardTooltip>
-          <CardTooltip text={t('common.translate')} tema={tema}>
-            <CardTranslateMenu
+          <CardTooltip text={t('translate_page.button', 'Ler no meu idioma')} tema={tema}>
+            <BrowserPageTranslateButton
               tema={tema}
               accent="pink"
-              contentId={item.id}
-              source={translateSource}
-              onDisplayChange={setDisplay}
-              onLoadingChange={setTranslating}
-              tooltipLabel={t('common.translate')}
+              tooltipLabel={t('translate_page.button', 'Ler no meu idioma')}
               menuPlacement="bottom"
             />
           </CardTooltip>

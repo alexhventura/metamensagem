@@ -8,13 +8,11 @@ import { useAppUiReset } from '../hooks/useAppUiReset';
 const ImageGeneratorModal = lazy(() => import('../components/image-generator'));
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import BackNavButton from '../components/BackNavButton';
-import TranslationContingencyNotice from '../components/TranslationContingencyNotice';
-import TranslationPendingNotice from '../components/TranslationPendingNotice';
 import { motion, AnimatePresence, useInView, useReducedMotion } from 'framer-motion';
 import { Copy, Share2, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import CardTooltip from '../components/CardTooltip';
-import { CardTranslateMenu } from '../components/CardTranslateMenu';
+import BrowserPageTranslateButton from '../components/BrowserPageTranslateButton';
 
 import {
   CARD_ACTION_BTN,
@@ -25,7 +23,7 @@ import {
   cardNeutralActionClass,
   cardTagClass,
 } from '../lib/cardTheme';
-import { type CardContentDisplay } from '../lib/translation';
+import { type CardContentDisplay } from '../lib/translation/types';
 import {
   getFraseCmsBySlugSync,
   loadFraseDetailBySlug,
@@ -36,7 +34,7 @@ import {
   type FraseCms,
 } from '../lib/frasesModel';
 import { fraseTextoOf, fraseAutorOf } from '../../lib/frases/detailLookup';
-import { formatTagForDisplay } from '../lib/tagDisplay';
+import { formatTagForDisplay, tagsForDisplay } from '../lib/tagDisplay';
 import { sanitizeTextForTranslation } from '../lib/textSanitize';
 import type { ItemConteudo } from '../types/content';
 import { pathFromTag } from '../lib/tagsSeo';
@@ -49,17 +47,14 @@ import {
   resolveFraseContentLocale,
   seoLocaleFromLanguageOriginal,
 } from '../lib/i18nRoutes';
-import { availableLanguagesFromMeta, loadFraseI18nMeta } from '../lib/globalSeoClient';
+import { loadFraseI18nMeta } from '../lib/globalSeoClient';
 import { pickTitleDescription } from '../../lib/seo/i18nTemplates';
-import { useTranslatedViewMeta } from '../lib/useTranslatedViewMeta';
 import { applyHreflangLinks } from '../lib/seoHreflang';
 import { ogImageUrlForPhrase } from '../lib/seo/ogImageUrl';
 import type { SeoLocale } from '../../lib/i18n/locales';
-import { SOURCE_CONTENT_LOCALE } from '../../lib/i18n/platform';
-import { getOrCreatePhraseTranslation } from '../lib/translation/phraseTranslationService';
-import { TranslationContingencyError, TranslationPendingError } from '../lib/translation/types';
 import { prefetchFraseDetail } from '../lib/prefetchFrase';
 import { trackPhraseEvent } from '../lib/analytics/phrasePopularity';
+import { languageOriginalLabel } from '../lib/languageDisplay';
 
 function MudarMetaSEO({
   title,
@@ -218,11 +213,6 @@ export default function FraseDetalheView({
       isTranslated: false,
     };
   });
-  const [translating, setTranslating] = useState(false);
-  const [translationContingency, setTranslationContingency] = useState(false);
-  const [translationPending, setTranslationPending] = useState(false);
-  /** Locale para o qual o loader já trouxe texto em `frases_traducoes` (evita API legada). */
-  const [loaderCachedLocale, setLoaderCachedLocale] = useState<SeoLocale | null>(null);
   const [relatedSlugs, setRelatedSlugs] = useState<
     { slug: string; titulo: string; id: string }[]
   >([]);
@@ -232,7 +222,6 @@ export default function FraseDetalheView({
     let cancel = false;
     setNotFound(false);
     setLoadFailed(false);
-    setLoaderCachedLocale(null);
 
     if (!preloadedFrase) {
       setLoading(true);
@@ -274,9 +263,6 @@ export default function FraseDetalheView({
           }
           setFrase(loaded);
           setDisplay(loadedDisplay);
-          if (loadedDisplay.isTranslated && loadedDisplay.targetLang) {
-            setLoaderCachedLocale(loadedDisplay.targetLang);
-          }
           trackPhraseEvent(loaded.slug, 'view', {
             phrase_id: loaded.id,
             category: loaded.categoria,
@@ -371,109 +357,18 @@ export default function FraseDetalheView({
 
   useEffect(() => {
     if (!frase) return;
-    let cancel = false;
-
-    const showOriginal = () => {
-      setDisplay({
-        texto: frase.frase_original,
-        autor: frase.autor_original,
-        explicacao: frase.explicacao || undefined,
-        isTranslated: false,
-      });
-    };
-
-    if (contentLocale === defaultLocale || contentLocale === SOURCE_CONTENT_LOCALE) {
-      showOriginal();
-      return;
-    }
-
-    if (loaderCachedLocale === contentLocale) {
-      setTranslationContingency(false);
-      setTranslationPending(false);
-      return;
-    }
-
-    showOriginal();
-    setTranslationContingency(false);
-    setTranslationPending(false);
-
-    const translateDelayMs = loading ? 2000 : 1500;
-    const translateTimer = window.setTimeout(() => {
-      if (cancel) return;
-      setTranslating(true);
-      void getOrCreatePhraseTranslation(frase.slug, frase.frase_original, contentLocale, {
-        contentId: frase.id,
-        category: frase.categoria,
-      })
-        .then((result) => {
-          if (cancel) return;
-          setTranslationContingency(false);
-          setTranslationPending(false);
-          setDisplay({
-            texto: result.text,
-            autor: frase.autor_original,
-            explicacao: frase.explicacao || undefined,
-            isTranslated: result.locale !== defaultLocale && result.mode !== 'contingency',
-            targetLang: contentLocale,
-          });
-        })
-        .catch((err) => {
-          if (!cancel) {
-            showOriginal();
-            if (err instanceof TranslationPendingError) {
-              setTranslationContingency(false);
-              setTranslationPending(true);
-            } else if (err instanceof TranslationContingencyError) {
-              setTranslationContingency(true);
-              setTranslationPending(false);
-            } else {
-              setTranslationContingency(false);
-              setTranslationPending(true);
-            }
-          }
-        })
-        .finally(() => {
-          if (!cancel) setTranslating(false);
-        });
-    }, translateDelayMs);
-
-    return () => {
-      cancel = true;
-      window.clearTimeout(translateTimer);
-    };
-  }, [
-    frase?.id,
-    frase?.slug,
-    frase?.frase_original,
-    frase?.autor_original,
-    frase?.categoria,
-    contentLocale,
-    defaultLocale,
-    loading,
-    loaderCachedLocale,
-  ]);
+    setDisplay({
+      texto: frase.frase_original,
+      autor: frase.autor_original,
+      explicacao: frase.explicacao || undefined,
+      isTranslated: false,
+    });
+  }, [frase?.id, frase?.frase_original, frase?.autor_original, frase?.explicacao]);
 
   const listItem = useMemo(() => (frase ? fraseToListItem(frase) : null), [frase]);
 
-  const translateSource = useMemo(
-    () =>
-      frase
-        ? {
-            texto: frase.frase_original,
-            autor: frase.autor_original,
-            explicacao: frase.explicacao ?? undefined,
-          }
-        : { texto: '' },
-    [frase?.frase_original, frase?.autor_original, frase?.explicacao]
-  );
-
   const canonical = frase ? fraseCanonicalUrl(frase.slug, contentLocale, defaultLocale) : '';
-  const availableLangs = frase
-    ? availableLanguagesFromMeta(
-        i18nMeta,
-        frase.semantica?.languageOriginal || frase.semantica?.idiomaOriginal
-      )
-    : [defaultLocale];
+  const availableLangs = [defaultLocale];
   const hreflangLinks = frase
     ? fraseHreflangAlternates(frase.slug, defaultLocale, availableLangs)
     : [];
@@ -482,7 +377,6 @@ export default function FraseDetalheView({
     display.texto || (frase ? fraseTextoOf(frase) : '') || '';
   const authorLine =
     display.autor || (frase ? fraseAutorOf(frase) : '') || '';
-  useTranslatedViewMeta(display.isTranslated);
 
   const seoPack = useMemo(() => {
     if (!frase?.frase_original?.trim()) {
@@ -500,25 +394,86 @@ export default function FraseDetalheView({
   const quotationJsonLd = useMemo(
     () => {
       if (!frase?.frase_original?.trim()) return undefined;
+      const categoryLabel = formatTagForDisplay(frase.categoria) ?? 'Reflexão';
+      const themeLabel =
+        tagsForDisplay([frase.categoria, ...frase.contextos, ...frase.palavras_chave], 1)[0] ??
+        categoryLabel;
+      const breadcrumb = [
+        { name: 'Início', item: 'https://metamensagem.com/' },
+        { name: 'Frases', item: 'https://metamensagem.com/frases' },
+        { name: themeLabel, item: pathFromTag(themeLabel) },
+        { name: frase.autor_original, item: canonical },
+        { name: frase.frase_original.slice(0, 80), item: canonical },
+      ];
       return {
         '@context': 'https://schema.org',
-        '@type': 'Quotation',
-        text: frase.frase_original,
-        name: frase.frase_original.slice(0, 120),
-        author: {
-          '@type': 'Person',
-          name: frase.autor_original,
-        },
-        url: canonical,
-        inLanguage: pageHtmlLang.replace('_', '-'),
-        isPartOf: {
-          '@type': 'WebSite',
-          name: 'Metamensagem',
-          url: 'https://metamensagem.com',
-        },
+        '@graph': [
+          {
+            '@type': 'WebPage',
+            '@id': canonical,
+            url: canonical,
+            name: seoPack.title,
+            description: seoPack.description,
+            inLanguage: pageHtmlLang.replace('_', '-'),
+            isPartOf: {
+              '@type': 'WebSite',
+              name: 'Metamensagem',
+              url: 'https://metamensagem.com',
+            },
+            breadcrumb: {
+              '@id': `${canonical}#breadcrumb`,
+            },
+          },
+          {
+            '@type': 'Quotation',
+            '@id': `${canonical}#quotation`,
+            text: frase.frase_original,
+            name: frase.frase_original.slice(0, 120),
+            author: {
+              '@id': `${canonical}#author`,
+            },
+            about: themeLabel,
+            genre: categoryLabel,
+            url: canonical,
+            inLanguage: pageHtmlLang.replace('_', '-'),
+            isPartOf: {
+              '@id': `${canonical}#creative-work`,
+            },
+          },
+          {
+            '@type': 'CreativeWork',
+            '@id': `${canonical}#creative-work`,
+            name: seoPack.title,
+            abstract: frase.explicacao || seoPack.description,
+            text: frase.frase_original,
+            author: {
+              '@id': `${canonical}#author`,
+            },
+            about: themeLabel,
+            genre: categoryLabel,
+            inLanguage: pageHtmlLang.replace('_', '-'),
+          },
+          {
+            '@type': 'Person',
+            '@id': `${canonical}#author`,
+            name: frase.autor_original,
+          },
+          {
+            '@type': 'BreadcrumbList',
+            '@id': `${canonical}#breadcrumb`,
+            itemListElement: breadcrumb.map((item, index) => ({
+              '@type': 'ListItem',
+              position: index + 1,
+              name: item.name,
+              item: item.item.startsWith('http')
+                ? item.item
+                : `https://metamensagem.com${item.item}`,
+            })),
+          },
+        ],
       };
     },
-    [frase?.frase_original, frase?.autor_original, canonical, pageHtmlLang]
+    [frase, canonical, pageHtmlLang, seoPack.description, seoPack.title]
   );
 
   const handleCopy = () => {
@@ -588,7 +543,15 @@ export default function FraseDetalheView({
   }
 
   const neutralAction = cardNeutralActionClass(tema);
+  const originalLanguageName = languageOriginalLabel(defaultLocale);
+  const normalizedCategory = formatTagForDisplay(frase.categoria) ?? 'Reflexão';
+  const normalizedThemes = tagsForDisplay(
+    [frase.categoria, ...frase.contextos, ...frase.palavras_chave],
+    8
+  );
+  const primaryTheme = normalizedThemes[0] ?? normalizedCategory;
   const hasExtraInfo =
+    !!originalLanguageName ||
     !!frase.explicacao ||
     fetchingDetail ||
     !!frase.ano_ou_data ||
@@ -602,9 +565,9 @@ export default function FraseDetalheView({
     !!frase.informacoes?.confiabilidade;
 
   const pageShellClass = 'max-w-3xl w-full mx-auto px-4 py-10 flex-1';
-  const quoteClassName = `text-3xl md:text-4xl font-black leading-[1.15] tracking-tight mb-5 transition-opacity ${
-    translating ? 'opacity-55' : 'opacity-100'
-  } ${tema === 'light' ? 'text-black' : 'text-white'}`;
+  const quoteClassName = `text-3xl md:text-4xl font-black leading-[1.15] tracking-tight mb-5 transition-opacity opacity-100 ${
+    tema === 'light' ? 'text-black' : 'text-white'
+  }`;
 
   const PageShell = reduceMotion ? 'div' : motion.div;
   const pageMotionProps = reduceMotion
@@ -636,6 +599,27 @@ export default function FraseDetalheView({
       </nav>
 
       <BackNavButton label={t('nav.back_quotes', 'Voltar às frases')} fallbackPath="/frases" />
+
+      <nav
+        aria-label="Breadcrumb"
+        className={`mb-4 flex flex-wrap items-center gap-2 text-[10px] font-black uppercase tracking-[0.18em] ${
+          tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'
+        }`}
+      >
+        <Link to="/" className="hover:text-[#A855F7]">
+          Início
+        </Link>
+        <span aria-hidden>&gt;</span>
+        <Link to="/frases" className="hover:text-[#A855F7]">
+          Frases
+        </Link>
+        <span aria-hidden>&gt;</span>
+        <Link to={pathFromTag(primaryTheme)} className="hover:text-[#A855F7]">
+          {primaryTheme}
+        </Link>
+        <span aria-hidden>&gt;</span>
+        <span className="max-w-[12rem] truncate">{authorLine}</span>
+      </nav>
 
       <article className={`p-[1px] rounded-[2.5rem] ${cardBorderGradient('purple')} shadow-xl`}>
         <div
@@ -679,27 +663,26 @@ export default function FraseDetalheView({
               — {authorLine}
             </p>
 
-            {translationPending && (
-              <TranslationPendingNotice tema={tema} className="mb-6" />
-            )}
-
-            {translationContingency && !translationPending && (
-              <TranslationContingencyNotice tema={tema} className="mb-6" />
-            )}
+            <p
+              className={`mb-5 inline-flex rounded-full px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.18em] ${
+                tema === 'light'
+                  ? 'bg-purple-50 text-purple-700 border border-purple-100'
+                  : 'bg-purple-500/10 text-purple-300 border border-purple-500/20'
+              }`}
+            >
+              Idioma original: {originalLanguageName}
+            </p>
 
             <div className="flex flex-wrap gap-1.5 mb-8">
-              {[frase.categoria, ...frase.contextos]
-                .map((c) => formatTagForDisplay(c))
-                .filter((c): c is string => Boolean(c))
-                .map((label) => (
-                  <Link
-                    key={label}
-                    to={pathFromTag(label)}
-                    className={`text-[9px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass('purple')}`}
-                  >
-                    #{label}
-                  </Link>
-                ))}
+              {normalizedThemes.map((label) => (
+                <Link
+                  key={label}
+                  to={pathFromTag(label)}
+                  className={`text-[10px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass('purple', tema)}`}
+                >
+                  #{label}
+                </Link>
+              ))}
             </div>
 
             <div className="flex justify-end items-end gap-2 pt-6 border-t border-zinc-500/10 min-h-[3.375rem]">
@@ -725,18 +708,11 @@ export default function FraseDetalheView({
                 </button>
               </CardTooltip>
 
-              <CardTooltip text={t('common.translate')} tema={tema}>
-                <CardTranslateMenu
+              <CardTooltip text={t('translate_page.button', 'Ler no meu idioma')} tema={tema}>
+                <BrowserPageTranslateButton
                   tema={tema}
                   accent="purple"
-                  contentId={frase.id}
-                  slug={frase.slug}
-                  category={frase.categoria}
-                  sourceLang={defaultLocale}
-                  source={translateSource}
-                  onDisplayChange={setDisplay}
-                  onLoadingChange={setTranslating}
-                  tooltipLabel={t('common.translate')}
+                  tooltipLabel={t('translate_page.button', 'Ler no meu idioma')}
                   menuPlacement="top"
                 />
               </CardTooltip>
@@ -827,6 +803,9 @@ export default function FraseDetalheView({
                     : 'border-zinc-800/60 bg-zinc-900/30'
                 }`}
               >
+                <MetaRow label="Tema principal" value={primaryTheme} tema={tema} />
+                <MetaRow label="Categoria principal" value={normalizedCategory} tema={tema} />
+                <MetaRow label="Idioma original" value={originalLanguageName} tema={tema} />
                 <MetaRow label="Ano ou data" value={frase.ano_ou_data} tema={tema} />
                 <MetaRow label="Nacionalidade" value={frase.nacionalidade} tema={tema} />
                 <MetaRow label="Nascimento / falecimento" value={frase.nascimento_falecimento} tema={tema} />

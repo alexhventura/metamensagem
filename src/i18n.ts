@@ -63,6 +63,8 @@ const resources = {
         "read": "Ler",
         "read_metaphor": "Ler Metáfora",
         "learn_more": "Saiba mais",
+        "learn_more_phrase": "Ver frase de {{author}}",
+        "read_metaphor_title": "Ler metáfora: {{title}}",
         "download": "Download",
         "copied": "Copiado!",
         "link_copied": "Link copiado!",
@@ -81,6 +83,13 @@ const resources = {
         "pending_short": "Pedido registrado — em breve",
         "pending_title": "Esta frase ainda não possui tradução disponível.",
         "pending_body": "Seu pedido foi registrado e a tradução será preparada automaticamente. Volte em alguns minutos ou tente novamente mais tarde."
+      },
+      "translate_page": {
+        "button": "Ler no meu idioma",
+        "title": "Traduzir página inteira",
+        "body": "Use a tradução nativa do Chrome, Edge ou Safari para traduzir frase, explicação, tags, menus e navegação de uma só vez.",
+        "step_desktop": "No desktop, clique com o botão direito na página e escolha \"Traduzir\".",
+        "step_mobile": "No celular, abra o menu do navegador e toque em \"Traduzir\"."
       },
       "editor": {
         "title": "Gerar Post Premium",
@@ -162,6 +171,8 @@ const resources = {
         "read": "Read",
         "read_metaphor": "Read Metaphor",
         "learn_more": "Learn more",
+        "learn_more_phrase": "Read quote by {{author}}",
+        "read_metaphor_title": "Read metaphor: {{title}}",
         "download": "Download",
         "copied": "Copied!",
         "link_copied": "Link copied!",
@@ -179,6 +190,13 @@ const resources = {
         "contingency_short": "Request recorded",
         "pending_title": "Translation not yet available.",
         "pending_body": "This quote has been added to the translation queue and will be available soon."
+      },
+      "translate_page": {
+        "button": "Read in my language",
+        "title": "Translate the whole page",
+        "body": "Use Chrome, Edge, or Safari's built-in translation to translate the quote, explanation, tags, menus, and navigation at once.",
+        "step_desktop": "On desktop, right-click the page and choose \"Translate\".",
+        "step_mobile": "On mobile, open the browser menu and tap \"Translate\"."
       },
       "editor": {
         "title": "Generate Premium Post",
@@ -230,6 +248,8 @@ const resources = {
         "read": "Leer",
         "read_metaphor": "Leer Metáfora",
         "learn_more": "Saber más",
+        "learn_more_phrase": "Ver frase de {{author}}",
+        "read_metaphor_title": "Leer metáfora: {{title}}",
         "download": "Descargar",
         "copied": "¡Copiado!",
         "link_copied": "¡Enlace copiado!",
@@ -245,6 +265,13 @@ const resources = {
         "contingency_title": "Traducción oficial en preparación",
         "contingency_body": "Esta frase aún no tiene traducción oficial para el idioma seleccionado. Tu solicitud quedó registrada y ayudará a priorizar futuras traducciones de MetaMensagem. Si deseas ver esta página de inmediato, puedes usar la traducción integrada de tu navegador.",
         "contingency_short": "Solicitud registrada"
+      },
+      "translate_page": {
+        "button": "Leer en mi idioma",
+        "title": "Traducir página completa",
+        "body": "Usa la traducción nativa de Chrome, Edge o Safari para traducir frase, explicación, etiquetas, menús y navegación a la vez.",
+        "step_desktop": "En desktop, haz clic derecho en la página y elige \"Traducir\".",
+        "step_mobile": "En el móvil, abre el menú del navegador y toca \"Traducir\"."
       },
       "editor": {
         "title": "Generar Post Premium",
@@ -296,6 +323,8 @@ const resources = {
         "read": "Lire",
         "read_metaphor": "Lire la Métaphore",
         "learn_more": "En savoir plus",
+        "learn_more_phrase": "Voir la citation de {{author}}",
+        "read_metaphor_title": "Lire la métaphore : {{title}}",
         "download": "Télécharger",
         "copied": "Copié !",
         "link_copied": "Lien copié !",
@@ -311,6 +340,13 @@ const resources = {
         "contingency_title": "Traduction officielle en préparation",
         "contingency_body": "Cette citation n'a pas encore de traduction officielle pour la langue sélectionnée. Votre demande a été enregistrée et aidera à prioriser les prochaines traductions MetaMensagem. Pour voir cette page tout de suite, vous pouvez utiliser la traduction intégrée de votre navigateur.",
         "contingency_short": "Demande enregistrée"
+      },
+      "translate_page": {
+        "button": "Lire dans ma langue",
+        "title": "Traduire toute la page",
+        "body": "Utilisez la traduction intégrée de Chrome, Edge ou Safari pour traduire citation, explication, tags, menus et navigation en une seule fois.",
+        "step_desktop": "Sur ordinateur, faites un clic droit sur la page et choisissez \"Traduire\".",
+        "step_mobile": "Sur mobile, ouvrez le menu du navigateur et touchez \"Traduire\"."
       },
       "editor": {
         "title": "Générer un Post Premium",

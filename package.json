@@ -13,6 +13,7 @@
     "enrich-content": "node scripts/enrich-external-content.mjs",
     "enrich-content:force": "node scripts/enrich-external-content.mjs --force",
     "build": "node build-scripts/run-production-build.mjs",
+    "deploy:vercel": "node build-scripts/vercel-deploy-prod.mjs",
     "test:lighthouse-guards": "node scripts/test-lighthouse-guards.mjs",
     "build:local": "node scripts/enrich-external-content.mjs && node prepare-data.cjs && node build-scripts/build-frase-id-index.mjs && node scripts/generate-sitemap.mjs && vite build",
     "frases:id-index": "node build-scripts/build-frase-id-index.mjs",

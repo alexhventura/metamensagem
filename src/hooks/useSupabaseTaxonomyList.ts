@@ -5,7 +5,6 @@ import {
   type FraseSearchHit,
 } from '../lib/frasesModel';
 import { itemConteudoFromSearchHit } from '../lib/itemFromSearchHit';
-import { isSupabaseConfigured } from '../lib/supabaseClient';
 import type { ItemConteudo } from '../types/content';
 
 /** Slugs das categorias principais (schema categorias / categoriaPrincipal). */
@@ -79,7 +78,7 @@ export function useSupabaseTaxonomyList(slug: string | null) {
   );
 
   useEffect(() => {
-    if (!slug || !isSupabaseConfigured()) {
+    if (!slug) {
       setItems([]);
       setHasMore(false);
       setReady(true);
@@ -127,7 +126,7 @@ export function useSupabaseTaxonomyList(slug: string | null) {
     loading,
     hasMore,
     ready,
-    enabled: isSupabaseConfigured(),
+    enabled: true,
     loadMore,
   };
 }

@@ -519,7 +519,7 @@ function HomeView({
   } = useDebouncedSupabaseSearch(busca);
   const resultadosFiltrados = useMemo(() => {
     if (!busca.trim()) return bancoRandomFrases;
-    if (supabaseOn && supabaseActive && supabaseHits !== null) return supabaseHits;
+    if (supabaseActive && supabaseHits !== null) return supabaseHits;
     return searchBancoSemantico(bancoFrases, busca);
   }, [busca, bancoFrases, bancoRandomFrases, supabaseOn, supabaseActive, supabaseHits]);
 
@@ -740,7 +740,7 @@ function FrasesView({
 
   const frases = useMemo(() => {
     if (!busca.trim()) return baseFrases;
-    if (supabaseOn && supabaseActive && supabaseHits !== null) return supabaseHits;
+    if (supabaseActive && supabaseHits !== null) return supabaseHits;
     return searchBancoSemantico(baseFrases, busca);
   }, [busca, baseFrases, supabaseOn, supabaseActive, supabaseHits]);
 

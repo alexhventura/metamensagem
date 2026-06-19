@@ -10,7 +10,9 @@ import {
   normalizeQuoteText,
   wrapQuoteFull,
   estimateRenderedBlockHeight,
-  FOOTER_MIN_PX,
+  formatFooterSignature,
+  formatSerialCompact,
+  FOOTER_META_MIN_PX,
   LONG_QUOTE_CHAR_THRESHOLD,
   EXTREME_QUOTE_CHAR_THRESHOLD,
 } from '../src/components/image-generator/utils/textLayout.ts';
@@ -64,6 +66,17 @@ const wrapped = wrapQuoteFull(DEMO_QUOTE, 900, 28);
 assert(!hasEllipsis(wrapped), 'linhas contêm reticências');
 assert(validateFullText(DEMO_QUOTE, wrapped), 'wrap não preserva texto');
 
+console.log('\n1b) Quebra balanceada evita linha órfã (1 palavra)');
+const orphanSample =
+  'A vida é feita de escolhas pequenas que constroem grandes transformações ao longo do tempo.';
+const balanced = wrapQuoteFull(orphanSample, 620, 42);
+const orphanLines = balanced.filter((l) => l.split(' ').filter(Boolean).length === 1);
+assert(orphanLines.length <= 1, `linhas órfãs=${orphanLines.length}`);
+
+console.log('\n1c) Rodapé compacto');
+assert(formatFooterSignature('MMM-2026-00048392').includes('metamensagem.com • MTA-'), 'footer signature');
+assert(formatSerialCompact('MMM-2026-00048392') === 'MTA-48392', 'serial compact');
+
 console.log('\n2) Amostras 50 / 150 / 300 / 500 chars × todos os formatos');
 for (const sample of SAMPLES) {
   console.log(`\n  — ${sample.label} (${sample.text.length} caracteres)`);
@@ -84,18 +97,19 @@ for (const sample of SAMPLES) {
   }
 }
 
-console.log('\n3) Frase demo — tabela resumo (feed)');
+console.log('\n3) Frase demo — tabela resumo (3 formatos)');
 const rows = [];
-for (const key of ['feed', 'story', 'facebook', 'wallpaper_mobile']) {
+for (const key of FORMAT_ORDER) {
   const { width, height, label } = FORMATS[key];
   const plan = computeImageLayout(DEMO_QUOTE, AUTHOR, width, height);
+  const quoteAreaRatio = (plan.zones.quoteZoneHeight / height).toFixed(2);
   rows.push({
     formato: label,
     quoteFits: plan.quoteFits,
     linhas: plan.lines.length,
     fontePx: plan.quotePx,
+    zonaFrase: quoteAreaRatio,
     long: plan.longQuoteMode,
-    extreme: plan.extremeQuoteMode,
   });
 }
 console.table(rows);
@@ -115,11 +129,11 @@ for (const key of FORMAT_ORDER) {
 if (failed === 0) console.log('  OK: todos os formatos com 800 chars');
 
 console.log('\n5) Rodapé legível (marca)');
-const storyFooter = computeFooterFontSize(1920, 'Metamensagem Oficial', 'MMM-2026-00000001');
-const feedFooter = computeFooterFontSize(1080, 'Galáxia', 'MMM-2026-00000005');
-if (storyFooter < FOOTER_MIN_PX || feedFooter < FOOTER_MIN_PX) {
+const storyFooter = computeFooterFontSize(1080, 1920);
+const feedFooter = computeFooterFontSize(1080, 1080);
+if (storyFooter < FOOTER_META_MIN_PX || feedFooter < FOOTER_META_MIN_PX) {
   failed += 1;
-  console.error(`  FAIL: footer px story=${storyFooter} feed=${feedFooter} (min ${FOOTER_MIN_PX})`);
+  console.error(`  FAIL: footer px story=${storyFooter} feed=${feedFooter} (min ${FOOTER_META_MIN_PX})`);
 } else {
   passed += 1;
   console.log(`  OK: footer px story=${storyFooter} feed=${feedFooter}`);

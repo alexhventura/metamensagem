@@ -7,7 +7,7 @@ export const EXTREME_QUOTE_CHAR_THRESHOLD = 300;
 export const LONG_QUOTE_MIN_LINES = 5;
 
 /** Largura máxima do bloco de citação (centro editorial). */
-export const QUOTE_CONTENT_MAX_WIDTH_RATIO = 0.7;
+export const QUOTE_CONTENT_MAX_WIDTH_RATIO = 0.82;
 
 /** Margem interna da QUOTE_ZONE (topo + base + laterais). */
 export const QUOTE_ZONE_INNER_PAD = 10;
@@ -110,17 +110,7 @@ function splitOversizedWord(word: string, maxChars: number): string[] {
   return parts;
 }
 
-export function wrapQuoteFull(
-  text: string,
-  quoteWidthPx: number,
-  fontPx: number,
-  fontWidthScale = 1.06
-): string[] {
-  const clean = normalizeQuoteText(text);
-  if (!clean) return [''];
-
-  const maxChars = maxCharsPerLine(quoteWidthPx, fontPx, fontWidthScale);
-  const words = clean.split(' ');
+function greedyWrapWords(words: string[], maxChars: number): string[] {
   const lines: string[] = [];
   let current = '';
 
@@ -144,8 +134,86 @@ export function wrapQuoteFull(
     }
   }
   flush();
+  return lines.length ? lines : [''];
+}
 
-  return lines.length ? lines : [clean];
+function lineBalanceScore(lines: string[]): number {
+  if (lines.length <= 1) return 0;
+  const lengths = lines.map((l) => l.length);
+  const avg = lengths.reduce((a, b) => a + b, 0) / lengths.length;
+  const variance = lengths.reduce((s, l) => s + (l - avg) ** 2, 0) / lengths.length;
+  let penalty = 0;
+  for (const line of lines) {
+    const words = line.split(' ').filter(Boolean);
+    if (words.length === 1) penalty += 120;
+    if (line.length < avg * 0.32 && lines.length > 2) penalty += 45;
+  }
+  if (lines.length >= 2) {
+    const lastWords = lines[lines.length - 1].split(' ').filter(Boolean);
+    const firstWords = lines[0].split(' ').filter(Boolean);
+    if (lastWords.length === 1) penalty += 80;
+    if (firstWords.length === 1 && lines.length > 2) penalty += 40;
+  }
+  return variance + penalty;
+}
+
+function fixOrphanLines(lines: string[]): string[] {
+  const next = [...lines];
+  if (next.length < 2) return next;
+
+  const lastWords = next[next.length - 1].split(' ').filter(Boolean);
+  if (lastWords.length === 1) {
+    const prevWords = next[next.length - 2].split(' ').filter(Boolean);
+    if (prevWords.length > 1) {
+      const moved = prevWords.pop()!;
+      next[next.length - 2] = prevWords.join(' ');
+      next[next.length - 1] = `${moved} ${next[next.length - 1]}`;
+    }
+  }
+
+  if (next.length >= 3) {
+    const firstWords = next[0].split(' ').filter(Boolean);
+    if (firstWords.length === 1) {
+      const secondWords = next[1].split(' ').filter(Boolean);
+      if (secondWords.length > 1) {
+        const moved = secondWords.shift()!;
+        next[0] = `${next[0]} ${moved}`;
+        next[1] = secondWords.join(' ');
+      }
+    }
+  }
+
+  return next;
+}
+
+export function wrapQuoteFull(
+  text: string,
+  quoteWidthPx: number,
+  fontPx: number,
+  fontWidthScale = 1.06
+): string[] {
+  const clean = normalizeQuoteText(text);
+  if (!clean) return [''];
+
+  const words = clean.split(' ');
+  const baseMax = maxCharsPerLine(quoteWidthPx, fontPx, fontWidthScale);
+
+  let bestLines = greedyWrapWords(words, baseMax);
+  let bestScore = lineBalanceScore(bestLines);
+
+  for (let factor = 0.86; factor <= 1.1; factor += 0.04) {
+    const targetMax = Math.max(6, Math.floor(baseMax * factor));
+    const candidate = greedyWrapWords(words, targetMax);
+    if (!validateFullText(clean, candidate)) continue;
+    const score = lineBalanceScore(candidate);
+    if (score < bestScore) {
+      bestLines = candidate;
+      bestScore = score;
+    }
+  }
+
+  const balanced = fixOrphanLines(bestLines);
+  return validateFullText(clean, balanced) ? balanced : bestLines;
 }
 
 function resolveDensity(
@@ -206,15 +274,24 @@ function computeAuthorPx(autor: string, zones: LayoutZones): number {
   return Math.min(zoneMax, Math.round(minPx * AUTHOR_SIZE_BOOST));
 }
 
-function fontBounds(zones: LayoutZones, density: ZoneDensity, charCount: number) {
+function fontBounds(
+  zones: LayoutZones,
+  density: ZoneDensity,
+  charCount: number,
+  formatProfile: ReturnType<typeof resolveFooterFormatProfile>
+) {
   const usable = usableQuoteHeight(zones.quoteZoneHeight);
-  const aspect = zones.width / zones.height;
-  const isWide = aspect >= 1.15;
-  const isUltraTall = zones.height > zones.width * 1.55;
+  const isUltraTall = formatProfile === 'story';
 
-  let fontMax = usable * (isWide ? 0.2 : isUltraTall ? 0.145 : 0.17);
+  let fontMax =
+    formatProfile === 'portrait'
+      ? usable * 0.21
+      : formatProfile === 'story'
+        ? usable * 0.195
+        : usable * 0.2;
+
   if (isUltraTall && charCount <= 120) {
-    fontMax = Math.max(fontMax, Math.round(zones.width * 0.092));
+    fontMax = Math.max(fontMax, Math.round(zones.width * 0.096));
   }
   if (density === 'long') fontMax *= 0.92;
   if (density === 'extreme') fontMax *= 0.86;
@@ -228,6 +305,12 @@ function fontBounds(zones: LayoutZones, density: ZoneDensity, charCount: number)
       : Math.max(7, Math.round(usable * (density === 'long' ? 0.048 : 0.055)));
 
   return { fontMax: Math.round(fontMax), fontMin, usable };
+}
+
+function quoteVerticalCenterRatio(formatProfile: ReturnType<typeof resolveFooterFormatProfile>): number {
+  if (formatProfile === 'story') return 0.42;
+  if (formatProfile === 'portrait') return 0.48;
+  return 0.5;
 }
 
 function lhStepsFor(density: ZoneDensity): number[] {
@@ -271,13 +354,14 @@ function findFittingQuoteLayout(
       const lineHeight = quotePx * lhRatio;
       const quoteBlockHeight = estimateRenderedBlockHeight(lines.length, quotePx, lineHeight);
       if (quoteBlockHeight <= usable) {
+        const centerRatio = quoteVerticalCenterRatio(zones.formatProfile);
         return {
           lines,
           quotePx,
           lineHeight,
           lineHeightRatio: lhRatio,
           quoteBlockHeight,
-          quotePaddingTop: Math.max(0, Math.floor((usable - quoteBlockHeight) / 2)),
+          quotePaddingTop: Math.max(0, Math.floor((usable - quoteBlockHeight) * centerRatio)),
           blockFitsZone: true,
         };
       }
@@ -296,7 +380,10 @@ function findFittingQuoteLayout(
     lineHeight,
     lineHeightRatio: lhRatio,
     quoteBlockHeight,
-    quotePaddingTop: Math.max(0, Math.floor((usable - quoteBlockHeight) / 2)),
+    quotePaddingTop: Math.max(
+      0,
+      Math.floor((usable - quoteBlockHeight) * quoteVerticalCenterRatio(zones.formatProfile))
+    ),
     blockFitsZone: quoteBlockHeight <= usable,
   };
 }
@@ -374,11 +461,18 @@ export function computeImageLayout(
   const extremeQuoteMode = density === 'extreme';
 
   const zones = computeLayoutZones(width, height, hasAuthor, density);
+  const formatProfile = zones.formatProfile;
+  const centerRatio = quoteVerticalCenterRatio(formatProfile);
   const authorPx = computeAuthorPx(autor, zones);
   const footerPx = computeFooterPx(width, height);
   const footerSerialPx = computeFooterSerialPx(width, height);
   const wrapWidth = effectiveQuoteWidth(zones.quoteWidth);
-  const { fontMax: fontMaxBase, fontMin, usable } = fontBounds(zones, density, clean.length);
+  const { fontMax: fontMaxBase, fontMin, usable } = fontBounds(
+    zones,
+    density,
+    clean.length,
+    formatProfile
+  );
   const probeLines = wrapQuoteFull(clean, wrapWidth, fontMaxBase, fontWidthScale).length;
   const fontMax = Math.round(fontMaxBase * shortQuoteFontScale(probeLines));
   const lhSteps = lhStepsFor(density);
@@ -395,7 +489,7 @@ export function computeImageLayout(
       const quoteBlockHeight = estimateRenderedBlockHeight(lines.length, quotePx, lineHeight);
       const quoteFits = quoteBlockHeight <= usable;
       const quotePaddingTop = quoteFits
-        ? Math.max(0, Math.floor((usable - quoteBlockHeight) / 2))
+        ? Math.max(0, Math.floor((usable - quoteBlockHeight) * centerRatio))
         : 0;
 
       const candidate = buildPlan(zones, {
@@ -482,9 +576,26 @@ export function formatFooterCategory(raw?: string | null): string {
   return human.charAt(0).toUpperCase() + human.slice(1).toLowerCase().slice(0, 23);
 }
 
-/** Linha secundária do rodapé premium. */
-export function formatFooterMetaLine(category: string, serial: string): string {
-  return `${category} ◈ ${serial}`;
+/** Serial compacto para rodapé (ex.: MTA-48392). */
+export function formatSerialCompact(serial: string): string {
+  const parts = serial.split('-');
+  const seqRaw = parts.length >= 3 ? parts[parts.length - 1] : serial.replace(/\D/g, '');
+  const seq = parseInt(seqRaw, 10);
+  if (Number.isFinite(seq) && seq > 0) {
+    return `MTA-${seq % 100000}`;
+  }
+  const digits = serial.replace(/\D/g, '').slice(-5) || '0';
+  return `MTA-${parseInt(digits, 10) || 0}`;
+}
+
+/** Rodapé unificado: metamensagem.com • MTA-48392 */
+export function formatFooterSignature(serial: string): string {
+  return `metamensagem.com • ${formatSerialCompact(serial)}`;
+}
+
+/** @deprecated Use formatFooterSignature */
+export function formatFooterMetaLine(_category: string, serial: string): string {
+  return formatFooterSignature(serial);
 }
 
 /** @deprecated */

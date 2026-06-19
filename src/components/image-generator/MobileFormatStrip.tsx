@@ -1,15 +1,6 @@
 import type { ImageFormat } from './types';
 import { FORMAT_ORDER, FORMATS } from './formats';
 
-const MOBILE_FORMAT_ORDER: ImageFormat[] = [
-  'feed',
-  'story',
-  'portrait',
-  'pinterest',
-  'twitter',
-  'wallpaper_mobile',
-];
-
 export default function MobileFormatStrip({
   value,
   onChange,
@@ -19,11 +10,9 @@ export default function MobileFormatStrip({
   onChange: (f: ImageFormat) => void;
   tema: string;
 }) {
-  const keys = FORMAT_ORDER.filter((k) => MOBILE_FORMAT_ORDER.includes(k));
-
   return (
     <div className="mm-format-strip -mx-1 px-1 flex gap-2 overflow-x-auto overscroll-x-contain pb-1 snap-x snap-mandatory">
-      {keys.map((key) => {
+      {FORMAT_ORDER.map((key) => {
         const cfg = FORMATS[key];
         const active = value === key;
         return (

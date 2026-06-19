@@ -1,5 +1,6 @@
 /**
  * Quatro regiões fixas: HEADER → QUOTE → AUTHOR → FOOTER.
+ * Proporções calibradas por formato (1:1, 4:5, 9:16).
  */
 export type ZoneDensity = 'normal' | 'long' | 'extreme';
 
@@ -17,34 +18,35 @@ export type LayoutZones = {
   footerTop: number;
   footerHeight: number;
   density: ZoneDensity;
+  formatProfile: FooterFormatProfile;
 };
 
-const SIDE_RATIO = 0.08;
-const LOGO_MAX_RATIO = 0.085;
-
-const DENSITY_RATIOS: Record<
-  ZoneDensity,
-  { header: number; author: number; gap: number; logoScale: number }
-> = {
-  normal: { header: 0.102, author: 0.082, gap: 0.025, logoScale: 1 },
-  long: { header: 0.094, author: 0.076, gap: 0.02, logoScale: 0.92 },
-  extreme: { header: 0.078, author: 0.064, gap: 0.014, logoScale: 0.78 },
-};
-
-/** Altura mínima da QUOTE_ZONE (% da canvas) — Soft Premium Signature V3. */
-const QUOTE_ZONE_MIN_RATIO: Record<ZoneDensity, number> = {
-  normal: 0.26,
-  long: 0.22,
-  extreme: 0.2,
-};
-
-/** Rodapé reservado — 8–10% da altura (horizontal usa 10%). */
-const FOOTER_HEIGHT_RATIO_DEFAULT = 0.08;
-const FOOTER_HEIGHT_RATIO_HORIZONTAL = 0.1;
-const FOOTER_MIN_HEIGHT_PX = 72;
-const FOOTER_MIN_HEIGHT_HORIZONTAL_PX = 84;
+const SIDE_RATIO = 0.09;
+const LOGO_MAX_RATIO = 0.062;
 
 export type FooterFormatProfile = 'square' | 'portrait' | 'story' | 'horizontal' | 'default';
+
+const FORMAT_ZONE_BASE: Record<
+  FooterFormatProfile,
+  { header: number; footer: number; author: number; gap: number; logoScale: number }
+> = {
+  square: { header: 0.072, footer: 0.062, author: 0.074, gap: 0.018, logoScale: 0.84 },
+  portrait: { header: 0.066, footer: 0.056, author: 0.068, gap: 0.015, logoScale: 0.8 },
+  story: { header: 0.054, footer: 0.05, author: 0.06, gap: 0.012, logoScale: 0.76 },
+  horizontal: { header: 0.072, footer: 0.062, author: 0.074, gap: 0.018, logoScale: 0.84 },
+  default: { header: 0.066, footer: 0.056, author: 0.068, gap: 0.015, logoScale: 0.8 },
+};
+
+const DENSITY_SHRINK: Record<
+  ZoneDensity,
+  { header: number; author: number; footer: number; gap: number; logoScale: number }
+> = {
+  normal: { header: 1, author: 1, footer: 1, gap: 1, logoScale: 1 },
+  long: { header: 0.94, author: 0.96, footer: 0.96, gap: 0.92, logoScale: 0.92 },
+  extreme: { header: 0.88, author: 0.92, footer: 0.94, gap: 0.86, logoScale: 0.82 },
+};
+
+const FOOTER_MIN_HEIGHT_PX = 64;
 
 export function resolveFooterFormatProfile(width: number, height: number): FooterFormatProfile {
   const aspect = width / height;
@@ -56,18 +58,14 @@ export function resolveFooterFormatProfile(width: number, height: number): Foote
 }
 
 function footerHeightForCanvas(
-  width: number,
   height: number,
+  profile: FooterFormatProfile,
   density: ZoneDensity
 ): number {
-  const profile = resolveFooterFormatProfile(width, height);
-  const ratio =
-    profile === 'horizontal' ? FOOTER_HEIGHT_RATIO_HORIZONTAL : FOOTER_HEIGHT_RATIO_DEFAULT;
-  const minH = profile === 'horizontal' ? FOOTER_MIN_HEIGHT_HORIZONTAL_PX : FOOTER_MIN_HEIGHT_PX;
-  let h = Math.max(minH, Math.round(height * ratio));
-  if (density === 'long') h = Math.round(h * 0.96);
-  if (density === 'extreme') h = Math.round(h * 0.94);
-  return h;
+  const base = FORMAT_ZONE_BASE[profile] ?? FORMAT_ZONE_BASE.default;
+  const shrink = DENSITY_SHRINK[density];
+  const ratio = base.footer * shrink.footer;
+  return Math.max(FOOTER_MIN_HEIGHT_PX, Math.round(height * ratio));
 }
 
 export function computeLayoutZones(
@@ -76,26 +74,27 @@ export function computeLayoutZones(
   hasAuthor: boolean,
   density: ZoneDensity = 'normal'
 ): LayoutZones {
-  const r = DENSITY_RATIOS[density];
+  const formatProfile = resolveFooterFormatProfile(width, height);
+  const base = FORMAT_ZONE_BASE[formatProfile] ?? FORMAT_ZONE_BASE.default;
+  const shrink = DENSITY_SHRINK[density];
+
   const padX = Math.round(width * SIDE_RATIO);
-  const headerHeight = Math.round(height * r.header);
-  const footerHeight = footerHeightForCanvas(width, height, density);
+  const headerHeight = Math.round(height * base.header * shrink.header);
+  const footerHeight = footerHeightForCanvas(height, formatProfile, density);
   const footerTop = height - footerHeight;
   const authorZoneHeight = hasAuthor
-    ? Math.round(Math.max(64, height * r.author))
+    ? Math.round(Math.max(56, height * base.author * shrink.author))
     : 0;
-  const zoneGap = Math.round(Math.max(10, height * r.gap));
+  const zoneGap = Math.round(Math.max(8, height * base.gap * shrink.gap));
 
   const authorZoneTop = footerTop - authorZoneHeight;
   const quoteZoneTop = headerHeight + zoneGap;
   const quoteZoneBottom = authorZoneTop - zoneGap;
   const naturalQuoteHeight = Math.max(0, quoteZoneBottom - quoteZoneTop);
-  const minQuoteHeight = Math.round(height * QUOTE_ZONE_MIN_RATIO[density]);
-  // Nunca exceder o espaço real entre header e autor — evita corte sobre zonas vizinhas.
-  const quoteZoneHeight = Math.min(naturalQuoteHeight, Math.max(minQuoteHeight, naturalQuoteHeight));
+  const quoteZoneHeight = naturalQuoteHeight;
 
   const logoPx = Math.round(
-    Math.min(width * LOGO_MAX_RATIO, headerHeight * 0.55, 88) * r.logoScale
+    Math.min(width * LOGO_MAX_RATIO, headerHeight * 0.5, 72) * base.logoScale * shrink.logoScale
   );
 
   return {
@@ -112,6 +111,7 @@ export function computeLayoutZones(
     footerTop,
     footerHeight,
     density,
+    formatProfile,
   };
 }
 

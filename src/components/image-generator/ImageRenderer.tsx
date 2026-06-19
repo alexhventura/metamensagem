@@ -6,8 +6,7 @@ import type { ImageFontId } from './fonts';
 import { imageFontFamilyFor } from './utils/imageFonts';
 import {
   computeImageLayout,
-  formatFooterCategory,
-  formatFooterMetaLine,
+  formatFooterSignature,
   maxFooterLabelChars,
   QUOTE_CONTENT_MAX_WIDTH_RATIO,
   resolveFooterFormatProfile,
@@ -64,19 +63,10 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
   const formatProfile = resolveFooterFormatProfile(format.width, format.height);
 
   const footerPx = layout.footerPx;
-  const footerInnerWidth = Math.floor(format.width * 0.8);
-  const footerDomain = 'metamensagem.com';
-  const categoryLabel = formatFooterCategory(
-    quoteMeta?.categoria ?? skin.category ?? collectionName
-  );
-  const metaLineRaw = formatFooterMetaLine(categoryLabel, serial);
-  const domainLabel = truncateFooterLabel(
-    footerDomain,
-    maxFooterLabelChars(footerInnerWidth, footerPx, 0.5)
-  );
-  const metaLineLabel = truncateFooterLabel(
-    metaLineRaw,
-    maxFooterLabelChars(footerInnerWidth, layout.footerSerialPx, 0.48)
+  const footerInnerWidth = Math.floor(format.width * 0.84);
+  const footerSignature = truncateFooterLabel(
+    formatFooterSignature(serial),
+    maxFooterLabelChars(footerInnerWidth, footerPx, 0.48)
   );
 
   const decorativeOrbs = useMemo(
@@ -88,17 +78,9 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
   const metaFooterStyle = {
     fontSize: footerPx,
     fontWeight: 500 as const,
-    letterSpacing: '0.6px',
+    letterSpacing: '0.35px',
     lineHeight: 1.35,
-    opacity: 0.78,
-  };
-
-  const metaLineStyle = {
-    fontSize: layout.footerSerialPx,
-    fontWeight: 500 as const,
-    letterSpacing: '0.45px',
-    lineHeight: 1.35,
-    opacity: 0.68,
+    opacity: 0.52,
   };
 
   const authorTrim = autor?.trim() ?? '';
@@ -127,7 +109,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
       data-mm-quote-fits={layout.quoteFits ? '1' : '0'}
       data-mm-text-integrity={validateFullText(texto, layout.lines) ? 'ok' : 'fail'}
       data-mm-author-expected={authorTrim}
-      data-mm-render-variant="soft-premium-signature-v3"
+      data-mm-render-variant="soft-premium-signature-v4"
     >
       <div
         className="absolute inset-0 pointer-events-none"
@@ -194,7 +176,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           width={layout.logoPx}
           height={layout.logoPx}
           crossOrigin="anonymous"
-          className="opacity-[0.38]"
+          className="opacity-[0.28]"
           style={{
             width: layout.logoPx,
             height: layout.logoPx,
@@ -216,9 +198,9 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           overflow: 'hidden',
           paddingTop: layout.quotePaddingTop,
           paddingBottom: layout.quotePaddingBottom,
-          paddingLeft: 8,
-          paddingRight: 8,
-          justifyContent: 'flex-start',
+          paddingLeft: 10,
+          paddingRight: 10,
+          justifyContent: 'center',
           alignItems: 'center',
         }}
         aria-label="Citação"
@@ -266,7 +248,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
               lineHeight: `${Math.round(layout.authorPx * 1.22)}px`,
               maxWidth: '70%',
               fontWeight: 500,
-              ...(authorColorStyle ?? { opacity: 0.94 }),
+              ...(authorColorStyle ?? { opacity: 0.82 }),
             }}
           >
             — {authorTrim}
@@ -282,19 +264,16 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           paddingLeft: layout.padX,
           paddingRight: layout.padX,
           paddingBottom: layout.padBottom,
-          borderTop: '1px solid rgba(255,255,255,0.14)',
+          borderTop: '1px solid rgba(255,255,255,0.08)',
         }}
         aria-label="Metadados"
       >
         <div
-          className="flex w-full max-w-[80%] mx-auto flex-col items-center gap-1 overflow-hidden min-w-0 text-center"
+          className="flex w-full max-w-[84%] mx-auto items-center justify-center overflow-hidden min-w-0 text-center"
           style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
         >
-          <span className="lowercase truncate w-full min-w-0" style={metaFooterStyle}>
-            {domainLabel}
-          </span>
-          <span className="truncate w-full min-w-0 tabular-nums" style={metaLineStyle}>
-            {metaLineLabel}
+          <span className="lowercase truncate w-full min-w-0 tabular-nums" style={metaFooterStyle}>
+            {footerSignature}
           </span>
         </div>
       </footer>

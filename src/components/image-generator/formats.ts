@@ -1,22 +1,25 @@
 import type { FormatConfig, ImageFormat } from './types';
 
+/** Formatos ativos no editor (1:1, 4:5, 9:16). */
+export const FORMAT_ORDER: ImageFormat[] = ['portrait', 'feed', 'story'];
+
 export const FORMATS: Record<ImageFormat, FormatConfig> = {
-  feed: {
-    label: 'Instagram Feed',
-    shortLabel: '1:1',
-    width: 1080,
-    height: 1080,
-    aspectRatio: '1 / 1',
-  },
   portrait: {
-    label: 'Instagram Retrato',
+    label: 'Instagram Feed · principal',
     shortLabel: '4:5',
     width: 1080,
     height: 1350,
     aspectRatio: '4 / 5',
   },
+  feed: {
+    label: 'Facebook · WhatsApp',
+    shortLabel: '1:1',
+    width: 1080,
+    height: 1080,
+    aspectRatio: '1 / 1',
+  },
   story: {
-    label: 'Stories / Reels',
+    label: 'Stories · Reels · TikTok',
     shortLabel: '9:16',
     width: 1080,
     height: 1920,
@@ -66,21 +69,8 @@ export const FORMATS: Record<ImageFormat, FormatConfig> = {
   },
 };
 
-/** Formatos premium destacados (mesma safe zone). */
-export const PREMIUM_FORMAT_ORDER: ImageFormat[] = [
-  'feed',
-  'story',
-  'portrait',
-  'wallpaper_desktop',
-  'wallpaper_mobile',
-];
+/** @deprecated Use FORMAT_ORDER */
+export const PREMIUM_FORMAT_ORDER: ImageFormat[] = FORMAT_ORDER;
 
-export const FORMAT_ORDER: ImageFormat[] = [
-  ...PREMIUM_FORMAT_ORDER,
-  'pinterest',
-  'twitter',
-  'linkedin',
-  'facebook',
-];
-
-export const DEFAULT_FORMAT: ImageFormat = 'feed';
+/** Formato principal da plataforma (4:5). */
+export const DEFAULT_FORMAT: ImageFormat = 'portrait';

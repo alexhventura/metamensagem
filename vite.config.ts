@@ -10,6 +10,8 @@ export default defineConfig(() => {
   return {
     /** Somente VITE_* no bundle — secrets admin em .env.scripts.local (fora do Vite). */
     envPrefix: ['VITE_'],
+    /** Cópia seletiva via build-scripts/sync-public-to-dist.mjs (evita duplicar 1.2GB no build). */
+    publicDir: false,
     plugins: [
       react(),
       tailwindcss(),

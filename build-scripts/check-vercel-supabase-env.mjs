@@ -17,8 +17,19 @@ if (url && anonKey) {
   console.warn(
     `[build] VITE_SUPABASE_* definido (${vercelEnv}) — app usa CDN estático; Supabase não é necessário no deploy.`
   );
-} else if (isVercel) {
+}
+
+if (isVercel) {
   console.log(`[build] CDN-only OK (${vercelEnv}) — busca e detalhe via public/frases-v2/`);
+  const staticOrigin = (process.env.FRASES_STATIC_ORIGIN || '').trim();
+  const excludeDetail = process.env.MM_EXCLUDE_DETAIL_FROM_DIST === '1';
+  if (excludeDetail && staticOrigin) {
+    console.log(`[build] Deploy rápido: detail remoto em ${staticOrigin.replace(/\/$/, '')}`);
+  } else if (excludeDetail) {
+    console.warn(
+      '[build] Defina FRASES_STATIC_ORIGIN e VITE_FRASES_STATIC_ORIGIN na Vercel (URL de deploy com shards detail) para builds <45min.'
+    );
+  }
 } else {
   console.log('[build] CDN-only — busca e detalhe via shards estáticos.');
 }

@@ -33,6 +33,7 @@ assert('CTA Baixar imagem primário', actionBar.includes('mm-editor-mobile-bar-p
 assert('Seleção de fonte no renderer', read('src/components/image-generator/ImageRenderer.tsx').includes('fontFamilyOverride'));
 assert('Override de cor no renderer', read('src/components/image-generator/ImageRenderer.tsx').includes('textColorOverride'));
 assert('Painel sempre visível (sem accordion)', quickPanel.includes('Formato') && quickPanel.includes('Cores') && quickPanel.includes('Fonte') && quickPanel.includes('Fundo'));
+assert('Export offscreen (sem overlay no mobile)', modal.includes('mm-image-export-offscreen') && !modal.includes('-left-[200vw]'));
 
 const failed = checks.filter((c) => !c.ok);
 for (const c of checks) {

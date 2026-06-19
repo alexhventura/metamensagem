@@ -380,7 +380,7 @@ export default function ImageGeneratorModal({
     </aside>
   );
 
-  return createPortal(
+  const modalUi = createPortal(
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0 }}
@@ -468,16 +468,27 @@ export default function ImageGeneratorModal({
               <div className="order-2 lg:order-1 contents lg:block">{desktopControls}</div>
             </div>
           )}
-
-          <div
-            className="pointer-events-none fixed top-0 -left-[200vw] w-0 h-0 overflow-visible"
-            aria-hidden
-          >
-            <ImageRenderer ref={exportRef} {...rendererBase} serial={exportSerial} />
-          </div>
         </motion.div>
       </motion.div>
     </AnimatePresence>,
     getModalRoot()
+  );
+
+  const exportCanvas = createPortal(
+    <div
+      className="mm-image-export-offscreen"
+      style={{ width: formatCfg.width, height: formatCfg.height }}
+      aria-hidden
+    >
+      <ImageRenderer ref={exportRef} {...rendererBase} serial={exportSerial} />
+    </div>,
+    getModalRoot()
+  );
+
+  return (
+    <>
+      {modalUi}
+      {exportCanvas}
+    </>
   );
 }

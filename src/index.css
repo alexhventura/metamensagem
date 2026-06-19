@@ -70,6 +70,17 @@ html[data-theme="dark"] {
   z-index: 10001;
 }
 
+/* Canvas de exportação 1:1 — fora do painel animado para não vazar no mobile */
+.mm-image-export-offscreen {
+  position: fixed;
+  left: -10000px;
+  top: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
 body.mm-modal-open {
   overflow: hidden;
 }

@@ -1,13 +1,11 @@
-import React, { useEffect, useMemo, useState, lazy, Suspense } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { BookOpen, Copy, Share2, Sparkles } from 'lucide-react';
-const CardTranslateMenu = lazy(() =>
-  import('./CardTranslateMenu').then((m) => ({ default: m.CardTranslateMenu }))
-);
 import CardTooltip from './CardTooltip';
-import { type CardContentDisplay } from '../lib/translation';
+import BrowserPageTranslateButton from './BrowserPageTranslateButton';
+import { type CardContentDisplay } from '../lib/translation/types';
 import { pathFromTag } from '../lib/tagsSeo';
 import { frasePath, seoLocaleFromLanguageOriginal } from '../lib/i18nRoutes';
 import { detectLanguageOriginal } from '../../lib/i18n/detectLanguage';
@@ -54,7 +52,6 @@ export default function ContentCard({
     resumo: item.resumo ? sanitizeTextForTranslation(item.resumo) : item.resumo,
     isTranslated: false,
   }));
-  const [translating, setTranslating] = useState(false);
 
   useEffect(() => {
     setDisplay({
@@ -64,11 +61,6 @@ export default function ContentCard({
       isTranslated: false,
     });
   }, [item.id, item.texto, item.titulo, item.resumo]);
-
-  const translateSource = useMemo(
-    () => ({ texto: item.texto, titulo: item.titulo, resumo: item.resumo }),
-    [item.texto, item.titulo, item.resumo]
-  );
 
   const detailPath = isFrase
     ? (() => {
@@ -191,9 +183,7 @@ export default function ContentCard({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
-                  className={`mb-4 flex-1 transition-opacity duration-200 ${
-                    translating ? 'opacity-55' : 'opacity-100'
-                  }`}
+                  className="mb-4 flex-1 transition-opacity duration-200 opacity-100"
                 >
                   <Link
                     to={detailPath}
@@ -221,9 +211,9 @@ export default function ContentCard({
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.2 }}
-                    className={`text-sm line-clamp-3 leading-relaxed mb-4 flex-1 transition-opacity duration-200 ${
-                      translating ? 'opacity-55' : 'opacity-100'
-                    } ${tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'}`}
+                    className={`text-sm line-clamp-3 leading-relaxed mb-4 flex-1 transition-opacity duration-200 opacity-100 ${
+                      tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'
+                    }`}
                   >
                     {bodyText}
                   </motion.p>
@@ -286,21 +276,12 @@ export default function ContentCard({
             </button>
           </CardTooltip>
 
-          <CardTooltip text={t('common.translate')} tema={tema}>
-            <Suspense fallback={<span className="inline-block min-h-[36px] min-w-[36px]" aria-hidden />}>
-            <CardTranslateMenu
+          <CardTooltip text={t('translate_page.button', 'Ler no meu idioma')} tema={tema}>
+            <BrowserPageTranslateButton
               tema={tema}
               accent={accent}
-              contentId={item.id}
-              slug={item.slug}
-              category={item.tags?.[0]}
-              sourceLang={seoLocaleFromLanguageOriginal(detectLanguageOriginal(item.texto))}
-              source={translateSource}
-              onDisplayChange={setDisplay}
-              onLoadingChange={setTranslating}
-              tooltipLabel={t('common.translate')}
+              tooltipLabel={t('translate_page.button', 'Ler no meu idioma')}
             />
-            </Suspense>
           </CardTooltip>
 
           {isFrase && onGenerateImage && (

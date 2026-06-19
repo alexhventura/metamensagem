@@ -61,6 +61,13 @@ export const de = {
       original: 'Original anzeigen',
       retry: 'Erneut versuchen',
     },
+    translate_page: {
+      button: 'In meiner Sprache lesen',
+      title: 'Ganze Seite übersetzen',
+      body: 'Nutzen Sie die integrierte Übersetzung von Chrome, Edge oder Safari, um Zitat, Erklärung, Tags, Menüs und Navigation auf einmal zu übersetzen.',
+      step_desktop: 'Am Desktop klicken Sie mit der rechten Maustaste auf die Seite und wählen "Übersetzen".',
+      step_mobile: 'Am Smartphone öffnen Sie das Browsermenü und tippen auf "Übersetzen".',
+    },
     editor: {
       title: 'Premium-Post erstellen',
       controls: 'Kunststeuerung',
@@ -125,6 +132,13 @@ export const it = {
       success: '✓ Tradotto in {{lang}}',
       original: 'Vedi originale',
       retry: 'Riprova',
+    },
+    translate_page: {
+      button: 'Leggi nella mia lingua',
+      title: 'Traduci tutta la pagina',
+      body: 'Usa la traduzione integrata di Chrome, Edge o Safari per tradurre citazione, spiegazione, tag, menu e navigazione in una volta sola.',
+      step_desktop: 'Su desktop, fai clic destro sulla pagina e scegli "Traduci".',
+      step_mobile: 'Su mobile, apri il menu del browser e tocca "Traduci".',
     },
     editor: {
       title: 'Genera post premium',
@@ -191,6 +205,13 @@ export const ja = {
       original: '原文を表示',
       retry: '再試行',
     },
+    translate_page: {
+      button: '自分の言語で読む',
+      title: 'ページ全体を翻訳',
+      body: 'Chrome、Edge、Safari の標準翻訳で、引用、解説、タグ、メニュー、ナビゲーションをまとめて翻訳できます。',
+      step_desktop: 'デスクトップではページを右クリックし、「翻訳」を選びます。',
+      step_mobile: 'モバイルではブラウザのメニューを開き、「翻訳」をタップします。',
+    },
     editor: {
       title: 'プレミアム投稿を作成',
       controls: 'アートコントロール',
@@ -255,6 +276,13 @@ export const hi = {
       success: '✓ {{lang}} में अनुवादित',
       original: 'मूल देखें',
       retry: 'पुनः प्रयास',
+    },
+    translate_page: {
+      button: 'मेरी भाषा में पढ़ें',
+      title: 'पूरे पेज का अनुवाद करें',
+      body: 'Chrome, Edge या Safari की मूल अनुवाद सुविधा से वाक्य, व्याख्या, टैग, मेनू और नेविगेशन को एक साथ अनुवाद करें.',
+      step_desktop: 'डेस्कटॉप पर पेज पर राइट-क्लिक करें और "Translate" चुनें.',
+      step_mobile: 'मोबाइल पर ब्राउज़र मेनू खोलें और "Translate" पर टैप करें.',
     },
     editor: {
       title: 'प्रीमियम पोस्ट बनाएं',

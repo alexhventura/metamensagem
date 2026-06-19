@@ -21,9 +21,11 @@ const checks = [
     test: (s) => /ImageGeneratorModal|generate_image|Sparkles/.test(s),
   },
   {
-    file: 'src/components/CardTranslateMenu.tsx',
-    label: 'Traduzir frase',
-    test: (s) => /translate|getOrCreatePhraseTranslation|Traduzir/i.test(s),
+    file: 'src/components/BrowserPageTranslateButton.tsx',
+    label: 'Traduzir página',
+    test: (s) =>
+      /translate_page/.test(s) &&
+      /right-click|botão direito|Traduzir página inteira/i.test(s),
   },
   {
     file: 'src/components/image-generator/ShareActionBar.tsx',

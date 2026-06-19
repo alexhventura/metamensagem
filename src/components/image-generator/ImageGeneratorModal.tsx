@@ -7,7 +7,7 @@ import ImageFormatSelector from './ImageFormatSelector';
 import CollectionSelector from './CollectionSelector';
 import SkinSelector from './SkinSelector';
 import ShareActionBar, { type ShareBusy } from './ShareActionBar';
-import MobileEditorAccordion from './MobileEditorAccordion';
+import MobileQuickStylePanel from './MobileQuickStylePanel';
 import MobileEditorActionBar from './MobileEditorActionBar';
 import { FORMATS, DEFAULT_FORMAT } from './formats';
 import { findCollection, findSkin } from './skins/data';
@@ -20,7 +20,9 @@ import {
   downloadBlob,
   shareImageFile,
 } from './exportImage';
-import { ensureImageExportFonts } from './utils/imageFonts';
+import { ensureImageExportFonts, ensurePickerFontsLoaded } from './utils/imageFonts';
+import { DEFAULT_IMAGE_FONT_ID, imageFontFamilyForChoice, type ImageFontId } from './fonts';
+import { DEFAULT_TEXT_COLOR, resolveTextColor, type TextColorChoice } from './colors';
 import { allocateImageSerial, previewSerialForQuote } from './utils/serialGenerator';
 import { recordImageGeneration } from './utils/imageMetadata';
 import { useAppUiReset } from '../../hooks/useAppUiReset';
@@ -60,15 +62,21 @@ export default function ImageGeneratorModal({
   const [collectionId, setCollectionId] = useState(recommendation.collectionId);
   const [skinId, setSkinId] = useState(recommendation.skinId);
   const [busy, setBusy] = useState<ShareBusy>(null);
-  const [openSection, setOpenSection] = useState<string | null>('formato');
+  const [fontId, setFontId] = useState<ImageFontId>(DEFAULT_IMAGE_FONT_ID);
+  const [textColor, setTextColor] = useState<TextColorChoice>(DEFAULT_TEXT_COLOR);
   const previewSerial = useMemo(() => previewSerialForQuote(quote.id), [quote.id]);
   const [exportSerial, setExportSerial] = useState(previewSerial);
 
   const supportsFileShare = useMemo(() => canShareImageFiles(), []);
   const fontSample = useMemo(
-    () => ({ text: quote.texto, autor: quote.autor }),
-    [quote.texto, quote.autor]
+    () => ({ text: quote.texto, autor: quote.autor, fontId }),
+    [quote.texto, quote.autor, fontId]
   );
+  const fontFamilyOverride = useMemo(
+    () => imageFontFamilyForChoice(fontId, quote.texto, quote.autor),
+    [fontId, quote.texto, quote.autor]
+  );
+  const textColorOverride = useMemo(() => resolveTextColor(textColor), [textColor]);
 
   const handleClose = useCallback(() => {
     onClose();
@@ -79,7 +87,8 @@ export default function ImageGeneratorModal({
   useEffect(() => {
     if (!open) return;
     void ensureImageExportFonts(quote.texto, quote.autor);
-  }, [open, quote.texto, quote.autor]);
+    if (isMobile) void ensurePickerFontsLoaded(fontId);
+  }, [open, quote.texto, quote.autor, isMobile, fontId]);
 
   useEffect(() => {
     if (!open) return;
@@ -94,7 +103,8 @@ export default function ImageGeneratorModal({
     setFormat(DEFAULT_FORMAT);
     setCollectionId(recommendation.collectionId);
     setSkinId(recommendation.skinId);
-    setOpenSection('formato');
+    setFontId(DEFAULT_IMAGE_FONT_ID);
+    setTextColor(DEFAULT_TEXT_COLOR);
   }, [open, quote.id, recommendation.collectionId, recommendation.skinId]);
 
   const formatCfg = FORMATS[format];
@@ -126,15 +136,16 @@ export default function ImageGeneratorModal({
     setFormat(DEFAULT_FORMAT);
     setCollectionId(recommendation.collectionId);
     setSkinId(recommendation.skinId);
+    setFontId(DEFAULT_IMAGE_FONT_ID);
+    setTextColor(DEFAULT_TEXT_COLOR);
     resetPreviewGestures();
-    setOpenSection('formato');
     toast('Configurações restauradas.', 'info');
   }, [recommendation.collectionId, recommendation.skinId, resetPreviewGestures, toast]);
 
-  const handleVisualize = useCallback(() => {
-    resetPreviewGestures();
-    previewRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, [resetPreviewGestures]);
+  const handleBackgroundSelect = useCallback((colId: string, nextSkinId: string) => {
+    setCollectionId(colId);
+    setSkinId(nextSkinId);
+  }, []);
 
   const registerExport = useCallback(
     (serial: string) => {
@@ -257,13 +268,15 @@ export default function ImageGeneratorModal({
     skin,
     collectionName: collection.name,
     quoteMeta,
+    fontFamilyOverride,
+    textColorOverride,
   };
 
   const previewBlock = (
     <div
       ref={previewRef}
-      className={`relative flex flex-col items-center justify-center px-3 py-3 sm:p-4 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.08),transparent_70%)] ${
-        isMobile ? 'mm-mobile-editor-preview shrink-0 sticky top-0 z-10 border-b border-zinc-800/40' : 'flex-1 overflow-auto'
+      className={`relative flex flex-col items-center justify-center px-3 py-2 sm:p-4 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.08),transparent_70%)] ${
+        isMobile ? 'mm-mobile-editor-preview' : 'flex-1 overflow-auto'
       }`}
     >
       {isOnRecommendation && (
@@ -301,88 +314,23 @@ export default function ImageGeneratorModal({
     </div>
   );
 
-  const mobileSections = [
-    {
-      id: 'texto',
-      title: 'Texto',
-      content: (
-        <div className={`space-y-2 text-sm leading-relaxed ${tema === 'light' ? 'text-zinc-700' : 'text-zinc-300'}`}>
-          <p className="font-semibold">&ldquo;{quote.texto}&rdquo;</p>
-          <p className={`text-xs ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'}`}>— {quote.autor}</p>
-          <p className={`text-[11px] ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'}`}>
-            A frase é sempre exibida por completo na imagem, com quebra automática de linhas.
-          </p>
-        </div>
-      ),
-    },
-    {
-      id: 'formato',
-      title: 'Formato',
-      content: <ImageFormatSelector value={format} onChange={setFormat} tema={tema} />,
-    },
-    {
-      id: 'fundo',
-      title: 'Imagem de fundo',
-      content: (
-        <div className="space-y-3">
-          <p className={`text-[10px] leading-snug ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-500'}`}>
-            Escolha a coleção visual. Cores, gradientes e texturas vêm da skin selecionada.
-          </p>
-          <CollectionSelector value={collectionId} onChange={handleCollectionChange} tema={tema} />
-        </div>
-      ),
-    },
-    {
-      id: 'variacao',
-      title: 'Variação',
-      content: (
-        <SkinSelector
-          collectionId={collectionId}
-          value={skinId}
-          recommendedSkinId={
-            recommendation.matched && collectionId === recommendation.collectionId
-              ? recommendation.skinId
-              : undefined
-          }
-          onChange={setSkinId}
-        />
-      ),
-    },
-    {
-      id: 'autor',
-      title: 'Autor & marca',
-      content: (
-        <div className={`space-y-2 text-xs leading-relaxed ${tema === 'light' ? 'text-zinc-600' : 'text-zinc-400'}`}>
-          <p>
-            <span className="font-bold uppercase tracking-wider text-[10px] text-[#A855F7]">Autor</span>
-            <br />
-            {quote.autor}
-          </p>
-          <p>
-            <span className="font-bold uppercase tracking-wider text-[10px] text-[#A855F7]">Logo & marca d&apos;água</span>
-            <br />
-            Aplicados automaticamente em todas as variações, com contraste otimizado para compartilhamento.
-          </p>
-        </div>
-      ),
-    },
-    {
-      id: 'exportacao',
-      title: 'Exportação',
-      content: (
-        <ShareActionBar
-          tema={tema}
-          quote={quote}
-          busy={busy}
-          supportsFileShare={supportsFileShare}
-          onMobileShare={() => void handleMobileShare()}
-          onDownloadPng={() => void runExport('image/png')}
-          onDownloadJpg={() => void runExport('image/jpeg')}
-          onCopy={() => void handleCopy()}
-        />
-      ),
-    },
-  ];
+  const mobileQuickPanel = (
+    <MobileQuickStylePanel
+      tema={tema}
+      format={format}
+      onFormatChange={setFormat}
+      textColor={textColor}
+      onTextColorChange={setTextColor}
+      fontId={fontId}
+      onFontChange={setFontId}
+      fontSample={quote.texto}
+      collectionId={collectionId}
+      skinId={skinId}
+      recommendedCollectionId={recommendation.matched ? recommendation.collectionId : undefined}
+      recommendedSkinId={recommendation.matched ? recommendation.skinId : undefined}
+      onBackgroundSelect={handleBackgroundSelect}
+    />
+  );
 
   const desktopControls = (
     <aside
@@ -483,21 +431,15 @@ export default function ImageGeneratorModal({
           </header>
 
           {isMobile ? (
-            <div className="flex flex-col flex-1 min-h-0 overflow-hidden">
+            <div className="mm-image-editor-mobile-shell flex flex-col flex-1 min-h-0 overflow-hidden">
               {previewBlock}
-              <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-4 py-3 pb-[calc(4.75rem+env(safe-area-inset-bottom,0px))]">
-                <MobileEditorAccordion
-                  sections={mobileSections}
-                  openId={openSection}
-                  onOpenChange={setOpenSection}
-                  tema={tema}
-                />
+              <div className="mm-mobile-editor-controls flex-1 min-h-0 overflow-y-auto overscroll-contain px-4 py-3">
+                {mobileQuickPanel}
               </div>
               <MobileEditorActionBar
                 tema={tema}
                 busy={busy}
                 supportsShare={supportsFileShare}
-                onVisualize={handleVisualize}
                 onRestore={handleRestore}
                 onDownload={() => void runExport('image/png')}
                 onShare={() => void handleMobileShare()}

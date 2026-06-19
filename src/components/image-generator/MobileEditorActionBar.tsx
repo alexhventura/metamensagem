@@ -1,10 +1,9 @@
-import { Download, Eye, Loader2, RotateCcw, Share2 } from 'lucide-react';
+import { Download, Loader2, RotateCcw, Share2 } from 'lucide-react';
 import type { ShareBusy } from './ShareActionBar';
 
 export default function MobileEditorActionBar({
   busy,
   supportsShare,
-  onVisualize,
   onRestore,
   onDownload,
   onShare,
@@ -12,16 +11,17 @@ export default function MobileEditorActionBar({
 }: {
   busy: ShareBusy;
   supportsShare: boolean;
-  onVisualize: () => void;
   onRestore: () => void;
   onDownload: () => void;
   onShare: () => void;
   tema: string;
 }) {
-  const btn =
+  const secondary =
     tema === 'light'
-      ? 'text-zinc-700 hover:bg-zinc-100'
-      : 'text-zinc-200 hover:bg-zinc-900';
+      ? 'text-zinc-600 bg-zinc-100 border-zinc-200'
+      : 'text-zinc-300 bg-zinc-900 border-zinc-800';
+
+  const downloading = busy === 'png' || busy === 'jpeg';
 
   return (
     <div
@@ -31,32 +31,37 @@ export default function MobileEditorActionBar({
       role="toolbar"
       aria-label="Ações do editor"
     >
-      <button type="button" onClick={onVisualize} className={`mm-editor-mobile-bar-btn ${btn}`}>
-        <Eye size={18} aria-hidden />
-        <span>Visualizar</span>
-      </button>
-      <button type="button" onClick={onRestore} className={`mm-editor-mobile-bar-btn ${btn}`}>
+      <button
+        type="button"
+        onClick={onRestore}
+        className={`mm-editor-mobile-bar-btn mm-editor-mobile-bar-secondary ${secondary}`}
+        aria-label="Restaurar configurações"
+      >
         <RotateCcw size={18} aria-hidden />
         <span>Restaurar</span>
       </button>
+
       <button
         type="button"
         disabled={!!busy}
         onClick={onDownload}
-        className={`mm-editor-mobile-bar-btn ${btn} disabled:opacity-50`}
+        className="mm-editor-mobile-bar-btn mm-editor-mobile-bar-primary disabled:opacity-50"
+        aria-label="Baixar imagem"
       >
-        {busy === 'png' || busy === 'jpeg' ? (
-          <Loader2 size={18} className="animate-spin" aria-hidden />
+        {downloading ? (
+          <Loader2 size={22} className="animate-spin" aria-hidden />
         ) : (
-          <Download size={18} aria-hidden />
+          <Download size={22} aria-hidden />
         )}
-        <span>Baixar</span>
+        <span>Baixar imagem</span>
       </button>
+
       <button
         type="button"
         disabled={!!busy || !supportsShare}
         onClick={onShare}
-        className={`mm-editor-mobile-bar-btn ${btn} disabled:opacity-50`}
+        className={`mm-editor-mobile-bar-btn mm-editor-mobile-bar-secondary ${secondary} disabled:opacity-50`}
+        aria-label="Compartilhar imagem"
       >
         {busy === 'mobile' ? (
           <Loader2 size={18} className="animate-spin" aria-hidden />

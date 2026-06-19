@@ -9,7 +9,7 @@ import {
   computeImageLayout,
 } from './utils/textLayout';
 
-export type CaptureFontSample = { text: string; autor: string };
+export type CaptureFontSample = { text: string; autor: string; fontId?: import('./fonts').ImageFontId };
 
 export type FileSaveHandle = FileSystemFileHandle;
 
@@ -60,7 +60,7 @@ export async function captureElementAsBlob(
   mime: 'image/png' | 'image/jpeg',
   fontSample?: CaptureFontSample
 ): Promise<Blob> {
-  const { text, autor } = fontSample ?? { text: '', autor: '' };
+  const { text, autor, fontId } = fontSample ?? { text: '', autor: '' };
   const w = node.offsetWidth || Number(node.getAttribute('data-mm-width')) || 1080;
   const h = node.offsetHeight || Number(node.getAttribute('data-mm-height')) || 1080;
 
@@ -68,7 +68,7 @@ export async function captureElementAsBlob(
 
   const plan = computeImageLayout(text, autor, w, h);
   assertLayoutReady(plan);
-  await ensureCaptureFontsReady(text, autor);
+  await ensureCaptureFontsReady(text, autor, fontId);
 
   await waitForLayoutStable(node);
   assertQuoteBlockFits(node);

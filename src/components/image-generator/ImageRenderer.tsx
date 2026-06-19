@@ -22,10 +22,22 @@ export interface ImageRendererProps {
   collectionName: string;
   serial: string;
   quoteMeta?: Pick<ImageGeneratorQuote, 'id' | 'categoria' | 'locale'>;
+  fontFamilyOverride?: string;
+  textColorOverride?: string | null;
 }
 
 const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function ImageRenderer(
-  { texto, autor, format, skin, collectionName, serial, quoteMeta },
+  {
+    texto,
+    autor,
+    format,
+    skin,
+    collectionName,
+    serial,
+    quoteMeta,
+    fontFamilyOverride,
+    textColorOverride,
+  },
   ref
 ) {
   const layout = useMemo(() => {
@@ -41,7 +53,10 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
     return plan;
   }, [texto, autor, format.width, format.height]);
 
-  const fontFamily = useMemo(() => imageFontFamilyFor(texto, autor), [texto, autor]);
+  const fontFamily = useMemo(
+    () => fontFamilyOverride ?? imageFontFamilyFor(texto, autor),
+    [fontFamilyOverride, texto, autor]
+  );
   const { zones } = layout;
   const formatProfile = resolveFooterFormatProfile(format.width, format.height);
 
@@ -84,6 +99,10 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
   };
 
   const authorTrim = autor?.trim() ?? '';
+  const quoteColorStyle = textColorOverride ? { color: textColorOverride } : undefined;
+  const authorColorStyle = textColorOverride
+    ? { color: textColorOverride, opacity: 0.94 }
+    : undefined;
 
   return (
     <div
@@ -200,7 +219,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         aria-label="Citação"
       >
         <blockquote
-          className={`font-bold m-0 mx-auto text-center shrink-0 ${skin.textClass}`}
+          className={`font-bold m-0 mx-auto text-center shrink-0 ${textColorOverride ? '' : skin.textClass}`}
           style={{
             fontSize: layout.quotePx,
             lineHeight: `${layout.lineHeight}px`,
@@ -208,6 +227,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
             fontWeight: 700,
             letterSpacing: layout.lines.length <= 3 ? '-0.02em' : '-0.01em',
             textShadow: '0 2px 12px rgba(0,0,0,0.25)',
+            ...quoteColorStyle,
           }}
         >
           {layout.lines.map((line, i) => (
@@ -223,7 +243,9 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
       {authorTrim ? (
         <section
           data-mm-author-zone
-          className={`absolute left-0 right-0 z-[22] flex items-center justify-center text-center pointer-events-none ${skin.accentClass}`}
+          className={`absolute left-0 right-0 z-[22] flex items-center justify-center text-center pointer-events-none ${
+            textColorOverride ? '' : skin.accentClass
+          }`}
           style={{
             top: zones.authorZoneTop,
             height: zones.authorZoneHeight,
@@ -239,7 +261,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
               lineHeight: `${Math.round(layout.authorPx * 1.22)}px`,
               maxWidth: '70%',
               fontWeight: 500,
-              opacity: 0.94,
+              ...(authorColorStyle ?? { opacity: 0.94 }),
             }}
           >
             — {authorTrim}

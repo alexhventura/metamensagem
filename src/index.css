@@ -171,22 +171,48 @@ html.mm-fonts-mono-ready {
   overflow: hidden;
 }
 
+.mm-image-editor-mobile-shell {
+  flex: 1;
+  min-height: 0;
+}
+
 .mm-mobile-editor-preview {
-  position: sticky;
-  top: 0;
-  z-index: 5;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   max-width: 100%;
-  max-height: min(42vh, 320px);
+  height: min(36vh, 280px);
+  min-height: 160px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   overflow: hidden;
   touch-action: none;
   -webkit-user-select: none;
   user-select: none;
   overscroll-behavior: contain;
+}
+
+.mm-mobile-editor-controls {
+  padding-bottom: calc(4.25rem + env(safe-area-inset-bottom, 0px));
+}
+
+.mm-quick-style-panel section {
+  scroll-margin-top: 0.5rem;
+}
+
+.mm-color-grid,
+.mm-font-picker,
+.mm-bg-grid,
+.mm-format-strip {
+  scrollbar-width: none;
+}
+
+.mm-color-grid::-webkit-scrollbar,
+.mm-font-picker::-webkit-scrollbar,
+.mm-bg-grid::-webkit-scrollbar,
+.mm-format-strip::-webkit-scrollbar {
+  display: none;
 }
 
 .mm-editor-mobile-bar {
@@ -195,30 +221,47 @@ html.mm-fonts-mono-ready {
   right: 0;
   bottom: 0;
   z-index: 60;
-  display: flex;
-  gap: 0.35rem;
-  padding: 0.5rem 0.65rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.5rem;
+  padding: 0.55rem 0.75rem calc(0.55rem + env(safe-area-inset-bottom, 0px));
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.12);
 }
 
 .mm-editor-mobile-bar-btn {
-  flex: 1;
   min-width: 0;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.15rem;
-  padding: 0.45rem 0.25rem;
+  gap: 0.2rem;
+  padding: 0.55rem 0.65rem;
   font-size: 0.65rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.1;
-  border-radius: 0.5rem;
+  border-radius: 0.85rem;
+  border: 1px solid transparent;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
   transition: transform 0.12s ease;
+}
+
+.mm-editor-mobile-bar-secondary {
+  min-width: 4.25rem;
+}
+
+.mm-editor-mobile-bar-primary {
+  flex-direction: row;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #fff;
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #d946ef 100%);
+  border-color: transparent;
+  box-shadow: 0 8px 28px rgba(168, 85, 247, 0.35);
 }
 
 .mm-editor-mobile-bar-btn:active:not(:disabled) {
@@ -232,23 +275,33 @@ html.mm-fonts-mono-ready {
 
 @media (max-width: 430px) {
   .mm-mobile-editor-preview {
-    max-height: min(38vh, 280px);
+    height: min(34vh, 260px);
+    min-height: 150px;
   }
 
   .mm-editor-mobile-bar-btn {
-    font-size: 0.6rem;
-    padding: 0.4rem 0.15rem;
+    font-size: 0.62rem;
+  }
+
+  .mm-editor-mobile-bar-primary {
+    font-size: 0.75rem;
   }
 }
 
 @media (max-width: 320px) {
   .mm-mobile-editor-preview {
-    max-height: min(36vh, 240px);
+    height: min(32vh, 220px);
+    min-height: 140px;
   }
 
   .mm-editor-mobile-bar {
-    gap: 0.25rem;
-    padding-inline: 0.4rem;
+    gap: 0.35rem;
+    padding-inline: 0.5rem;
+  }
+
+  .mm-editor-mobile-bar-secondary {
+    min-width: 3.5rem;
+    padding-inline: 0.45rem;
   }
 }
 

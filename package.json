@@ -68,6 +68,7 @@
     "test:header-home-nav": "tsx scripts/test-header-home-nav.mjs",
     "test:export-download": "tsx scripts/test-export-download.mjs",
     "test:cta-wiring": "tsx scripts/test-cta-wiring.mjs",
+    "test:mobile-editor-ux": "node scripts/test-mobile-editor-ux.mjs",
     "test:e2e-critical": "playwright test e2e/critical.spec.ts",
     "test:critical": "npm run test:header-home-nav && npm run test:export-download && npm run test:cta-wiring && npm run test:image-layout && npm run test:lighthouse-guards",
     "translations:weekly": "npm run translations:pull-demand && npm run translation-report && npm run build-translations && node scripts/merge-translation-queue.mjs data/translation-batch-built.json",

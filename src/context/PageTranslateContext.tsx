@@ -17,6 +17,7 @@ import {
   readPageTranslatePref,
 } from '../lib/translation/pageTranslateStorage';
 import { pageLanguageNativeName } from '../lib/translation/pageLanguages';
+import { shouldShowPageTranslate } from '../lib/translation/pageTranslateVisibility';
 import { CARD_LANG_SUCCESS_LABEL } from '../lib/translation/cardLanguages';
 import { matchSupportedUiLocale } from '../lib/uiLocale';
 import { useTranslatedViewMeta } from '../lib/useTranslatedViewMeta';
@@ -52,13 +53,14 @@ function pageLangToUiLocale(lang: CardLang): string {
 export function PageTranslateProvider({ children }: { children: ReactNode }) {
   const { i18n } = useTranslation();
   const registrations = useRef(new Map<string, ContentRegistration>());
-  const [targetLang, setTargetLang] = useState<CardLang | null>(() => readPageTranslatePref());
+  const [targetLang, setTargetLang] = useState<CardLang | null>(null);
   const [isTranslating, setIsTranslating] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [autoApplied, setAutoApplied] = useState(false);
+  const [translatableActive, setTranslatableActive] = useState(false);
+  const prefRef = useRef(readPageTranslatePref());
   const browserLang = useMemo(() => browserPreferredPageLang(), []);
 
-  useTranslatedViewMeta(targetLang !== null);
+  useTranslatedViewMeta(targetLang !== null && translatableActive);
 
   const translateOne = useCallback(async (reg: ContentRegistration, lang: CardLang) => {
     const source = reg.getSource();
@@ -125,21 +127,25 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
   const registerContent = useCallback(
     (registration: ContentRegistration) => {
       registrations.current.set(registration.id, registration);
-      if (targetLang) {
+
+      const canTranslate = shouldShowPageTranslate(registration.sourceLang);
+      if (canTranslate) {
+        setTranslatableActive(true);
+      }
+
+      const pref = prefRef.current;
+      if (canTranslate && pref && !targetLang) {
+        void runPageTranslation(pref);
+      } else if (targetLang && canTranslate) {
         void translateOne(registration, targetLang);
       }
+
       return () => {
         registrations.current.delete(registration.id);
       };
     },
-    [targetLang, translateOne]
+    [targetLang, translateOne, runPageTranslation]
   );
-
-  useEffect(() => {
-    if (!targetLang || autoApplied) return;
-    setAutoApplied(true);
-    void i18n.changeLanguage(pageLangToUiLocale(targetLang));
-  }, [autoApplied, i18n, targetLang]);
 
   useEffect(() => {
     const open = () => setIsModalOpen(true);

@@ -55,7 +55,8 @@ import { prefetchFraseDetail } from '../lib/prefetchFrase';
 import { trackPhraseEvent } from '../lib/analytics/phrasePopularity';
 import { languageOriginalLabel } from '../lib/languageDisplay';
 import { usePageContentTranslate } from '../hooks/usePageContentTranslate';
-import type { CardLang } from '../lib/translation/types';
+import { detectCardLanguage } from '../lib/translation/detect';
+import { shouldShowPageTranslate } from '../lib/translation/pageTranslateVisibility';
 
 function MudarMetaSEO({
   title,
@@ -342,10 +343,15 @@ export default function FraseDetalheView({
     [frase?.id, frase?.frase_original, frase?.autor_original, frase?.explicacao]
   );
 
+  const phraseLang = useMemo(
+    () => detectCardLanguage(frase ? fraseTextoOf(frase) : ''),
+    [frase?.id, frase?.frase_original]
+  );
+
   const { display } = usePageContentTranslate({
     id: frase?.id ?? slug ?? 'frase-detail',
     source: contentSource,
-    sourceLang: contentLocale as CardLang,
+    sourceLang: phraseLang,
   });
 
   const listItem = useMemo(() => (frase ? fraseToListItem(frase) : null), [frase]);
@@ -691,13 +697,14 @@ export default function FraseDetalheView({
                 </button>
               </CardTooltip>
 
-              <PageTranslateButton
-                tema={tema}
-                accent="purple"
-                variant="pill"
-                contentText={quoteText}
-                contentLang={contentLocale as CardLang}
-              />
+              {shouldShowPageTranslate(phraseLang) && (
+                <PageTranslateButton
+                  tema={tema}
+                  accent="purple"
+                  variant="pill"
+                  contentLang={phraseLang}
+                />
+              )}
 
               <CardTooltip text={t('common.generate_image', 'Gerar Imagem')} tema={tema}>
                 <button

@@ -29,6 +29,7 @@ import { formatTagForDisplay } from '../lib/tagDisplay';
 import { sanitizeTextForTranslation } from '../lib/textSanitize';
 import { usePageContentTranslate } from '../hooks/usePageContentTranslate';
 import { detectCardLanguage } from '../lib/translation/detect';
+import { shouldShowPageTranslate } from '../lib/translation/pageTranslateVisibility';
 import type { CardLang } from '../lib/translation/types';
 
 export default function ContentCard({
@@ -59,8 +60,8 @@ export default function ContentCard({
   );
 
   const contentLang = useMemo(
-    () => (isFrase ? detectCardLanguage(item.texto) : undefined),
-    [isFrase, item.texto]
+    () => detectCardLanguage(item.texto || item.titulo || item.resumo || ''),
+    [item.texto, item.titulo, item.resumo]
   );
 
   const { display } = usePageContentTranslate({
@@ -285,14 +286,15 @@ export default function ContentCard({
             </button>
           </CardTooltip>
 
-          <CardTooltip text={t('translate_page.button', 'Ler no meu idioma')} tema={tema}>
-            <PageTranslateButton
-              tema={tema}
-              accent={accent}
-              contentText={bodyText}
-              contentLang={contentLang as CardLang | undefined}
-            />
-          </CardTooltip>
+          {shouldShowPageTranslate(contentLang) && (
+            <CardTooltip text={t('translate_page.read_in_pt', '🌎 Ler em Português')} tema={tema}>
+              <PageTranslateButton
+                tema={tema}
+                accent={accent}
+                contentLang={contentLang}
+              />
+            </CardTooltip>
+          )}
 
           {isFrase && onGenerateImage && (
             <CardTooltip text={t('common.generate_image', 'Gerar Imagem')} tema={tema}>

@@ -39,7 +39,7 @@ import { HOME_FRASE_POOL_SIZE, pathNeedsFullCatalog, sampleShuffled } from './li
 import PageTranslateButton from './components/PageTranslateButton';
 import { usePageContentTranslate } from './hooks/usePageContentTranslate';
 import { detectCardLanguage } from './lib/translation/detect';
-import type { CardLang } from './lib/translation/types';
+import { shouldShowPageTranslate } from './lib/translation/pageTranslateVisibility';
 import { sanitizeTextForTranslation } from './lib/textSanitize';
 
 const SocialHub = lazy(() => import('./components/SocialHub'));
@@ -975,10 +975,15 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
     [item?.id, item?.texto, item?.titulo, item?.resumo, item?.autor]
   );
 
+  const metaforaLang = useMemo(
+    () => detectCardLanguage(item?.texto || item?.titulo || ''),
+    [item?.id, item?.texto, item?.titulo]
+  );
+
   const { display } = usePageContentTranslate({
     id: item ? `metafora-${item.id}` : 'metafora-detail',
     source: contentSource,
-    sourceLang: item?.texto ? detectCardLanguage(item.texto) : undefined,
+    sourceLang: metaforaLang,
   });
 
   const navigation = useMemo(() => {
@@ -1134,16 +1139,16 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
               <Copy size={18} />
             </button>
           </CardTooltip>
-          <CardTooltip text={t('translate_page.button', 'Ler no meu idioma')} tema={tema}>
-            <PageTranslateButton
-              tema={tema}
-              accent="pink"
-              variant="pill"
-              contentText={display.texto || item.texto}
-              contentLang={item.texto ? (detectCardLanguage(item.texto) as CardLang) : undefined}
-              menuPlacement="bottom"
-            />
-          </CardTooltip>
+          {shouldShowPageTranslate(metaforaLang) && (
+            <CardTooltip text={t('translate_page.read_in_pt', '🌎 Ler em Português')} tema={tema}>
+              <PageTranslateButton
+                tema={tema}
+                accent="pink"
+                variant="pill"
+                contentLang={metaforaLang}
+              />
+            </CardTooltip>
+          )}
           <CardTooltip text={t('common.share')} tema={tema}>
             <button
               type="button"

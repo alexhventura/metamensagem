@@ -2,6 +2,7 @@ import { forwardRef, useMemo } from 'react';
 import type { FormatConfig, ImageGeneratorQuote } from './types';
 import type { SkinConfig } from './types';
 import { decorativeOrbsForSkin, watermarkOpacityForSkin } from './utils/decorativeLayer';
+import type { ImageFontId } from './fonts';
 import { imageFontFamilyFor } from './utils/imageFonts';
 import {
   computeImageLayout,
@@ -24,6 +25,7 @@ export interface ImageRendererProps {
   quoteMeta?: Pick<ImageGeneratorQuote, 'id' | 'categoria' | 'locale'>;
   fontFamilyOverride?: string;
   textColorOverride?: string | null;
+  fontId?: ImageFontId;
 }
 
 const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function ImageRenderer(
@@ -37,11 +39,12 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
     quoteMeta,
     fontFamilyOverride,
     textColorOverride,
+    fontId,
   },
   ref
 ) {
   const layout = useMemo(() => {
-    const plan = computeImageLayout(texto, autor, format.width, format.height);
+    const plan = computeImageLayout(texto, autor, format.width, format.height, { fontId });
     if (!plan.quoteFits && import.meta.env.DEV) {
       console.warn('[ImageRenderer] frase excede QUOTE_ZONE', {
         chars: texto.length,
@@ -51,7 +54,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
       });
     }
     return plan;
-  }, [texto, autor, format.width, format.height]);
+  }, [texto, autor, format.width, format.height, fontId]);
 
   const fontFamily = useMemo(
     () => fontFamilyOverride ?? imageFontFamilyFor(texto, autor),
@@ -212,7 +215,9 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           maxHeight: zones.quoteZoneHeight,
           overflow: 'hidden',
           paddingTop: layout.quotePaddingTop,
-          paddingBottom: 0,
+          paddingBottom: layout.quotePaddingBottom,
+          paddingLeft: 8,
+          paddingRight: 8,
           justifyContent: 'flex-start',
           alignItems: 'center',
         }}

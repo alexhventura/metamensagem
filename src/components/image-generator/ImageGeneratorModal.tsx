@@ -116,7 +116,10 @@ export default function ImageGeneratorModal({
     collectionId === recommendation.collectionId &&
     skinId === recommendation.skinId;
 
-  const previewScale = useImagePreviewScale(formatCfg.width, formatCfg.height, open);
+  const previewScale = useImagePreviewScale(formatCfg.width, formatCfg.height, open, {
+    containerRef: previewRef,
+    verticalReserve: isOnRecommendation ? 36 : 0,
+  });
   const { userScale, userPan, reset: resetPreviewGestures } = usePreviewTouchGestures(
     isMobile && open,
     previewRef
@@ -275,6 +278,7 @@ export default function ImageGeneratorModal({
     quoteMeta,
     fontFamilyOverride,
     textColorOverride,
+    fontId,
   };
 
   const previewBlock = (

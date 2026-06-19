@@ -66,7 +66,7 @@ export async function captureElementAsBlob(
 
   exportDebug('capture-start', { mime, w, h });
 
-  const plan = computeImageLayout(text, autor, w, h);
+  const plan = computeImageLayout(text, autor, w, h, { fontId: fontSample?.fontId });
   assertLayoutReady(plan);
   await ensureCaptureFontsReady(text, autor, fontId);
 

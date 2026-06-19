@@ -89,10 +89,10 @@ export function computeLayoutZones(
   const authorZoneTop = footerTop - authorZoneHeight;
   const quoteZoneTop = headerHeight + zoneGap;
   const quoteZoneBottom = authorZoneTop - zoneGap;
-  const quoteZoneHeight = Math.max(
-    Math.round(height * QUOTE_ZONE_MIN_RATIO[density]),
-    quoteZoneBottom - quoteZoneTop
-  );
+  const naturalQuoteHeight = Math.max(0, quoteZoneBottom - quoteZoneTop);
+  const minQuoteHeight = Math.round(height * QUOTE_ZONE_MIN_RATIO[density]);
+  // Nunca exceder o espaço real entre header e autor — evita corte sobre zonas vizinhas.
+  const quoteZoneHeight = Math.min(naturalQuoteHeight, Math.max(minQuoteHeight, naturalQuoteHeight));
 
   const logoPx = Math.round(
     Math.min(width * LOGO_MAX_RATIO, headerHeight * 0.55, 88) * r.logoScale

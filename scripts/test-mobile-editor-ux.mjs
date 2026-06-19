@@ -34,6 +34,8 @@ assert('Seleção de fonte no renderer', read('src/components/image-generator/Im
 assert('Override de cor no renderer', read('src/components/image-generator/ImageRenderer.tsx').includes('textColorOverride'));
 assert('Painel sempre visível (sem accordion)', quickPanel.includes('Formato') && quickPanel.includes('Cores') && quickPanel.includes('Fonte') && quickPanel.includes('Fundo'));
 assert('Export offscreen (sem overlay no mobile)', modal.includes('mm-image-export-offscreen') && !modal.includes('-left-[200vw]'));
+assert('Preview mede container real', read('src/components/image-generator/useImagePreviewScale.ts').includes('ResizeObserver'));
+assert('Layout considera fonte escolhida', read('src/components/image-generator/ImageRenderer.tsx').includes('fontId'));
 
 const failed = checks.filter((c) => !c.ok);
 for (const c of checks) {

@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import { initThemeOnLoad } from './lib/theme';
 import { ThemeProvider } from './context/ThemeContext';
+import { PageTranslateProvider } from './context/PageTranslateContext';
 import { initLcpObserver } from './lib/perf/lcpObserver';
 import { initAnalytics } from './lib/analytics';
 import { startPerformanceReporter } from './lib/observability/performanceReporter';
@@ -38,7 +39,8 @@ if (typeof requestIdleCallback === 'function') {
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>
-      <Suspense
+      <PageTranslateProvider>
+        <Suspense
         fallback={
           <div className="min-h-screen flex items-center justify-center bg-black text-white">
             <div className="w-10 h-10 border-4 border-[#A855F7] border-t-transparent rounded-full animate-spin" />
@@ -46,7 +48,8 @@ createRoot(document.getElementById('root')!).render(
         }
       >
         <App />
-      </Suspense>
+        </Suspense>
+      </PageTranslateProvider>
     </ThemeProvider>
   </StrictMode>
 );

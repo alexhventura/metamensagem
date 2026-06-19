@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import type { CardContentDisplay, CardContentSource, CardLang } from '../lib/translation/types';
+import type { CardContentDisplay, CardContentSource } from '../lib/translation/types';
 import { usePageTranslateOptional } from '../context/PageTranslateContext';
 
 /**
@@ -9,7 +9,6 @@ import { usePageTranslateOptional } from '../context/PageTranslateContext';
 export function usePageContentTranslate(options: {
   id: string;
   source: CardContentSource;
-  sourceLang?: CardLang;
 }): {
   display: CardContentDisplay;
   isPageTranslating: boolean;
@@ -45,9 +44,8 @@ export function usePageContentTranslate(options: {
       id: options.id,
       getSource: () => sourceRef.current,
       setDisplay,
-      sourceLang: options.sourceLang,
     });
-  }, [ctx, options.id, options.sourceLang, ctx?.targetLang]);
+  }, [ctx, options.id, ctx?.targetLang]);
 
   return {
     display,

@@ -15,9 +15,9 @@ import {
   browserPreferredPageLang,
   persistPageTranslatePref,
   readPageTranslatePref,
+  resolvePageLocale,
 } from '../lib/translation/pageTranslateStorage';
 import { pageLanguageNativeName } from '../lib/translation/pageLanguages';
-import { shouldShowPageTranslate } from '../lib/translation/pageTranslateVisibility';
 import { CARD_LANG_SUCCESS_LABEL } from '../lib/translation/cardLanguages';
 import { matchSupportedUiLocale } from '../lib/uiLocale';
 import { useTranslatedViewMeta } from '../lib/useTranslatedViewMeta';
@@ -27,11 +27,10 @@ type ContentRegistration = {
   id: string;
   getSource: () => CardContentSource;
   setDisplay: (display: CardContentDisplay) => void;
-  sourceLang?: CardLang;
 };
 
 type PageTranslateContextValue = {
-  targetLang: CardLang | null;
+  targetLang: CardLang;
   isTranslating: boolean;
   isModalOpen: boolean;
   openModal: () => void;
@@ -41,41 +40,44 @@ type PageTranslateContextValue = {
   registerContent: (registration: ContentRegistration) => () => void;
   browserLang: CardLang | null;
   successLabel: string | null;
+  isNormalizedView: boolean;
 };
 
 const PageTranslateContext = createContext<PageTranslateContextValue | null>(null);
 
 function pageLangToUiLocale(lang: CardLang): string {
-  const ui = matchSupportedUiLocale(lang);
-  return ui ?? 'en';
+  return matchSupportedUiLocale(lang) ?? 'en';
 }
 
 export function PageTranslateProvider({ children }: { children: ReactNode }) {
   const { i18n } = useTranslation();
   const registrations = useRef(new Map<string, ContentRegistration>());
-  const [targetLang, setTargetLang] = useState<CardLang | null>(null);
+  const initialLocale = useMemo(() => resolvePageLocale(), []);
+  const [targetLang, setTargetLang] = useState<CardLang>(initialLocale);
   const [isTranslating, setIsTranslating] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [translatableActive, setTranslatableActive] = useState(false);
-  const prefRef = useRef(readPageTranslatePref());
+  const [isNormalizedView, setIsNormalizedView] = useState(false);
+  const originalMode = useRef(false);
+  const autoStarted = useRef(false);
   const browserLang = useMemo(() => browserPreferredPageLang(), []);
 
-  useTranslatedViewMeta(targetLang !== null && translatableActive);
+  useTranslatedViewMeta(isNormalizedView);
 
   const translateOne = useCallback(async (reg: ContentRegistration, lang: CardLang) => {
     const source = reg.getSource();
     if (!source.texto?.trim()) {
       reg.setDisplay({ ...source, isTranslated: false });
-      return;
+      return false;
     }
     try {
       const result = await translateCardContent(source, lang, {
         contentId: reg.id,
-        sourceLang: reg.sourceLang,
       });
-      reg.setDisplay(result.isTranslated ? result : { ...source, isTranslated: false });
+      reg.setDisplay(result);
+      return result.isTranslated;
     } catch {
       reg.setDisplay({ ...source, isTranslated: false, translationFailed: true, targetLang: lang });
+      return false;
     }
   }, []);
 
@@ -84,14 +86,23 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
       const source = reg.getSource();
       reg.setDisplay({ ...source, isTranslated: false, translationFailed: false });
     }
+    setIsNormalizedView(false);
   }, []);
 
   const runPageTranslation = useCallback(
     async (lang: CardLang | null) => {
       if (!lang) {
         resetAll();
-        setTargetLang(null);
         persistPageTranslatePref(null);
+        setTargetLang(resolvePageLocale());
+        const fromPath = matchSupportedUiLocale(
+          window.location.pathname.split('/').filter(Boolean)[0]
+        );
+        if (fromPath) {
+          await i18n.changeLanguage(fromPath);
+        } else {
+          await i18n.changeLanguage(pageLangToUiLocale(resolvePageLocale()));
+        }
         return;
       }
 
@@ -100,8 +111,10 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
       setTargetLang(lang);
       await i18n.changeLanguage(pageLangToUiLocale(lang));
 
-      const tasks = [...registrations.current.values()].map((reg) => translateOne(reg, lang));
-      await Promise.all(tasks);
+      const results = await Promise.all(
+        [...registrations.current.values()].map((reg) => translateOne(reg, lang))
+      );
+      setIsNormalizedView(results.some(Boolean));
       setIsTranslating(false);
     },
     [i18n, resetAll, translateOne]
@@ -110,6 +123,7 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
   const selectLanguage = useCallback(
     async (lang: CardLang) => {
       setIsModalOpen(false);
+      originalMode.current = false;
       await runPageTranslation(lang);
     },
     [runPageTranslation]
@@ -117,35 +131,41 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
 
   const resetToOriginal = useCallback(async () => {
     setIsModalOpen(false);
-    await runPageTranslation(null);
-    const fromPath = matchSupportedUiLocale(window.location.pathname.split('/').filter(Boolean)[0]);
+    originalMode.current = true;
+    resetAll();
+    persistPageTranslatePref(null);
+    const fromPath = matchSupportedUiLocale(
+      window.location.pathname.split('/').filter(Boolean)[0]
+    );
     if (fromPath) {
       await i18n.changeLanguage(fromPath);
+    } else {
+      await i18n.changeLanguage(pageLangToUiLocale(resolvePageLocale()));
     }
-  }, [i18n, runPageTranslation]);
+  }, [i18n, resetAll]);
 
   const registerContent = useCallback(
     (registration: ContentRegistration) => {
       registrations.current.set(registration.id, registration);
-
-      const canTranslate = shouldShowPageTranslate(registration.sourceLang);
-      if (canTranslate) {
-        setTranslatableActive(true);
+      if (!originalMode.current && targetLang) {
+        void translateOne(registration, targetLang).then((changed) => {
+          if (changed) setIsNormalizedView(true);
+        });
       }
-
-      const pref = prefRef.current;
-      if (canTranslate && pref && !targetLang) {
-        void runPageTranslation(pref);
-      } else if (targetLang && canTranslate) {
-        void translateOne(registration, targetLang);
-      }
-
       return () => {
         registrations.current.delete(registration.id);
       };
     },
-    [targetLang, translateOne, runPageTranslation]
+    [targetLang, translateOne]
   );
+
+  useEffect(() => {
+    if (autoStarted.current || originalMode.current) return;
+    autoStarted.current = true;
+    const pref = readPageTranslatePref();
+    const locale = pref ?? browserLang ?? 'pt';
+    void runPageTranslation(locale);
+  }, [runPageTranslation, browserLang]);
 
   useEffect(() => {
     const open = () => setIsModalOpen(true);
@@ -153,9 +173,8 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
     return () => window.removeEventListener('mm-open-page-translate', open);
   }, []);
 
-  const successLabel = targetLang
-    ? CARD_LANG_SUCCESS_LABEL[targetLang] ?? pageLanguageNativeName(targetLang)
-    : null;
+  const successLabel =
+    CARD_LANG_SUCCESS_LABEL[targetLang] ?? pageLanguageNativeName(targetLang);
 
   const value = useMemo<PageTranslateContextValue>(
     () => ({
@@ -169,6 +188,7 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
       registerContent,
       browserLang,
       successLabel,
+      isNormalizedView,
     }),
     [
       targetLang,
@@ -179,6 +199,7 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
       registerContent,
       browserLang,
       successLabel,
+      isNormalizedView,
     ]
   );
 
@@ -198,7 +219,6 @@ export function usePageTranslate(): PageTranslateContextValue {
   return ctx;
 }
 
-/** Opcional — retorna null fora do provider (ex.: testes). */
 export function usePageTranslateOptional(): PageTranslateContextValue | null {
   return useContext(PageTranslateContext);
 }

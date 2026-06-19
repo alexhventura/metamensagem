@@ -1,5 +1,6 @@
 import type { CardLang } from './types';
 import { PAGE_TRANSLATE_LANGUAGES } from './pageLanguages';
+import { pageLanguageNativeName } from './pageLanguages';
 
 const STORAGE_KEY = 'mm-page-translate-pref';
 
@@ -33,3 +34,10 @@ export function browserPreferredPageLang(): CardLang | null {
   }
   return null;
 }
+
+/** Prioridade: localStorage → navegador → pt (idioma principal do acervo). */
+export function resolvePageLocale(): CardLang {
+  return readPageTranslatePref() ?? browserPreferredPageLang() ?? 'pt';
+}
+
+export { STORAGE_KEY, SUPPORTED as PAGE_LOCALE_SUPPORTED };

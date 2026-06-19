@@ -38,8 +38,6 @@ import { loadHomeBootstrap, ensureFullCatalogLoaded, type CatalogLoadResult } fr
 import { HOME_FRASE_POOL_SIZE, pathNeedsFullCatalog, sampleShuffled } from './lib/catalogLimits';
 import PageTranslateButton from './components/PageTranslateButton';
 import { usePageContentTranslate } from './hooks/usePageContentTranslate';
-import { detectCardLanguage } from './lib/translation/detect';
-import { shouldShowPageTranslate } from './lib/translation/pageTranslateVisibility';
 import { sanitizeTextForTranslation } from './lib/textSanitize';
 
 const SocialHub = lazy(() => import('./components/SocialHub'));
@@ -224,6 +222,7 @@ export default function App() {
             </nav>
 
             <div className="flex items-center gap-2 md:gap-4">
+              <PageTranslateButton tema={tema} accent="purple" variant="header" />
               <button
                 type="button"
                 onClick={toggleTema}
@@ -975,15 +974,9 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
     [item?.id, item?.texto, item?.titulo, item?.resumo, item?.autor]
   );
 
-  const metaforaLang = useMemo(
-    () => detectCardLanguage(item?.texto || item?.titulo || ''),
-    [item?.id, item?.texto, item?.titulo]
-  );
-
   const { display } = usePageContentTranslate({
     id: item ? `metafora-${item.id}` : 'metafora-detail',
     source: contentSource,
-    sourceLang: metaforaLang,
   });
 
   const navigation = useMemo(() => {
@@ -1139,16 +1132,9 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
               <Copy size={18} />
             </button>
           </CardTooltip>
-          {shouldShowPageTranslate(metaforaLang) && (
-            <CardTooltip text={t('translate_page.read_in_pt', '🌎 Ler em Português')} tema={tema}>
-              <PageTranslateButton
-                tema={tema}
-                accent="pink"
-                variant="pill"
-                contentLang={metaforaLang}
-              />
-            </CardTooltip>
-          )}
+          <CardTooltip text={t('translate_page.button_short', 'Traduzir página')} tema={tema}>
+            <PageTranslateButton tema={tema} accent="pink" variant="pill" />
+          </CardTooltip>
           <CardTooltip text={t('common.share')} tema={tema}>
             <button
               type="button"

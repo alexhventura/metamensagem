@@ -6,16 +6,12 @@ import { pageLanguageNativeName } from '../lib/translation/pageLanguages';
 import {
   pageTranslateButtonAriaLabel,
   pageTranslateButtonShortLabel,
-  shouldShowPageTranslate,
 } from '../lib/translation/pageTranslateVisibility';
-import type { CardLang } from '../lib/translation/types';
 
 type PageTranslateButtonProps = {
   tema: string;
   accent?: CardAccent;
-  contentText?: string;
-  contentLang?: CardLang;
-  variant?: 'icon' | 'pill';
+  variant?: 'icon' | 'pill' | 'header';
   buttonClassName?: string;
   className?: string;
 };
@@ -38,17 +34,12 @@ function openTranslateModalFallback(): void {
 export default function PageTranslateButton({
   tema,
   accent = 'purple',
-  contentLang,
   variant = 'icon',
   buttonClassName,
   className,
 }: PageTranslateButtonProps) {
   const { t } = useTranslation();
   const ctx = usePageTranslateOptional();
-
-  if (!shouldShowPageTranslate(contentLang)) {
-    return null;
-  }
 
   const openModal = () => {
     if (ctx) ctx.openModal();
@@ -57,13 +48,20 @@ export default function PageTranslateButton({
 
   const isTranslating = ctx?.isTranslating ?? false;
   const activeLang = ctx?.targetLang ?? null;
-  const shortLabel = pageTranslateButtonShortLabel(contentLang, activeLang);
-  const ariaLabel = pageTranslateButtonAriaLabel(contentLang, activeLang);
+  const shortLabel = pageTranslateButtonShortLabel(activeLang);
+  const ariaLabel = pageTranslateButtonAriaLabel(activeLang);
+
+  const headerClass =
+    tema === 'light'
+      ? 'hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-[11px] font-semibold tracking-tight border border-purple-200/80 bg-purple-50/80 text-purple-700 hover:bg-purple-100 transition-all'
+      : 'hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-[11px] font-semibold tracking-tight border border-purple-500/25 bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition-all';
 
   const baseClass =
-    variant === 'pill'
-      ? `inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] ${translateBtnClass(tema, accent)}`
-      : `${CARD_ACTION_BTN} ${buttonClassName ?? translateBtnClass(tema, accent)}`;
+    variant === 'header'
+      ? headerClass
+      : variant === 'pill'
+        ? `inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold tracking-tight transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] ${translateBtnClass(tema, accent)}`
+        : `${CARD_ACTION_BTN} ${buttonClassName ?? translateBtnClass(tema, accent)}`;
 
   return (
     <div className={`inline-flex flex-col items-end gap-1 ${className ?? ''}`}>
@@ -82,15 +80,17 @@ export default function PageTranslateButton({
         onClick={openModal}
         className={`mm-page-translate-trigger ${baseClass}`}
       >
-        {variant === 'pill' ? (
+        {variant === 'icon' ? (
+          <span className="text-base leading-none" aria-hidden>
+            🌎
+          </span>
+        ) : (
           <span className="whitespace-nowrap">
             {isTranslating
               ? t('translate_page.translating_short', 'Traduzindo…')
-              : shortLabel}
-          </span>
-        ) : (
-          <span className="text-base leading-none" aria-hidden>
-            🌎
+              : variant === 'header'
+                ? t('translate_page.button_short', 'Traduzir página')
+                : shortLabel}
           </span>
         )}
       </button>

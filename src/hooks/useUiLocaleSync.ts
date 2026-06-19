@@ -1,11 +1,20 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { matchSupportedUiLocale, persistUiLocale, resolveUiLocale, uiLocaleFromPathname } from '../lib/uiLocale';
+import {
+  matchSupportedUiLocale,
+  persistUiLocale,
+  resolveUiLocale,
+  uiLocaleFromPathname,
+} from '../lib/uiLocale';
+import { readPageTranslatePref } from '../lib/translation/pageTranslateStorage';
+
+function pagePrefToUiLocale(pref: string): string {
+  return matchSupportedUiLocale(pref) ?? 'en';
+}
 
 /**
- * Sincroniza idioma da INTERFACE (botões, menus) com URL / storage / navegador.
- * Preferência de tradução de página é aplicada pelo PageTranslateProvider.
+ * Sincroniza idioma da INTERFACE com URL / preferência de tradução / navegador.
  */
 export function useUiLocaleSync(): void {
   const { pathname } = useLocation();
@@ -22,6 +31,16 @@ export function useUiLocaleSync(): void {
       return;
     }
 
+    const pagePref = readPageTranslatePref();
+    if (pagePref) {
+      const next = pagePrefToUiLocale(pagePref);
+      const current = matchSupportedUiLocale(i18n.language);
+      if (current !== next) {
+        void i18n.changeLanguage(next);
+      }
+      return;
+    }
+
     const next = resolveUiLocale(pathname);
     const current = matchSupportedUiLocale(i18n.language);
     if (current !== next) {
@@ -31,7 +50,6 @@ export function useUiLocaleSync(): void {
   }, [pathname, i18n]);
 }
 
-/** Renderizar dentro de `<BrowserRouter>`. */
 export function UiLocaleSync() {
   useUiLocaleSync();
   return null;

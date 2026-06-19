@@ -1,39 +1,21 @@
-import type { CardLang } from './types';
 import { pageLanguageNativeName } from './pageLanguages';
+import type { CardLang } from './types';
 
-/** Exibe tradução apenas quando o conteúdo principal não está em português. */
-export function shouldShowPageTranslate(contentLang?: CardLang): boolean {
-  return !!contentLang && contentLang !== 'pt';
+/** Botão de tradução sempre disponível — padronização por idioma do visitante. */
+export function shouldShowPageTranslate(): boolean {
+  return true;
 }
 
-/** Idioma sugerido no modal — português para visitantes do acervo BR. */
-export function defaultPageTranslateTarget(contentLang?: CardLang): CardLang {
-  if (contentLang && contentLang !== 'pt') return 'pt';
-  return 'pt';
-}
-
-export function pageTranslateButtonShortLabel(
-  contentLang: CardLang | undefined,
-  activeTarget: CardLang | null
-): string {
+export function pageTranslateButtonShortLabel(activeTarget: CardLang | null): string {
   if (activeTarget) {
     return `🌎 ${pageLanguageNativeName(activeTarget)}`;
-  }
-  if (contentLang && contentLang !== 'pt') {
-    return '🌎 Ler em Português';
   }
   return '🌎 Traduzir página';
 }
 
-export function pageTranslateButtonAriaLabel(
-  contentLang: CardLang | undefined,
-  activeTarget: CardLang | null
-): string {
+export function pageTranslateButtonAriaLabel(activeTarget: CardLang | null): string {
   if (activeTarget) {
     return `Idioma ativo: ${pageLanguageNativeName(activeTarget)}. Alterar tradução.`;
   }
-  if (contentLang && contentLang !== 'pt') {
-    return 'Traduzir página para português';
-  }
-  return 'Traduzir página';
+  return 'Traduzir página inteira';
 }

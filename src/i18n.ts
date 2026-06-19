@@ -86,7 +86,6 @@ const resources = {
       },
       "translate_page": {
         "button": "🌎 Traduzir página",
-        "read_in_pt": "🌎 Ler em Português",
         "button_short": "Traduzir página",
         "button_active": "Idioma: {{lang}}. Alterar tradução.",
         "modal_title": "🌎 Traduzir página",

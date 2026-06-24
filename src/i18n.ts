@@ -78,18 +78,23 @@ const resources = {
         "original": "Ver original",
         "retry": "Tentar novamente",
         "contingency_title": "Tradução oficial em preparação",
-        "contingency_body": "Esta frase ainda não possui tradução oficial para o idioma selecionado. Sua solicitação foi registrada e ajudará a priorizar futuras traduções do MetaMensagem. Caso deseje visualizar esta página imediatamente, você pode utilizar a tradução integrada do seu navegador.",
+        "contingency_body": "Esta frase ainda não possui tradução oficial para o idioma selecionado. Sua solicitação foi registrada e ajudará a priorizar futuras traduções do MetaMensagem. Tente outro idioma ou volte em breve.",
         "contingency_short": "Solicitação registrada",
         "pending_short": "Pedido registrado — em breve",
         "pending_title": "Esta frase ainda não possui tradução disponível.",
         "pending_body": "Seu pedido foi registrado e a tradução será preparada automaticamente. Volte em alguns minutos ou tente novamente mais tarde."
       },
       "translate_page": {
-        "button": "Ler no meu idioma",
-        "title": "Traduzir página inteira",
-        "body": "Use a tradução nativa do Chrome, Edge ou Safari para traduzir frase, explicação, tags, menus e navegação de uma só vez.",
-        "step_desktop": "No desktop, clique com o botão direito na página e escolha \"Traduzir\".",
-        "step_mobile": "No celular, abra o menu do navegador e toque em \"Traduzir\"."
+        "button": "🌎 Traduzir página",
+        "button_short": "Traduzir página",
+        "button_active": "Idioma: {{lang}}. Alterar tradução.",
+        "modal_title": "🌎 Traduzir página",
+        "modal_subtitle": "Escolha o idioma desejado.",
+        "modal_note": "A tradução será aplicada à página inteira.",
+        "translating_page": "✓ Traduzindo página...",
+        "translating_short": "Traduzindo…",
+        "close": "Fechar",
+        "language_list": "Idiomas disponíveis"
       },
       "editor": {
         "title": "Gerar Post Premium",
@@ -186,17 +191,23 @@ const resources = {
         "original": "View original",
         "retry": "Try again",
         "contingency_title": "Official translation in progress",
-        "contingency_body": "This quote does not yet have an official translation for the selected language. Your request has been recorded and will help prioritize future MetaMensagem translations. To view this page right away, you can use your browser's built-in translation.",
+        "contingency_body": "This quote does not yet have an official translation for the selected language. Your request has been recorded and will help prioritize future MetaMensagem translations. Try another language or check back soon.",
         "contingency_short": "Request recorded",
         "pending_title": "Translation not yet available.",
         "pending_body": "This quote has been added to the translation queue and will be available soon."
       },
       "translate_page": {
-        "button": "Read in my language",
-        "title": "Translate the whole page",
-        "body": "Use Chrome, Edge, or Safari's built-in translation to translate the quote, explanation, tags, menus, and navigation at once.",
-        "step_desktop": "On desktop, right-click the page and choose \"Translate\".",
-        "step_mobile": "On mobile, open the browser menu and tap \"Translate\"."
+        "button": "🌎 Translate page",
+        "read_in_pt": "🌎 Read in Portuguese",
+        "button_short": "Translate page",
+        "button_active": "Language: {{lang}}. Change translation.",
+        "modal_title": "🌎 Translate page",
+        "modal_subtitle": "Choose your language.",
+        "modal_note": "Translation applies to the entire page.",
+        "translating_page": "✓ Translating page...",
+        "translating_short": "Translating…",
+        "close": "Close",
+        "language_list": "Available languages"
       },
       "editor": {
         "title": "Generate Premium Post",
@@ -263,15 +274,19 @@ const resources = {
         "original": "Ver original",
         "retry": "Intentar de nuevo",
         "contingency_title": "Traducción oficial en preparación",
-        "contingency_body": "Esta frase aún no tiene traducción oficial para el idioma seleccionado. Tu solicitud quedó registrada y ayudará a priorizar futuras traducciones de MetaMensagem. Si deseas ver esta página de inmediato, puedes usar la traducción integrada de tu navegador.",
+        "contingency_body": "Esta frase aún no tiene traducción oficial para el idioma seleccionado. Tu solicitud quedó registrada y ayudará a priorizar futuras traducciones de MetaMensagem. Prueba otro idioma o vuelve pronto.",
         "contingency_short": "Solicitud registrada"
       },
       "translate_page": {
-        "button": "Leer en mi idioma",
-        "title": "Traducir página completa",
-        "body": "Usa la traducción nativa de Chrome, Edge o Safari para traducir frase, explicación, etiquetas, menús y navegación a la vez.",
-        "step_desktop": "En desktop, haz clic derecho en la página y elige \"Traducir\".",
-        "step_mobile": "En el móvil, abre el menú del navegador y toca \"Traducir\"."
+        "button": "🌎 Traducir página",
+        "read_in_pt": "🌎 Leer en portugués",
+        "modal_title": "🌎 Traducir página",
+        "modal_subtitle": "Elige el idioma deseado.",
+        "modal_note": "La traducción se aplicará a toda la página.",
+        "translating_page": "✓ Traduciendo página...",
+        "translating_short": "Traduciendo…",
+        "close": "Cerrar",
+        "language_list": "Idiomas disponibles"
       },
       "editor": {
         "title": "Generar Post Premium",
@@ -338,15 +353,19 @@ const resources = {
         "original": "Voir l'original",
         "retry": "Réessayer",
         "contingency_title": "Traduction officielle en préparation",
-        "contingency_body": "Cette citation n'a pas encore de traduction officielle pour la langue sélectionnée. Votre demande a été enregistrée et aidera à prioriser les prochaines traductions MetaMensagem. Pour voir cette page tout de suite, vous pouvez utiliser la traduction intégrée de votre navigateur.",
+        "contingency_body": "Cette citation n'a pas encore de traduction officielle pour la langue sélectionnée. Votre demande a été enregistrée et aidera à prioriser les prochaines traductions MetaMensagem. Essayez une autre langue ou revenez bientôt.",
         "contingency_short": "Demande enregistrée"
       },
       "translate_page": {
-        "button": "Lire dans ma langue",
-        "title": "Traduire toute la page",
-        "body": "Utilisez la traduction intégrée de Chrome, Edge ou Safari pour traduire citation, explication, tags, menus et navigation en une seule fois.",
-        "step_desktop": "Sur ordinateur, faites un clic droit sur la page et choisissez \"Traduire\".",
-        "step_mobile": "Sur mobile, ouvrez le menu du navigateur et touchez \"Traduire\"."
+        "button": "🌎 Traduire la page",
+        "read_in_pt": "🌎 Lire en portugais",
+        "modal_title": "🌎 Traduire la page",
+        "modal_subtitle": "Choisissez la langue souhaitée.",
+        "modal_note": "La traduction s'appliquera à toute la page.",
+        "translating_page": "✓ Traduction de la page...",
+        "translating_short": "Traduction…",
+        "close": "Fermer",
+        "language_list": "Langues disponibles"
       },
       "editor": {
         "title": "Générer un Post Premium",

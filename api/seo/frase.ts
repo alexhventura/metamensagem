@@ -7,6 +7,7 @@ const SITE_ORIGIN = 'https://metamensagem.com';
 import { requestUrl, sendText, type ApiRequest, type ApiResponse } from '../_http.js';
 import { getServerSupabase } from '../_supabaseServer.js';
 import { resolveFraseDetailBySlug } from '../_fraseDetailService.js';
+import { serverStaticOrigin } from '../_staticOrigin.js';
 
 const CACHE_HIT = 'public, max-age=86400, stale-while-revalidate=604800';
 const CACHE_MISS = 'public, max-age=300';
@@ -112,7 +113,7 @@ async function resolveById(id: string, origin: string) {
     if (idx.ok) {
       const map = (await idx.json()) as Record<string, string>;
       const slug = map[key];
-      if (slug) return resolveFraseDetailBySlug(slug, origin);
+      if (slug) return resolveFraseDetailBySlug(slug, serverStaticOrigin(origin));
     }
   } catch {
     /* id-index opcional */
@@ -132,10 +133,11 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
   const idParam = decodeURIComponent(url.searchParams.get('id') ?? '').trim();
 
   try {
+    const assetOrigin = serverStaticOrigin(url.origin);
     const frase = slugParam
-      ? await resolveFraseDetailBySlug(slugParam, url.origin)
+      ? await resolveFraseDetailBySlug(slugParam, assetOrigin)
       : idParam
-        ? await resolveById(idParam, url.origin)
+        ? await resolveById(idParam, assetOrigin)
         : null;
 
     if (!frase?.frase_original?.trim()) {

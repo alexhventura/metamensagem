@@ -23,6 +23,7 @@ import {
   recordFraseDetailLatency,
   type CacheLayer,
 } from './observability/performanceMetrics';
+import { staticAssetUrl } from './staticAssetOrigin';
 import {
   searchFrasesIndex,
   searchFrasesIndexByCategoria,
@@ -110,7 +111,7 @@ async function ensureShardLoaded(shard: string): Promise<FraseCms[]> {
   }
 
   try {
-    const res = await fetch(`/frases-v2/detail/shard-${shard}.json`);
+    const res = await fetch(staticAssetUrl(`/frases-v2/detail/shard-${shard}.json`));
     if (res.ok) {
       const raw = (await res.json()) as FraseDetailRecord[];
       void persistShard(shard, raw);

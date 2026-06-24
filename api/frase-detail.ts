@@ -6,6 +6,7 @@ import { normalizeFraseDetailRecord } from './_fraseDetailLookup.js';
 import { requestUrl, sendJson, type ApiResponse } from './_http.js';
 import type { ApiRequest } from './_shared.js';
 import { resolveFraseDetailBySlug } from './_fraseDetailService.js';
+import { serverStaticOrigin } from './_staticOrigin.js';
 
 const CACHE_HIT = 'public, max-age=86400, stale-while-revalidate=604800';
 const CACHE_MISS = 'public, max-age=300';
@@ -78,7 +79,7 @@ export default async function handler(req: ApiRequest, res: ApiResponse): Promis
     }
 
     step = 'resolve';
-    const frase = await resolveFraseDetailBySlug(slug, url.origin);
+    const frase = await resolveFraseDetailBySlug(slug, serverStaticOrigin(url.origin));
 
     if (!frase?.frase_original?.trim()) {
       step = 'not_found';

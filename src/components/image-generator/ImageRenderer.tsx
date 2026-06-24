@@ -206,10 +206,11 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         aria-label="Citação"
       >
         <blockquote
-          className={`font-bold m-0 mx-auto text-center shrink-0 ${textColorOverride ? '' : skin.textClass}`}
+          className={`font-bold m-0 mx-auto text-center shrink-0 flex flex-col ${textColorOverride ? '' : skin.textClass}`}
           style={{
             fontSize: layout.quotePx,
             lineHeight: `${layout.lineHeight}px`,
+            gap: layout.lineGapPx,
             maxWidth: `${QUOTE_CONTENT_MAX_WIDTH_RATIO * 100}%`,
             fontWeight: 700,
             letterSpacing: layout.lines.length <= 3 ? '-0.02em' : '-0.01em',

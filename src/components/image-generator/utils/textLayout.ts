@@ -49,7 +49,13 @@ const LINE_HEIGHT_STEPS_EXTREME = [1.28, 1.22, 1.16, 1.12, 1.08, 1.05, 1.02, 1.0
 
 /** Menor fonte da citação — usada no encaixe forçado para textos longos. */
 export const ABSOLUTE_MIN_QUOTE_PX = 4;
-const FORCE_FIT_LH_RATIOS = [1.0, 0.98, 0.95, 0.92, 0.9, 0.88];
+const MIN_LINE_HEIGHT_RATIO = 1.12;
+const MIN_LINE_HEIGHT_RATIO_EXTREME = 1.06;
+const FORCE_FIT_LH_RATIOS = [1.12, 1.1, 1.08, 1.06, 1.04];
+
+export function quoteLineGapPx(quotePx: number): number {
+  return Math.max(2, Math.round(quotePx * 0.06));
+}
 
 export type ImageLayoutPlan = {
   zones: LayoutZones;
@@ -64,6 +70,7 @@ export type ImageLayoutPlan = {
   footerSerialPx: number;
   lineHeight: number;
   lineHeightRatio: number;
+  lineGapPx: number;
   quoteBlockHeight: number;
   quotePaddingTop: number;
   quotePaddingBottom: number;
@@ -238,11 +245,14 @@ function usableQuoteHeight(zoneHeight: number): number {
 export function estimateRenderedBlockHeight(
   lineCount: number,
   quotePx: number,
-  lineHeightPx: number
+  lineHeightPx: number,
+  lineGapPx = quoteLineGapPx(quotePx)
 ): number {
+  if (lineCount <= 0) return 0;
   const perLine = lineHeightPx + quotePx * LINE_METRICS_EXTRA_RATIO;
+  const gaps = Math.max(0, lineCount - 1) * lineGapPx;
   const marks = quotePx * QUOTE_MARKS_EXTRA_RATIO;
-  return Math.ceil((lineCount * perLine + marks) * HEIGHT_ESTIMATE_SAFETY);
+  return Math.ceil((lineCount * perLine + gaps + marks) * HEIGHT_ESTIMATE_SAFETY);
 }
 
 function computeFooterPx(width: number, height: number): number {
@@ -314,9 +324,14 @@ function quoteVerticalCenterRatio(formatProfile: ReturnType<typeof resolveFooter
 }
 
 function lhStepsFor(density: ZoneDensity): number[] {
-  if (density === 'extreme') return LINE_HEIGHT_STEPS_EXTREME;
-  if (density === 'long') return LINE_HEIGHT_STEPS_LONG;
-  return LINE_HEIGHT_STEPS;
+  const min = density === 'extreme' ? MIN_LINE_HEIGHT_RATIO_EXTREME : MIN_LINE_HEIGHT_RATIO;
+  const steps =
+    density === 'extreme'
+      ? LINE_HEIGHT_STEPS_EXTREME
+      : density === 'long'
+        ? LINE_HEIGHT_STEPS_LONG
+        : LINE_HEIGHT_STEPS;
+  return steps.filter((ratio) => ratio >= min);
 }
 
 function toLegacySafe(zones: LayoutZones) {
@@ -369,7 +384,7 @@ function findFittingQuoteLayout(
   }
 
   const quotePx = ABSOLUTE_MIN_QUOTE_PX;
-  const lhRatio = 0.88;
+  const lhRatio = MIN_LINE_HEIGHT_RATIO_EXTREME;
   const lines = wrapQuoteFull(clean, wrapWidth, quotePx, fontWidthScale);
   const lineHeight = quotePx * lhRatio;
   const quoteBlockHeight = estimateRenderedBlockHeight(lines.length, quotePx, lineHeight);
@@ -403,6 +418,7 @@ function buildPlan(
     authorPx: number;
     lineHeight: number;
     lineHeightRatio: number;
+    lineGapPx: number;
     quoteBlockHeight: number;
     quotePaddingTop: number;
     quotePaddingBottom: number;
@@ -432,6 +448,7 @@ function buildPlan(
     footerSerialPx: opts.footerSerialPx,
     lineHeight: opts.lineHeight,
     lineHeightRatio: opts.lineHeightRatio,
+    lineGapPx: opts.lineGapPx,
     quoteBlockHeight: opts.quoteBlockHeight,
     quotePaddingTop: opts.quotePaddingTop,
     quotePaddingBottom: opts.quotePaddingBottom,
@@ -486,7 +503,13 @@ export function computeImageLayout(
       if (!validateFullText(clean, lines)) continue;
 
       const lineHeight = quotePx * lhRatio;
-      const quoteBlockHeight = estimateRenderedBlockHeight(lines.length, quotePx, lineHeight);
+      const lineGapPx = quoteLineGapPx(quotePx);
+      const quoteBlockHeight = estimateRenderedBlockHeight(
+        lines.length,
+        quotePx,
+        lineHeight,
+        lineGapPx
+      );
       const quoteFits = quoteBlockHeight <= usable;
       const quotePaddingTop = quoteFits
         ? Math.max(0, Math.floor((usable - quoteBlockHeight) * centerRatio))
@@ -498,6 +521,7 @@ export function computeImageLayout(
         authorPx,
         lineHeight,
         lineHeightRatio: lhRatio,
+        lineGapPx,
         quoteBlockHeight,
         quotePaddingTop,
         quotePaddingBottom,
@@ -534,6 +558,7 @@ export function computeImageLayout(
     authorPx,
     lineHeight: forced.lineHeight,
     lineHeightRatio: forced.lineHeightRatio,
+    lineGapPx: quoteLineGapPx(forced.quotePx),
     quoteBlockHeight: forced.quoteBlockHeight,
     quotePaddingTop: forced.quotePaddingTop,
     quotePaddingBottom,

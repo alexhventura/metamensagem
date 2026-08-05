@@ -33,7 +33,7 @@ import {
   FEED_LOAD_MORE_STEP,
 } from '../lib/feedWithAds';
 import FeedGridWithAds from '../components/FeedGridWithAds';
-import FeedLoadMoreButton from '../components/FeedLoadMoreButton';
+import InfiniteScrollSentinel from '../components/InfiniteScrollSentinel';
 import type { ItemConteudo } from '../types/content';
 import ContentCard from '../components/ContentCard';
 
@@ -317,7 +317,11 @@ export default function TagCategoriaView({
       )}
 
       {showLoadMore && (
-        <FeedLoadMoreButton onClick={handleLoadMore} />
+        <InfiniteScrollSentinel
+          tema={tema}
+          hasMore={showLoadMore}
+          onLoadMore={handleLoadMore}
+        />
       )}
 
       <p className="text-center mt-8 text-[10px] font-mono uppercase tracking-widest opacity-40">

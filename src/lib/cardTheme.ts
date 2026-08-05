@@ -1,66 +1,73 @@
-/** Tokens visuais por tipo de conteúdo (borda + acento). */
+/** Tokens visuais por tipo de conteúdo — estilo suave para leitura prolongada. */
 export type CardAccent = 'purple' | 'pink';
 
 export function cardAccentForTipo(tipo: 'frase' | 'metafora'): CardAccent {
   return tipo === 'metafora' ? 'pink' : 'purple';
 }
 
+/** Borda sutil no acento (sem gradiente pesado). */
+export function cardBorderSoft(accent: CardAccent, tema = 'dark'): string {
+  if (tema === 'light') {
+    return accent === 'pink' ? 'border-pink-200/80' : 'border-purple-200/80';
+  }
+  return accent === 'pink' ? 'border-pink-500/20' : 'border-purple-500/20';
+}
+
+/** @deprecated Prefer cardBorderSoft — mantido para compatibilidade. */
 export function cardBorderGradient(accent: CardAccent): string {
   return accent === 'pink'
-    ? 'bg-gradient-to-br from-[#EC4899] to-[#111111]'
-    : 'bg-gradient-to-br from-[#8B5CF6] to-[#3B82F6]';
+    ? 'border border-pink-500/25'
+    : 'border border-purple-500/25';
 }
 
 export function cardAccentDotClass(accent: CardAccent): string {
-  return accent === 'pink' ? 'bg-[#EC4899]' : 'bg-[#A855F7]';
+  return accent === 'pink' ? 'bg-[#EC4899]/80' : 'bg-[#A855F7]/80';
 }
 
 export function cardTagClass(accent: CardAccent, tema = 'dark'): string {
   if (tema === 'light') {
     return accent === 'pink'
-      ? 'bg-pink-100 text-pink-900 border-pink-300/70 hover:bg-pink-200/80'
-      : 'bg-purple-100 text-purple-900 border border-purple-300/70 hover:bg-purple-200/80';
+      ? 'bg-pink-50 text-pink-700 border-pink-100 hover:bg-pink-100/80'
+      : 'bg-purple-50 text-purple-700 border-purple-100 hover:bg-purple-100/80';
   }
   return accent === 'pink'
-    ? 'bg-pink-950/60 text-pink-50 border-pink-400/40 hover:bg-pink-500/20'
-    : 'bg-purple-950/60 text-purple-50 border border-purple-400/40 hover:bg-purple-500/20';
+    ? 'bg-pink-500/10 text-pink-300/90 border-pink-500/15 hover:bg-pink-500/15'
+    : 'bg-purple-500/10 text-purple-300/90 border-purple-500/15 hover:bg-purple-500/15';
 }
 
 export function cardReadMoreBtnClass(tema: string, accent: CardAccent): string {
   if (accent === 'pink') {
     return tema === 'light'
-      ? 'bg-pink-100 text-pink-600 hover:bg-pink-200'
-      : 'bg-pink-500/10 text-pink-400 border border-pink-500/20 hover:bg-pink-500/20';
+      ? 'text-pink-600 hover:text-pink-700 hover:bg-pink-50'
+      : 'text-pink-400/90 hover:text-pink-300 hover:bg-pink-500/10';
   }
   return tema === 'light'
-    ? 'bg-purple-100 text-purple-600 hover:bg-purple-200'
-    : 'bg-purple-500/10 text-purple-400 border border-purple-500/20 hover:bg-purple-500/20';
+    ? 'text-purple-600 hover:text-purple-700 hover:bg-purple-50'
+    : 'text-purple-400/90 hover:text-purple-300 hover:bg-purple-500/10';
 }
 
-/** Mesmas dimensões dos botões Copiar / Compartilhar / Traduzir. */
+/** Botões de ação — compactos e discretos. */
 export const CARD_ACTION_BTN =
-  'p-3.5 rounded-2xl transition-all shrink-0 flex items-center justify-center';
+  'p-2.5 rounded-xl transition-colors shrink-0 flex items-center justify-center';
 
 export function cardNeutralActionClass(tema: string): string {
   return tema === 'light'
-    ? 'bg-zinc-100 text-zinc-500 hover:bg-zinc-200'
-    : 'bg-zinc-800/60 text-zinc-300 hover:bg-zinc-800 border border-[rgba(212,196,168,0.16)]';
+    ? 'bg-zinc-50 text-zinc-500 hover:bg-zinc-100 border border-zinc-100'
+    : 'bg-zinc-900/50 text-zinc-400 hover:bg-zinc-800/80 border border-zinc-800/80';
 }
 
-/** Texto da frase em listagens — destaque tipo headline. */
+/** Tipografia confortável para leitura — menos “display”, mais corpo. */
 export const FRASE_HEADLINE_CLASS =
-  'text-xl md:text-2xl font-black leading-tight tracking-tighter line-clamp-4';
+  'text-lg md:text-xl font-semibold leading-relaxed tracking-normal line-clamp-5';
 
-/** Hover do título clicável (metáfora = rosa, frase = roxo). */
 export function cardTitleHoverClass(accent: CardAccent): string {
   return accent === 'pink' ? 'hover:text-[#EC4899]' : 'hover:text-[#A855F7]';
 }
 
 export function cardTitleColorClass(tema: string): string {
-  return tema === 'light' ? 'text-black' : 'text-white';
+  return tema === 'light' ? 'text-zinc-900' : 'text-zinc-100';
 }
 
-/** Link do título — mesma base para metáforas e frases. */
 export function cardTitleLinkClass(
   tema: string,
   accent: CardAccent,
@@ -69,20 +76,27 @@ export function cardTitleLinkClass(
   const size =
     variant === 'frase'
       ? FRASE_HEADLINE_CLASS
-      : 'text-xl leading-tight tracking-tighter line-clamp-none';
+      : 'text-lg md:text-xl font-semibold leading-snug tracking-normal line-clamp-none';
   return [
     size,
-    'font-black transition-colors block mb-3 cursor-pointer',
+    'transition-colors block mb-4 cursor-pointer',
     cardTitleHoverClass(accent),
     cardTitleColorClass(tema),
   ].join(' ');
 }
 
-/** Fundo lavanda (modo leitura) — só página de detalhe da frase, tema claro. */
 export const FRASE_DETAIL_INFO_BG_LIGHT = 'bg-[#F3E8FF]';
 
 export function cardImageBtnClass(accent: CardAccent): string {
   return accent === 'pink'
-    ? 'p-3.5 bg-[#EC4899] hover:bg-pink-600 text-white rounded-2xl transition-all hover:scale-110 shadow-lg shadow-pink-500/20 shrink-0 flex items-center justify-center'
-    : 'p-3.5 bg-[#A855F7] hover:bg-[#9333EA] text-white rounded-2xl transition-all hover:scale-110 shadow-lg shadow-purple-500/20 shrink-0 flex items-center justify-center';
+    ? 'p-2.5 bg-[#EC4899] hover:bg-pink-600 text-white rounded-xl transition-colors shrink-0 flex items-center justify-center'
+    : 'p-2.5 bg-[#A855F7] hover:bg-[#9333EA] text-white rounded-xl transition-colors shrink-0 flex items-center justify-center';
+}
+
+export function cardShellClass(tema: string, accent: CardAccent): string {
+  const border = cardBorderSoft(accent, tema);
+  if (tema === 'light') {
+    return `h-full rounded-3xl border ${border} bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] transition-shadow`;
+  }
+  return `h-full rounded-3xl border ${border} bg-[#161412] hover:bg-[#1a1816] transition-colors`;
 }

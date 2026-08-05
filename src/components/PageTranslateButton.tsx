@@ -20,12 +20,12 @@ type PageTranslateButtonProps = {
 function translateBtnClass(tema: string, accent: CardAccent): string {
   if (accent === 'pink') {
     return tema === 'light'
-      ? 'bg-pink-50/90 text-pink-600 hover:bg-pink-100 border border-pink-200/70'
-      : 'bg-pink-500/10 text-pink-400 border border-pink-500/20 hover:bg-pink-500/20';
+      ? 'bg-transparent text-pink-600 hover:bg-pink-50 border border-transparent hover:border-pink-100'
+      : 'bg-transparent text-pink-400/90 hover:bg-pink-500/10 border border-transparent';
   }
   return tema === 'light'
-    ? 'bg-purple-50/90 text-purple-600 hover:bg-purple-100 border border-purple-200/70'
-    : 'bg-purple-500/10 text-purple-400 border border-purple-500/20 hover:bg-purple-500/20';
+    ? 'bg-transparent text-purple-600 hover:bg-purple-50 border border-transparent hover:border-purple-100'
+    : 'bg-transparent text-purple-400/90 hover:bg-purple-500/10 border border-transparent';
 }
 
 function openTranslateModalFallback(): void {

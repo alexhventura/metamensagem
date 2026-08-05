@@ -84,7 +84,7 @@ import {
   FEED_LOAD_MORE_STEP,
 } from './lib/feedWithAds';
 import FeedGridWithAds from './components/FeedGridWithAds';
-import FeedLoadMoreButton from './components/FeedLoadMoreButton';
+import InfiniteScrollSentinel from './components/InfiniteScrollSentinel';
 import { normalizarParaSlug } from './lib/slug';
 import type { ItemConteudo } from './types/content';
 import ContentCard from './components/ContentCard';
@@ -347,15 +347,15 @@ export default function App() {
         </main>
 
         {/* FOOTER */}
-        <footer className={`py-8 text-center text-xs border-t mt-auto ${tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-700' : 'bg-zinc-950 border-zinc-700/70 text-zinc-300'}`}>
-          <div className="flex justify-center flex-wrap gap-4 mb-3 font-semibold">
-            <Link to="/sobre">{t('nav.about')}</Link>
-            <Link to="/contato">{t('nav.contact')}</Link>
-            <Link to="/privacidade">{t('nav.privacy')}</Link>
-            <Link to="/termos">{t('nav.terms')}</Link>
-            <Link to="/cookies">{t('nav.cookies')}</Link>
+        <footer className={`py-10 text-center text-xs border-t mt-auto ${tema === 'light' ? 'bg-zinc-50 border-zinc-100 text-zinc-600' : 'bg-zinc-950/80 border-zinc-800/80 text-zinc-400'}`}>
+          <div className="flex justify-center flex-wrap gap-5 mb-4 font-medium tracking-wide">
+            <Link to="/sobre" className="hover:text-purple-500 transition-colors">{t('nav.about')}</Link>
+            <Link to="/contato" className="hover:text-purple-500 transition-colors">{t('nav.contact')}</Link>
+            <Link to="/privacidade" className="hover:text-purple-500 transition-colors">{t('nav.privacy')}</Link>
+            <Link to="/termos" className="hover:text-purple-500 transition-colors">{t('nav.terms')}</Link>
+            <Link to="/cookies" className="hover:text-purple-500 transition-colors">{t('nav.cookies')}</Link>
           </div>
-          <p>© 2026 Metamensagem.com. Conteúdo editorial para reflexão e compartilhamento consciente.</p>
+          <p className="opacity-80">© 2026 Metamensagem.com · Conteúdo editorial para reflexão consciente</p>
         </footer>
       </div>
     </BrowserRouter>
@@ -618,10 +618,10 @@ function HomeView({
             <Link
               key={tag}
               to={pathFromTag(tag)}
-              className={`px-3.5 py-1.5 rounded-full text-[11px] font-bold border transition-colors ${
+              className={`px-3.5 py-1.5 rounded-full text-[11px] font-medium border transition-colors ${
                 tema === 'light'
-                  ? 'bg-zinc-100 border-zinc-200 text-zinc-600 hover:border-[#A855F7] hover:text-[#A855F7]'
-                  : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:border-[#A855F7] hover:text-[#A855F7]'
+                  ? 'bg-white border-zinc-200 text-zinc-600 hover:border-purple-300 hover:text-purple-700'
+                  : 'bg-zinc-900/40 border-zinc-800 text-zinc-400 hover:border-purple-500/40 hover:text-purple-300'
               }`}
             >
               #{tag}
@@ -668,7 +668,11 @@ function HomeView({
       />
 
       {resultadosFiltrados.length > itensVisiveis && (
-        <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
+        <InfiniteScrollSentinel
+          tema={tema}
+          hasMore={resultadosFiltrados.length > itensVisiveis}
+          onLoadMore={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)}
+        />
       )}
 
       <SiteFaq
@@ -931,7 +935,11 @@ function FrasesView({
       )}
 
       {frases.length > itensVisiveis && (
-        <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
+        <InfiniteScrollSentinel
+          tema={tema}
+          hasMore={frases.length > itensVisiveis}
+          onLoadMore={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)}
+        />
       )}
 
       <SiteFaq
@@ -1085,7 +1093,11 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
       />
 
       {metaforas.length > itensVisiveis && (
-        <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
+        <InfiniteScrollSentinel
+          tema={tema}
+          hasMore={metaforas.length > itensVisiveis}
+          onLoadMore={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)}
+        />
       )}
 
       <SiteFaq

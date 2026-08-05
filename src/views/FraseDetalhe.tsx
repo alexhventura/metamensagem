@@ -20,7 +20,6 @@ import {
   CARD_ACTION_BTN,
   FRASE_DETAIL_INFO_BG_LIGHT,
   cardAccentDotClass,
-  cardBorderGradient,
   cardImageBtnClass,
   cardNeutralActionClass,
   cardTagClass,
@@ -607,12 +606,12 @@ export default function FraseDetalheView({
         <span className="max-w-[12rem] truncate">{authorLine}</span>
       </nav>
 
-      <article className={`p-[1px] rounded-[2.5rem] ${cardBorderGradient('purple')} shadow-xl`}>
-        <div
-          className={`rounded-[2.5rem] overflow-hidden ${
-            tema === 'light' ? 'bg-white' : 'bg-[#141210]'
-          }`}
-        >
+      <article
+        className={`rounded-3xl border overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)] ${
+          tema === 'light' ? 'bg-white border-purple-200/70' : 'bg-[#161412] border-purple-500/15'
+        }`}
+      >
+        <div className="overflow-hidden">
           <div className="p-8 md:p-10">
             <div className="flex items-center gap-2 mb-6">
               <span className={`w-1.5 h-1.5 rounded-full ${cardAccentDotClass('purple')}`} />

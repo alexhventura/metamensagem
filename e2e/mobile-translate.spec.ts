@@ -27,7 +27,7 @@ test.describe('Tradução mobile', () => {
     await expect(dialog).toBeHidden({ timeout: 5_000 });
   });
 
-  test('auto-tradução UI para en-US', async ({ page }, testInfo) => {
+  test('UI segue locale en-US sem traduzir conteúdo automaticamente', async ({ page }, testInfo) => {
     test.skip(testInfo.project.name === 'desktop', 'mobile only');
     await page.addInitScript(() => {
       localStorage.removeItem('mm-page-translate-pref');
@@ -38,7 +38,7 @@ test.describe('Tradução mobile', () => {
       timeout: 20_000,
     });
     const pref = await page.evaluate(() => localStorage.getItem('mm-page-translate-pref'));
-    expect(pref).toBe('en');
+    expect(pref).toBeNull();
   });
 
   test('Safari iOS: safe-area no painel do modal', async ({ page }, testInfo) => {

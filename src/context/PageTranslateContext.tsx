@@ -186,6 +186,9 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
         void translateOne(registration, targetLang).then((changed) => {
           if (changed) setIsNormalizedView(true);
         });
+      } else {
+        const source = registration.getSource();
+        registration.setDisplay({ ...source, isTranslated: false });
       }
       return () => {
         registrations.current.delete(registration.id);
@@ -229,12 +232,21 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
     [targetLang]
   );
 
+  /** Sem tradução automática de conteúdo: citações/metáforas permanecem no idioma original.
+   *  UI segue o idioma do navegador via useUiLocaleSync. Tradução de página só sob ação do usuário. */
   useEffect(() => {
-    if (autoStarted.current || originalMode.current) return;
+    if (autoStarted.current) return;
     autoStarted.current = true;
+    originalMode.current = true;
     const pref = readPageTranslatePref();
-    const locale = pref ?? browserLang ?? 'pt';
-    void runPageTranslation(locale);
+    if (pref) {
+      originalMode.current = false;
+      void runPageTranslation(pref);
+      return;
+    }
+    setTargetLang(browserLang ?? 'pt');
+    setIsNormalizedView(false);
+    setTranslatedViewActive(false);
   }, [runPageTranslation, browserLang]);
 
   useEffect(() => {

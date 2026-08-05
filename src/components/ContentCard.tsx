@@ -28,7 +28,6 @@ import type { ImageGeneratorQuote } from './image-generator/types';
 import { formatTagForDisplay } from '../lib/tagDisplay';
 import { sanitizeTextForTranslation } from '../lib/textSanitize';
 import { usePageContentTranslate } from '../hooks/usePageContentTranslate';
-import { useTranslatedLabels } from '../hooks/useTranslatedLabels';
 
 export default function ContentCard({
   item,
@@ -43,7 +42,7 @@ export default function ContentCard({
   toast: (msg: string) => void;
   lazyBelowFold?: boolean;
 }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isFrase = item.tipo === 'frase';
   const accent = cardAccentForTipo(item.tipo);
 
@@ -136,13 +135,11 @@ export default function ContentCard({
   const displayTags = useMemo(
     () =>
       (item.tags || [])
-        .map((tag) => formatTagForDisplay(tag))
+        .map((tag) => formatTagForDisplay(tag, i18n.language))
         .filter((t): t is string => Boolean(t))
         .slice(0, 3),
-    [item.tags]
+    [item.tags, i18n.language]
   );
-
-  const { labelFor: tagLabel } = useTranslatedLabels(displayTags, `card-tags-${item.id}`);
 
   const linkState = isFrase ? { item } : undefined;
 
@@ -244,7 +241,7 @@ export default function ContentCard({
                 to={pathFromTag(tag)}
                 className={`text-[10px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass(accent, tema)}`}
               >
-                #{tagLabel(tag)}
+                #{tag}
               </Link>
             ))}
           </div>

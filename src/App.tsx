@@ -6,6 +6,7 @@ import { isTranslatedViewActive } from './lib/translatedViewState';
 const Terms = lazy(() => import('./views/Terms'));
 const Privacy = lazy(() => import('./views/Privacy'));
 const Contact = lazy(() => import('./views/Contact'));
+const About = lazy(() => import('./views/About'));
 const Cookies = lazy(() => import('./views/Cookies'));
 import { 
   Copy, 
@@ -38,8 +39,11 @@ import AdSlot from './components/AdSlot';
 import { loadHomeBootstrap, ensureFullCatalogLoaded, type CatalogLoadResult } from './lib/homeData';
 import { HOME_FRASE_POOL_SIZE, pathNeedsFullCatalog, sampleShuffled } from './lib/catalogLimits';
 import PageTranslateButton from './components/PageTranslateButton';
+import EditorialBlock from './components/EditorialBlock';
+import SiteFaq, { faqJsonLd } from './components/SiteFaq';
 import { usePageContentTranslate } from './hooks/usePageContentTranslate';
-import { useTranslatedLabels } from './hooks/useTranslatedLabels';
+import { prioritizeByUiLocale } from './lib/contentLocaleFilter';
+import { tagsForDisplay } from './lib/tagDisplay';
 import { sanitizeTextForTranslation } from './lib/textSanitize';
 
 const SocialHub = lazy(() => import('./components/SocialHub'));
@@ -89,7 +93,6 @@ import { CARD_ACTION_BTN, cardNeutralActionClass } from './lib/cardTheme';
 import { useTheme } from './context/ThemeContext';
 import { UiLocaleSync } from './hooks/useUiLocaleSync';
 import AnalyticsRouteSync from './components/AnalyticsRouteSync';
-import { tagsForDisplay } from './lib/tagDisplay';
 import BackNavButton from './components/BackNavButton';
 import HeaderBrandLink from './components/HeaderBrandLink';
 import { useAppUiReset } from './hooks/useAppUiReset';
@@ -320,7 +323,7 @@ export default function App() {
                 ))}
                 <Route path="/metaforas" element={<MetaforasView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
                 <Route path="/metafora/:id/*" element={<MetaforaDetalheView tema={tema} banco={bancoTotal} toast={mostrarToast} />} />
-                <Route path="/sobre" element={<Contact tema={tema} />} />
+                <Route path="/sobre" element={<About tema={tema} />} />
                 <Route path="/contato" element={<Contact tema={tema} />} />
                 <Route path="/privacidade" element={<Privacy tema={tema} />} />
                 <Route path="/termos" element={<Terms tema={tema} />} />
@@ -347,11 +350,12 @@ export default function App() {
         <footer className={`py-8 text-center text-xs border-t mt-auto ${tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-700' : 'bg-zinc-950 border-zinc-700/70 text-zinc-300'}`}>
           <div className="flex justify-center flex-wrap gap-4 mb-3 font-semibold">
             <Link to="/sobre">{t('nav.about')}</Link>
+            <Link to="/contato">{t('nav.contact')}</Link>
             <Link to="/privacidade">{t('nav.privacy')}</Link>
             <Link to="/termos">{t('nav.terms')}</Link>
             <Link to="/cookies">{t('nav.cookies')}</Link>
           </div>
-          <p>© 2025 Metamensagem.com. Todos os direitos reservados.</p>
+          <p>© 2026 Metamensagem.com. Conteúdo editorial para reflexão e compartilhamento consciente.</p>
         </footer>
       </div>
     </BrowserRouter>
@@ -501,7 +505,7 @@ function HomeView({
   bancoRandom: ItemConteudo[];
   onRequestCatalog?: () => void;
 }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(FEED_INITIAL_VISIBLE);
 
@@ -513,12 +517,15 @@ function HomeView({
   useAppUiReset(closeImageModal);
   const bancoFrases = useMemo(() => banco.filter((i) => i.tipo === 'frase'), [banco]);
   const bancoRandomFrases = useMemo(
-    () => bancoRandom.filter((i) => i.tipo === 'frase'),
-    [bancoRandom]
+    () => prioritizeByUiLocale(
+      bancoRandom.filter((i) => i.tipo === 'frase'),
+      i18n.language
+    ),
+    [bancoRandom, i18n.language]
   );
   const tagsFrases = useMemo(
-    () => tagsForDisplay(bancoFrases.flatMap((f) => f.tags || []), 12),
-    [bancoFrases]
+    () => tagsForDisplay(bancoFrases.flatMap((f) => f.tags || []), 12, i18n.language),
+    [bancoFrases, i18n.language]
   );
   const {
     items: supabaseHits,
@@ -547,9 +554,26 @@ function HomeView({
       className="max-w-7xl w-full mx-auto px-4 py-8 flex-1 flex flex-col"
     >
       <MudarMetaSEO
-        title={t('app.tagline')}
+        title={`${t('app.title')} — ${t('app.tagline')}`}
         description={DEFAULT_DESCRIPTION}
         canonical={SITE_ORIGIN}
+        jsonLD={faqJsonLd([
+          {
+            question: 'O que é a Metamensagem?',
+            answer:
+              'É uma plataforma editorial de frases inspiradoras e metáforas terapêuticas, com conteúdo em vários idiomas e interface adaptada ao idioma do navegador.',
+          },
+          {
+            question: 'As frases são traduzidas automaticamente?',
+            answer:
+              'Não. Cada citação e metáfora permanece no idioma original. A interface (menus e tags) acompanha o idioma do seu navegador.',
+          },
+          {
+            question: 'Posso compartilhar as frases?',
+            answer:
+              'Sim, para uso pessoal e redes sociais, preferencialmente com atribuição a @metamensagem. Consulte os Termos de Uso.',
+          },
+        ])}
       />
 
       <section className="text-center pt-2 pb-6 md:pt-4 md:pb-8">
@@ -606,6 +630,26 @@ function HomeView({
         </div>
       </section>
 
+      <EditorialBlock
+        tema={tema}
+        title="Por que ler frases e metáforas com atenção"
+        paragraphs={[
+          'A Metamensagem organiza citações e narrativas terapêuticas para momentos de reflexão, estudo pessoal e compartilhamento consciente. O acervo é global: cada texto permanece no idioma em que foi publicado.',
+          'Use a busca e as tags para encontrar temas como amor, mudança, resiliência e fé. A interface e os rótulos das tags acompanham o idioma do seu navegador, sem alterar o texto original da citação.',
+        ]}
+        howToTitle="Como começar"
+        howToSteps={[
+          'Explore frases curtas na Home ou abra a coleção completa em Frases.',
+          'Leia metáforas quando quiser uma narrativa mais longa e profunda.',
+          'No detalhe, veja contexto, temas relacionados e gere uma imagem para compartilhar.',
+        ]}
+        links={[
+          { to: '/frases', label: t('nav.frases') },
+          { to: '/metaforas', label: t('nav.metaforas') },
+          { to: '/sobre', label: t('nav.about') },
+        ]}
+      />
+
       <FeedGridWithAds
         rows={itensHome}
         tema={tema}
@@ -626,6 +670,28 @@ function HomeView({
       {resultadosFiltrados.length > itensVisiveis && (
         <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
       )}
+
+      <SiteFaq
+        tema={tema}
+        title="Perguntas frequentes"
+        items={[
+          {
+            question: 'O conteúdo muda de idioma sozinho?',
+            answer:
+              'Não. Frases e metáforas ficam no idioma original. Menus e tags seguem o idioma do navegador.',
+          },
+          {
+            question: 'Onde encontro políticas do site?',
+            answer:
+              'No rodapé: Sobre, Contato, Privacidade, Termos e Cookies — páginas obrigatórias e atualizadas.',
+          },
+          {
+            question: 'Como gerar imagem de uma frase?',
+            answer:
+              'Abra uma frase e use o botão de gerar imagem. Há formatos 1:1, 4:5 e 9:16 prontos para redes.',
+          },
+        ]}
+      />
 
       <DeferredSocialHub tema={tema} />
 
@@ -715,7 +781,7 @@ function FrasesView({
   catalogReady: boolean;
   onRequestCatalog?: () => void;
 }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(FEED_INITIAL_VISIBLE);
   const [catalogLoading, setCatalogLoading] = useState(false);
@@ -737,8 +803,8 @@ function FrasesView({
   useAppUiReset(closeImageModal);
   const baseFrases = useMemo(() => {
     const list = banco.filter((i) => i.tipo === 'frase');
-    return sampleShuffled(list, list.length);
-  }, [banco]);
+    return prioritizeByUiLocale(sampleShuffled(list, list.length), i18n.language);
+  }, [banco, i18n.language]);
 
   const {
     items: supabaseHits,
@@ -757,8 +823,8 @@ function FrasesView({
   }, [busca]);
 
   const tags = useMemo(
-    () => tagsForDisplay(baseFrases.flatMap((f) => f.tags || []), 10),
-    [baseFrases]
+    () => tagsForDisplay(baseFrases.flatMap((f) => f.tags || []), 10, i18n.language),
+    [baseFrases, i18n.language]
   );
 
   const itensFrases = useMemo(
@@ -823,6 +889,26 @@ function FrasesView({
         </div>
       </div>
 
+      <EditorialBlock
+        tema={tema}
+        title="Como usar o banco de frases"
+        paragraphs={[
+          'Este índice reúne milhares de citações curtas para reflexão, status e estudo temático. Cada frase permanece no idioma original; as tags e a navegação seguem o idioma do seu navegador.',
+          'Combine busca por autor ou palavra-chave com filtros de tema. No detalhe você encontra explicação (quando disponível), metadados e frases relacionadas.',
+        ]}
+        howToTitle="Exemplos de uso"
+        howToSteps={[
+          'Busque por um sentimento (ex.: gratidão) e abra 2–3 frases para comparar perspectivas.',
+          'Gere uma imagem 1:1 ou 9:16 para compartilhar com crédito a @metamensagem.',
+          'Explore metáforas quando quiser um texto narrativo mais longo sobre o mesmo tema.',
+        ]}
+        links={[
+          { to: '/metaforas', label: t('nav.metaforas') },
+          { to: '/sobre', label: t('nav.about') },
+          { to: '/contato', label: t('nav.contact') },
+        ]}
+      />
+
       {catalogLoading && baseFrases.length === 0 ? (
         <div className="flex justify-center py-16" role="status" aria-live="polite">
           <div className="w-10 h-10 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
@@ -847,6 +933,28 @@ function FrasesView({
       {frases.length > itensVisiveis && (
         <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
       )}
+
+      <SiteFaq
+        tema={tema}
+        title="FAQ — Frases"
+        items={[
+          {
+            question: 'Por que vejo frases em inglês e português juntas?',
+            answer:
+              'O acervo é global. Priorizamos conteúdos no idioma da sua interface, mas outras línguas podem aparecer. O texto original nunca é alterado automaticamente.',
+          },
+          {
+            question: 'As tags estão em outro idioma do que a frase?',
+            answer:
+              'As tags acompanham o idioma do navegador/interface. A frase em si permanece no idioma original.',
+          },
+          {
+            question: 'Posso usar as frases comercialmente?',
+            answer:
+              'O uso pessoal e o compartilhamento com atribuição são permitidos. Uso comercial do acervo completo não é autorizado — veja os Termos.',
+          },
+        ]}
+      />
       
       <DeferredSocialHub tema={tema} />
 
@@ -867,10 +975,13 @@ function FrasesView({
 // VISÒO: LISTA DE METÁFORAS
 // ===================================================
 function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco: ItemConteudo[] }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(FEED_INITIAL_VISIBLE);
-  const baseMetaforas = useMemo(() => filtrarMetaforasDoBanco(banco), [banco]);
+  const baseMetaforas = useMemo(
+    () => prioritizeByUiLocale(filtrarMetaforasDoBanco(banco), i18n.language),
+    [banco, i18n.language]
+  );
 
   const metaforas = useMemo(() => {
     if (!busca.trim()) return baseMetaforas;
@@ -882,8 +993,8 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
   }, [busca]);
 
   const tags = useMemo(
-    () => tagsForDisplay(baseMetaforas.flatMap((m) => m.tags || []), 10),
-    [baseMetaforas]
+    () => tagsForDisplay(baseMetaforas.flatMap((m) => m.tags || []), 10, i18n.language),
+    [baseMetaforas, i18n.language]
   );
 
   const itensMetaforas = useMemo(
@@ -940,6 +1051,25 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
         </div>
       </div>
 
+      <EditorialBlock
+        tema={tema}
+        title="O que são metáforas terapêuticas"
+        paragraphs={[
+          'Metáforas terapêuticas são narrativas curtas usadas para iluminar padrões emocionais, decisões e mudanças de atitude. Aqui você lê o texto completo, no idioma original, com tempo de leitura estimado.',
+          'Tags e menus seguem o idioma do navegador. Explore temas, avance para a próxima metáfora e compartilhe trechos com responsabilidade.',
+        ]}
+        howToTitle="Como aproveitar a leitura"
+        howToSteps={[
+          'Escolha uma metáfora pelo título ou tema.',
+          'Ajuste o tamanho da fonte na página de detalhe para leitura confortável.',
+          'Compare com frases curtas do mesmo tema na coleção de Frases.',
+        ]}
+        links={[
+          { to: '/frases', label: t('nav.frases') },
+          { to: '/sobre', label: t('nav.about') },
+        ]}
+      />
+
       <FeedGridWithAds
         rows={itensMetaforas}
         tema={tema}
@@ -957,6 +1087,28 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
       {metaforas.length > itensVisiveis && (
         <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
       )}
+
+      <SiteFaq
+        tema={tema}
+        title="FAQ — Metáforas"
+        items={[
+          {
+            question: 'Qual a diferença entre frase e metáfora neste site?',
+            answer:
+              'Frases são citações curtas. Metáforas são textos narrativos mais longos, pensados para insight e reflexão aprofundada.',
+          },
+          {
+            question: 'Preciso traduzir para ler?',
+            answer:
+              'Não automaticamente. O texto fica no idioma original. Use o seletor de idioma da página apenas se quiser adaptar a visualização manualmente.',
+          },
+          {
+            question: 'Posso citar trechos?',
+            answer:
+              'Sim, para uso pessoal e compartilhamento com atribuição. Consulte os Termos para limites comerciais.',
+          },
+        ]}
+      />
 
       <DeferredSocialHub tema={tema} />
     </motion.div>
@@ -1000,15 +1152,6 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       next: idx < metaforas.length - 1 ? metaforas[idx + 1] : null
     };
   }, [id, banco]);
-
-  const navLabelPool = useMemo(
-    () =>
-      [navigation.prev?.titulo, navigation.next?.titulo].filter((x): x is string =>
-        Boolean(x)
-      ),
-    [navigation.prev?.titulo, navigation.next?.titulo]
-  );
-  const { labelFor: navLabelFor } = useTranslatedLabels(navLabelPool, `metafora-nav-${id ?? 'detail'}`);
 
   useEffect(() => {
     if (!id) return;
@@ -1198,7 +1341,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
                 {t('metaforas.prev', 'Anterior')}
               </span>
               <span className="text-xs font-bold truncate block leading-tight">
-                {navLabelFor(navigation.prev.titulo)}
+                {navigation.prev.titulo}
               </span>
             </div>
           </Link>
@@ -1214,7 +1357,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
                 {t('metaforas.next', 'Próxima')}
               </span>
               <span className="text-xs font-bold truncate block leading-tight">
-                {navLabelFor(navigation.next.titulo)}
+                {navigation.next.titulo}
               </span>
             </div>
             <ChevronRight size={16} className="text-purple-500 shrink-0" />

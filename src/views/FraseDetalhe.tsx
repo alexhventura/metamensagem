@@ -13,7 +13,8 @@ import { Copy, Share2, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import CardTooltip from '../components/CardTooltip';
 import PageTranslateButton from '../components/PageTranslateButton';
-import { useTranslatedLabels } from '../hooks/useTranslatedLabels';
+import SiteFaq from '../components/SiteFaq';
+import AdSlot from '../components/AdSlot';
 
 import {
   CARD_ACTION_BTN,
@@ -526,22 +527,15 @@ export default function FraseDetalheView({
 
   const neutralAction = cardNeutralActionClass(tema);
   const originalLanguageName = languageOriginalLabel(defaultLocale);
-  const normalizedCategory = formatTagForDisplay(frase.categoria) ?? 'Reflexão';
+  const normalizedCategory =
+    formatTagForDisplay(frase.categoria, i18n.language) ?? t('frases.detail.main_category');
   const normalizedThemes = tagsForDisplay(
     [frase.categoria, ...frase.contextos, ...frase.palavras_chave],
-    8
+    8,
+    i18n.language
   );
   const primaryTheme = normalizedThemes[0] ?? normalizedCategory;
 
-  const labelPool = useMemo(
-    () => [
-      ...normalizedThemes,
-      normalizedCategory,
-      ...relatedSlugs.map((r) => r.titulo),
-    ],
-    [normalizedThemes, normalizedCategory, relatedSlugs]
-  );
-  const { labelFor } = useTranslatedLabels(labelPool, `frase-labels-${frase?.slug ?? slug ?? 'detail'}`);
   const hasExtraInfo =
     !!originalLanguageName ||
     !!frase.explicacao ||
@@ -607,7 +601,7 @@ export default function FraseDetalheView({
         </Link>
         <span aria-hidden>&gt;</span>
         <Link to={pathFromTag(primaryTheme)} className="hover:text-[#A855F7]">
-          {labelFor(primaryTheme)}
+          {primaryTheme}
         </Link>
         <span aria-hidden>&gt;</span>
         <span className="max-w-[12rem] truncate">{authorLine}</span>
@@ -674,7 +668,7 @@ export default function FraseDetalheView({
                   to={pathFromTag(label)}
                   className={`text-[10px] font-black px-2.5 py-1 rounded-full border transition-colors ${cardTagClass('purple', tema)}`}
                 >
-                  #{labelFor(label)}
+                  #{label}
                 </Link>
               ))}
             </div>
@@ -790,8 +784,8 @@ export default function FraseDetalheView({
                     : 'border-zinc-600/40 bg-zinc-800/35'
                 }`}
               >
-                <MetaRow label={t('frases.detail.main_theme')} value={labelFor(primaryTheme)} tema={tema} />
-                <MetaRow label={t('frases.detail.main_category')} value={labelFor(normalizedCategory)} tema={tema} />
+                <MetaRow label={t('frases.detail.main_theme')} value={primaryTheme} tema={tema} />
+                <MetaRow label={t('frases.detail.main_category')} value={normalizedCategory} tema={tema} />
                 <MetaRow label={t('frases.detail.original_language')} value={originalLanguageName} tema={tema} />
                 <MetaRow label={t('frases.detail.year')} value={frase.ano_ou_data} tema={tema} />
                 <MetaRow label={t('frases.detail.nationality')} value={frase.nacionalidade} tema={tema} />
@@ -837,13 +831,38 @@ export default function FraseDetalheView({
                     tema === 'light' ? 'text-zinc-700' : 'text-zinc-400'
                   }`}
                 >
-                  {labelFor(rel.titulo)}
+                  {rel.titulo}
                 </Link>
               </li>
             ))}
           </ul>
         </nav>
       )}
+
+      <SiteFaq
+        tema={tema}
+        title="Sobre esta frase"
+        items={[
+          {
+            question: 'Em que idioma está esta citação?',
+            answer: `O idioma original registrado é ${originalLanguageName}. O texto exibido permanece nesse idioma; menus e tags seguem o idioma da interface.`,
+          },
+          {
+            question: 'Posso compartilhar ou gerar imagem?',
+            answer:
+              'Sim. Use os botões de copiar, compartilhar ou gerar imagem. Preferimos atribuição a @metamensagem nas redes.',
+          },
+          {
+            question: 'Onde encontrar mais conteúdo parecido?',
+            answer:
+              'Use as tags de tema acima, a seção de frases relacionadas e a coleção completa em /frases.',
+          },
+        ]}
+      />
+
+      <div className="mt-10">
+        <AdSlot tema={tema} placement="frase-detail-footer" />
+      </div>
 
       {imageQuote && (
         <Suspense fallback={null}>

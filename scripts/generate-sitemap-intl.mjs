@@ -8,6 +8,7 @@ import path from 'path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'url';
 import { absoluteUrl } from './lib/site-url.mjs';
+import { escapeXml, sitemapIndexXml } from './lib/sitemap-xml.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = path.join(ROOT, 'public');
@@ -25,14 +26,6 @@ const HREFLANG = {
   ja: 'ja',
   hi: 'hi',
 };
-
-function escapeXml(s) {
-  return String(s)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
 
 function frasePath(slug, locale, defaultLocale) {
   if (locale === defaultLocale) return absoluteUrl(`/frases/${slug}`);
@@ -106,16 +99,18 @@ ${entries.slice(0, 50000).join('\n')}
 }
 
 const sitemapRefs = [
-  absoluteUrl('/sitemap.xml'),
+  ...fs
+    .readdirSync(PUBLIC)
+    .filter((name) => /^sitemap-core-\d+\.xml$/.test(name))
+    .sort()
+    .map((name) => absoluteUrl(`/${name}`)),
   ...SEO_LOCALES.map((l) => absoluteUrl(`/sitemap-${l}.xml`)),
 ];
 
-const index = `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapRefs.map((loc) => `  <sitemap><loc>${escapeXml(loc)}</loc></sitemap>`).join('\n')}
-</sitemapindex>`;
+const index = sitemapIndexXml(sitemapRefs);
 fs.writeFileSync(path.join(PUBLIC, 'sitemap-index.xml'), index);
-console.log('✅ sitemap-index.xml (principal + idiomas)');
+fs.writeFileSync(path.join(PUBLIC, 'sitemap.xml'), index);
+console.log('✅ sitemap-index.xml / sitemap.xml (core + idiomas)');
 
 const idx = spawnSync(process.execPath, [path.join(ROOT, 'scripts/submit-indexnow.mjs')], {
   cwd: ROOT,

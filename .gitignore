@@ -24,6 +24,12 @@ coverage/
 !/scripts/importarIndiceSupabase.js
 !/scripts/backfillFraseSearchIndex.mjs
 !/scripts/importarShards.js
+!/scripts/generate-sitemap.mjs
+!/scripts/generate-sitemap-intl.mjs
+!/scripts/test-sitemap.mjs
+!/scripts/lib/
+!/scripts/lib/sitemap-xml.mjs
+!/scripts/lib/site-url.mjs
 
 # Payload gerado para import Supabase (centenas de MB)
 data/search-index/

@@ -31,6 +31,9 @@ if (!robots.includes('Disallow: /api/')) fail('robots.txt must disallow /api/');
 else pass('robots.txt Disallow /api/');
 if (!existsSync('public/sitemap-index.xml')) fail('sitemap-index.xml missing');
 else pass('sitemap-index.xml present');
+const sitemapXml = readFileSync('public/sitemap.xml', 'utf8');
+if (!sitemapXml.includes('<sitemapindex')) fail('sitemap.xml must be a sitemapindex (Google rejects HTML/urlset oversized)');
+else pass('sitemap.xml is sitemapindex');
 
 const idx = readFileSync('index.html', 'utf8');
 for (const needle of ['canonical', 'og:title', 'twitter:card', 'application/ld+json']) {

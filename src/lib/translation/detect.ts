@@ -14,7 +14,8 @@ const ES_STOP =
   /\b(el|la|los|las|que|por|para|con|vida|amor|más|mas|una|del|al|son|está|como|pero|todo|muy)\b/i;
 
 function detectScriptLang(raw: string): CardLang | null {
-  if (/[\u3040-\u30ff\u4e00-\u9faf]/.test(raw)) return 'ja';
+  if (/[\u3040-\u30ff]/.test(raw)) return 'ja';
+  if (/[\u4e00-\u9faf]/.test(raw)) return 'zh';
   if (/[\u0900-\u097F]/.test(raw)) return 'hi';
   return null;
 }

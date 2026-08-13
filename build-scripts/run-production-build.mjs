@@ -7,6 +7,7 @@ const steps = [
   ['check-vercel-supabase-env', 'node', ['build-scripts/check-vercel-supabase-env.mjs']],
   ['build-frase-id-index', 'node', ['build-scripts/build-frase-id-index.mjs']],
   ['vite build', 'npx', ['vite', 'build']],
+  ['sync-public-to-dist', 'node', ['build-scripts/sync-public-to-dist.mjs']],
   ['inject-prerender-shell', 'node', ['build-scripts/inject-prerender-shell.mjs']],
 ];
 

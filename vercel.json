@@ -250,9 +250,9 @@
     }
   ],
   "framework": "vite",
-  "buildCommand": "NODE_OPTIONS=--max-old-space-size=6144 npm run build",
+  "buildCommand": "MM_EXCLUDE_DETAIL_FROM_DIST=1 NODE_OPTIONS=--max-old-space-size=6144 npm run build",
   "outputDirectory": "dist",
-  "installCommand": "npm ci",
+  "installCommand": "npm ci --prefer-offline --no-audit --no-fund",
   "functions": {
     "api/frase-detail.ts": {
       "excludeFiles": "public/frases-v2/detail/**"

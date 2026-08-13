@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './e2e',
@@ -9,12 +9,25 @@ export default defineConfig({
     acceptDownloads: true,
     viewport: { width: 1280, height: 900 },
   },
+  projects: [
+    { name: 'desktop', testMatch: /critical\.spec\.ts/ },
+    {
+      name: 'mobile-android',
+      testMatch: /mobile-translate\.spec\.ts/,
+      use: { ...devices['Pixel 5'] },
+    },
+    {
+      name: 'mobile-ios',
+      testMatch: /mobile-translate\.spec\.ts/,
+      use: { ...devices['iPhone 13'] },
+    },
+  ],
   webServer: process.env.MM_E2E_BASE_URL
     ? undefined
     : {
         command: 'npm run preview -- --port 4173 --host 127.0.0.1',
         url: 'http://127.0.0.1:4173',
-        reuseExistingServer: false,
+        reuseExistingServer: true,
         timeout: 120_000,
       },
 });

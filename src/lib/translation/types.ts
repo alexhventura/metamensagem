@@ -1,5 +1,16 @@
-/** Idiomas do botão Traduzir (alinhados ao SEO Fase 6). */
-export type CardLang = 'pt' | 'en' | 'es' | 'fr' | 'de' | 'it' | 'ja' | 'hi';
+/** Idiomas do botão Traduzir (alinhados ao SEO Fase 6 + modal premium). */
+export type CardLang =
+  | 'pt'
+  | 'en'
+  | 'es'
+  | 'fr'
+  | 'de'
+  | 'it'
+  | 'ja'
+  | 'hi'
+  | 'nl'
+  | 'pl'
+  | 'zh';
 
 export interface LanguageDetection {
   lang: CardLang;

@@ -1,6 +1,6 @@
 import { isSeoLocale, type SeoLocale } from '../../lib/i18n/locales';
 
-export const UI_LOCALES = ['pt', 'en', 'es', 'fr', 'de', 'it', 'ja', 'hi'] as const;
+export const UI_LOCALES = ['pt', 'en', 'es', 'fr', 'de', 'it', 'ja', 'hi', 'nl', 'pl', 'zh'] as const;
 export type UiLocale = (typeof UI_LOCALES)[number];
 
 const LANG_STORAGE_KEY = 'lang';

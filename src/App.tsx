@@ -80,7 +80,8 @@ import {
   FEED_LOAD_MORE_STEP,
 } from './lib/feedWithAds';
 import FeedGridWithAds from './components/FeedGridWithAds';
-import FeedLoadMoreButton from './components/FeedLoadMoreButton';
+import InfiniteScrollSentinel from './components/InfiniteScrollSentinel';
+import { useExpandableFraseFeed } from './hooks/useExpandableFraseFeed';
 import { normalizarParaSlug } from './lib/slug';
 import type { ItemConteudo } from './types/content';
 import ContentCard from './components/ContentCard';
@@ -516,6 +517,10 @@ function HomeView({
     () => bancoRandom.filter((i) => i.tipo === 'frase'),
     [bancoRandom]
   );
+  const { items: feedPool, loadingMore: feedLoading, loadSample } = useExpandableFraseFeed(
+    bancoRandomFrases,
+    !busca.trim()
+  );
   const tagsFrases = useMemo(
     () => tagsForDisplay(bancoFrases.flatMap((f) => f.tags || []), 12),
     [bancoFrases]
@@ -526,10 +531,18 @@ function HomeView({
     enabled: supabaseOn,
   } = useDebouncedSupabaseSearch(busca);
   const resultadosFiltrados = useMemo(() => {
-    if (!busca.trim()) return bancoRandomFrases;
+    if (!busca.trim()) return feedPool;
     if (supabaseActive && supabaseHits !== null) return supabaseHits;
     return searchBancoSemantico(bancoFrases, busca);
-  }, [busca, bancoFrases, bancoRandomFrases, supabaseOn, supabaseActive, supabaseHits]);
+  }, [busca, bancoFrases, feedPool, supabaseOn, supabaseActive, supabaseHits]);
+
+  const hasMoreHome = resultadosFiltrados.length > itensVisiveis;
+  const loadMoreHome = useCallback(() => {
+    if (resultadosFiltrados.length <= itensVisiveis + FEED_LOAD_MORE_STEP) {
+      void loadSample();
+    }
+    setItensVisiveis((prev) => prev + FEED_LOAD_MORE_STEP);
+  }, [itensVisiveis, loadSample, resultadosFiltrados.length]);
 
   const itensHome = useMemo(
     () =>
@@ -623,9 +636,13 @@ function HomeView({
         )}
       />
 
-      {resultadosFiltrados.length > itensVisiveis && (
-        <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
-      )}
+      <InfiniteScrollSentinel
+        tema={tema}
+        hasMore={hasMoreHome}
+        loading={feedLoading}
+        loadedCount={itensVisiveis}
+        onLoadMore={loadMoreHome}
+      />
 
       <DeferredSocialHub tema={tema} />
 
@@ -739,6 +756,10 @@ function FrasesView({
     const list = banco.filter((i) => i.tipo === 'frase');
     return sampleShuffled(list, list.length);
   }, [banco]);
+  const { items: feedPool, loadingMore: feedLoading, loadSample } = useExpandableFraseFeed(
+    baseFrases,
+    !busca.trim()
+  );
 
   const {
     items: supabaseHits,
@@ -747,10 +768,17 @@ function FrasesView({
   } = useDebouncedSupabaseSearch(busca);
 
   const frases = useMemo(() => {
-    if (!busca.trim()) return baseFrases;
+    if (!busca.trim()) return feedPool;
     if (supabaseActive && supabaseHits !== null) return supabaseHits;
     return searchBancoSemantico(baseFrases, busca);
-  }, [busca, baseFrases, supabaseOn, supabaseActive, supabaseHits]);
+  }, [busca, baseFrases, feedPool, supabaseOn, supabaseActive, supabaseHits]);
+
+  const loadMoreFrases = useCallback(() => {
+    if (frases.length <= itensVisiveis + FEED_LOAD_MORE_STEP) {
+      void loadSample();
+    }
+    setItensVisiveis((prev) => prev + FEED_LOAD_MORE_STEP);
+  }, [frases.length, itensVisiveis, loadSample]);
 
   useEffect(() => {
     setItensVisiveis(FEED_INITIAL_VISIBLE);
@@ -844,9 +872,13 @@ function FrasesView({
       />
       )}
 
-      {frases.length > itensVisiveis && (
-        <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
-      )}
+      <InfiniteScrollSentinel
+        tema={tema}
+        hasMore={frases.length > itensVisiveis}
+        loading={feedLoading || catalogLoading}
+        loadedCount={itensVisiveis}
+        onLoadMore={loadMoreFrases}
+      />
       
       <DeferredSocialHub tema={tema} />
 
@@ -954,9 +986,12 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
         )}
       />
 
-      {metaforas.length > itensVisiveis && (
-        <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
-      )}
+      <InfiniteScrollSentinel
+        tema={tema}
+        hasMore={metaforas.length > itensVisiveis}
+        loadedCount={itensVisiveis}
+        onLoadMore={() => setItensVisiveis((prev) => prev + FEED_LOAD_MORE_STEP)}
+      />
 
       <DeferredSocialHub tema={tema} />
     </motion.div>

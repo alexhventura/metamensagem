@@ -37,6 +37,7 @@ export const dePartial = {
   home: {
     search_placeholder: 'Welches Gefühl oder Thema suchen Sie heute?',
     explore_more: '12 weitere anzeigen',
+    loading_more: 'Weitere Nachrichten werden geladen…',
     sharing_wisdom: 'Edge-Weisheit wird synchronisiert...',
   },
   frases: {
@@ -171,6 +172,7 @@ export const itPartial = {
   home: {
     search_placeholder: 'Quale sentimento o tema cerchi oggi?',
     explore_more: 'Mostra altri 12',
+    loading_more: 'Caricamento di altri messaggi…',
     sharing_wisdom: 'Sincronizzazione saggezza Edge...',
   },
   frases: {
@@ -305,6 +307,7 @@ export const jaPartial = {
   home: {
     search_placeholder: '今日はどんな気持ちやテーマを探しますか？',
     explore_more: 'さらに12件表示',
+    loading_more: '読み込み中…',
     sharing_wisdom: 'エッジの知恵を同期中...',
   },
   frases: {
@@ -436,6 +439,7 @@ export const hiPartial = {
   home: {
     search_placeholder: 'आज आप कौन सी भावना या विषय खोज रहे हैं?',
     explore_more: '12 और दिखाएँ',
+    loading_more: 'और संदेश लोड हो रहे हैं…',
     sharing_wisdom: 'एज ज्ञान सिंक हो रहा है...',
   },
   frases: {
@@ -566,6 +570,7 @@ export const nlPartial = {
   home: {
     search_placeholder: 'Welk gevoel of thema zoek je vandaag?',
     explore_more: 'Toon 12 meer',
+    loading_more: 'Meer berichten laden…',
     sharing_wisdom: 'Edge-wijsheid synchroniseren...',
   },
   frases: {
@@ -696,6 +701,7 @@ export const plPartial = {
   home: {
     search_placeholder: 'Jakiego uczucia lub tematu szukasz dziś?',
     explore_more: 'Pokaż 12 więcej',
+    loading_more: 'Ładowanie kolejnych wiadomości…',
     sharing_wisdom: 'Synchronizacja mądrości Edge...',
   },
   frases: {
@@ -826,6 +832,7 @@ export const zhPartial = {
   home: {
     search_placeholder: '今天你想寻找什么感受或主题？',
     explore_more: '再显示12条',
+    loading_more: '正在加载更多内容…',
     sharing_wisdom: '正在同步边缘智慧...',
   },
   frases: {

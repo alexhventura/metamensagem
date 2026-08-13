@@ -12,7 +12,9 @@ import { motion, AnimatePresence, useInView, useReducedMotion } from 'framer-mot
 import { Copy, Share2, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import CardTooltip from '../components/CardTooltip';
-import BrowserPageTranslateButton from '../components/BrowserPageTranslateButton';
+import PageTranslateButton from '../components/PageTranslateButton';
+import SiteFaq from '../components/SiteFaq';
+import AdSlot from '../components/AdSlot';
 
 import {
   CARD_ACTION_BTN,
@@ -23,7 +25,6 @@ import {
   cardNeutralActionClass,
   cardTagClass,
 } from '../lib/cardTheme';
-import { type CardContentDisplay } from '../lib/translation/types';
 import {
   getFraseCmsBySlugSync,
   loadFraseDetailBySlug,
@@ -55,6 +56,7 @@ import type { SeoLocale } from '../../lib/i18n/locales';
 import { prefetchFraseDetail } from '../lib/prefetchFrase';
 import { trackPhraseEvent } from '../lib/analytics/phrasePopularity';
 import { languageOriginalLabel } from '../lib/languageDisplay';
+import { usePageContentTranslate } from '../hooks/usePageContentTranslate';
 
 function MudarMetaSEO({
   title,
@@ -204,15 +206,6 @@ export default function FraseDetalheView({
   const [imageQuote, setImageQuote] = useState<{ id: string; texto: string; autor: string } | null>(null);
   const closeImageModal = useCallback(() => setImageQuote(null), []);
   useAppUiReset(closeImageModal);
-  const [display, setDisplay] = useState<CardContentDisplay>(() => {
-    const initial = preloadedFrase ?? (slug ? getFraseCmsBySlugSync(slug) : null);
-    if (!initial) return { texto: '', isTranslated: false };
-    return {
-      texto: fraseTextoOf(initial),
-      autor: fraseAutorOf(initial),
-      isTranslated: false,
-    };
-  });
   const [relatedSlugs, setRelatedSlugs] = useState<
     { slug: string; titulo: string; id: string }[]
   >([]);
@@ -226,15 +219,9 @@ export default function FraseDetalheView({
     if (!preloadedFrase) {
       setLoading(true);
       setFrase(null);
-      setDisplay({ texto: '', isTranslated: false });
       setFetchingDetail(false);
     } else {
       setFrase(preloadedFrase);
-      setDisplay({
-        texto: fraseTextoOf(preloadedFrase),
-        autor: fraseAutorOf(preloadedFrase),
-        isTranslated: false,
-      });
       setLoading(false);
       setFetchingDetail(!preloadedFrase.explicacao?.trim());
     }
@@ -253,7 +240,7 @@ export default function FraseDetalheView({
         });
         if (cancel) return;
         if (bundle) {
-          const { frase: loaded, display: loadedDisplay } = bundle;
+          const { frase: loaded } = bundle;
           const loadedText = fraseTextoOf(loaded).trim();
           if (!loadedText) {
             setFrase(null);
@@ -262,7 +249,6 @@ export default function FraseDetalheView({
             return;
           }
           setFrase(loaded);
-          setDisplay(loadedDisplay);
           trackPhraseEvent(loaded.slug, 'view', {
             phrase_id: loaded.id,
             category: loaded.categoria,
@@ -286,13 +272,6 @@ export default function FraseDetalheView({
         const sync = getFraseCmsBySlugSync(slug);
         const resolved = sync ?? preloadedFrase ?? null;
         setFrase(resolved);
-        if (resolved) {
-          setDisplay({
-            texto: resolved.frase_original,
-            autor: resolved.autor_original,
-            isTranslated: false,
-          });
-        }
         if (!resolved) setNotFound(true);
       } catch (err) {
         if (import.meta.env.DEV) {
@@ -355,15 +334,19 @@ export default function FraseDetalheView({
     [routeInfo?.prefixLocale, defaultLocale]
   );
 
-  useEffect(() => {
-    if (!frase) return;
-    setDisplay({
-      texto: frase.frase_original,
-      autor: frase.autor_original,
-      explicacao: frase.explicacao || undefined,
-      isTranslated: false,
-    });
-  }, [frase?.id, frase?.frase_original, frase?.autor_original, frase?.explicacao]);
+  const contentSource = useMemo(
+    () => ({
+      texto: frase ? fraseTextoOf(frase) : '',
+      autor: frase ? fraseAutorOf(frase) : undefined,
+      explicacao: frase?.explicacao?.trim() || undefined,
+    }),
+    [frase?.id, frase?.frase_original, frase?.autor_original, frase?.explicacao]
+  );
+
+  const { display } = usePageContentTranslate({
+    id: frase?.id ?? slug ?? 'frase-detail',
+    source: contentSource,
+  });
 
   const listItem = useMemo(() => (frase ? fraseToListItem(frase) : null), [frase]);
 
@@ -544,12 +527,15 @@ export default function FraseDetalheView({
 
   const neutralAction = cardNeutralActionClass(tema);
   const originalLanguageName = languageOriginalLabel(defaultLocale);
-  const normalizedCategory = formatTagForDisplay(frase.categoria) ?? 'Reflexão';
+  const normalizedCategory =
+    formatTagForDisplay(frase.categoria, i18n.language) ?? t('frases.detail.main_category');
   const normalizedThemes = tagsForDisplay(
     [frase.categoria, ...frase.contextos, ...frase.palavras_chave],
-    8
+    8,
+    i18n.language
   );
   const primaryTheme = normalizedThemes[0] ?? normalizedCategory;
+
   const hasExtraInfo =
     !!originalLanguageName ||
     !!frase.explicacao ||
@@ -607,11 +593,11 @@ export default function FraseDetalheView({
         }`}
       >
         <Link to="/" className="hover:text-[#A855F7]">
-          Início
+          {t('nav.home')}
         </Link>
         <span aria-hidden>&gt;</span>
         <Link to="/frases" className="hover:text-[#A855F7]">
-          Frases
+          {t('nav.frases')}
         </Link>
         <span aria-hidden>&gt;</span>
         <Link to={pathFromTag(primaryTheme)} className="hover:text-[#A855F7]">
@@ -631,7 +617,7 @@ export default function FraseDetalheView({
             <div className="flex items-center gap-2 mb-6">
               <span className={`w-1.5 h-1.5 rounded-full ${cardAccentDotClass('purple')}`} />
               <span className={`text-[10px] uppercase font-black tracking-widest ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
-                frase
+              {t('frases.label', 'frase')}
               </span>
             </div>
 
@@ -670,7 +656,9 @@ export default function FraseDetalheView({
                   : 'bg-purple-500/10 text-purple-300 border border-purple-500/20'
               }`}
             >
-              Idioma original: {originalLanguageName}
+              {t('frases.original_language', 'Idioma original: {{lang}}', {
+                lang: originalLanguageName,
+              })}
             </p>
 
             <div className="flex flex-wrap gap-1.5 mb-8">
@@ -708,14 +696,7 @@ export default function FraseDetalheView({
                 </button>
               </CardTooltip>
 
-              <CardTooltip text={t('translate_page.button', 'Ler no meu idioma')} tema={tema}>
-                <BrowserPageTranslateButton
-                  tema={tema}
-                  accent="purple"
-                  tooltipLabel={t('translate_page.button', 'Ler no meu idioma')}
-                  menuPlacement="top"
-                />
-              </CardTooltip>
+              <PageTranslateButton tema={tema} accent="purple" variant="pill" />
 
               <CardTooltip text={t('common.generate_image', 'Gerar Imagem')} tema={tema}>
                 <button
@@ -757,7 +738,7 @@ export default function FraseDetalheView({
                       tema === 'light' ? 'text-purple-700' : 'text-purple-400'
                     }`}
                   >
-                    Explicação
+                    {t('frases.explanation', 'Explicação')}
                   </h2>
                   {frase.explicacao ? (
                     <p
@@ -789,7 +770,7 @@ export default function FraseDetalheView({
                           tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'
                         }`}
                       >
-                        Analisando significado…
+                        {t('frases.analyzing', 'Analisando significado…')}
                       </p>
                     </div>
                   )}
@@ -803,23 +784,23 @@ export default function FraseDetalheView({
                     : 'border-zinc-600/40 bg-zinc-800/35'
                 }`}
               >
-                <MetaRow label="Tema principal" value={primaryTheme} tema={tema} />
-                <MetaRow label="Categoria principal" value={normalizedCategory} tema={tema} />
-                <MetaRow label="Idioma original" value={originalLanguageName} tema={tema} />
-                <MetaRow label="Ano ou data" value={frase.ano_ou_data} tema={tema} />
-                <MetaRow label="Nacionalidade" value={frase.nacionalidade} tema={tema} />
-                <MetaRow label="Nascimento / falecimento" value={frase.nascimento_falecimento} tema={tema} />
-                <MetaRow label="Tipo de autor" value={frase.autor_tipo} tema={tema} />
-                <MetaRow label="Fontes" value={frase.fontes} tema={tema} />
-                <MetaRow label="Observação" value={frase.observacao} tema={tema} />
+                <MetaRow label={t('frases.detail.main_theme')} value={primaryTheme} tema={tema} />
+                <MetaRow label={t('frases.detail.main_category')} value={normalizedCategory} tema={tema} />
+                <MetaRow label={t('frases.detail.original_language')} value={originalLanguageName} tema={tema} />
+                <MetaRow label={t('frases.detail.year')} value={frase.ano_ou_data} tema={tema} />
+                <MetaRow label={t('frases.detail.nationality')} value={frase.nacionalidade} tema={tema} />
+                <MetaRow label={t('frases.detail.birth_death')} value={frase.nascimento_falecimento} tema={tema} />
+                <MetaRow label={t('frases.detail.author_type')} value={frase.autor_tipo} tema={tema} />
+                <MetaRow label={t('frases.detail.sources')} value={frase.fontes} tema={tema} />
+                <MetaRow label={t('frases.detail.note')} value={frase.observacao} tema={tema} />
                 {frase.palavras_chave.length > 0 && (
-                  <MetaRow label="Palavras-chave" value={frase.palavras_chave.join(', ')} tema={tema} />
+                  <MetaRow label={t('frases.detail.keywords')} value={frase.palavras_chave.join(', ')} tema={tema} />
                 )}
                 {frase.informacoes?.ultima_atualizacao && (
-                  <MetaRow label="Última atualização" value={frase.informacoes.ultima_atualizacao} tema={tema} />
+                  <MetaRow label={t('frases.detail.last_updated')} value={frase.informacoes.ultima_atualizacao} tema={tema} />
                 )}
                 {frase.informacoes?.confiabilidade && (
-                  <MetaRow label="Confiabilidade" value={frase.informacoes.confiabilidade} tema={tema} />
+                  <MetaRow label={t('frases.detail.reliability')} value={frase.informacoes.confiabilidade} tema={tema} />
                 )}
               </dl>
             </div>
@@ -857,6 +838,31 @@ export default function FraseDetalheView({
           </ul>
         </nav>
       )}
+
+      <SiteFaq
+        tema={tema}
+        title="Sobre esta frase"
+        items={[
+          {
+            question: 'Em que idioma está esta citação?',
+            answer: `O idioma original registrado é ${originalLanguageName}. O texto exibido permanece nesse idioma; menus e tags seguem o idioma da interface.`,
+          },
+          {
+            question: 'Posso compartilhar ou gerar imagem?',
+            answer:
+              'Sim. Use os botões de copiar, compartilhar ou gerar imagem. Preferimos atribuição a @metamensagem nas redes.',
+          },
+          {
+            question: 'Onde encontrar mais conteúdo parecido?',
+            answer:
+              'Use as tags de tema acima, a seção de frases relacionadas e a coleção completa em /frases.',
+          },
+        ]}
+      />
+
+      <div className="mt-10">
+        <AdSlot tema={tema} placement="frase-detail-footer" />
+      </div>
 
       {imageQuote && (
         <Suspense fallback={null}>

@@ -2,9 +2,11 @@
 import { BrowserRouter, Routes, Route, Link, useParams, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { isTranslatedViewActive } from './lib/translatedViewState';
 const Terms = lazy(() => import('./views/Terms'));
 const Privacy = lazy(() => import('./views/Privacy'));
 const Contact = lazy(() => import('./views/Contact'));
+const About = lazy(() => import('./views/About'));
 const Cookies = lazy(() => import('./views/Cookies'));
 import { 
   Copy, 
@@ -36,9 +38,12 @@ import { quoteFromItem } from './components/image-generator/utils/quoteFromItem'
 import AdSlot from './components/AdSlot';
 import { loadHomeBootstrap, ensureFullCatalogLoaded, type CatalogLoadResult } from './lib/homeData';
 import { HOME_FRASE_POOL_SIZE, pathNeedsFullCatalog, sampleShuffled } from './lib/catalogLimits';
-import BrowserPageTranslateButton from './components/BrowserPageTranslateButton';
-import { type CardContentDisplay } from './lib/translation/types';
-import { useTranslatedViewMeta } from './lib/useTranslatedViewMeta';
+import PageTranslateButton from './components/PageTranslateButton';
+import EditorialBlock from './components/EditorialBlock';
+import SiteFaq, { faqJsonLd } from './components/SiteFaq';
+import { usePageContentTranslate } from './hooks/usePageContentTranslate';
+import { prioritizeByUiLocale } from './lib/contentLocaleFilter';
+import { tagsForDisplay } from './lib/tagDisplay';
 import { sanitizeTextForTranslation } from './lib/textSanitize';
 
 const SocialHub = lazy(() => import('./components/SocialHub'));
@@ -88,7 +93,6 @@ import { CARD_ACTION_BTN, cardNeutralActionClass } from './lib/cardTheme';
 import { useTheme } from './context/ThemeContext';
 import { UiLocaleSync } from './hooks/useUiLocaleSync';
 import AnalyticsRouteSync from './components/AnalyticsRouteSync';
-import { tagsForDisplay } from './lib/tagDisplay';
 import BackNavButton from './components/BackNavButton';
 import HeaderBrandLink from './components/HeaderBrandLink';
 import { useAppUiReset } from './hooks/useAppUiReset';
@@ -223,6 +227,7 @@ export default function App() {
             </nav>
 
             <div className="flex items-center gap-2 md:gap-4">
+              <PageTranslateButton tema={tema} accent="purple" variant="header" />
               <button
                 type="button"
                 onClick={toggleTema}
@@ -318,7 +323,7 @@ export default function App() {
                 ))}
                 <Route path="/metaforas" element={<MetaforasView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
                 <Route path="/metafora/:id/*" element={<MetaforaDetalheView tema={tema} banco={bancoTotal} toast={mostrarToast} />} />
-                <Route path="/sobre" element={<Contact tema={tema} />} />
+                <Route path="/sobre" element={<About tema={tema} />} />
                 <Route path="/contato" element={<Contact tema={tema} />} />
                 <Route path="/privacidade" element={<Privacy tema={tema} />} />
                 <Route path="/termos" element={<Terms tema={tema} />} />
@@ -345,11 +350,12 @@ export default function App() {
         <footer className={`py-8 text-center text-xs border-t mt-auto ${tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-700' : 'bg-zinc-950 border-zinc-700/70 text-zinc-300'}`}>
           <div className="flex justify-center flex-wrap gap-4 mb-3 font-semibold">
             <Link to="/sobre">{t('nav.about')}</Link>
+            <Link to="/contato">{t('nav.contact')}</Link>
             <Link to="/privacidade">{t('nav.privacy')}</Link>
             <Link to="/termos">{t('nav.terms')}</Link>
             <Link to="/cookies">{t('nav.cookies')}</Link>
           </div>
-          <p>© 2025 Metamensagem.com. Todos os direitos reservados.</p>
+          <p>© 2026 Metamensagem.com. Conteúdo editorial para reflexão e compartilhamento consciente.</p>
         </footer>
       </div>
     </BrowserRouter>
@@ -382,72 +388,78 @@ function MudarMetaSEO({
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    const siteTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
-    const desc = description?.trim() || DEFAULT_DESCRIPTION;
-    const canon =
-      canonical ||
-      absoluteUrl(`${window.location.pathname}${window.location.search || ''}`);
-    const pageUrl = canon;
+    const apply = () => {
+      const siteTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+      const desc = description?.trim() || DEFAULT_DESCRIPTION;
+      const canon =
+        canonical ||
+        absoluteUrl(`${window.location.pathname}${window.location.search || ''}`);
+      const pageUrl = canon;
 
-    document.title = siteTitle;
+      document.title = siteTitle;
 
-    const updateMeta = (name: string, content: string, attr = 'name') => {
-      let meta = document.querySelector(`meta[${attr}="${name}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute(attr, name);
-        document.head.appendChild(meta);
+      const updateMeta = (name: string, content: string, attr = 'name') => {
+        let meta = document.querySelector(`meta[${attr}="${name}"]`);
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute(attr, name);
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
+      };
+
+      updateMeta('description', desc);
+      updateMeta('robots', isTranslatedViewActive() ? 'noindex, nofollow' : 'index, follow');
+
+      updateMeta('og:title', siteTitle, 'property');
+      updateMeta('og:description', desc, 'property');
+      updateMeta('og:type', ogType, 'property');
+      updateMeta('og:url', pageUrl, 'property');
+      updateMeta('og:image', OG_IMAGE, 'property');
+      updateMeta('og:site_name', SITE_NAME, 'property');
+      updateMeta(
+        'og:locale',
+        i18n.language === 'pt'
+          ? 'pt_BR'
+          : i18n.language === 'es'
+            ? 'es_ES'
+            : i18n.language === 'fr'
+              ? 'fr_FR'
+              : 'en_US',
+        'property'
+      );
+
+      updateMeta('twitter:card', 'summary_large_image');
+      updateMeta('twitter:title', siteTitle);
+      updateMeta('twitter:description', desc);
+      updateMeta('twitter:image', OG_IMAGE);
+
+      let link = document.querySelector('link[rel="canonical"]');
+      if (!link) {
+        link = document.createElement('link');
+        link.setAttribute('rel', 'canonical');
+        document.head.appendChild(link);
       }
-      meta.setAttribute('content', content);
+      link.setAttribute('href', canon);
+
+      document
+        .querySelectorAll('link[rel="alternate"][hreflang]')
+        .forEach((node) => node.remove());
+
+      const idScript = 'jsonld-dinamico';
+      let script = document.getElementById(idScript);
+      if (script) script.remove();
+      const payload = jsonLD ?? WEB_SITE_JSON_LD;
+      script = document.createElement('script');
+      script.id = idScript;
+      script.setAttribute('type', 'application/ld+json');
+      script.textContent = JSON.stringify(payload);
+      document.head.appendChild(script);
     };
 
-    updateMeta('description', desc);
-    updateMeta('robots', 'index, follow');
-
-    updateMeta('og:title', siteTitle, 'property');
-    updateMeta('og:description', desc, 'property');
-    updateMeta('og:type', ogType, 'property');
-    updateMeta('og:url', pageUrl, 'property');
-    updateMeta('og:image', OG_IMAGE, 'property');
-    updateMeta('og:site_name', SITE_NAME, 'property');
-    updateMeta(
-      'og:locale',
-      i18n.language === 'pt'
-        ? 'pt_BR'
-        : i18n.language === 'es'
-          ? 'es_ES'
-          : i18n.language === 'fr'
-            ? 'fr_FR'
-            : 'en_US',
-      'property'
-    );
-
-    updateMeta('twitter:card', 'summary_large_image');
-    updateMeta('twitter:title', siteTitle);
-    updateMeta('twitter:description', desc);
-    updateMeta('twitter:image', OG_IMAGE);
-
-    let link = document.querySelector('link[rel="canonical"]');
-    if (!link) {
-      link = document.createElement('link');
-      link.setAttribute('rel', 'canonical');
-      document.head.appendChild(link);
-    }
-    link.setAttribute('href', canon);
-
-    document
-      .querySelectorAll('link[rel="alternate"][hreflang]')
-      .forEach((node) => node.remove());
-
-    const idScript = 'jsonld-dinamico';
-    let script = document.getElementById(idScript);
-    if (script) script.remove();
-    const payload = jsonLD ?? WEB_SITE_JSON_LD;
-    script = document.createElement('script');
-    script.id = idScript;
-    script.setAttribute('type', 'application/ld+json');
-    script.textContent = JSON.stringify(payload);
-    document.head.appendChild(script);
+    apply();
+    window.addEventListener('mm-translated-view-change', apply);
+    return () => window.removeEventListener('mm-translated-view-change', apply);
   }, [title, description, jsonLD, canonical, ogType, i18n.language]);
 
   return null;
@@ -493,7 +505,7 @@ function HomeView({
   bancoRandom: ItemConteudo[];
   onRequestCatalog?: () => void;
 }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(FEED_INITIAL_VISIBLE);
 
@@ -505,12 +517,15 @@ function HomeView({
   useAppUiReset(closeImageModal);
   const bancoFrases = useMemo(() => banco.filter((i) => i.tipo === 'frase'), [banco]);
   const bancoRandomFrases = useMemo(
-    () => bancoRandom.filter((i) => i.tipo === 'frase'),
-    [bancoRandom]
+    () => prioritizeByUiLocale(
+      bancoRandom.filter((i) => i.tipo === 'frase'),
+      i18n.language
+    ),
+    [bancoRandom, i18n.language]
   );
   const tagsFrases = useMemo(
-    () => tagsForDisplay(bancoFrases.flatMap((f) => f.tags || []), 12),
-    [bancoFrases]
+    () => tagsForDisplay(bancoFrases.flatMap((f) => f.tags || []), 12, i18n.language),
+    [bancoFrases, i18n.language]
   );
   const {
     items: supabaseHits,
@@ -539,9 +554,26 @@ function HomeView({
       className="max-w-7xl w-full mx-auto px-4 py-8 flex-1 flex flex-col"
     >
       <MudarMetaSEO
-        title={t('app.tagline')}
+        title={`${t('app.title')} — ${t('app.tagline')}`}
         description={DEFAULT_DESCRIPTION}
         canonical={SITE_ORIGIN}
+        jsonLD={faqJsonLd([
+          {
+            question: 'O que é a Metamensagem?',
+            answer:
+              'É uma plataforma editorial de frases inspiradoras e metáforas terapêuticas, com conteúdo em vários idiomas e interface adaptada ao idioma do navegador.',
+          },
+          {
+            question: 'As frases são traduzidas automaticamente?',
+            answer:
+              'Não. Cada citação e metáfora permanece no idioma original. A interface (menus e tags) acompanha o idioma do seu navegador.',
+          },
+          {
+            question: 'Posso compartilhar as frases?',
+            answer:
+              'Sim, para uso pessoal e redes sociais, preferencialmente com atribuição a @metamensagem. Consulte os Termos de Uso.',
+          },
+        ])}
       />
 
       <section className="text-center pt-2 pb-6 md:pt-4 md:pb-8">
@@ -598,6 +630,26 @@ function HomeView({
         </div>
       </section>
 
+      <EditorialBlock
+        tema={tema}
+        title="Por que ler frases e metáforas com atenção"
+        paragraphs={[
+          'A Metamensagem organiza citações e narrativas terapêuticas para momentos de reflexão, estudo pessoal e compartilhamento consciente. O acervo é global: cada texto permanece no idioma em que foi publicado.',
+          'Use a busca e as tags para encontrar temas como amor, mudança, resiliência e fé. A interface e os rótulos das tags acompanham o idioma do seu navegador, sem alterar o texto original da citação.',
+        ]}
+        howToTitle="Como começar"
+        howToSteps={[
+          'Explore frases curtas na Home ou abra a coleção completa em Frases.',
+          'Leia metáforas quando quiser uma narrativa mais longa e profunda.',
+          'No detalhe, veja contexto, temas relacionados e gere uma imagem para compartilhar.',
+        ]}
+        links={[
+          { to: '/frases', label: t('nav.frases') },
+          { to: '/metaforas', label: t('nav.metaforas') },
+          { to: '/sobre', label: t('nav.about') },
+        ]}
+      />
+
       <FeedGridWithAds
         rows={itensHome}
         tema={tema}
@@ -618,6 +670,28 @@ function HomeView({
       {resultadosFiltrados.length > itensVisiveis && (
         <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
       )}
+
+      <SiteFaq
+        tema={tema}
+        title="Perguntas frequentes"
+        items={[
+          {
+            question: 'O conteúdo muda de idioma sozinho?',
+            answer:
+              'Não. Frases e metáforas ficam no idioma original. Menus e tags seguem o idioma do navegador.',
+          },
+          {
+            question: 'Onde encontro políticas do site?',
+            answer:
+              'No rodapé: Sobre, Contato, Privacidade, Termos e Cookies — páginas obrigatórias e atualizadas.',
+          },
+          {
+            question: 'Como gerar imagem de uma frase?',
+            answer:
+              'Abra uma frase e use o botão de gerar imagem. Há formatos 1:1, 4:5 e 9:16 prontos para redes.',
+          },
+        ]}
+      />
 
       <DeferredSocialHub tema={tema} />
 
@@ -707,7 +781,7 @@ function FrasesView({
   catalogReady: boolean;
   onRequestCatalog?: () => void;
 }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(FEED_INITIAL_VISIBLE);
   const [catalogLoading, setCatalogLoading] = useState(false);
@@ -729,8 +803,8 @@ function FrasesView({
   useAppUiReset(closeImageModal);
   const baseFrases = useMemo(() => {
     const list = banco.filter((i) => i.tipo === 'frase');
-    return sampleShuffled(list, list.length);
-  }, [banco]);
+    return prioritizeByUiLocale(sampleShuffled(list, list.length), i18n.language);
+  }, [banco, i18n.language]);
 
   const {
     items: supabaseHits,
@@ -749,8 +823,8 @@ function FrasesView({
   }, [busca]);
 
   const tags = useMemo(
-    () => tagsForDisplay(baseFrases.flatMap((f) => f.tags || []), 10),
-    [baseFrases]
+    () => tagsForDisplay(baseFrases.flatMap((f) => f.tags || []), 10, i18n.language),
+    [baseFrases, i18n.language]
   );
 
   const itensFrases = useMemo(
@@ -815,6 +889,26 @@ function FrasesView({
         </div>
       </div>
 
+      <EditorialBlock
+        tema={tema}
+        title="Como usar o banco de frases"
+        paragraphs={[
+          'Este índice reúne milhares de citações curtas para reflexão, status e estudo temático. Cada frase permanece no idioma original; as tags e a navegação seguem o idioma do seu navegador.',
+          'Combine busca por autor ou palavra-chave com filtros de tema. No detalhe você encontra explicação (quando disponível), metadados e frases relacionadas.',
+        ]}
+        howToTitle="Exemplos de uso"
+        howToSteps={[
+          'Busque por um sentimento (ex.: gratidão) e abra 2–3 frases para comparar perspectivas.',
+          'Gere uma imagem 1:1 ou 9:16 para compartilhar com crédito a @metamensagem.',
+          'Explore metáforas quando quiser um texto narrativo mais longo sobre o mesmo tema.',
+        ]}
+        links={[
+          { to: '/metaforas', label: t('nav.metaforas') },
+          { to: '/sobre', label: t('nav.about') },
+          { to: '/contato', label: t('nav.contact') },
+        ]}
+      />
+
       {catalogLoading && baseFrases.length === 0 ? (
         <div className="flex justify-center py-16" role="status" aria-live="polite">
           <div className="w-10 h-10 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
@@ -839,6 +933,28 @@ function FrasesView({
       {frases.length > itensVisiveis && (
         <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
       )}
+
+      <SiteFaq
+        tema={tema}
+        title="FAQ — Frases"
+        items={[
+          {
+            question: 'Por que vejo frases em inglês e português juntas?',
+            answer:
+              'O acervo é global. Priorizamos conteúdos no idioma da sua interface, mas outras línguas podem aparecer. O texto original nunca é alterado automaticamente.',
+          },
+          {
+            question: 'As tags estão em outro idioma do que a frase?',
+            answer:
+              'As tags acompanham o idioma do navegador/interface. A frase em si permanece no idioma original.',
+          },
+          {
+            question: 'Posso usar as frases comercialmente?',
+            answer:
+              'O uso pessoal e o compartilhamento com atribuição são permitidos. Uso comercial do acervo completo não é autorizado — veja os Termos.',
+          },
+        ]}
+      />
       
       <DeferredSocialHub tema={tema} />
 
@@ -859,10 +975,13 @@ function FrasesView({
 // VISÒO: LISTA DE METÁFORAS
 // ===================================================
 function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco: ItemConteudo[] }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [busca, setBusca] = useState('');
   const [itensVisiveis, setItensVisiveis] = useState(FEED_INITIAL_VISIBLE);
-  const baseMetaforas = useMemo(() => filtrarMetaforasDoBanco(banco), [banco]);
+  const baseMetaforas = useMemo(
+    () => prioritizeByUiLocale(filtrarMetaforasDoBanco(banco), i18n.language),
+    [banco, i18n.language]
+  );
 
   const metaforas = useMemo(() => {
     if (!busca.trim()) return baseMetaforas;
@@ -874,8 +993,8 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
   }, [busca]);
 
   const tags = useMemo(
-    () => tagsForDisplay(baseMetaforas.flatMap((m) => m.tags || []), 10),
-    [baseMetaforas]
+    () => tagsForDisplay(baseMetaforas.flatMap((m) => m.tags || []), 10, i18n.language),
+    [baseMetaforas, i18n.language]
   );
 
   const itensMetaforas = useMemo(
@@ -932,6 +1051,25 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
         </div>
       </div>
 
+      <EditorialBlock
+        tema={tema}
+        title="O que são metáforas terapêuticas"
+        paragraphs={[
+          'Metáforas terapêuticas são narrativas curtas usadas para iluminar padrões emocionais, decisões e mudanças de atitude. Aqui você lê o texto completo, no idioma original, com tempo de leitura estimado.',
+          'Tags e menus seguem o idioma do navegador. Explore temas, avance para a próxima metáfora e compartilhe trechos com responsabilidade.',
+        ]}
+        howToTitle="Como aproveitar a leitura"
+        howToSteps={[
+          'Escolha uma metáfora pelo título ou tema.',
+          'Ajuste o tamanho da fonte na página de detalhe para leitura confortável.',
+          'Compare com frases curtas do mesmo tema na coleção de Frases.',
+        ]}
+        links={[
+          { to: '/frases', label: t('nav.frases') },
+          { to: '/sobre', label: t('nav.about') },
+        ]}
+      />
+
       <FeedGridWithAds
         rows={itensMetaforas}
         tema={tema}
@@ -950,6 +1088,28 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
         <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
       )}
 
+      <SiteFaq
+        tema={tema}
+        title="FAQ — Metáforas"
+        items={[
+          {
+            question: 'Qual a diferença entre frase e metáfora neste site?',
+            answer:
+              'Frases são citações curtas. Metáforas são textos narrativos mais longos, pensados para insight e reflexão aprofundada.',
+          },
+          {
+            question: 'Preciso traduzir para ler?',
+            answer:
+              'Não automaticamente. O texto fica no idioma original. Use o seletor de idioma da página apenas se quiser adaptar a visualização manualmente.',
+          },
+          {
+            question: 'Posso citar trechos?',
+            answer:
+              'Sim, para uso pessoal e compartilhamento com atribuição. Consulte os Termos para limites comerciais.',
+          },
+        ]}
+      />
+
       <DeferredSocialHub tema={tema} />
     </motion.div>
   );
@@ -963,11 +1123,21 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
   const [fontSize, setFontSize] = useState(20);
   const [item, setItem] = useState<ItemConteudo | null>(null);
   const [loading, setLoading] = useState(true);
-  const [display, setDisplay] = useState<CardContentDisplay>({
-    texto: '',
-    isTranslated: false,
+
+  const contentSource = useMemo(
+    () => ({
+      texto: item?.texto || '',
+      titulo: item?.titulo,
+      resumo: item?.resumo,
+      autor: item?.autor,
+    }),
+    [item?.id, item?.texto, item?.titulo, item?.resumo, item?.autor]
+  );
+
+  const { display } = usePageContentTranslate({
+    id: item ? `metafora-${item.id}` : 'metafora-detail',
+    source: contentSource,
   });
-  useTranslatedViewMeta(display.isTranslated);
 
   const navigation = useMemo(() => {
     if (!id || banco.length === 0) return { prev: null, next: null };
@@ -1009,26 +1179,24 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
     };
   }, [id, banco]);
 
-  useEffect(() => {
-    if (!item) return;
-    setDisplay({
-      texto: item.texto || '',
-      titulo: item.titulo,
-      resumo: item.resumo,
-      isTranslated: false,
-    });
-  }, [item?.id, item?.texto, item?.titulo, item?.resumo]);
-
   if (loading) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-20">
         <div className="w-10 h-10 border-2 border-purple-500 border-t-transparent rounded-full animate-spin mb-4"></div>
-        <p className="font-mono text-[10px] uppercase tracking-widest opacity-40">Extraindo Sabedoria do Fragmento...</p>
+        <p className="font-mono text-[10px] uppercase tracking-widest opacity-40">
+          {t('metaforas.loading', 'Extraindo Sabedoria do Fragmento...')}
+        </p>
       </div>
     );
   }
 
-  if (!item) return <div className="p-20 text-center text-red-500">Metáfora não localizada no fragmento de borda.</div>;
+  if (!item) {
+    return (
+      <div className="p-20 text-center text-red-500">
+        {t('metaforas.not_found', 'Metáfora não localizada no fragmento de borda.')}
+      </div>
+    );
+  }
 
   const palavras = item.texto ? item.texto.split(/\s+/).length : 0;
   const tempoLeitura = Math.ceil(palavras / 200);
@@ -1060,7 +1228,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       className="max-w-4xl w-full mx-auto px-4 py-12 flex-1"
     >
       <MudarMetaSEO
-        title={item.titulo || 'Metáfora terapêutica'}
+        title={item.titulo || t('metaforas.fallback_title', 'Metáfora terapêutica')}
         description={item.resumo || DEFAULT_DESCRIPTION}
         canonical={canonicalUrl}
         ogType="article"
@@ -1069,7 +1237,11 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       
       <div className={`mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b pb-10 ${tema === 'light' ? 'border-zinc-200' : 'border-zinc-800'}`}>
         <div className="flex-1">
-          <BackNavButton label="Metáfora Terapêutica" fallbackPath="/metaforas" className="text-[10px] uppercase font-black text-[#A855F7] tracking-[0.2em] mb-4 inline-flex items-center gap-2 hover:gap-3 transition-[gap] bg-transparent border-0 p-0 cursor-pointer" />
+          <BackNavButton
+            label={t('metaforas.therapeutic_title', 'Metáfora Terapêutica')}
+            fallbackPath="/metaforas"
+            className="text-[10px] uppercase font-black text-[#A855F7] tracking-[0.2em] mb-4 inline-flex items-center gap-2 hover:gap-3 transition-[gap] bg-transparent border-0 p-0 cursor-pointer"
+          />
           <AnimatePresence mode="wait">
             <motion.h1
               key={(display.titulo ?? item.titulo) + String(display.isTranslated)}
@@ -1083,8 +1255,12 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
             </motion.h1>
           </AnimatePresence>
           <div className={`flex items-center gap-4 text-xs font-bold ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
-            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><BookOpen size={14} /> ~{tempoLeitura} MIN DE REFLEXÒO</span>
-            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><Quote size={14} /> SABEDORIA SECULAR</span>
+            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}>
+              <BookOpen size={14} /> {t('metaforas.read_time', '~{{count}} MIN DE REFLEXÃO', { count: tempoLeitura })}
+            </span>
+            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}>
+              <Quote size={14} /> {t('metaforas.wisdom_badge', 'SABEDORIA SECULAR')}
+            </span>
           </div>
         </div>
         <div className={`flex gap-2 p-2 rounded-[1.5rem] border ${tema === 'light' ? 'bg-white border-zinc-100' : 'bg-zinc-900 border-white/5'}`}>
@@ -1132,13 +1308,8 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
               <Copy size={18} />
             </button>
           </CardTooltip>
-          <CardTooltip text={t('translate_page.button', 'Ler no meu idioma')} tema={tema}>
-            <BrowserPageTranslateButton
-              tema={tema}
-              accent="pink"
-              tooltipLabel={t('translate_page.button', 'Ler no meu idioma')}
-              menuPlacement="bottom"
-            />
+          <CardTooltip text={t('translate_page.button_short', 'Traduzir página')} tema={tema}>
+            <PageTranslateButton tema={tema} accent="pink" variant="pill" />
           </CardTooltip>
           <CardTooltip text={t('common.share')} tema={tema}>
             <button
@@ -1166,8 +1337,12 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
           >
             <ChevronLeft size={16} className="text-purple-500 shrink-0" />
             <div className="text-left overflow-hidden">
-              <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>Anterior</span>
-              <span className="text-xs font-bold truncate block leading-tight">{navigation.prev.titulo}</span>
+              <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
+                {t('metaforas.prev', 'Anterior')}
+              </span>
+              <span className="text-xs font-bold truncate block leading-tight">
+                {navigation.prev.titulo}
+              </span>
             </div>
           </Link>
         ) : <div className="flex-1 hidden sm:block" />}
@@ -1178,8 +1353,12 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
             className={`flex-1 flex items-center justify-end gap-3 p-5 rounded-3xl border transition-all ${tema === 'light' ? 'bg-white border-zinc-100 hover:bg-zinc-50' : 'bg-zinc-800/40 border-zinc-600/30 hover:bg-zinc-800/70'}`}
           >
             <div className="text-right overflow-hidden">
-              <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>Próxima</span>
-              <span className="text-xs font-bold truncate block leading-tight">{navigation.next.titulo}</span>
+              <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
+                {t('metaforas.next', 'Próxima')}
+              </span>
+              <span className="text-xs font-bold truncate block leading-tight">
+                {navigation.next.titulo}
+              </span>
             </div>
             <ChevronRight size={16} className="text-purple-500 shrink-0" />
           </Link>

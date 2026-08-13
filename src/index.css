@@ -104,12 +104,32 @@ body.mm-modal-open .mm-app-chrome {
   top: auto;
 }
 
-body.mm-modal-open .mm-app-subchrome {
-  position: relative;
-  top: auto;
+.mm-page-translate-trigger:focus-visible {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
 }
 
-/* Cards abaixo da dobra — menos custo de layout inicial */
+.mm-page-translate-lang:focus-visible {
+  outline: 2px solid #a855f7;
+  outline-offset: 1px;
+}
+
+.mm-page-translate-panel {
+  box-shadow:
+    0 24px 80px rgb(0 0 0 / 0.22),
+    0 0 0 1px rgb(168 85 247 / 0.08);
+}
+
+html.dark .mm-page-translate-panel {
+  box-shadow:
+    0 24px 80px rgb(0 0 0 / 0.55),
+    0 0 0 1px rgb(168 85 247 / 0.12);
+}
+
+.mm-page-translate-overlay {
+  backdrop-filter: blur(2px);
+}
+
 .mm-card-lazy {
   content-visibility: auto;
   contain-intrinsic-size: 320px 420px;

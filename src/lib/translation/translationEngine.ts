@@ -173,6 +173,7 @@ function matchesTargetLanguage(
   if (isMyMemoryQuotaOrError(translated)) return false;
 
   if (to === 'ja') return hasJapaneseScript(translated);
+  if (to === 'zh') return hasJapaneseScript(translated);
   if (to === 'hi') return hasDevanagariScript(translated);
   if (to === 'it') {
     return (
@@ -661,46 +662,52 @@ export async function translateCardContent(
     return { ...source, isTranslated: false };
   }
 
-  const textoDet = options?.sourceLang
-    ? { lang: options.sourceLang, confidence: 1 }
-    : detectCardLanguageWithConfidence(textoRaw);
-  if (
-    !options?.force &&
-    textoDet.lang === target &&
-    textoDet.confidence >= 0.55 &&
-    textAppearsToBeLanguage(textoRaw, target)
-  ) {
-    return { ...source, isTranslated: false };
+  // Traduz cada campo pelo idioma detectado — evita pular explicação PT em frase EN (e vice-versa).
+  let texto = textoRaw;
+  try {
+    const translated = await translateField(textoRaw, target, options, 'texto');
+    if (translated) texto = translated;
+  } catch {
+    const det = options?.sourceLang
+      ? { lang: options.sourceLang, confidence: 1 }
+      : detectCardLanguageWithConfidence(textoRaw);
+    if (det.lang !== target || det.confidence < 0.55) {
+      throw new TranslationFailedErrorClass('Não foi possível traduzir o texto principal', target);
+    }
   }
 
-  const texto = await translateField(textoRaw, target, options, 'texto');
   const titulo = await translateOptionalField(source.titulo, target, options, 'titulo');
   const resumo = await translateOptionalField(source.resumo, target, options, 'resumo');
 
-  if (
-    !texto ||
-    isSameish(textoRaw, texto) ||
-    (!isValidTranslation(textoRaw, texto, textoDet.lang, target) &&
-      !(target === 'es' && isLikelySpanish(texto, textoRaw)))
-  ) {
-    throw new TranslationFailedErrorClass('Não foi possível traduzir o texto principal', target);
-  }
-
   let autor = source.autor;
   if (source.autor && shouldTranslateAuthor(source.autor)) {
-    autor = await translateField(source.autor, target, options, 'autor');
+    try {
+      const translatedAutor = await translateField(source.autor, target, options, 'autor');
+      if (translatedAutor) autor = translatedAutor;
+    } catch {
+      /* mantém autor original */
+    }
   }
+
   const explicacao = await translateOptionalField(source.explicacao, target, options, 'explicacao');
+
+  const norm = (s: string | undefined) => sanitizeTextForTranslation(s ?? '');
+  const changed =
+    norm(texto) !== norm(textoRaw) ||
+    (source.titulo != null && titulo != null && norm(titulo) !== norm(source.titulo)) ||
+    (source.resumo != null && resumo != null && norm(resumo) !== norm(source.resumo)) ||
+    (source.explicacao != null && explicacao != null && norm(explicacao) !== norm(source.explicacao)) ||
+    (source.autor != null && autor != null && norm(autor) !== norm(source.autor));
 
   return {
     texto,
-    titulo,
-    resumo,
+    titulo: titulo ?? source.titulo,
+    resumo: resumo ?? source.resumo,
     autor: resolveTranslatedAuthor(source.autor, autor),
-    explicacao,
-    isTranslated: true,
+    explicacao: explicacao ?? source.explicacao,
+    isTranslated: changed,
     translationFailed: false,
-    targetLang: target,
+    targetLang: changed ? target : undefined,
   };
 }
 

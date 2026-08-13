@@ -1,11 +1,10 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { BookOpen, Copy, Share2, Sparkles } from 'lucide-react';
 import CardTooltip from './CardTooltip';
-import BrowserPageTranslateButton from './BrowserPageTranslateButton';
-import { type CardContentDisplay } from '../lib/translation/types';
+import PageTranslateButton from './PageTranslateButton';
 import { pathFromTag } from '../lib/tagsSeo';
 import { frasePath, seoLocaleFromLanguageOriginal } from '../lib/i18nRoutes';
 import { detectLanguageOriginal } from '../../lib/i18n/detectLanguage';
@@ -28,6 +27,7 @@ import { trackPhraseEvent } from '../lib/analytics/phrasePopularity';
 import type { ImageGeneratorQuote } from './image-generator/types';
 import { formatTagForDisplay } from '../lib/tagDisplay';
 import { sanitizeTextForTranslation } from '../lib/textSanitize';
+import { usePageContentTranslate } from '../hooks/usePageContentTranslate';
 
 export default function ContentCard({
   item,
@@ -42,25 +42,24 @@ export default function ContentCard({
   toast: (msg: string) => void;
   lazyBelowFold?: boolean;
 }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isFrase = item.tipo === 'frase';
   const accent = cardAccentForTipo(item.tipo);
 
-  const [display, setDisplay] = useState<CardContentDisplay>(() => ({
-    texto: sanitizeTextForTranslation(item.texto),
-    titulo: item.titulo ? sanitizeTextForTranslation(item.titulo) : item.titulo,
-    resumo: item.resumo ? sanitizeTextForTranslation(item.resumo) : item.resumo,
-    isTranslated: false,
-  }));
+  const contentSource = useMemo(
+    () => ({
+      texto: sanitizeTextForTranslation(item.texto),
+      titulo: item.titulo ? sanitizeTextForTranslation(item.titulo) : item.titulo,
+      resumo: item.resumo ? sanitizeTextForTranslation(item.resumo) : item.resumo,
+      autor: item.autor,
+    }),
+    [item.id, item.texto, item.titulo, item.resumo, item.autor]
+  );
 
-  useEffect(() => {
-    setDisplay({
-      texto: item.texto,
-      titulo: item.titulo,
-      resumo: item.resumo,
-      isTranslated: false,
-    });
-  }, [item.id, item.texto, item.titulo, item.resumo]);
+  const { display } = usePageContentTranslate({
+    id: `card-${item.id}`,
+    source: contentSource,
+  });
 
   const detailPath = isFrase
     ? (() => {
@@ -136,10 +135,10 @@ export default function ContentCard({
   const displayTags = useMemo(
     () =>
       (item.tags || [])
-        .map((tag) => formatTagForDisplay(tag))
+        .map((tag) => formatTagForDisplay(tag, i18n.language))
         .filter((t): t is string => Boolean(t))
         .slice(0, 3),
-    [item.tags]
+    [item.tags, i18n.language]
   );
 
   const linkState = isFrase ? { item } : undefined;
@@ -278,12 +277,8 @@ export default function ContentCard({
             </button>
           </CardTooltip>
 
-          <CardTooltip text={t('translate_page.button', 'Ler no meu idioma')} tema={tema}>
-            <BrowserPageTranslateButton
-              tema={tema}
-              accent={accent}
-              tooltipLabel={t('translate_page.button', 'Ler no meu idioma')}
-            />
+          <CardTooltip text={t('translate_page.button_short', 'Traduzir página')} tema={tema}>
+            <PageTranslateButton tema={tema} accent={accent} />
           </CardTooltip>
 
           {isFrase && onGenerateImage && (

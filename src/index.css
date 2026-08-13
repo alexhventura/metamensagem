@@ -64,7 +64,7 @@ html[data-theme="dark"] {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-top: 1px solid var(--mm-header-border);
-  background-color: var(--mm-header-bg);
+  background-color: var(--mm-subheader-bg);
   color: var(--mm-fg-muted, var(--mm-fg));
   padding: 0.7rem 1rem max(0.7rem, env(safe-area-inset-bottom, 0px));
 }

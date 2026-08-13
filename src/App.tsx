@@ -36,6 +36,7 @@ import { quoteFromItem } from './components/image-generator/utils/quoteFromItem'
 import AdSlot from './components/AdSlot';
 import { loadHomeBootstrap, ensureFullCatalogLoaded, type CatalogLoadResult } from './lib/homeData';
 import { HOME_FRASE_POOL_SIZE, pathNeedsFullCatalog, sampleShuffled } from './lib/catalogLimits';
+import PageTranslateButton from './components/PageTranslateButton';
 import BrowserPageTranslateButton from './components/BrowserPageTranslateButton';
 import { type CardContentDisplay } from './lib/translation/types';
 import { useTranslatedViewMeta } from './lib/useTranslatedViewMeta';
@@ -224,6 +225,7 @@ export default function App() {
             </nav>
 
             <div className="flex items-center gap-2 md:gap-4">
+              <PageTranslateButton tema={tema} accent="purple" variant="header" />
               <button
                 type="button"
                 onClick={toggleTema}

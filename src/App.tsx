@@ -193,7 +193,7 @@ export default function App() {
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.9 }}
-              className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[300] pointer-events-none"
+              className="fixed bottom-24 left-1/2 -translate-x-1/2 z-[300] pointer-events-none"
             >
               <div className={`px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 backdrop-blur-xl border border-white/10 ${
                 toast.tipo === 'sucesso' ? 'bg-emerald-500/90 text-white' : 
@@ -267,7 +267,7 @@ export default function App() {
         </div>
 
         {/* ROTAS DA APLICA�!ÒO */}
-        <main id="main-content" className="flex-1 flex flex-col" tabIndex={-1}>
+        <main id="main-content" className="flex-1 flex flex-col mm-app-main" tabIndex={-1}>
           {loading ? (
             <div className="flex-1 flex items-center justify-center" role="status" aria-live="polite">
               <div className="text-center">
@@ -342,15 +342,25 @@ export default function App() {
           )}
         </main>
 
-        {/* FOOTER */}
-        <footer className={`py-8 text-center text-xs border-t mt-auto ${tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-700' : 'bg-zinc-950 border-zinc-700/70 text-zinc-300'}`}>
-          <div className="flex justify-center flex-wrap gap-4 mb-3 font-semibold">
-            <Link to="/sobre">{t('nav.about')}</Link>
-            <Link to="/privacidade">{t('nav.privacy')}</Link>
-            <Link to="/termos">{t('nav.terms')}</Link>
-            <Link to="/cookies">{t('nav.cookies')}</Link>
-          </div>
-          <p>© 2025 Metamensagem.com. Todos os direitos reservados.</p>
+        <footer className="mm-app-footer text-center text-[11px] md:text-xs">
+          <nav
+            className="flex justify-center flex-wrap gap-x-4 gap-y-1 mb-1 font-semibold"
+            aria-label="Institucional"
+          >
+            <Link to="/sobre" className="hover:text-[#A855F7] transition-colors">
+              {t('nav.about')}
+            </Link>
+            <Link to="/privacidade" className="hover:text-[#A855F7] transition-colors">
+              {t('nav.privacy')}
+            </Link>
+            <Link to="/termos" className="hover:text-[#A855F7] transition-colors">
+              {t('nav.terms')}
+            </Link>
+            <Link to="/cookies" className="hover:text-[#A855F7] transition-colors">
+              {t('nav.cookies')}
+            </Link>
+          </nav>
+          <p className="opacity-70">© 2026 Metamensagem.com. Todos os direitos reservados.</p>
         </footer>
       </div>
     </BrowserRouter>

@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route, Link, useParams, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { isTranslatedViewActive } from './lib/translatedViewState';
 const Terms = lazy(() => import('./views/Terms'));
 const Privacy = lazy(() => import('./views/Privacy'));
 const Contact = lazy(() => import('./views/Contact'));
@@ -36,9 +37,9 @@ import { quoteFromItem } from './components/image-generator/utils/quoteFromItem'
 import AdSlot from './components/AdSlot';
 import { loadHomeBootstrap, ensureFullCatalogLoaded, type CatalogLoadResult } from './lib/homeData';
 import { HOME_FRASE_POOL_SIZE, pathNeedsFullCatalog, sampleShuffled } from './lib/catalogLimits';
-import BrowserPageTranslateButton from './components/BrowserPageTranslateButton';
-import { type CardContentDisplay } from './lib/translation/types';
-import { useTranslatedViewMeta } from './lib/useTranslatedViewMeta';
+import PageTranslateButton from './components/PageTranslateButton';
+import { usePageContentTranslate } from './hooks/usePageContentTranslate';
+import { useTranslatedLabels } from './hooks/useTranslatedLabels';
 import { sanitizeTextForTranslation } from './lib/textSanitize';
 
 const SocialHub = lazy(() => import('./components/SocialHub'));
@@ -223,6 +224,7 @@ export default function App() {
             </nav>
 
             <div className="flex items-center gap-2 md:gap-4">
+              <PageTranslateButton tema={tema} accent="purple" variant="header" />
               <button
                 type="button"
                 onClick={toggleTema}
@@ -382,72 +384,78 @@ function MudarMetaSEO({
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    const siteTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
-    const desc = description?.trim() || DEFAULT_DESCRIPTION;
-    const canon =
-      canonical ||
-      absoluteUrl(`${window.location.pathname}${window.location.search || ''}`);
-    const pageUrl = canon;
+    const apply = () => {
+      const siteTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+      const desc = description?.trim() || DEFAULT_DESCRIPTION;
+      const canon =
+        canonical ||
+        absoluteUrl(`${window.location.pathname}${window.location.search || ''}`);
+      const pageUrl = canon;
 
-    document.title = siteTitle;
+      document.title = siteTitle;
 
-    const updateMeta = (name: string, content: string, attr = 'name') => {
-      let meta = document.querySelector(`meta[${attr}="${name}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute(attr, name);
-        document.head.appendChild(meta);
+      const updateMeta = (name: string, content: string, attr = 'name') => {
+        let meta = document.querySelector(`meta[${attr}="${name}"]`);
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute(attr, name);
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
+      };
+
+      updateMeta('description', desc);
+      updateMeta('robots', isTranslatedViewActive() ? 'noindex, nofollow' : 'index, follow');
+
+      updateMeta('og:title', siteTitle, 'property');
+      updateMeta('og:description', desc, 'property');
+      updateMeta('og:type', ogType, 'property');
+      updateMeta('og:url', pageUrl, 'property');
+      updateMeta('og:image', OG_IMAGE, 'property');
+      updateMeta('og:site_name', SITE_NAME, 'property');
+      updateMeta(
+        'og:locale',
+        i18n.language === 'pt'
+          ? 'pt_BR'
+          : i18n.language === 'es'
+            ? 'es_ES'
+            : i18n.language === 'fr'
+              ? 'fr_FR'
+              : 'en_US',
+        'property'
+      );
+
+      updateMeta('twitter:card', 'summary_large_image');
+      updateMeta('twitter:title', siteTitle);
+      updateMeta('twitter:description', desc);
+      updateMeta('twitter:image', OG_IMAGE);
+
+      let link = document.querySelector('link[rel="canonical"]');
+      if (!link) {
+        link = document.createElement('link');
+        link.setAttribute('rel', 'canonical');
+        document.head.appendChild(link);
       }
-      meta.setAttribute('content', content);
+      link.setAttribute('href', canon);
+
+      document
+        .querySelectorAll('link[rel="alternate"][hreflang]')
+        .forEach((node) => node.remove());
+
+      const idScript = 'jsonld-dinamico';
+      let script = document.getElementById(idScript);
+      if (script) script.remove();
+      const payload = jsonLD ?? WEB_SITE_JSON_LD;
+      script = document.createElement('script');
+      script.id = idScript;
+      script.setAttribute('type', 'application/ld+json');
+      script.textContent = JSON.stringify(payload);
+      document.head.appendChild(script);
     };
 
-    updateMeta('description', desc);
-    updateMeta('robots', 'index, follow');
-
-    updateMeta('og:title', siteTitle, 'property');
-    updateMeta('og:description', desc, 'property');
-    updateMeta('og:type', ogType, 'property');
-    updateMeta('og:url', pageUrl, 'property');
-    updateMeta('og:image', OG_IMAGE, 'property');
-    updateMeta('og:site_name', SITE_NAME, 'property');
-    updateMeta(
-      'og:locale',
-      i18n.language === 'pt'
-        ? 'pt_BR'
-        : i18n.language === 'es'
-          ? 'es_ES'
-          : i18n.language === 'fr'
-            ? 'fr_FR'
-            : 'en_US',
-      'property'
-    );
-
-    updateMeta('twitter:card', 'summary_large_image');
-    updateMeta('twitter:title', siteTitle);
-    updateMeta('twitter:description', desc);
-    updateMeta('twitter:image', OG_IMAGE);
-
-    let link = document.querySelector('link[rel="canonical"]');
-    if (!link) {
-      link = document.createElement('link');
-      link.setAttribute('rel', 'canonical');
-      document.head.appendChild(link);
-    }
-    link.setAttribute('href', canon);
-
-    document
-      .querySelectorAll('link[rel="alternate"][hreflang]')
-      .forEach((node) => node.remove());
-
-    const idScript = 'jsonld-dinamico';
-    let script = document.getElementById(idScript);
-    if (script) script.remove();
-    const payload = jsonLD ?? WEB_SITE_JSON_LD;
-    script = document.createElement('script');
-    script.id = idScript;
-    script.setAttribute('type', 'application/ld+json');
-    script.textContent = JSON.stringify(payload);
-    document.head.appendChild(script);
+    apply();
+    window.addEventListener('mm-translated-view-change', apply);
+    return () => window.removeEventListener('mm-translated-view-change', apply);
   }, [title, description, jsonLD, canonical, ogType, i18n.language]);
 
   return null;
@@ -963,11 +971,21 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
   const [fontSize, setFontSize] = useState(20);
   const [item, setItem] = useState<ItemConteudo | null>(null);
   const [loading, setLoading] = useState(true);
-  const [display, setDisplay] = useState<CardContentDisplay>({
-    texto: '',
-    isTranslated: false,
+
+  const contentSource = useMemo(
+    () => ({
+      texto: item?.texto || '',
+      titulo: item?.titulo,
+      resumo: item?.resumo,
+      autor: item?.autor,
+    }),
+    [item?.id, item?.texto, item?.titulo, item?.resumo, item?.autor]
+  );
+
+  const { display } = usePageContentTranslate({
+    id: item ? `metafora-${item.id}` : 'metafora-detail',
+    source: contentSource,
   });
-  useTranslatedViewMeta(display.isTranslated);
 
   const navigation = useMemo(() => {
     if (!id || banco.length === 0) return { prev: null, next: null };
@@ -982,6 +1000,15 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       next: idx < metaforas.length - 1 ? metaforas[idx + 1] : null
     };
   }, [id, banco]);
+
+  const navLabelPool = useMemo(
+    () =>
+      [navigation.prev?.titulo, navigation.next?.titulo].filter((x): x is string =>
+        Boolean(x)
+      ),
+    [navigation.prev?.titulo, navigation.next?.titulo]
+  );
+  const { labelFor: navLabelFor } = useTranslatedLabels(navLabelPool, `metafora-nav-${id ?? 'detail'}`);
 
   useEffect(() => {
     if (!id) return;
@@ -1009,26 +1036,24 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
     };
   }, [id, banco]);
 
-  useEffect(() => {
-    if (!item) return;
-    setDisplay({
-      texto: item.texto || '',
-      titulo: item.titulo,
-      resumo: item.resumo,
-      isTranslated: false,
-    });
-  }, [item?.id, item?.texto, item?.titulo, item?.resumo]);
-
   if (loading) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-20">
         <div className="w-10 h-10 border-2 border-purple-500 border-t-transparent rounded-full animate-spin mb-4"></div>
-        <p className="font-mono text-[10px] uppercase tracking-widest opacity-40">Extraindo Sabedoria do Fragmento...</p>
+        <p className="font-mono text-[10px] uppercase tracking-widest opacity-40">
+          {t('metaforas.loading', 'Extraindo Sabedoria do Fragmento...')}
+        </p>
       </div>
     );
   }
 
-  if (!item) return <div className="p-20 text-center text-red-500">Metáfora não localizada no fragmento de borda.</div>;
+  if (!item) {
+    return (
+      <div className="p-20 text-center text-red-500">
+        {t('metaforas.not_found', 'Metáfora não localizada no fragmento de borda.')}
+      </div>
+    );
+  }
 
   const palavras = item.texto ? item.texto.split(/\s+/).length : 0;
   const tempoLeitura = Math.ceil(palavras / 200);
@@ -1060,7 +1085,7 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       className="max-w-4xl w-full mx-auto px-4 py-12 flex-1"
     >
       <MudarMetaSEO
-        title={item.titulo || 'Metáfora terapêutica'}
+        title={item.titulo || t('metaforas.fallback_title', 'Metáfora terapêutica')}
         description={item.resumo || DEFAULT_DESCRIPTION}
         canonical={canonicalUrl}
         ogType="article"
@@ -1069,7 +1094,11 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       
       <div className={`mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b pb-10 ${tema === 'light' ? 'border-zinc-200' : 'border-zinc-800'}`}>
         <div className="flex-1">
-          <BackNavButton label="Metáfora Terapêutica" fallbackPath="/metaforas" className="text-[10px] uppercase font-black text-[#A855F7] tracking-[0.2em] mb-4 inline-flex items-center gap-2 hover:gap-3 transition-[gap] bg-transparent border-0 p-0 cursor-pointer" />
+          <BackNavButton
+            label={t('metaforas.therapeutic_title', 'Metáfora Terapêutica')}
+            fallbackPath="/metaforas"
+            className="text-[10px] uppercase font-black text-[#A855F7] tracking-[0.2em] mb-4 inline-flex items-center gap-2 hover:gap-3 transition-[gap] bg-transparent border-0 p-0 cursor-pointer"
+          />
           <AnimatePresence mode="wait">
             <motion.h1
               key={(display.titulo ?? item.titulo) + String(display.isTranslated)}
@@ -1083,8 +1112,12 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
             </motion.h1>
           </AnimatePresence>
           <div className={`flex items-center gap-4 text-xs font-bold ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
-            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><BookOpen size={14} /> ~{tempoLeitura} MIN DE REFLEXÒO</span>
-            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}><Quote size={14} /> SABEDORIA SECULAR</span>
+            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}>
+              <BookOpen size={14} /> {t('metaforas.read_time', '~{{count}} MIN DE REFLEXÃO', { count: tempoLeitura })}
+            </span>
+            <span className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${tema === 'light' ? 'bg-zinc-100' : 'bg-zinc-900'}`}>
+              <Quote size={14} /> {t('metaforas.wisdom_badge', 'SABEDORIA SECULAR')}
+            </span>
           </div>
         </div>
         <div className={`flex gap-2 p-2 rounded-[1.5rem] border ${tema === 'light' ? 'bg-white border-zinc-100' : 'bg-zinc-900 border-white/5'}`}>
@@ -1132,13 +1165,8 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
               <Copy size={18} />
             </button>
           </CardTooltip>
-          <CardTooltip text={t('translate_page.button', 'Ler no meu idioma')} tema={tema}>
-            <BrowserPageTranslateButton
-              tema={tema}
-              accent="pink"
-              tooltipLabel={t('translate_page.button', 'Ler no meu idioma')}
-              menuPlacement="bottom"
-            />
+          <CardTooltip text={t('translate_page.button_short', 'Traduzir página')} tema={tema}>
+            <PageTranslateButton tema={tema} accent="pink" variant="pill" />
           </CardTooltip>
           <CardTooltip text={t('common.share')} tema={tema}>
             <button
@@ -1166,8 +1194,12 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
           >
             <ChevronLeft size={16} className="text-purple-500 shrink-0" />
             <div className="text-left overflow-hidden">
-              <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>Anterior</span>
-              <span className="text-xs font-bold truncate block leading-tight">{navigation.prev.titulo}</span>
+              <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
+                {t('metaforas.prev', 'Anterior')}
+              </span>
+              <span className="text-xs font-bold truncate block leading-tight">
+                {navLabelFor(navigation.prev.titulo)}
+              </span>
             </div>
           </Link>
         ) : <div className="flex-1 hidden sm:block" />}
@@ -1178,8 +1210,12 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
             className={`flex-1 flex items-center justify-end gap-3 p-5 rounded-3xl border transition-all ${tema === 'light' ? 'bg-white border-zinc-100 hover:bg-zinc-50' : 'bg-zinc-800/40 border-zinc-600/30 hover:bg-zinc-800/70'}`}
           >
             <div className="text-right overflow-hidden">
-              <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>Próxima</span>
-              <span className="text-xs font-bold truncate block leading-tight">{navigation.next.titulo}</span>
+              <span className={`text-[8px] font-black uppercase block mb-1 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
+                {t('metaforas.next', 'Próxima')}
+              </span>
+              <span className="text-xs font-bold truncate block leading-tight">
+                {navLabelFor(navigation.next.titulo)}
+              </span>
             </div>
             <ChevronRight size={16} className="text-purple-500 shrink-0" />
           </Link>

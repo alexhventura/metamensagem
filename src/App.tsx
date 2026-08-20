@@ -36,9 +36,10 @@ import { quoteFromItem } from './components/image-generator/utils/quoteFromItem'
 import AdSlot from './components/AdSlot';
 import { loadHomeBootstrap, ensureFullCatalogLoaded, type CatalogLoadResult } from './lib/homeData';
 import { HOME_FRASE_POOL_SIZE, pathNeedsFullCatalog, sampleShuffled } from './lib/catalogLimits';
-import BrowserPageTranslateButton from './components/BrowserPageTranslateButton';
-import { type CardContentDisplay } from './lib/translation/types';
-import { useTranslatedViewMeta } from './lib/useTranslatedViewMeta';
+import PageTranslateButton from './components/PageTranslateButton';
+import { usePageContentTranslate } from './hooks/usePageContentTranslate';
+import { detectCardLanguage } from './lib/translation/detect';
+import { shouldShowPageTranslate } from './lib/translation/pageTranslateVisibility';
 import { sanitizeTextForTranslation } from './lib/textSanitize';
 
 const SocialHub = lazy(() => import('./components/SocialHub'));
@@ -963,11 +964,27 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
   const [fontSize, setFontSize] = useState(20);
   const [item, setItem] = useState<ItemConteudo | null>(null);
   const [loading, setLoading] = useState(true);
-  const [display, setDisplay] = useState<CardContentDisplay>({
-    texto: '',
-    isTranslated: false,
+
+  const contentSource = useMemo(
+    () => ({
+      texto: item?.texto || '',
+      titulo: item?.titulo,
+      resumo: item?.resumo,
+      autor: item?.autor,
+    }),
+    [item?.id, item?.texto, item?.titulo, item?.resumo, item?.autor]
+  );
+
+  const metaforaLang = useMemo(
+    () => detectCardLanguage(item?.texto || item?.titulo || ''),
+    [item?.id, item?.texto, item?.titulo]
+  );
+
+  const { display } = usePageContentTranslate({
+    id: item ? `metafora-${item.id}` : 'metafora-detail',
+    source: contentSource,
+    sourceLang: metaforaLang,
   });
-  useTranslatedViewMeta(display.isTranslated);
 
   const navigation = useMemo(() => {
     if (!id || banco.length === 0) return { prev: null, next: null };
@@ -1008,16 +1025,6 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
       cancelado = true;
     };
   }, [id, banco]);
-
-  useEffect(() => {
-    if (!item) return;
-    setDisplay({
-      texto: item.texto || '',
-      titulo: item.titulo,
-      resumo: item.resumo,
-      isTranslated: false,
-    });
-  }, [item?.id, item?.texto, item?.titulo, item?.resumo]);
 
   if (loading) {
     return (
@@ -1132,14 +1139,16 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
               <Copy size={18} />
             </button>
           </CardTooltip>
-          <CardTooltip text={t('translate_page.button', 'Ler no meu idioma')} tema={tema}>
-            <BrowserPageTranslateButton
-              tema={tema}
-              accent="pink"
-              tooltipLabel={t('translate_page.button', 'Ler no meu idioma')}
-              menuPlacement="bottom"
-            />
-          </CardTooltip>
+          {shouldShowPageTranslate(metaforaLang) && (
+            <CardTooltip text={t('translate_page.read_in_pt', '🌎 Ler em Português')} tema={tema}>
+              <PageTranslateButton
+                tema={tema}
+                accent="pink"
+                variant="pill"
+                contentLang={metaforaLang}
+              />
+            </CardTooltip>
+          )}
           <CardTooltip text={t('common.share')} tema={tema}>
             <button
               type="button"

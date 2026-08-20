@@ -350,6 +350,18 @@ export default function App() {
             <Link to="/cookies">{t('nav.cookies')}</Link>
           </div>
           <p>© 2025 Metamensagem.com. Todos os direitos reservados.</p>
+          <p className="mt-2 text-[11px] tracking-wide opacity-80">
+            Desenvolvido por{' '}
+            <a
+              href="https://hervenhub.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold hover:underline"
+              style={{ color: '#F5C400' }}
+            >
+              Herven Hub
+            </a>
+          </p>
         </footer>
       </div>
     </BrowserRouter>

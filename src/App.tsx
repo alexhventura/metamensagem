@@ -36,6 +36,7 @@ import { quoteFromItem } from './components/image-generator/utils/quoteFromItem'
 import AdSlot from './components/AdSlot';
 import { loadHomeBootstrap, ensureFullCatalogLoaded, type CatalogLoadResult } from './lib/homeData';
 import { HOME_FRASE_POOL_SIZE, pathNeedsFullCatalog, sampleShuffled } from './lib/catalogLimits';
+import PageTranslateButton from './components/PageTranslateButton';
 import BrowserPageTranslateButton from './components/BrowserPageTranslateButton';
 import { type CardContentDisplay } from './lib/translation/types';
 import { useTranslatedViewMeta } from './lib/useTranslatedViewMeta';
@@ -79,7 +80,8 @@ import {
   FEED_LOAD_MORE_STEP,
 } from './lib/feedWithAds';
 import FeedGridWithAds from './components/FeedGridWithAds';
-import FeedLoadMoreButton from './components/FeedLoadMoreButton';
+import InfiniteScrollSentinel from './components/InfiniteScrollSentinel';
+import { useExpandableFraseFeed } from './hooks/useExpandableFraseFeed';
 import { normalizarParaSlug } from './lib/slug';
 import type { ItemConteudo } from './types/content';
 import ContentCard from './components/ContentCard';
@@ -192,7 +194,7 @@ export default function App() {
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.9 }}
-              className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[300] pointer-events-none"
+              className="fixed bottom-24 left-1/2 -translate-x-1/2 z-[300] pointer-events-none"
             >
               <div className={`px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 backdrop-blur-xl border border-white/10 ${
                 toast.tipo === 'sucesso' ? 'bg-emerald-500/90 text-white' : 
@@ -223,6 +225,7 @@ export default function App() {
             </nav>
 
             <div className="flex items-center gap-2 md:gap-4">
+              <PageTranslateButton tema={tema} accent="purple" variant="header" />
               <button
                 type="button"
                 onClick={toggleTema}
@@ -266,7 +269,7 @@ export default function App() {
         </div>
 
         {/* ROTAS DA APLICA�!ÒO */}
-        <main id="main-content" className="flex-1 flex flex-col" tabIndex={-1}>
+        <main id="main-content" className="flex-1 flex flex-col mm-app-main" tabIndex={-1}>
           {loading ? (
             <div className="flex-1 flex items-center justify-center" role="status" aria-live="polite">
               <div className="text-center">
@@ -341,16 +344,26 @@ export default function App() {
           )}
         </main>
 
-        {/* FOOTER */}
-        <footer className={`py-8 text-center text-xs border-t mt-auto ${tema === 'light' ? 'bg-zinc-100 border-zinc-200 text-zinc-700' : 'bg-zinc-950 border-zinc-700/70 text-zinc-300'}`}>
-          <div className="flex justify-center flex-wrap gap-4 mb-3 font-semibold">
-            <Link to="/sobre">{t('nav.about')}</Link>
-            <Link to="/privacidade">{t('nav.privacy')}</Link>
-            <Link to="/termos">{t('nav.terms')}</Link>
-            <Link to="/cookies">{t('nav.cookies')}</Link>
-          </div>
-          <p>© 2025 Metamensagem.com. Todos os direitos reservados.</p>
-          <p className="mt-2 text-[11px] tracking-wide opacity-80">
+        <footer className="mm-app-footer text-center text-[11px] md:text-xs">
+          <nav
+            className="flex justify-center flex-wrap gap-x-4 gap-y-1 mb-1 font-semibold"
+            aria-label="Institucional"
+          >
+            <Link to="/sobre" className="hover:text-[#A855F7] transition-colors">
+              {t('nav.about')}
+            </Link>
+            <Link to="/privacidade" className="hover:text-[#A855F7] transition-colors">
+              {t('nav.privacy')}
+            </Link>
+            <Link to="/termos" className="hover:text-[#A855F7] transition-colors">
+              {t('nav.terms')}
+            </Link>
+            <Link to="/cookies" className="hover:text-[#A855F7] transition-colors">
+              {t('nav.cookies')}
+            </Link>
+          </nav>
+          <p className="opacity-70">© 2026 Metamensagem.com. Todos os direitos reservados.</p>
+          <p className="mt-1.5 tracking-wide opacity-80">
             Desenvolvido por{' '}
             <a
               href="https://hervenhub.com.br"
@@ -520,6 +533,10 @@ function HomeView({
     () => bancoRandom.filter((i) => i.tipo === 'frase'),
     [bancoRandom]
   );
+  const { items: feedPool, loadingMore: feedLoading, loadSample } = useExpandableFraseFeed(
+    bancoRandomFrases,
+    !busca.trim()
+  );
   const tagsFrases = useMemo(
     () => tagsForDisplay(bancoFrases.flatMap((f) => f.tags || []), 12),
     [bancoFrases]
@@ -530,10 +547,18 @@ function HomeView({
     enabled: supabaseOn,
   } = useDebouncedSupabaseSearch(busca);
   const resultadosFiltrados = useMemo(() => {
-    if (!busca.trim()) return bancoRandomFrases;
+    if (!busca.trim()) return feedPool;
     if (supabaseActive && supabaseHits !== null) return supabaseHits;
     return searchBancoSemantico(bancoFrases, busca);
-  }, [busca, bancoFrases, bancoRandomFrases, supabaseOn, supabaseActive, supabaseHits]);
+  }, [busca, bancoFrases, feedPool, supabaseOn, supabaseActive, supabaseHits]);
+
+  const hasMoreHome = resultadosFiltrados.length > itensVisiveis;
+  const loadMoreHome = useCallback(() => {
+    if (resultadosFiltrados.length <= itensVisiveis + FEED_LOAD_MORE_STEP) {
+      void loadSample();
+    }
+    setItensVisiveis((prev) => prev + FEED_LOAD_MORE_STEP);
+  }, [itensVisiveis, loadSample, resultadosFiltrados.length]);
 
   const itensHome = useMemo(
     () =>
@@ -627,9 +652,13 @@ function HomeView({
         )}
       />
 
-      {resultadosFiltrados.length > itensVisiveis && (
-        <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
-      )}
+      <InfiniteScrollSentinel
+        tema={tema}
+        hasMore={hasMoreHome}
+        loading={feedLoading}
+        loadedCount={itensVisiveis}
+        onLoadMore={loadMoreHome}
+      />
 
       <DeferredSocialHub tema={tema} />
 
@@ -743,6 +772,10 @@ function FrasesView({
     const list = banco.filter((i) => i.tipo === 'frase');
     return sampleShuffled(list, list.length);
   }, [banco]);
+  const { items: feedPool, loadingMore: feedLoading, loadSample } = useExpandableFraseFeed(
+    baseFrases,
+    !busca.trim()
+  );
 
   const {
     items: supabaseHits,
@@ -751,10 +784,17 @@ function FrasesView({
   } = useDebouncedSupabaseSearch(busca);
 
   const frases = useMemo(() => {
-    if (!busca.trim()) return baseFrases;
+    if (!busca.trim()) return feedPool;
     if (supabaseActive && supabaseHits !== null) return supabaseHits;
     return searchBancoSemantico(baseFrases, busca);
-  }, [busca, baseFrases, supabaseOn, supabaseActive, supabaseHits]);
+  }, [busca, baseFrases, feedPool, supabaseOn, supabaseActive, supabaseHits]);
+
+  const loadMoreFrases = useCallback(() => {
+    if (frases.length <= itensVisiveis + FEED_LOAD_MORE_STEP) {
+      void loadSample();
+    }
+    setItensVisiveis((prev) => prev + FEED_LOAD_MORE_STEP);
+  }, [frases.length, itensVisiveis, loadSample]);
 
   useEffect(() => {
     setItensVisiveis(FEED_INITIAL_VISIBLE);
@@ -848,9 +888,13 @@ function FrasesView({
       />
       )}
 
-      {frases.length > itensVisiveis && (
-        <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
-      )}
+      <InfiniteScrollSentinel
+        tema={tema}
+        hasMore={frases.length > itensVisiveis}
+        loading={feedLoading || catalogLoading}
+        loadedCount={itensVisiveis}
+        onLoadMore={loadMoreFrases}
+      />
       
       <DeferredSocialHub tema={tema} />
 
@@ -958,9 +1002,12 @@ function MetaforasView({ tema, toast, banco }: { tema: string; toast: any; banco
         )}
       />
 
-      {metaforas.length > itensVisiveis && (
-        <FeedLoadMoreButton onClick={() => setItensVisiveis((p) => p + FEED_LOAD_MORE_STEP)} />
-      )}
+      <InfiniteScrollSentinel
+        tema={tema}
+        hasMore={metaforas.length > itensVisiveis}
+        loadedCount={itensVisiveis}
+        onLoadMore={() => setItensVisiveis((prev) => prev + FEED_LOAD_MORE_STEP)}
+      />
 
       <DeferredSocialHub tema={tema} />
     </motion.div>

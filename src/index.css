@@ -55,6 +55,24 @@ html[data-theme="dark"] {
   z-index: 90;
 }
 
+/* Rodapé institucional fixo — visível em todas as páginas, inclusive no scroll infinito */
+.mm-app-footer {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 80;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid var(--mm-header-border);
+  background-color: var(--mm-subheader-bg);
+  color: var(--mm-fg-muted, var(--mm-fg));
+  padding: 0.7rem 1rem max(0.7rem, env(safe-area-inset-bottom, 0px));
+}
+
+.mm-app-main {
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+}
+
 /* Portal de modais — acima de todo chrome (backdrop-blur + sticky) */
 #mm-modal-root {
   position: fixed;

@@ -21,11 +21,8 @@ export function readBrowserNativeTranslateState(): BrowserNativeTranslateState {
   /** Chrome/Edge: widget `#goog-gt-tt` enquanto a tradução está ativa. */
   const byWidget = Boolean(document.getElementById('goog-gt-tt'));
   /**
-   * Safari / heurística conservadora: `lang` do <html> muda em relação ao
-   * idioma original marcado, e o Chrome/Edge ainda não marcou translated-*.
-   * Ignora mudanças feitas pelo app (ex.: detalhe de frase em outro locale)
-   * exigindo também o atributo `class` com indícios de translate OU font
-   * family do Google Translate em nós filhos.
+   * Safari / Edge legado: sinais extras além de translated-* / goog-gt-tt.
+   * Não usa só `lang` (o app muda lang em páginas de detalhe).
    */
   const orig = (html.dataset.mmOrigLang || '').toLowerCase().split('-')[0];
   const docLang = (html.getAttribute('lang') || '').toLowerCase().split('-')[0];
@@ -34,8 +31,7 @@ export function readBrowserNativeTranslateState(): BrowserNativeTranslateState {
     Boolean(docLang) &&
     docLang !== orig &&
     (html.hasAttribute('_msttexthash') ||
-      Boolean(document.querySelector('font[style*="vertical-align"]')) ||
-      Boolean(document.querySelector('.notranslate')));
+      Boolean(document.querySelector('font[style*="vertical-align"]')));
 
   const active = byClass || byWidget || byLangDrift;
   return {

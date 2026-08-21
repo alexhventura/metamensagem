@@ -27,10 +27,17 @@ type BrowserPageTranslateButtonProps = {
   buttonClassName?: string;
 };
 
+function isInViewport(el: HTMLElement | null): boolean {
+  if (!el || typeof window === 'undefined') return false;
+  const rect = el.getBoundingClientRect();
+  return rect.bottom > 0 && rect.top < window.innerHeight;
+}
+
 /**
  * Botão de traduzir em cards/detalhes.
  * Abre o modal de tradução da página inteira (mesmo fluxo do header).
- * Quando o navegador ativa a tradução nativa, o painel abre sozinho.
+ * Quando o navegador ativa a tradução nativa, o painel abre sozinho
+ * (só em cards visíveis, para não inundar o feed).
  */
 export default function BrowserPageTranslateButton({
   tema,
@@ -60,6 +67,7 @@ export default function BrowserPageTranslateButton({
         setOpen(false);
         return;
       }
+      if (!isInViewport(rootRef.current)) return;
       setOpen(true);
       if (!autoOpened.current) {
         autoOpened.current = true;

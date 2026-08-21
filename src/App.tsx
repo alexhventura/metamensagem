@@ -1191,11 +1191,11 @@ function MetaforaDetalheView({ tema, banco, toast }: { tema: string; banco: Item
               <Copy size={18} />
             </button>
           </CardTooltip>
-          <CardTooltip text={t('translate_page.button', 'Ler no meu idioma')} tema={tema}>
+          <CardTooltip text={t('translate_page.button_short', 'Traduzir página')} tema={tema}>
             <BrowserPageTranslateButton
               tema={tema}
               accent="pink"
-              tooltipLabel={t('translate_page.button', 'Ler no meu idioma')}
+              tooltipLabel={t('translate_page.button_short', 'Traduzir página')}
               menuPlacement="bottom"
             />
           </CardTooltip>

@@ -22,6 +22,7 @@ import { CARD_LANG_SUCCESS_LABEL } from '../lib/translation/cardLanguages';
 import { matchSupportedUiLocale, persistUiLocale } from '../lib/uiLocale';
 import { setTranslatedViewActive } from '../lib/translatedViewState';
 import { useTranslatedViewMeta } from '../lib/useTranslatedViewMeta';
+import { useBrowserNativeTranslate } from '../hooks/useBrowserNativeTranslate';
 import PageTranslateModal from '../components/PageTranslateModal';
 
 type ContentRegistration = {
@@ -68,7 +69,9 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
   const [isNormalizedView, setIsNormalizedView] = useState(false);
   const originalMode = useRef(false);
   const autoStarted = useRef(false);
+  const browserNativeHandled = useRef(false);
   const browserLang = useMemo(() => browserPreferredPageLang(), []);
+  const browserNative = useBrowserNativeTranslate();
 
   useTranslatedViewMeta(isNormalizedView);
 
@@ -254,6 +257,20 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
     window.addEventListener('mm-open-page-translate', open);
     return () => window.removeEventListener('mm-open-page-translate', open);
   }, []);
+
+  /**
+   * Quando o Chrome/Edge/Safari traduz a página, abre o modal de
+   * tradução da página inteira (e os painéis dos botões nos cards).
+   */
+  useEffect(() => {
+    if (!browserNative.active) {
+      browserNativeHandled.current = false;
+      return;
+    }
+    if (browserNativeHandled.current) return;
+    browserNativeHandled.current = true;
+    setIsModalOpen(true);
+  }, [browserNative.active]);
 
   const successLabel =
     CARD_LANG_SUCCESS_LABEL[targetLang] ?? pageLanguageNativeName(targetLang);

@@ -2,6 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Languages } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { CARD_ACTION_BTN, type CardAccent } from '../lib/cardTheme';
+import { usePageTranslateOptional } from '../context/PageTranslateContext';
+import {
+  BROWSER_NATIVE_TRANSLATE_EVENT,
+  type BrowserNativeTranslateState,
+} from '../lib/translation/browserNativeTranslate';
 
 function translateBtnClass(tema: string, accent: CardAccent): string {
   if (accent === 'pink') {
@@ -22,6 +27,11 @@ type BrowserPageTranslateButtonProps = {
   buttonClassName?: string;
 };
 
+/**
+ * Botão de traduzir em cards/detalhes.
+ * Abre o modal de tradução da página inteira (mesmo fluxo do header).
+ * Quando o navegador ativa a tradução nativa, o painel abre sozinho.
+ */
 export default function BrowserPageTranslateButton({
   tema,
   accent = 'purple',
@@ -30,8 +40,35 @@ export default function BrowserPageTranslateButton({
   buttonClassName,
 }: BrowserPageTranslateButtonProps) {
   const { t } = useTranslation();
+  const ctx = usePageTranslateOptional();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
+  const autoOpened = useRef(false);
+  const ctxRef = useRef(ctx);
+  ctxRef.current = ctx;
+
+  const openPageTranslate = () => {
+    if (ctxRef.current) ctxRef.current.openModal();
+    else window.dispatchEvent(new CustomEvent('mm-open-page-translate'));
+  };
+
+  useEffect(() => {
+    const onNative = (event: Event) => {
+      const detail = (event as CustomEvent<BrowserNativeTranslateState>).detail;
+      if (!detail?.active) {
+        autoOpened.current = false;
+        setOpen(false);
+        return;
+      }
+      setOpen(true);
+      if (!autoOpened.current) {
+        autoOpened.current = true;
+        openPageTranslate();
+      }
+    };
+    window.addEventListener(BROWSER_NATIVE_TRANSLATE_EVENT, onNative);
+    return () => window.removeEventListener(BROWSER_NATIVE_TRANSLATE_EVENT, onNative);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -49,20 +86,20 @@ export default function BrowserPageTranslateButton({
     };
   }, [open]);
 
-  const panelPosition =
-    menuPlacement === 'bottom'
-      ? 'top-full mt-2'
-      : 'bottom-full mb-2';
+  const panelPosition = menuPlacement === 'bottom' ? 'top-full mt-2' : 'bottom-full mb-2';
 
   return (
     <div ref={rootRef} className="relative inline-flex">
       <button
         type="button"
         aria-haspopup="dialog"
-        aria-expanded={open}
-        aria-label={tooltipLabel ?? t('translate_page.button', 'Ler no meu idioma')}
-        onClick={() => setOpen((value) => !value)}
-        className={`${CARD_ACTION_BTN} ${buttonClassName ?? translateBtnClass(tema, accent)}`}
+        aria-expanded={open || Boolean(ctx?.isModalOpen)}
+        aria-label={tooltipLabel ?? t('translate_page.button', 'Traduzir página')}
+        onClick={() => {
+          setOpen(true);
+          openPageTranslate();
+        }}
+        className={`mm-card-translate-trigger ${CARD_ACTION_BTN} ${buttonClassName ?? translateBtnClass(tema, accent)}`}
       >
         <Languages size={18} aria-hidden />
       </button>
@@ -82,24 +119,20 @@ export default function BrowserPageTranslateButton({
           </p>
           <p className="text-sm leading-relaxed opacity-90">
             {t(
-              'translate_page.body',
-              'Use a tradução nativa do Chrome, Edge ou Safari para traduzir frase, explicação, tags, menus e navegação de uma só vez.'
+              'translate_page.card_sync_body',
+              'A tradução vale para a página inteira — frases, metáforas, menus e navegação — não só este card.'
             )}
           </p>
-          <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-xs leading-relaxed opacity-80">
-            <li>
-              {t(
-                'translate_page.step_desktop',
-                'No desktop, clique com o botão direito na página e escolha "Traduzir".'
-              )}
-            </li>
-            <li>
-              {t(
-                'translate_page.step_mobile',
-                'No celular, abra o menu do navegador e toque em "Traduzir".'
-              )}
-            </li>
-          </ol>
+          <button
+            type="button"
+            onClick={() => {
+              openPageTranslate();
+              setOpen(false);
+            }}
+            className="mt-3 w-full rounded-xl bg-[#A855F7] px-3 py-2 text-xs font-bold uppercase tracking-wide text-white hover:bg-[#9333ea] transition-colors"
+          >
+            {t('translate_page.button_short', 'Traduzir página')}
+          </button>
         </div>
       )}
     </div>

@@ -76,6 +76,8 @@ export const de = {
       language_list: 'Verfügbare Sprachen',
       title: 'Ganze Seite übersetzen',
       body: 'Nutzen Sie die integrierte Übersetzung von Chrome, Edge oder Safari, um Zitat, Erklärung, Tags, Menüs und Navigation auf einmal zu übersetzen.',
+      card_sync_body:
+        'Die Übersetzung gilt für die gesamte Seite — Zitate, Metaphern, Menüs und Navigation — nicht nur diese Karte.',
       step_desktop: 'Am Desktop klicken Sie mit der rechten Maustaste auf die Seite und wählen "Übersetzen".',
       step_mobile: 'Am Smartphone öffnen Sie das Browsermenü und tippen auf "Übersetzen".',
     },
@@ -159,6 +161,8 @@ export const it = {
       language_list: 'Lingue disponibili',
       title: 'Traduci tutta la pagina',
       body: 'Usa la traduzione integrata di Chrome, Edge o Safari per tradurre citazione, spiegazione, tag, menu e navigazione in una volta sola.',
+      card_sync_body:
+        'La traduzione vale per tutta la pagina — citazioni, metafore, menu e navigazione — non solo questa scheda.',
       step_desktop: 'Su desktop, fai clic destro sulla pagina e scegli "Traduci".',
       step_mobile: 'Su mobile, apri il menu del browser e tocca "Traduci".',
     },
@@ -242,6 +246,8 @@ export const ja = {
       language_list: '利用可能な言語',
       title: 'ページ全体を翻訳',
       body: 'Chrome、Edge、Safari の標準翻訳で、引用、解説、タグ、メニュー、ナビゲーションをまとめて翻訳できます。',
+      card_sync_body:
+        '翻訳はページ全体に適用されます — 名言、メタファー、メニュー、ナビゲーション — このカードだけではありません。',
       step_desktop: 'デスクトップではページを右クリックし、「翻訳」を選びます。',
       step_mobile: 'モバイルではブラウザのメニューを開き、「翻訳」をタップします。',
     },
@@ -325,6 +331,8 @@ export const hi = {
       language_list: 'उपलब्ध भाषाएँ',
       title: 'पूरे पेज का अनुवाद करें',
       body: 'Chrome, Edge या Safari की मूल अनुवाद सुविधा से वाक्य, व्याख्या, टैग, मेनू और नेविगेशन को एक साथ अनुवाद करें.',
+      card_sync_body:
+        'अनुवाद पूरे पेज पर लागू होता है — उद्धरण, रूपक, मेनू और नेविगेशन — केवल इस कार्ड पर नहीं।',
       step_desktop: 'डेस्कटॉप पर पेज पर राइट-क्लिक करें और "Translate" चुनें.',
       step_mobile: 'मोबाइल पर ब्राउज़र मेनू खोलें और "Translate" पर टैप करें.',
     },

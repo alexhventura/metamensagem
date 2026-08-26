@@ -200,7 +200,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           paddingBottom: layout.quotePaddingBottom,
           paddingLeft: 10,
           paddingRight: 10,
-          justifyContent: 'center',
+          justifyContent: 'flex-start',
           alignItems: 'center',
         }}
         aria-label="Citação"
@@ -209,7 +209,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           className={`font-bold m-0 mx-auto text-center shrink-0 ${textColorOverride ? '' : skin.textClass}`}
           style={{
             fontSize: layout.quotePx,
-            lineHeight: `${layout.lineHeight}px`,
+            lineHeight: layout.lineHeightRatio,
             maxWidth: `${QUOTE_CONTENT_MAX_WIDTH_RATIO * 100}%`,
             fontWeight: 700,
             letterSpacing: layout.lines.length <= 3 ? '-0.02em' : '-0.01em',
@@ -218,7 +218,11 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           }}
         >
           {layout.lines.map((line, i) => (
-            <span key={i} className="block break-words">
+            <span
+              key={i}
+              className="block"
+              style={{ whiteSpace: 'pre-wrap', wordBreak: 'normal', overflowWrap: 'normal' }}
+            >
               {i === 0 ? '“' : ''}
               {line}
               {i === layout.lines.length - 1 ? '”' : ''}
@@ -245,7 +249,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
             className="font-medium tracking-wide m-0 mx-auto truncate"
             style={{
               fontSize: layout.authorPx,
-              lineHeight: `${Math.round(layout.authorPx * 1.22)}px`,
+              lineHeight: 1.28,
               maxWidth: '70%',
               fontWeight: 500,
               ...(authorColorStyle ?? { opacity: 0.82 }),

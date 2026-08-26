@@ -15,6 +15,7 @@ import {
   FOOTER_META_MIN_PX,
   LONG_QUOTE_CHAR_THRESHOLD,
   EXTREME_QUOTE_CHAR_THRESHOLD,
+  MIN_LINE_HEIGHT_RATIO,
 } from '../src/components/image-generator/utils/textLayout.ts';
 
 const DEMO_QUOTE =
@@ -88,6 +89,10 @@ for (const sample of SAMPLES) {
     assert(ok, `${key}: validateFullText`);
     assert(!hasEllipsis(plan.lines), `${key}: ellipsis`);
     assert(plan.quoteFits, `${key}: quoteFits`);
+    assert(
+      plan.lineHeightRatio >= MIN_LINE_HEIGHT_RATIO,
+      `${key}: lineHeightRatio ${plan.lineHeightRatio} < ${MIN_LINE_HEIGHT_RATIO}`
+    );
     assert(est <= usableHeight(plan) + 2, `${key}: altura estimada na zona`);
     if (sample.text.length >= EXTREME_QUOTE_CHAR_THRESHOLD) {
       assert(plan.extremeQuoteMode, `${key}: extreme mode`);

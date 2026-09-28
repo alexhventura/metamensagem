@@ -29,7 +29,7 @@ export default function Privacy({ tema }: { tema: string }) {
             <Link to="/contato" className="text-purple-500 font-semibold hover:underline">
               página de contato
             </Link>{' '}
-            ou o e-mail <strong>contato@metamensagem.com</strong>.
+            e envie uma mensagem pelo <strong>Direct do Instagram</strong> (@metamensagem).
           </p>
         </section>
 
@@ -63,8 +63,8 @@ export default function Privacy({ tema }: { tema: string }) {
               <strong className={tema === 'light' ? 'text-zinc-800' : 'text-zinc-200'}>
                 Mensagens que você nos envia
               </strong>{' '}
-              — se entrar em contato por e-mail ou Instagram, trataremos o conteúdo da mensagem para
-              responder ao pedido.
+              — se entrar em contato pelo Direct do Instagram, trataremos o conteúdo da mensagem
+              para responder ao pedido.
             </li>
           </ul>
         </section>

@@ -158,7 +158,8 @@ export default function About({ tema }: { tema: string }) {
             .
           </p>
           <p className={muted}>
-            Dúvidas, sugestões de conteúdo ou pedidos relacionados a privacidade:{' '}
+            Dúvidas, sugestões de conteúdo ou pedidos relacionados a privacidade: fale conosco pelo
+            Direct do Instagram na{' '}
             <Link to="/contato" className="text-purple-500 font-bold hover:underline">
               página de contato
             </Link>

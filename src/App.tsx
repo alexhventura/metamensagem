@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 const Terms = lazy(() => import('./views/Terms'));
 const Privacy = lazy(() => import('./views/Privacy'));
 const Contact = lazy(() => import('./views/Contact'));
+const About = lazy(() => import('./views/About'));
 const Cookies = lazy(() => import('./views/Cookies'));
 import { 
   Copy, 
@@ -321,7 +322,7 @@ export default function App() {
                 ))}
                 <Route path="/metaforas" element={<MetaforasView tema={tema} toast={mostrarToast} banco={bancoTotal} />} />
                 <Route path="/metafora/:id/*" element={<MetaforaDetalheView tema={tema} banco={bancoTotal} toast={mostrarToast} />} />
-                <Route path="/sobre" element={<Contact tema={tema} />} />
+                <Route path="/sobre" element={<About tema={tema} />} />
                 <Route path="/contato" element={<Contact tema={tema} />} />
                 <Route path="/privacidade" element={<Privacy tema={tema} />} />
                 <Route path="/termos" element={<Terms tema={tema} />} />
@@ -351,6 +352,9 @@ export default function App() {
           >
             <Link to="/sobre" className="hover:text-[#A855F7] transition-colors">
               {t('nav.about')}
+            </Link>
+            <Link to="/contato" className="hover:text-[#A855F7] transition-colors">
+              Contato
             </Link>
             <Link to="/privacidade" className="hover:text-[#A855F7] transition-colors">
               {t('nav.privacy')}
@@ -633,6 +637,34 @@ function HomeView({
             </Link>
           ))}
         </div>
+      </section>
+
+      <section
+        className={`max-w-3xl mx-auto mb-10 px-1 text-left space-y-3 ${
+          tema === 'light' ? 'text-zinc-600' : 'text-zinc-400'
+        }`}
+        aria-label="Sobre o acervo Metamensagem"
+      >
+        <h2
+          className={`text-lg md:text-xl font-black tracking-tight ${
+            tema === 'light' ? 'text-zinc-900' : 'text-zinc-100'
+          }`}
+        >
+          Curadoria com contexto — não só citações soltas
+        </h2>
+        <p className="text-sm md:text-[15px] leading-relaxed">
+          Cada frase pode abrir em uma página própria com explicação, tema, categoria e, quando
+          disponível, fontes e dados do autor. As{' '}
+          <Link to="/metaforas" className="text-purple-500 font-semibold hover:underline">
+            metáforas terapêuticas
+          </Link>{' '}
+          trazem narrativas mais longas para reflexão. Use o studio de imagens para compartilhar com
+          atribuição. Conheça nossa{' '}
+          <Link to="/sobre" className="text-purple-500 font-semibold hover:underline">
+            metodologia editorial
+          </Link>
+          .
+        </p>
       </section>
 
       <FeedGridWithAds

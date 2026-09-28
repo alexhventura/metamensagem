@@ -827,6 +827,33 @@ export default function FraseDetalheView({
         </div>
       </article>
 
+      <section
+        className={`mt-8 rounded-2xl border p-5 md:p-6 text-sm leading-relaxed ${
+          tema === 'light'
+            ? 'border-purple-200/70 bg-purple-50/50 text-zinc-700'
+            : 'border-zinc-700/60 bg-zinc-900/50 text-zinc-400'
+        }`}
+        aria-label="Como aproveitar esta mensagem"
+      >
+        <h2
+          className={`text-[10px] font-black uppercase tracking-widest mb-2 ${
+            tema === 'light' ? 'text-purple-700' : 'text-purple-400'
+          }`}
+        >
+          Como aproveitar esta mensagem
+        </h2>
+        <p>
+          Leia a explicação e os metadados acima para entender o contexto. Use a frase como
+          lembrete pessoal, material de reflexão ou arte no studio de imagens — sempre com
+          atribuição ao autor. Conteúdo inspiracional não substitui acompanhamento profissional.
+          Saiba mais sobre nossa{' '}
+          <Link to="/sobre" className="text-purple-500 font-semibold hover:underline">
+            curadoria editorial
+          </Link>
+          .
+        </p>
+      </section>
+
       {relatedSlugs.length > 0 && (
         <nav
           className="mt-10"

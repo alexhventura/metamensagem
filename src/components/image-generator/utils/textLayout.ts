@@ -25,8 +25,10 @@ const FONT_WIDTH_SCALE: Record<ImageFontId, number> = {
   lora: 1.08,
 };
 
-/** Largura média por caractere (font-weight 700). */
-const BOLD_CHAR_WIDTH_RATIO = 0.58;
+/** Largura média por caractere (font-weight 700) — conservador para evitar re-wrap no DOM. */
+const BOLD_CHAR_WIDTH_RATIO = 0.62;
+/** Fator de segurança na contagem de caracteres por linha. */
+const WRAP_CHARS_SAFETY = 0.94;
 
 /** Boost de fonte para frases curtas (≤3 linhas). */
 const SHORT_QUOTE_FONT_BOOST = 1.08;
@@ -43,13 +45,16 @@ const QUOTE_MARKS_EXTRA_RATIO = 0.14;
 /** Margem de segurança vs. render real (spans block, sombra, tracking). */
 const HEIGHT_ESTIMATE_SAFETY = 1.08;
 
-const LINE_HEIGHT_STEPS = [1.55, 1.45, 1.38, 1.32, 1.26, 1.2, 1.14, 1.08, 1.04];
-const LINE_HEIGHT_STEPS_LONG = [1.38, 1.32, 1.26, 1.2, 1.14, 1.1, 1.06, 1.03, 1.0];
-const LINE_HEIGHT_STEPS_EXTREME = [1.28, 1.22, 1.16, 1.12, 1.08, 1.05, 1.02, 1.0];
+const LINE_HEIGHT_STEPS = [1.55, 1.45, 1.38, 1.32, 1.26, 1.2, 1.16, 1.14, 1.12];
+const LINE_HEIGHT_STEPS_LONG = [1.38, 1.32, 1.26, 1.2, 1.16, 1.14, 1.12];
+const LINE_HEIGHT_STEPS_EXTREME = [1.28, 1.24, 1.2, 1.16, 1.14, 1.12];
+
+/** Menor line-height permitido — abaixo disso glifos bold se sobrepõem. */
+export const MIN_LINE_HEIGHT_RATIO = 1.12;
 
 /** Menor fonte da citação — usada no encaixe forçado para textos longos. */
 export const ABSOLUTE_MIN_QUOTE_PX = 4;
-const FORCE_FIT_LH_RATIOS = [1.0, 0.98, 0.95, 0.92, 0.9, 0.88];
+const FORCE_FIT_LH_RATIOS = [1.28, 1.24, 1.2, 1.16, 1.14, MIN_LINE_HEIGHT_RATIO];
 
 export type ImageLayoutPlan = {
   zones: LayoutZones;
@@ -98,7 +103,8 @@ function charWidthPx(fontPx: number, fontWidthScale: number): number {
 }
 
 function maxCharsPerLine(quoteWidthPx: number, fontPx: number, fontWidthScale: number): number {
-  return Math.max(6, Math.floor(quoteWidthPx / charWidthPx(fontPx, fontWidthScale)));
+  const raw = quoteWidthPx / charWidthPx(fontPx, fontWidthScale);
+  return Math.max(6, Math.floor(raw * WRAP_CHARS_SAFETY));
 }
 
 function splitOversizedWord(word: string, maxChars: number): string[] {
@@ -369,7 +375,7 @@ function findFittingQuoteLayout(
   }
 
   const quotePx = ABSOLUTE_MIN_QUOTE_PX;
-  const lhRatio = 0.88;
+  const lhRatio = MIN_LINE_HEIGHT_RATIO;
   const lines = wrapQuoteFull(clean, wrapWidth, quotePx, fontWidthScale);
   const lineHeight = quotePx * lhRatio;
   const quoteBlockHeight = estimateRenderedBlockHeight(lines.length, quotePx, lineHeight);
@@ -456,7 +462,9 @@ export function computeImageLayout(
   const fontWidthScale = resolveFontWidthScale(options.fontId);
 
   const fontProbe = Math.round(height * 0.04);
-  const density = resolveDensity(clean, width * 0.84, fontProbe, fontWidthScale);
+  const probeZones = computeLayoutZones(width, height, hasAuthor, 'normal');
+  const densityProbeWidth = effectiveQuoteWidth(probeZones.quoteWidth);
+  const density = resolveDensity(clean, densityProbeWidth, fontProbe, fontWidthScale);
   const longQuoteMode = density !== 'normal';
   const extremeQuoteMode = density === 'extreme';
 

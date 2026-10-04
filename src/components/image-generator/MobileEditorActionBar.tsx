@@ -1,4 +1,5 @@
 import { Download, Loader2, RotateCcw, Share2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import type { ShareBusy } from './ShareActionBar';
 
 export default function MobileEditorActionBar({
@@ -16,6 +17,7 @@ export default function MobileEditorActionBar({
   onShare: () => void;
   tema: string;
 }) {
+  const { t } = useTranslation();
   const secondary =
     tema === 'light'
       ? 'text-zinc-600 bg-zinc-100 border-zinc-200'
@@ -29,16 +31,16 @@ export default function MobileEditorActionBar({
         tema === 'light' ? 'border-t border-zinc-100 bg-white/95' : 'border-t border-zinc-700/80 bg-[#141210]/95'
       }`}
       role="toolbar"
-      aria-label="Ações do editor"
+      aria-label={t('editor.editor_actions', 'Ações do editor')}
     >
       <button
         type="button"
         onClick={onRestore}
         className={`mm-editor-mobile-bar-btn mm-editor-mobile-bar-secondary ${secondary}`}
-        aria-label="Restaurar configurações"
+        aria-label={t('editor.restore_settings', 'Restaurar configurações')}
       >
         <RotateCcw size={18} aria-hidden />
-        <span>Restaurar</span>
+        <span>{t('editor.restore', 'Restaurar')}</span>
       </button>
 
       <button
@@ -46,14 +48,14 @@ export default function MobileEditorActionBar({
         disabled={!!busy}
         onClick={onDownload}
         className="mm-editor-mobile-bar-btn mm-editor-mobile-bar-primary disabled:opacity-50"
-        aria-label="Baixar imagem"
+        aria-label={t('editor.download_image', 'Baixar imagem')}
       >
         {downloading ? (
           <Loader2 size={22} className="animate-spin" aria-hidden />
         ) : (
           <Download size={22} aria-hidden />
         )}
-        <span>Baixar imagem</span>
+        <span>{t('editor.download_image', 'Baixar imagem')}</span>
       </button>
 
       <button
@@ -61,14 +63,14 @@ export default function MobileEditorActionBar({
         disabled={!!busy || !supportsShare}
         onClick={onShare}
         className={`mm-editor-mobile-bar-btn mm-editor-mobile-bar-secondary ${secondary} disabled:opacity-50`}
-        aria-label="Compartilhar imagem"
+        aria-label={t('editor.share_image', 'Compartilhar imagem')}
       >
         {busy === 'mobile' ? (
           <Loader2 size={18} className="animate-spin" aria-hidden />
         ) : (
           <Share2 size={18} aria-hidden />
         )}
-        <span>Compartilhar</span>
+        <span>{t('common.share', 'Compartilhar')}</span>
       </button>
     </div>
   );

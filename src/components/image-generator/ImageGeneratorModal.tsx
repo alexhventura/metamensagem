@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal, flushSync } from 'react-dom';
 import { motion, AnimatePresence } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 import { X, Sparkles, Star } from 'lucide-react';
 import ImageRenderer from './ImageRenderer';
 import ImageFormatSelector from './ImageFormatSelector';
@@ -53,8 +54,10 @@ export default function ImageGeneratorModal({
   tema,
   toast,
 }: ImageGeneratorModalProps) {
+  const { t } = useTranslation();
   const exportRef = useRef<HTMLDivElement>(null);
   const previewRef = useRef<HTMLDivElement>(null);
+  const [exportMounted, setExportMounted] = useState(false);
   const recommendation = useMemo(() => recommendSkinForQuote(quote), [quote]);
   const isMobile = useMediaQuery('(max-width: 1023px)');
 
@@ -85,9 +88,28 @@ export default function ImageGeneratorModal({
   useAppUiReset(handleClose);
 
   useEffect(() => {
-    if (!open) return;
-    void ensureImageExportFonts(quote.texto, quote.autor);
-    if (isMobile) void ensurePickerFontsLoaded(fontId);
+    if (!open) {
+      setExportMounted(false);
+      return;
+    }
+    let cancelled = false;
+    const run = () => {
+      if (cancelled) return;
+      void ensureImageExportFonts(quote.texto, quote.autor);
+      if (isMobile) void ensurePickerFontsLoaded(fontId);
+    };
+    const idle =
+      typeof requestIdleCallback === 'function'
+        ? requestIdleCallback(run, { timeout: 700 })
+        : window.setTimeout(run, 180);
+    return () => {
+      cancelled = true;
+      if (typeof idle === 'number' && typeof cancelIdleCallback === 'function') {
+        cancelIdleCallback(idle);
+      } else {
+        window.clearTimeout(idle);
+      }
+    };
   }, [open, quote.texto, quote.autor, isMobile, fontId]);
 
   useEffect(() => {
@@ -125,7 +147,8 @@ export default function ImageGeneratorModal({
     previewRef
   );
 
-  const effectiveScale = previewScale * userScale;
+  const displayScale = Math.min(1, previewScale);
+  const effectiveScale = displayScale * userScale;
 
   const handleCollectionChange = (id: string) => {
     setCollectionId(id);
@@ -142,8 +165,8 @@ export default function ImageGeneratorModal({
     setFontId(DEFAULT_IMAGE_FONT_ID);
     setTextColor(DEFAULT_TEXT_COLOR);
     resetPreviewGestures();
-    toast('Configurações restauradas.', 'info');
-  }, [recommendation.collectionId, recommendation.skinId, resetPreviewGestures, toast]);
+    toast(t('editor.restored', 'Configurações restauradas.'), 'info');
+  }, [recommendation.collectionId, recommendation.skinId, resetPreviewGestures, t, toast]);
 
   const handleBackgroundSelect = useCallback((colId: string, nextSkinId: string) => {
     setCollectionId(colId);
@@ -172,11 +195,25 @@ export default function ImageGeneratorModal({
     [quote.id, quote.categoria, quote.locale, collectionId, skinId, skin.name, format]
   );
 
+  const ensureExportNode = useCallback(async () => {
+    if (exportRef.current) return exportRef.current;
+    setExportMounted(true);
+    for (let i = 0; i < 24; i++) {
+      await waitNextPaint();
+      if (exportRef.current) return exportRef.current;
+    }
+    return null;
+  }, []);
+
   const runExport = useCallback(
     async (mime: 'image/png' | 'image/jpeg') => {
-      const node = exportRef.current;
-      if (!node) return;
       setBusy(mime === 'image/png' ? 'png' : 'jpeg');
+      const node = await ensureExportNode();
+      if (!node) {
+        setBusy(null);
+        toast(t('editor.export_failed', 'Não foi possível gerar a imagem.'), 'erro');
+        return;
+      }
 
       const ext = mime === 'image/png' ? 'png' : 'jpg';
 
@@ -192,7 +229,7 @@ export default function ImageGeneratorModal({
         registerExport(serial);
         const filename = `metamensagem-${serial}.${ext}`;
         downloadBlob(blob, filename);
-        toast('Imagem baixada!', 'sucesso');
+        toast(t('editor.downloaded', 'Imagem baixada!'), 'sucesso');
       } catch (e) {
         const msg =
           e instanceof Error
@@ -206,13 +243,17 @@ export default function ImageGeneratorModal({
         setBusy(null);
       }
     },
-    [fontSample, formatCfg.width, formatCfg.height, registerExport, toast]
+    [ensureExportNode, fontSample, formatCfg.width, formatCfg.height, registerExport, t, toast]
   );
 
   const handleCopy = useCallback(async () => {
-    const node = exportRef.current;
-    if (!node) return;
     setBusy('copy');
+    const node = await ensureExportNode();
+    if (!node) {
+      setBusy(null);
+      toast(t('editor.copy_failed', 'Falha ao copiar.'), 'erro');
+      return;
+    }
     try {
       const serial = allocateImageSerial();
       flushSync(() => setExportSerial(serial));
@@ -226,16 +267,20 @@ export default function ImageGeneratorModal({
         ok ? 'sucesso' : 'info'
       );
     } catch {
-      toast('Falha ao copiar.', 'erro');
+      toast(t('editor.copy_failed', 'Falha ao copiar.'), 'erro');
     } finally {
       setBusy(null);
     }
-  }, [fontSample, registerExport, toast]);
+  }, [ensureExportNode, fontSample, registerExport, t, toast]);
 
   const handleMobileShare = useCallback(async () => {
-    const node = exportRef.current;
-    if (!node) return;
     setBusy('mobile');
+    const node = await ensureExportNode();
+    if (!node) {
+      setBusy(null);
+      toast(t('editor.share_failed', 'Não foi possível compartilhar a imagem.'), 'erro');
+      return;
+    }
     try {
       const serial = allocateImageSerial();
       flushSync(() => setExportSerial(serial));
@@ -248,14 +293,14 @@ export default function ImageGeneratorModal({
         text: quote.texto.slice(0, 120),
       });
       if (!ok) {
-        toast('Compartilhamento cancelado ou indisponível.', 'info');
+        toast(t('editor.share_cancelled', 'Compartilhamento cancelado ou indisponível.'), 'info');
       }
     } catch {
-      toast('Não foi possível compartilhar a imagem.', 'erro');
+      toast(t('editor.share_failed', 'Não foi possível compartilhar a imagem.'), 'erro');
     } finally {
       setBusy(null);
     }
-  }, [fontSample, quote.texto, registerExport, toast]);
+  }, [ensureExportNode, fontSample, quote.texto, registerExport, t, toast]);
 
   useEffect(() => {
     if (open) setExportSerial(previewSerial);
@@ -299,12 +344,12 @@ export default function ImageGeneratorModal({
           }`}
         >
           <Star size={12} className="fill-amber-400 text-amber-400 shrink-0" />
-          Recomendado para esta frase
+          {t('editor.recommended', 'Recomendado para esta frase')}
         </div>
       )}
 
       <div
-        className="relative shrink-0 transition-transform duration-150 ease-out"
+        className="relative shrink-0"
         style={{
           width: formatCfg.width * effectiveScale,
           height: formatCfg.height * effectiveScale,
@@ -313,13 +358,13 @@ export default function ImageGeneratorModal({
       >
         <div
           style={{
-            transform: `scale(${effectiveScale})`,
+            width: formatCfg.width * displayScale,
+            height: formatCfg.height * displayScale,
+            transform: userScale === 1 ? undefined : `scale(${userScale})`,
             transformOrigin: 'top left',
-            width: formatCfg.width,
-            height: formatCfg.height,
           }}
         >
-          <ImageRenderer {...rendererBase} serial={exportSerial} />
+          <ImageRenderer {...rendererBase} renderScale={displayScale} serial={exportSerial} />
         </div>
       </div>
     </div>
@@ -350,18 +395,21 @@ export default function ImageGeneratorModal({
       }`}
     >
       <section className="mm-desktop-editor-section">
-        <h3 className="mm-desktop-editor-label">Formato</h3>
+        <h3 className="mm-desktop-editor-label">{t('editor.format', 'Formato')}</h3>
         <ImageFormatSelector value={format} onChange={setFormat} tema={tema} />
       </section>
       <section className="mm-desktop-editor-section">
-        <h3 className="mm-desktop-editor-label">Coleção & skin</h3>
+        <h3 className="mm-desktop-editor-label">{t('editor.collection', 'Coleção & skin')}</h3>
         <p className="mm-desktop-editor-hint">
-          Escolha o estilo visual. O texto da frase é sempre exibido por completo.
+          {t(
+            'editor.collection_hint',
+            'Escolha o estilo visual. O texto da frase é sempre exibido por completo.'
+          )}
         </p>
         <CollectionSelector value={collectionId} onChange={handleCollectionChange} tema={tema} />
       </section>
       <section className="mm-desktop-editor-section">
-        <h3 className="mm-desktop-editor-label">Variação</h3>
+        <h3 className="mm-desktop-editor-label">{t('editor.variation', 'Variação')}</h3>
         <SkinSelector
           collectionId={collectionId}
           value={skinId}
@@ -391,7 +439,7 @@ export default function ImageGeneratorModal({
           type="button"
           className="absolute inset-0 z-0 bg-black/75 backdrop-blur-sm"
           onClick={handleClose}
-          aria-label="Fechar"
+          aria-label={t('translate_page.close', 'Fechar')}
         />
 
         <motion.div
@@ -413,7 +461,7 @@ export default function ImageGeneratorModal({
               </span>
               <div className="min-w-0">
                 <h2 id="image-gen-title" className="text-lg font-black tracking-tight truncate">
-                  Gerar imagem
+                  {t('editor.generate_title', 'Gerar imagem')}
                 </h2>
                 <p className={`text-xs truncate ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
                   {collection.emoji} {collection.name} · {skin.name} · {formatCfg.label}
@@ -423,6 +471,7 @@ export default function ImageGeneratorModal({
             <button
               type="button"
               onClick={handleClose}
+              aria-label={t('translate_page.close', 'Fechar')}
               className={`p-2.5 rounded-xl border transition-colors shrink-0 ${
                 tema === 'light' ? 'border-zinc-200 hover:bg-zinc-100' : 'border-zinc-600 hover:bg-zinc-800/80'
               }`}
@@ -472,16 +521,18 @@ export default function ImageGeneratorModal({
     getModalRoot()
   );
 
-  const exportCanvas = createPortal(
-    <div
-      className="mm-image-export-offscreen"
-      style={{ width: formatCfg.width, height: formatCfg.height }}
-      aria-hidden
-    >
-      <ImageRenderer ref={exportRef} {...rendererBase} serial={exportSerial} />
-    </div>,
-    getModalRoot()
-  );
+  const exportCanvas = exportMounted
+    ? createPortal(
+        <div
+          className="mm-image-export-offscreen"
+          style={{ width: formatCfg.width, height: formatCfg.height }}
+          aria-hidden
+        >
+          <ImageRenderer ref={exportRef} {...rendererBase} serial={exportSerial} />
+        </div>,
+        getModalRoot()
+      )
+    : null;
 
   return (
     <>

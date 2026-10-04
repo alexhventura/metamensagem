@@ -1,4 +1,4 @@
-import { forwardRef, useMemo } from 'react';
+import { forwardRef, memo, useMemo } from 'react';
 import type { FormatConfig, ImageGeneratorQuote } from './types';
 import type { SkinConfig } from './types';
 import { decorativeOrbsForSkin, watermarkOpacityForSkin } from './utils/decorativeLayer';
@@ -25,9 +25,11 @@ export interface ImageRendererProps {
   fontFamilyOverride?: string;
   textColorOverride?: string | null;
   fontId?: ImageFontId;
+  /** 1 = canvas de exportação. Menor que 1 pinta o preview no tamanho da tela, com as mesmas quebras. */
+  renderScale?: number;
 }
 
-const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function ImageRenderer(
+const ImageRenderer = memo(forwardRef<HTMLDivElement, ImageRendererProps>(function ImageRenderer(
   {
     texto,
     autor,
@@ -39,9 +41,12 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
     fontFamilyOverride,
     textColorOverride,
     fontId,
+    renderScale = 1,
   },
   ref
 ) {
+  const viewScale = renderScale > 0 && renderScale < 0.999 ? renderScale : 1;
+  const px = (n: number) => (viewScale === 1 ? n : Math.round(n * viewScale * 100) / 100);
   const layout = useMemo(() => {
     const plan = computeImageLayout(texto, autor, format.width, format.height, { fontId });
     if (!plan.quoteFits && import.meta.env.DEV) {
@@ -76,7 +81,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
   const watermarkOpacity = watermarkOpacityForSkin(skin);
 
   const metaFooterStyle = {
-    fontSize: footerPx,
+    fontSize: px(footerPx),
     fontWeight: 500 as const,
     letterSpacing: '0.35px',
     lineHeight: 1.35,
@@ -92,10 +97,10 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
   return (
     <div
       ref={ref}
-      className={`mm-image-export relative overflow-hidden ${skin.bgClass} ${skin.borderClass ?? 'border-white/10'}`}
+      className={`mm-image-export relative overflow-hidden ${viewScale === 1 ? '' : 'mm-image-preview-surface '}${skin.bgClass} ${skin.borderClass ?? 'border-white/10'}`}
       style={{
-        width: format.width,
-        height: format.height,
+        width: px(format.width),
+        height: px(format.height),
         fontFamily,
         ...skin.cardStyle,
       }}
@@ -128,10 +133,10 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
             right: orb.right,
             top: orb.top,
             bottom: orb.bottom,
-            width: orb.size,
-            height: orb.size,
+            width: px(orb.size),
+            height: px(orb.size),
             background: `rgba(${orb.color}, ${orb.opacity})`,
-            filter: `blur(${orb.blur}px)`,
+            filter: `blur(${px(orb.blur)}px)`,
             zIndex: 1,
           }}
         />
@@ -141,7 +146,7 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage: 'radial-gradient(circle at 20% 20%, white 1px, transparent 1px)',
-          backgroundSize: '28px 28px',
+          backgroundSize: `${px(28)}px ${px(28)}px`,
           zIndex: 2,
         }}
       />
@@ -157,31 +162,31 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
           crossOrigin="anonymous"
           className="select-none"
           style={{
-            width: layout.logoPx * 2.6,
-            height: layout.logoPx * 2.6,
+            width: px(layout.logoPx * 2.6),
+            height: px(layout.logoPx * 2.6),
             opacity: watermarkOpacity,
             transform: 'rotate(-18deg)',
-            filter: 'drop-shadow(0 2px 16px rgba(0,0,0,0.08))',
+            filter: `drop-shadow(0 ${px(2)}px ${px(16)}px rgba(0,0,0,0.08))`,
           }}
         />
       </div>
 
       <header
         className="absolute left-0 right-0 top-0 z-10 flex items-start justify-center pointer-events-none"
-        style={{ height: zones.headerHeight }}
+        style={{ height: px(zones.headerHeight) }}
       >
         <img
           src="/brand/logo.svg"
           alt=""
-          width={layout.logoPx}
-          height={layout.logoPx}
+          width={px(layout.logoPx)}
+          height={px(layout.logoPx)}
           crossOrigin="anonymous"
           className="opacity-[0.32]"
           style={{
-            width: layout.logoPx,
-            height: layout.logoPx,
-            marginTop: layout.padTop,
-            filter: 'drop-shadow(0 1px 8px rgba(0,0,0,0.15))',
+            width: px(layout.logoPx),
+            height: px(layout.logoPx),
+            marginTop: px(layout.padTop),
+            filter: `drop-shadow(0 ${px(1)}px ${px(8)}px rgba(0,0,0,0.15))`,
           }}
         />
       </header>
@@ -190,16 +195,16 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         data-mm-quote-zone
         className="absolute z-20 box-border pointer-events-none flex flex-col"
         style={{
-          top: zones.quoteZoneTop,
-          left: zones.padX,
-          right: zones.padX,
-          height: zones.quoteZoneHeight,
-          maxHeight: zones.quoteZoneHeight,
+          top: px(zones.quoteZoneTop),
+          left: px(zones.padX),
+          right: px(zones.padX),
+          height: px(zones.quoteZoneHeight),
+          maxHeight: px(zones.quoteZoneHeight),
           overflow: 'hidden',
-          paddingTop: layout.quotePaddingTop,
-          paddingBottom: layout.quotePaddingBottom,
-          paddingLeft: 10,
-          paddingRight: 10,
+          paddingTop: px(layout.quotePaddingTop),
+          paddingBottom: px(layout.quotePaddingBottom),
+          paddingLeft: px(10),
+          paddingRight: px(10),
           justifyContent: 'center',
           alignItems: 'center',
         }}
@@ -208,12 +213,12 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
         <blockquote
           className={`font-bold m-0 mx-auto text-center shrink-0 ${textColorOverride ? '' : skin.textClass}`}
           style={{
-            fontSize: layout.quotePx,
-            lineHeight: `${layout.lineHeight}px`,
+            fontSize: px(layout.quotePx),
+            lineHeight: `${px(layout.lineHeight)}px`,
             maxWidth: `${QUOTE_CONTENT_MAX_WIDTH_RATIO * 100}%`,
             fontWeight: 700,
             letterSpacing: layout.lines.length <= 3 ? '-0.02em' : '-0.01em',
-            textShadow: '0 2px 12px rgba(0,0,0,0.25)',
+            textShadow: `0 ${px(2)}px ${px(12)}px rgba(0,0,0,0.25)`,
             ...quoteColorStyle,
           }}
         >
@@ -234,18 +239,18 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
             textColorOverride ? '' : skin.accentClass
           }`}
           style={{
-            top: zones.authorZoneTop,
-            height: zones.authorZoneHeight,
-            paddingLeft: zones.padX,
-            paddingRight: zones.padX,
+            top: px(zones.authorZoneTop),
+            height: px(zones.authorZoneHeight),
+            paddingLeft: px(zones.padX),
+            paddingRight: px(zones.padX),
           }}
           aria-label="Autor"
         >
           <p
             className="font-medium tracking-wide m-0 mx-auto truncate"
             style={{
-              fontSize: layout.authorPx,
-              lineHeight: `${Math.round(layout.authorPx * 1.22)}px`,
+              fontSize: px(layout.authorPx),
+              lineHeight: `${px(Math.round(layout.authorPx * 1.22))}px`,
               maxWidth: '70%',
               fontWeight: 500,
               ...(authorColorStyle ?? { opacity: 0.82 }),
@@ -259,12 +264,12 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
       <footer
         className={`absolute left-0 right-0 z-30 flex items-center justify-center overflow-hidden pointer-events-none ${skin.accentClass}`}
         style={{
-          top: zones.footerTop,
-          height: zones.footerHeight,
-          paddingLeft: layout.padX,
-          paddingRight: layout.padX,
-          paddingBottom: layout.padBottom,
-          borderTop: '1px solid rgba(255,255,255,0.08)',
+          top: px(zones.footerTop),
+          height: px(zones.footerHeight),
+          paddingLeft: px(layout.padX),
+          paddingRight: px(layout.padX),
+          paddingBottom: px(layout.padBottom),
+          borderTop: `${viewScale === 1 ? 1 : Math.max(0.5, viewScale)}px solid rgba(255,255,255,0.08)`,
         }}
         aria-label="Metadados"
       >
@@ -279,6 +284,6 @@ const ImageRenderer = forwardRef<HTMLDivElement, ImageRendererProps>(function Im
       </footer>
     </div>
   );
-});
+}));
 
 export default ImageRenderer;

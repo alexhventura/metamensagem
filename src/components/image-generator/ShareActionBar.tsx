@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   Download,
   Copy,
@@ -37,6 +38,7 @@ export default function ShareActionBar({
   onDownloadJpg: () => void;
   onCopy: () => void;
 }) {
+  const { t } = useTranslation();
   const links = useMemo(() => buildSocialShareLinks(quote, quote.locale ?? 'pt'), [quote]);
 
   const openLink = (url: string) => {
@@ -63,11 +65,11 @@ export default function ShareActionBar({
           ) : (
             <Smartphone size={20} />
           )}
-          Compartilhar
+          {t('common.share', 'Compartilhar')}
         </button>
       ) : (
         <p className={`text-[10px] text-center font-medium ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
-          Escolha uma rede ou baixe a imagem para compartilhar
+          {t('editor.share_hint', 'Escolha uma rede ou baixe a imagem para compartilhar')}
         </p>
       )}
 
@@ -140,10 +142,10 @@ export default function ShareActionBar({
           disabled={!!busy}
           onClick={onCopy}
           className={`flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border-2 text-xs font-bold disabled:opacity-50 transition-colors ${btnSecondary}`}
-          title="Copiar imagem"
+          title={t('editor.copy_image', 'Copiar imagem')}
         >
           {busy === 'copy' ? <Loader2 size={16} className="animate-spin" /> : <Copy size={16} />}
-          Copiar
+          {t('common.copy', 'Copiar')}
         </button>
       </div>
     </div>

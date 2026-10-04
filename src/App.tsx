@@ -94,6 +94,7 @@ import BackNavButton from './components/BackNavButton';
 import HeaderBrandLink from './components/HeaderBrandLink';
 import { useAppUiReset } from './hooks/useAppUiReset';
 import { dispatchAppUiReset } from './lib/appUiReset';
+import { scheduleImageGeneratorPrefetch } from './lib/prefetchImageGenerator';
 
 interface ModalProps {
   item: ItemConteudo;
@@ -124,6 +125,10 @@ export default function App() {
     setToast({ mensagem, tipo });
     setTimeout(() => setToast(null), 3000);
   };
+
+  useEffect(() => {
+    scheduleImageGeneratorPrefetch();
+  }, []);
 
   // Home: bootstrap leve; catálogo completo em idle (O(1) inicial)
   useEffect(() => {

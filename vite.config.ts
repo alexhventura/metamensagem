@@ -5,6 +5,7 @@ import { defineConfig } from 'vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 
 const analyze = process.env.ANALYZE === 'true';
+const rootDir = import.meta.dirname;
 
 export default defineConfig(() => {
   return {
@@ -23,7 +24,7 @@ export default defineConfig(() => {
     ].filter(Boolean),
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(rootDir, '.'),
       },
       dedupe: ['react', 'react-dom'],
     },

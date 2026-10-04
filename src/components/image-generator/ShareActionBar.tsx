@@ -5,9 +5,8 @@ import {
   Loader2,
   Smartphone,
   MessageCircle,
-  Twitter,
-  Facebook,
 } from 'lucide-react';
+import { Facebook, Twitter } from '../BrandIcons';
 import type { ImageGeneratorQuote } from './types';
 import { buildSocialShareLinks, canShareImageFiles } from './utils/shareLinks';
 

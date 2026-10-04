@@ -8,7 +8,7 @@ import { useAppUiReset } from '../hooks/useAppUiReset';
 const ImageGeneratorModal = lazy(() => import('../components/image-generator'));
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import BackNavButton from '../components/BackNavButton';
-import { motion, AnimatePresence, useInView, useReducedMotion } from 'framer-motion';
+import { motion, AnimatePresence, useInView, useReducedMotion } from 'motion/react';
 import { Copy, Share2, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import CardTooltip from '../components/CardTooltip';

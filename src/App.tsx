@@ -1,6 +1,6 @@
 ﻿import React, { useState, useEffect, useRef, useMemo, useCallback, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Link, useParams, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 const Terms = lazy(() => import('./views/Terms'));
 const Privacy = lazy(() => import('./views/Privacy'));
@@ -23,7 +23,6 @@ import {
   Download,
   CheckCircle2,
   AlertCircle,
-  Instagram,
   AlignLeft,
   AlignCenter,
   AlignRight,

@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { domToPng, domToBlob } from 'modern-screenshot';
 import { 
   Download, 
   Share2, 
-  Instagram, 
   MessageSquare, 
   AlignLeft, 
   AlignCenter, 

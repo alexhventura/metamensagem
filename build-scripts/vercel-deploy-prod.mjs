@@ -43,19 +43,19 @@ function run(label, cmd, args) {
   }
 }
 
-run('whoami', 'npx', ['--yes', 'vercel@54.14.0', 'whoami']);
+run('whoami', 'npx', ['--yes', 'vercel@62.2.0', 'whoami']);
 run('pull production settings', 'npx', [
   '--yes',
-  'vercel@54.14.0',
+  'vercel@62.2.0',
   'pull',
   '--yes',
   '--environment=production',
   `--scope=${scope}`,
 ]);
-run('build', 'npx', ['--yes', 'vercel@54.14.0', 'build', '--prod', `--scope=${scope}`]);
+run('build', 'npx', ['--yes', 'vercel@62.2.0', 'build', '--prod', `--scope=${scope}`]);
 run('deploy prebuilt', 'npx', [
   '--yes',
-  'vercel@54.14.0',
+  'vercel@62.2.0',
   'deploy',
   '--prebuilt',
   '--prod',

@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Instagram, Youtube, Facebook } from 'lucide-react';
+import { motion } from 'motion/react';
+import { Facebook, Instagram, Youtube } from './BrandIcons';
 
 interface SocialHubProps {
   tema: string;

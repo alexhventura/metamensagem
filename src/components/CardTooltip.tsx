@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 
 /** Tooltip leve para botões de card — não quebra se falhar render filho. */
 export default function CardTooltip({

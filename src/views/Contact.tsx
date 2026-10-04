@@ -1,7 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
-import { Instagram, Send, Mail } from 'lucide-react';
+import { motion } from 'motion/react';
+import { Mail, Send } from 'lucide-react';
+import { Instagram } from '../components/BrandIcons';
 
 export default function Contact({ tema }: { tema: string }) {
   const { t } = useTranslation();

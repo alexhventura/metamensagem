@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal, flushSync } from 'react-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { X, Sparkles, Star } from 'lucide-react';
 import ImageRenderer from './ImageRenderer';
 import ImageFormatSelector from './ImageFormatSelector';

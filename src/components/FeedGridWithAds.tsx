@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import AdSlot from './AdSlot';
 import type { FeedRow } from '../lib/feedWithAds';
 import { FEED_INITIAL_VISIBLE } from '../lib/feedWithAds';

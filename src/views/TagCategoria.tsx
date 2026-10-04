@@ -6,7 +6,7 @@ import {
   useSupabaseTaxonomyList,
 } from '../hooks/useSupabaseTaxonomyList';
 import { Link, useParams, Navigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Search } from 'lucide-react';
 import { searchBancoSemantico } from '../lib/semanticSearch';
 import {

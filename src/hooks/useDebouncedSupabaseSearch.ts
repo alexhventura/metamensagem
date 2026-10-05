@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { searchFrases, searchFrasesByText } from '../lib/frasesModel';
+import { loadFeedSample } from '../lib/staticFraseIndex';
 import { itemConteudoFromSearchHit } from '../lib/itemFromSearchHit';
 import { recordSearchLatency } from '../lib/observability/performanceMetrics';
 import { recordSearchHitsForResults } from '../lib/analytics/fraseMetricsSync';
@@ -22,7 +23,7 @@ type Options = {
  * Busca textual no índice CDN (debounce). Retorna null quando query vazia.
  */
 export function useDebouncedSupabaseSearch(query: string, options: Options = {}) {
-  const { debounceMs = 300, limit = 48, filters } = options;
+  const { debounceMs = 140, limit = 48, filters } = options;
   const { pathname } = useLocation();
   const locale = resolveUiLocale(pathname);
   const trimmed = query.trim();
@@ -36,7 +37,9 @@ export function useDebouncedSupabaseSearch(query: string, options: Options = {})
       return;
     }
 
+    setItems(null);
     setLoading(true);
+    void loadFeedSample().catch(() => undefined);
     let cancelled = false;
 
     const timer = window.setTimeout(() => {
@@ -54,7 +57,7 @@ export function useDebouncedSupabaseSearch(query: string, options: Options = {})
           setItems(hits.map(itemConteudoFromSearchHit));
         })
         .catch(() => {
-          if (!cancelled) setItems([]);
+          if (!cancelled) setItems((prev) => prev ?? []);
         })
         .finally(() => {
           if (!cancelled) setLoading(false);

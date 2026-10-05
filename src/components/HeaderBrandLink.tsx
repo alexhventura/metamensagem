@@ -25,7 +25,7 @@ export default function HeaderBrandLink() {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
       }}
-      className="flex items-center gap-2.5 group min-w-0 flex-shrink-0 cursor-pointer no-underline relative"
+      className="flex items-center gap-2 sm:gap-2.5 group min-w-0 shrink cursor-pointer no-underline relative"
       aria-label="Metamensagem, pagina inicial"
     >
       <img
@@ -37,7 +37,7 @@ export default function HeaderBrandLink() {
         decoding="async"
         fetchPriority="high"
       />
-      <span className="text-xl md:text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[#A855F7] to-[#6366f1] tracking-tighter truncate pointer-events-none">
+      <span className="min-w-0 text-lg min-[400px]:text-xl md:text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[#A855F7] to-[#6366f1] tracking-tighter truncate pointer-events-none">
         Metamensagem
       </span>
     </Link>

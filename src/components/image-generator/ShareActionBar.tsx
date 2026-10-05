@@ -28,6 +28,7 @@ export default function ShareActionBar({
   onDownloadPng,
   onDownloadJpg,
   onCopy,
+  linksOnly = false,
 }: {
   tema: string;
   quote: ImageGeneratorQuote;
@@ -37,6 +38,7 @@ export default function ShareActionBar({
   onDownloadPng: () => void;
   onDownloadJpg: () => void;
   onCopy: () => void;
+  linksOnly?: boolean;
 }) {
   const { t } = useTranslation();
   const links = useMemo(() => buildSocialShareLinks(quote, quote.locale ?? 'pt'), [quote]);
@@ -53,67 +55,62 @@ export default function ShareActionBar({
 
   return (
     <div className={`shrink-0 p-4 border-t space-y-3 ${border}`}>
-      {supportsFileShare ? (
+      <p className={`text-[10px] text-center font-medium ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
+        {t('editor.share_hint', 'Escolha uma rede ou baixe a imagem para compartilhar')}
+      </p>
+
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <button
+          type="button"
+          onClick={() => openLink(links.whatsapp)}
+          className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border-2 text-xs font-bold transition-colors ${btnSecondary}`}
+        >
+          <MessageCircle size={16} className="text-green-500" />
+          WhatsApp
+        </button>
+        <button
+          type="button"
+          onClick={() => openLink(links.pinterest)}
+          className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border-2 text-xs font-bold transition-colors ${btnSecondary}`}
+        >
+          <PinterestIcon />
+          Pinterest
+        </button>
+        <button
+          type="button"
+          onClick={() => openLink(links.twitter)}
+          className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border-2 text-xs font-bold transition-colors ${btnSecondary}`}
+        >
+          <Twitter size={16} />
+          X
+        </button>
+        <button
+          type="button"
+          onClick={() => openLink(links.facebook)}
+          className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border-2 text-xs font-bold transition-colors ${btnSecondary}`}
+        >
+          <Facebook size={16} className="text-blue-500" />
+          Facebook
+        </button>
+      </div>
+
+      {supportsFileShare && (
         <button
           type="button"
           disabled={!!busy}
           onClick={onMobileShare}
-          className="w-full flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-gradient-to-r from-[#7C3AED] via-[#A855F7] to-[#D946EF] text-white font-bold text-sm shadow-lg shadow-purple-500/25 hover:opacity-95 disabled:opacity-50 transition-all"
+          className="w-full flex items-center justify-center gap-2.5 px-5 py-3 rounded-2xl bg-gradient-to-r from-[#7C3AED] via-[#A855F7] to-[#D946EF] text-white font-bold text-sm shadow-lg shadow-purple-500/25 hover:opacity-95 disabled:opacity-50 transition-all"
         >
           {busy === 'mobile' ? (
             <Loader2 size={20} className="animate-spin" />
           ) : (
             <Smartphone size={20} />
           )}
-          {t('common.share', 'Compartilhar')}
+          {t('editor.share_image', 'Compartilhar imagem')}
         </button>
-      ) : (
-        <p className={`text-[10px] text-center font-medium ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
-          {t('editor.share_hint', 'Escolha uma rede ou baixe a imagem para compartilhar')}
-        </p>
       )}
 
-      {!supportsFileShare && (
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-          <button
-            type="button"
-            disabled={!!busy}
-            onClick={() => openLink(links.whatsapp)}
-            className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border-2 text-xs font-bold transition-colors ${btnSecondary}`}
-          >
-            <MessageCircle size={16} className="text-green-500" />
-            WhatsApp
-          </button>
-          <button
-            type="button"
-            disabled={!!busy}
-            onClick={() => openLink(links.pinterest)}
-            className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border-2 text-xs font-bold transition-colors ${btnSecondary}`}
-          >
-            <PinterestIcon />
-            Pinterest
-          </button>
-          <button
-            type="button"
-            disabled={!!busy}
-            onClick={() => openLink(links.twitter)}
-            className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border-2 text-xs font-bold transition-colors ${btnSecondary}`}
-          >
-            <Twitter size={16} />
-            X
-          </button>
-          <button
-            type="button"
-            disabled={!!busy}
-            onClick={() => openLink(links.facebook)}
-            className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border-2 text-xs font-bold transition-colors ${btnSecondary}`}
-          >
-            <Facebook size={16} className="text-blue-500" />
-            Facebook
-          </button>
-        </div>
-      )}
-
+      {!linksOnly && (
       <div className="flex flex-wrap gap-2">
         <button
           type="button"
@@ -148,6 +145,7 @@ export default function ShareActionBar({
           {t('common.copy', 'Copiar')}
         </button>
       </div>
+      )}
     </div>
   );
 }

@@ -34,6 +34,7 @@ export default function MobileQuickStylePanel({
   recommendedCollectionId,
   recommendedSkinId,
   onBackgroundSelect,
+  showBackgrounds = true,
 }: {
   tema: string;
   format: ImageFormat;
@@ -48,6 +49,7 @@ export default function MobileQuickStylePanel({
   recommendedCollectionId?: string;
   recommendedSkinId?: string;
   onBackgroundSelect: (collectionId: string, skinId: string) => void;
+  showBackgrounds?: boolean;
 }) {
   const { t } = useTranslation();
   return (
@@ -69,13 +71,17 @@ export default function MobileQuickStylePanel({
 
       <section>
         <SectionLabel tema={tema}>{t('editor.background_short', 'Fundo')}</SectionLabel>
-        <MobileBackgroundGrid
-          collectionId={collectionId}
-          skinId={skinId}
-          recommendedCollectionId={recommendedCollectionId}
-          recommendedSkinId={recommendedSkinId}
-          onSelect={onBackgroundSelect}
-        />
+        {showBackgrounds ? (
+          <MobileBackgroundGrid
+            collectionId={collectionId}
+            skinId={skinId}
+            recommendedCollectionId={recommendedCollectionId}
+            recommendedSkinId={recommendedSkinId}
+            onSelect={onBackgroundSelect}
+          />
+        ) : (
+          <div className="h-[5.25rem]" aria-hidden />
+        )}
       </section>
     </div>
   );

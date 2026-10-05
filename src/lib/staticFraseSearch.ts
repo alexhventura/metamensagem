@@ -8,8 +8,6 @@ import { expandSearchTerms } from './semanticSearch';
 import {
   forEachIndexShard,
   loadFeedSample,
-  loadIndexShard,
-  listShardIds,
   type FeedSampleRow,
   type StaticIndexRow,
 } from './staticFraseIndex';
@@ -21,6 +19,8 @@ export type FraseSearchHit = {
   slug: string;
   titulo: string;
   popularidade?: number;
+  autor?: string;
+  tags?: string[];
 };
 
 export type FraseSearchOptions = {
@@ -34,7 +34,6 @@ export type FraseSearchOptions = {
 const DEFAULT_LIMIT = 24;
 const MAX_LIMIT = 100;
 const TITULO_MAX = 160;
-const SHARD_BATCH = 16;
 
 function clampLimit(limit?: number): number {
   const n = limit ?? DEFAULT_LIMIT;
@@ -76,53 +75,43 @@ function rowToHit(row: StaticIndexRow, score: number): FraseSearchHit {
 
 function feedToHit(row: FeedSampleRow, score: number): FraseSearchHit {
   const slug = (row.slug || row.id).toLowerCase();
+  const autor = (row.autor || '').trim();
   return {
     id: row.id,
     slug,
     titulo: truncateTitulo(row.texto) || tituloFromSlug(slug),
     popularidade: score,
+    autor: autor || undefined,
+    tags: row.tags?.length ? row.tags : undefined,
   };
 }
 
-function scoreIndexRow(
-  row: StaticIndexRow,
-  terms: string[],
-  themes: string[],
-  queryNorm: string
-): number {
-  const slugText = normalize(row.slug.replace(/-/g, ' '));
-  const categoria = normalize(row.categoriaPrincipal || '');
-  const autor = normalize((row.autorSlug || '').replace(/-/g, ' '));
-
-  let score = 0;
-  if (queryNorm && slugText.includes(queryNorm)) score += 20;
-  if (queryNorm && categoria === queryNorm) score += 12;
-
-  for (const term of terms) {
-    const t = normalize(term);
-    if (!t || t.length < 2) continue;
-    if (slugText.includes(t)) score += t.length >= 4 ? 10 : 6;
-    if (categoria.includes(t)) score += 8;
-    if (autor.includes(t)) score += 4;
+function includesTerm(text: string, term: string): boolean {
+  if (!term) return false;
+  let from = 0;
+  while (from < text.length) {
+    const at = text.indexOf(term, from);
+    if (at < 0) return false;
+    const before = at === 0 ? '' : text[at - 1];
+    const after = text[at + term.length] || '';
+    const leftOk = !before || /[^a-z0-9]/.test(before);
+    const rightOk = !after || /[^a-z0-9]/.test(after);
+    if (leftOk && rightOk) return true;
+    from = at + term.length;
   }
-
-  for (const theme of themes) {
-    const th = normalize(theme);
-    if (categoria === th || slugText.includes(th)) score += 6;
-  }
-
-  return score;
+  return false;
 }
 
 function scoreFeedRow(row: FeedSampleRow, terms: string[], queryNorm: string): number {
-  const blob = normalize(
-    [row.texto, row.autor, ...(row.tags || [])].filter(Boolean).join(' ')
-  );
+  const texto = normalize(row.texto || '');
+  const meta = normalize([row.autor, ...(row.tags || [])].filter(Boolean).join(' '));
+  const blob = `${texto} ${meta}`;
   let score = 0;
-  if (queryNorm && blob.includes(queryNorm)) score += 24;
+  if (queryNorm && includesTerm(texto, queryNorm)) score += 1000;
+  else if (queryNorm && includesTerm(meta, queryNorm)) score += 400;
   for (const term of terms) {
     const t = normalize(term);
-    if (t.length >= 2 && blob.includes(t)) score += 12;
+    if (t.length >= 3 && includesTerm(blob, t)) score += 12;
   }
   return score;
 }
@@ -184,15 +173,27 @@ function matchesTagRow(row: StaticIndexRow, tagSlug: string): boolean {
   return false;
 }
 
+function feedMatchesFilters(row: FeedSampleRow, categoria?: string, tags: string[] = []): boolean {
+  if (!categoria && !tags.length) return true;
+  const rowTags = (row.tags || []).map((tag) => normalize(tag));
+  if (categoria) {
+    const cat = normalize(categoria);
+    if (!rowTags.some((tag) => tag === cat || tag.includes(cat))) return false;
+  }
+  if (tags.length && !tags.some((tag) => rowTags.includes(normalize(tag)))) return false;
+  return true;
+}
+
 async function searchFeedByText(
-  query: string,
   terms: string[],
-  queryNorm: string
+  queryNorm: string,
+  filters?: { categoria?: string; tags?: string[] }
 ): Promise<FraseSearchHit[]> {
   try {
     const feed = await loadFeedSample();
     const hits: FraseSearchHit[] = [];
     for (const row of feed) {
+      if (!feedMatchesFilters(row, filters?.categoria, filters?.tags)) continue;
       const score = scoreFeedRow(row, terms, queryNorm);
       if (score > 0) hits.push(feedToHit(row, score + 30));
     }
@@ -202,32 +203,11 @@ async function searchFeedByText(
   }
 }
 
-async function collectIndexTextMatches(
-  query: string,
-  terms: string[],
-  themes: string[],
-  queryNorm: string,
-  maxCandidates: number
-): Promise<FraseSearchHit[]> {
-  const shardIds = await listShardIds();
-  const candidates: FraseSearchHit[] = [];
-
-  for (let i = 0; i < shardIds.length; i += SHARD_BATCH) {
-    const batch = shardIds.slice(i, i + SHARD_BATCH);
-    const shards = await Promise.all(batch.map((id) => loadIndexShard(id)));
-    for (const rows of shards) {
-      for (const row of rows) {
-        const score = scoreIndexRow(row, terms, themes, queryNorm);
-        if (score > 0) candidates.push(rowToHit(row, score));
-      }
-    }
-    if (candidates.length > maxCandidates) {
-      candidates.sort(sortHits);
-      candidates.length = Math.floor(maxCandidates / 2);
-    }
-  }
-
-  return candidates;
+function textSearchTerms(query: string, locale?: string): { terms: string[]; queryNorm: string } {
+  const semantic = expandSearchQuery(query, locale ?? 'pt');
+  const extra = expandSearchTerms(query);
+  const terms = [...new Set([...semantic.terms, ...extra.map((t) => normalize(t))])];
+  return { terms, queryNorm: normalize(query) };
 }
 
 export async function searchFrasesIndexByText(
@@ -238,18 +218,9 @@ export async function searchFrasesIndexByText(
   if (!q) return [];
 
   const limit = clampLimit(options?.limit);
-  const semantic = expandSearchQuery(q, options?.locale ?? 'pt');
-  const extra = expandSearchTerms(q);
-  const terms = [...new Set([...semantic.terms, ...extra.map((t) => normalize(t))])];
-  const queryNorm = normalize(q);
-
-  const [feedHits, indexHits] = await Promise.all([
-    searchFeedByText(q, terms, queryNorm),
-    collectIndexTextMatches(q, terms, semantic.themes, queryNorm, limit * 24),
-  ]);
-
-  const merged = dedupeHits([...feedHits, ...indexHits]).sort(sortHits);
-  return applyPagination(merged, { ...options, limit });
+  const { terms, queryNorm } = textSearchTerms(q, options?.locale);
+  const feedHits = await searchFeedByText(terms, queryNorm);
+  return applyPagination(feedHits, { ...options, limit });
 }
 
 async function paginateFilteredRows(
@@ -342,34 +313,7 @@ export async function searchFrasesIndex(
   if (!q && categoria) return searchFrasesIndexByCategoria(categoria, options);
   if (!q && tags.length) return searchFrasesIndexByTags(tags, options);
 
-  const limit = clampLimit(options?.limit);
-  const semantic = expandSearchQuery(q, options?.locale ?? 'pt');
-  const extra = expandSearchTerms(q);
-  const terms = [...new Set([...semantic.terms, ...extra.map((t) => normalize(t))])];
-  const queryNorm = normalize(q);
-
-  const feedPromise = searchFeedByText(q, terms, queryNorm);
-  const narrowed: FraseSearchHit[] = [];
-
-  await forEachIndexShard((rows) => {
-    if (narrowed.length >= limit * 8) return;
-    for (const row of rows) {
-      if (categoria && (row.categoriaPrincipal || '').toLowerCase() !== categoria) continue;
-      if (tags.length && !tags.some((tag) => matchesTagRow(row, tag))) continue;
-      const score = scoreIndexRow(row, terms, semantic.themes, queryNorm);
-      if (score > 0) narrowed.push(rowToHit(row, score));
-    }
-  });
-
-  const feedHits = await feedPromise;
-  const feedFiltered =
-    categoria || tags.length
-      ? feedHits.filter((hit) => {
-          /* feed hits não carregam categoria — mantidos só se também aparecerem no índice */
-          return narrowed.some((n) => n.id === hit.id);
-        })
-      : feedHits;
-
-  const merged = dedupeHits([...feedFiltered, ...narrowed]).sort(sortHits);
-  return applyPagination(merged, options);
+  const { terms, queryNorm } = textSearchTerms(q, options?.locale);
+  const feedHits = await searchFeedByText(terms, queryNorm, { categoria, tags });
+  return applyPagination(feedHits, options);
 }

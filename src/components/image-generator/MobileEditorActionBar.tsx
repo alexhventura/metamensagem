@@ -4,10 +4,11 @@ import type { ShareBusy } from './ShareActionBar';
 
 export default function MobileEditorActionBar({
   busy,
-  supportsShare,
+  supportsShare: _supportsShare,
   onRestore,
   onDownload,
   onShare,
+  shareOpen = false,
   tema,
 }: {
   busy: ShareBusy;
@@ -15,6 +16,7 @@ export default function MobileEditorActionBar({
   onRestore: () => void;
   onDownload: () => void;
   onShare: () => void;
+  shareOpen?: boolean;
   tema: string;
 }) {
   const { t } = useTranslation();
@@ -60,10 +62,13 @@ export default function MobileEditorActionBar({
 
       <button
         type="button"
-        disabled={!!busy || !supportsShare}
+        disabled={!!busy}
         onClick={onShare}
-        className={`mm-editor-mobile-bar-btn mm-editor-mobile-bar-secondary ${secondary} disabled:opacity-50`}
-        aria-label={t('editor.share_image', 'Compartilhar imagem')}
+        aria-expanded={shareOpen}
+        className={`mm-editor-mobile-bar-btn mm-editor-mobile-bar-secondary ${secondary} disabled:opacity-50 ${
+          shareOpen ? 'ring-2 ring-[#A855F7]/70' : ''
+        }`}
+        aria-label={t('common.share', 'Compartilhar')}
       >
         {busy === 'mobile' ? (
           <Loader2 size={18} className="animate-spin" aria-hidden />

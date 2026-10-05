@@ -135,8 +135,11 @@ const ImageRenderer = memo(forwardRef<HTMLDivElement, ImageRendererProps>(functi
             bottom: orb.bottom,
             width: px(orb.size),
             height: px(orb.size),
-            background: `rgba(${orb.color}, ${orb.opacity})`,
-            filter: `blur(${px(orb.blur)}px)`,
+            background:
+              viewScale === 1
+                ? `rgba(${orb.color}, ${orb.opacity})`
+                : `radial-gradient(circle, rgba(${orb.color}, ${orb.opacity}) 0%, rgba(${orb.color}, 0) 70%)`,
+            filter: viewScale === 1 ? `blur(${px(orb.blur)}px)` : undefined,
             zIndex: 1,
           }}
         />
@@ -166,7 +169,7 @@ const ImageRenderer = memo(forwardRef<HTMLDivElement, ImageRendererProps>(functi
             height: px(layout.logoPx * 2.6),
             opacity: watermarkOpacity,
             transform: 'rotate(-18deg)',
-            filter: `drop-shadow(0 ${px(2)}px ${px(16)}px rgba(0,0,0,0.08))`,
+            filter: viewScale === 1 ? `drop-shadow(0 ${px(2)}px ${px(16)}px rgba(0,0,0,0.08))` : undefined,
           }}
         />
       </div>

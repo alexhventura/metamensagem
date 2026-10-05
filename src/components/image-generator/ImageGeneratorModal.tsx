@@ -65,6 +65,8 @@ export default function ImageGeneratorModal({
   const [collectionId, setCollectionId] = useState(recommendation.collectionId);
   const [skinId, setSkinId] = useState(recommendation.skinId);
   const [busy, setBusy] = useState<ShareBusy>(null);
+  const [shareOpen, setShareOpen] = useState(false);
+  const [skinsReady, setSkinsReady] = useState(false);
   const [fontId, setFontId] = useState<ImageFontId>(DEFAULT_IMAGE_FONT_ID);
   const [textColor, setTextColor] = useState<TextColorChoice>(DEFAULT_TEXT_COLOR);
   const previewSerial = useMemo(() => previewSerialForQuote(quote.id), [quote.id]);
@@ -90,8 +92,16 @@ export default function ImageGeneratorModal({
   useEffect(() => {
     if (!open) {
       setExportMounted(false);
+      setShareOpen(false);
+      setSkinsReady(false);
       return;
     }
+    const skinsTimer = window.setTimeout(() => setSkinsReady(true), 48);
+    return () => window.clearTimeout(skinsTimer);
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
     let cancelled = false;
     const run = () => {
       if (cancelled) return;
@@ -385,6 +395,7 @@ export default function ImageGeneratorModal({
       recommendedCollectionId={recommendation.matched ? recommendation.collectionId : undefined}
       recommendedSkinId={recommendation.matched ? recommendation.skinId : undefined}
       onBackgroundSelect={handleBackgroundSelect}
+      showBackgrounds={skinsReady}
     />
   );
 
@@ -430,25 +441,27 @@ export default function ImageGeneratorModal({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="mm-modal-overlay flex items-end sm:items-center justify-center p-0 sm:p-4 md:p-6"
+        className={`mm-modal-overlay flex ${
+          isMobile ? 'flex-col' : 'items-center justify-center p-4 md:p-6'
+        }`}
         role="dialog"
         aria-modal="true"
         aria-labelledby="image-gen-title"
       >
         <button
           type="button"
-          className="absolute inset-0 z-0 bg-black/75 backdrop-blur-sm"
+          className="absolute inset-0 z-0 bg-black/80"
           onClick={handleClose}
           aria-label={t('translate_page.close', 'Fechar')}
         />
 
         <motion.div
-          initial={{ opacity: 0, y: 24, scale: 0.96 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 16, scale: 0.98 }}
-          className={`mm-modal-panel w-full max-w-5xl max-h-[100dvh] sm:max-h-[92vh] overflow-hidden rounded-t-[1.75rem] sm:rounded-[2rem] border shadow-2xl flex flex-col ${
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className={`mm-modal-panel w-full max-w-5xl overflow-hidden rounded-t-[1.75rem] sm:rounded-[2rem] border shadow-2xl flex flex-col ${
             tema === 'light' ? 'bg-white border-zinc-200' : 'bg-[#141210] border-zinc-700'
-          } ${isMobile ? 'mm-image-editor-mobile' : 'mm-image-editor-desktop'}`}
+          } ${isMobile ? 'flex-1 min-h-0 w-full rounded-none mm-image-editor-mobile' : 'max-h-[92vh] mm-image-editor-desktop'}`}
         >
           <header
             className={`flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b shrink-0 ${
@@ -486,13 +499,27 @@ export default function ImageGeneratorModal({
               <div className="mm-mobile-editor-controls flex-1 min-h-0 overflow-y-auto overscroll-contain px-4 py-3">
                 {mobileQuickPanel}
               </div>
+              {shareOpen && (
+                <ShareActionBar
+                  linksOnly
+                  tema={tema}
+                  quote={quote}
+                  busy={busy}
+                  supportsFileShare={supportsFileShare}
+                  onMobileShare={() => void handleMobileShare()}
+                  onDownloadPng={() => void runExport('image/png')}
+                  onDownloadJpg={() => void runExport('image/jpeg')}
+                  onCopy={() => void handleCopy()}
+                />
+              )}
               <MobileEditorActionBar
                 tema={tema}
                 busy={busy}
                 supportsShare={supportsFileShare}
+                shareOpen={shareOpen}
                 onRestore={handleRestore}
                 onDownload={() => void runExport('image/png')}
-                onShare={() => void handleMobileShare()}
+                onShare={() => setShareOpen((open) => !open)}
               />
             </div>
           ) : (

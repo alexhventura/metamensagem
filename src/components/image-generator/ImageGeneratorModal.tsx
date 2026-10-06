@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal, flushSync } from 'react-dom';
 import { motion, AnimatePresence } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 import { X, Sparkles, Star } from 'lucide-react';
 import ImageRenderer from './ImageRenderer';
 import ImageFormatSelector from './ImageFormatSelector';
@@ -13,7 +14,7 @@ import { FORMATS, DEFAULT_FORMAT } from './formats';
 import { findCollection, findSkin } from './skins/data';
 import type { ImageFormat, ImageGeneratorQuote } from './types';
 import { recommendSkinForQuote } from './utils/recommendSkin';
-import { canShareImageFiles } from './utils/shareLinks';
+import { canShareImageFiles, canUseNativeShare, resolveQuoteCanonicalUrl } from './utils/shareLinks';
 import {
   captureElementAsBlob,
   copyBlobToClipboard,
@@ -53,8 +54,10 @@ export default function ImageGeneratorModal({
   tema,
   toast,
 }: ImageGeneratorModalProps) {
+  const { t } = useTranslation();
   const exportRef = useRef<HTMLDivElement>(null);
   const previewRef = useRef<HTMLDivElement>(null);
+  const [exportMounted, setExportMounted] = useState(false);
   const recommendation = useMemo(() => recommendSkinForQuote(quote), [quote]);
   const isMobile = useMediaQuery('(max-width: 1023px)');
 
@@ -62,12 +65,19 @@ export default function ImageGeneratorModal({
   const [collectionId, setCollectionId] = useState(recommendation.collectionId);
   const [skinId, setSkinId] = useState(recommendation.skinId);
   const [busy, setBusy] = useState<ShareBusy>(null);
+  const [shareOpen, setShareOpen] = useState(false);
+  const [skinsReady, setSkinsReady] = useState(false);
   const [fontId, setFontId] = useState<ImageFontId>(DEFAULT_IMAGE_FONT_ID);
   const [textColor, setTextColor] = useState<TextColorChoice>(DEFAULT_TEXT_COLOR);
   const previewSerial = useMemo(() => previewSerialForQuote(quote.id), [quote.id]);
   const [exportSerial, setExportSerial] = useState(previewSerial);
 
   const supportsFileShare = useMemo(() => canShareImageFiles(), []);
+  const supportsNativeShare = useMemo(() => canUseNativeShare(), []);
+  const shareUrl = useMemo(
+    () => resolveQuoteCanonicalUrl(quote, quote.locale ?? 'pt'),
+    [quote]
+  );
   const fontSample = useMemo(
     () => ({ text: quote.texto, autor: quote.autor, fontId }),
     [quote.texto, quote.autor, fontId]
@@ -85,9 +95,36 @@ export default function ImageGeneratorModal({
   useAppUiReset(handleClose);
 
   useEffect(() => {
+    if (!open) {
+      setExportMounted(false);
+      setShareOpen(false);
+      setSkinsReady(false);
+      return;
+    }
+    const skinsTimer = window.setTimeout(() => setSkinsReady(true), 48);
+    return () => window.clearTimeout(skinsTimer);
+  }, [open]);
+
+  useEffect(() => {
     if (!open) return;
-    void ensureImageExportFonts(quote.texto, quote.autor);
-    if (isMobile) void ensurePickerFontsLoaded(fontId);
+    let cancelled = false;
+    const run = () => {
+      if (cancelled) return;
+      void ensureImageExportFonts(quote.texto, quote.autor);
+      if (isMobile) void ensurePickerFontsLoaded(fontId);
+    };
+    const idle =
+      typeof requestIdleCallback === 'function'
+        ? requestIdleCallback(run, { timeout: 700 })
+        : window.setTimeout(run, 180);
+    return () => {
+      cancelled = true;
+      if (typeof idle === 'number' && typeof cancelIdleCallback === 'function') {
+        cancelIdleCallback(idle);
+      } else {
+        window.clearTimeout(idle);
+      }
+    };
   }, [open, quote.texto, quote.autor, isMobile, fontId]);
 
   useEffect(() => {
@@ -125,7 +162,8 @@ export default function ImageGeneratorModal({
     previewRef
   );
 
-  const effectiveScale = previewScale * userScale;
+  const displayScale = Math.min(1, previewScale);
+  const effectiveScale = displayScale * userScale;
 
   const handleCollectionChange = (id: string) => {
     setCollectionId(id);
@@ -142,8 +180,8 @@ export default function ImageGeneratorModal({
     setFontId(DEFAULT_IMAGE_FONT_ID);
     setTextColor(DEFAULT_TEXT_COLOR);
     resetPreviewGestures();
-    toast('Configurações restauradas.', 'info');
-  }, [recommendation.collectionId, recommendation.skinId, resetPreviewGestures, toast]);
+    toast(t('editor.restored', 'Configurações restauradas.'), 'info');
+  }, [recommendation.collectionId, recommendation.skinId, resetPreviewGestures, t, toast]);
 
   const handleBackgroundSelect = useCallback((colId: string, nextSkinId: string) => {
     setCollectionId(colId);
@@ -172,11 +210,25 @@ export default function ImageGeneratorModal({
     [quote.id, quote.categoria, quote.locale, collectionId, skinId, skin.name, format]
   );
 
+  const ensureExportNode = useCallback(async () => {
+    if (exportRef.current) return exportRef.current;
+    setExportMounted(true);
+    for (let i = 0; i < 24; i++) {
+      await waitNextPaint();
+      if (exportRef.current) return exportRef.current;
+    }
+    return null;
+  }, []);
+
   const runExport = useCallback(
     async (mime: 'image/png' | 'image/jpeg') => {
-      const node = exportRef.current;
-      if (!node) return;
       setBusy(mime === 'image/png' ? 'png' : 'jpeg');
+      const node = await ensureExportNode();
+      if (!node) {
+        setBusy(null);
+        toast(t('editor.export_failed', 'Não foi possível gerar a imagem.'), 'erro');
+        return;
+      }
 
       const ext = mime === 'image/png' ? 'png' : 'jpg';
 
@@ -192,7 +244,7 @@ export default function ImageGeneratorModal({
         registerExport(serial);
         const filename = `metamensagem-${serial}.${ext}`;
         downloadBlob(blob, filename);
-        toast('Imagem baixada!', 'sucesso');
+        toast(t('editor.downloaded', 'Imagem baixada!'), 'sucesso');
       } catch (e) {
         const msg =
           e instanceof Error
@@ -206,13 +258,17 @@ export default function ImageGeneratorModal({
         setBusy(null);
       }
     },
-    [fontSample, formatCfg.width, formatCfg.height, registerExport, toast]
+    [ensureExportNode, fontSample, formatCfg.width, formatCfg.height, registerExport, t, toast]
   );
 
   const handleCopy = useCallback(async () => {
-    const node = exportRef.current;
-    if (!node) return;
     setBusy('copy');
+    const node = await ensureExportNode();
+    if (!node) {
+      setBusy(null);
+      toast(t('editor.copy_failed', 'Falha ao copiar.'), 'erro');
+      return;
+    }
     try {
       const serial = allocateImageSerial();
       flushSync(() => setExportSerial(serial));
@@ -226,16 +282,20 @@ export default function ImageGeneratorModal({
         ok ? 'sucesso' : 'info'
       );
     } catch {
-      toast('Falha ao copiar.', 'erro');
+      toast(t('editor.copy_failed', 'Falha ao copiar.'), 'erro');
     } finally {
       setBusy(null);
     }
-  }, [fontSample, registerExport, toast]);
+  }, [ensureExportNode, fontSample, registerExport, t, toast]);
 
   const handleMobileShare = useCallback(async () => {
-    const node = exportRef.current;
-    if (!node) return;
     setBusy('mobile');
+    const node = await ensureExportNode();
+    if (!node) {
+      setBusy(null);
+      toast(t('editor.share_failed', 'Não foi possível compartilhar a imagem.'), 'erro');
+      return;
+    }
     try {
       const serial = allocateImageSerial();
       flushSync(() => setExportSerial(serial));
@@ -243,19 +303,93 @@ export default function ImageGeneratorModal({
       await waitNextPaint();
       const blob = await captureElementAsBlob(node, 'image/png', fontSample);
       registerExport(serial);
+      const caption = `"${quote.texto.slice(0, 140)}" — ${quote.autor}`;
       const ok = await shareImageFile(blob, {
         title: 'Metamensagem',
-        text: quote.texto.slice(0, 120),
+        text: `${caption}\n${shareUrl}`,
+        url: shareUrl,
       });
       if (!ok) {
-        toast('Compartilhamento cancelado ou indisponível.', 'info');
+        if (canUseNativeShare()) {
+          try {
+            await navigator.share({
+              title: 'Metamensagem',
+              text: caption,
+              url: shareUrl,
+            });
+            return;
+          } catch (e) {
+            if ((e as Error).name === 'AbortError') return;
+          }
+        }
+        const filename = `metamensagem-${serial}.png`;
+        downloadBlob(blob, filename);
+        toast(
+          t(
+            'editor.share_saved_for_apps',
+            'Imagem salva. Abra Instagram, WhatsApp ou outro app para publicar.'
+          ),
+          'info'
+        );
       }
     } catch {
-      toast('Não foi possível compartilhar a imagem.', 'erro');
+      toast(t('editor.share_failed', 'Não foi possível compartilhar a imagem.'), 'erro');
     } finally {
       setBusy(null);
     }
-  }, [fontSample, quote.texto, registerExport, toast]);
+  }, [
+    ensureExportNode,
+    fontSample,
+    quote.autor,
+    quote.texto,
+    registerExport,
+    shareUrl,
+    t,
+    toast,
+  ]);
+
+  const handleInstagramShare = useCallback(async () => {
+    if (supportsFileShare || supportsNativeShare) {
+      await handleMobileShare();
+      return;
+    }
+    setBusy('mobile');
+    const node = await ensureExportNode();
+    if (!node) {
+      setBusy(null);
+      toast(t('editor.share_failed', 'Não foi possível compartilhar a imagem.'), 'erro');
+      return;
+    }
+    try {
+      const serial = allocateImageSerial();
+      flushSync(() => setExportSerial(serial));
+      await waitNextPaint();
+      await waitNextPaint();
+      const blob = await captureElementAsBlob(node, 'image/png', fontSample);
+      registerExport(serial);
+      downloadBlob(blob, `metamensagem-${serial}.png`);
+      toast(
+        t(
+          'editor.share_instagram_saved',
+          'Imagem salva. Abra o Instagram e publique no Feed ou nos Stories.'
+        ),
+        'info'
+      );
+    } catch {
+      toast(t('editor.share_failed', 'Não foi possível compartilhar a imagem.'), 'erro');
+    } finally {
+      setBusy(null);
+    }
+  }, [
+    ensureExportNode,
+    fontSample,
+    handleMobileShare,
+    registerExport,
+    supportsFileShare,
+    supportsNativeShare,
+    t,
+    toast,
+  ]);
 
   useEffect(() => {
     if (open) setExportSerial(previewSerial);
@@ -299,12 +433,12 @@ export default function ImageGeneratorModal({
           }`}
         >
           <Star size={12} className="fill-amber-400 text-amber-400 shrink-0" />
-          Recomendado para esta frase
+          {t('editor.recommended', 'Recomendado para esta frase')}
         </div>
       )}
 
       <div
-        className="relative shrink-0 transition-transform duration-150 ease-out"
+        className="relative shrink-0"
         style={{
           width: formatCfg.width * effectiveScale,
           height: formatCfg.height * effectiveScale,
@@ -313,13 +447,13 @@ export default function ImageGeneratorModal({
       >
         <div
           style={{
-            transform: `scale(${effectiveScale})`,
+            width: formatCfg.width * displayScale,
+            height: formatCfg.height * displayScale,
+            transform: userScale === 1 ? undefined : `scale(${userScale})`,
             transformOrigin: 'top left',
-            width: formatCfg.width,
-            height: formatCfg.height,
           }}
         >
-          <ImageRenderer {...rendererBase} serial={exportSerial} />
+          <ImageRenderer {...rendererBase} renderScale={displayScale} serial={exportSerial} />
         </div>
       </div>
     </div>
@@ -340,6 +474,7 @@ export default function ImageGeneratorModal({
       recommendedCollectionId={recommendation.matched ? recommendation.collectionId : undefined}
       recommendedSkinId={recommendation.matched ? recommendation.skinId : undefined}
       onBackgroundSelect={handleBackgroundSelect}
+      showBackgrounds={skinsReady}
     />
   );
 
@@ -350,18 +485,21 @@ export default function ImageGeneratorModal({
       }`}
     >
       <section className="mm-desktop-editor-section">
-        <h3 className="mm-desktop-editor-label">Formato</h3>
+        <h3 className="mm-desktop-editor-label">{t('editor.format', 'Formato')}</h3>
         <ImageFormatSelector value={format} onChange={setFormat} tema={tema} />
       </section>
       <section className="mm-desktop-editor-section">
-        <h3 className="mm-desktop-editor-label">Coleção & skin</h3>
+        <h3 className="mm-desktop-editor-label">{t('editor.collection', 'Coleção & skin')}</h3>
         <p className="mm-desktop-editor-hint">
-          Escolha o estilo visual. O texto da frase é sempre exibido por completo.
+          {t(
+            'editor.collection_hint',
+            'Escolha o estilo visual. O texto da frase é sempre exibido por completo.'
+          )}
         </p>
         <CollectionSelector value={collectionId} onChange={handleCollectionChange} tema={tema} />
       </section>
       <section className="mm-desktop-editor-section">
-        <h3 className="mm-desktop-editor-label">Variação</h3>
+        <h3 className="mm-desktop-editor-label">{t('editor.variation', 'Variação')}</h3>
         <SkinSelector
           collectionId={collectionId}
           value={skinId}
@@ -382,25 +520,27 @@ export default function ImageGeneratorModal({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="mm-modal-overlay flex items-end sm:items-center justify-center p-0 sm:p-4 md:p-6"
+        className={`mm-modal-overlay flex ${
+          isMobile ? 'flex-col' : 'items-center justify-center p-4 md:p-6'
+        }`}
         role="dialog"
         aria-modal="true"
         aria-labelledby="image-gen-title"
       >
         <button
           type="button"
-          className="absolute inset-0 z-0 bg-black/75 backdrop-blur-sm"
+          className="absolute inset-0 z-0 bg-black/80"
           onClick={handleClose}
-          aria-label="Fechar"
+          aria-label={t('translate_page.close', 'Fechar')}
         />
 
         <motion.div
-          initial={{ opacity: 0, y: 24, scale: 0.96 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 16, scale: 0.98 }}
-          className={`mm-modal-panel w-full max-w-5xl max-h-[100dvh] sm:max-h-[92vh] overflow-hidden rounded-t-[1.75rem] sm:rounded-[2rem] border shadow-2xl flex flex-col ${
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className={`mm-modal-panel w-full max-w-5xl overflow-hidden rounded-t-[1.75rem] sm:rounded-[2rem] border shadow-2xl flex flex-col ${
             tema === 'light' ? 'bg-white border-zinc-200' : 'bg-[#141210] border-zinc-700'
-          } ${isMobile ? 'mm-image-editor-mobile' : 'mm-image-editor-desktop'}`}
+          } ${isMobile ? 'flex-1 min-h-0 w-full rounded-none mm-image-editor-mobile' : 'max-h-[92vh] mm-image-editor-desktop'}`}
         >
           <header
             className={`flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b shrink-0 ${
@@ -413,7 +553,7 @@ export default function ImageGeneratorModal({
               </span>
               <div className="min-w-0">
                 <h2 id="image-gen-title" className="text-lg font-black tracking-tight truncate">
-                  Gerar imagem
+                  {t('editor.generate_title', 'Gerar imagem')}
                 </h2>
                 <p className={`text-xs truncate ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
                   {collection.emoji} {collection.name} · {skin.name} · {formatCfg.label}
@@ -423,6 +563,7 @@ export default function ImageGeneratorModal({
             <button
               type="button"
               onClick={handleClose}
+              aria-label={t('translate_page.close', 'Fechar')}
               className={`p-2.5 rounded-xl border transition-colors shrink-0 ${
                 tema === 'light' ? 'border-zinc-200 hover:bg-zinc-100' : 'border-zinc-600 hover:bg-zinc-800/80'
               }`}
@@ -437,13 +578,29 @@ export default function ImageGeneratorModal({
               <div className="mm-mobile-editor-controls flex-1 min-h-0 overflow-y-auto overscroll-contain px-4 py-3">
                 {mobileQuickPanel}
               </div>
+              {shareOpen && (
+                <ShareActionBar
+                  linksOnly
+                  tema={tema}
+                  quote={quote}
+                  busy={busy}
+                  supportsFileShare={supportsFileShare}
+                  supportsNativeShare={supportsNativeShare}
+                  onMobileShare={() => void handleMobileShare()}
+                  onInstagramShare={() => void handleInstagramShare()}
+                  onDownloadPng={() => void runExport('image/png')}
+                  onDownloadJpg={() => void runExport('image/jpeg')}
+                  onCopy={() => void handleCopy()}
+                />
+              )}
               <MobileEditorActionBar
                 tema={tema}
                 busy={busy}
-                supportsShare={supportsFileShare}
+                supportsShare
+                shareOpen={shareOpen}
                 onRestore={handleRestore}
                 onDownload={() => void runExport('image/png')}
-                onShare={() => void handleMobileShare()}
+                onShare={() => setShareOpen((open) => !open)}
               />
             </div>
           ) : (
@@ -457,7 +614,9 @@ export default function ImageGeneratorModal({
                     quote={quote}
                     busy={busy}
                     supportsFileShare={supportsFileShare}
+                    supportsNativeShare={supportsNativeShare}
                     onMobileShare={() => void handleMobileShare()}
+                    onInstagramShare={() => void handleInstagramShare()}
                     onDownloadPng={() => void runExport('image/png')}
                     onDownloadJpg={() => void runExport('image/jpeg')}
                     onCopy={() => void handleCopy()}
@@ -472,16 +631,18 @@ export default function ImageGeneratorModal({
     getModalRoot()
   );
 
-  const exportCanvas = createPortal(
-    <div
-      className="mm-image-export-offscreen"
-      style={{ width: formatCfg.width, height: formatCfg.height }}
-      aria-hidden
-    >
-      <ImageRenderer ref={exportRef} {...rendererBase} serial={exportSerial} />
-    </div>,
-    getModalRoot()
-  );
+  const exportCanvas = exportMounted
+    ? createPortal(
+        <div
+          className="mm-image-export-offscreen"
+          style={{ width: formatCfg.width, height: formatCfg.height }}
+          aria-hidden
+        >
+          <ImageRenderer ref={exportRef} {...rendererBase} serial={exportSerial} />
+        </div>,
+        getModalRoot()
+      )
+    : null;
 
   return (
     <>

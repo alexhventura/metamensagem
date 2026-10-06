@@ -34,6 +34,7 @@ html[data-theme="dark"] {
 .mm-app-shell {
   background-color: var(--mm-bg, #000);
   color: var(--mm-fg, #fff);
+  min-height: 100dvh;
 }
 
 .mm-header-bar {
@@ -55,22 +56,19 @@ html[data-theme="dark"] {
   z-index: 90;
 }
 
-/* Rodapé institucional fixo — visível em todas as páginas, inclusive no scroll infinito */
+/* Rodapé no fluxo da página — no fim do conteúdo, sem cobrir o meio da tela */
 .mm-app-footer {
-  position: fixed;
-  inset-inline: 0;
-  bottom: 0;
-  z-index: 80;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
   border-top: 1px solid var(--mm-header-border);
   background-color: var(--mm-subheader-bg);
   color: var(--mm-fg-muted, var(--mm-fg));
-  padding: 0.7rem 1rem max(0.7rem, env(safe-area-inset-bottom, 0px));
+  padding: 0.85rem 1rem max(0.85rem, env(safe-area-inset-bottom, 0px));
 }
 
 .mm-app-main {
-  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+  padding-bottom: 0;
 }
 
 /* Portal de modais — acima de todo chrome (backdrop-blur + sticky) */
@@ -87,7 +85,6 @@ html[data-theme="dark"] {
   inset: 0;
   z-index: 10000;
   isolation: isolate;
-  transform: translateZ(0);
   pointer-events: auto;
 }
 
@@ -97,6 +94,10 @@ html[data-theme="dark"] {
 }
 
 /* Canvas de exportação 1:1 — fora do painel animado para não vazar no mobile */
+.mm-image-preview-surface {
+  contain: layout paint style;
+}
+
 .mm-image-export-offscreen {
   position: fixed;
   left: -10000px;
@@ -298,7 +299,7 @@ html[data-theme="dark"] textarea::placeholder {
 }
 
 .mm-mobile-editor-controls {
-  padding-bottom: calc(4.25rem + env(safe-area-inset-bottom, 0px));
+  padding-bottom: 0.75rem;
 }
 
 .mm-quick-style-panel section {
@@ -320,17 +321,12 @@ html[data-theme="dark"] textarea::placeholder {
 }
 
 .mm-editor-mobile-bar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 60;
+  position: relative;
+  flex-shrink: 0;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 0.5rem;
   padding: 0.55rem 0.75rem calc(0.55rem + env(safe-area-inset-bottom, 0px));
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.12);
 }
 

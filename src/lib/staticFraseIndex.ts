@@ -73,13 +73,17 @@ export async function loadFeedSample(): Promise<FeedSampleRow[]> {
   return feedSamplePromise;
 }
 
-/** Itera todos os shards em ordem estável (00 → ff). */
+/** Itera shards em ordem estável (00 → ff). Um shard ausente não interrompe os demais. */
 export async function forEachIndexShard(
   fn: (rows: StaticIndexRow[], shardId: string) => void | Promise<void>
 ): Promise<void> {
   const shardIds = await listShardIds();
   for (const shardId of shardIds) {
-    const rows = await loadIndexShard(shardId);
-    await fn(rows, shardId);
+    try {
+      const rows = await loadIndexShard(shardId);
+      await fn(rows, shardId);
+    } catch {
+      /* shard opcional — a busca segue com o que já carregou */
+    }
   }
 }

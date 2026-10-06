@@ -1,6 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { de, hi, it, ja } from './i18n/extraLocales';
+import { shellPhrases } from './i18n/shellPhrases';
 import { matchSupportedUiLocale, resolveUiLocale } from './lib/uiLocale';
 
 const resources = {
@@ -434,5 +435,9 @@ i18n.use(initReactI18next).init({
     escapeValue: false,
   },
 });
+
+for (const [lng, pack] of Object.entries(shellPhrases)) {
+  i18n.addResourceBundle(lng, 'translation', pack, true, true);
+}
 
 export default i18n;

@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import MobileColorGrid from './MobileColorGrid';
 import MobileFontPicker from './MobileFontPicker';
 import MobileBackgroundGrid from './MobileBackgroundGrid';
@@ -33,6 +34,7 @@ export default function MobileQuickStylePanel({
   recommendedCollectionId,
   recommendedSkinId,
   onBackgroundSelect,
+  showBackgrounds = true,
 }: {
   tema: string;
   format: ImageFormat;
@@ -47,33 +49,39 @@ export default function MobileQuickStylePanel({
   recommendedCollectionId?: string;
   recommendedSkinId?: string;
   onBackgroundSelect: (collectionId: string, skinId: string) => void;
+  showBackgrounds?: boolean;
 }) {
+  const { t } = useTranslation();
   return (
     <div className="mm-quick-style-panel space-y-4 pb-2">
       <section>
-        <SectionLabel tema={tema}>Formato</SectionLabel>
+        <SectionLabel tema={tema}>{t('editor.format', 'Formato')}</SectionLabel>
         <MobileFormatStrip value={format} onChange={onFormatChange} tema={tema} />
       </section>
 
       <section>
-        <SectionLabel tema={tema}>Cores</SectionLabel>
+        <SectionLabel tema={tema}>{t('editor.colors', 'Cores')}</SectionLabel>
         <MobileColorGrid value={textColor} onChange={onTextColorChange} tema={tema} />
       </section>
 
       <section>
-        <SectionLabel tema={tema}>Fonte</SectionLabel>
+        <SectionLabel tema={tema}>{t('editor.font', 'Fonte')}</SectionLabel>
         <MobileFontPicker value={fontId} onChange={onFontChange} sample={fontSample} tema={tema} />
       </section>
 
       <section>
-        <SectionLabel tema={tema}>Fundo</SectionLabel>
-        <MobileBackgroundGrid
-          collectionId={collectionId}
-          skinId={skinId}
-          recommendedCollectionId={recommendedCollectionId}
-          recommendedSkinId={recommendedSkinId}
-          onSelect={onBackgroundSelect}
-        />
+        <SectionLabel tema={tema}>{t('editor.background_short', 'Fundo')}</SectionLabel>
+        {showBackgrounds ? (
+          <MobileBackgroundGrid
+            collectionId={collectionId}
+            skinId={skinId}
+            recommendedCollectionId={recommendedCollectionId}
+            recommendedSkinId={recommendedSkinId}
+            onSelect={onBackgroundSelect}
+          />
+        ) : (
+          <div className="h-[5.25rem]" aria-hidden />
+        )}
       </section>
     </div>
   );

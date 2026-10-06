@@ -4,12 +4,16 @@ import {
   Download,
   Copy,
   Loader2,
-  Smartphone,
+  Share2,
   MessageCircle,
 } from 'lucide-react';
-import { Facebook, Twitter } from '../BrandIcons';
+import { Facebook, Instagram, Twitter } from '../BrandIcons';
 import type { ImageGeneratorQuote } from './types';
-import { buildSocialShareLinks, canShareImageFiles } from './utils/shareLinks';
+import {
+  buildSocialShareLinks,
+  canShareImageFiles,
+  canUseNativeShare,
+} from './utils/shareLinks';
 
 const PinterestIcon = () => (
   <svg viewBox="0 0 24 24" className="w-[18px] h-[18px]" fill="currentColor" aria-hidden>
@@ -24,7 +28,9 @@ export default function ShareActionBar({
   quote,
   busy,
   supportsFileShare,
+  supportsNativeShare = supportsFileShare,
   onMobileShare,
+  onInstagramShare,
   onDownloadPng,
   onDownloadJpg,
   onCopy,
@@ -34,7 +40,9 @@ export default function ShareActionBar({
   quote: ImageGeneratorQuote;
   busy: ShareBusy;
   supportsFileShare: boolean;
+  supportsNativeShare?: boolean;
   onMobileShare: () => void;
+  onInstagramShare?: () => void;
   onDownloadPng: () => void;
   onDownloadJpg: () => void;
   onCopy: () => void;
@@ -42,6 +50,8 @@ export default function ShareActionBar({
 }) {
   const { t } = useTranslation();
   const links = useMemo(() => buildSocialShareLinks(quote, quote.locale ?? 'pt'), [quote]);
+  const showAppsShare = supportsNativeShare || supportsFileShare;
+  const handleInstagram = onInstagramShare ?? onMobileShare;
 
   const openLink = (url: string) => {
     window.open(url, '_blank', 'noopener,noreferrer');
@@ -56,10 +66,42 @@ export default function ShareActionBar({
   return (
     <div className={`shrink-0 p-4 border-t space-y-3 ${border}`}>
       <p className={`text-[10px] text-center font-medium ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
-        {t('editor.share_hint', 'Escolha uma rede ou baixe a imagem para compartilhar')}
+        {t(
+          'editor.share_hint',
+          'Use seus apps (Instagram, WhatsApp…) ou escolha uma rede'
+        )}
       </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+      {showAppsShare && (
+        <button
+          type="button"
+          disabled={!!busy}
+          onClick={onMobileShare}
+          className="w-full flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-gradient-to-r from-[#7C3AED] via-[#A855F7] to-[#D946EF] text-white font-bold text-sm shadow-lg shadow-purple-500/25 hover:opacity-95 disabled:opacity-50 transition-all"
+        >
+          {busy === 'mobile' ? (
+            <Loader2 size={20} className="animate-spin" />
+          ) : (
+            <Share2 size={20} />
+          )}
+          {t('editor.share_apps', 'Compartilhar nos apps')}
+        </button>
+      )}
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        <button
+          type="button"
+          disabled={!!busy}
+          onClick={handleInstagram}
+          className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border-2 text-xs font-bold transition-colors disabled:opacity-50 ${btnSecondary}`}
+        >
+          {busy === 'mobile' ? (
+            <Loader2 size={16} className="animate-spin" />
+          ) : (
+            <Instagram size={16} className="text-[#E1306C]" />
+          )}
+          Instagram
+        </button>
         <button
           type="button"
           onClick={() => openLink(links.whatsapp)}
@@ -67,6 +109,14 @@ export default function ShareActionBar({
         >
           <MessageCircle size={16} className="text-green-500" />
           WhatsApp
+        </button>
+        <button
+          type="button"
+          onClick={() => openLink(links.facebook)}
+          className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border-2 text-xs font-bold transition-colors ${btnSecondary}`}
+        >
+          <Facebook size={16} className="text-blue-500" />
+          Facebook
         </button>
         <button
           type="button"
@@ -84,70 +134,46 @@ export default function ShareActionBar({
           <Twitter size={16} />
           X
         </button>
-        <button
-          type="button"
-          onClick={() => openLink(links.facebook)}
-          className={`flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border-2 text-xs font-bold transition-colors ${btnSecondary}`}
-        >
-          <Facebook size={16} className="text-blue-500" />
-          Facebook
-        </button>
       </div>
-
-      {supportsFileShare && (
-        <button
-          type="button"
-          disabled={!!busy}
-          onClick={onMobileShare}
-          className="w-full flex items-center justify-center gap-2.5 px-5 py-3 rounded-2xl bg-gradient-to-r from-[#7C3AED] via-[#A855F7] to-[#D946EF] text-white font-bold text-sm shadow-lg shadow-purple-500/25 hover:opacity-95 disabled:opacity-50 transition-all"
-        >
-          {busy === 'mobile' ? (
-            <Loader2 size={20} className="animate-spin" />
-          ) : (
-            <Smartphone size={20} />
-          )}
-          {t('editor.share_image', 'Compartilhar imagem')}
-        </button>
-      )}
 
       {!linksOnly && (
-      <div className="flex flex-wrap gap-2">
-        <button
-          type="button"
-          disabled={!!busy}
-          onClick={onDownloadPng}
-          className={`flex-1 min-w-[100px] flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl font-bold text-xs border-2 disabled:opacity-50 transition-colors ${
-            tema === 'light' ? 'border-zinc-200 hover:border-[#A855F7]' : 'border-zinc-700 hover:border-[#A855F7]'
-          }`}
-        >
-          {busy === 'png' ? <Loader2 size={16} className="animate-spin" /> : <Download size={16} />}
-          PNG
-        </button>
-        <button
-          type="button"
-          disabled={!!busy}
-          onClick={onDownloadJpg}
-          className={`flex-1 min-w-[100px] flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl font-bold text-xs border-2 disabled:opacity-50 transition-colors ${
-            tema === 'light' ? 'border-zinc-200 hover:border-[#A855F7]' : 'border-zinc-700 hover:border-[#A855F7]'
-          }`}
-        >
-          {busy === 'jpeg' ? <Loader2 size={16} className="animate-spin" /> : <Download size={16} />}
-          JPG
-        </button>
-        <button
-          type="button"
-          disabled={!!busy}
-          onClick={onCopy}
-          className={`flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border-2 text-xs font-bold disabled:opacity-50 transition-colors ${btnSecondary}`}
-          title={t('editor.copy_image', 'Copiar imagem')}
-        >
-          {busy === 'copy' ? <Loader2 size={16} className="animate-spin" /> : <Copy size={16} />}
-          {t('common.copy', 'Copiar')}
-        </button>
-      </div>
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            disabled={!!busy}
+            onClick={onDownloadPng}
+            className={`flex-1 min-w-[100px] flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl font-bold text-xs border-2 disabled:opacity-50 transition-colors ${
+              tema === 'light' ? 'border-zinc-200 hover:border-[#A855F7]' : 'border-zinc-700 hover:border-[#A855F7]'
+            }`}
+          >
+            {busy === 'png' ? <Loader2 size={16} className="animate-spin" /> : <Download size={16} />}
+            PNG
+          </button>
+          <button
+            type="button"
+            disabled={!!busy}
+            onClick={onDownloadJpg}
+            className={`flex-1 min-w-[100px] flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl font-bold text-xs border-2 disabled:opacity-50 transition-colors ${
+              tema === 'light' ? 'border-zinc-200 hover:border-[#A855F7]' : 'border-zinc-700 hover:border-[#A855F7]'
+            }`}
+          >
+            {busy === 'jpeg' ? <Loader2 size={16} className="animate-spin" /> : <Download size={16} />}
+            JPG
+          </button>
+          <button
+            type="button"
+            disabled={!!busy}
+            onClick={onCopy}
+            className={`flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border-2 text-xs font-bold disabled:opacity-50 transition-colors ${btnSecondary}`}
+            title={t('editor.copy_image', 'Copiar imagem')}
+          >
+            {busy === 'copy' ? <Loader2 size={16} className="animate-spin" /> : <Copy size={16} />}
+            {t('common.copy', 'Copiar')}
+          </button>
+        </div>
       )}
     </div>
   );
 }
 
-export { canShareImageFiles };
+export { canShareImageFiles, canUseNativeShare };

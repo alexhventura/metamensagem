@@ -14,7 +14,7 @@ import { FORMATS, DEFAULT_FORMAT } from './formats';
 import { findCollection, findSkin } from './skins/data';
 import type { ImageFormat, ImageGeneratorQuote } from './types';
 import { recommendSkinForQuote } from './utils/recommendSkin';
-import { canShareImageFiles } from './utils/shareLinks';
+import { canShareImageFiles, canUseNativeShare, resolveQuoteCanonicalUrl } from './utils/shareLinks';
 import {
   captureElementAsBlob,
   copyBlobToClipboard,
@@ -73,6 +73,11 @@ export default function ImageGeneratorModal({
   const [exportSerial, setExportSerial] = useState(previewSerial);
 
   const supportsFileShare = useMemo(() => canShareImageFiles(), []);
+  const supportsNativeShare = useMemo(() => canUseNativeShare(), []);
+  const shareUrl = useMemo(
+    () => resolveQuoteCanonicalUrl(quote, quote.locale ?? 'pt'),
+    [quote]
+  );
   const fontSample = useMemo(
     () => ({ text: quote.texto, autor: quote.autor, fontId }),
     [quote.texto, quote.autor, fontId]
@@ -298,19 +303,93 @@ export default function ImageGeneratorModal({
       await waitNextPaint();
       const blob = await captureElementAsBlob(node, 'image/png', fontSample);
       registerExport(serial);
+      const caption = `"${quote.texto.slice(0, 140)}" — ${quote.autor}`;
       const ok = await shareImageFile(blob, {
         title: 'Metamensagem',
-        text: quote.texto.slice(0, 120),
+        text: `${caption}\n${shareUrl}`,
+        url: shareUrl,
       });
       if (!ok) {
-        toast(t('editor.share_cancelled', 'Compartilhamento cancelado ou indisponível.'), 'info');
+        if (canUseNativeShare()) {
+          try {
+            await navigator.share({
+              title: 'Metamensagem',
+              text: caption,
+              url: shareUrl,
+            });
+            return;
+          } catch (e) {
+            if ((e as Error).name === 'AbortError') return;
+          }
+        }
+        const filename = `metamensagem-${serial}.png`;
+        downloadBlob(blob, filename);
+        toast(
+          t(
+            'editor.share_saved_for_apps',
+            'Imagem salva. Abra Instagram, WhatsApp ou outro app para publicar.'
+          ),
+          'info'
+        );
       }
     } catch {
       toast(t('editor.share_failed', 'Não foi possível compartilhar a imagem.'), 'erro');
     } finally {
       setBusy(null);
     }
-  }, [ensureExportNode, fontSample, quote.texto, registerExport, t, toast]);
+  }, [
+    ensureExportNode,
+    fontSample,
+    quote.autor,
+    quote.texto,
+    registerExport,
+    shareUrl,
+    t,
+    toast,
+  ]);
+
+  const handleInstagramShare = useCallback(async () => {
+    if (supportsFileShare || supportsNativeShare) {
+      await handleMobileShare();
+      return;
+    }
+    setBusy('mobile');
+    const node = await ensureExportNode();
+    if (!node) {
+      setBusy(null);
+      toast(t('editor.share_failed', 'Não foi possível compartilhar a imagem.'), 'erro');
+      return;
+    }
+    try {
+      const serial = allocateImageSerial();
+      flushSync(() => setExportSerial(serial));
+      await waitNextPaint();
+      await waitNextPaint();
+      const blob = await captureElementAsBlob(node, 'image/png', fontSample);
+      registerExport(serial);
+      downloadBlob(blob, `metamensagem-${serial}.png`);
+      toast(
+        t(
+          'editor.share_instagram_saved',
+          'Imagem salva. Abra o Instagram e publique no Feed ou nos Stories.'
+        ),
+        'info'
+      );
+    } catch {
+      toast(t('editor.share_failed', 'Não foi possível compartilhar a imagem.'), 'erro');
+    } finally {
+      setBusy(null);
+    }
+  }, [
+    ensureExportNode,
+    fontSample,
+    handleMobileShare,
+    registerExport,
+    supportsFileShare,
+    supportsNativeShare,
+    t,
+    toast,
+  ]);
 
   useEffect(() => {
     if (open) setExportSerial(previewSerial);
@@ -506,7 +585,9 @@ export default function ImageGeneratorModal({
                   quote={quote}
                   busy={busy}
                   supportsFileShare={supportsFileShare}
+                  supportsNativeShare={supportsNativeShare}
                   onMobileShare={() => void handleMobileShare()}
+                  onInstagramShare={() => void handleInstagramShare()}
                   onDownloadPng={() => void runExport('image/png')}
                   onDownloadJpg={() => void runExport('image/jpeg')}
                   onCopy={() => void handleCopy()}
@@ -515,7 +596,7 @@ export default function ImageGeneratorModal({
               <MobileEditorActionBar
                 tema={tema}
                 busy={busy}
-                supportsShare={supportsFileShare}
+                supportsShare
                 shareOpen={shareOpen}
                 onRestore={handleRestore}
                 onDownload={() => void runExport('image/png')}
@@ -533,7 +614,9 @@ export default function ImageGeneratorModal({
                     quote={quote}
                     busy={busy}
                     supportsFileShare={supportsFileShare}
+                    supportsNativeShare={supportsNativeShare}
                     onMobileShare={() => void handleMobileShare()}
+                    onInstagramShare={() => void handleInstagramShare()}
                     onDownloadPng={() => void runExport('image/png')}
                     onDownloadJpg={() => void runExport('image/jpeg')}
                     onCopy={() => void handleCopy()}

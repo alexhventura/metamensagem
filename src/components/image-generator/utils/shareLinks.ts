@@ -42,8 +42,13 @@ export function buildSocialShareLinks(
   };
 }
 
+/** Folha nativa do sistema (Instagram, WhatsApp, Mensagens…). */
+export function canUseNativeShare(): boolean {
+  return typeof navigator !== 'undefined' && typeof navigator.share === 'function';
+}
+
 export function canShareImageFiles(): boolean {
-  if (typeof navigator === 'undefined' || !navigator.share) return false;
+  if (!canUseNativeShare()) return false;
   if (typeof navigator.canShare !== 'function') return true;
   try {
     const probe = new File([''], 'probe.png', { type: 'image/png' });

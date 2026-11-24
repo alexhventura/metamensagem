@@ -55,6 +55,8 @@ import type { SeoLocale } from '../../lib/i18n/locales';
 import { prefetchFraseDetail } from '../lib/prefetchFrase';
 import { trackPhraseEvent } from '../lib/analytics/phrasePopularity';
 import { languageOriginalLabel } from '../lib/languageDisplay';
+import { usePageContentTranslate } from '../hooks/usePageContentTranslate';
+import { prefetchImageGenerator } from '../lib/prefetchImageGenerator';
 
 function MudarMetaSEO({
   title,
@@ -365,6 +367,15 @@ export default function FraseDetalheView({
     });
   }, [frase?.id, frase?.frase_original, frase?.autor_original, frase?.explicacao]);
 
+  const pageTranslation = usePageContentTranslate({
+    id: frase?.id ? `frase:${frase.id}` : `slug:${slug ?? 'loading'}`,
+    source: {
+      texto: frase?.frase_original ?? '',
+      autor: frase?.autor_original ?? '',
+      explicacao: frase?.explicacao || undefined,
+    },
+  });
+
   const listItem = useMemo(() => (frase ? fraseToListItem(frase) : null), [frase]);
 
   const canonical = frase ? fraseCanonicalUrl(frase.slug, contentLocale, defaultLocale) : '';
@@ -373,10 +384,16 @@ export default function FraseDetalheView({
     ? fraseHreflangAlternates(frase.slug, defaultLocale, availableLangs)
     : [];
   const pageHtmlLang = htmlLangAttribute(contentLocale);
-  const quoteText =
-    display.texto || (frase ? fraseTextoOf(frase) : '') || '';
-  const authorLine =
-    display.autor || (frase ? fraseAutorOf(frase) : '') || '';
+  const translatedOn = pageTranslation.display.isTranslated;
+  const quoteText = translatedOn && pageTranslation.display.texto
+    ? pageTranslation.display.texto
+    : display.texto || (frase ? fraseTextoOf(frase) : '') || '';
+  const authorLine = translatedOn
+    ? pageTranslation.display.autor || display.autor || (frase ? fraseAutorOf(frase) : '') || ''
+    : display.autor || (frase ? fraseAutorOf(frase) : '') || '';
+  const explanationText = translatedOn
+    ? pageTranslation.display.explicacao || display.explicacao || frase?.explicacao
+    : display.explicacao ?? frase?.explicacao;
 
   const seoPack = useMemo(() => {
     if (!frase?.frase_original?.trim()) {
@@ -607,11 +624,11 @@ export default function FraseDetalheView({
         }`}
       >
         <Link to="/" className="hover:text-[#A855F7]">
-          Início
+          {t('nav.home', 'Início')}
         </Link>
         <span aria-hidden>&gt;</span>
         <Link to="/frases" className="hover:text-[#A855F7]">
-          Frases
+          {t('nav.frases', 'Frases')}
         </Link>
         <span aria-hidden>&gt;</span>
         <Link to={pathFromTag(primaryTheme)} className="hover:text-[#A855F7]">
@@ -631,7 +648,7 @@ export default function FraseDetalheView({
             <div className="flex items-center gap-2 mb-6">
               <span className={`w-1.5 h-1.5 rounded-full ${cardAccentDotClass('purple')}`} />
               <span className={`text-[10px] uppercase font-black tracking-widest ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`}>
-                frase
+                {t('detail.kind', 'frase')}
               </span>
             </div>
 
@@ -670,7 +687,10 @@ export default function FraseDetalheView({
                   : 'bg-purple-500/10 text-purple-300 border border-purple-500/20'
               }`}
             >
-              Idioma original: {originalLanguageName}
+              {t('detail.original_language', {
+                language: originalLanguageName,
+                defaultValue: 'Idioma original: {{language}}',
+              })}
             </p>
 
             <div className="flex flex-wrap gap-1.5 mb-8">
@@ -720,6 +740,8 @@ export default function FraseDetalheView({
               <CardTooltip text={t('common.generate_image', 'Gerar Imagem')} tema={tema}>
                 <button
                   type="button"
+                  onPointerEnter={prefetchImageGenerator}
+                  onFocus={prefetchImageGenerator}
                   onClick={() =>
                     setImageQuote({
                       id: frase.id,
@@ -757,7 +779,7 @@ export default function FraseDetalheView({
                       tema === 'light' ? 'text-purple-700' : 'text-purple-400'
                     }`}
                   >
-                    Explicação
+                    {t('detail.explanation', 'Explicação')}
                   </h2>
                   {frase.explicacao ? (
                     <p
@@ -765,7 +787,7 @@ export default function FraseDetalheView({
                         tema === 'light' ? 'text-zinc-800' : 'text-zinc-400'
                       }`}
                     >
-                      {display.explicacao ?? frase.explicacao}
+                      {explanationText}
                     </p>
                   ) : (
                     <div className="space-y-2" aria-busy="true" aria-live="polite">
@@ -789,7 +811,7 @@ export default function FraseDetalheView({
                           tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'
                         }`}
                       >
-                        Analisando significado…
+                        {t('detail.analyzing', 'Analisando significado…')}
                       </p>
                     </div>
                   )}
@@ -803,23 +825,23 @@ export default function FraseDetalheView({
                     : 'border-zinc-600/40 bg-zinc-800/35'
                 }`}
               >
-                <MetaRow label="Tema principal" value={primaryTheme} tema={tema} />
-                <MetaRow label="Categoria principal" value={normalizedCategory} tema={tema} />
-                <MetaRow label="Idioma original" value={originalLanguageName} tema={tema} />
-                <MetaRow label="Ano ou data" value={frase.ano_ou_data} tema={tema} />
-                <MetaRow label="Nacionalidade" value={frase.nacionalidade} tema={tema} />
-                <MetaRow label="Nascimento / falecimento" value={frase.nascimento_falecimento} tema={tema} />
-                <MetaRow label="Tipo de autor" value={frase.autor_tipo} tema={tema} />
-                <MetaRow label="Fontes" value={frase.fontes} tema={tema} />
-                <MetaRow label="Observação" value={frase.observacao} tema={tema} />
+                <MetaRow label={t('detail.main_theme', 'Tema principal')} value={primaryTheme} tema={tema} />
+                <MetaRow label={t('detail.main_category', 'Categoria principal')} value={normalizedCategory} tema={tema} />
+                <MetaRow label={t('detail.original_language_meta', 'Idioma original')} value={originalLanguageName} tema={tema} />
+                <MetaRow label={t('detail.year', 'Ano ou data')} value={frase.ano_ou_data} tema={tema} />
+                <MetaRow label={t('detail.nationality', 'Nacionalidade')} value={frase.nacionalidade} tema={tema} />
+                <MetaRow label={t('detail.lifespan', 'Nascimento / falecimento')} value={frase.nascimento_falecimento} tema={tema} />
+                <MetaRow label={t('detail.author_type', 'Tipo de autor')} value={frase.autor_tipo} tema={tema} />
+                <MetaRow label={t('detail.sources', 'Fontes')} value={frase.fontes} tema={tema} />
+                <MetaRow label={t('detail.note', 'Observação')} value={frase.observacao} tema={tema} />
                 {frase.palavras_chave.length > 0 && (
-                  <MetaRow label="Palavras-chave" value={frase.palavras_chave.join(', ')} tema={tema} />
+                  <MetaRow label={t('detail.keywords', 'Palavras-chave')} value={frase.palavras_chave.join(', ')} tema={tema} />
                 )}
                 {frase.informacoes?.ultima_atualizacao && (
-                  <MetaRow label="Última atualização" value={frase.informacoes.ultima_atualizacao} tema={tema} />
+                  <MetaRow label={t('detail.updated', 'Última atualização')} value={frase.informacoes.ultima_atualizacao} tema={tema} />
                 )}
                 {frase.informacoes?.confiabilidade && (
-                  <MetaRow label="Confiabilidade" value={frase.informacoes.confiabilidade} tema={tema} />
+                  <MetaRow label={t('detail.reliability', 'Confiabilidade')} value={frase.informacoes.confiabilidade} tema={tema} />
                 )}
               </dl>
             </div>

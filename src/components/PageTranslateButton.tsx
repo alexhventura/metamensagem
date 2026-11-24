@@ -60,8 +60,8 @@ export default function PageTranslateButton({
 
   const headerClass =
     tema === 'light'
-      ? 'inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-tight border border-purple-200/80 bg-purple-50/80 text-purple-700 hover:bg-purple-100 transition-all max-w-[11rem] sm:max-w-none'
-      : 'inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-2 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-tight border border-purple-500/25 bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition-all max-w-[11rem] sm:max-w-none';
+      ? 'inline-flex items-center gap-1.5 px-2 sm:px-3 py-2 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-tight border border-purple-200/80 bg-purple-50/80 text-purple-700 hover:bg-purple-100 transition-all max-w-[7.5rem] min-[380px]:max-w-[11rem] sm:max-w-none'
+      : 'inline-flex items-center gap-1.5 px-2 sm:px-3 py-2 rounded-full text-[10px] sm:text-[11px] font-semibold tracking-tight border border-purple-500/25 bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition-all max-w-[7.5rem] min-[380px]:max-w-[11rem] sm:max-w-none';
 
   const baseClass =
     variant === 'header'

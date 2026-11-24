@@ -7,8 +7,8 @@ export function itemConteudoFromSearchHit(hit: FraseSearchHit): ItemConteudo {
     id: hit.id,
     tipo: 'frase',
     texto: hit.titulo,
-    autor: '',
-    tags: [],
+    autor: hit.autor || '',
+    tags: hit.tags || [],
     slug: hit.slug,
   };
 }

@@ -253,24 +253,38 @@ export async function copyBlobToClipboard(blob: Blob): Promise<boolean> {
 
 export async function shareImageFile(
   blob: Blob,
-  { title, text }: { title: string; text?: string }
+  {
+    title,
+    text,
+    url,
+  }: { title: string; text?: string; url?: string }
 ): Promise<boolean> {
   if (!navigator.share) return false;
   const file = new File([blob], 'metamensagem-frase.png', { type: blob.type || 'image/png' });
-  const payload: ShareData = { title, files: [file] };
-  if (text) payload.text = text;
+  const withFiles: ShareData = { title, files: [file] };
+  if (text) withFiles.text = text;
+  if (url) withFiles.url = url;
 
-  if (typeof navigator.canShare === 'function' && !navigator.canShare(payload)) {
-    return false;
-  }
+  const tryShare = async (payload: ShareData): Promise<boolean> => {
+    if (typeof navigator.canShare === 'function' && !navigator.canShare(payload)) {
+      return false;
+    }
+    try {
+      await navigator.share(payload);
+      return true;
+    } catch (e) {
+      if ((e as Error).name === 'AbortError') return true;
+      return false;
+    }
+  };
 
-  try {
-    await navigator.share(payload);
-    return true;
-  } catch (e) {
-    if ((e as Error).name === 'AbortError') return true;
-    return false;
-  }
+  if (await tryShare(withFiles)) return true;
+
+  const textOnly: ShareData = { title };
+  if (text) textOnly.text = text;
+  if (url) textOnly.url = url;
+  if (text || url) return tryShare(textOnly);
+  return false;
 }
 
 export async function shareBlob(blob: Blob, title: string, text: string): Promise<boolean> {

@@ -186,6 +186,18 @@ function fixOrphanLines(lines: string[]): string[] {
   return next;
 }
 
+const wrapCache = new Map<string, string[]>();
+const WRAP_CACHE_MAX = 96;
+
+function rememberWrap(key: string, lines: string[]): string[] {
+  wrapCache.set(key, lines);
+  if (wrapCache.size > WRAP_CACHE_MAX) {
+    const oldest = wrapCache.keys().next().value;
+    if (oldest) wrapCache.delete(oldest);
+  }
+  return lines;
+}
+
 export function wrapQuoteFull(
   text: string,
   quoteWidthPx: number,
@@ -194,6 +206,10 @@ export function wrapQuoteFull(
 ): string[] {
   const clean = normalizeQuoteText(text);
   if (!clean) return [''];
+
+  const cacheKey = `${quoteWidthPx}|${fontPx}|${fontWidthScale}|${clean}`;
+  const cached = wrapCache.get(cacheKey);
+  if (cached) return cached;
 
   const words = clean.split(' ');
   const baseMax = maxCharsPerLine(quoteWidthPx, fontPx, fontWidthScale);
@@ -213,7 +229,8 @@ export function wrapQuoteFull(
   }
 
   const balanced = fixOrphanLines(bestLines);
-  return validateFullText(clean, balanced) ? balanced : bestLines;
+  const lines = validateFullText(clean, balanced) ? balanced : bestLines;
+  return rememberWrap(cacheKey, lines);
 }
 
 function resolveDensity(
@@ -444,6 +461,18 @@ function buildPlan(
   };
 }
 
+const layoutCache = new Map<string, ImageLayoutPlan>();
+const LAYOUT_CACHE_MAX = 32;
+
+function rememberLayout(key: string, plan: ImageLayoutPlan): ImageLayoutPlan {
+  layoutCache.set(key, plan);
+  if (layoutCache.size > LAYOUT_CACHE_MAX) {
+    const oldest = layoutCache.keys().next().value;
+    if (oldest) layoutCache.delete(oldest);
+  }
+  return plan;
+}
+
 export function computeImageLayout(
   texto: string,
   autor: string,
@@ -452,6 +481,9 @@ export function computeImageLayout(
   options: ImageLayoutOptions = {}
 ): ImageLayoutPlan {
   const clean = normalizeQuoteText(texto);
+  const layoutKey = `${width}x${height}|${options.fontId ?? ''}|${autor ?? ''}|${clean}`;
+  const layoutHit = layoutCache.get(layoutKey);
+  if (layoutHit) return layoutHit;
   const hasAuthor = Boolean(autor?.trim());
   const fontWidthScale = resolveFontWidthScale(options.fontId);
 
@@ -511,7 +543,7 @@ export function computeImageLayout(
       });
 
       if (candidate.quoteFits) {
-        return candidate;
+        return rememberLayout(layoutKey, candidate);
       }
 
       if (
@@ -524,11 +556,11 @@ export function computeImageLayout(
     }
   }
 
-  if (best?.quoteFits) return best;
+  if (best?.quoteFits) return rememberLayout(layoutKey, best);
 
   const forced = findFittingQuoteLayout(clean, zones, usable, fontMax, fontWidthScale);
 
-  return buildPlan(zones, {
+  return rememberLayout(layoutKey, buildPlan(zones, {
     lines: forced.lines,
     quotePx: forced.quotePx,
     authorPx,
@@ -544,7 +576,7 @@ export function computeImageLayout(
     footerPx,
     footerSerialPx,
     usable,
-  });
+  }));
 }
 
 /** Metadados do rodapé Soft Premium Signature — responsivo por proporção do canvas. */

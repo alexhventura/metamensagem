@@ -1,5 +1,18 @@
 import { useEffect, useState, type RefObject } from 'react';
 
+/** Estimativa síncrona para o primeiro frame não pintar o canvas em 1080px. */
+export function estimatePreviewScale(formatWidth: number, formatHeight: number): number {
+  if (typeof window === 'undefined' || formatWidth <= 0 || formatHeight <= 0) return 0.32;
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const isDesktop = vw >= 1024;
+  const maxW = isDesktop ? 440 : Math.max(220, vw - 24);
+  const maxH = isDesktop
+    ? Math.min(560, Math.round(vh * 0.52))
+    : Math.max(180, Math.min(Math.round(vh * 0.34), vh - 220));
+  return Math.min(1, maxW / formatWidth, maxH / formatHeight);
+}
+
 export type ImagePreviewScaleOptions = {
   containerRef?: RefObject<HTMLElement | null>;
   /** Reserva vertical extra (ex.: badge “Recomendado”). */
@@ -15,7 +28,7 @@ export function useImagePreviewScale(
   open: boolean,
   options: ImagePreviewScaleOptions = {}
 ): number {
-  const [scale, setScale] = useState(1);
+  const [scale, setScale] = useState(() => estimatePreviewScale(formatWidth, formatHeight));
   const { containerRef, verticalReserve = 0 } = options;
 
   useEffect(() => {

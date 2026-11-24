@@ -1,11 +1,10 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { BookOpen, Copy, Share2, Sparkles } from 'lucide-react';
 import CardTooltip from './CardTooltip';
 import BrowserPageTranslateButton from './BrowserPageTranslateButton';
-import { type CardContentDisplay } from '../lib/translation/types';
 import { pathFromTag } from '../lib/tagsSeo';
 import { frasePath, seoLocaleFromLanguageOriginal } from '../lib/i18nRoutes';
 import { detectLanguageOriginal } from '../../lib/i18n/detectLanguage';
@@ -27,7 +26,8 @@ import { quoteFromItem } from './image-generator/utils/quoteFromItem';
 import { trackPhraseEvent } from '../lib/analytics/phrasePopularity';
 import type { ImageGeneratorQuote } from './image-generator/types';
 import { formatTagForDisplay } from '../lib/tagDisplay';
-import { sanitizeTextForTranslation } from '../lib/textSanitize';
+import { usePageContentTranslate } from '../hooks/usePageContentTranslate';
+import { prefetchImageGenerator } from '../lib/prefetchImageGenerator';
 
 export default function ContentCard({
   item,
@@ -46,21 +46,15 @@ export default function ContentCard({
   const isFrase = item.tipo === 'frase';
   const accent = cardAccentForTipo(item.tipo);
 
-  const [display, setDisplay] = useState<CardContentDisplay>(() => ({
-    texto: sanitizeTextForTranslation(item.texto),
-    titulo: item.titulo ? sanitizeTextForTranslation(item.titulo) : item.titulo,
-    resumo: item.resumo ? sanitizeTextForTranslation(item.resumo) : item.resumo,
-    isTranslated: false,
-  }));
-
-  useEffect(() => {
-    setDisplay({
+  const { display } = usePageContentTranslate({
+    id: `card:${item.tipo}:${item.id}`,
+    source: {
       texto: item.texto,
       titulo: item.titulo,
       resumo: item.resumo,
-      isTranslated: false,
-    });
-  }, [item.id, item.texto, item.titulo, item.resumo]);
+      autor: item.autor,
+    },
+  });
 
   const detailPath = isFrase
     ? (() => {
@@ -250,7 +244,7 @@ export default function ContentCard({
           <div className={`flex items-center gap-3 mt-6 pt-6 border-t ${tema === 'light' ? 'border-zinc-500/10' : 'border-zinc-600/35'}`}>
             <div className={`w-1.5 h-1.5 rounded-full ${cardAccentDotClass(accent)}`} />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 to-zinc-600 text-[10px] font-black tracking-widest uppercase truncate">
-              {t('common.author')} {item.autor.toUpperCase()}
+              {t('common.author')} {(display.autor || item.autor).toUpperCase()}
             </span>
           </div>
         </div>
@@ -290,6 +284,8 @@ export default function ContentCard({
             <CardTooltip text={t('common.generate_image', 'Gerar Imagem')} tema={tema}>
               <button
                 type="button"
+                onPointerEnter={prefetchImageGenerator}
+                onFocus={prefetchImageGenerator}
                 onClick={() =>
                   onGenerateImage(
                     quoteFromItem(item, {
@@ -323,7 +319,6 @@ export default function ContentCard({
 
   return (
     <motion.div
-      layout
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       className={shellClass}

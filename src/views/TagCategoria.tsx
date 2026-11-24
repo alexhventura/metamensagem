@@ -139,8 +139,10 @@ export default function TagCategoriaView({
 
   const itensFiltrados = useMemo(() => {
     if (!busca.trim()) return itensDaTag;
-    if (supabaseSearchOn && searchActive && searchHits !== null) return searchHits;
-    return searchBancoSemantico(itensDaTag, busca);
+    if (searchHits && searchHits.length) return searchHits;
+    const local = searchBancoSemantico(itensDaTag, busca);
+    if (local.length) return local;
+    return searchHits ?? local;
   }, [busca, itensDaTag, supabaseSearchOn, searchActive, searchHits]);
 
   const displayTag = entry?.tag ?? resolvedSlug ?? '';

@@ -69,6 +69,7 @@ import { buildTagRegistry, pathFromTag } from './lib/tagsSeo';
 import { SEO_LOCALES } from './lib/i18nRoutes';
 import { useDebouncedSupabaseSearch } from './hooks/useDebouncedSupabaseSearch';
 import { searchBancoSemantico } from './lib/semanticSearch';
+import { loadFeedSample } from './lib/staticFraseIndex';
 import { sanitizeContentBanco } from './lib/safeContent';
 const TagCategoriaView = lazy(() => import('./views/TagCategoria'));
 const FraseDetalheView = lazy(() => import('./views/FraseDetalhe'));
@@ -94,6 +95,7 @@ import BackNavButton from './components/BackNavButton';
 import HeaderBrandLink from './components/HeaderBrandLink';
 import { useAppUiReset } from './hooks/useAppUiReset';
 import { dispatchAppUiReset } from './lib/appUiReset';
+import { scheduleImageGeneratorPrefetch } from './lib/prefetchImageGenerator';
 
 interface ModalProps {
   item: ItemConteudo;
@@ -124,6 +126,10 @@ export default function App() {
     setToast({ mensagem, tipo });
     setTimeout(() => setToast(null), 3000);
   };
+
+  useEffect(() => {
+    scheduleImageGeneratorPrefetch();
+  }, []);
 
   // Home: bootstrap leve; catálogo completo em idle (O(1) inicial)
   useEffect(() => {
@@ -185,7 +191,7 @@ export default function App() {
       <UiLocaleSync />
       <AnalyticsRouteSync />
       {/* Layout raiz (equiv. app/layout.tsx): script global AdSense Auto Ads */}
-      <div className="min-h-screen mm-app-shell flex flex-col font-sans">
+      <div className="min-h-dvh mm-app-shell flex flex-col font-sans">
         {/* TOAST SYSTEM PREMIUM */}
         <AnimatePresence>
           {toast && (
@@ -223,13 +229,13 @@ export default function App() {
             <nav className="hidden md:flex items-center gap-8 text-sm font-bold text-zinc-400">
             </nav>
 
-            <div className="flex items-center gap-2 md:gap-4">
+            <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 shrink-0">
               <PageTranslateButton tema={tema} accent="purple" variant="header" />
               <button
                 type="button"
                 onClick={toggleTema}
                 aria-label={tema === 'light' ? 'Ativar modo escuro' : 'Ativar modo claro'}
-                className={`p-2.5 rounded-2xl border transition-transform hover:scale-110 ${
+                className={`p-2 sm:p-2.5 rounded-2xl border transition-transform hover:scale-110 shrink-0 ${
                   tema === 'light' ? 'bg-white border-purple-200 text-[#FACC15]' : 'bg-zinc-900 border-purple-500/30 text-[#60A5FA]'
                 }`}
               >
@@ -245,13 +251,13 @@ export default function App() {
         </div>
 
         {/* SUBHEADER DE NAVEGA�!ÒO REFOR�!ADA */}
-        <div className="py-4 border-b sticky top-20 mm-app-subchrome backdrop-blur-md mm-subheader-bar border-purple-900/20">
-          <div className="max-w-5xl mx-auto px-4 flex justify-center gap-12 md:gap-20">
+        <div className="py-3 sm:py-4 border-b sticky top-20 mm-app-subchrome backdrop-blur-md mm-subheader-bar border-purple-900/20">
+          <div className="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-x-8 gap-y-2 sm:gap-x-12 md:gap-x-20">
             <Link
               to="/frases"
               aria-label={t('nav.access_quotes')}
               onClick={() => dispatchAppUiReset()}
-              className={`text-[11px] font-black uppercase tracking-[0.4em] transition-transform flex items-center gap-2.5 ${tema === 'light' ? 'text-purple-600' : 'text-purple-400'} hover:scale-105 active:scale-95`}
+              className={`text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] sm:tracking-[0.28em] whitespace-nowrap transition-transform flex items-center gap-2 ${tema === 'light' ? 'text-purple-600' : 'text-purple-400'} hover:scale-105 active:scale-95`}
             >
               <div className="w-1 h-1 bg-purple-500 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.5)]"></div>
               {t('nav.access_quotes', t('nav.quotes'))}
@@ -259,7 +265,7 @@ export default function App() {
             <Link
               to="/metaforas"
               onClick={() => dispatchAppUiReset()}
-              className={`text-[11px] font-black uppercase tracking-[0.4em] transition-all flex items-center gap-2.5 ${tema === 'light' ? 'text-purple-600' : 'text-purple-400'} hover:scale-105 active:scale-95`}
+              className={`text-[10px] sm:text-[11px] font-black uppercase tracking-[0.12em] sm:tracking-[0.28em] whitespace-nowrap transition-transform flex items-center gap-2 ${tema === 'light' ? 'text-purple-600' : 'text-purple-400'} hover:scale-105 active:scale-95`}
             >
               <div className="w-1 h-1 bg-purple-500 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.5)]"></div>
               {t('nav.metaforas')}
@@ -343,7 +349,7 @@ export default function App() {
           )}
         </main>
 
-        <footer className="mm-app-footer text-center text-[11px] md:text-xs">
+        <footer className="mm-app-footer mt-auto text-center text-[11px] md:text-xs">
           <nav
             className="flex justify-center flex-wrap gap-x-4 gap-y-1 mb-1 font-semibold"
             aria-label="Institucional"
@@ -547,8 +553,10 @@ function HomeView({
   } = useDebouncedSupabaseSearch(busca);
   const resultadosFiltrados = useMemo(() => {
     if (!busca.trim()) return feedPool;
-    if (supabaseActive && supabaseHits !== null) return supabaseHits;
-    return searchBancoSemantico(bancoFrases, busca);
+    if (supabaseHits && supabaseHits.length) return supabaseHits;
+    const local = searchBancoSemantico(bancoFrases, busca);
+    if (local.length) return local;
+    return supabaseHits ?? local;
   }, [busca, bancoFrases, feedPool, supabaseOn, supabaseActive, supabaseHits]);
 
   const hasMoreHome = resultadosFiltrados.length > itensVisiveis;
@@ -602,9 +610,11 @@ function HomeView({
         <div className="relative max-w-2xl mx-auto">
           <Search className={`absolute left-6 top-1/2 -translate-y-1/2 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`} size={20} />
           <input
-            type="text"
+            type="search"
+            enterKeyHint="search"
             placeholder={t('home.search_placeholder')}
             value={busca}
+            onFocus={() => void loadFeedSample()}
             onChange={(e) => {
               setBusca(e.target.value);
               setItensVisiveis(FEED_INITIAL_VISIBLE);
@@ -784,8 +794,10 @@ function FrasesView({
 
   const frases = useMemo(() => {
     if (!busca.trim()) return feedPool;
-    if (supabaseActive && supabaseHits !== null) return supabaseHits;
-    return searchBancoSemantico(baseFrases, busca);
+    if (supabaseHits && supabaseHits.length) return supabaseHits;
+    const local = searchBancoSemantico(baseFrases, busca);
+    if (local.length) return local;
+    return supabaseHits ?? local;
   }, [busca, baseFrases, feedPool, supabaseOn, supabaseActive, supabaseHits]);
 
   const loadMoreFrases = useCallback(() => {
@@ -833,10 +845,12 @@ function FrasesView({
         />
         <div className="relative max-w-xl mx-auto">
           <Search className={`absolute left-6 top-1/2 -translate-y-1/2 ${tema === 'light' ? 'text-zinc-500' : 'text-zinc-400'}`} size={18} />
-          <input 
-            type="text" 
+          <input
+            type="search"
+            enterKeyHint="search"
             placeholder={t('frases.search_placeholder')}
             value={busca}
+            onFocus={() => void loadFeedSample()}
             onChange={(e) => {
               setBusca(e.target.value);
               setItensVisiveis(FEED_INITIAL_VISIBLE);

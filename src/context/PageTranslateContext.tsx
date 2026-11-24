@@ -66,7 +66,7 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
   const [isTranslating, setIsTranslating] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isNormalizedView, setIsNormalizedView] = useState(false);
-  const originalMode = useRef(false);
+  const originalMode = useRef(true);
   const autoStarted = useRef(false);
   const browserLang = useMemo(() => browserPreferredPageLang(), []);
 
@@ -85,7 +85,6 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
     try {
       const result = await translateCardContent(source, lang, {
         contentId: reg.id,
-        sourceLang: 'pt',
       });
       reg.setDisplay(result);
       return result.isTranslated;
@@ -131,9 +130,16 @@ export function PageTranslateProvider({ children }: { children: ReactNode }) {
       setTargetLang(lang);
       await i18n.changeLanguage(pageLangToUiLocale(lang));
 
-      const results = await Promise.all(
-        [...registrations.current.values()].map((reg) => translateOne(reg, lang))
-      );
+      const pending = [...registrations.current.values()];
+      const results: boolean[] = [];
+      const workers = Array.from({ length: Math.min(3, pending.length) }, async () => {
+        while (pending.length) {
+          const reg = pending.shift();
+          if (!reg) break;
+          results.push(await translateOne(reg, lang));
+        }
+      });
+      await Promise.all(workers);
       const normalized = results.some(Boolean);
       setIsNormalizedView(normalized);
       setIsTranslating(false);
